@@ -1,6 +1,6 @@
 {
-  "topic": "MEMS gyroscope (open with this hook: \"How your phone knows which way is up.\")",
-  "title": "How a MEMS Gyro Feels Spin",
+  "topic": "Touchscreen (capacitive) (open with this hook: \"Aapka phone aapki ungli nahi, bijli mehsoos karta hai!\")",
+  "title": "How Touchscreens Feel You",
   "kicker": "INSIDE ELECTRONICS",
   "timing": {
     "lead": 0.35,
@@ -26,14 +26,13 @@
         "s1-12",
         "s1-13",
         "s1-14",
-        "s1-15",
-        "s1-16"
+        "s1-15"
       ],
       "visual": "circuit",
-      "search": "MEMS gyroscope (open with this hook: \"How your phone knows which way is up.\")",
-      "length": 59.3,
+      "search": "Touchscreen (capacitive) (open with this hook: \"Aapka phone aapki ungli nahi, bijli mehsoos karta hai!\")",
+      "length": 48.29999999999999,
       "frames": 0,
-      "headline": "How your phone knows which way is up"
+      "headline": "How does your screen feel you?"
     },
     {
       "id": "s2",
@@ -42,11 +41,10 @@
         "s2-1"
       ],
       "visual": "network",
-      "search": "MEMS gyroscope (open with this hook: \"How your phone knows which way is up.\")",
-      "length": 7.633333333333334,
+      "search": "Touchscreen (capacitive) (open with this hook: \"Aapka phone aapki ungli nahi, bijli mehsoos karta hai!\")",
+      "length": 5.1,
       "frames": 0,
-      "headline": "Spin first, then up"
+      "headline": "It feels charge"
     }
-  ],
-  "build": "mvcl2abn"
+  ]
 }

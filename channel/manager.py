@@ -210,6 +210,10 @@ def run_tracked(cmd: list, job: dict) -> int:
             now = datetime.now().isoformat(timespec="seconds")
             job["stages"].append({"name": line[3:].strip(), "at": now})
             save_job(job)
+            if os.environ.get("GITHUB_ACTIONS"):
+                # show the step on the online dashboard: save state and rebuild the page (in the background)
+                subprocess.Popen(["bash", "-c", 'bash .github/scripts/save-state.sh "making: step" && gh workflow run pages.yml'],
+                                 cwd=ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     log.close()
     return p.wait()
 

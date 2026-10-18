@@ -4,11 +4,16 @@
   "hook": "Aapka phone aapki ungli nahi, bijli mehsoos karta hai!",
   "lang": "hi",
   "started": "2026-10-18T05:45:27",
-  "status": "running",
+  "status": "failed",
   "stages": [
     {
       "name": "storyboard: \"Touchscreen (capacitive) (open with this hook: \"Aapka phone aapki ungli nahi, bijli mehsoos karta hai!\")\" (Claude Code)",
       "at": "2026-10-18T05:45:35"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-10-18T05:46:32"
     }
-  ]
+  ],
+  "finished": "2026-10-18T06:23:47"
 }

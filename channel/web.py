@@ -110,7 +110,7 @@ class H(BaseHTTPRequestHandler):
         if path in ("/", "/index.html"):
             return self.send(200, (HERE / "web" / "index.html").read_bytes(), "text/html")
         if path in ("/logo.png", "/favicon.png"):
-            f = ROOT / "out" / "channel" / "brand2" / ("logo-full.png" if path == "/logo.png" else "logo-icon.png")
+            f = HERE / "web" / path.lstrip("/")
             return self.send(200, f.read_bytes(), "image/png") if f.exists() else self.send(404, "no logo", "text/plain")
         if path == "/api/state":
             return self.send(200, state())

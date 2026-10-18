@@ -213,7 +213,8 @@ function renderLive() {
   document.querySelectorAll('pre.log[data-job]').forEach(loadLog);
 }
 async function loadLog(el) {
-  const r = await fetch('/api/log?job=' + encodeURIComponent(el.dataset.job)); const t = await r.text();
+  const r = await fetch(STATIC ? `logs/${encodeURIComponent(el.dataset.job)}.log` : '/api/log?job=' + encodeURIComponent(el.dataset.job));
+  const t = r.ok ? await r.text() : '';
   const atEnd = el.scrollTop + el.clientHeight >= el.scrollHeight - 30;
   el.textContent = t.split('\n').slice(-300).join('\n') || '(no output yet)';
   if (atEnd) el.scrollTop = el.scrollHeight;
@@ -300,19 +301,38 @@ function renderHeader() {
   $('#updated').textContent = S.updated ? 'numbers: ' + S.updated : 'numbers: not refreshed yet';
   if (document.activeElement !== $('#autopilot')) $('#autopilot').checked = !!S.schedule.autopilot;
   if (document.activeElement !== $('#lang')) $('#lang').value = S.schedule.language || 'en';
-  // while something runs, only "Refresh numbers" stays clickable
-  document.querySelectorAll('button[data-a], #bMake').forEach((b) => (b.disabled = busy && b.dataset.a !== 'refresh'));
+  // while something runs, only "Refresh numbers" stays clickable (online, buttons just open GitHub, so never disabled)
+  document.querySelectorAll('button[data-a], #bMake').forEach((b) => (b.disabled = !STATIC && busy && b.dataset.a !== 'refresh'));
 }
 
+// Online (GitHub Pages) the page reads a data.json snapshot; buttons open the matching cloud job on GitHub.
+let STATIC = location.hostname.endsWith('github.io');
+const ACTIONS = { make: 'daily.yml', analyze: 'daily.yml', refresh: 'daily.yml', 'post-now': 'post-due.yml', comments: 'comments.yml' };
+async function getState() {
+  if (!STATIC) { try { const r = await fetch('/api/state'); if (r.ok) return await r.json(); } catch (e) {} STATIC = true; }
+  return await (await fetch('data.json?t=' + Date.now())).json();
+}
 async function refresh() {
   try {
-    S = await (await fetch('/api/state')).json();
+    S = await getState();
+    if (STATIC) applyStatic();
     renderHeader(); renderKpis(); renderLive(); renderTop(); renderInsights(); renderGrowth(); renderSchedule(); renderSide();
     if (!document.querySelector('#journeys details[open]')) renderJourneys();
-    if ($('#cmdlogBox').open) $('#cmdlog').textContent = await (await fetch('/api/log?job=command')).text() || '(no command run yet)';
+    if (!STATIC && $('#cmdlogBox').open) $('#cmdlog').textContent = await (await fetch('/api/log?job=command')).text() || '(no command run yet)';
   } catch (e) { $('#status').innerHTML = '<span class="dot"></span>dashboard server not running'; }
 }
+function applyStatic() {
+  if (document.body.dataset.static) return;
+  document.body.dataset.static = '1';
+  $('#autopilot').disabled = true; $('#lang').disabled = true;
+  $('#cmdlogBox').style.display = 'none';
+  $('#msg').innerHTML = 'Online view (updates after every cloud job). Buttons open the cloud job on GitHub: click <b>Run workflow</b> there. For your own topic, type it in the “topic” box on that page.';
+}
 async function command(body) {
+  if (STATIC) {
+    if (ACTIONS[body.action]) window.open(`https://github.com/${S.repo}/actions/workflows/${ACTIONS[body.action]}`, '_blank');
+    return;
+  }
   $('#msg').textContent = 'Sending…';
   const r = await fetch('/api/command', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
   const j = await r.json(); $('#msg').textContent = j.ok ? '✓ ' + ({ make: 'Analysing the channel, then making the video. Watch it below.', analyze: 'Analysing the channel…', refresh: 'Refreshing numbers…', 'post-now': 'Posting the next video…', comments: 'Answering comments…' }[body.action] || j.message) : '⚠ ' + j.message;
