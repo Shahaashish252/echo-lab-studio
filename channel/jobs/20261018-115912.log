@@ -9,3 +9,49 @@
   round 3: 1. Frame 2.41s (line 4, 'waves bounce off the floor and you'): SENT reads OFF, ECHO reads NONE and no wavefronts are drawn, so the narration
 
 == voice (Kokoro)
+s1-1        4.13s  मॉल का दरवाज़ा आपको पहचानता नहीं, फिर खुलता कैसे है?
+s1-2        1.87s  वो आपको देखता नहीं है।
+s1-3        1.88s  वो एक गूंज की पिच सुनता है।
+s1-4        6.06s  ऊपर लगा सेंसर चौबीस दशमलव एक दो पाँच गीगाहर्ट्ज़ की माइक्रोवेव भेजता है।
+s1-5        3.35s  तरंगें फ़र्श और आपसे टकराकर वापस आती हैं।
+s1-6        3.03s  टाइम फ़्रीज़। आप खड़े हैं, तो गूंज बिल्कुल वैसी।
+s1-7        2.23s  फ़र्क ज़ीरो हर्ट्ज़। दरवाज़ा बंद।
+s1-8        3.15s  अब प्ले। आप एक मीटर प्रति सेकंड से चल पड़े।
+s1-9        3.74s  बीस गुना स्लो। लौटती तरंगें पास-पास सिकुड़ रही हैं।
+s1-10       2.91s  फ़र्क बनता है करीब एक सौ इकसठ हर्ट्ज़।
+s1-11       3.56s  यही है डॉप्लर इफ़ेक्ट, एम्बुलेंस के सायरन वाला।
+s1-12       3.95s  फ़र्क थ्रेशोल्ड पार, रिले क्लिक, मोटर दरवाज़ा खोलती है।
+s1-13       2.97s  पर दरवाज़े में रुक गए तो? फ़र्क फिर ज़ीरो।
+s1-14       4.50s  इसलिए साथ में इन्फ्रारेड सेंसर, जो खड़े इंसान को पकड़ता है।
+s1-15       2.96s  ज़ोन में कोई है, तो दरवाज़ा खुला रहता है।
+s1-16       2.99s  ज़ोन खाली? दो सेकंड बाद दरवाज़ा बंद।
+s2-1        4.29s  बंद होता दरवाज़ा बीच में किसी को दबाता क्यों नहीं? बताओ!
+wrote 17 clips to D:\MoneyPrinterTurbo-main\motion grafix\app\public\voice\auto\kokoro
+
+== backgrounds (motion graphics): circuit, network
+  2 scenes, 62.5s
+
+== sound
+auto: 23 cues over 62.5s
+voice: kokoro
+mixed (peak -3.3 dBFS)
+wrote D:\MoneyPrinterTurbo-main\motion grafix\app\public\audio\auto.wav (-14 LUFS)
+
+== render
+rendering 1875 frames (0-62.5s) at 1080x1920, 1 sample(s)/frame
+
+  frame 30/1875  5.5 fps  eta 336s   
+  frame 60/1875  4.8 fps  eta 379s   
+  frame 90/1875  4.6 fps  eta 391s   
+  frame 120/1875  4.5 fps  eta 392s   
+  frame 150/1875  4.4 fps  eta 388s   
+  frame 180/1875  4.4 fps  eta 383s   
+  frame 210/1875  4.4 fps  eta 377s   
+  frame 240/1875  4.4 fps  eta 369s   
+  frame 270/1875  4.4 fps  eta 363s   
+  frame 300/1875  4.4 fps  eta 356s   
+  frame 330/1875  4.4 fps  eta 349s   
+  frame 360/1875  4.4 fps  eta 343s   
+  frame 390/1875  4.4 fps  eta 336s   
+  frame 420/1875  4.4 fps  eta 332s   
+  frame 450/1875  4.4 fps  eta 326s   
