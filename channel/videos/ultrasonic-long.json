@@ -1,0 +1,16 @@
+{
+  "file": "out/ultrasonic_wide.mp4",
+  "thumbnail": "out/channel/ultrasonic-thumb_thumb_0.50s.png",
+  "title": "How Ultrasonic Sensors Work | HC-SR04 Explained in 3D (Arduino Distance Sensor)",
+  "description": "How does an ultrasonic sensor measure distance using nothing but sound? This 3D animated explainer takes the HC-SR04 apart step by step: the physics of ultrasound, the piezoelectric transducers inside, the 4-step measurement, the distance formula, the Arduino code, and the sensor's blind spots.\n\n⏱ CHAPTERS\n0:00 Intro: seeing with sound\n0:20 What is ultrasound?\n0:37 Anatomy of the HC-SR04\n0:56 The piezo disc\n1:08 How it measures (4 steps)\n1:33 The maths & Arduino code\n2:09 Range, beam & blind spots\n2:34 Real-world uses & recap\n\n📐 KEY FORMULAS\nDistance = speed of sound × echo time ÷ 2\nd (cm) = echo time (µs) ÷ 58\nSpeed of sound in air ≈ 343 m/s at 20 °C (≈ 331 + 0.6 × T)\n\n🔌 HC-SR04 QUICK FACTS\n• 5 V supply, about 15 mA\n• 40 kHz ultrasonic burst (8 pulses)\n• 10 µs trigger pulse on TRIG\n• Range: about 2 cm to 4 m, beam about 15°\n• Pins: VCC, TRIG, ECHO, GND\n\n💻 ARDUINO CODE\ndigitalWrite(TRIG, HIGH);\ndelayMicroseconds(10);\ndigitalWrite(TRIG, LOW);\nlong t = pulseIn(ECHO, HIGH);\nfloat cm = t / 58.0;\n\nDiagrams are simplified and not to scale. Narration uses a text-to-speech voice; animation, music and sound effects are made in code.\n\n🔔 Subscribe to Echo Lab 3D for more sensors and tech explained in 3D.\n\n#ultrasonicsensor #HCSR04 #arduino",
+  "tags": [
+    "ultrasonic sensor", "how ultrasonic sensor works", "hc-sr04", "hc-sr04 arduino", "hc sr04 ultrasonic sensor",
+    "ultrasonic distance sensor", "arduino ultrasonic sensor", "ultrasonic sensor explained", "ultrasonic sensor working",
+    "distance sensor", "echolocation", "piezoelectric", "speed of sound", "pulseIn", "arduino projects",
+    "robotics for beginners", "sensors explained", "3d animation", "how it works", "echo lab 3d"
+  ],
+  "categoryId": "28",
+  "language": "en",
+  "privacy": "private",
+  "playlist": { "title": "Sensors Explained in 3D", "description": "How every common sensor works, animated in 3D: ultrasonic, PIR, IR, LDR, gyroscope, LiDAR and more." }
+}

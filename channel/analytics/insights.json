@@ -1,0 +1,32 @@
+{
+  "updated": "2026-10-18T05:45",
+  "videos": 2,
+  "summary": "Only two videos so far, so treat this as an early signal, not proof. The Hindi PIR sensor video did far better: about 1,850 total views, with shares and saves on Instagram, because it opened by busting a myth ('it doesn't actually see you'). The English Arduino video got only 157 views on YouTube and was never posted to Instagram, so it had less reach and a weaker, generic hook.",
+  "winningPattern": "One everyday sensor or device people already interact with (motion lights, doors, phones), explained in Hindi. The hook is a myth-bust or surprising contradiction ('X aapko dekhta nahi!'). The title follows the pattern Hindi shock statement + 'Kaise Kaam Karta Hai?' + 🤔. Post to both Instagram Reels and YouTube Shorts; Instagram currently brings about 3x the views and all the shares and saves.",
+  "doMore": [
+    "Open every video with a myth or 'you think X, but actually Y' line in the first 2 seconds",
+    "Narrate in Hindi and use the 'Kaise Kaam Karta Hai?' title format consistently",
+    "Cross-post every video to Instagram Reels and YouTube Shorts on the same day",
+    "Pick sensors people meet in daily life (lights, doors, phones, ATMs) rather than dev boards",
+    "End with a save/share prompt like 'Save karo, project mein kaam aayega'"
+  ],
+  "stopDoing": [
+    "Posting to YouTube only and skipping Instagram",
+    "Generic 'How X actually works' hooks with no surprise or myth",
+    "Switching to English until Hindi results are tested at larger volume"
+  ],
+  "nextTopics": [
+    "Ultrasonic sensor (HC-SR04)",
+    "Touchscreen (capacitive)",
+    "Automatic door sensor",
+    "IR remote and receiver",
+    "LDR street light sensor"
+  ],
+  "bestTimes": {
+    "times": [
+      "12:45",
+      "19:45"
+    ],
+    "reason": "Indian Shorts/Reels prime time (lunch 12:30 and evening 19:30 IST) until we have enough of our own data"
+  }
+}

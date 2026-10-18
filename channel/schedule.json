@@ -1,0 +1,13 @@
+{
+  "timezone": "Asia/Kolkata",
+  "makeAt": "09:00",
+  "postAt": [
+    "12:30",
+    "19:30"
+  ],
+  "autopilot": true,
+  "language": "auto",
+  "switchToEnglishAt": 10000,
+  "niche": "Echo Lab 3D explains how sensors, circuits, Arduino modules and everyday tech work, for students, makers and curious people",
+  "note": "All times are India time (IST). The cloud jobs run with TZ=Asia/Kolkata."
+}

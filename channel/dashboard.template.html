@@ -1,0 +1,128 @@
+<!doctype html>
+<!-- Echo Lab 3D dashboard. manager.py fills in the data and writes dashboard.html; open that file. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Echo Lab 3D Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha384-bs/nf9FbdNouRbMiFcrcZfLXYPKiPaGVGplVbv7dLGECccEXDW+S3zjqSKR5ZEaD" crossorigin="anonymous"></script>
+<style>
+  :root { --ink: #14110e; --panel: #1e1a16; --line: #3a332c; --bone: #efe6d6; --dim: #a89f91; --signal: #ff5a1f; --good: #7dd87a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ink); color: var(--bone); font: 15px/1.45 Archivo, "Segoe UI", sans-serif; }
+  main { max-width: 1180px; margin: 0 auto; padding: 28px 16px 60px; }
+  header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+  h1 { font-weight: 900; font-size: 28px; margin: 0; letter-spacing: -0.01em; }
+  h1 span { color: var(--signal); }
+  h2 { font-size: 13px; font-family: "IBM Plex Mono", monospace; font-weight: 500; color: var(--dim); text-transform: uppercase; letter-spacing: .08em; margin: 0 0 12px; }
+  .updated { font-family: "IBM Plex Mono", monospace; color: var(--dim); font-size: 13px; }
+  .grid { display: grid; gap: 14px; }
+  .kpis { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); margin-bottom: 14px; }
+  .two { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-bottom: 14px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; min-width: 0; }
+  .kpi .v { font-size: 34px; font-weight: 900; line-height: 1.1; }
+  .kpi .l { color: var(--dim); font-size: 13px; }
+  .kpi .d { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--good); }
+  .kpi .d.neg { color: var(--signal); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: right; color: var(--dim); font-weight: 500; font-size: 12px; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  th:first-child, td:first-child { text-align: left; }
+  td { text-align: right; padding: 8px; border-bottom: 1px solid #2a2520; font-variant-numeric: tabular-nums; }
+  td a { color: var(--bone); text-decoration: none; }
+  td a:hover { color: var(--signal); }
+  .scroll { overflow-x: auto; }
+  .tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; padding: 2px 6px; border-radius: 6px; background: #2c2620; color: var(--dim); margin-left: 6px; }
+  .tag.private { background: #3a2216; color: var(--signal); }
+  ul { margin: 0; padding-left: 18px; }
+  li { margin: 4px 0; }
+  .muted { color: var(--dim); }
+  .chart { position: relative; height: 230px; }
+  .warn { color: var(--signal); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Echo Lab <span>3D</span> dashboard</h1>
+    <div class="updated" id="updated"></div>
+  </header>
+  <section class="grid kpis" id="kpis"></section>
+  <section class="grid two">
+    <div class="card"><h2>YouTube views, last 28 days</h2><div class="chart"><canvas id="ytDaily"></canvas></div><p class="muted" id="ytDailyNote"></p></div>
+    <div class="card"><h2>Followers over time</h2><div class="chart"><canvas id="growth"></canvas></div></div>
+  </section>
+  <section class="grid two">
+    <div class="card"><h2>To do</h2><div id="todo"></div></div>
+    <div class="card"><h2>Coming up next</h2><ul id="next"></ul></div>
+  </section>
+  <section class="card" style="margin-bottom:14px"><h2>YouTube videos</h2><div class="scroll"><table id="ytTable"></table></div></section>
+  <section class="card"><h2>Instagram Reels</h2><div class="scroll"><table id="igTable"></table></div></section>
+</main>
+<script>
+const DATA = /*DATA*/null;
+const fmt = (n) => (n == null ? "–" : Number(n).toLocaleString("en-IN"));
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+document.getElementById("updated").textContent = "updated " + (DATA?.updated ?? "never");
+
+const yt = DATA?.youtube, ig = DATA?.instagram, hist = DATA?.history ?? [];
+const prev = hist.length > 1 ? hist[hist.length - 2] : null;
+const delta = (now, before) => (now == null || before == null ? "" : now - before);
+const kpi = (label, value, d) => `<div class="card kpi"><div class="v">${fmt(value)}</div><div class="l">${label}</div>${
+  d === "" || d == null ? "" : `<div class="d ${d < 0 ? "neg" : ""}">${d >= 0 ? "+" : ""}${fmt(d)} since last run</div>`}</div>`;
+const sum = (arr, k) => (arr ?? []).reduce((n, x) => n + (x[k] ?? 0), 0);
+document.getElementById("kpis").innerHTML = [
+  kpi("YouTube subscribers", yt?.subs, delta(yt?.subs, prev?.ytSubs)),
+  kpi("YouTube views (all time)", yt?.views, delta(yt?.views, prev?.ytViews)),
+  kpi("Instagram followers", ig?.followers, delta(ig?.followers, prev?.igFollowers)),
+  kpi("Instagram likes (recent Reels)", ig ? sum(ig.posts, "likes") : null),
+  kpi("Comments (all videos)", (yt ? sum(yt.videos, "comments") : 0) + (ig ? sum(ig.posts, "comments") : 0)),
+].join("");
+
+Chart.defaults.color = "#a89f91";
+Chart.defaults.borderColor = "#2a2520";
+Chart.defaults.font.family = "IBM Plex Mono, monospace";
+const daily = yt?.daily ?? [];
+if (daily.length) {
+  new Chart(document.getElementById("ytDaily"), {
+    type: "bar",
+    data: { labels: daily.map((d) => d.day.slice(5)), datasets: [{ label: "views", data: daily.map((d) => d.views), backgroundColor: "#ff5a1f" }] },
+    options: { maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { precision: 0 } } } },
+  });
+} else document.getElementById("ytDailyNote").textContent = "YouTube Analytics shows data 2–3 days after views happen.";
+new Chart(document.getElementById("growth"), {
+  type: "line",
+  data: {
+    labels: hist.map((h) => h.day.slice(5)),
+    datasets: [
+      { label: "YouTube subs", data: hist.map((h) => h.ytSubs), borderColor: "#ff5a1f", backgroundColor: "#ff5a1f", tension: 0.3 },
+      { label: "Instagram followers", data: hist.map((h) => h.igFollowers), borderColor: "#efe6d6", backgroundColor: "#efe6d6", tension: 0.3 },
+    ],
+  },
+  options: { maintainAspectRatio: false, scales: { y: { beginAtZero: true, ticks: { precision: 0 } } } },
+});
+
+const q = DATA?.queue ?? {};
+const todo = [];
+if (q.pending?.length) todo.push(`<p class="warn"><b>${q.pending.length} video(s) waiting for your OK</b>: run <b>review.bat</b></p><ul>${q.pending.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>`);
+if (q.drafts) todo.push(`<p class="warn"><b>${q.drafts} comment replies drafted</b>: run <b>review.bat</b></p>`);
+if (q.approved?.length) todo.push(`<p>Scheduled:</p><ul>${q.approved.map(([t, at]) => `<li>${esc(at.replace("T", " "))} · ${esc(t)}</li>`).join("")}</ul>`);
+document.getElementById("todo").innerHTML = todo.join("") || `<p class="muted">Nothing waiting. The next video is made tomorrow morning.</p>`;
+document.getElementById("next").innerHTML = (q.next ?? []).map((t) => `<li>${esc(t)}</li>`).join("") || `<li class="muted">Queue empty: new topics are suggested automatically.</li>`;
+
+document.getElementById("ytTable").innerHTML = yt
+  ? `<tr><th>Video</th><th>Date</th><th>Views</th><th>Likes</th><th>Comments</th></tr>` +
+    yt.videos.map((v) => `<tr><td><a href="https://youtu.be/${esc(v.id)}" target="_blank">${esc(v.title)}</a>${
+      v.status !== "public" ? `<span class="tag ${esc(v.status)}">${esc(v.status)}</span>` : ""}</td><td>${esc(v.published)}</td><td>${fmt(v.views)}</td><td>${fmt(v.likes)}</td><td>${fmt(v.comments)}</td></tr>`).join("")
+  : `<tr><td class="muted">YouTube numbers unavailable this run.</td></tr>`;
+const hasInsights = ig?.posts?.some((p) => p.reach != null);
+document.getElementById("igTable").innerHTML = ig
+  ? `<tr><th>Reel</th><th>Date</th>${hasInsights ? "<th>Reach</th><th>Views</th><th>Saves</th><th>Shares</th>" : ""}<th>Likes</th><th>Comments</th></tr>` +
+    ig.posts.map((p) => `<tr><td><a href="${esc(p.url)}" target="_blank">${esc(p.title) || "(no caption)"}</a></td><td>${esc(p.published)}</td>${
+      hasInsights ? `<td>${fmt(p.reach)}</td><td>${fmt(p.views)}</td><td>${fmt(p.saved)}</td><td>${fmt(p.shares)}</td>` : ""}<td>${fmt(p.likes)}</td><td>${fmt(p.comments)}</td></tr>`).join("") +
+    (hasInsights ? "" : `<tr><td colspan="4" class="muted">Reach, views, saves and shares appear once the Instagram token has the insights permission.</td></tr>`)
+  : `<tr><td class="muted">Instagram numbers unavailable this run.</td></tr>`;
+</script>
+</body>
+</html>

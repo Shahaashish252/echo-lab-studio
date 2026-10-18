@@ -1,0 +1,69 @@
+{
+  "engine": "kokoro",
+  "kokoro": { "voice": "af_heart", "speed": 1.0, "lang": "en-us" },
+  "elevenlabs": { "voiceId": "NOpBlnGInO9m6vDvFkFC", "voiceName": "Spuds Oxley", "modelId": "eleven_v4", "languageCode": "en" },
+  "lines": {
+    "intro-1": { "text": "How firing *alpha particles* at gold revealed the *nucleus* at the heart of every atom", "say": "The gold foil experiment. How firing alpha particles at a sheet of gold revealed the nucleus, at the heart of every atom." },
+
+    "electron-1": { "text": "In 1897, J.J. Thomson discovered the *electron*: a tiny particle with *negative charge*", "say": "In eighteen ninety-seven, J. J. Thomson discovered the electron: a tiny particle with negative charge." },
+    "electron-2": { "text": "But atoms are *neutral* overall. So where was the *positive charge* hiding?" },
+
+    "plum-1": { "text": "Thomson's answer: the *plum pudding model*" },
+    "plum-2": { "text": "The atom is a sphere about *10⁻¹⁰ m* across, with positive charge *spread evenly* through it", "say": "The atom is a sphere about ten to the minus ten metres across, with positive charge spread evenly through it." },
+    "plum-3": { "text": "Electrons sit inside like *seeds in a watermelon*, so the atom stays neutral" },
+    "plum-4": { "text": "Spread that thin, the positive charge pushes weakly, so alpha particles should *pass straight through*" },
+
+    "alpha-1": { "text": "Rutherford himself had discovered *alpha particles*, in 1899", "say": "Rutherford himself had discovered alpha particles, in eighteen ninety-nine." },
+    "alpha-2": { "text": "Each one is a *helium nucleus*: two protons and two neutrons, with charge *+2e*", "say": "Each one is a helium nucleus: two protons and two neutrons, with a charge of plus two e." },
+    "alpha-3": { "text": "They shoot out of radioactive atoms at about *20,000 km/s*, carrying a few *MeV* of energy", "say": "They shoot out of radioactive atoms at about twenty thousand kilometres per second, carrying a few million electron volts of energy." },
+    "alpha-4": { "text": "Fast, heavy and positive: *perfect tiny bullets* for probing the atom" },
+
+    "setup-1": { "text": "In 1909, Hans *Geiger* and Ernest *Marsden*, working under Rutherford, built this experiment", "say": "In nineteen oh nine, Hans Geiger and Ernest Marsden, working under Rutherford, built this experiment." },
+    "setup-2": { "text": "A radioactive source sits in a *lead block*. Lead absorbs radiation, so only a *narrow beam* escapes" },
+    "setup-3": { "text": "The beam strikes *gold foil* about *100 nm* thick: only a few hundred atoms", "say": "The beam strikes gold foil about a hundred nanometres thick: only a few hundred atoms." },
+    "setup-4": { "text": "Gold was chosen because it can be beaten *incredibly thin*" },
+    "setup-5": { "text": "A *zinc sulfide* screen gives a tiny *flash of light* wherever an alpha particle lands" },
+    "setup-6": { "text": "A *microscope* swings round the foil, so they can count flashes *at every angle*" },
+    "setup-7": { "text": "And it all sits in a *vacuum*, so air doesn't stop the alpha particles" },
+
+    "fire-1": { "text": "Here's what they saw. *Most* alpha particles went *straight through*, as if nothing was there" },
+    "fire-2": { "text": "A small fraction were *deflected*: about *1 in 700* by more than a degree", "say": "A small fraction were deflected: about one in seven hundred, by more than a degree." },
+    "fire-3": { "text": "And some *bounced back*: about *1 in 8000* by more than *90°*", "say": "And some bounced back: about one in eight thousand, by more than ninety degrees." },
+
+    "quote-1": { "text": "", "say": "Rutherford said: It was almost as incredible as if you fired a fifteen-inch shell at a piece of tissue paper, and it came back and hit you." },
+
+    "graph-1": { "text": "Plot the *number* of alpha particles against the *scattering angle*, and the count falls off steeply" },
+    "graph-2": { "text": "Rutherford's formula fits it perfectly: *N ∝ 1 / sin⁴(θ/2)*", "say": "Rutherford's formula fits it perfectly: N is proportional to one over sine to the fourth of theta over two." },
+    "graph-3": { "text": "That's exactly what happens if all the positive charge sits at a *single tiny point*" },
+
+    "inside-1": { "text": "Zoom into the foil, and we reach rows of *gold atoms*" },
+    "inside-2": { "text": "Each atom is mostly *empty space*, so most particles fly straight through" },
+    "inside-3": { "text": "But all its positive charge, and nearly all its *mass*, is packed into a tiny *nucleus*" },
+    "inside-4": { "text": "How far a particle's path is aimed from the nucleus is the *impact parameter, b*" },
+    "inside-5": { "text": "Large *b*: a tiny deflection. Small *b*: a big one" },
+    "inside-6": { "text": "Head on, with *b = 0*, the alpha particle stops and *bounces straight back*", "say": "Head on, with b equal to zero, the alpha particle stops, and bounces straight back." },
+
+    "closest-1": { "text": "How close can it get? Head on, all its *kinetic energy* turns into *electric potential energy*" },
+    "closest-2": { "text": "At the *distance of closest approach, d*, the two are equal" },
+    "closest-3": { "text": "*K = 2Ze² / 4πε₀d*, so *d = 2Ze² / 4πε₀K*", "say": "K equals two Z e squared, over four pi epsilon nought d. So, d equals two Z e squared, over four pi epsilon nought K." },
+    "closest-4": { "text": "For a *7.7 MeV* alpha particle and gold, *Z = 79*: d ≈ *3 × 10⁻¹⁴ m*", "say": "For a seven point seven M e V alpha particle and gold, with Z equal to seventy-nine, d is about three times ten to the minus fourteen metres." },
+    "closest-5": { "text": "So the nucleus must be *even smaller* than that" },
+
+    "scale-1": { "text": "Later measurements put the nucleus at about *10⁻¹⁵ m*: a *hundred thousand times* smaller than the atom", "say": "Later measurements put the nucleus at about ten to the minus fifteen metres: a hundred thousand times smaller than the atom." },
+    "scale-2": { "text": "If the nucleus were a *cricket ball*, the atom would have a radius of about *5 km*", "say": "If the nucleus were a cricket ball, the atom would have a radius of about five kilometres." },
+
+    "model-1": { "text": "This led to Rutherford's *nuclear model* of the atom, in 1911", "say": "This led to Rutherford's nuclear model of the atom, in nineteen eleven." },
+    "model-2": { "text": "One: a tiny, dense, *positive nucleus* holds almost all the atom's mass" },
+    "model-3": { "text": "Two: *electrons* move around it in circular orbits, like *planets* around the sun" },
+    "model-4": { "text": "The nucleus's *electrostatic pull* provides the *centripetal force*" },
+    "model-5": { "text": "Three: the atom is *neutral*, with as many electrons as protons" },
+
+    "limits-1": { "text": "But the model had a serious flaw. An electron moving in a circle is *accelerating*" },
+    "limits-2": { "text": "And *accelerating charges radiate* energy, as electromagnetic waves" },
+    "limits-3": { "text": "Losing energy, it would *spiral into the nucleus* in about *10⁻⁸ s*. Atoms would collapse. They don't", "say": "Losing energy, it would spiral into the nucleus in about a hundred millionth of a second. Atoms would collapse. They don't." },
+    "limits-4": { "text": "It also can't explain *line spectra*: why atoms emit only *certain colours*, not a continuous rainbow" },
+
+    "outro-1": { "text": "To sum up: the atom is mostly *empty space*, with a tiny, dense, *positive nucleus* at its centre" },
+    "outro-2": { "text": "Fixing the model's flaws led *Niels Bohr*, in 1913, to a new model of the atom. But that's another story", "say": "Fixing the model's flaws led Niels Bohr, in nineteen thirteen, to a new model of the atom. But that's another story." }
+  }
+}

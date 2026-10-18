@@ -1,0 +1,32 @@
+{
+  "file": "out/auto/how-street-lights-know-night.mp4",
+  "title": "How Do Street Lights Know It's Night? 🤔 #shorts",
+  "description": "Ever wonder how street lights flip on the second it gets dark, with no one flipping a switch?\n💡 A tiny light-sensitive resistor called an LDR hides inside every street lamp\n🔬 Its zigzag cadmium sulfide track reacts to light itself\n⚡ Bright light frees electrons, dropping resistance so current flows\n🌙 Darkness spikes resistance, tripping a tiny circuit that turns the lamp on\nSubscribe for more quick explainers on the tech hiding in plain sight!\n#shorts #ldr #photoresistor #streetlights #howitworks #sensors #electronics\n\nPhotos: Nevit Dilmen (talk) / Wikimedia Commons (CC BY-SA 3.0)",
+  "tags": [
+    "how street lights work",
+    "ldr sensor explained",
+    "photoresistor explained",
+    "light dependent resistor",
+    "how street lights turn on",
+    "cds sensor",
+    "light sensor working",
+    "electronics explained shorts",
+    "how sensors work",
+    "street light sensor",
+    "photoresistor circuit",
+    "light sensing technology",
+    "automatic street lights"
+  ],
+  "categoryId": "28",
+  "language": "en",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensors Explained: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "This tiny resistor turns on every street light 💡\nNo switch, no timer, just one clever part reacting to light itself 👇\n⚡ A photoresistor's resistance changes with light\n🔬 Bright light frees electrons and drops resistance\n🌙 Darkness spikes resistance and trips a switch\n💾 Save this for your next electronics deep dive\n📤 Send it to a friend who loves how-it-works content\n💬 Did you know street lights had a sensor this simple?\n#howitworks #electronics #photoresistor #ldrsensor #lightsensor",
+    "tiktok": "The part that makes street lights turn on by themselves 💡 Learn how an LDR senses light with zero switches. Did you know this was inside every lamp? #shorts #learnontiktok #electronics #ldr #howitworks"
+  }
+}

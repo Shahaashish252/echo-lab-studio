@@ -1,0 +1,32 @@
+{
+  "file": "out/auto/how-arduino-uno-works.mp4",
+  "title": "How an Arduino Uno Actually Works ⚡ #shorts",
+  "description": "This tiny board can control almost anything. Here's what's on an Arduino Uno and how your code makes it do things.\n\n🧠 The ATmega328P chip: the brain that runs your code\n🔌 USB port and power jack: how it gets power and code\n📍 Digital pins 0-13 and analog pins A0-A5\n⬆️ Uploading code: watch the TX/RX lights flash\n💡 The classic Blink sketch on the pin 13 LED\n\nSubscribe to Echo Lab 3D for more how-it-works videos!\n\n#shorts #arduino #arduinouno #electronics #microcontroller #howitworks #stem #maker",
+  "tags": [
+    "arduino uno",
+    "how arduino works",
+    "arduino uno explained",
+    "arduino for beginners",
+    "atmega328p",
+    "arduino pins",
+    "arduino blink",
+    "microcontroller",
+    "electronics",
+    "how it works",
+    "shorts",
+    "maker",
+    "stem"
+  ],
+  "categoryId": "28",
+  "language": "en",
+  "privacy": "private",
+  "playlist": {
+    "title": "Tech Explained: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "This tiny board can control almost anything 🤯\n\nRobots, drones, smart homes… it all starts with an Arduino Uno. Here's what every part actually does 👇\n\n🧠 ATmega328P: the brain that runs your code\n🔌 USB port: uploads your code + powers the board\n📍 Pins 0-13 & A0-A5: how it talks to the real world\n💡 Pin 13 LED: the first program every maker writes\n\n💾 Save this for your first project\n📤 Send it to a friend who wants to start electronics\n💬 What would YOU build first? Tell me below 👇\n\n#arduino #electronics #engineering #stem #techexplained",
+    "tiktok": "This tiny board can control almost anything 🤯 Here's how the Arduino Uno actually works. What would you build first? 👇\n\n#arduino #electronics #engineering #learnontiktok #techtok"
+  }
+}

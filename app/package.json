@@ -1,0 +1,29 @@
+{
+  "name": "motion-as-code",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "voice": "bun scripts/voice.ts",
+    "sound": "bun scripts/sound.ts",
+    "draft": "bun scripts/render.ts video --samples 1",
+    "render": "bun scripts/render.ts video --samples 6",
+    "stills": "bun scripts/render.ts stills",
+    "auto": "bun scripts/auto.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/archivo": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/nunito": "^5.3.0",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@elevenlabs/elevenlabs-js": "^2.70.0",
+    "@types/bun": "^1.4.2",
+    "@types/three": "^0.186.0",
+    "playwright-core": "^1.63.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2"
+  }
+}

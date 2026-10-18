@@ -1,0 +1,34 @@
+{
+  "file": "out/auto/the-weight-inside-your-phone.mp4",
+  "title": "How Does Your Phone Know Which Way Is Down? 🤔 #shorts",
+  "description": "There's a tiny moving weight inside your phone right now, and it's how your screen knows up from down.\n⚙️ A microscopic mass on springs, suspended between two capacitor plates\n📐 How a 2-micrometer gap turns into a measurable signal\n🔴 Why the capacitance difference (ΔC) is the real error signal\n⚡ How that signal becomes a clean voltage, then a g-force reading\n🔁 Subscribe for more teardown explainers on everyday sensors\n#mems #accelerometer #electronics #engineering #howitworks #sensors #physics #shorts",
+  "tags": [
+    "mems accelerometer explained",
+    "how does an accelerometer work",
+    "phone sensor explained",
+    "capacitive sensor",
+    "how phones detect tilt",
+    "mems sensor",
+    "accelerometer capacitance",
+    "proof mass physics",
+    "inside your phone sensors",
+    "electronics explainer",
+    "how screen rotation works",
+    "micro electromechanical systems",
+    "accelerometer g force",
+    "engineering shorts",
+    "sensor fusion basics"
+  ],
+  "categoryId": "28",
+  "language": "en",
+  "privacy": "private",
+  "playlist": {
+    "title": "Inside Electronics: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "There's a tiny weight moving inside your phone 📱\nIt's not measuring speed — it's feeling force. Here's how 👇\n⚙️ A microscopic mass floats on four tiny springs\n📏 Tilt changes a 2-micrometer gap between capacitor plates\n🔴 That capacitance difference (ΔC) becomes the signal\n⚡ The circuit turns it into a g-force reading, 1,000 times a second\n💾 Save it for the next time someone asks how screen rotation works\n📤 Send it to a friend who loves tiny engineering\n💬 Want the gyroscope version next?\n#mems #accelerometer #sensorengineering #phonehardware #electronicsexplained",
+    "tiktok": "Your phone has a tiny moving weight inside it 😳 Learn how tilt becomes a measurable g-force signal. What sensor should I break down next? #mems #accelerometer #electronics #learnontiktok #engineering"
+  }
+}

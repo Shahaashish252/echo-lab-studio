@@ -1,0 +1,14 @@
+{
+  "file": "out/ultrasonic_upload.mp4",
+  "thumbnail": "out/channel/ultrasonic-cover_cover_0.50s.png",
+  "title": "How Ultrasonic Sensors See With Sound 🔊 #shorts",
+  "description": "How does a robot \"see\" a wall without eyes? It shouts and listens for the echo. The HC-SR04 ultrasonic sensor explained in 3D:\n\n1️⃣ TRIG gets a 10 µs pulse\n2️⃣ The transmitter fires 8 pulses at 40 kHz\n3️⃣ ECHO goes HIGH and the timer starts\n4️⃣ The echo returns and ECHO goes LOW\n📐 distance = speed of sound × time ÷ 2  (cm = µs ÷ 58)\n\nFull explainer on the channel. Subscribe to Echo Lab 3D for more how-it-works videos!\n\n#shorts #ultrasonicsensor #arduino #hcsr04 #electronics #howitworks #robotics #stem",
+  "tags": [
+    "ultrasonic sensor", "how ultrasonic sensor works", "hc-sr04", "arduino", "ultrasonic sensor explained",
+    "distance sensor", "echolocation", "electronics", "robotics", "how it works", "shorts", "3d animation", "echo lab 3d"
+  ],
+  "categoryId": "28",
+  "language": "en",
+  "privacy": "private",
+  "playlist": { "title": "Sensors Explained: Shorts", "description": "Quick 3D explainers of everyday sensors and tech." }
+}

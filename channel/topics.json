@@ -1,0 +1,116 @@
+{
+  "queue": [
+    {
+      "topic": "Touchscreen (capacitive)",
+      "hook": "Aapka phone aapki ungli nahi, bijli mehsoos karta hai!"
+    },
+    {
+      "topic": "Automatic door sensor",
+      "hook": "Mall ka darwaza aapko pehchanta nahi, phir khulta kaise hai?"
+    },
+    {
+      "topic": "IR remote and receiver",
+      "hook": "TV remote ki roshni aap dekh hi nahi sakte!"
+    },
+    {
+      "topic": "LDR street light sensor",
+      "hook": "Street light ko kaise pata chalta hai ki raat ho gayi?"
+    },
+    {
+      "topic": "Touchscreen capacitive sensing",
+      "hook": "Aapka phone ungli nahi, aapki body ki bijli mehsoos karta hai!"
+    },
+    {
+      "topic": "Ultrasonic distance sensor HC-SR04",
+      "hook": "Ye sensor chamgaadad ki tarah sunkar doori naapta hai!"
+    },
+    {
+      "topic": "Automatic door / lift infrared sensor",
+      "hook": "Lift ka darwaza aapko dekhkar nahi rukta, asli raaz ye hai"
+    },
+    {
+      "topic": "Smoke detector working",
+      "hook": "Smoke detector dhuaan soonghta nahi, light se pakadta hai!"
+    },
+    {
+      "topic": "TV remote IR signal",
+      "hook": "Remote ki roshni aapki aankhein nahi dekh sakti, camera dekh sakta hai!"
+    },
+    {
+      "topic": "LiDAR",
+      "hook": "How self-driving cars see in 3D with lasers."
+    },
+    {
+      "topic": "Hall effect sensor",
+      "hook": "How your laptop knows the lid is shut."
+    },
+    {
+      "topic": "DHT11 temperature and humidity sensor",
+      "hook": "How a sensor measures water in the air."
+    },
+    {
+      "topic": "Soil moisture sensor",
+      "hook": "This sensor knows when your plant is thirsty."
+    },
+    {
+      "topic": "Stepper motor",
+      "hook": "How 3D printers move in perfect tiny steps."
+    },
+    {
+      "topic": "Relay",
+      "hook": "How a tiny 5 V signal switches a 230 V lamp."
+    },
+    {
+      "topic": "Potentiometer",
+      "hook": "The knob that turns position into voltage."
+    },
+    {
+      "topic": "MEMS microphone",
+      "hook": "How your phone turns your voice into numbers."
+    },
+    {
+      "topic": "Speaker",
+      "hook": "How a magnet and a coil make every sound you hear."
+    },
+    {
+      "topic": "Infrared thermometer",
+      "hook": "How a thermometer measures you without touching."
+    },
+    {
+      "topic": "GPS",
+      "hook": "Your phone listens to 4 satellites at once."
+    },
+    {
+      "topic": "RFID and NFC",
+      "hook": "How a card with no battery pays for your metro ride."
+    },
+    {
+      "topic": "Load cell (weighing scale)",
+      "hook": "How a metal bar feels your weight."
+    },
+    {
+      "topic": "MQ-2 gas sensor",
+      "hook": "How a smoke alarm smells smoke."
+    },
+    {
+      "topic": "Rain sensor",
+      "hook": "How car wipers know it's raining."
+    },
+    {
+      "topic": "CMOS camera sensor",
+      "hook": "Every photo is millions of tiny light buckets."
+    }
+  ],
+  "done": [
+    "Ultrasonic sensor (HC-SR04)",
+    "Arduino Uno",
+    "PIR motion sensor",
+    "Fingerprint sensor",
+    "IR obstacle sensor",
+    "LDR (light sensor)",
+    "Servo motor",
+    "Capacitive touchscreen",
+    "MEMS accelerometer",
+    "MEMS gyroscope"
+  ]
+}

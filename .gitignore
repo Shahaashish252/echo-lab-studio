@@ -1,0 +1,35 @@
+# Echo Lab 3D: only code and the channel's plain-data state go to GitHub.
+# NEVER commit secrets: they live in GitHub Actions secrets and are written at job start.
+
+# --- secrets ---
+channel/token.json
+channel/token.*.json
+channel/client_secret.json
+channel/instagram.json
+channel/instagram.*.json
+channel/huggingface.json
+channel/fb_app.json
+*.env
+.env*
+
+# --- big / generated / personal ---
+out/
+my assest/
+YT video/
+_backup_before_auto/
+analysis/models/
+app/node_modules/
+app/public/voice/
+app/public/audio/
+app/public/auto/broll/
+app/dist/
+channel/logs/
+channel/__pycache__/
+**/__pycache__/
+channel/dashboard.html
+channel/*.before-*.json
+channel/*.before-*.py
+channel/*.prev.json
+*.log
+.DS_Store
+Thumbs.db

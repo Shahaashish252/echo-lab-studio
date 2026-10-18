@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Echo Lab Studio</title>
+<link rel="icon" href="/favicon.png">
+<style>
+:root{
+  --bg:#0e0f12;--panel:#16181d;--panel2:#1c1f26;--line:#262a33;--text:#eceef2;--muted:#8b919e;--faint:#5b616d;
+  --accent:#ff6a2b;--accent2:#ffb02e;--good:#3ecf8e;--bad:#ff5a5f;--blue:#5aa9ff;--yt:#ff3d3d;--ig:#d64fd0;
+  --r:14px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,"Nirmala UI",sans-serif}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+header{position:sticky;top:0;z-index:5;display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:12px 20px;background:rgba(14,15,18,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.logo{font-weight:800;font-size:17px;letter-spacing:-.01em}.logo span{color:var(--accent)}
+.grow{flex:1}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:var(--panel2);border:1px solid var(--line);font-size:12px;color:var(--muted);white-space:nowrap}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--faint)}.dot.on{background:var(--good);box-shadow:0 0 0 3px rgba(62,207,142,.18)}.dot.busy{background:var(--accent2);animation:pulse 1.2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+main{max-width:1280px;margin:0 auto;padding:20px;display:grid;gap:16px;grid-template-columns:repeat(12,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px;min-width:0}
+.card h2{margin:0 0 12px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);display:flex;align-items:center;gap:8px}
+.s12{grid-column:span 12}.s8{grid-column:span 8}.s7{grid-column:span 7}.s6{grid-column:span 6}.s5{grid-column:span 5}.s4{grid-column:span 4}
+@media(max-width:980px){.s8,.s7,.s6,.s5,.s4{grid-column:span 12}}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.kpi .l{font-size:12px;color:var(--muted)}.kpi .v{font-size:26px;font-weight:800;letter-spacing:-.02em;margin-top:2px}.kpi .d{font-size:12px;color:var(--faint)}
+.kpi.yt .v{color:#ff8080}.kpi.ig .v{color:#ef8ae9}
+.bar{height:8px;background:var(--panel2);border-radius:99px;overflow:hidden;margin-top:8px}.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.cmd{display:flex;gap:8px;flex-wrap:wrap}
+.cmd input{flex:1;min-width:220px;background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:11px 12px;font:inherit}
+.cmd input:focus{outline:2px solid var(--accent);border-color:transparent}
+button{font:inherit;cursor:pointer;border-radius:10px;border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:10px 14px;font-weight:600}
+button:hover{border-color:#3a3f4b}button:disabled{opacity:.45;cursor:not-allowed}
+button.primary{background:linear-gradient(135deg,var(--accent),#ff4d6d);border:0;color:#fff}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.msg{margin-top:10px;font-size:13px;color:var(--muted);min-height:20px}
+.steps{display:flex;gap:0;margin:6px 0 4px}
+.step{flex:1 1 0;min-width:0;text-align:center;position:relative;font-size:11px;color:var(--faint);overflow-wrap:anywhere}
+@media(max-width:640px){.step{font-size:9px}.step .c{width:22px;height:22px;font-size:11px}.step:before{top:10px}}
+.step:before{content:"";position:absolute;top:13px;left:-50%;width:100%;height:2px;background:var(--line);z-index:0}
+.step:first-child:before{display:none}
+.step .c{position:relative;z-index:1;width:28px;height:28px;margin:0 auto 6px;border-radius:50%;display:grid;place-items:center;background:var(--panel2);border:2px solid var(--line);font-size:13px}
+.step.done{color:var(--text)}.step.done .c{background:var(--good);border-color:var(--good);color:#06110b}.step.done:before{background:var(--good)}
+.step.now{color:var(--accent2)}.step.now .c{border-color:var(--accent2);animation:pulse 1.2s infinite}.step.now:before{background:var(--good)}
+.step.fail .c{background:var(--bad);border-color:var(--bad)}
+.step .t{font-size:10px;color:var(--faint)}
+pre.log{margin:10px 0 0;background:#0a0b0d;border:1px solid var(--line);border-radius:10px;padding:10px;max-height:260px;overflow:auto;font:12px/1.45 ui-monospace,Consolas,monospace;color:#b9c0cc;white-space:pre-wrap;word-break:break-word}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);text-align:left;font-weight:600;padding:6px 8px;border-bottom:1px solid var(--line)}
+td{padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+td.n{text-align:right;font-variant-numeric:tabular-nums}th.n{text-align:right}
+.tt{max-width:340px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mini{height:6px;border-radius:99px;background:var(--panel2);overflow:hidden;min-width:60px}.mini i{display:block;height:100%;background:var(--accent)}
+.tag{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11px;font-weight:700;background:var(--panel2);color:var(--muted)}
+.tag.hi{background:rgba(255,176,46,.14);color:var(--accent2)}.tag.en{background:rgba(90,169,255,.14);color:var(--blue)}
+.tag.published{background:rgba(62,207,142,.14);color:var(--good)}.tag.approved{background:rgba(255,176,46,.14);color:var(--accent2)}
+.tag.failed,.tag.rejected{background:rgba(255,90,95,.14);color:var(--bad)}.tag.running{background:rgba(255,106,43,.16);color:var(--accent)}
+.journey{border-top:1px solid var(--line);padding:12px 0}.journey:first-child{border-top:0;padding-top:0}
+.jh{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.jh b{font-weight:650}
+.muted{color:var(--muted)}.faint{color:var(--faint)}
+ul.clean{margin:6px 0 0;padding-left:18px}ul.clean li{margin:3px 0}
+.ins p{margin:0 0 10px}.ins .k{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);margin-top:12px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.switch{display:inline-flex;align-items:center;gap:8px;cursor:pointer;user-select:none}
+.switch input{display:none}.switch .s{width:36px;height:20px;border-radius:99px;background:var(--line);position:relative;transition:.2s}
+.switch .s:after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:.2s}
+.switch input:checked+.s{background:var(--good)}.switch input:checked+.s:after{left:18px}
+select{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:5px 8px;font:inherit}
+svg text{fill:var(--faint);font-size:10px}
+.empty{color:var(--faint);font-size:13px;padding:8px 0}
+details summary{cursor:pointer;color:var(--muted);font-size:12px;margin-top:8px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo" style="display:flex;align-items:center;gap:10px"><img src="/logo.png" alt="Echo Lab 3D" style="height:34px">Studio</div>
+  <span class="pill" id="status"><span class="dot"></span>connecting…</span>
+  <div class="grow"></div>
+  <label class="switch" title="Autopilot: makes, schedules, posts and replies by itself"><input type="checkbox" id="autopilot"><span class="s"></span><span class="muted">Autopilot</span></label>
+  <label class="row muted" style="gap:6px">Language
+    <select id="lang"><option value="auto">Hindi → English at 10k</option><option value="hi">Hindi</option><option value="en">English</option></select>
+  </label>
+  <span class="pill" id="updated">—</span>
+</header>
+<main>
+  <section class="s12 kpis" id="kpis"></section>
+
+  <section class="card s12">
+    <h2>🎬 Command center <span class="faint" style="text-transform:none;letter-spacing:0;font-weight:500">— optional. I analyse, make, post and reply by myself; use this only if you want something extra.</span></h2>
+    <div class="cmd">
+      <input id="topic" placeholder="Optional: a topic you want (e.g. “How a smartwatch measures heart rate”). Leave empty to let me pick the next viral one.">
+      <button class="primary" id="bMake">🔥 Analyze &amp; make a video</button>
+    </div>
+    <div class="btns">
+      <button data-a="analyze">📊 Analyze channel only</button>
+      <button data-a="refresh">🔄 Refresh numbers</button>
+      <button data-a="comments">💬 Answer comments now</button>
+      <button data-a="post-now">🚀 Post next video now</button>
+    </div>
+    <div class="msg" id="msg"></div>
+    <details id="cmdlogBox"><summary>Show command output</summary><pre class="log" id="cmdlog"></pre></details>
+  </section>
+
+  <section class="card s12">
+    <h2>⚙️ Making now <span class="tag" id="liveTag">idle</span></h2>
+    <div id="live"></div>
+  </section>
+
+  <section class="card s7">
+    <h2>🏆 Top videos <span class="faint" style="text-transform:none;letter-spacing:0">YouTube + Instagram</span></h2>
+    <div id="top"></div>
+  </section>
+
+  <section class="card s5 ins">
+    <h2>🧠 What’s working</h2>
+    <div id="insights"></div>
+  </section>
+
+  <section class="card s6">
+    <h2>📈 Growth</h2>
+    <div id="growth"></div>
+  </section>
+
+  <section class="card s6">
+    <h2>🗓 Schedule</h2>
+    <div id="schedule"></div>
+  </section>
+
+  <section class="card s8">
+    <h2>🧭 Every video, start to finish</h2>
+    <div id="journeys"></div>
+  </section>
+
+  <section class="card s4">
+    <h2>💡 Next topics</h2>
+    <div id="topics"></div>
+    <h2 style="margin-top:18px">🚩 Comments for you</h2>
+    <div id="flagged"></div>
+  </section>
+</main>
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt = (n) => (n ?? 0) >= 1e6 ? (n/1e6).toFixed(1)+'M' : (n ?? 0) >= 1e4 ? (n/1e3).toFixed(1)+'k' : (n ?? 0).toLocaleString();
+const when = (iso) => { if (!iso) return ''; const d = new Date(iso); return d.toLocaleString([], {weekday:'short', day:'numeric', month:'short', hour:'2-digit', minute:'2-digit'}); };
+const ago = (iso) => { if (!iso) return ''; const s = (Date.now() - new Date(iso)) / 1000; return s < 60 ? 'just now' : s < 3600 ? Math.round(s/60)+' min ago' : s < 86400 ? Math.round(s/3600)+' h ago' : Math.round(s/86400)+' d ago'; };
+let S = null, openJob = null;
+
+const STAGES = [
+  ['Topic', ''], ['Script', 'storyboard'], ['Visuals', 'drawing|3D model|photos|simulation|AI clips'], ['Voice', 'voice'],
+  ['Sound', 'sound'], ['Render', 'render'], ['Upload', 'youtube'], ['Scheduled', ''], ['YouTube', ''], ['Instagram', ''], ['Facebook', ''],
+];
+function stageState(job, video) {
+  // returns [{name, state, at}] for the stepper
+  const reached = {}; let lastIdx = 0;
+  if (job) {
+    reached[0] = job.started;
+    for (const st of job.stages || []) STAGES.forEach(([n, re], i) => { if (re && new RegExp('^(' + re + ')', 'i').test(st.name)) { reached[i] = reached[i] || st.at; lastIdx = Math.max(lastIdx, i); } });
+    if (job.status === 'done') { reached[6] = reached[6] || job.finished; lastIdx = Math.max(lastIdx, 6); }
+  }
+  if (video) {
+    reached[0] = reached[0] || video.date; reached[6] = reached[6] || video.date; lastIdx = Math.max(lastIdx, 6);
+    for (let i = 1; i < 6; i++) reached[i] = reached[i] || (job ? reached[i] : video.date);
+    if (video.postAt || video.status === 'published') { reached[7] = video.postAt || video.postedAt || video.date; lastIdx = 7; }
+    if (video.published?.youtube) { reached[8] = video.postedAt || video.published.youtube; lastIdx = 8; }
+    if (video.published?.instagram) { reached[9] = video.postedAt || video.published.youtube; lastIdx = 9; }
+    if (video.published?.facebook) { reached[10] = video.postedAt || video.published.youtube; lastIdx = 10; }
+  }
+  const running = job && job.status === 'running';
+  return STAGES.map(([n], i) => ({ name: n, at: reached[i],
+    state: reached[i] ? (running && i === lastIdx ? 'now' : 'done') : job?.status === 'failed' && i === lastIdx + 1 ? 'fail' : '' }));
+}
+function stepper(job, video) {
+  return '<div class="steps">' + stageState(job, video).map((s) =>
+    `<div class="step ${s.state}"><div class="c">${s.state === 'done' ? '✓' : s.state === 'fail' ? '✕' : s.state === 'now' ? '●' : ''}</div>${esc(s.name)}<div class="t">${s.at && s.state && String(s.at).length > 10 ? esc(new Date(s.at).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})) : ''}</div></div>`
+  ).join('') + '</div>';
+}
+
+function renderKpis() {
+  const y = S.youtube || {}, g = S.instagram || {};
+  const igViews = S.table.reduce((a, r) => a + (r.igViews || 0), 0);
+  const ytViews = y.views ?? S.table.reduce((a, r) => a + (r.ytViews || 0), 0);
+  const pub = S.videos.filter((v) => v.status === 'published').length, sch = S.videos.filter((v) => v.status === 'approved').length;
+  const goal = S.schedule.switchToEnglishAt || 10000, f = S.followers || 0;
+  $('#kpis').innerHTML = `
+    <div class="kpi yt"><div class="l">YouTube subscribers</div><div class="v">${fmt(y.subs)}</div><div class="d">${fmt(ytViews)} total views</div></div>
+    <div class="kpi ig"><div class="l">Instagram followers</div><div class="v">${fmt(g.followers)}</div><div class="d">${fmt(igViews)} Reel views</div></div>
+    <div class="kpi"><div class="l">Videos posted</div><div class="v">${pub}</div><div class="d">${sch} scheduled · ${S.jobs.filter(j=>j.status==='failed').length} failed tries</div></div>
+    <div class="kpi"><div class="l">Language</div><div class="v">${S.language === 'hi' ? 'हिंदी' : 'English'}</div>
+      <div class="d">${S.schedule.language === 'auto' ? `${fmt(f)} / ${fmt(goal)} followers to switch to English` : 'fixed'}</div>
+      ${S.schedule.language === 'auto' ? `<div class="bar"><i style="width:${Math.min(100, f / goal * 100).toFixed(2)}%"></i></div>` : ''}</div>`;
+}
+
+function renderLive() {
+  const job = S.jobs.find((j) => j.status === 'running');
+  $('#liveTag').textContent = job ? 'making' : S.running.alive ? S.running.action : 'idle';
+  $('#liveTag').className = 'tag ' + (job || S.running.alive ? 'running' : '');
+  if (!job) {
+    const last = S.jobs[0];
+    $('#live').innerHTML = S.makingNow ? `<div class="empty">A video is being made by a run that started before this dashboard existed, so its steps can't be shown live. Every new video from now on shows here step by step.</div>` : `<div class="empty">Nothing is being made right now.${last ? ` Last: “${esc(last.topic)}” — <span class="tag ${last.status}">${esc(last.status)}</span> ${ago(last.finished || last.started)}` : ''}</div>`
+      + (last ? `<details><summary>Show last video's making log</summary><pre class="log" data-job="${esc(last.id)}"></pre></details>` : '');
+  } else {
+    const cur = job.stages.at(-1);
+    $('#live').innerHTML = `<div class="jh"><b>${esc(job.topic)}</b><span class="tag ${job.lang}">${job.lang === 'hi' ? 'Hindi' : 'English'}</span><span class="muted">started ${ago(job.started)}</span></div>
+      ${stepper(job, null)}
+      <div class="muted">Now: ${esc(cur ? cur.name : 'starting…')}</div>
+      <pre class="log" data-job="${esc(job.id)}"></pre>`;
+  }
+  document.querySelectorAll('pre.log[data-job]').forEach(loadLog);
+}
+async function loadLog(el) {
+  const r = await fetch('/api/log?job=' + encodeURIComponent(el.dataset.job)); const t = await r.text();
+  const atEnd = el.scrollTop + el.clientHeight >= el.scrollHeight - 30;
+  el.textContent = t.split('\n').slice(-300).join('\n') || '(no output yet)';
+  if (atEnd) el.scrollTop = el.scrollHeight;
+}
+
+function renderTop() {
+  const rows = S.table.slice(0, 15);
+  if (!rows.length) { $('#top').innerHTML = '<div class="empty">No published videos with numbers yet. Click “Refresh numbers”.</div>'; return; }
+  const max = Math.max(...rows.map((r) => r.ytViews + r.igViews), 1);
+  $('#top').innerHTML = `<table><tr><th>#</th><th>Video</th><th class="n">YT views</th><th class="n">IG views</th><th class="n">Likes</th><th class="n">Shares·Saves</th><th></th></tr>` +
+    rows.map((r, i) => `<tr><td class="faint">${i + 1}</td>
+      <td><div class="tt" title="${esc(r.title)}"><span class="tag ${r.language}">${r.language === 'hi' ? 'HI' : 'EN'}</span> ${esc(r.title.replace(/#shorts/i, ''))}</div>
+        <div class="faint" style="font-size:12px"><a href="https://youtu.be/${esc(r.ytId)}" target="_blank">YouTube</a>${r.igUrl ? ` · <a href="${esc(r.igUrl)}" target="_blank">Instagram</a>` : ''} · ${esc(r.published || '')}</div></td>
+      <td class="n">${fmt(r.ytViews)}</td><td class="n">${fmt(r.igViews)}</td><td class="n">${fmt(r.ytLikes + r.igLikes)}</td><td class="n">${fmt(r.igShares)}·${fmt(r.igSaves)}</td>
+      <td style="width:90px"><div class="mini"><i style="width:${((r.ytViews + r.igViews) / max * 100).toFixed(1)}%"></i></div></td></tr>`).join('') + '</table>';
+}
+
+function renderInsights() {
+  const x = S.insights || {};
+  if (!x.updated) { $('#insights').innerHTML = '<div class="empty">No analysis yet. Click “Analyze channel only”.</div>'; return; }
+  const li = (a) => (a || []).map((s) => `<li>${esc(s)}</li>`).join('');
+  $('#insights').innerHTML = `${x.summary ? `<p>${esc(x.summary)}</p>` : ''}
+    ${x.winningPattern ? `<div class="k">Winning pattern</div><p>${esc(x.winningPattern)}</p>` : ''}
+    ${x.doMore?.length ? `<div class="k">Do more</div><ul class="clean">${li(x.doMore)}</ul>` : ''}
+    ${x.stopDoing?.length ? `<div class="k">Stop doing</div><ul class="clean">${li(x.stopDoing)}</ul>` : ''}
+    <div class="k">Best post times</div><p>${esc((x.bestTimes?.times || S.postTimes).join(' and '))} <span class="faint">— ${esc(x.bestTimes?.reason || '')}</span></p>
+    <div class="faint" style="font-size:12px">Analysed automatically ${ago(x.updated)} · ${x.videos ?? 0} videos · re-analysed every time the PC starts and every morning</div>`;
+}
+
+function renderGrowth() {
+  const h = S.history.filter((d) => d.ytSubs != null || d.igFollowers != null);
+  if (h.length < 2) { $('#growth').innerHTML = '<div class="empty">The growth chart fills in day by day (one point per refresh day).</div>'; return; }
+  const W = 560, H = 180, P = 28, max = Math.max(1, ...h.flatMap((d) => [d.ytSubs || 0, d.igFollowers || 0]));
+  const x = (i) => P + i * (W - P * 2) / (h.length - 1), y = (v) => H - P - (v || 0) / max * (H - P * 2);
+  const line = (k, c) => `<polyline fill="none" stroke="${c}" stroke-width="2.5" points="${h.map((d, i) => `${x(i)},${y(d[k])}`).join(' ')}"/>` +
+    h.map((d, i) => `<circle cx="${x(i)}" cy="${y(d[k])}" r="3" fill="${c}"><title>${esc(d.day)}: ${d[k] ?? 0}</title></circle>`).join('');
+  $('#growth').innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Followers over time">
+    <line x1="${P}" y1="${H - P}" x2="${W - P}" y2="${H - P}" stroke="var(--line)"/>
+    <text x="${P}" y="${H - 8}">${esc(h[0].day)}</text><text x="${W - P}" y="${H - 8}" text-anchor="end">${esc(h.at(-1).day)}</text>
+    <text x="${P}" y="${P - 10}">${max}</text>
+    ${line('ytSubs', 'var(--yt)')}${line('igFollowers', 'var(--ig)')}</svg>
+    <div class="row muted" style="font-size:12px"><span style="color:var(--yt)">● YouTube subscribers</span><span style="color:var(--ig)">● Instagram followers</span></div>`;
+}
+
+function renderSchedule() {
+  const up = S.videos.filter((v) => v.status === 'approved').sort((a, b) => a.postAt.localeCompare(b.postAt));
+  const recent = S.videos.filter((v) => v.status === 'published').slice(0, 4);
+  $('#schedule').innerHTML = `<div class="muted" style="margin-bottom:8px">Daily post times: <b style="color:var(--text)">${esc(S.postTimes.join(' · '))}</b></div>` +
+    (up.length ? `<table>${up.map((v) => `<tr><td style="width:150px"><b>${esc(when(v.postAt))}</b></td><td><div class="tt">${esc(v.title.replace(/#shorts/i, ''))}</div></td><td><span class="tag ${v.language}">${v.language === 'hi' ? 'HI' : 'EN'}</span></td></tr>`).join('')}</table>`
+                : '<div class="empty">Nothing scheduled yet — the next run will make videos.</div>') +
+    (recent.length ? `<div class="k faint" style="margin-top:12px;font-size:11px;text-transform:uppercase;letter-spacing:.06em">Recently posted</div><table>${recent.map((v) => `<tr><td style="width:150px" class="muted">${esc(when(v.postedAt) || v.published?.youtube || '')}</td><td><div class="tt">${esc(v.title.replace(/#shorts/i, ''))}</div></td><td><a href="https://youtu.be/${esc(v.id)}" target="_blank">YT</a>${v.published?.instagram?.startsWith?.('http') ? ` · <a href="${esc(v.published.instagram)}" target="_blank">IG</a>` : ''}${v.published?.facebook?.startsWith?.('http') ? ` · <a href="${esc(v.published.facebook)}" target="_blank">FB</a>` : ''}</td></tr>`).join('')}</table>` : '');
+}
+
+function renderJourneys() {
+  const byJob = Object.fromEntries(S.videos.filter((v) => v.job).map((v) => [v.job, v]));
+  const items = S.jobs.map((j) => ({ job: j, video: byJob[j.id] || S.videos.find((v) => v.id === j.uploadId) }));
+  const jobless = S.videos.filter((v) => !v.job && !S.jobs.some((j) => j.uploadId === v.id) && v.status !== 'rejected').map((v) => ({ job: null, video: v }));
+  const all = [...items, ...jobless].slice(0, 20);
+  if (!all.length) { $('#journeys').innerHTML = '<div class="empty">No videos yet.</div>'; return; }
+  $('#journeys').innerHTML = all.map(({ job, video }) => {
+    const title = video?.title?.replace(/#shorts/i, '') || job?.topic;
+    const st = job?.status === 'running' ? 'running' : job?.status === 'failed' ? 'failed' : video?.status || job?.status;
+    const label = { approved: 'scheduled', published: 'posted', 'held-english': 'saved for English', pending: 'waiting', running: 'making', failed: 'failed', done: 'made' }[st] || st;
+    return `<div class="journey"><div class="jh"><b>${esc(title)}</b><span class="tag ${esc(st)}">${esc(label)}</span>
+      ${(job?.lang || video?.language) ? `<span class="tag ${job?.lang || video?.language}">${(job?.lang || video?.language) === 'hi' ? 'HI' : 'EN'}</span>` : ''}
+      <span class="faint" style="font-size:12px">${esc(ago(job?.started) || video?.date || '')}</span>
+      ${video ? `<a style="font-size:12px" href="https://youtu.be/${esc(video.id)}" target="_blank">YouTube</a>` : ''}
+      ${video?.published?.instagram?.startsWith?.('http') ? `<a style="font-size:12px" href="${esc(video.published.instagram)}" target="_blank">Instagram</a>` : ''}
+      ${video?.published?.facebook?.startsWith?.('http') ? `<a style="font-size:12px" href="${esc(video.published.facebook)}" target="_blank">Facebook</a>` : ''}</div>
+      ${stepper(job, video)}
+      ${job ? `<details><summary>Making log</summary><pre class="log" data-job="${esc(job.id)}"></pre></details>` : ''}</div>`;
+  }).join('');
+  document.querySelectorAll('#journeys details').forEach((d) => d.addEventListener('toggle', () => d.open && loadLog(d.querySelector('pre'))));
+}
+
+function renderSide() {
+  $('#topics').innerHTML = S.topics.length ? '<ol class="clean" style="padding-left:20px">' + S.topics.map((t) => `<li>${esc(t.topic)}${t.hook ? `<div class="faint" style="font-size:12px">“${esc(t.hook)}”</div>` : ''}</li>`).join('') + '</ol>' : '<div class="empty">The queue refills automatically.</div>';
+  $('#flagged').innerHTML = S.flagged.length ? S.flagged.slice().reverse().map((c) => `<div style="padding:8px 0;border-bottom:1px solid var(--line)"><span class="tag">${esc(c.platform)}</span> <b>${esc(c.author)}</b>: ${esc(c.text)}<div class="faint" style="font-size:12px">${esc(c.video)}</div></div>`).join('') : '<div class="empty">None. Deals, money and complaints show up here for you.</div>';
+}
+
+function renderHeader() {
+  const busy = S.makingNow || S.running.alive;
+  $('#status').innerHTML = `<span class="dot ${busy ? 'busy' : 'on'}"></span>${busy ? (S.makingNow ? 'making a video' : 'running: ' + esc(S.running.action)) : 'ready'}`;
+  $('#updated').textContent = S.updated ? 'numbers: ' + S.updated : 'numbers: not refreshed yet';
+  if (document.activeElement !== $('#autopilot')) $('#autopilot').checked = !!S.schedule.autopilot;
+  if (document.activeElement !== $('#lang')) $('#lang').value = S.schedule.language || 'en';
+  // while something runs, only "Refresh numbers" stays clickable
+  document.querySelectorAll('button[data-a], #bMake').forEach((b) => (b.disabled = busy && b.dataset.a !== 'refresh'));
+}
+
+async function refresh() {
+  try {
+    S = await (await fetch('/api/state')).json();
+    renderHeader(); renderKpis(); renderLive(); renderTop(); renderInsights(); renderGrowth(); renderSchedule(); renderSide();
+    if (!document.querySelector('#journeys details[open]')) renderJourneys();
+    if ($('#cmdlogBox').open) $('#cmdlog').textContent = await (await fetch('/api/log?job=command')).text() || '(no command run yet)';
+  } catch (e) { $('#status').innerHTML = '<span class="dot"></span>dashboard server not running'; }
+}
+async function command(body) {
+  $('#msg').textContent = 'Sending…';
+  const r = await fetch('/api/command', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  const j = await r.json(); $('#msg').textContent = j.ok ? '✓ ' + ({ make: 'Analysing the channel, then making the video. Watch it below.', analyze: 'Analysing the channel…', refresh: 'Refreshing numbers…', 'post-now': 'Posting the next video…', comments: 'Answering comments…' }[body.action] || j.message) : '⚠ ' + j.message;
+  if (j.ok && ['make', 'analyze', 'refresh', 'post-now', 'comments'].includes(body.action)) $('#cmdlogBox').open = true;
+  refresh();
+}
+$('#bMake').onclick = () => command({ action: 'make', topic: $('#topic').value.trim() });
+document.querySelectorAll('button[data-a]').forEach((b) => (b.onclick = () => command({ action: b.dataset.a })));
+$('#autopilot').onchange = (e) => command({ action: 'autopilot', on: e.target.checked });
+$('#lang').onchange = (e) => command({ action: 'language', value: e.target.value });
+$('#cmdlogBox').addEventListener('toggle', refresh);
+refresh(); setInterval(refresh, 4000);
+</script>
+</body>
+</html>

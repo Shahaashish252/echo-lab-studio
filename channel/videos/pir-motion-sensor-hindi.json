@@ -1,0 +1,34 @@
+{
+  "file": "D:/MoneyPrinterTurbo-main/videos/pir-motion-sensor-explained/renders/video.mp4",
+  "title": "Motion Sensor Aapko Dekhta Nahi! PIR Sensor Kaise Kaam Karta Hai? 🤔 #shorts",
+  "description": "Light apne aap jal jaati hai — par sensor aapko dekh hi nahi sakta! PIR motion sensor sirf chalti hui garmi (body heat) mehsoos karta hai.\n🔥 Aapka shareer infrared mein chamakta hai (~37°C, ~10 µm)\n🔍 Fresnel lens kamre ko zones mein baant'ta hai\n⚡ Chip ke do hisse — pehle A garam, phir B\n📈 Farak ki lehar threshold paar kare → output HIGH → MOTION!\n🔁 Aise hi aur \"kaise kaam karta hai\" videos ke liye subscribe karein\n#pirsensor #motionsensor #arduino #electronics #hindi #howitworks #sensors #shorts",
+  "tags": [
+    "pir sensor",
+    "pir sensor kaise kaam karta hai",
+    "motion sensor in hindi",
+    "pir motion sensor explained",
+    "how pir sensor works",
+    "passive infrared sensor",
+    "fresnel lens",
+    "pyroelectric sensor",
+    "arduino pir sensor",
+    "hc-sr501",
+    "motion sensor light",
+    "electronics in hindi",
+    "sensor explained hindi",
+    "how motion sensor works",
+    "engineering shorts"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Inside Electronics: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 3500,
+  "social": {
+    "instagram": "Motion sensor aapko DEKHTA nahi 👀❌\nYe sirf chalti hui garmi mehsoos karta hai 🔥 Kaise? 👇\n\n🔥 Aapka body infrared mein glow karta hai\n🔍 Fresnel lens kamre ko zones mein baant'ta hai\n⚡ Chip ke 2 hisse: pehle A garam, phir B\n📈 Farak ki wave threshold cross kare → MOTION!\n\nBilkul still khade raho… aur sensor aapko bhool jaata hai 😄\n\nFollow karo aur bhi \"kaise kaam karta hai\" videos ke liye!\n#pirsensor #motionsensor #arduino #electronics #hindi #howitworks #sensors #science #reels #explore"
+  },
+  "cover": "D:\\MoneyPrinterTurbo-main\\videos\\pir-motion-sensor-explained\\renders\\video.cover.jpg"
+}

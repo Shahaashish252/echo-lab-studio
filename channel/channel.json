@@ -1,0 +1,31 @@
+{
+  "channelId": "UCyOQL2_j6Sm2cUk5Zbvk8YQ",
+  "name": "Echo Lab 3D",
+  "handle": "@EchoLab3D",
+  "handleFallbacks": [
+    "@EchoLab3DTech",
+    "@EchoLab_3D",
+    "@TheEchoLab3D"
+  ],
+  "country": "IN",
+  "language": "hi",
+  "banner": "out/channel/brand2/youtube-banner.png",
+  "avatar": "out/channel/brand2/profile.png",
+  "description": "Tech kaise kaam karti hai? 30 second mein samjho! ⚡\n\nEcho Lab 3D par hum roz ek gadget ka raaz kholte hain: motion sensor, touchscreen, gyroscope, remote, smoke detector, Arduino modules aur bahut kuch, Hindi mein, animation ke saath.\n\n🔬 Sensors • ⚡ Circuits • 📱 Gadgets • 🤖 Arduino & Robotics\n🎓 Students (Physics/Electronics), makers aur har curious insaan ke liye.\n\n🔔 Subscribe karo aur bell dabao, naya video roz aata hai.\n📸 Instagram: @echo.lab3d   📘 Facebook: Echo Lab 3D\n\nHow things work, explained simply: sensors, electronics and everyday tech in Hindi.",
+  "keywords": [
+    "how it works in hindi",
+    "sensor kaise kaam karta hai",
+    "electronics in hindi",
+    "tech explained hindi",
+    "arduino hindi",
+    "motion sensor",
+    "pir sensor",
+    "gyroscope",
+    "touchscreen",
+    "science shorts",
+    "engineering",
+    "physics",
+    "STEM",
+    "Echo Lab 3D"
+  ]
+}

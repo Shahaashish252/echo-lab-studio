@@ -1,0 +1,55 @@
+{
+  "engine": "kokoro",
+  "kokoro": { "voice": "af_heart", "speed": 1.08, "lang": "en-us" },
+  "elevenlabs": { "voiceId": "NOpBlnGInO9m6vDvFkFC", "voiceName": "Spuds Oxley", "modelId": "eleven_v4", "languageCode": "en" },
+  "lines": {
+    "hook-1": { "text": "How does a robot *see* a wall, without any eyes?" },
+    "hook-2": { "text": "It *shouts*, and listens for the *echo*", "say": "It shouts, and listens for the echo." },
+    "hook-3": { "text": "This is how an *ultrasonic sensor* works" },
+
+    "bat-1": { "text": "Bats hunt in total darkness using *echolocation*" },
+    "bat-2": { "text": "They send out *high-pitched calls*, and the *echoes* tell them where things are" },
+    "bat-3": { "text": "An ultrasonic sensor uses the *exact same trick*" },
+
+    "sound-1": { "text": "Sound is a *vibration*, travelling through air as waves of *pressure*" },
+    "sound-2": { "text": "Humans hear from about *20 Hz* to *20 kHz*", "say": "Humans hear from about twenty hertz, to twenty kilohertz." },
+    "sound-3": { "text": "Anything higher is *ultrasound*: too high for us to hear" },
+    "sound-4": { "text": "This sensor uses *40 kHz*: forty thousand vibrations every second", "say": "This sensor uses forty kilohertz: forty thousand vibrations, every second." },
+
+    "parts-1": { "text": "Meet the *HC-SR04*, the most popular ultrasonic sensor", "say": "Meet the H C S R zero four, the most popular ultrasonic sensor." },
+    "parts-2": { "text": "One 'eye' is the *transmitter*: a tiny speaker that sends the sound", "say": "One eye is the transmitter: a tiny speaker that sends out the sound." },
+    "parts-3": { "text": "The other is the *receiver*: a tiny microphone that hears the echo" },
+    "parts-4": { "text": "Four pins: *VCC* and *GND* for power, *Trig* and *Echo* for signals", "say": "It has four pins: V C C and ground for power, trig and echo for signals." },
+
+    "piezo-1": { "text": "Inside each one is a *piezoelectric* disc" },
+    "piezo-2": { "text": "Apply a *voltage*, and the disc *flexes*, pushing out sound waves" },
+    "piezo-3": { "text": "It works in reverse too: when an echo *squeezes* the disc, it makes a *voltage*" },
+
+    "steps-1": { "text": "Step one: the microcontroller sends a *10 µs* pulse to *Trig*", "say": "Step one: the microcontroller sends a ten microsecond pulse to the trig pin." },
+    "steps-2": { "text": "Step two: the sensor fires a burst of *8 pulses* at *40 kHz*", "say": "Step two: the sensor fires a burst of eight pulses, at forty kilohertz." },
+    "steps-3": { "text": "Step three: the *Echo* pin goes *HIGH*, and the timer starts" },
+    "steps-4": { "text": "The sound travels out, hits an object, and *bounces back*" },
+    "steps-5": { "text": "Step four: the receiver hears the echo, and *Echo* goes *LOW*", "say": "Step four: the receiver hears the echo, and the echo pin goes low." },
+    "steps-6": { "text": "So the *length* of the Echo pulse is the sound's *round-trip time*" },
+
+    "math-1": { "text": "Now the maths. In air, sound travels at about *343 m/s*", "say": "Now the maths. In air, sound travels at about three hundred and forty-three metres per second." },
+    "math-2": { "text": "*Distance = speed × time*. But the sound went *there and back*", "say": "Distance equals speed times time. But the sound went there, and back." },
+    "math-3": { "text": "So we *divide by two*: *d = v × t ÷ 2*", "say": "So we divide by two. d equals v times t, over two." },
+    "math-4": { "text": "Say the echo lasts *1166 µs*. That gives about *20 cm*", "say": "Say the echo lasts eleven hundred and sixty-six microseconds. That gives about twenty centimetres." },
+    "math-5": { "text": "Shortcut: *distance in cm = time in µs ÷ 58*", "say": "A handy shortcut: distance in centimetres, equals time in microseconds, divided by fifty-eight." },
+
+    "code-1": { "text": "In Arduino code: pulse *Trig*, time *Echo* with *pulseIn*, divide by *58*", "say": "In Arduino code, that's just a few lines: pulse trig, time echo with pulse in, and divide by fifty-eight." },
+
+    "spec-1": { "text": "The HC-SR04 measures from about *2 cm* to *4 m*", "say": "The H C S R zero four measures from about two centimetres, to four metres." },
+    "spec-2": { "text": "Its sound spreads out in a cone about *15°* wide", "say": "Its sound spreads out in a cone, about fifteen degrees wide." },
+
+    "limits-1": { "text": "But it has blind spots. *Soft* things like cloth and foam *absorb* the sound" },
+    "limits-2": { "text": "*Angled* surfaces bounce the echo *away* from the receiver" },
+    "limits-3": { "text": "And *temperature* changes the speed of sound: about *0.6 m/s* per °C", "say": "And temperature changes the speed of sound, by about nought point six metres per second, per degree." },
+
+    "uses-1": { "text": "You'll find them in *parking sensors*, *robots*, *drones* and *water tanks*", "say": "You'll find them in car parking sensors, robots, drones, and water tank level meters." },
+
+    "outro-1": { "text": "Send a sound, *time the echo*, *halve it*. That's how a sensor sees with sound", "say": "So: send a sound, time the echo, and halve it. That's how a sensor sees, with sound." },
+    "outro-2": { "text": "*Follow* for more how-it-works videos!", "say": "Follow for more how it works videos!" }
+  }
+}

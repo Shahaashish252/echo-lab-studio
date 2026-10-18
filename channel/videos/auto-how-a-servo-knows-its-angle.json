@@ -1,0 +1,33 @@
+{
+  "file": "out/auto/how-a-servo-knows-its-angle.mp4",
+  "title": "How Does a Servo Know Exactly Where to Stop? 🤔 #shorts",
+  "description": "A servo never measures an angle — it reads a pulse. Here's the exact math it uses to stop in the right place.\n⚙️ The PWM pulse that encodes the target angle\n📏 How 1ms, 1.5ms, and 2ms map to 0°, 90°, 180°\n🔄 The potentiometer that reports the real angle\n❗ How SHOULD BE, IS, and ERROR drive the motor\nSubscribe for more bite-sized electronics breakdowns.\n#shorts #servomotor #electronics #robotics #engineering #howitworks #pwm",
+  "tags": [
+    "how servo motors work",
+    "servo motor explained",
+    "pwm signal servo",
+    "servo feedback loop",
+    "servo angle control",
+    "closed loop control",
+    "potentiometer servo",
+    "pid control servo",
+    "rc servo mechanism",
+    "electronics explainer",
+    "how things work shorts",
+    "servo motor pulse width",
+    "robotics basics",
+    "servo motor diagram"
+  ],
+  "categoryId": "28",
+  "language": "en",
+  "privacy": "private",
+  "playlist": {
+    "title": "Inside Electronics: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "A servo never 'knows' an angle 👀\nIt reads one thing — a pulse — and does math 👇\n⚙️ Pulse arrives every 20ms, 50x a second\n📏 Width sets the target: 1ms=0°, 2ms=180°\n🔄 A potentiometer reports the real angle\n❗ SHOULD BE minus IS = the error it kills\n💾 save this for your next electronics project\n📤 send it to a friend who builds robots\n💬 want the PID breakdown next?\n#electronics #robotics #servomotor #pwmcontrol #feedbackloop",
+    "tiktok": "A servo never sees an angle — it reads a pulse 👀 Learn how 1ms/1.5ms/2ms = 0°/90°/180° and how error drives the motor to zero. Want the PID follow-up? #learnontiktok #electronics #servomotor #robotics #engineering"
+  }
+}
