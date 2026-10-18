@@ -310,7 +310,7 @@ def publish_entry(entry: dict):
     if "instagram" not in pub and instagram.TOKEN_FILE.exists():
         try:
             pub["instagram"] = instagram.post(entry["meta"]) or date.today().isoformat()
-        except SystemExit as e:
+        except (Exception, SystemExit) as e:  # noqa: BLE001  one platform failing must not stop the others
             print(f"instagram: {e}")
     if "facebook" not in pub and instagram.TOKEN_FILE.exists():
         try:
@@ -319,7 +319,7 @@ def publish_entry(entry: dict):
         except (Exception, SystemExit) as e:  # noqa: BLE001
             print(f"facebook: {e}")
     entry["status"] = "published"
-    entry["postedAt"] = datetime.now().isoformat(timespec="minutes")
+    entry.setdefault("postedAt", datetime.now().isoformat(timespec="minutes"))  # first post time; retries keep it
     if CLOUD and all(k in pub for k in ("youtube", "instagram", "facebook")):
         # posted everywhere: YouTube keeps the original, so free the GitHub storage copy
         name = youtube.rel(meta(entry)["file"]).name
@@ -336,6 +336,19 @@ def cmd_post_due():
     if due and last and datetime.fromisoformat(last) > datetime.now() - timedelta(hours=3):
         print(f"{len(due)} due, but the last post was at {last}; waiting so posts stay 3 h apart")
         due = []
+    if not due:
+        # catch-up: a platform that failed (Instagram throttling, a dropped connection) is retried for 2 days
+        cutoff = (datetime.now() - timedelta(days=2)).isoformat(timespec="minutes")
+        missed = [u for u in ups if u.get("status") == "published" and u.get("postedAt", "") >= cutoff
+                  and not all(k in u.get("published", {}) for k in ("youtube", "instagram", "facebook"))
+                  and u.get("retryAfter", "") <= now]
+        for u in missed[:1]:
+            have = sorted(u.get("published", {}))
+            print(f"retrying missing platforms for {meta(u)['title']} (has {have})")
+            publish_entry(u)
+            if not all(k in u["published"] for k in ("youtube", "instagram", "facebook")):
+                u["retryAfter"] = (datetime.now() + timedelta(hours=1)).isoformat(timespec="minutes")
+            write(UPLOADS, ups)
     for u in due[:1]:
         m = meta(u)
         print(f"publishing {m['title']}")

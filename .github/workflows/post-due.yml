@@ -39,6 +39,10 @@ jobs:
           now = datetime.datetime.now().isoformat(timespec="minutes")
           ups = json.load(open("channel/uploads.json", encoding="utf-8"))
           due = any(u.get("status") == "approved" and u.get("postAt", "9") <= now for u in ups)
+          # also wake up to retry a platform that missed a recent video (see manager.cmd_post_due)
+          cutoff = (datetime.datetime.now() - datetime.timedelta(days=2)).isoformat(timespec="minutes")
+          due = due or any(u.get("status") == "published" and u.get("postedAt", "") >= cutoff and u.get("retryAfter", "") <= now
+                           and not all(k in u.get("published", {}) for k in ("youtube", "instagram", "facebook")) for u in ups)
           print(f"due={'yes' if due or '${{ inputs.now }}' == 'true' else 'no'}")
           PY
       - if: steps.due.outputs.due == 'yes'

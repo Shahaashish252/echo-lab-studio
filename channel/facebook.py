@@ -40,17 +40,36 @@ def post(meta_path: str) -> str:
     # 2. send the file
     size = video.stat().st_size
     print(f"facebook: uploading {size / 1e6:.1f} MB ...", flush=True)
-    with open(video, "rb") as f:
-        r = requests.post(start.get("upload_url") or f"https://rupload.facebook.com/video-upload/v21.0/{vid}",
-                          headers={"Authorization": f"OAuth {token}", "offset": "0", "file_size": str(size)}, data=f, timeout=900)
-    if not r.ok:
+    r = None
+    for attempt in range(3):  # a dropped connection is retried, not fatal
+        try:
+            with open(video, "rb") as f:
+                r = requests.post(start.get("upload_url") or f"https://rupload.facebook.com/video-upload/v21.0/{vid}",
+                                  headers={"Authorization": f"OAuth {token}", "offset": "0", "file_size": str(size)}, data=f, timeout=900)
+            break
+        except requests.exceptions.ConnectionError as e:
+            print(f"facebook: connection dropped ({e.__class__.__name__}), retrying", flush=True)
+            time.sleep(10 * (attempt + 1))
+    if r is None or not r.ok:
+        if r is None:
+            sys.exit("Facebook upload failed: connection kept dropping")
         sys.exit(f"Facebook upload failed {r.status_code}: {r.text[:300]}")
     # 3. publish
     instagram._check(requests.post(f"{G}/{pid}/video_reels", data={
         "upload_phase": "finish", "video_id": vid, "video_state": "PUBLISHED", "description": caption(m), "access_token": token}, timeout=60))
     # 4. wait until Facebook has processed it, then return its link
+    st, misses = {}, 0
     for _ in range(60):
-        st = instagram._check(requests.get(f"{G}/{vid}", params={"fields": "status,permalink_url", "access_token": token}, timeout=30))
+        resp = requests.get(f"{G}/{vid}", params={"fields": "status,permalink_url", "access_token": token}, timeout=30).json()
+        if "error" in resp:
+            # right after publishing Facebook sometimes can't show the video object yet: wait, don't fail the post
+            misses += 1
+            if misses >= 6:
+                print(f"facebook: status not readable ({resp['error'].get('message', '')[:100]}); assuming it is processing")
+                break
+            time.sleep(10)
+            continue
+        st = resp
         phase = (st.get("status") or {}).get("video_status")
         if phase in ("ready", "published") or (st.get("status") or {}).get("publishing_phase", {}).get("status") == "complete":
             break

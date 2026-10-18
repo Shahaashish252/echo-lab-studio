@@ -147,20 +147,41 @@ def post(meta_path: str) -> str:
     video = rel(m["file"])
     size = video.stat().st_size
 
-    # 1. a Reel container that takes the file by resumable upload (no public URL needed)
-    c = _check(requests.post(f"{GRAPH}/{uid}/media", data={
-        "media_type": "REELS", "upload_type": "resumable", "caption": caption(m), "share_to_feed": "true", "access_token": token,
-        # cover: our designed thumbnail when there is one (hosted as an unpublished Page photo), else the frame at coverMs
-        **({"cover_url": host_image(rel(m["cover"]))} if m.get("cover") and rel(m["cover"]).exists() and cfg.get("mode") == "facebook"
-           else {"thumb_offset": str(m["coverMs"])} if m.get("coverMs") is not None else {}),
-    }, timeout=60))
-    cid = c["id"]
-    upload_uri = c.get("uri") or f"https://rupload.facebook.com/ig-api-upload/v21.0/{cid}"
-    print(f"instagram: uploading {size / 1e6:.1f} MB ...", flush=True)
-    with open(video, "rb") as f:
-        r = requests.post(upload_uri, headers={"Authorization": f"OAuth {token}", "offset": "0", "file_size": str(size)}, data=f, timeout=900)
-    if not r.ok:
-        sys.exit(f"Instagram upload failed {r.status_code}: {r.text[:300]}")
+    # 1. a Reel container that takes the file by resumable upload (no public URL needed).
+    # Cover: our designed thumbnail when there is one (hosted as an unpublished Page photo); if Instagram rejects
+    # that, try again with the frame at coverMs, then with no cover setting at all.
+    covers = []
+    if m.get("cover") and rel(m["cover"]).exists() and cfg.get("mode") == "facebook":
+        try:
+            covers.append({"cover_url": host_image(rel(m["cover"]))})
+        except (Exception, SystemExit) as e:  # noqa: BLE001
+            print(f"instagram: cover image not hosted ({e})")
+    if m.get("coverMs") is not None:
+        covers.append({"thumb_offset": str(m["coverMs"])})
+    covers.append({})
+    for i, cover in enumerate(covers):
+        c = _check(requests.post(f"{GRAPH}/{uid}/media", data={
+            "media_type": "REELS", "upload_type": "resumable", "caption": caption(m), "share_to_feed": "true",
+            "access_token": token, **cover}, timeout=60))
+        cid = c["id"]
+        upload_uri = c.get("uri") or f"https://rupload.facebook.com/ig-api-upload/v21.0/{cid}"
+        print(f"instagram: uploading {size / 1e6:.1f} MB ({next(iter(cover), 'no cover setting')}) ...", flush=True)
+        r = None
+        for attempt in range(3):  # a dropped connection is retried, not fatal
+            try:
+                with open(video, "rb") as f:
+                    r = requests.post(upload_uri, headers={"Authorization": f"OAuth {token}", "offset": "0", "file_size": str(size)}, data=f, timeout=900)
+                break
+            except requests.exceptions.ConnectionError as e:
+                print(f"instagram: connection dropped ({e.__class__.__name__}), retrying", flush=True)
+                time.sleep(10 * (attempt + 1))
+        if r is None:
+            sys.exit("Instagram upload failed: connection kept dropping")
+        if r.ok:
+            break
+        print(f"instagram: upload failed {r.status_code}: {r.text[:200]}", flush=True)
+        if i == len(covers) - 1:
+            sys.exit(f"Instagram upload failed {r.status_code}: {r.text[:300]}")
 
     # 2. wait for Instagram to process it
     for _ in range(120):
