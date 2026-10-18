@@ -1,10 +1,6 @@
 {
   "queue": [
     {
-      "topic": "Touchscreen (capacitive)",
-      "hook": "Aapka phone aapki ungli nahi, bijli mehsoos karta hai!"
-    },
-    {
       "topic": "Automatic door sensor",
       "hook": "Mall ka darwaza aapko pehchanta nahi, phir khulta kaise hai?"
     },
@@ -111,6 +107,7 @@
     "Servo motor",
     "Capacitive touchscreen",
     "MEMS accelerometer",
-    "MEMS gyroscope"
+    "MEMS gyroscope",
+    "Touchscreen (capacitive)"
   ]
 }

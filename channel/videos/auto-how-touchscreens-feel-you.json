@@ -1,0 +1,33 @@
+{
+  "file": "out/auto/how-touchscreens-feel-you.mp4",
+  "title": "Touchscreen Kaise Kaam Karta Hai? Ungli Nahi, Bijli! 🤔 #shorts",
+  "description": "Aapka phone aapki ungli ko nahi, uski bijli ko mehsoos karta hai! Dekho capacitive touchscreen andar se kaise kaam karti hai.\n⚡ Screen ke neeche chhupa transparent electrode grid\n🔌 Har crossing ek chhota capacitor, lagbhag 2 pF\n👆 Ungli field churati hai: 2.0 se 1.7 pF tak gir jaata hai\n🔁 Chip poora grid 120 baar per second scan karti hai\n🧤 Gloves pehenkar touch kyun nahi chalta\nAise hi electronics explainers ke liye channel subscribe karo! 🔔\n#shorts #touchscreen #capacitivetouch #electronics #hindi #techinhindi #howitworks",
+  "tags": [
+    "touchscreen kaise kaam karta hai",
+    "capacitive touchscreen",
+    "how touchscreen works",
+    "capacitive touch in hindi",
+    "touch screen working in hindi",
+    "mutual capacitance",
+    "how does a phone screen detect touch",
+    "mobile touch screen kaise kaam karti hai",
+    "gloves touchscreen kyun nahi chalta",
+    "touch sampling rate",
+    "electronics in hindi",
+    "capacitor kya hota hai",
+    "touch controller ic",
+    "inside electronics hindi"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Inside Electronics: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Aapka phone ungli nahi, bijli mehsoos karta hai ⚡\nScreen ke neeche ek invisible grid har second tumhara charge naap raha hai. Dekho kaise 👇\n🔲 Transparent wires ka grid, har crossing ek chhota capacitor (~2 pF)\n👆 Ungli field ka hissa churati hai, value ~1.7 pF tak gir jaati hai\n🔁 Chip poora grid 120 baar per second scan karti hai\n🧤 Isliye moti gloves mein touch kaam nahi karta\n💾 Save karo, agli baar screen chhoote waqt yaad aayega\n📤 Us dost ko bhejo jo gloves pehenkar phone chalane ki koshish karta hai\n💬 Batao: paani ki boond se screen kabhi apne aap touch hui hai?\n#technology #electronics #touchscreen #capacitivetouch #techinhindi",
+    "tiktok": "Aapka phone ungli nahi, bijli mehsoos karta hai! ⚡ Seekho capacitive touchscreen 2 pF ke capacitors se touch kaise pakadti hai. Gloves mein touch kabhi chala hai? 👇 #learnontiktok #touchscreen #electronics #techinhindi #howitworks"
+  }
+}
