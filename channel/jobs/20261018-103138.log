@@ -9,3 +9,48 @@
   round 3: 1. Line 13 frame (centroid position): the POSITION X and POSITION Y panels still show empty placeholder dashes. When the narration explains 
 
 == voice (Kokoro)
+s1-1        3.98s  आपका फ़ोन आपकी उंगली नहीं, बिजली महसूस करता है!
+s1-2        2.46s  ये दबाव नहीं नापता। गर्मी भी नहीं।
+s1-3        3.23s  ये नापता है चार्ज — बिजली कहाँ कितनी जमा है।
+s1-4        2.89s  स्क्रीन के नीचे पारदर्शी तारों का ग्रिड है।
+s1-5        3.58s  आड़ी लाइनें सिग्नल भेजती हैं, खड़ी लाइनें सुनती हैं।
+s1-6        4.09s  हर क्रॉसिंग एक छोटा कैपेसिटर है, लगभग दो पिकोफैराड।
+s1-7        3.01s  टाइम फ्रीज़ करो। एक लाइन पर पल्स भेजी गई।
+s1-8        3.54s  फील्ड शीशे से होकर बगल की लाइन तक पहुँचती है।
+s1-9        3.24s  अब उंगली रखो। आपका शरीर भी कंडक्टर है।
+s1-10       2.87s  उंगली फील्ड का कुछ हिस्सा चुरा लेती है।
+s1-11       4.91s  दो से गिरकर एक दशमलव सात पिकोफैराड। फ़र्क़: शून्य दशमलव तीन।
+s1-12       4.10s  बीस गुना स्लो करो। चिप हर लाइन बारी-बारी स्कैन करती है।
+s1-13       2.73s  पूरा ग्रिड, एक सेकंड में एक सौ बीस बार।
+s1-14       3.81s  आसपास के नोड्स का फ़र्क़ मिलाकर सटीक जगह मिलती है।
+s1-15       4.43s  दस्ताने में टच नहीं चलता — मोटा कपड़ा बिजली नहीं चुराता।
+s1-16       2.75s  प्ले दबाओ। हर टैप, बस चार्ज का हिसाब।
+s2-1        4.90s  दस उंगलियाँ एक साथ कैसे पकड़ता है — मल्टी-टच का राज़ जानते हो?
+wrote 17 clips to D:\MoneyPrinterTurbo-main\motion grafix\app\public\voice\auto\kokoro
+
+== backgrounds (motion graphics): circuit, network
+  2 scenes, 65.4s
+
+== sound
+auto: 23 cues over 65.43333333333334s
+voice: kokoro
+mixed (peak -3.1 dBFS)
+wrote D:\MoneyPrinterTurbo-main\motion grafix\app\public\audio\auto.wav (-14 LUFS)
+
+== render
+rendering 1963 frames (0-65.43333333333334s) at 1080x1920, 1 sample(s)/frame
+
+  frame 30/1963  4.5 fps  eta 426s   
+  frame 60/1963  4.4 fps  eta 436s   
+  frame 90/1963  4.4 fps  eta 423s   
+  frame 120/1963  4.5 fps  eta 408s   
+  frame 150/1963  4.5 fps  eta 404s   
+  frame 180/1963  4.4 fps  eta 405s   
+  frame 210/1963  4.4 fps  eta 400s   
+  frame 240/1963  4.4 fps  eta 393s   
+  frame 270/1963  4.4 fps  eta 385s   
+  frame 300/1963  4.4 fps  eta 378s   
+  frame 330/1963  4.4 fps  eta 373s   
+  frame 360/1963  4.4 fps  eta 366s   
+  frame 390/1963  4.4 fps  eta 358s   
+  frame 420/1963  4.4 fps  eta 350s   
