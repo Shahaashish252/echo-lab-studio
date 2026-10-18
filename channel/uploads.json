@@ -10,14 +10,14 @@
   },
   {
     "id": "-_EpNWzooH8",
-    "meta": "channel\\videos\\auto-pir-motion-sensor.json",
+    "meta": "channel/videos/auto-pir-motion-sensor.json",
     "date": "2026-10-08",
     "status": "rejected",
     "topic": "PIR motion sensor"
   },
   {
     "id": "5XLAYp_8xtM",
-    "meta": "channel\\videos\\auto-how-screen-fingerprint-scanners-work.json",
+    "meta": "channel/videos/auto-how-screen-fingerprint-scanners-work.json",
     "date": "2026-10-08",
     "status": "rejected",
     "note": "first render, replaced by KfXkn5DcA7c"
@@ -31,47 +31,47 @@
   },
   {
     "id": "c7GtsMSwHTg",
-    "meta": "channel\\videos\\auto-fingerprint-sensor-secrets.json",
+    "meta": "channel/videos/auto-fingerprint-sensor-secrets.json",
     "date": "2026-10-08",
     "status": "rejected",
     "topic": "Fingerprint sensor (3D)"
   },
   {
     "id": "0qvYoOjuRtQ",
-    "meta": "channel\\videos\\auto-invisible-light-secret.json",
+    "meta": "channel/videos/auto-invisible-light-secret.json",
     "date": "2026-10-08",
     "status": "rejected",
     "topic": "IR obstacle sensor"
   },
   {
     "id": "9-p1Hg8gMeo",
-    "meta": "channel\\videos\\auto-how-street-lights-know-night.json",
+    "meta": "channel/videos/auto-how-street-lights-know-night.json",
     "date": "2026-10-08",
     "status": "rejected",
     "topic": "LDR (light sensor)"
   },
   {
     "id": "9e0ItfEMinY",
-    "meta": "channel\\videos\\auto-how-a-servo-knows-its-angle.json",
+    "meta": "channel/videos/auto-how-a-servo-knows-its-angle.json",
     "date": "2026-10-08",
     "status": "held-english",
     "topic": "Servo motor (simulation)"
   },
   {
     "id": "oXiHrWCsqN0",
-    "meta": "channel\\videos\\auto-capacitive-touch-explained.json",
+    "meta": "channel/videos/auto-capacitive-touch-explained.json",
     "date": "2026-10-08"
   },
   {
     "id": "G2ksz8lJrEk",
-    "meta": "channel\\videos\\auto-why-gloves-fail-fingers-win.json",
+    "meta": "channel/videos/auto-why-gloves-fail-fingers-win.json",
     "date": "2026-10-10",
     "status": "held-english",
     "topic": "Capacitive touchscreen"
   },
   {
     "id": "OECteBF_a74",
-    "meta": "channel\\videos\\auto-the-weight-inside-your-phone.json",
+    "meta": "channel/videos/auto-the-weight-inside-your-phone.json",
     "date": "2026-10-11",
     "status": "held-english",
     "topic": "MEMS accelerometer"
@@ -91,7 +91,7 @@
   },
   {
     "id": "fxIqZGwbWMo",
-    "meta": "channel\\videos\\auto-how-a-mems-gyro-feels-spin.json",
+    "meta": "channel/videos/auto-how-a-mems-gyro-feels-spin.json",
     "date": "2026-10-17",
     "status": "approved",
     "topic": "MEMS gyroscope",

@@ -25,7 +25,7 @@ W, H = 1080, 1920
 
 
 def rel(p: str) -> Path:
-    path = Path(p)
+    path = Path(str(p).replace("\\", "/"))  # paths written on Windows (backslashes) work in the cloud too
     return path if path.is_absolute() else ROOT / path
 
 

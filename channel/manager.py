@@ -583,12 +583,18 @@ def ig_numbers() -> dict:
 
 def cmd_dashboard(open_it: bool = True):
     data = {"updated": datetime.now().strftime("%d %b %Y, %H:%M")}
+    previous = read(LATEST, {})
+    fresh = 0
     for name, fn in (("youtube", yt_numbers), ("instagram", ig_numbers)):
         try:
             data[name] = fn()
+            fresh += 1
         except (Exception, SystemExit) as e:
-            print(f"{name} numbers skipped: {e}")
-            data[name] = None
+            # no internet / API hiccup: keep the last good numbers instead of wiping them
+            print(f"{name} numbers skipped: {str(e)[:160]}")
+            data[name] = previous.get(name)
+    if not fresh:
+        data["updated"] = previous.get("updated", data["updated"])
     hist = read(HISTORY, [])
     today = date.today().isoformat()
     hist = [h for h in hist if h["day"] != today] + [{
