@@ -174,6 +174,39 @@ function stageState(job, video) {
   return STAGES.map(([n], i) => ({ name: n, at: reached[i],
     state: reached[i] ? (running && i === lastIdx ? 'now' : 'done') : job?.status === 'failed' && i === lastIdx + 1 ? 'fail' : '' }));
 }
+// Percentage done: each step owns a slice of 0-100%; inside the current step the slice fills with time,
+// using how long that step usually takes (minutes). Making = 0-92%, then scheduled and posted.
+const PCT_START = [0, 3, 12, 65, 72, 76, 92, 96, 97, 98.5, 100];
+const TYPICAL_MIN = [0.5, 2, 20, 2, 1, 8, 2];
+function progress(job, video) {
+  const st = stageState(job, video);
+  const running = job && job.status === 'running';
+  const nowIdx = st.findIndex((s) => s.state === 'now');
+  if (running && nowIdx >= 0) {
+    const started = new Date(st[nowIdx].at || job.started).getTime();
+    const mins = Math.max(0, (Date.now() - started) / 60000);
+    const typical = TYPICAL_MIN[nowIdx] || 1;
+    const frac = Math.min(0.95, mins / typical);
+    const pct = PCT_START[nowIdx] + (PCT_START[nowIdx + 1] - PCT_START[nowIdx]) * frac;
+    let left = Math.max(0.5, typical - mins);
+    for (let i = nowIdx + 1; i < TYPICAL_MIN.length; i++) left += TYPICAL_MIN[i];
+    return { pct: Math.round(pct), left: Math.round(left), state: 'running' };
+  }
+  if (job && job.status === 'failed') return { pct: Math.round(PCT_START[Math.max(0, st.findIndex((s) => s.state === 'fail'))] || 0), state: 'failed' };
+  let last = -1;
+  st.forEach((s, i) => { if (s.state === 'done') last = i; });
+  return { pct: last < 0 ? 0 : Math.round(PCT_START[Math.min(last + 1, PCT_START.length - 1)]), state: 'done' };
+}
+function bigBar(p) {
+  const color = p.state === 'failed' ? 'var(--bad)' : p.pct >= 100 ? 'var(--good)' : 'linear-gradient(90deg,var(--accent),var(--accent2))';
+  return `<div class="row" style="justify-content:space-between;margin:10px 0 6px"><b style="font-size:28px;letter-spacing:-.02em">${p.pct}%</b>
+    <span class="muted">${p.state === 'running' ? `about ${p.left} min left` : p.state === 'failed' ? 'stopped — will retry on the next run' : p.pct >= 100 ? 'posted everywhere' : ''}</span></div>
+    <div class="bar" style="height:14px"><i style="width:${p.pct}%;background:${color};transition:width .8s"></i></div>`;
+}
+function smallBar(p) {
+  const color = p.state === 'failed' ? 'var(--bad)' : p.pct >= 100 ? 'var(--good)' : 'var(--accent)';
+  return `<span class="row" style="gap:6px;font-size:12px"><span class="mini" style="width:70px"><i style="width:${p.pct}%;background:${color}"></i></span><b>${p.pct}%</b></span>`;
+}
 function stepper(job, video) {
   return '<div class="steps">' + stageState(job, video).map((s) =>
     `<div class="step ${s.state}"><div class="c">${s.state === 'done' ? '✓' : s.state === 'fail' ? '✕' : s.state === 'now' ? '●' : ''}</div>${esc(s.name)}<div class="t">${s.at && s.state && String(s.at).length > 10 ? esc(new Date(s.at).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})) : ''}</div></div>`
@@ -206,6 +239,7 @@ function renderLive() {
   } else {
     const cur = job.stages.at(-1);
     $('#live').innerHTML = `<div class="jh"><b>${esc(job.topic)}</b><span class="tag ${job.lang}">${job.lang === 'hi' ? 'Hindi' : 'English'}</span><span class="muted">started ${ago(job.started)}</span></div>
+      ${bigBar(progress(job, null))}
       ${stepper(job, null)}
       <div class="muted">Now: ${esc(cur ? cur.name : 'starting…')}</div>
       <pre class="log" data-job="${esc(job.id)}"></pre>`;
@@ -278,7 +312,7 @@ function renderJourneys() {
     const title = video?.title?.replace(/#shorts/i, '') || job?.topic;
     const st = job?.status === 'running' ? 'running' : job?.status === 'failed' ? 'failed' : video?.status || job?.status;
     const label = { approved: 'scheduled', published: 'posted', 'held-english': 'saved for English', pending: 'waiting', running: 'making', failed: 'failed', done: 'made' }[st] || st;
-    return `<div class="journey"><div class="jh"><b>${esc(title)}</b><span class="tag ${esc(st)}">${esc(label)}</span>
+    return `<div class="journey"><div class="jh"><b>${esc(title)}</b><span class="tag ${esc(st)}">${esc(label)}</span>${smallBar(progress(job, video))}
       ${(job?.lang || video?.language) ? `<span class="tag ${job?.lang || video?.language}">${(job?.lang || video?.language) === 'hi' ? 'HI' : 'EN'}</span>` : ''}
       <span class="faint" style="font-size:12px">${esc(ago(job?.started) || video?.date || '')}</span>
       ${video ? `<a style="font-size:12px" href="https://youtu.be/${esc(video.id)}" target="_blank">YouTube</a>` : ''}
@@ -296,8 +330,9 @@ function renderSide() {
 }
 
 function renderHeader() {
-  const busy = S.makingNow || S.running.alive;
-  $('#status').innerHTML = `<span class="dot ${busy ? 'busy' : 'on'}"></span>${busy ? (S.makingNow ? 'making a video' : 'running: ' + esc(S.running.action)) : 'ready'}`;
+  const live = S.jobs.find((j) => j.status === 'running');
+  const busy = S.makingNow || S.running.alive || !!live;
+  $('#status').innerHTML = `<span class="dot ${busy ? 'busy' : 'on'}"></span>${live ? `making a video · ${progress(live, null).pct}%` : busy ? (S.makingNow ? 'making a video' : 'running: ' + esc(S.running.action)) : 'ready'}`;
   $('#updated').textContent = S.updated ? 'numbers: ' + S.updated : 'numbers: not refreshed yet';
   if (document.activeElement !== $('#autopilot')) $('#autopilot').checked = !!S.schedule.autopilot;
   if (document.activeElement !== $('#lang')) $('#lang').value = S.schedule.language || 'en';
