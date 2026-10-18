@@ -1,0 +1,14 @@
+{
+  "id": "20261018-185417",
+  "topic": "IR remote and receiver",
+  "hook": "TV remote ki roshni aap dekh hi nahi sakte!",
+  "lang": "hi",
+  "started": "2026-10-18T18:54:17",
+  "status": "running",
+  "stages": [
+    {
+      "name": "storyboard: \"IR remote and receiver (open with this hook: \"TV remote ki roshni aap dekh hi nahi sakte!\")\" (Claude Code)",
+      "at": "2026-10-18T18:54:17"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "updated": "18 Oct 2026, 13:22",
+  "updated": "18 Oct 2026, 18:54",
   "youtube": {
     "subs": 3,
     "views": 156,
@@ -9,8 +9,8 @@
         "id": "fxIqZGwbWMo",
         "status": "public",
         "published": "2026-10-18",
-        "views": 4,
-        "likes": 1,
+        "views": 30,
+        "likes": 2,
         "comments": 1
       },
       {
@@ -36,7 +36,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 460,
+        "views": 470,
         "likes": 9,
         "comments": 2
       },
@@ -45,7 +45,7 @@
         "id": "OECteBF_a74",
         "status": "private",
         "published": "2026-10-11",
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0
       },
@@ -309,8 +309,8 @@
         "published": "2026-10-17",
         "likes": 11,
         "comments": 2,
-        "reach": 1195,
-        "views": 1404,
+        "reach": 1197,
+        "views": 1405,
         "saved": 3,
         "shares": 4
       },
