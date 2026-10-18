@@ -320,6 +320,11 @@ def publish_entry(entry: dict):
             print(f"facebook: {e}")
     entry["status"] = "published"
     entry["postedAt"] = datetime.now().isoformat(timespec="minutes")
+    if CLOUD and all(k in pub for k in ("youtube", "instagram", "facebook")):
+        # posted everywhere: YouTube keeps the original, so free the GitHub storage copy
+        name = youtube.rel(meta(entry)["file"]).name
+        subprocess.run(["gh", "release", "delete-asset", RELEASE, name, "-y"], capture_output=True)
+        print(f"removed {name} from release storage (posted everywhere)")
 
 
 def cmd_post_due():
