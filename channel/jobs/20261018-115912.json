@@ -1,0 +1,14 @@
+{
+  "id": "20261018-115912",
+  "topic": "Automatic door sensor",
+  "hook": "Mall ka darwaza aapko pehchanta nahi, phir khulta kaise hai?",
+  "lang": "hi",
+  "started": "2026-10-18T11:59:12",
+  "status": "running",
+  "stages": [
+    {
+      "name": "storyboard: \"Automatic door sensor (open with this hook: \"Mall ka darwaza aapko pehchanta nahi, phir khulta kaise hai?\")\" (Claude Code)",
+      "at": "2026-10-18T11:59:12"
+    }
+  ]
+}
