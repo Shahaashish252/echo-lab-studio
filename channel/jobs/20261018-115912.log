@@ -1,2 +1,6 @@
 
 == storyboard: "Automatic door sensor (open with this hook: "Mall ka darwaza aapko pehchanta nahi, phir khulta kaise hai?")" (Claude Code)
+  s1 sim     How does the door know you're there?
+  s2 outro   Echo, Not Eyes
+
+== simulation (Claude Code writes it, renders it, reviews it)
