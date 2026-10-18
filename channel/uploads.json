@@ -107,10 +107,15 @@
     "id": "386BVj8nrSU",
     "meta": "channel\\videos\\auto-how-touchscreens-feel-you.json",
     "date": "2026-10-18",
-    "status": "approved",
+    "status": "published",
     "topic": "Touchscreen (capacitive)",
     "job": "20261018-103138",
-    "postAt": "2026-10-18T19:30"
+    "postAt": "2026-10-18T19:30",
+    "published": {
+      "youtube": "2026-10-18",
+      "facebook": "https://www.facebook.com/reel/1626243949230017/"
+    },
+    "postedAt": "2026-10-18T21:21"
   },
   {
     "id": "JNXA3yDus8A",
