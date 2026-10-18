@@ -4,7 +4,7 @@
   "hook": "Aapka phone aapki ungli nahi, bijli mehsoos karta hai!",
   "lang": "hi",
   "started": "2026-10-18T10:31:38",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "storyboard: \"Touchscreen (capacitive) (open with this hook: \"Aapka phone aapki ungli nahi, bijli mehsoos karta hai!\")\" (Claude Code)",
@@ -29,6 +29,12 @@
     {
       "name": "render",
       "at": "2026-10-18T10:53:54"
+    },
+    {
+      "name": "youtube",
+      "at": "2026-10-18T11:00:22"
     }
-  ]
+  ],
+  "finished": "2026-10-18T11:00:45",
+  "uploadId": "386BVj8nrSU"
 }
