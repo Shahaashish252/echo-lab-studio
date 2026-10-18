@@ -105,5 +105,14 @@
     "topic": "Touchscreen (capacitive)",
     "job": "20261018-103138",
     "postAt": "2026-10-18T19:30"
+  },
+  {
+    "id": "JNXA3yDus8A",
+    "meta": "channel\\videos\\auto-how-auto-doors-sense-you.json",
+    "date": "2026-10-18",
+    "status": "approved",
+    "topic": "Automatic door sensor",
+    "job": "20261018-115912",
+    "postAt": "2026-10-19T12:30"
   }
 ]
