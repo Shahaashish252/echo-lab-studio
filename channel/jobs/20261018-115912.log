@@ -5,3 +5,4 @@
 
 == simulation (Claude Code writes it, renders it, reviews it)
   round 1: 1. Frame at 26.50s (line 9, '161 Hz'): SHIFT reads 161 Hz but the TRIGGER bar is filled only about 25%, sits left of the 48 Hz marker and sa
+  round 2: 1. Frame at 2.41s (line 4: 'the waves bounce off the floor and you and come back'): SENT reads OFF, ECHO reads NONE and no wavefronts are dr
