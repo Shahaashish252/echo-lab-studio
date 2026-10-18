@@ -1,0 +1,35 @@
+name: Self-test (no posting)
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Kolkata
+      PYTHONIOENCODING: utf-8
+      YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+      YT_CLIENT_SECRET_JSON: ${{ secrets.YT_CLIENT_SECRET_JSON }}
+      META_CONFIG_JSON: ${{ secrets.META_CONFIG_JSON }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: |
+          sudo apt-get install -y -qq ffmpeg > /dev/null
+          python -m pip install -q google-api-python-client google-auth-oauthlib requests pillow
+          bash .github/scripts/secrets.sh
+      - name: Next video can be fetched, covered and is ready to post
+        run: |
+          python - <<'PY'
+          import sys; sys.path.insert(0, "channel")
+          import manager as m, thumbnail, youtube, instagram, facebook
+          nxt = sorted((u for u in m.uploads() if u.get("status") == "approved"), key=lambda u: u["postAt"])[0]
+          print("next:", m.meta(nxt)["title"], "at", nxt["postAt"])
+          print("video fetched:", m.ensure_video(nxt))
+          print("cover:", thumbnail.make(nxt["meta"]))
+          print("youtube ok:", youtube.my_channel(youtube.yt())["snippet"]["title"])
+          print("instagram ok:", instagram.load()["username"])
+          print("facebook page:", facebook.page()[0])
+          PY
