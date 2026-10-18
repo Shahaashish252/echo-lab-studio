@@ -33,3 +33,4 @@ channel/*.prev.json
 *.log
 .DS_Store
 Thumbs.db
+!channel/jobs/*.log

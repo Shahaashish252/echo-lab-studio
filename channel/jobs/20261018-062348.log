@@ -1,0 +1,15 @@
+
+== storyboard: "Touchscreen (capacitive) (open with this hook: "Aapka phone aapki ungli nahi, bijli mehsoos karta hai!")" (Claude Code)
+  attempt 1: claude failed: 
+  attempt 2: claude failed: 
+1012 |     story = normalize(parse(claude(PROMPT + (HINDI ? HINDI_NOTE : ''))));
+1013 |   } catch (e) {
+1014 |     console.warn(`  attempt ${attempt}: ${e instanceof Error ? e.message : e}`);
+1015 |   }
+1016 | }
+1017 | if (!story) throw new Error('could not get a storyboard from Claude');
+                             ^
+error: could not get a storyboard from Claude
+      at D:\MoneyPrinterTurbo-main\motion grafix\app\scripts\auto.ts:1017:23
+
+Bun v1.4.2 (Windows x64)

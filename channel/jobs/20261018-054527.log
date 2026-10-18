@@ -1,0 +1,19 @@
+
+== storyboard: "Touchscreen (capacitive) (open with this hook: "Aapka phone aapki ungli nahi, bijli mehsoos karta hai!")" (Claude Code)
+  s1 sim     How does your screen feel you?
+  s2 outro   It feels charge
+
+== simulation (Claude Code writes it, renders it, reviews it)
+  simulation writing failed (claude took over 15 min); retrying
+261 |   });
+262 |   let timedOut = false;
+263 |   const timer = setTimeout(() => ((timedOut = true), proc.kill()), timeoutMs);
+264 |   const [out, err] = await Promise.all([new Response(proc.stdout).text(), new Response(proc.stderr).text()]);
+265 |   clearTimeout(timer);
+266 |   if ((await proc.exited) !== 0) throw new Error(timedOut ? `claude took over ${timeoutMs / 60000} min` : `claude failed: ${(err || out).slice(0, 300)}`);
+                                                 ^
+error: claude failed: API Error: Can't reach the API server — check your internet or DNS (ENOTFOUND)
+
+      at claudeAsync (D:\MoneyPrinterTurbo-main\motion grafix\app\scripts\auto.ts:266:44)
+
+Bun v1.4.2 (Windows x64)
