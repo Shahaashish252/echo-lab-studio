@@ -18,7 +18,7 @@ data = web.state()
 data["static"] = True
 data["repo"] = "Shahaashish252/echo-lab-studio"
 (out / "data.json").write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
-for f in ("index.html", "logo.png", "favicon.png"):
+for f in ("index.html", "logo.png", "favicon.png", "privacy.html", "terms.html"):
     shutil.copy(HERE / "web" / f, out / f)
 logs = out / "logs"
 logs.mkdir(exist_ok=True)
