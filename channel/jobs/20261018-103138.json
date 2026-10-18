@@ -1,0 +1,18 @@
+{
+  "id": "20261018-103138",
+  "topic": "Touchscreen (capacitive)",
+  "hook": "Aapka phone aapki ungli nahi, bijli mehsoos karta hai!",
+  "lang": "hi",
+  "started": "2026-10-18T10:31:38",
+  "status": "running",
+  "stages": [
+    {
+      "name": "storyboard: \"Touchscreen (capacitive) (open with this hook: \"Aapka phone aapki ungli nahi, bijli mehsoos karta hai!\")\" (Claude Code)",
+      "at": "2026-10-18T10:31:40"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-10-18T10:32:36"
+    }
+  ]
+}
