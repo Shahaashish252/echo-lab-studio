@@ -1,0 +1,8 @@
+
+== storyboard: "Touchscreen (capacitive) (open with this hook: "Aapka phone aapki ungli nahi, bijli mehsoos karta hai!")" (Claude Code)
+  s1 sim     How does your screen feel you?
+  s2 outro   It Feels Charge
+
+== simulation (Claude Code writes it, renders it, reviews it)
+  round 1: 1. Line 13 (42.08s), 'आसपास के नोड्स का फ़र्क़ मिलाकर सटीक जगह मिलती है' (the position comes from combining the neighbouring nodes' differen
+  round 2: 1. Line 13 frame (centroid interpolation → precise position): the POSITION X and POSITION Y panels are still empty placeholders. By this lin
