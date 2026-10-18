@@ -1,5 +1,5 @@
 {
-  "updated": "18 Oct 2026, 08:09",
+  "updated": "18 Oct 2026, 13:21",
   "youtube": {
     "subs": 3,
     "views": 156,
@@ -7,9 +7,27 @@
       {
         "title": "Phone Ko Kaise Pata Chalta Hai Upar Kahan Hai? 🤔 #shorts",
         "id": "fxIqZGwbWMo",
+        "status": "public",
+        "published": "2026-10-18",
+        "views": 4,
+        "likes": 1,
+        "comments": 1
+      },
+      {
+        "title": "Mall Ka Darwaza Khud Kaise Khulta Hai? 🤔 #shorts",
+        "id": "JNXA3yDus8A",
         "status": "private",
-        "published": "2026-10-17",
-        "views": 1,
+        "published": "2026-10-18",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
+      {
+        "title": "Touchscreen Kaise Kaam Karta Hai? Ungli Nahi, Bijli! 🤔 #shorts",
+        "id": "386BVj8nrSU",
+        "status": "private",
+        "published": "2026-10-18",
+        "views": 0,
         "likes": 0,
         "comments": 0
       },
@@ -18,8 +36,8 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 459,
-        "likes": 8,
+        "views": 460,
+        "likes": 9,
         "comments": 2
       },
       {
@@ -27,7 +45,7 @@
         "id": "OECteBF_a74",
         "status": "private",
         "published": "2026-10-11",
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0
       },
@@ -36,7 +54,7 @@
         "id": "G2ksz8lJrEk",
         "status": "private",
         "published": "2026-10-10",
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0
       },
@@ -45,7 +63,7 @@
         "id": "oXiHrWCsqN0",
         "status": "private",
         "published": "2026-10-08",
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0
       },
@@ -54,7 +72,7 @@
         "id": "9e0ItfEMinY",
         "status": "private",
         "published": "2026-10-08",
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0
       },
@@ -122,7 +140,164 @@
         "comments": 8
       }
     ],
-    "daily": []
+    "daily": [
+      {
+        "day": "2026-09-20",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-09-21",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-09-22",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-09-23",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-09-24",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-09-25",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-09-26",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-09-27",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-09-28",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-09-29",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-09-30",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-10-01",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-10-02",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-10-03",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-10-04",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-10-05",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-10-06",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-10-07",
+        "views": 56,
+        "minutes": 11,
+        "subs": 2
+      },
+      {
+        "day": "2026-10-08",
+        "views": 82,
+        "minutes": 8,
+        "subs": 0
+      },
+      {
+        "day": "2026-10-09",
+        "views": 15,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-10-10",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-10-11",
+        "views": 1,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-10-12",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-10-13",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-10-14",
+        "views": 2,
+        "minutes": 0,
+        "subs": 0
+      },
+      {
+        "day": "2026-10-15",
+        "views": 0,
+        "minutes": 0,
+        "subs": 0
+      }
+    ]
   },
   "instagram": {
     "username": "echo.lab3d",
@@ -134,8 +309,8 @@
         "published": "2026-10-17",
         "likes": 11,
         "comments": 2,
-        "reach": 1193,
-        "views": 1402,
+        "reach": 1195,
+        "views": 1404,
         "saved": 3,
         "shares": 4
       },
