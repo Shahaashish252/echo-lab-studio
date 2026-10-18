@@ -4,7 +4,7 @@
   "hook": "Mall ka darwaza aapko pehchanta nahi, phir khulta kaise hai?",
   "lang": "hi",
   "started": "2026-10-18T11:59:12",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "storyboard: \"Automatic door sensor (open with this hook: \"Mall ka darwaza aapko pehchanta nahi, phir khulta kaise hai?\")\" (Claude Code)",
@@ -29,6 +29,12 @@
     {
       "name": "render",
       "at": "2026-10-18T12:36:10"
+    },
+    {
+      "name": "youtube",
+      "at": "2026-10-18T12:43:28"
     }
-  ]
+  ],
+  "finished": "2026-10-18T12:44:04",
+  "uploadId": "JNXA3yDus8A"
 }
