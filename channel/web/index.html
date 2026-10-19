@@ -222,7 +222,7 @@ function renderKpis() {
   $('#kpis').innerHTML = `
     <div class="kpi yt"><div class="l">YouTube subscribers</div><div class="v">${fmt(y.subs)}</div><div class="d">${fmt(ytViews)} total views</div></div>
     <div class="kpi ig"><div class="l">Instagram followers</div><div class="v">${fmt(g.followers)}</div><div class="d">${fmt(igViews)} Reel views</div></div>
-    <div class="kpi"><div class="l">Videos posted</div><div class="v">${pub}</div><div class="d">${sch} scheduled · ${S.jobs.filter(j=>j.status==='failed').length} failed tries</div></div>
+    <div class="kpi"><div class="l">Videos posted</div><div class="v">${pub}</div><div class="d">${sch} scheduled</div></div>
     <div class="kpi"><div class="l">Language</div><div class="v">${S.language === 'hi' ? 'हिंदी' : 'English'}</div>
       <div class="d">${S.schedule.language === 'auto' ? `${fmt(f)} / ${fmt(goal)} followers to switch to English` : 'fixed'}</div>
       ${S.schedule.language === 'auto' ? `<div class="bar"><i style="width:${Math.min(100, f / goal * 100).toFixed(2)}%"></i></div>` : ''}</div>`;
@@ -233,7 +233,7 @@ function renderLive() {
   $('#liveTag').textContent = job ? 'making' : S.running.alive ? S.running.action : 'idle';
   $('#liveTag').className = 'tag ' + (job || S.running.alive ? 'running' : '');
   if (!job) {
-    const last = S.jobs[0];
+    const last = S.jobs.find((j) => j.status !== 'failed');
     $('#live').innerHTML = S.makingNow ? `<div class="empty">A video is being made by a run that started before this dashboard existed, so its steps can't be shown live. Every new video from now on shows here step by step.</div>` : `<div class="empty">Nothing is being made right now.${last ? ` Last: “${esc(last.topic)}” — <span class="tag ${last.status}">${esc(last.status)}</span> ${ago(last.finished || last.started)}` : ''}</div>`
       + (last ? `<details><summary>Show last video's making log</summary><pre class="log" data-job="${esc(last.id)}"></pre></details>` : '');
   } else {
@@ -304,7 +304,8 @@ function renderSchedule() {
 
 function renderJourneys() {
   const byJob = Object.fromEntries(S.videos.filter((v) => v.job).map((v) => [v.job, v]));
-  const items = S.jobs.map((j) => ({ job: j, video: byJob[j.id] || S.videos.find((v) => v.id === j.uploadId) }));
+  // failed tries are retried automatically, so they are left out of the list
+  const items = S.jobs.filter((j) => j.status !== 'failed').map((j) => ({ job: j, video: byJob[j.id] || S.videos.find((v) => v.id === j.uploadId) }));
   const jobless = S.videos.filter((v) => !v.job && !S.jobs.some((j) => j.uploadId === v.id) && v.status !== 'rejected').map((v) => ({ job: null, video: v }));
   const all = [...items, ...jobless].slice(0, 20);
   if (!all.length) { $('#journeys').innerHTML = '<div class="empty">No videos yet.</div>'; return; }
