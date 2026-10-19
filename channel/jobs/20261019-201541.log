@@ -5,3 +5,4 @@
 
 == simulation (Claude Code writes it, renders it, reviews it)
   round 1: 1. Frame at 16.73s, line 2 ("बटन दबाओ, आगे का LED जल उठता है", press the button and the LED at the front lights up): the narration says the 
+  round 2: 1. Overlapping text: 'IR SIGNAL' runs straight into 'SLOW ×127' at the top-left with no gap. Put at least 24 px between them, or move the SL
