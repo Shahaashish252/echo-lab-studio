@@ -1,2 +1,6 @@
 
 == storyboard: "IR remote and receiver (open with this hook: "TV remote ki roshni aap dekh hi nahi sakte!")" (Claude Code)
+  s1 sim     Remote ki roshni DIKHTI hi nahi!
+  s2 outro   Roshni nahi, CODE!
+
+== simulation (Claude Code writes it, renders it, reviews it)
