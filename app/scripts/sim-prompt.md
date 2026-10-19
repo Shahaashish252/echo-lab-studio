@@ -45,3 +45,8 @@ current directory and copy their look closely: scale, spacing, colours, line wei
 - Deterministic: no Math.random, no Date, no state between calls (compute everything from t), no DOM, no imports,
   no async. Wrap risky maths so it never throws or draws NaN. Keep it fast (it runs for every frame).
 Reply with ONLY the JavaScript module.
+- FIRST 2 SECONDS DECIDE EVERYTHING (viewers swipe in 1-2 s): from t=0 the hook headline is HUGE, s.round(96-120, 800),
+  white with the key word in orange, filling the top third, and the main object of the mechanism is already big and
+  moving. Do not open on an empty or loading panel.
+- KEEP IT SIMPLE for a general audience: at most 3-4 readouts on screen, one big main visual (the object), no tables or
+  grids of small numbers. Fewer, bigger things beat many small ones on a phone.

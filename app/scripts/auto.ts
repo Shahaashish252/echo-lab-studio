@@ -50,7 +50,9 @@ LANGUAGE: this video is for a Hindi-speaking audience in India.
   Indian tech creator talks: short punchy sentences, everyday words, not formal/textbook Hindi. Write English technical
   words the way they are said, in Devanagari (सेंसर, सर्किट, वोल्टेज, आर्डुइनो, इन्फ्रारेड), and spell out numbers and units in
   Hindi words in "say". Keep each line about as short as the English rules ask (Hindi takes longer to speak).
-- On-screen headlines, labels, part names and the short "title"/"kicker" stay in simple English.
+- The hook "headline" and the outro "headline" are in Hinglish (Roman script, e.g. "Yeh aapko DEKHTA nahi!"), because
+  the audience is Hindi-speaking and these big words are what stops the scroll. Small part labels on the diagram may
+  stay short English (MOTOR, LED, IR), and the "title"/"kicker" may stay English.
 - youtube.title: Hinglish in Roman script, curiosity-driven, e.g. "PIR Sensor Kaise Kaam Karta Hai? 🤔 #shorts".
 - youtube.description, social.instagram and social.tiktok: Hinglish in Roman script; hashtags may mix English and #hindi.
 - youtube.tags: mix English search phrases and Hinglish ones ("pir sensor kaise kaam karta hai", "motion sensor in hindi").`;
@@ -625,7 +627,7 @@ const BUILD = Date.now().toString(36);
 
 /** Simulation format (default): one live instrument-panel simulation of the mechanism for the whole video, in the
  *  style of the "Inside Electronics" servo Short the user picked as the reference. */
-const PROMPT_SIM = `Write the script for a 45-60 second vertical explainer Short about:
+const PROMPT_SIM = `Write the script for a 30-40 second vertical explainer Short about:
 "${topic}"
 
 Style reference (copy it): "How Does a Servo Know Where to Turn?" by Inside Electronics. ONE clean instrument-panel
@@ -647,16 +649,19 @@ ${SOCIAL_FIELDS}
             real numbers and formulas involved, and the colour meaning (target orange, actual teal, error red)",
   "scenes": [
     { "type": "sim", "headline": "the hook question, 4-9 words",
-      "lines": [ 10-16 objects {"text": "...", "say": "...", "event": "what the simulation does during this line"} ] },
+      "lines": [ 8-11 objects {"text": "...", "say": "...", "event": "what the simulation does during this line"} ] },
     { "type": "outro", "headline": "2-4 word payoff", "lines": [ {"text": "a question that invites comments, about the
       next level of this topic"} ] }
   ]
 }
 
-Narration rules: 110-150 words in total, each line max 12 words, calm and precise, concrete numbers and units,
-short punchy sentences like the reference. "text" is the subtitle (wrap 1 key word in *stars*); "say" (optional)
-spells out numbers, units, symbols and acronyms for the voice. Line 1 is the hook question; line 2-3 a surprising
-reframe ("It never sees an angle. It sees a pulse."). Every claim must be accurate. Each "event" says exactly what
+Narration rules: 70-95 words in total (the video must stay UNDER 40 seconds: our data shows 44 s videos get
+10x the views of 65 s ones), each line max 10 words, short punchy sentences. "text" is the subtitle (wrap 1 key word
+in *stars*); "say" (optional) spells out numbers, units, symbols and acronyms for the voice.
+Line 1 is a MYTH-BUST hook that stops the scroll, a bold surprising claim about something the viewer uses daily
+("It can't see you." / "Your phone never sees your finger."), not a slow question; line 2 names the real mechanism in
+plain words. Keep it for a general audience: at most 2 numbers in the whole script, no jargon without an everyday
+comparison. The last line is a punchy one-line payoff plus a comment question. Every claim must be accurate. Each "event" says exactly what
 moves or changes on screen during that line (values, needles, signals, freeze/slow-mo/play), consistent with the
 numbers in the narration.`;
 
