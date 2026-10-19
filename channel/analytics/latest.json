@@ -1,15 +1,24 @@
 {
-  "updated": "18 Oct 2026, 18:54",
+  "updated": "19 Oct 2026, 14:06",
   "youtube": {
     "subs": 3,
-    "views": 613,
+    "views": 633,
     "videos": [
+      {
+        "title": "Touchscreen Kaise Kaam Karta Hai? Ungli Nahi, Bijli! 🤔 #shorts",
+        "id": "386BVj8nrSU",
+        "status": "public",
+        "published": "2026-10-18",
+        "views": 13,
+        "likes": 1,
+        "comments": 1
+      },
       {
         "title": "Phone Ko Kaise Pata Chalta Hai Upar Kahan Hai? 🤔 #shorts",
         "id": "fxIqZGwbWMo",
         "status": "public",
         "published": "2026-10-18",
-        "views": 35,
+        "views": 77,
         "likes": 2,
         "comments": 1
       },
@@ -23,20 +32,11 @@
         "comments": 0
       },
       {
-        "title": "Touchscreen Kaise Kaam Karta Hai? Ungli Nahi, Bijli! 🤔 #shorts",
-        "id": "386BVj8nrSU",
-        "status": "private",
-        "published": "2026-10-18",
-        "views": 0,
-        "likes": 0,
-        "comments": 0
-      },
-      {
         "title": "Motion Sensor Aapko Dekhta Nahi! PIR Sensor Kaise Kaam Karta Hai? 🤔 #shorts",
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 469,
+        "views": 492,
         "likes": 9,
         "comments": 2
       },
@@ -141,12 +141,6 @@
       }
     ],
     "daily": [
-      {
-        "day": "2026-09-20",
-        "views": 0,
-        "minutes": 0,
-        "subs": 0
-      },
       {
         "day": "2026-09-21",
         "views": 0,
@@ -296,6 +290,12 @@
         "views": 0,
         "minutes": 0,
         "subs": 0
+      },
+      {
+        "day": "2026-10-16",
+        "views": 2,
+        "minutes": 1,
+        "subs": 0
       }
     ]
   },
@@ -310,7 +310,7 @@
         "likes": 11,
         "comments": 2,
         "reach": 1197,
-        "views": 1405,
+        "views": 1406,
         "saved": 3,
         "shares": 4
       },
