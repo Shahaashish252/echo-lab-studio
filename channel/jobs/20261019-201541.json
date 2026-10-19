@@ -9,6 +9,10 @@
     {
       "name": "storyboard: \"IR remote and receiver (open with this hook: \"TV remote ki roshni aap dekh hi nahi sakte!\")\" (Claude Code)",
       "at": "2026-10-19T20:15:42"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-10-19T20:16:56"
     }
   ]
 }
