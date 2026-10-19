@@ -16,7 +16,7 @@ permissions:
 jobs:
   comments:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 125
     env:
       TZ: Asia/Kolkata
       PYTHONIOENCODING: utf-8
@@ -34,6 +34,11 @@ jobs:
           cache-dependency-path: .github/scripts/setup-python.sh
       - run: bash .github/scripts/setup-python.sh
       - run: bash .github/scripts/secrets.sh
-      - run: python -u channel/manager.py comments
-      - if: always()
-        run: bash .github/scripts/save-state.sh "comments"
+      - name: Answer comments every 5 minutes for 2 hours
+        # GitHub's free scheduler only starts this job every 2-3 hours, so each run keeps watching for 2 hours
+        run: |
+          for i in $(seq 1 23); do
+            python -u channel/manager.py comments || echo "comments check failed (will retry)"
+            bash .github/scripts/save-state.sh "comments" || true
+            [ "$i" -lt 23 ] && sleep 300
+          done

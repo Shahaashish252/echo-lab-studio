@@ -98,10 +98,10 @@
     "postAt": "2026-10-18T12:30",
     "published": {
       "youtube": "2026-10-18",
-      "facebook": "https://www.facebook.com/reel/3319886001530045/"
+      "facebook": "https://www.facebook.com/reel/3319886001530045/",
+      "instagram": "https://www.instagram.com/reel/Deq_YaZDN7K/"
     },
-    "postedAt": "2026-10-18T12:32",
-    "retryAfter": "2026-10-19T11:48"
+    "postedAt": "2026-10-18T12:32"
   },
   {
     "id": "386BVj8nrSU",
@@ -113,7 +113,8 @@
     "postAt": "2026-10-18T19:30",
     "published": {
       "youtube": "2026-10-18",
-      "facebook": "https://www.facebook.com/reel/1626243949230017/"
+      "facebook": "https://www.facebook.com/reel/1626243949230017/",
+      "instagram": "https://www.instagram.com/reel/Deq_k2zAktg/"
     },
     "postedAt": "2026-10-18T21:21"
   },
@@ -121,9 +122,15 @@
     "id": "JNXA3yDus8A",
     "meta": "channel\\videos\\auto-how-auto-doors-sense-you.json",
     "date": "2026-10-18",
-    "status": "approved",
+    "status": "published",
     "topic": "Automatic door sensor",
     "job": "20261018-115912",
-    "postAt": "2026-10-19T12:30"
+    "postAt": "2026-10-19T12:30",
+    "published": {
+      "youtube": "2026-10-19",
+      "instagram": "https://www.instagram.com/reel/Deq_wqIEadH/",
+      "facebook": "https://www.facebook.com/reel/1420535612922236/"
+    },
+    "postedAt": "2026-10-19T15:49"
   }
 ]

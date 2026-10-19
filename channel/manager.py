@@ -264,6 +264,16 @@ def store_video(entry: dict):
     print(f"stored {f.name} in release '{RELEASE}'" if r.returncode == 0 else f"store failed: {r.stderr[:200]}")
 
 
+def public_video_url(entry: dict) -> str | None:
+    """The video's public link in the 'videos' release (Instagram fetches it from there), if it is stored there."""
+    name = youtube.rel(meta(entry)["file"]).name
+    url = f"https://github.com/Shahaashish252/echo-lab-studio/releases/download/{RELEASE}/{name}"
+    try:
+        return url if requests.head(url, allow_redirects=True, timeout=30).status_code == 200 else None
+    except Exception:  # noqa: BLE001
+        return None
+
+
 def ensure_video(entry: dict) -> bool:
     """Make sure the video file is on this machine, fetching it from the 'videos' release in the cloud."""
     f = youtube.rel(meta(entry)["file"])
@@ -309,7 +319,7 @@ def publish_entry(entry: dict):
         pub["youtube"] = date.today().isoformat()
     if "instagram" not in pub and instagram.TOKEN_FILE.exists():
         try:
-            pub["instagram"] = instagram.post(entry["meta"]) or date.today().isoformat()
+            pub["instagram"] = instagram.post(entry["meta"], video_url=public_video_url(entry)) or date.today().isoformat()
         except (Exception, SystemExit) as e:  # noqa: BLE001  one platform failing must not stop the others
             print(f"instagram: {e}")
     if "facebook" not in pub and instagram.TOKEN_FILE.exists():
@@ -327,7 +337,18 @@ def publish_entry(entry: dict):
         print(f"removed {name} from release storage (posted everywhere)")
 
 
-def cmd_post_due():
+def cmd_post_due(*args):
+    """post-due [--wait MINUTES]: with --wait, if the next post is due within MINUTES, sleep until its time first.
+    GitHub's free scheduler only wakes this job every 2-3 hours, so waiting is what makes posts go out on time."""
+    if args[:1] == ("--wait",):
+        import time
+        limit = timedelta(minutes=int(args[1]))
+        nxt = sorted(u["postAt"] for u in uploads() if u.get("status") == "approved")
+        if nxt:
+            at = datetime.fromisoformat(nxt[0])
+            if datetime.now() < at <= datetime.now() + limit:
+                print(f"next post at {nxt[0]}: waiting {round((at - datetime.now()).total_seconds() / 60)} min", flush=True)
+                time.sleep(max(0.0, (at - datetime.now()).total_seconds()) + 5)
     ups = uploads()
     now = datetime.now().isoformat(timespec="minutes")
     due = sorted((u for u in ups if u.get("status") == "approved" and u.get("postAt", "9") <= now), key=lambda u: u["postAt"])

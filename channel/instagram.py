@@ -139,11 +139,50 @@ def host_image(path: Path) -> str:
     return max(imgs, key=lambda i: i.get("width", 0))["source"]
 
 
-def post(meta_path: str) -> str:
+def post_from_url(m: dict, video_url: str, cfg: dict) -> str:
+    """Instagram fetches the video from a public link (our GitHub 'videos' release). Since 2026-10-18 this is the
+    reliable way for this account: direct (resumable) uploads keep failing with ProcessingFailedError."""
+    token, uid = cfg["token"], cfg["userId"]
+    GRAPH = GRAPH_FB if cfg.get("mode") == "facebook" else GRAPH_IG
+    covers = []
+    if m.get("cover") and rel(m["cover"]).exists() and cfg.get("mode") == "facebook":
+        try:
+            covers.append({"cover_url": host_image(rel(m["cover"]))})
+        except (Exception, SystemExit) as e:  # noqa: BLE001
+            print(f"instagram: cover image not hosted ({e})")
+    covers.append({"thumb_offset": str(m["coverMs"])} if m.get("coverMs") is not None else {})
+    for cover in covers:
+        c = _check(requests.post(f"{GRAPH}/{uid}/media", data={
+            "media_type": "REELS", "video_url": video_url, "caption": caption(m), "share_to_feed": "true",
+            "access_token": token, **cover}, timeout=60))
+        cid = c["id"]
+        print(f"instagram: fetching the video from its link ({next(iter(cover), 'no cover setting')}) ...", flush=True)
+        code = None
+        for _ in range(90):
+            st = _check(requests.get(f"{GRAPH}/{cid}", params={"fields": "status_code,status", "access_token": token}, timeout=30))
+            code = st.get("status_code")
+            if code in ("FINISHED", "ERROR", "EXPIRED"):
+                break
+            time.sleep(10)
+        if code == "FINISHED":
+            pub = _check(requests.post(f"{GRAPH}/{uid}/media_publish", data={"creation_id": cid, "access_token": token}, timeout=60))
+            link = _check(requests.get(f"{GRAPH}/{pub['id']}", params={"fields": "permalink", "access_token": token}, timeout=30)).get("permalink", "")
+            print(f"instagram: posted {link}")
+            return link
+        print(f"instagram: link method {code}: {st.get('status')}")
+    raise RuntimeError("Instagram could not process the video from its link")
+
+
+def post(meta_path: str, video_url: str | None = None) -> str:
     cfg = load()
     token, uid = cfg["token"], cfg["userId"]
     GRAPH = GRAPH_FB if cfg.get("mode") == "facebook" else GRAPH_IG
     m = json.loads(rel(meta_path).read_text(encoding="utf-8"))
+    if video_url:
+        try:
+            return post_from_url(m, video_url, cfg)
+        except (Exception, SystemExit) as e:  # noqa: BLE001
+            print(f"instagram: link method failed ({e}); trying a direct upload")
     video = rel(m["file"])
     size = video.stat().st_size
 
