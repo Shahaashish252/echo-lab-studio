@@ -13,6 +13,22 @@
     {
       "name": "simulation (Claude Code writes it, renders it, reviews it)",
       "at": "2026-10-19T20:16:56"
+    },
+    {
+      "name": "voice (Kokoro)",
+      "at": "2026-10-19T20:47:04"
+    },
+    {
+      "name": "backgrounds (motion graphics): circuit, network",
+      "at": "2026-10-19T20:48:12"
+    },
+    {
+      "name": "sound",
+      "at": "2026-10-19T20:48:12"
+    },
+    {
+      "name": "render",
+      "at": "2026-10-19T20:48:22"
     }
   ]
 }
