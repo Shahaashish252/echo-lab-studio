@@ -4,11 +4,16 @@
   "hook": "TV remote ki roshni aap dekh hi nahi sakte!",
   "lang": "hi",
   "started": "2026-10-19T16:40:20",
-  "status": "running",
+  "status": "failed",
   "stages": [
     {
       "name": "storyboard: \"IR remote and receiver (open with this hook: \"TV remote ki roshni aap dekh hi nahi sakte!\")\" (Claude Code)",
       "at": "2026-10-19T16:40:21"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-10-19T16:41:14"
     }
-  ]
+  ],
+  "finished": "2026-10-19T18:49:11"
 }

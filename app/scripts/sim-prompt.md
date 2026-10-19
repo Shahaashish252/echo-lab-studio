@@ -44,9 +44,10 @@ current directory and copy their look closely: scale, spacing, colours, line wei
 - The physics/maths must be right and the numbers consistent (e.g. angle from pulse width, voltage from angle).
 - Deterministic: no Math.random, no Date, no state between calls (compute everything from t), no DOM, no imports,
   no async. Wrap risky maths so it never throws or draws NaN. Keep it fast (it runs for every frame).
-Reply with ONLY the JavaScript module.
-- FIRST 2 SECONDS DECIDE EVERYTHING (viewers swipe in 1-2 s): from t=0 the hook headline is HUGE, s.round(96-120, 800),
-  white with the key word in orange, filling the top third, and the main object of the mechanism is already big and
-  moving. Do not open on an empty or loading panel.
+- FIRST 2 SECONDS DECIDE EVERYTHING (viewers swipe in 1-2 s): the hook headline sits where the title normally sits
+  (top, above the signal strip) but bigger, s.round(84-96, 800), white with its key word in orange, and from t=0 the
+  main object of the mechanism is already big and moving. Do not open on an empty or loading panel. This changes only
+  the headline size; keep the rest of the layout above exactly as described.
 - KEEP IT SIMPLE for a general audience: at most 3-4 readouts on screen, one big main visual (the object), no tables or
   grids of small numbers. Fewer, bigger things beat many small ones on a phone.
+Reply with ONLY the JavaScript module.

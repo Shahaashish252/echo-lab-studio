@@ -682,9 +682,9 @@ async function writeSim(stage: string, plan: string, fix?: { code: string; probl
   const system = 'You are an expert canvas-2D motion designer and engineer. You output a single JavaScript module and nothing else.';
   // it may look at the reference frames (scripts/style-ref*.png), so it runs in that folder with the Read tool
   const opts = { cwd: join(appDir, 'scripts'), tools: ['Read'] };
-  const out = await claudeAsync(ask, system, 900_000, opts).catch((e) => {
+  const out = await claudeAsync(ask, system, 1_500_000, opts).catch((e) => {
     console.warn(`  simulation writing failed (${e instanceof Error ? e.message : e}); retrying`);
-    return claudeAsync(ask, system, 900_000, opts);
+    return claudeAsync(ask, system, 1_500_000, opts);
   });
   const m = out.match(/```(?:js|javascript)?\s*\n([\s\S]*?)```/);
   const code = (m ? m[1] : out).trim();

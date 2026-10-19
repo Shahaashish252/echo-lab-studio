@@ -1,10 +1,6 @@
 {
   "queue": [
     {
-      "topic": "IR remote and receiver",
-      "hook": "TV remote ki roshni aap dekh hi nahi sakte!"
-    },
-    {
       "topic": "LDR street light sensor",
       "hook": "Street light ko kaise pata chalta hai ki raat ho gayi?"
     },
@@ -105,6 +101,7 @@
     "MEMS accelerometer",
     "MEMS gyroscope",
     "Touchscreen (capacitive)",
-    "Automatic door sensor"
+    "Automatic door sensor",
+    "IR remote and receiver"
   ]
 }

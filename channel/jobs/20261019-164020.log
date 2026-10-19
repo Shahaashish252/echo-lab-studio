@@ -1,2 +1,18 @@
 
 == storyboard: "IR remote and receiver (open with this hook: "TV remote ki roshni aap dekh hi nahi sakte!")" (Claude Code)
+  s1 sim     Remote ki roshni DIKHTI hi nahi!
+  s2 outro   Roshni = CODE!
+
+== simulation (Claude Code writes it, renders it, reviews it)
+  simulation writing failed (claude took over 25 min); retrying
+263 |   });
+264 |   let timedOut = false;
+265 |   const timer = setTimeout(() => ((timedOut = true), proc.kill()), timeoutMs);
+266 |   const [out, err] = await Promise.all([new Response(proc.stdout).text(), new Response(proc.stderr).text()]);
+267 |   clearTimeout(timer);
+268 |   if ((await proc.exited) !== 0) throw new Error(timedOut ? `claude took over ${timeoutMs / 60000} min` : `claude failed: ${(err || out).slice(0, 300)}`);
+                                                 ^
+error: claude took over 25 min
+      at claudeAsync (D:\MoneyPrinterTurbo-main\motion grafix\app\scripts\auto.ts:268:44)
+
+Bun v1.4.2 (Windows x64)
