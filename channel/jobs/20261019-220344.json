@@ -4,11 +4,12 @@
   "hook": "Street light ko kaise pata chalta hai ki raat ho gayi?",
   "lang": "hi",
   "started": "2026-10-19T22:03:44",
-  "status": "running",
+  "status": "failed",
   "stages": [
     {
       "name": "storyboard: \"LDR street light sensor (open with this hook: \"Street light ko kaise pata chalta hai ki raat ho gayi?\")\" (Claude Code)",
       "at": "2026-10-19T22:03:44"
     }
-  ]
+  ],
+  "finished": "2026-10-19T22:03:45"
 }
