@@ -9,6 +9,10 @@
     {
       "name": "storyboard: \"LDR street light sensor (open with this hook: \"Street light ko kaise pata chalta hai ki raat ho gayi?\")\" (Claude Code)",
       "at": "2026-10-20T17:36:11"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-10-20T17:37:16"
     }
   ]
 }
