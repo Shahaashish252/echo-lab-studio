@@ -137,9 +137,15 @@
     "id": "UK5WSZEUI9I",
     "meta": "channel\\videos\\auto-ir-remote-invisible-light.json",
     "date": "2026-10-19",
-    "status": "approved",
+    "status": "published",
     "topic": "IR remote and receiver",
     "job": "20261019-201541",
-    "postAt": "2026-10-20T12:30"
+    "postAt": "2026-10-20T12:30",
+    "published": {
+      "youtube": "2026-10-20",
+      "instagram": "https://www.instagram.com/reel/DetPyyLDzhe/",
+      "facebook": "https://www.facebook.com/reel/1578338560735995/"
+    },
+    "postedAt": "2026-10-20T12:31"
   }
 ]
