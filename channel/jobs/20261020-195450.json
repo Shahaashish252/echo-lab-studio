@@ -4,11 +4,12 @@
   "hook": "Aapka phone ungli nahi, aapki body ki bijli mehsoos karta hai!",
   "lang": "hi",
   "started": "2026-10-20T19:54:50",
-  "status": "running",
+  "status": "failed",
   "stages": [
     {
       "name": "storyboard: \"Touchscreen capacitive sensing (open with this hook: \"Aapka phone ungli nahi, aapki body ki bijli mehsoos karta hai!\")\" (Claude Code)",
       "at": "2026-10-20T19:54:50"
     }
-  ]
+  ],
+  "finished": "2026-10-20T19:54:51"
 }
