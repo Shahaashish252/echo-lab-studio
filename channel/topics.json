@@ -1,10 +1,6 @@
 {
   "queue": [
     {
-      "topic": "LDR street light sensor",
-      "hook": "Street light ko kaise pata chalta hai ki raat ho gayi?"
-    },
-    {
       "topic": "Touchscreen capacitive sensing",
       "hook": "Aapka phone ungli nahi, aapki body ki bijli mehsoos karta hai!"
     },
@@ -102,6 +98,7 @@
     "MEMS gyroscope",
     "Touchscreen (capacitive)",
     "Automatic door sensor",
-    "IR remote and receiver"
+    "IR remote and receiver",
+    "LDR street light sensor"
   ]
 }

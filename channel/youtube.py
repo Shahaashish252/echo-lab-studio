@@ -163,8 +163,18 @@ def cmd_upload(meta_path: str):
     media = MediaFileUpload(str(rel(m["file"])), chunksize=8 * 1024 * 1024, resumable=True)
     req = y.videos().insert(part="snippet,status", body=body, media_body=media)
     res = None
+    drops = 0
     while res is None:
-        status, res = req.next_chunk()
+        try:
+            status, res = req.next_chunk()
+        except (ConnectionError, OSError) as e:  # a dropped connection resumes the upload where it stopped
+            drops += 1
+            if drops > 8:
+                raise
+            print(f"\n  connection dropped ({e.__class__.__name__}), resuming in {10 * drops}s", flush=True)
+            import time
+            time.sleep(10 * drops)
+            continue
         if status:
             print(f"\r  uploading {status.progress() * 100:5.1f}%", end="", flush=True)
     vid = res["id"]
