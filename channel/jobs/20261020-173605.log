@@ -8,3 +8,31 @@
   simulation approved (round 2)
 
 == voice (Kokoro)
+s1-1        2.37s  ये स्ट्रीट लाइट घड़ी नहीं देखती।
+s1-2        3.98s  इसमें एक एल डी आर है, रोशनी से बदलने वाला रेज़िस्टर।
+s1-3        3.06s  रेज़िस्टर यानी करंट के रास्ते में रुकावट।
+s1-4        2.75s  दोपहर में रुकावट बस एक हज़ार ओम।
+s1-5        2.82s  अब टाइम तेज़ करते हैं। सूरज ढल रहा है।
+s1-6        2.73s  अंधेरे में रुकावट दस लाख ओम तक!
+s1-7        2.75s  सर्किट रोशनी नहीं, वोल्टेज नापता है।
+s1-8        2.32s  रुकावट बढ़ी, तो वोल्टेज चढ़ा।
+s1-9        3.09s  टाइम फ्रीज़! वोल्टेज ने सेट लेवल पार किया।
+s1-10       2.12s  प्ले। स्विच क्लिक, और लाइट जल गई।
+s1-11       2.55s  सुबह रुकावट गिरी, और लाइट बंद।
+s2-1        5.31s  रात में गाड़ी की हेडलाइट पड़े, तो स्ट्रीट लाइट बंद क्यों नहीं होती? कमेंट करो!
+wrote 12 clips to D:\MoneyPrinterTurbo-main\motion grafix\app\public\voice\auto\kokoro
+
+== backgrounds (motion graphics): circuit, network
+  2 scenes, 39.7s
+
+== sound
+auto: 18 cues over 39.66666666666667s
+voice: kokoro
+mixed (peak -3.3 dBFS)
+wrote D:\MoneyPrinterTurbo-main\motion grafix\app\public\audio\auto.wav (-14 LUFS)
+
+== render
+rendering 1190 frames (0-39.66666666666667s) at 1080x1920, 1 sample(s)/frame
+
+  frame 30/1190  1.0 fps  eta 1160s   
+  frame 60/1190  1.5 fps  eta 736s   
