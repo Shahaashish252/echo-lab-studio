@@ -54,3 +54,100 @@ rendering 1190 frames (0-39.66666666666667s) at 1080x1920, 1 sample(s)/frame
   frame 540/1190  2.0 fps  eta 322s   
   frame 570/1190  2.0 fps  eta 307s   
   frame 600/1190  2.0 fps  eta 292s   
+  frame 630/1190  2.0 fps  eta 278s   
+  frame 660/1190  2.0 fps  eta 264s   
+  frame 690/1190  2.0 fps  eta 249s   
+  frame 720/1190  2.0 fps  eta 233s   
+  frame 750/1190  2.0 fps  eta 218s   
+  frame 780/1190  2.0 fps  eta 203s   
+  frame 810/1190  2.0 fps  eta 188s   
+  frame 840/1190  2.0 fps  eta 173s   
+  frame 870/1190  2.0 fps  eta 159s   
+  frame 900/1190  2.0 fps  eta 144s   
+  frame 930/1190  2.0 fps  eta 130s   
+  frame 960/1190  2.0 fps  eta 114s   
+  frame 990/1190  2.0 fps  eta 99s   
+  frame 1020/1190  2.0 fps  eta 84s   
+  frame 1050/1190  2.0 fps  eta 69s   
+  frame 1080/1190  2.1 fps  eta 54s   
+  frame 1110/1190  2.1 fps  eta 39s   
+  frame 1140/1190  2.1 fps  eta 24s   
+  frame 1170/1190  2.1 fps  eta 10s   
+  frame 1190/1190  2.1 fps  eta 0s   
+wrote D:\MoneyPrinterTurbo-main\motion grafix\out\auto\how-ldr-street-lights-work.mp4 (with sound)
+
+== youtube
+  Street Light Ko Kaise Pata Chalta Hai Ki Raat Ho Gayi? 🤔 #shorts
+  metadata: channel\videos\auto-how-ldr-street-lights-work.json
+Traceback (most recent call last):
+  File "D:\MoneyPrinterTurbo-main\motion grafix\channel\youtube.py", line 273, in <module>
+    COMMANDS[sys.argv[1]](*sys.argv[2:])
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\MoneyPrinterTurbo-main\motion grafix\channel\youtube.py", line 167, in cmd_upload
+    status, res = req.next_chunk()
+                  ~~~~~~~~~~~~~~^^
+  File "C:\Users\Aashish\AppData\Local\Programs\Python\Python314\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Aashish\AppData\Local\Programs\Python\Python314\Lib\site-packages\googleapiclient\http.py", line 1164, in next_chunk
+    resp, content = http.request(
+                    ~~~~~~~~~~~~^
+        self.resumable_uri, method="PUT", body=data, headers=headers
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Aashish\AppData\Local\Programs\Python\Python314\Lib\site-packages\google_auth_httplib2.py", line 214, in request
+    response, content = self.http.request(
+                        ~~~~~~~~~~~~~~~~~^
+        uri,
+        ^^^^
+    ...<5 lines>...
+        **kwargs
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\Aashish\AppData\Local\Programs\Python\Python314\Lib\site-packages\httplib2\__init__.py", line 1755, in request
+    (response, content) = self._request(
+                          ~~~~~~~~~~~~~^
+        conn, authority, uri, request_uri, method, body, headers, redirections, cachekey,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Aashish\AppData\Local\Programs\Python\Python314\Lib\site-packages\httplib2\__init__.py", line 1475, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+                          ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aashish\AppData\Local\Programs\Python\Python314\Lib\site-packages\httplib2\__init__.py", line 1398, in _conn_request
+    conn.request(method, request_uri, body, headers)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aashish\AppData\Local\Programs\Python\Python314\Lib\http\client.py", line 1367, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aashish\AppData\Local\Programs\Python\Python314\Lib\http\client.py", line 1413, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aashish\AppData\Local\Programs\Python\Python314\Lib\http\client.py", line 1362, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aashish\AppData\Local\Programs\Python\Python314\Lib\http\client.py", line 1161, in _send_output
+    self.send(chunk)
+    ~~~~~~~~~^^^^^^^
+  File "C:\Users\Aashish\AppData\Local\Programs\Python\Python314\Lib\http\client.py", line 1086, in send
+    self.sock.sendall(data)
+    ~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Aashish\AppData\Local\Programs\Python\Python314\Lib\ssl.py", line 1263, in sendall
+    v = self.send(byte_view[count:])
+  File "C:\Users\Aashish\AppData\Local\Programs\Python\Python314\Lib\ssl.py", line 1232, in send
+    return self._sslobj.write(data)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+ConnectionResetError: [Errno 10054] An existing connection was forcibly closed by the remote host
+106 | }
+107 | const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50) || 'video';
+108 | 
+109 | function run(cmd: string, args: string[], cwd = appDir) {
+110 |   const r = spawnSync(cmd, args, { cwd, stdio: 'inherit', shell: false });
+111 |   if (r.status !== 0) throw new Error(`${cmd} ${args.slice(0, 3).join(' ')} failed (exit ${r.status})`);
+                                      ^
+error: python -m uv run failed (exit 1)
+      at run (D:\MoneyPrinterTurbo-main\motion grafix\app\scripts\auto.ts:111:33)
+      at D:\MoneyPrinterTurbo-main\motion grafix\app\scripts\auto.ts:1193:13
+
+Bun v1.4.2 (Windows x64)
