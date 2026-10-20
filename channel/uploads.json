@@ -152,8 +152,14 @@
     "id": "ma7mTeADoOk",
     "meta": "channel/videos/auto-how-ldr-street-lights-work.json",
     "date": "2026-10-20",
-    "status": "approved",
+    "status": "published",
     "topic": "LDR street light sensor",
-    "postAt": "2026-10-20T19:30"
+    "postAt": "2026-10-20T19:30",
+    "published": {
+      "youtube": "2026-10-20",
+      "instagram": "https://www.instagram.com/reel/Det_30gEQu5/",
+      "facebook": "https://www.facebook.com/reel/1091154910203010/"
+    },
+    "postedAt": "2026-10-20T19:32"
   }
 ]
