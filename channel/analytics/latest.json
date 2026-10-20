@@ -1,15 +1,33 @@
 {
-  "updated": "20 Oct 2026, 13:47",
+  "updated": "20 Oct 2026, 19:54",
   "youtube": {
     "subs": 3,
     "views": 756,
     "videos": [
       {
+        "title": "Street Light Ko Kaise Pata Chalta Hai Ki Raat Ho Gayi? 🤔 #shorts",
+        "id": "ma7mTeADoOk",
+        "status": "public",
+        "published": "2026-10-20",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
+      {
+        "title": "Street Light Ko Kaise Pata Chalta Hai Ki Raat Ho Gayi? 🤔 #shorts",
+        "id": "6JQxjvWWyIw",
+        "status": "private",
+        "published": "2026-10-20",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
+      {
         "title": "TV Remote Ki Roshni Aapko Dikhti Kyun Nahi? 🤔 #shorts",
         "id": "UK5WSZEUI9I",
         "status": "public",
         "published": "2026-10-20",
-        "views": 2,
+        "views": 13,
         "likes": 0,
         "comments": 0
       },
@@ -18,7 +36,7 @@
         "id": "JNXA3yDus8A",
         "status": "public",
         "published": "2026-10-19",
-        "views": 20,
+        "views": 21,
         "likes": 0,
         "comments": 0
       },
@@ -27,7 +45,7 @@
         "id": "386BVj8nrSU",
         "status": "public",
         "published": "2026-10-18",
-        "views": 19,
+        "views": 20,
         "likes": 1,
         "comments": 1
       },
@@ -313,13 +331,24 @@
     "followers": 2,
     "posts": [
       {
-        "title": "Aapka TV remote har baar roshni phenkta hai 👀",
-        "url": "https://www.instagram.com/reel/DetPyyLDzhe/",
+        "title": "Street light ghadi nahi dekhti, phir bhi jaanti hai 🌙",
+        "url": "https://www.instagram.com/reel/Det_30gEQu5/",
         "published": "2026-10-20",
         "likes": 0,
         "comments": 0,
-        "reach": 51,
-        "views": 87,
+        "reach": 0,
+        "views": 0,
+        "saved": 0,
+        "shares": 0
+      },
+      {
+        "title": "Aapka TV remote har baar roshni phenkta hai 👀",
+        "url": "https://www.instagram.com/reel/DetPyyLDzhe/",
+        "published": "2026-10-20",
+        "likes": 1,
+        "comments": 1,
+        "reach": 100,
+        "views": 129,
         "saved": 0,
         "shares": 0
       },
@@ -329,8 +358,8 @@
         "published": "2026-10-19",
         "likes": 2,
         "comments": 2,
-        "reach": 33,
-        "views": 44,
+        "reach": 36,
+        "views": 52,
         "saved": 2,
         "shares": 1
       },
@@ -362,7 +391,7 @@
         "published": "2026-10-17",
         "likes": 11,
         "comments": 2,
-        "reach": 1199,
+        "reach": 1200,
         "views": 1409,
         "saved": 3,
         "shares": 4

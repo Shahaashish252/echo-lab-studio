@@ -1,0 +1,14 @@
+{
+  "id": "20261020-195449",
+  "topic": "Touchscreen capacitive sensing",
+  "hook": "Aapka phone ungli nahi, aapki body ki bijli mehsoos karta hai!",
+  "lang": "hi",
+  "started": "2026-10-20T19:54:49",
+  "status": "running",
+  "stages": [
+    {
+      "name": "storyboard: \"Touchscreen capacitive sensing (open with this hook: \"Aapka phone ungli nahi, aapki body ki bijli mehsoos karta hai!\")\" (Claude Code)",
+      "at": "2026-10-20T19:54:49"
+    }
+  ]
+}
