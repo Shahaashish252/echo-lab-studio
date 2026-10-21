@@ -71,7 +71,8 @@ Reply with ONLY a JSON object, no markdown:
       "say": "{'what the narrator says: natural spoken Hindi in Devanagari, English tech words written as pronounced in Devanagari' if hindi else 'what the narrator says, English'}, max 9 words",
       "caption": "{'the same sentence in Roman Hinglish (Latin letters), as Indian creators write captions' if hindi else 'the same sentence'}",
       "key": "the one most important word of caption (copied exactly from caption)",
-      "shot": "an English prompt for ONE photorealistic still image for this line: concrete subject, angle, close-up/macro, what glows. Real objects only (phone, finger, chip, wire, room, person's hand...). No text, diagrams or UI in the image."
+      "search": "3 short English search phrases for REAL stock video footage that shows this line, comma separated, most specific first (e.g. 'phone charging at night, smartphone charging cable, charging icon phone screen')",
+      "shot": "fallback: an English prompt for ONE photorealistic still image for this line (used only if no stock video fits): concrete subject, close-up. No text in the image."
   }} ],
   "outro": "2-4 word payoff on screen at the end, {'Roman Hinglish' if hindi else 'English'}, ALL CAPS",
   "youtube": {{"title": "{'Hinglish' if hindi else 'English'} Shorts title, max 70 chars, curiosity, one emoji, ends with #shorts",
@@ -120,6 +121,112 @@ def make_image(prompt: str, path: Path, seed: int):
             last = str(e)[:200]
         time.sleep(5 * (attempt + 1))
     raise RuntimeError(f"image failed: {last}")
+
+
+# ---- 2b. real stock footage (Pixabay, free) ---------------------------------------------------------------
+
+def pixabay_key() -> str:
+    k = secret("PIXABAY_API_KEY")
+    if not k:  # the MoneyPrinterTurbo app next door keeps one in its config
+        try:
+            import tomllib
+            cfg = tomllib.load(open(ROOT.parent / "MoneyPrinterTurbo-main" / "config.toml", "rb"))
+            k = ((cfg.get("app") or {}).get("pixabay_api_keys") or cfg.get("pixabay_api_keys") or [""])[0]
+        except Exception:  # noqa: BLE001
+            k = ""
+    return k
+
+
+def stock_clip(search: str, need: float, used: set, out: Path) -> bool:
+    """Download a real, moving stock clip for this line (best tag match, long enough, not used yet)."""
+    key = pixabay_key()
+    if not key:
+        return False
+    stop = {"a", "an", "the", "of", "and", "in", "on", "at", "with", "to", "for"}
+    for phrase in [x.strip() for x in search.split(",") if x.strip()][:3]:
+        try:
+            hits = requests.get("https://pixabay.com/api/videos/", params={"key": key, "q": phrase[:90], "per_page": 30,
+                                "safesearch": "true"}, timeout=30).json().get("hits", [])
+        except Exception:  # noqa: BLE001
+            continue
+        words = {w for w in re.findall(r"[a-z]+", phrase.lower()) if w not in stop}
+        best, score = None, 0.0
+        for h in hits:
+            if h["id"] in used or h.get("duration", 0) < min(need, 6):
+                continue
+            tags = set(re.findall(r"[a-z]+", h.get("tags", "").lower()))
+            sc = len(words & tags) / max(1, len(words))
+            v = h["videos"].get("medium") or {}
+            if v.get("height", 0) > v.get("width", 1):
+                sc += 0.3  # already vertical
+            if sc > score:
+                best, score = h, sc
+        if best and score >= 0.34:
+            v = best["videos"].get("medium") if best["videos"].get("medium", {}).get("url") else best["videos"].get("small")
+            try:
+                data = requests.get(v["url"], timeout=120).content
+                if len(data) > 50_000:
+                    out.write_bytes(data)
+                    used.add(best["id"])
+                    return True
+            except Exception:  # noqa: BLE001
+                pass
+    return False
+
+
+def video_clip(src: Path, dur: float, out: Path, i: int):
+    """Cut `dur` seconds of real footage, fill the 9:16 frame (centre crop), gentle push-in."""
+    try:
+        total = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(src)],
+                                     capture_output=True, text=True).stdout.strip() or 0)
+    except ValueError:
+        total = 0
+    start = max(0.0, (total - dur) * 0.3) if total > dur + 0.5 else 0.0
+    frames = max(2, round(dur * FPS))
+    vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
+          f"scale='iw*(1+0.06*n/{frames})':-2:eval=frame,crop={W}:{H},eq=contrast=1.06:saturation=1.1,vignette=PI/6,fps={FPS},format=yuv420p")
+    run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{start:.2f}", "-stream_loop", "-1", "-i", str(src), "-t", f"{dur:.3f}",
+         "-vf", vf, "-an", "-frames:v", str(frames), "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-r", str(FPS), str(out)])
+
+
+def edge_voice(lines: list, lang: str):
+    """Microsoft Edge neural voice (natural Hindi 'Madhur'), free; None if it is unavailable."""
+    try:
+        import asyncio
+        import edge_tts
+    except ImportError:
+        return None
+    voice = "hi-IN-MadhurNeural" if lang == "hi" else "en-US-AndrewNeural"
+    vdir = WORK / "voice"
+    vdir.mkdir(parents=True, exist_ok=True)
+
+    async def one(text, mp3):
+        await edge_tts.Communicate(text, voice, rate="+6%").save(str(mp3))
+
+    out = []
+    try:
+        for i, l in enumerate(lines):
+            mp3, wav = vdir / f"l{i:02d}.mp3", vdir / f"l{i:02d}.wav"
+            for attempt in range(3):
+                try:
+                    asyncio.run(one(l["say"], mp3))
+                    break
+                except Exception:  # noqa: BLE001
+                    if attempt == 2:
+                        raise
+                    time.sleep(3)
+            # trim edge silence; 48 kHz mono like the other voices
+            run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(mp3), "-af",
+                 "silenceremove=start_periods=1:start_threshold=-45dB,areverse,silenceremove=start_periods=1:start_threshold=-45dB,areverse",
+                 "-ar", "48000", "-ac", "1", str(wav)])
+            d = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(wav)],
+                                     capture_output=True, text=True).stdout.strip())
+            out.append((wav, round(d, 3)))
+            print(f"  l{i:02d} {d:5.2f}s", flush=True)
+        return out
+    except Exception as e:  # noqa: BLE001
+        print(f"  edge voice unavailable ({str(e)[:120]}); using Kokoro")
+        return None
 
 
 # ---- 3. voice (Kokoro, the same engine as the other formats) -------------------------------------------
@@ -245,10 +352,10 @@ def render(script: dict, images: list, voices: list, out_mp4: Path):
     clips = []
     for i, (img, d) in enumerate(zip(images, durs)):
         c = WORK / f"shot{i:02d}.mp4"
-        shot_clip(img, d, c, i)
+        (video_clip if img.suffix == ".mp4" else shot_clip)(img, d, c, i)
         clips.append(c)
     oc = WORK / "shot_outro.mp4"
-    shot_clip(images[-1], outro_d, oc, 1)
+    (video_clip if images[-1].suffix == ".mp4" else shot_clip)(images[-1], outro_d, oc, 1)
     clips.append(oc)
     (WORK / "shots.txt").write_text("".join(f"file '{c.as_posix()}'\n" for c in clips), encoding="utf-8")
     base = WORK / "base.mp4"
@@ -334,17 +441,23 @@ def main():
     lines = script["lines"]
     print(f"  {len(lines)} lines | hook: {script.get('hook')}")
 
-    step(f"images for {len(lines)} shots (Cloudflare FLUX, free)")
-    seed = random.Random(topic).randint(1, 10**6)
-    images = []
-    for i, l in enumerate(lines):
-        p = WORK / f"img{i:02d}.jpg"
-        make_image(l["shot"], p, seed + i * 7)
-        images.append(p)
-        print(f"  shot {i + 1}/{len(lines)}", flush=True)
+    step("voice (Microsoft Edge neural)")
+    voices = edge_voice(lines, lang) or make_voice(lines, lang)
 
-    step("voice (Kokoro)")
-    voices = make_voice(lines, lang)
+    step(f"footage for {len(lines)} shots (real stock video, Pixabay)")
+    seed = random.Random(topic).randint(1, 10**6)
+    images, used, real = [], set(), 0
+    for i, l in enumerate(lines):
+        clip = WORK / f"clip{i:02d}.mp4"
+        if stock_clip(l.get("search") or l["shot"], voices[i][1] + 0.5, used, clip):
+            images.append(clip)
+            real += 1
+        else:  # nothing real fits: a photoreal still instead
+            p = WORK / f"img{i:02d}.jpg"
+            make_image(l["shot"], p, seed + i * 7)
+            images.append(p)
+        print(f"  shot {i + 1}/{len(lines)} ({'video' if images[-1].suffix == '.mp4' else 'image'})", flush=True)
+    print(f"  {real}/{len(lines)} shots are real footage")
 
     step("render")
     name = slug(script.get("title") or topic)
