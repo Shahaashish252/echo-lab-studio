@@ -1,0 +1,15 @@
+{
+  "id": "20261021-200704",
+  "topic": "Automatic street light turning on at dusk (LDR)",
+  "hook": "Street Light Ko Andhera Kaise Pata Chalta Hai? Aankh Nahi, Bas Ek Chhota Sa Part!",
+  "lang": "hi",
+  "started": "2026-10-21T20:07:04",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-10-21T20:07:05"
+    }
+  ],
+  "format": "story"
+}
