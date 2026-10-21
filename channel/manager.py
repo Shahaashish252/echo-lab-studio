@@ -254,7 +254,13 @@ def make_video(topic: dict | None = None) -> dict | None:
     job = {"id": datetime.now().strftime("%Y%m%d-%H%M%S"), "topic": topic["topic"], "hook": topic.get("hook", ""), "lang": lang,
            "started": datetime.now().isoformat(timespec="seconds"), "status": "running", "stages": []}
     save_job(job)
-    if schedule().get("format", "cinematic") == "cinematic":
+    fmt = schedule().get("format", "story")
+    if fmt == "story":
+        # animated story like the PIR short (owner's choice 2026-10-21): hand-made animation library, Claude writes
+        # only a JSON plan (app/src/scenes/auto/story-lib.js + auto.ts --story)
+        job["format"] = "story"
+        code = run_tracked(["bun", "scripts/auto.ts", prompt, "--upload", "--story", "--lang", lang], job)
+    elif fmt == "cinematic":
         # the viral-reference style: photoreal shots + word captions (channel/cinematic.py), far less Claude than "sim"
         job["format"] = "cinematic"
         code = run_tracked([sys.executable, "-u", str(HERE / "cinematic.py"), prompt, "--upload", "--lang", lang], job)

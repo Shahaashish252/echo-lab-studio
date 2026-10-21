@@ -26,7 +26,7 @@ const opt = (name: string, def?: string) => {
   const i = argv.indexOf(`--${name}`);
   return i >= 0 ? argv[i + 1] : def;
 };
-const SWITCHES = ['--stock', '--upload', '--classic', '--flat', '--3d', '--photo', '--ai'];
+const SWITCHES = ['--stock', '--upload', '--classic', '--flat', '--3d', '--photo', '--ai', '--story'];
 const flagged = new Set(argv.flatMap((a, i) => (SWITCHES.includes(a) ? [i] : a.startsWith('--') ? [i, i + 1] : [])));
 const STOCK = argv.includes('--stock');
 const UPLOAD = argv.includes('--upload');
@@ -41,6 +41,9 @@ const PHOTO_FMT = argv.includes('--photo');
 /** AI-generated clips (Hugging Face free GPUs) behind the classic layouts */
 const AI = argv.includes('--ai');
 const SIM = !CLASSIC && !FLAT && !MODEL3D && !PHOTO_FMT && !AI;
+/** --story: the animated-story style of the best performer (PIR short). Reuses the sim scene, but its drawing is
+ *  the hand-made library src/scenes/auto/story-lib.js; Claude only writes a JSON plan (no code, no review rounds). */
+const STORY_MODE = argv.includes('--story');
 /** render -> review -> rewrite rounds; each rewrite re-sends the whole module, so this is the main cost knob */
 const MAX_ROUNDS = Number(process.env.ECHO_ROUNDS || 2);
 /** Claude model for the video work. Sonnet costs far less of the subscription limit than the default (Opus) and is
@@ -670,6 +673,48 @@ comparison. The last line is a punchy one-line payoff plus a comment question. E
 moves or changes on screen during that line (values, needles, signals, freeze/slow-mo/play), consistent with the
 numbers in the narration.`;
 
+/** Story format: narration + a per-line plan for the hand-made animation library (story-lib.js). */
+const PROMPT_STORY = `Write a viral vertical explainer Short (40-60 seconds) about:
+"${topic}"
+
+The style is an animated STORY, like our best video ("Motion sensor aapko DEKHTA nahi!"): a relatable everyday moment,
+a myth-bust hook, then we go inside the gadget step by step with simple animated scenes and big kinetic words, a
+practical tip, and a closing question. For each narration line you pick ONE ready-made animated scene and fill it in.
+
+Reply with ONLY a JSON object, no markdown fences, no commentary:
+{
+  "title": "short video title, max 28 characters",
+  "kicker": "series label, max 22 characters, e.g. INSIDE ELECTRONICS",
+${SOCIAL_FIELDS}
+  "scenes": [
+    { "type": "sim", "headline": "the hook, 3-7 words, *one key word*",
+      "lines": [ 12-18 objects {"text": "the narration line (subtitle), max 10 words, wrap 1 key word in *stars*", "say": "optional: how to pronounce"} ] },
+    { "type": "outro", "headline": "2-4 word payoff", "lines": [ {"text": "a question that invites comments"} ] }
+  ],
+  "beats": [ one object per sim line, same order: {"line": 0-based index, "scene": "<type>", ...fields} ]
+}
+
+Scene types and their fields (use ONLY these; icons only from the list):
+- title    {"text"}                                      big kinetic words, *key* word glows
+- person   {"action": "walk|stand|sleep|phone|point", "prop": icon, "light": "on|off|switch", "text"}
+- object   {"icon", "state": "on|off|open|<0-100 level>", "label": "2-4 words", "glow": true|false, "text"}
+- zoom     {"icon", "inside": "chip|battery|coil|lens|wire|sensor", "label", "text"}   dive inside the object
+- flow     {"nodes": [2-4 icons], "labels": [short label per node], "text"}            energy/signal flowing along
+- waves    {"from": icon, "to": icon, "kind": "sound|ir|radio|light|heat", "echo": true|false, "text"}
+- compare  {"left": {"icon", "label": "the myth, max 5 words"}, "right": {"icon", "label": "the truth, max 5 words"}, "text"}
+- meter    {"label", "from": number, "to": number, "unit": "%|°C|V|...", "danger": true|false, "text"}
+- tip      {"icon", "points": [1-3 short tips, max 6 words each], "text"}
+- question {"text"}                                      use for the last sim line
+Icons: phone charger battery chip sensor bulb remote tv laptop router speaker fan door thermometer sun moon eye ear
+wifi car camera lock hand plug bolt house
+
+"text" on every beat = the BIG words on screen (2-5 words), in ${HINDI ? 'Roman Hinglish (e.g. "Bijli ka *KHEL*")' : 'English'},
+a punchy summary of that line, not a copy of the subtitle. Vary the scenes (no type more than 3 times in a row).
+
+Story rules: line 1 is a myth-bust hook about something used daily (a person scene or a title). Then zoom/flow/waves to
+show the mechanism step by step, one idea per line. Near the end a compare (myth vs truth) or a tip with practical
+advice, and the last line a question (question scene). At most 3 numbers in the whole script. Every claim accurate.`;
+
 const SIM_FILE = join(SCENES, 'sim.gen.js');
 /** each sim line's planned on-screen event */
 const SIM_EVENTS = new Map<string, string>();
@@ -788,7 +833,7 @@ background clip: one concrete, filmable, photorealistic shot (subject, action, c
 "Cinematic macro close-up of a finger touching a glowing smartphone screen, slow push in, shallow depth of field,
 dark studio". Real-world scenes only: no text, logos, diagrams, UI with readable words, or detailed circuit internals.`;
 
-const PROMPT = AI ? PROMPT_AI : CLASSIC ? CLASSIC_PROMPT : FLAT ? FLAT_PROMPT : MODEL3D ? PROMPT_3D : PHOTO_FMT ? PROMPT_PHOTO : PROMPT_SIM;
+const PROMPT = AI ? PROMPT_AI : CLASSIC ? CLASSIC_PROMPT : FLAT ? FLAT_PROMPT : MODEL3D ? PROMPT_3D : PHOTO_FMT ? PROMPT_PHOTO : STORY_MODE ? PROMPT_STORY : PROMPT_SIM;
 
 function claude(prompt: string): string {
   const cli = Bun.which('claude');
@@ -1017,9 +1062,15 @@ const MIN: Partial<Record<SceneType, number>> = { hook: 2.5, title: 2.5, stat: 3
 const t0 = performance.now();
 step(`storyboard: "${topic}" (Claude Code)`);
 let story: ReturnType<typeof normalize> | undefined;
+let STORY_PLAN: { beats: unknown[] } = { beats: [] };
 for (let attempt = 1; attempt <= 2 && !story; attempt++) {
   try {
-    story = normalize(parse(claude(PROMPT + (HINDI ? HINDI_NOTE : ''))));
+    const raw = parse(claude(PROMPT + (HINDI ? HINDI_NOTE : '')));
+    story = normalize(raw);
+    if (STORY_MODE) {
+      STORY_PLAN = { beats: Array.isArray((raw as Raw).beats) ? ((raw as Raw).beats as unknown[]) : [] };
+      if (!STORY_PLAN.beats.length) throw new Error('the story plan has no beats');
+    }
   } catch (e) {
     console.warn(`  attempt ${attempt}: ${e instanceof Error ? e.message : e}`);
   }
@@ -1068,22 +1119,28 @@ if (simScene) {
     s.length = Math.max(MIN[s.type] ?? 2.5, TIMING.lead + s.lines.reduce((n, id) => n + story!.lines[id].text.split(/\s+/).length * 0.34 + TIMING.gap, 0) + TIMING.tail);
   writeFileSync(join(SCENES, 'voice.json'), JSON.stringify({ engine: 'kokoro', lines: story.lines }, null, 2));
   writeFileSync(join(SCENES, 'storyboard.json'), JSON.stringify({ topic, title: story.title, kicker: story.kicker, timing: TIMING, scenes: story.scenes }, null, 2));
-  if (!(await buildSim(simScene, story.stage || topic))) throw new Error('could not build a working simulation');
+  if (STORY_MODE) {
+    // the hand-made animation library draws it; just check that it renders without errors
+    writeFileSync(SIM_FILE, `import { makeDraw } from './story-lib.js';\nexport default makeDraw(${JSON.stringify(STORY_PLAN)});\n`);
+    const { errors } = checkSim(simScene);
+    if (errors) throw new Error(`story render check failed: ${errors.slice(0, 300)}`);
+    console.log(`  story plan: ${STORY_PLAN.beats.length} animated beats`);
+  } else if (!(await buildSim(simScene, story.stage || topic))) throw new Error('could not build a working simulation');
 }
 
-step('voice (Kokoro)');
+step(HINDI ? 'voice (Microsoft Edge: Madhur)' : 'voice (Kokoro)');
 mkdirSync(SCENES, { recursive: true });
 rmSync(VOICE, { recursive: true, force: true });
 rmSync(join(SCENES, 'voice.gen.json'), { force: true });
 const voiceCfg = {
   engine: 'kokoro',
   kokoro: HINDI
-    ? { voice: opt('voice', 'hm_omega'), speed: Number(opt('speed', '1.1')), lang: 'hi' }
+    ? { voice: opt('voice', 'hm_omega'), speed: Number(opt('speed', '1.1')), lang: 'hi', edge: opt('edge', 'hi-IN-MadhurNeural') }
     : { voice: opt('voice', SIM ? 'am_michael' : 'af_heart'), speed: Number(opt('speed', CLASSIC ? '1.08' : '1.12')), lang: 'en-us' },
   lines: story.lines,
 };
 writeFileSync(join(SCENES, 'voice.json'), JSON.stringify(voiceCfg, null, 2) + '\n');
-run('python', ['-m', 'uv', 'run', '--python', '3.12', '--with', 'kokoro-onnx', '--with', 'soundfile', 'python', 'analysis/tts.py', 'auto'], ROOT);
+run('python', ['-m', 'uv', 'run', '--python', '3.12', '--with', 'kokoro-onnx', '--with', 'soundfile', '--with', 'edge-tts', 'python', 'analysis/tts.py', 'auto'], ROOT);
 const durs: Record<string, number> = JSON.parse(readFileSync(join(SCENES, 'voice.gen.json'), 'utf8')).kokoro;
 
 // scene lengths: the same layout as beats() in script.ts

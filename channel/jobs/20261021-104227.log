@@ -1,0 +1,120 @@
+
+== storyboard: "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip) (open with this hook: "Raat bhar charging se battery kharab? Sach suno!")" (Claude Code)
+  s1 sim     Raat bhar charging: *KHARAB*?
+  s2 outro   Ab sach *JAANO*!
+
+== simulation (Claude Code writes it, renders it, reviews it)
+  story plan: 14 animated beats
+
+== voice (Microsoft Edge: Madhur)
+Installed 27 packages in 529ms
+  edge voice failed ([WinError 32] The process cannot access the file because it is being used by another process: 'C:\\U); falling back to Kokoro
+s1-1        3.25s  रात भर चार्जिंग से बैटरी खराब? सच सुनो!
+  edge voice failed ([WinError 32] The process cannot access the file because it is being used by another process: 'C:\\U); falling back to Kokoro
+s1-2        3.80s  लोग सोचते हैं, फुल होने पर भी बिजली घुसती रहती है।
+  edge voice failed ([WinError 32] The process cannot access the file because it is being used by another process: 'C:\\U); falling back to Kokoro
+s1-3        3.05s  फोन सुबह तक सौ परसेंट पर पहुँच जाता है।
+  edge voice failed ([WinError 32] The process cannot access the file because it is being used by another process: 'C:\\U); falling back to Kokoro
+s1-4        2.53s  लेकिन अंदर एक छोटी चिप बैठी है।
+  edge voice failed ([WinError 32] The process cannot access the file because it is being used by another process: 'C:\\U); falling back to Kokoro
+s1-5        3.47s  यह चार्जर की बिजली को बैटरी तक पहुँचाती है।
+  edge voice failed ([WinError 32] The process cannot access the file because it is being used by another process: 'C:\\U); falling back to Kokoro
+s1-6        2.87s  और बैटरी भरते ही बिजली रोक देती है।
+  edge voice failed ([WinError 32] The process cannot access the file because it is being used by another process: 'C:\\U); falling back to Kokoro
+s1-7        3.20s  यानी ओवरचार्ज वाली बात ज़्यादातर मिथ है।
+  edge voice failed ([WinError 32] The process cannot access the file because it is being used by another process: 'C:\\U); falling back to Kokoro
+s1-8        3.62s  बैटरी के अंदर लिथियम आयन आते-जाते रहते हैं।
+  edge voice failed ([WinError 32] The process cannot access the file because it is being used by another process: 'C:\\U); falling back to Kokoro
+s1-9        4.01s  सौ परसेंट पर रहना बैटरी पर थोड़ा तनाव डालता है।
+  edge voice failed ([WinError 32] The process cannot access the file because it is being used by another process: 'C:\\U); falling back to Kokoro
+s1-10       2.13s  लेकिन असली दुश्मन है गर्मी।
+  edge voice failed ([WinError 32] The process cannot access the file because it is being used by another process: 'C:\\U); falling back to Kokoro
+s1-11       3.30s  फोन को तकिए के नीचे दबाकर चार्ज मत करो।
+  edge voice failed ([WinError 32] The process cannot access the file because it is being used by another process: 'C:\\U); falling back to Kokoro
+s1-12       4.32s  फोन में ऑप्टिमाइज़्ड चार्जिंग या अस्सी परसेंट लिमिट ऑन करो।
+  edge voice failed ([WinError 32] The process cannot access the file because it is being used by another process: 'C:\\U); falling back to Kokoro
+s1-13       2.84s  अच्छा चार्जर लो और फोन को ठंडा रखो।
+  edge voice failed ([WinError 32] The process cannot access the file because it is being used by another process: 'C:\\U); falling back to Kokoro
+s1-14       3.09s  आप रात को फोन कहाँ रखकर चार्ज करते हो?
+  edge voice failed ([WinError 32] The process cannot access the file because it is being used by another process: 'C:\\U); falling back to Kokoro
+s2-1        4.22s  आप रात को फोन कहाँ रखकर चार्ज करते हो? कमेंट में बताओ!
+wrote 15 clips to D:\MoneyPrinterTurbo-main\motion grafix\app\public\voice\auto\kokoro
+
+== backgrounds (motion graphics): circuit, network
+  2 scenes, 54.2s
+
+== sound
+auto: 21 cues over 54.166666666666664s
+voice: kokoro
+mixed (peak -3.3 dBFS)
+wrote D:\MoneyPrinterTurbo-main\motion grafix\app\public\audio\auto.wav (-14 LUFS)
+
+== render
+rendering 1625 frames (0-54.166666666666664s) at 1080x1920, 1 sample(s)/frame
+
+  frame 30/1625  6.8 fps  eta 233s   
+  frame 60/1625  7.0 fps  eta 225s   
+  frame 90/1625  6.8 fps  eta 224s   
+  frame 120/1625  6.7 fps  eta 226s   
+  frame 150/1625  6.6 fps  eta 224s   
+  frame 180/1625  6.5 fps  eta 221s   
+  frame 210/1625  6.5 fps  eta 219s   
+  frame 240/1625  6.4 fps  eta 216s   
+  frame 270/1625  6.4 fps  eta 212s   
+  frame 300/1625  6.3 fps  eta 209s   
+  frame 330/1625  6.3 fps  eta 205s   
+  frame 360/1625  6.3 fps  eta 201s   
+  frame 390/1625  6.3 fps  eta 197s   
+  frame 420/1625  6.3 fps  eta 192s   
+  frame 450/1625  6.3 fps  eta 186s   
+  frame 480/1625  6.3 fps  eta 181s   
+  frame 510/1625  6.4 fps  eta 176s   
+  frame 540/1625  6.4 fps  eta 171s   
+  frame 570/1625  6.4 fps  eta 165s   
+  frame 600/1625  6.4 fps  eta 160s   
+  frame 630/1625  6.4 fps  eta 155s   
+  frame 660/1625  6.4 fps  eta 150s   
+  frame 690/1625  6.4 fps  eta 145s   
+  frame 720/1625  6.4 fps  eta 141s   
+  frame 750/1625  6.4 fps  eta 137s   
+  frame 780/1625  6.4 fps  eta 133s   
+  frame 810/1625  6.4 fps  eta 128s   
+  frame 840/1625  6.3 fps  eta 124s   
+  frame 870/1625  6.3 fps  eta 119s   
+  frame 900/1625  6.3 fps  eta 115s   
+  frame 930/1625  6.3 fps  eta 110s   
+  frame 960/1625  6.3 fps  eta 105s   
+  frame 990/1625  6.3 fps  eta 100s   
+  frame 1020/1625  6.3 fps  eta 96s   
+  frame 1050/1625  6.3 fps  eta 91s   
+  frame 1080/1625  6.3 fps  eta 86s   
+  frame 1110/1625  6.3 fps  eta 82s   
+  frame 1140/1625  6.3 fps  eta 77s   
+  frame 1170/1625  6.3 fps  eta 72s   
+  frame 1200/1625  6.3 fps  eta 67s   
+  frame 1230/1625  6.3 fps  eta 63s   
+  frame 1260/1625  6.3 fps  eta 58s   
+  frame 1290/1625  6.3 fps  eta 53s   
+  frame 1320/1625  6.3 fps  eta 48s   
+  frame 1350/1625  6.3 fps  eta 44s   
+  frame 1380/1625  6.3 fps  eta 39s   
+  frame 1410/1625  6.3 fps  eta 34s   
+  frame 1440/1625  6.3 fps  eta 29s   
+  frame 1470/1625  6.3 fps  eta 25s   
+  frame 1500/1625  6.3 fps  eta 20s   
+  frame 1530/1625  6.3 fps  eta 15s   
+  frame 1560/1625  6.3 fps  eta 10s   
+  frame 1590/1625  6.3 fps  eta 6s   
+  frame 1620/1625  6.3 fps  eta 1s   
+  frame 1625/1625  6.3 fps  eta 0s   
+wrote D:\MoneyPrinterTurbo-main\motion grafix\out\auto\raat-bhar-charging-myth.mp4 (with sound)
+
+== youtube
+  Raat Bhar Charging Se Battery Kharab Hoti Hai? 🤔 #shorts
+  metadata: channel\videos\auto-raat-bhar-charging-myth.json
+
+  uploading  54.4%
+uploaded https://youtu.be/_6U2NjTb7ag  (private)
+added to playlist Inside Electronics: Shorts
+
+DONE in 6.7 min -> D:\MoneyPrinterTurbo-main\motion grafix\out\auto\raat-bhar-charging-myth.mp4

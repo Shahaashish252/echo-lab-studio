@@ -175,7 +175,7 @@
     "id": "igtTFDCOW_I",
     "meta": "channel/videos/cine-overnight-charging-myth-truth.json",
     "date": "2026-10-21",
-    "status": "held",
+    "status": "rejected",
     "topic": "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip)",
     "job": "20261021-091015",
     "heldPostAt": "2026-10-21T19:30"
@@ -184,9 +184,27 @@
     "id": "KILTXWqlWAM",
     "meta": "channel/videos/cine-overnight-charging-myth-vs-truth.json",
     "date": "2026-10-21",
-    "status": "held",
+    "status": "rejected",
     "topic": "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip)",
     "job": "20261021-101839",
     "heldPostAt": "2026-10-21T19:30"
+  },
+  {
+    "id": "_6U2NjTb7ag",
+    "meta": "channel\\videos\\auto-raat-bhar-charging-myth.json",
+    "date": "2026-10-21",
+    "status": "rejected",
+    "topic": "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip)",
+    "job": "20261021-104227",
+    "heldPostAt": "2026-10-21T19:30"
+  },
+  {
+    "id": "0qCkfpOPEfo",
+    "meta": "channel\\videos\\auto-raat-bhar-charging-myth.json",
+    "date": "2026-10-21",
+    "status": "held",
+    "heldPostAt": "2026-10-21T19:30",
+    "topic": "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip)",
+    "job": "20261021-105015"
   }
 ]

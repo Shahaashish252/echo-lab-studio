@@ -1,0 +1,108 @@
+
+== storyboard: "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip) (open with this hook: "Raat bhar charging se battery kharab? Sach suno!")" (Claude Code)
+  s1 sim     Raat bhar charging? *SACH* suno!
+  s2 outro   Aap kya karte ho?
+
+== simulation (Claude Code writes it, renders it, reviews it)
+  story plan: 15 animated beats
+
+== voice (Microsoft Edge: Madhur)
+s1-1        3.73s  रात भर चार्जिंग से बैटरी खराब? सच सुनो!
+s1-2        3.23s  रोज़ सोने से पहले, फ़ोन चार्जर पर लगाते हो ना?
+s1-3        3.73s  सब कहते हैं, बैटरी ओवरचार्ज होकर खराब हो जाएगी!
+s1-4        3.11s  लेकिन फ़ोन के अंदर, एक छोटी चिप बैठी है।
+s1-5        3.06s  वो चार्जर से आती बिजली को कंट्रोल करती है।
+s1-6        3.10s  बैटरी सौ प्रतिशत होते ही, चिप रोक देती है।
+s1-7        3.60s  फिर ज़रूरत पड़ने पर, थोड़ी-थोड़ी टॉप-अप चार्जिंग होती है।
+s1-8        2.75s  तो ओवरचार्ज वाली बात, ज़्यादातर मिथ है।
+s1-9        1.69s  असली दुश्मन तो गर्मी है!
+s1-10       3.06s  चार्जिंग में फ़ोन गरम होता है, बैटरी थकती है।
+s1-11       3.79s  ऊपर से, हमेशा फुल रहना भी, बैटरी पर तनाव डालता है।
+s1-12       3.42s  तकिए के नीचे या मोटे कवर में, गर्मी फँस जाती है।
+s1-13       4.29s  टिप: ऑप्टिमाइज़्ड चार्जिंग ऑन करो, या अस्सी प्रतिशत लिमिट लगाओ।
+s1-14       3.00s  और चार्जिंग के वक्त फ़ोन को, खुली जगह रखो।
+s1-15       2.76s  आप फ़ोन रात भर चार्ज करते हो, या नहीं?
+s2-1        4.56s  आप फ़ोन रात भर चार्ज करते हो या नहीं? कमेंट में बताओ!
+wrote 16 clips to D:\MoneyPrinterTurbo-main\motion grafix\app\public\voice\auto\kokoro
+
+== backgrounds (motion graphics): circuit, network
+  2 scenes, 57.5s
+
+== sound
+auto: 22 cues over 57.53333333333333s
+voice: kokoro
+mixed (peak -4.2 dBFS)
+wrote D:\MoneyPrinterTurbo-main\motion grafix\app\public\audio\auto.wav (-14 LUFS)
+
+== render
+rendering 1726 frames (0-57.53333333333333s) at 1080x1920, 1 sample(s)/frame
+
+  frame 30/1726  6.9 fps  eta 247s   
+  frame 60/1726  7.0 fps  eta 238s   
+  frame 90/1726  7.0 fps  eta 235s   
+  frame 120/1726  7.0 fps  eta 230s   
+  frame 150/1726  6.9 fps  eta 227s   
+  frame 180/1726  6.9 fps  eta 225s   
+  frame 210/1726  6.7 fps  eta 227s   
+  frame 240/1726  6.6 fps  eta 227s   
+  frame 270/1726  6.5 fps  eta 225s   
+  frame 300/1726  6.4 fps  eta 222s   
+  frame 330/1726  6.3 fps  eta 220s   
+  frame 360/1726  6.3 fps  eta 217s   
+  frame 390/1726  6.3 fps  eta 213s   
+  frame 420/1726  6.3 fps  eta 208s   
+  frame 450/1726  6.3 fps  eta 203s   
+  frame 480/1726  6.3 fps  eta 198s   
+  frame 510/1726  6.3 fps  eta 193s   
+  frame 540/1726  6.3 fps  eta 188s   
+  frame 570/1726  6.3 fps  eta 183s   
+  frame 600/1726  6.3 fps  eta 178s   
+  frame 630/1726  6.3 fps  eta 173s   
+  frame 660/1726  6.3 fps  eta 168s   
+  frame 690/1726  6.3 fps  eta 164s   
+  frame 720/1726  6.3 fps  eta 160s   
+  frame 750/1726  6.2 fps  eta 156s   
+  frame 780/1726  6.2 fps  eta 152s   
+  frame 810/1726  6.2 fps  eta 148s   
+  frame 840/1726  6.2 fps  eta 143s   
+  frame 870/1726  6.2 fps  eta 139s   
+  frame 900/1726  6.2 fps  eta 134s   
+  frame 930/1726  6.2 fps  eta 129s   
+  frame 960/1726  6.1 fps  eta 125s   
+  frame 990/1726  6.1 fps  eta 120s   
+  frame 1020/1726  6.1 fps  eta 115s   
+  frame 1050/1726  6.1 fps  eta 110s   
+  frame 1080/1726  6.1 fps  eta 106s   
+  frame 1110/1726  6.1 fps  eta 101s   
+  frame 1140/1726  6.1 fps  eta 96s   
+  frame 1170/1726  6.1 fps  eta 92s   
+  frame 1200/1726  6.1 fps  eta 87s   
+  frame 1230/1726  6.1 fps  eta 82s   
+  frame 1260/1726  6.1 fps  eta 77s   
+  frame 1290/1726  6.0 fps  eta 72s   
+  frame 1320/1726  6.0 fps  eta 67s   
+  frame 1350/1726  6.0 fps  eta 62s   
+  frame 1380/1726  6.0 fps  eta 57s   
+  frame 1410/1726  6.0 fps  eta 52s   
+  frame 1440/1726  6.0 fps  eta 47s   
+  frame 1470/1726  6.0 fps  eta 42s   
+  frame 1500/1726  6.0 fps  eta 37s   
+  frame 1530/1726  6.0 fps  eta 32s   
+  frame 1560/1726  6.0 fps  eta 28s   
+  frame 1590/1726  6.0 fps  eta 23s   
+  frame 1620/1726  6.0 fps  eta 18s   
+  frame 1650/1726  6.0 fps  eta 13s   
+  frame 1680/1726  6.0 fps  eta 8s   
+  frame 1710/1726  6.0 fps  eta 3s   
+  frame 1726/1726  6.0 fps  eta 0s   
+wrote D:\MoneyPrinterTurbo-main\motion grafix\out\auto\raat-bhar-charging-myth.mp4 (with sound)
+
+== youtube
+  Raat Bhar Charging Se Battery Kharab Hoti Hai? 🤔 #shorts
+  metadata: channel\videos\auto-raat-bhar-charging-myth.json
+
+  uploading  52.3%
+uploaded https://youtu.be/TLPrBRW7VCI  (private)
+added to playlist Inside Electronics: Shorts
+
+DONE in 6.6 min -> D:\MoneyPrinterTurbo-main\motion grafix\out\auto\raat-bhar-charging-myth.mp4
