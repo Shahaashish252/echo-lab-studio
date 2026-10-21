@@ -9,6 +9,10 @@
     {
       "name": "script: \"Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip) (open with this hook: \"Raat bhar charging se battery kharab? Sach suno!\")\" (Claude Sonnet)",
       "at": "2026-10-21T09:10:15"
+    },
+    {
+      "name": "images for 18 shots (Cloudflare FLUX, free)",
+      "at": "2026-10-21T09:12:27"
     }
   ],
   "format": "cinematic"
