@@ -484,7 +484,7 @@ def claude_usage():
             print(f"claude usage: {r.status_code}")
             return None
         d = r.json()
-        out = {"updated": datetime.now().isoformat(timespec="minutes")}
+        out = {"updated": datetime.now(timezone.utc).isoformat(timespec="minutes")}
         for k in ("five_hour", "seven_day"):
             if d.get(k):
                 out[k] = {"pct": d[k].get("utilization"), "resets": d[k].get("resets_at")}

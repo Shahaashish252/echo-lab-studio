@@ -217,10 +217,11 @@ function stepper(job, video) {
 function claudeCard() {
   const c = S.claude || {};
   if (!c.updated) return `<div class="kpi"><div class="l">Claude usage</div><div class="v" style="font-size:18px;color:var(--faint)">not read yet</div></div>`;
-  const resets = (iso) => { if (!iso) return ''; const ms = new Date(iso) - Date.now(); if (ms <= 0) return 'resetting'; const h = Math.floor(ms / 3600000), m = Math.round((ms % 3600000) / 60000); return h >= 24 ? `resets ${new Date(iso).toLocaleString([], {weekday:'short', hour:'2-digit', minute:'2-digit'})}` : `resets in ${h ? h + ' h ' : ''}${m} min`; };
+  const resets = (iso) => { if (!iso) return ''; const ms = new Date(iso) - Date.now(); if (ms <= 0) return 'just reset'; const h = Math.floor(ms / 3600000), m = Math.round((ms % 3600000) / 60000); return h >= 24 ? `resets ${new Date(iso).toLocaleString([], {weekday:'short', hour:'2-digit', minute:'2-digit'})}` : `resets in ${h ? h + ' h ' : ''}${m} min`; };
   const row = (label, x) => {
     if (!x) return '';
-    const p = Math.round(x.pct ?? 0), col = p >= 90 ? 'var(--bad)' : p >= 70 ? 'var(--accent2)' : 'var(--good)';
+    // a window that has reset since the reading starts again from 0
+    const p = x.resets && new Date(x.resets) <= Date.now() ? 0 : Math.round(x.pct ?? 0), col = p >= 90 ? 'var(--bad)' : p >= 70 ? 'var(--accent2)' : 'var(--good)';
     return `<div style="margin-top:6px"><div class="row" style="justify-content:space-between;font-size:12px"><span class="muted">${label}</span><b style="color:${col}">${p}%</b></div>
       <div class="bar" style="margin-top:3px"><i style="width:${p}%;background:${col}"></i></div><div class="d">${resets(x.resets)}</div></div>`;
   };
@@ -247,7 +248,8 @@ function renderLive() {
   $('#liveTag').textContent = job ? 'making' : S.running.alive ? S.running.action : 'idle';
   $('#liveTag').className = 'tag ' + (job || S.running.alive ? 'running' : '');
   if (!job) {
-    const last = S.jobs.find((j) => j.status !== 'failed');
+    const rejected = new Set(S.videos.filter((v) => v.status === 'rejected').flatMap((v) => [v.job, v.id]));
+    const last = S.jobs.find((j) => j.status !== 'failed' && !rejected.has(j.id) && !rejected.has(j.uploadId));
     $('#live').innerHTML = S.makingNow ? `<div class="empty">A video is being made by a run that started before this dashboard existed, so its steps can't be shown live. Every new video from now on shows here step by step.</div>` : `<div class="empty">Nothing is being made right now.${last ? ` Last: “${esc(last.topic)}” — <span class="tag ${last.status}">${esc(last.status)}</span> ${ago(last.finished || last.started)}` : ''}</div>`
       + (last ? `<details><summary>Show last video's making log</summary><pre class="log" data-job="${esc(last.id)}"></pre></details>` : '');
   } else {
@@ -318,8 +320,9 @@ function renderSchedule() {
 
 function renderJourneys() {
   const byJob = Object.fromEntries(S.videos.filter((v) => v.job).map((v) => [v.job, v]));
-  // failed tries are retried automatically, so they are left out of the list
-  const items = S.jobs.filter((j) => j.status !== 'failed').map((j) => ({ job: j, video: byJob[j.id] || S.videos.find((v) => v.id === j.uploadId) }));
+  // failed tries are retried automatically and rejected videos are thrown away, so both are left out of the list
+  const items = S.jobs.filter((j) => j.status !== 'failed').map((j) => ({ job: j, video: byJob[j.id] || S.videos.find((v) => v.id === j.uploadId) }))
+    .filter((x) => x.video?.status !== 'rejected');
   const jobless = S.videos.filter((v) => !v.job && !S.jobs.some((j) => j.uploadId === v.id) && v.status !== 'rejected').map((v) => ({ job: null, video: v }));
   const all = [...items, ...jobless].slice(0, 20);
   if (!all.length) { $('#journeys').innerHTML = '<div class="empty">No videos yet.</div>'; return; }
