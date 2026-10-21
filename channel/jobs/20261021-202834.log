@@ -30,3 +30,7 @@
   | - [TI AFE4410 datasheet](https://ti.com/document-viewer/afe4410/datasheet)
 
 == storyboard: "Smartwatch heart rate sensor with green light (open with this hook: "Smartwatch Aapki Dhadkan Roshni Se Kaise Gin Leti Hai?")" (Claude Code)
+  s1 sim     Dhadkan Roshni se *GINTI*?
+  s2 outro   Roshni = *Dhadkan*
+
+== simulation (Claude Code writes it, renders it, reviews it)
