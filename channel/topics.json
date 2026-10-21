@@ -1,10 +1,6 @@
 {
   "queue": [
     {
-      "topic": "Ultrasonic sensor (HC-SR04) and how bats see",
-      "hook": "Ye sensor awaaz se dekhta hai, aankhon se nahi!"
-    },
-    {
       "topic": "How an IR obstacle sensor detects objects",
       "hook": "Is sensor ko andhere mein bhi sab dikhta hai!"
     },
@@ -119,6 +115,7 @@
     "Touchscreen (capacitive)",
     "Automatic door sensor",
     "IR remote and receiver",
-    "LDR street light sensor"
+    "LDR street light sensor",
+    "Ultrasonic sensor (HC-SR04) and how bats see"
   ]
 }
