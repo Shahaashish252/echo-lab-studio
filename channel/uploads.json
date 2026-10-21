@@ -175,9 +175,9 @@
     "id": "igtTFDCOW_I",
     "meta": "channel/videos/cine-overnight-charging-myth-truth.json",
     "date": "2026-10-21",
-    "status": "approved",
-    "postAt": "2026-10-21T19:30",
+    "status": "held",
     "topic": "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip)",
-    "job": "20261021-091015"
+    "job": "20261021-091015",
+    "heldPostAt": "2026-10-21T19:30"
   }
 ]
