@@ -29,3 +29,7 @@
   | Sources: [LM393 LDR module listing](https://kunkune.co.uk/shop/arduino-sensors/lm393-optical-sensitive-resistance-light-detection-photosensitive-sensor-4-pin-3-pin/), [AAC forum thread on flickering](https://forum.allaboutcircuits.com/threads/dark-sensor-circuit-using-lm393-question-unstable-off-on-flickering.209162/post-2015703), [Global Sources photocontrol listing](https://www.globalsources.com/LED-lighting/LED-power-controllers-1234783165p.htm)
 
 == storyboard: "Automatic street light turning on at dusk (LDR) (open with this hook: "Street Light Ko Andhera Kaise Pata Chalta Hai? Aankh Nahi, Bas Ek Chhota Sa Part!")" (Claude Code)
+  s1 sim     Andhera kaise *PATA* chalta hai?
+  s2 outro   Andhera = *SIGNAL*
+
+== simulation (Claude Code writes it, renders it, reviews it)
