@@ -13,6 +13,14 @@
     {
       "name": "images for 18 shots (Cloudflare FLUX, free)",
       "at": "2026-10-21T09:12:27"
+    },
+    {
+      "name": "voice (Kokoro)",
+      "at": "2026-10-21T09:13:56"
+    },
+    {
+      "name": "render",
+      "at": "2026-10-21T09:14:22"
     }
   ],
   "format": "cinematic"
