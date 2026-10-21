@@ -41,6 +41,11 @@ const PHOTO_FMT = argv.includes('--photo');
 /** AI-generated clips (Hugging Face free GPUs) behind the classic layouts */
 const AI = argv.includes('--ai');
 const SIM = !CLASSIC && !FLAT && !MODEL3D && !PHOTO_FMT && !AI;
+/** render -> review -> rewrite rounds; each rewrite re-sends the whole module, so this is the main cost knob */
+const MAX_ROUNDS = Number(process.env.ECHO_ROUNDS || 2);
+/** Claude model for the video work. Sonnet costs far less of the subscription limit than the default (Opus) and is
+ *  strong at code + visual review; set ECHO_MODEL=opus to go back. */
+const MODEL = process.env.ECHO_MODEL || 'sonnet';
 /** --lang hi: Hindi narration (Kokoro hm_omega) with Hinglish titles and captions; the default is English */
 const HINDI = opt('lang', 'en') === 'hi';
 const HINDI_NOTE = `
@@ -258,7 +263,7 @@ async function claudeAsync(prompt: string, system: string, timeoutMs = 420_000, 
     Object.entries(process.env).filter(([k]) => !k.startsWith('ANTHROPIC_') && !k.startsWith('CLAUDE_CODE_USE_')),
   ) as Record<string, string>;
   const tools = opts.tools?.length ? ['--allowedTools', opts.tools.join(',')] : ['--tools', ''];
-  const proc = Bun.spawn([cli, '-p', '--output-format', 'text', ...tools, '--safe-mode', '--system-prompt', system], {
+  const proc = Bun.spawn([cli, '-p', '--model', MODEL, '--output-format', 'text', ...tools, '--safe-mode', '--system-prompt', system], {
     cwd: opts.cwd ?? tmpdir(), env, stdin: new Blob([prompt]), stdout: 'pipe', stderr: 'pipe',
   });
   let timedOut = false;
@@ -400,7 +405,7 @@ async function reviewModel(images: string[], brief: string): Promise<string> {
     `realistic finger model: judge only their placement and angle, not their shape or detail. Ignore the text ` +
     `overlays, labels and background. Reply with ONLY JSON: {"ok": true|false, "problems": "numbered list of ` +
     `concrete fixes for the 3D code, or empty if ok"}`;
-  const proc = Bun.spawn([cli, '-p', '--output-format', 'text', '--allowedTools', 'Read', '--safe-mode'], {
+  const proc = Bun.spawn([cli, '-p', '--model', MODEL, '--output-format', 'text', '--allowedTools', 'Read', '--safe-mode'], {
     cwd: resolve(images[0], '..'), env, stdin: new Blob([prompt]), stdout: 'pipe', stderr: 'pipe',
   });
   const timer = setTimeout(() => proc.kill(), 300_000);
@@ -415,10 +420,10 @@ async function reviewModel(images: string[], brief: string): Promise<string> {
   }
 }
 
-/** Builds the model, then up to 3 rounds of render -> fix errors / visual review -> rewrite. */
+/** Builds the model, then up to MAX_ROUNDS (2) rounds of render -> fix errors / visual review -> rewrite. */
 async function buildModel(m: { brief: string; parts: string[]; paths: string[] }) {
   let code = await writeModel(m.brief, m.parts, m.paths);
-  for (let round = 1; round <= 3; round++) {
+  for (let round = 1; round <= MAX_ROUNDS; round++) {
     const { errors, images } = checkRender();
     let problems = errors ? `It crashed or logged errors when rendering:\n${errors}` : '';
     if (!problems && images.length) problems = await reviewModel(images, m.brief);
@@ -427,7 +432,7 @@ async function buildModel(m: { brief: string; parts: string[]; paths: string[] }
       return true;
     }
     console.log(`  round ${round}: ${problems.split('\n')[0].slice(0, 140)}`);
-    if (round === 3) break;
+    if (round === MAX_ROUNDS) break;
     try {
       code = await writeModel(m.brief, m.parts, m.paths, { code, problems });
     } catch (e) {
@@ -548,7 +553,7 @@ async function pickPhoto(s: StoryScene, cands: Candidate[], points: string[], na
     `nothing else fits), sharp, well lit, no watermark, no big text. For each point give its position in THAT photo as ` +
     `[x, y] fractions of the width and height (0..1, from the top-left), pointing at the exact spot. Skip points you ` +
     `can't see. Reply with ONLY JSON: {"pick": photo number or null if none is usable, "points": {"name": [x, y]}}`;
-  const proc = Bun.spawn([cli, '-p', '--output-format', 'text', '--allowedTools', 'Read', '--safe-mode'], {
+  const proc = Bun.spawn([cli, '-p', '--model', MODEL, '--output-format', 'text', '--allowedTools', 'Read', '--safe-mode'], {
     cwd: resolve(cands[0].file, '..'), env, stdin: new Blob([prompt]), stdout: 'pipe', stderr: 'pipe',
   });
   const timer = setTimeout(() => proc.kill(), 300_000);
@@ -735,7 +740,7 @@ async function reviewSim(images: string[], said: string[], stage: string): Promi
     `on this 1080-wide frame), parts drawn small with big empty areas (parts should fill the panel), values that contradict the ` +
     `narration, a part that doesn't look like what it is, nothing happening. Reply with ONLY JSON: {"ok": true|false, ` +
     `"problems": "numbered list of concrete fixes for the drawing code, or empty if ok"}`;
-  const proc = Bun.spawn([cli, '-p', '--output-format', 'text', '--allowedTools', 'Read', '--safe-mode'], {
+  const proc = Bun.spawn([cli, '-p', '--model', MODEL, '--output-format', 'text', '--allowedTools', 'Read', '--safe-mode'], {
     cwd: resolve(images[0], '..'), env, stdin: new Blob([prompt]), stdout: 'pipe', stderr: 'pipe',
   });
   const timer = setTimeout(() => proc.kill(), 300_000);
@@ -750,11 +755,11 @@ async function reviewSim(images: string[], said: string[], stage: string): Promi
   }
 }
 
-/** Writes the simulation, then up to 3 rounds of render -> fix errors / visual review -> rewrite. */
+/** Writes the simulation, then up to MAX_ROUNDS (2) rounds of render -> fix errors / visual review -> rewrite. */
 async function buildSim(s: StoryScene, stage: string) {
   const plan = simPlan(s);
   let code = await writeSim(stage, plan);
-  for (let round = 1; round <= 3; round++) {
+  for (let round = 1; round <= MAX_ROUNDS; round++) {
     const { errors, images, said } = checkSim(s);
     let problems = errors ? `It crashed or logged errors when rendering:\n${errors}` : '';
     if (!problems && images.length) problems = await reviewSim(images, said, stage);
@@ -763,7 +768,7 @@ async function buildSim(s: StoryScene, stage: string) {
       return true;
     }
     console.log(`  round ${round}: ${problems.split('\n')[0].slice(0, 140)}`);
-    if (round === 3) break;
+    if (round === MAX_ROUNDS) break;
     try {
       code = await writeSim(stage, plan, { code, problems });
     } catch (e) {
@@ -794,7 +799,7 @@ function claude(prompt: string): string {
   );
   const r = spawnSync(
     cli,
-    ['-p', '--output-format', 'text', '--tools', '', '--safe-mode', '--system-prompt', 'You write video storyboards as strict JSON.'],
+    ['-p', '--model', MODEL, '--output-format', 'text', '--tools', '', '--safe-mode', '--system-prompt', 'You write video storyboards as strict JSON.'],
     { input: prompt, cwd: tmpdir(), env, encoding: 'utf8', timeout: 300_000, maxBuffer: 16 << 20 },
   );
   if (r.status !== 0) throw new Error(`claude failed: ${(r.stderr || r.stdout || '').slice(0, 400)}`);

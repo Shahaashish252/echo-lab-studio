@@ -73,21 +73,22 @@ def toast(title: str, text: str):
     print(f"[notify] {title}: {text}")
 
 
-def ai(prompt: str) -> str:
-    """One answer from Claude Code (your subscription), the same way the video maker writes scripts."""
+def ai(prompt: str, model: str = "haiku") -> str:
+    """One answer from Claude Code (your subscription). Small jobs (comment replies, topics, cover text) use Haiku,
+    the cheapest model; pass model="sonnet" for work where quality matters more."""
     cli = shutil.which("claude")
     if not cli:
         raise RuntimeError("claude CLI not found")
     env = {k: v for k, v in os.environ.items() if not k.startswith("ANTHROPIC_") and not k.startswith("CLAUDE_CODE_USE_")}
-    r = subprocess.run([cli, "-p", "--output-format", "text", "--tools", "", "--safe-mode"], input=prompt, text=True,
+    r = subprocess.run([cli, "-p", "--model", model, "--output-format", "text", "--tools", "", "--safe-mode"], input=prompt, text=True,
                        encoding="utf-8", capture_output=True, cwd=tempfile.gettempdir(), env=env, timeout=300)
     if r.returncode:
         raise RuntimeError(f"claude failed: {(r.stderr or r.stdout)[:300]}")
     return r.stdout
 
 
-def ai_json(prompt: str):
-    out = ai(prompt)
+def ai_json(prompt: str, model: str = "haiku"):
+    out = ai(prompt, model)
     a, b = min((i for i in (out.find("{"), out.find("[")) if i >= 0), default=-1), max(out.rfind("}"), out.rfind("]"))
     return json.loads(out[a:b + 1])
 
@@ -827,7 +828,8 @@ def cmd_analyze():
               '"summary": "2-3 plain sentences a non-expert understands: what is working and what is not", '
               '"winningPattern": "the repeatable formula of the best videos: subject type, hook style, title style, platform", '
               '"doMore": ["3-5 short concrete actions"], "stopDoing": ["1-3 short items"], '
-              '"nextTopics": [{"topic": "short topic", "hook": "first line on screen, max 12 words"} x5 that follow the winning pattern]}'
+              '"nextTopics": [{"topic": "short topic", "hook": "first line on screen, max 12 words"} x5 that follow the winning pattern]}',
+            model="sonnet",
         )
         insights.update({k: out.get(k) for k in ("summary", "winningPattern", "doMore", "stopDoing")})
         new = [{"topic": str(t["topic"])[:80], "hook": str(t.get("hook", ""))[:120]} for t in out.get("nextTopics", []) if t.get("topic")]
