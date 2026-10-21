@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Smartwatch heart rate sensor with green light (open with this hook: \"Smartwatch Aapki Dhadkan Roshni Se Kaise Gin Leti Hai?\")\" (Claude Code)",
       "at": "2026-10-21T20:28:55"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-10-21T20:29:17"
     }
   ],
   "format": "story"
