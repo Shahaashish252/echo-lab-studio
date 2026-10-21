@@ -1,0 +1,14 @@
+{
+  "id": "20261021-073151",
+  "topic": "Ultrasonic sensor (HC-SR04) and how bats see",
+  "hook": "Ye sensor awaaz se dekhta hai, aankhon se nahi!",
+  "lang": "hi",
+  "started": "2026-10-21T07:31:51",
+  "status": "running",
+  "stages": [
+    {
+      "name": "storyboard: \"Ultrasonic sensor (HC-SR04) and how bats see (open with this hook: \"Ye sensor awaaz se dekhta hai, aankhon se nahi!\")\" (Claude Code)",
+      "at": "2026-10-21T07:31:51"
+    }
+  ]
+}

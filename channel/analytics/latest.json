@@ -1,5 +1,5 @@
 {
-  "updated": "20 Oct 2026, 19:54",
+  "updated": "21 Oct 2026, 07:31",
   "youtube": {
     "subs": 3,
     "views": 756,
@@ -9,8 +9,8 @@
         "id": "ma7mTeADoOk",
         "status": "public",
         "published": "2026-10-20",
-        "views": 0,
-        "likes": 0,
+        "views": 118,
+        "likes": 4,
         "comments": 0
       },
       {
@@ -27,7 +27,7 @@
         "id": "UK5WSZEUI9I",
         "status": "public",
         "published": "2026-10-20",
-        "views": 13,
+        "views": 19,
         "likes": 0,
         "comments": 0
       },
@@ -36,7 +36,7 @@
         "id": "JNXA3yDus8A",
         "status": "public",
         "published": "2026-10-19",
-        "views": 21,
+        "views": 23,
         "likes": 0,
         "comments": 0
       },
@@ -45,7 +45,7 @@
         "id": "386BVj8nrSU",
         "status": "public",
         "published": "2026-10-18",
-        "views": 20,
+        "views": 21,
         "likes": 1,
         "comments": 1
       },
@@ -63,7 +63,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 518,
+        "views": 523,
         "likes": 9,
         "comments": 2
       },
@@ -168,12 +168,6 @@
       }
     ],
     "daily": [
-      {
-        "day": "2026-09-22",
-        "views": 0,
-        "minutes": 0,
-        "subs": 0
-      },
       {
         "day": "2026-09-23",
         "views": 0,
@@ -323,6 +317,12 @@
         "views": 474,
         "minutes": 60,
         "subs": 1
+      },
+      {
+        "day": "2026-10-18",
+        "views": 117,
+        "minutes": 23,
+        "subs": 0
       }
     ]
   },
@@ -334,10 +334,10 @@
         "title": "Street light ghadi nahi dekhti, phir bhi jaanti hai 🌙",
         "url": "https://www.instagram.com/reel/Det_30gEQu5/",
         "published": "2026-10-20",
-        "likes": 0,
-        "comments": 0,
-        "reach": 0,
-        "views": 0,
+        "likes": 4,
+        "comments": 1,
+        "reach": 52,
+        "views": 53,
         "saved": 0,
         "shares": 0
       },
@@ -348,7 +348,7 @@
         "likes": 1,
         "comments": 1,
         "reach": 100,
-        "views": 129,
+        "views": 130,
         "saved": 0,
         "shares": 0
       },
@@ -391,8 +391,8 @@
         "published": "2026-10-17",
         "likes": 11,
         "comments": 2,
-        "reach": 1200,
-        "views": 1409,
+        "reach": 1202,
+        "views": 1411,
         "saved": 3,
         "shares": 4
       },

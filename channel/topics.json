@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Ultrasonic sensor (HC-SR04) and how bats see",
+      "hook": "Ye sensor awaaz se dekhta hai, aankhon se nahi!"
+    },
+    {
+      "topic": "How an IR obstacle sensor detects objects",
+      "hook": "Is sensor ko andhere mein bhi sab dikhta hai!"
+    },
+    {
+      "topic": "LDR and automatic street lights",
+      "hook": "Street light khud on kaise hoti hai? Koi switch nahi!"
+    },
+    {
+      "topic": "Smoke detector sensor",
+      "hook": "Smoke alarm dhuan nahi, roshni se pakadta hai!"
+    },
+    {
+      "topic": "Hand dryer or tap with a proximity sensor",
+      "hook": "Nal ko aapka haath kaise pata chalta hai?"
+    },
+    {
       "topic": "Touchscreen capacitive sensing",
       "hook": "Aapka phone ungli nahi, aapki body ki bijli mehsoos karta hai!"
     },
