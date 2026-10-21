@@ -225,7 +225,7 @@ function claudeCard() {
     return `<div style="margin-top:6px"><div class="row" style="justify-content:space-between;font-size:12px"><span class="muted">${label}</span><b style="color:${col}">${p}%</b></div>
       <div class="bar" style="margin-top:3px"><i style="width:${p}%;background:${col}"></i></div><div class="d">${resets(x.resets)}</div></div>`;
   };
-  return `<div class="kpi"><div class="l">Claude usage <span class="faint">· ${ago(c.updated)}</span></div>${row('This 5 hours', c.five_hour)}${row('This week', c.seven_day)}</div>`;
+  return `<div class="kpi"><div class="l">Claude usage <span class="faint">· read ${ago(c.updated)} from your laptop</span></div>${row('This 5 hours', c.five_hour)}${row('This week', c.seven_day)}</div>`;
 }
 function renderKpis() {
   const y = S.youtube || {}, g = S.instagram || {};

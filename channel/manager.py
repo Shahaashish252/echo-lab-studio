@@ -14,6 +14,8 @@ Commands
     comments     fetch new YouTube + Instagram comments and draft replies
     dashboard    refresh channel/dashboard.html (YouTube + Instagram numbers) and open it
     topics       show the topic queue
+    usage        (laptop, every 30 min + when the dashboard shortcut opens) read the real Claude usage with this PC's
+                 login and put it on the online dashboard (the cloud's video token may not read usage: 403)
 
 Files: topics.json (queue), schedule.json (times), uploads.json (videos and their status),
 manager.json (comment drafts, seen comments), analytics/history.json (daily totals), logs/.
@@ -915,9 +917,34 @@ def cmd_post_now():
     print(f"published {meta(nxt[0])['title']}")
 
 
+def cmd_usage(*_):
+    """Reads the real Claude usage here and uploads analytics/claude_usage.json to the repo (contents API, no git),
+    then rebuilds the online dashboard."""
+    out = claude_usage()
+    if not out:
+        return
+    import base64
+    try:
+        tok = subprocess.run(["gh", "auth", "token"], capture_output=True, text=True, timeout=30).stdout.strip()
+        repo = "Shahaashish252/echo-lab-studio"
+        api = f"https://api.github.com/repos/{repo}/contents/channel/analytics/claude_usage.json"
+        h = {"Authorization": f"Bearer {tok}", "Accept": "application/vnd.github+json"}
+        cur = requests.get(api, headers=h, params={"ref": "main"}, timeout=30)
+        body = {"message": "claude usage", "branch": "main",
+                "content": base64.b64encode((HERE / "analytics" / "claude_usage.json").read_bytes()).decode(),
+                "committer": {"name": "echo-lab-bot", "email": "echo-lab-bot@users.noreply.github.com"}}
+        if cur.ok:
+            body["sha"] = cur.json()["sha"]
+        requests.put(api, headers=h, json=body, timeout=60).raise_for_status()
+        subprocess.run(["gh", "workflow", "run", "pages.yml", "-R", repo], capture_output=True, timeout=60)
+        print(f"claude usage on the dashboard: 5 h {out.get('five_hour', {}).get('pct')}%, week {out.get('seven_day', {}).get('pct')}%")
+    except Exception as e:  # noqa: BLE001
+        print(f"claude usage not uploaded: {e}")
+
+
 COMMANDS = {"daily": cmd_daily, "review": cmd_review, "post-due": cmd_post_due, "comments": cmd_comments,
             "dashboard": cmd_dashboard, "topics": cmd_topics, "analyze": cmd_analyze, "make": cmd_make,
-            "post-now": cmd_post_now}
+            "post-now": cmd_post_now, "usage": cmd_usage}
 
 if __name__ == "__main__":
     if len(sys.argv) < 2 or sys.argv[1] not in COMMANDS:

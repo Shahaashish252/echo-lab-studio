@@ -38,11 +38,6 @@ jobs:
           cache: pip
           cache-dependency-path: .github/scripts/setup-python.sh
       - run: python -m pip install -q google-api-python-client google-auth-oauthlib requests pillow
-      # read the Claude subscription usage right now, so the dashboard's usage bars are live (not from the last job)
-      - name: Fresh Claude usage
-        env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-        run: cd channel && python -c "import manager; manager.claude_usage()" || true
       - run: python channel/site.py _site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
