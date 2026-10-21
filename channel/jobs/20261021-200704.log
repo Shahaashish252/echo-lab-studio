@@ -1,2 +1,31 @@
 
 == research: reading about the topic on the web
+  | **HOOK:** "Street Light Ko Andhera Kaise Pata Chalta Hai? Aankh Nahi, Bas Ek Chhota Sa Part!"
+  | 
+  | **HOW IT WORKS**
+  | 1. The LDR (CdS photoresistor) sits in a voltage divider with a fixed resistor.
+  | 2. In daylight its resistance is low, from a few hundred ohms to about 10 kΩ.
+  | 3. At dusk its resistance rises, up to several MΩ in full dark.
+  | 4. The divider voltage shifts, and a comparator (LM393) or transistor checks it against a preset threshold.
+  | 5. The output drives a transistor, which energises a relay or contactor and switches the lamp on.
+  | 6. At dawn the process reverses. Hysteresis stops flicker near the threshold.
+  | 
+  | **REAL PARTS**
+  | - LDR GL5528
+  | - LM393 LDR module (the pot sets the threshold)
+  | - BC547 transistor
+  | - 5V relay module
+  | - Real streetlights use a photocontrol or photocell.
+  | 
+  | **MYTH**
+  | Many people think a timer or a human switches street lights. In fact a light sensor decides, so a cloudy, dark afternoon can turn them on early.
+  | 
+  | **SURPRISING FACT**
+  | Typical photocontrols switch on at about 10–20 lux and off at about 50–80 lux. A forum user measured an LDR at 3.6 MΩ covered and 103 Ω in direct sun.
+  | 
+  | **TIP**
+  | Hysteresis is the gap between the on and off levels. Without it, the light flickers at the threshold. Also shield the LDR from the lamp's own light, or the lamp will switch itself off.
+  | 
+  | Sources: [LM393 LDR module listing](https://kunkune.co.uk/shop/arduino-sensors/lm393-optical-sensitive-resistance-light-detection-photosensitive-sensor-4-pin-3-pin/), [AAC forum thread on flickering](https://forum.allaboutcircuits.com/threads/dark-sensor-circuit-using-lm393-question-unstable-off-on-flickering.209162/post-2015703), [Global Sources photocontrol listing](https://www.globalsources.com/LED-lighting/LED-power-controllers-1234783165p.htm)
+
+== storyboard: "Automatic street light turning on at dusk (LDR) (open with this hook: "Street Light Ko Andhera Kaise Pata Chalta Hai? Aankh Nahi, Bas Ek Chhota Sa Part!")" (Claude Code)
