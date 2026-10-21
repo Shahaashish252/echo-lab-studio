@@ -1,2 +1,15 @@
 
 == script: "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip) (open with this hook: "Raat bhar charging se battery kharab? Sach suno!")" (Claude Sonnet)
+  17 lines | hook: Raat bhar charging ka *SACH*
+
+== images for 17 shots (Cloudflare FLUX, free)
+Traceback (most recent call last):
+  File "D:\MoneyPrinterTurbo-main\motion grafix\channel\cinematic.py", line 367, in <module>
+    main()
+    ~~~~^^
+  File "D:\MoneyPrinterTurbo-main\motion grafix\channel\cinematic.py", line 335, in main
+    make_image(l["shot"], p, seed + i * 7)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MoneyPrinterTurbo-main\motion grafix\channel\cinematic.py", line 122, in make_image
+    raise RuntimeError(f"image failed: {last}")
+RuntimeError: image failed: [{'message': "AiError: Bad input: Error: Additional or unevaluated properties '/seed' at '/' not allowed (86bb0e84-d70c-4716-a4d1-59cc1ed34b6b)", 'code': 5006}]

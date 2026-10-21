@@ -4,12 +4,17 @@
   "hook": "Raat bhar charging se battery kharab? Sach suno!",
   "lang": "hi",
   "started": "2026-10-21T09:07:56",
-  "status": "running",
+  "status": "failed",
   "stages": [
     {
       "name": "script: \"Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip) (open with this hook: \"Raat bhar charging se battery kharab? Sach suno!\")\" (Claude Sonnet)",
       "at": "2026-10-21T09:07:57"
+    },
+    {
+      "name": "images for 17 shots (Cloudflare FLUX, free)",
+      "at": "2026-10-21T09:08:41"
     }
   ],
-  "format": "cinematic"
+  "format": "cinematic",
+  "finished": "2026-10-21T09:09:37"
 }

@@ -9,5 +9,7 @@
   "language": "auto",
   "switchToEnglishAt": 10000,
   "niche": "Echo Lab 3D explains how sensors, circuits, Arduino modules and everyday tech work, for students, makers and curious people",
-  "note": "All times are India time (IST). The cloud jobs run with TZ=Asia/Kolkata."
+  "note": "All times are India time (IST). The cloud jobs run with TZ=Asia/Kolkata.",
+  "format": "cinematic",
+  "formatNote": "cinematic = photoreal FLUX shots + word captions (channel/cinematic.py); sim = old instrument-panel animation (app/scripts/auto.ts)"
 }

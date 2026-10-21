@@ -254,7 +254,12 @@ def make_video(topic: dict | None = None) -> dict | None:
     job = {"id": datetime.now().strftime("%Y%m%d-%H%M%S"), "topic": topic["topic"], "hook": topic.get("hook", ""), "lang": lang,
            "started": datetime.now().isoformat(timespec="seconds"), "status": "running", "stages": []}
     save_job(job)
-    code = run_tracked(["bun", "scripts/auto.ts", prompt, "--upload", "--lang", lang], job)
+    if schedule().get("format", "cinematic") == "cinematic":
+        # the viral-reference style: photoreal shots + word captions (channel/cinematic.py), far less Claude than "sim"
+        job["format"] = "cinematic"
+        code = run_tracked([sys.executable, "-u", str(HERE / "cinematic.py"), prompt, "--upload", "--lang", lang], job)
+    else:
+        code = run_tracked(["bun", "scripts/auto.ts", prompt, "--upload", "--lang", lang], job)
     ups = uploads()
     job["finished"] = datetime.now().isoformat(timespec="seconds")
     if code or len(ups) <= before:
