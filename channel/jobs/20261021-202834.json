@@ -17,6 +17,10 @@
     {
       "name": "simulation (Claude Code writes it, renders it, reviews it)",
       "at": "2026-10-21T20:29:17"
+    },
+    {
+      "name": "voice (Microsoft Edge: Madhur)",
+      "at": "2026-10-21T20:29:23"
     }
   ],
   "format": "story"
