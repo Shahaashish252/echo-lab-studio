@@ -68,3 +68,67 @@ mixed (peak -4.0 dBFS)
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wav (-14 LUFS)
 
 == render
+rendering 1746 frames (0-58.199999999999996s) at 1080x1920, 2 sample(s)/frame
+
+  frame 30/1746  2.0 fps  eta 841s   
+  frame 60/1746  2.0 fps  eta 824s   
+  frame 90/1746  2.0 fps  eta 829s   
+  frame 120/1746  2.0 fps  eta 819s   
+  frame 150/1746  2.0 fps  eta 806s   
+  frame 180/1746  2.0 fps  eta 792s   
+  frame 210/1746  2.0 fps  eta 782s   
+  frame 240/1746  2.0 fps  eta 769s   
+  frame 270/1746  1.9 fps  eta 758s   
+  frame 300/1746  1.9 fps  eta 744s   
+  frame 330/1746  1.9 fps  eta 731s   
+  frame 360/1746  1.9 fps  eta 717s   
+  frame 390/1746  1.9 fps  eta 699s   
+  frame 420/1746  1.9 fps  eta 681s   
+  frame 450/1746  2.0 fps  eta 664s   
+  frame 480/1746  2.0 fps  eta 647s   
+  frame 510/1746  2.0 fps  eta 630s   
+  frame 540/1746  2.0 fps  eta 612s   
+  frame 570/1746  2.0 fps  eta 595s   
+  frame 600/1746  2.0 fps  eta 577s   
+  frame 630/1746  2.0 fps  eta 561s   
+  frame 660/1746  2.0 fps  eta 546s   
+  frame 690/1746  2.0 fps  eta 532s   
+  frame 720/1746  2.0 fps  eta 517s   
+  frame 750/1746  2.0 fps  eta 502s   
+  frame 780/1746  2.0 fps  eta 487s   
+  frame 810/1746  2.0 fps  eta 473s   
+  frame 840/1746  2.0 fps  eta 458s   
+  frame 870/1746  2.0 fps  eta 443s   
+  frame 900/1746  2.0 fps  eta 428s   
+  frame 930/1746  2.0 fps  eta 414s   
+  frame 960/1746  2.0 fps  eta 398s   
+  frame 990/1746  2.0 fps  eta 383s   
+  frame 1020/1746  2.0 fps  eta 368s   
+  frame 1050/1746  2.0 fps  eta 353s   
+  frame 1080/1746  2.0 fps  eta 338s   
+  frame 1110/1746  2.0 fps  eta 323s   
+  frame 1140/1746  2.0 fps  eta 308s   
+  frame 1170/1746  2.0 fps  eta 293s   
+  frame 1200/1746  2.0 fps  eta 279s   
+  frame 1230/1746  2.0 fps  eta 264s   
+  frame 1260/1746  2.0 fps  eta 248s   
+  frame 1290/1746  2.0 fps  eta 233s   
+  frame 1320/1746  2.0 fps  eta 218s   
+  frame 1350/1746  2.0 fps  eta 203s   
+  frame 1380/1746  2.0 fps  eta 187s   
+  frame 1410/1746  2.0 fps  eta 172s   
+  frame 1440/1746  2.0 fps  eta 157s   
+  frame 1470/1746  2.0 fps  eta 141s   
+  frame 1500/1746  2.0 fps  eta 126s   
+  frame 1530/1746  1.9 fps  eta 111s   
+  frame 1560/1746  1.9 fps  eta 95s   
+  frame 1590/1746  1.9 fps  eta 80s   
+  frame 1620/1746  1.9 fps  eta 65s   
+  frame 1650/1746  1.9 fps  eta 49s   
+  frame 1680/1746  1.9 fps  eta 34s   
+  frame 1710/1746  1.9 fps  eta 18s   
+  frame 1740/1746  1.9 fps  eta 3s   
+  frame 1746/1746  1.9 fps  eta 0s   
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/smartwatch-heart-rate-secret.mp4 (with sound)
+
+== youtube
