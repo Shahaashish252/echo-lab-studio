@@ -12,7 +12,7 @@ git commit -q -m "state: $1"
 # block the rebase below, so drop them (only tracked edits outside the committed state)
 git checkout -- . 2>/dev/null || true
 for i in 1 2 3 4 5; do
-  git pull -q --rebase -X theirs origin main && git push -q origin main HEAD:main && { echo "state saved"; exit 0; }
+  git pull -q --rebase -X theirs origin main && git push -q origin HEAD:main && { echo "state saved"; exit 0; }
   git rebase --abort 2>/dev/null || true
   sleep $((i * 5))
 done

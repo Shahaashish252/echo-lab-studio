@@ -166,10 +166,16 @@
     "id": "YFIx75qSV1s",
     "meta": "channel/videos/auto-sensor-jo-awaaz-se-dekhta-hai.json",
     "date": "2026-10-21",
-    "status": "approved",
+    "status": "published",
     "topic": "Ultrasonic sensor (HC-SR04) and how bats see",
     "postAt": "2026-10-21T12:30",
-    "job": "20261021-073151"
+    "job": "20261021-073151",
+    "published": {
+      "youtube": "2026-10-21",
+      "instagram": "https://www.instagram.com/reel/Dev0l7zCXEb/",
+      "facebook": "https://www.facebook.com/reel/2030223267695972/"
+    },
+    "postedAt": "2026-10-21T12:30"
   },
   {
     "id": "igtTFDCOW_I",
