@@ -259,14 +259,14 @@ Rules:
 Reply with ONLY the SVG.`;
 
 /** Runs Claude Code headless; async so the scene drawings can be made in parallel. */
-async function claudeAsync(prompt: string, system: string, timeoutMs = 420_000, opts: { cwd?: string; tools?: string[] } = {}): Promise<string> {
+async function claudeAsync(prompt: string, system: string, timeoutMs = 420_000, opts: { cwd?: string; tools?: string[]; model?: string } = {}): Promise<string> {
   const cli = Bun.which('claude');
   if (!cli) throw new Error('claude CLI not found: install Claude Code and log in');
   const env = Object.fromEntries(
     Object.entries(process.env).filter(([k]) => !k.startsWith('ANTHROPIC_') && !k.startsWith('CLAUDE_CODE_USE_')),
   ) as Record<string, string>;
   const tools = opts.tools?.length ? ['--allowedTools', opts.tools.join(',')] : ['--tools', ''];
-  const proc = Bun.spawn([cli, '-p', '--model', MODEL, '--output-format', 'text', ...tools, '--safe-mode', '--system-prompt', system], {
+  const proc = Bun.spawn([cli, '-p', '--model', opts.model ?? MODEL, '--output-format', 'text', ...tools, '--safe-mode', '--system-prompt', system], {
     cwd: opts.cwd ?? tmpdir(), env, stdin: new Blob([prompt]), stdout: 'pipe', stderr: 'pipe',
   });
   let timedOut = false;
@@ -705,6 +705,11 @@ Scene types and their fields (use ONLY these; icons only from the list):
 - meter    {"label", "from": number, "to": number, "unit": "%|°C|V|...", "danger": true|false, "text"}
 - tip      {"icon", "points": [1-3 short tips, max 6 words each], "text"}
 - question {"text"}                                      use for the last sim line
+- module   {"name": "hcsr04|pir|ir|ldr|dht11|servo|relay|soil|mq|uno|cell", "action": "on|off|detect|dark|light",
+            "label": "the real part name, e.g. HC-SR04", "text"}   a REALISTIC drawing of the real module/board (blue PCB,
+            pins, chips), animated: hcsr04 = ultrasonic distance, pir = HC-SR501 motion, ir = IR obstacle, ldr = light
+            sensor, dht11 = temperature/humidity, servo = SG90 motor, relay = 5V relay, soil = moisture probe,
+            mq = MQ-2 gas/smoke, uno = Arduino Uno board, cell = phone Li-ion battery cell
 Icons: phone charger battery chip sensor bulb remote tv laptop router speaker fan door thermometer sun moon eye ear
 wifi car camera lock hand plug bolt house
 
@@ -713,7 +718,37 @@ a punchy summary of that line, not a copy of the subtitle. Vary the scenes (no t
 
 Story rules: line 1 is a myth-bust hook about something used daily (a person scene or a title). Then zoom/flow/waves to
 show the mechanism step by step, one idea per line. Near the end a compare (myth vs truth) or a tip with practical
-advice, and the last line a question (question scene). At most 3 numbers in the whole script. Every claim accurate.`;
+advice, and the last line a question (question scene). At most 3 numbers in the whole script. Every claim accurate.
+If the topic involves one of the real modules above (or a gadget built around one), show it with a module scene 1-3
+times (e.g. "this is the real sensor", then later in action), so viewers see the actual part, not only an icon.`;
+
+/** Quick web research before writing, so facts, part names and myths are real (story mode; one cheap call). */
+async function research(): Promise<string> {
+  if (process.env.ECHO_RESEARCH === '0') return '';
+  step('research: reading about the topic on the web');
+  try {
+    const out = await claudeAsync(
+      [
+        `Research this topic for a 50-second explainer Short: "${topic}".`,
+        'Do at most 3 web searches (and open at most 2 pages). Then reply with ONLY compact notes, max 180 words:',
+        '- HOW IT WORKS: 4-6 accurate steps of the mechanism',
+        '- REAL PARTS: real component/module names (e.g. HC-SR04, LM393)',
+        '- MYTH: the most common wrong belief and the truth',
+        '- SURPRISING FACT: one fact with a real number',
+        '- TIP: one practical tip',
+      ].join('\n'),
+      'You are a careful electronics researcher. Verify facts on the web; never invent numbers.',
+      600_000,
+      { tools: ['WebSearch', 'WebFetch'], model: process.env.ECHO_RESEARCH_MODEL || MODEL },
+    );
+    const notes = out.trim().slice(0, 2000);
+    console.log(notes.split('\n').map((l) => `  | ${l}`).join('\n'));
+    return notes;
+  } catch (e) {
+    console.warn(`  research skipped (${e instanceof Error ? e.message : e})`);
+    return '';
+  }
+}
 
 const SIM_FILE = join(SCENES, 'sim.gen.js');
 /** each sim line's planned on-screen event */
@@ -1060,12 +1095,18 @@ function extract(clip: string, sceneId: string, length: number) {
 const MIN: Partial<Record<SceneType, number>> = { hook: 2.5, title: 2.5, stat: 3.6, compare: 5.5, outro: 3.2, quote: 3.5, board: 4, diagram: 2.4, model: 2.6, photo: 2.4 };
 
 const t0 = performance.now();
+const NOTES = STORY_MODE ? await research() : '';
 step(`storyboard: "${topic}" (Claude Code)`);
 let story: ReturnType<typeof normalize> | undefined;
 let STORY_PLAN: { beats: unknown[] } = { beats: [] };
+const RESEARCH_NOTE = NOTES ? `
+
+Research notes gathered from the web just now (use these facts; stay accurate):
+${NOTES}
+` : '';
 for (let attempt = 1; attempt <= 2 && !story; attempt++) {
   try {
-    const raw = parse(claude(PROMPT + (HINDI ? HINDI_NOTE : '')));
+    const raw = parse(claude(PROMPT + RESEARCH_NOTE + (HINDI ? HINDI_NOTE : '')));
     story = normalize(raw);
     if (STORY_MODE) {
       STORY_PLAN = { beats: Array.isArray((raw as Raw).beats) ? ((raw as Raw).beats as unknown[]) : [] };

@@ -14,6 +14,10 @@
 //   meter   {label, from, to, unit, text}  big gauge animating from -> to
 //   tip     {icon, points:[..], text}      tip card, points tick in one by one
 //   question{text}                          the closing question, pulsing
+//   module  {name, action, label, text}    a REAL hobby module drawn realistically (modules.js): hcsr04 | pir | ir | ldr |
+//                                          dht11 | servo | relay | soil | mq | uno | cell; action = on | off | detect | dark | light
+import { drawModule } from './modules.js';
+
 export function makeDraw(plan) {
   const beats = (plan && plan.beats) || [];
   const C = { bg: '#0d0f13', bg2: '#161a21', line: '#e9e4d8', dim: '#8b8f98', faint: '#3a3f4a', hot: plan.accent || '#ff6a2b', cool: '#3fd0c0', good: '#5be38d', bad: '#ff5a5f', gold: '#ffc23d' };
@@ -39,12 +43,19 @@ export function makeDraw(plan) {
       size -= 6;
       ctx.font = font(size);
     }
-    const rows = []; let cur = [];
-    for (const w of words) {
-      const test = [...cur, w].join(' ').replace(/\*/g, '');
-      if (cur.length && ctx.measureText(test).width > maxW) { rows.push(cur); cur = [w]; } else cur.push(w);
+    let rows;
+    // at most 2 rows, so the words never run into the picture below: shrink until they fit
+    for (;;) {
+      rows = []; let cur = [];
+      for (const w of words) {
+        const test = [...cur, w].join(' ').replace(/\*/g, '');
+        if (cur.length && ctx.measureText(test).width > maxW) { rows.push(cur); cur = [w]; } else cur.push(w);
+      }
+      if (cur.length) rows.push(cur);
+      if (rows.length <= 2 || size <= 60) break;
+      size -= 6;
+      ctx.font = font(size);
     }
-    if (cur.length) rows.push(cur);
     let k = 0;
     rows.forEach((row, ri) => {
       const plain = row.map((w) => w.replace(/\*/g, ''));
@@ -252,6 +263,17 @@ export function makeDraw(plan) {
         ctx.font = round(56); ctx.fillStyle = C.line; wrapText(ctx, pt, 250, 815 + i * 210, 720, 62);
         ctx.restore();
       });
+    },
+    module(ctx, b, t, p) {
+      headline(ctx, b.text, p);
+      const a = ease(p * 3);
+      ctx.save(); ctx.globalAlpha = a;
+      const g = ctx.createRadialGradient(540, 1020, 20, 540, 1020, 560); g.addColorStop(0, 'rgba(63,208,192,0.14)'); g.addColorStop(1, 'rgba(63,208,192,0)'); ctx.fillStyle = g; ctx.fillRect(0, 460, 1080, 1100);
+      const sc = 0.95 * (0.88 + 0.12 * a);
+      ctx.translate(540, 1030 + Math.sin(t * 1.4) * 10); ctx.rotate(Math.sin(t * 0.9) * 0.025); ctx.scale(sc, sc);
+      drawModule(ctx, b.name || 'hcsr04', t, b);
+      ctx.restore();
+      if (b.label) { ctx.font = mono(40); ctx.fillStyle = C.dim; ctx.textAlign = 'center'; ctx.fillText(String(b.label).toUpperCase(), 540, 1600); ctx.textAlign = 'left'; }
     },
     question(ctx, b, t, p) {
       const s = 1 + Math.sin(t * 4) * 0.04;

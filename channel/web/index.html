@@ -151,7 +151,7 @@ const ago = (iso) => { if (!iso) return ''; const s = (Date.now() - new Date(iso
 let S = null, openJob = null;
 
 const STAGES = [
-  ['Topic', ''], ['Script', 'storyboard'], ['Visuals', 'drawing|3D model|photos|simulation|AI clips'], ['Voice', 'voice'],
+  ['Topic', ''], ['Research & script', 'research|storyboard'], ['Visuals', 'drawing|3D model|photos|simulation|AI clips'], ['Voice', 'voice'],
   ['Sound', 'sound'], ['Render', 'render'], ['Upload', 'youtube'], ['Scheduled', ''], ['YouTube', ''], ['Instagram', ''], ['Facebook', ''],
 ];
 function stageState(job, video) {

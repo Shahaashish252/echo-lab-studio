@@ -18,6 +18,8 @@ import numpy as np
 import soundfile as sf
 from kokoro_onnx import Kokoro
 
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # Hindi text in the log on a Windows console
+
 ROOT = Path(__file__).resolve().parent.parent
 video = sys.argv[1] if len(sys.argv) > 1 else "rutherford"
 scene_dir = ROOT / "app" / "src" / "scenes" / video
