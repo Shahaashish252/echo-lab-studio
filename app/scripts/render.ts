@@ -78,7 +78,7 @@ try {
         '-y', '-loglevel', 'error',
         '-f', 'image2pipe', '-framerate', String(info.fps), '-c:v', 'png', '-i', '-',
         ...(withAudio ? ['-i', vo, '-c:a', 'aac', '-b:a', '320k', '-shortest'] : []),
-        '-c:v', 'libx264', '-preset', 'medium', '-crf', crf, '-pix_fmt', 'yuv420p', '-movflags', '+faststart',
+        '-c:v', 'libx264', '-preset', 'slow', '-tune', 'animation', '-crf', crf, '-pix_fmt', 'yuv420p', '-movflags', '+faststart',
         out,
       ],
       { stdio: ['pipe', 'inherit', 'inherit'] },

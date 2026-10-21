@@ -55,5 +55,5 @@ rmSync(PHOTOS, { recursive: true, force: true });
 if (existsSync(join(bundle, 'photos'))) cpSync(join(bundle, 'photos'), PHOTOS, { recursive: true });
 
 const out = join(outRoot, 'auto', `${name}.mp4`);
-const r = spawnSync('bun', ['scripts/render.ts', 'video', '--video', 'auto', '--samples', '1', '--crf', '23', '--out', out], { cwd: appDir, stdio: 'inherit' });
+const r = spawnSync('bun', ['scripts/render.ts', 'video', '--video', 'auto', '--samples', '2', '--crf', '16', '--out', out], { cwd: appDir, stdio: 'inherit' });
 process.exit(r.status ?? 1);

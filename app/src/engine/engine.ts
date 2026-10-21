@@ -28,9 +28,9 @@ void main() {
       glow += max(texture2D(tex, uv + o).rgb - 0.55, 0.0) / float(ring);
     }
   }
-  col += glow * 0.11;
+  col += glow * 0.0;  // off: 24 offset taps left stepped "ghost" halos around bright text (scenes draw their own smooth glow)
   col *= 1.0 - r2 * 0.6;
-  col += (hash(floor(uv * res)) - 0.5) * 0.05;
+  col += (hash(floor(uv * res)) - 0.5) * 0.012;  // light grain: heavy grain made the video compress to mush
   gl_FragColor = vec4(col, 1.0);
 }`;
 

@@ -1214,7 +1214,7 @@ run('bun', ['scripts/sound.ts', '--video', 'auto', '--no-mux']);
 step('render');
 const out = resolve(opt('out', join(outRoot, 'auto', `${slug(story.title)}.mp4`))!);
 mkdirSync(resolve(out, '..'), { recursive: true });
-run('bun', ['scripts/render.ts', 'video', '--video', 'auto', '--samples', opt('samples', '1')!, '--crf', '23', '--out', out]);
+run('bun', ['scripts/render.ts', 'video', '--video', 'auto', '--samples', opt('samples', '2')!, '--crf', '16', '--out', out]);
 writeFileSync(out.replace(/\.mp4$/, '.txt'), `${story.title}\n\n${Object.values(story.lines).map((l) => l.text.replace(/\*/g, '')).join(' ')}\n`);
 
 // keep everything this video was made from, so it can be re-rendered later (scripts/rerender.ts)
