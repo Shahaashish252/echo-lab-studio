@@ -1,2 +1,32 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS** (hook: "Smartwatch Aapki Dhadkan Roshni Se Kaise Gin Leti Hai?")
+  | 1. Green LEDs on the watch's back flash onto your wrist skin.
+  | 2. Hemoglobin in the blood absorbs green light. Tissue reflects the rest.
+  | 3. Each heartbeat briefly raises blood volume in the wrist, so more light is absorbed.
+  | 4. Photodiodes read the reflected light. The signal rises and falls with every pulse (PPG, photoplethysmography).
+  | 5. An analog front end (AFE) converts it to digital, and software filters out motion noise.
+  | 6. It counts the peaks per minute to get BPM.
+  | 
+  | **REAL PARTS**
+  | - MAX30102 (Analog Devices/Maxim) is a hobby-grade pulse oximeter and HR sensor with built-in LEDs and photodetector. Its sample rate and LED current are programmable.
+  | - TI AFE4410 is an AFE for optical HR. It drives up to 4 LEDs and reads up to 3 photodiodes.
+  | - Apple Watch uses green LEDs with photodiodes.
+  | 
+  | **MYTH**
+  | Many people think the watch "sees" the heart or measures electrical signals. In fact it only measures blood-volume changes optically. ECG needs electrodes.
+  | 
+  | **SURPRISING FACT**
+  | The AFE4410 datasheet's typical HR scenario uses a 20 mA LED, a 60 µs pulse and 25 Hz sampling. That averages only about 30 µA of LED current. The LED is on for a tiny fraction of the time, which saves battery.
+  | 
+  | **TIP**
+  | Wear the watch snug, one finger-width above the wrist bone. Loose fit or ambient light leaking in causes wrong readings.
+  | 
+  | **Caveat:** I didn't confirm the exact green wavelength (~525 nm is commonly cited but unverified here). A Cambridge lecture gives the PPG range as 500 nm (green) to 1100 nm (infrared).
+  | 
+  | Sources:
+  | - [How the Apple Watch heart rate sensor works](https://www.macworld.com/article/225341/how-the-apple-watch-heart-rate-sensor-works-according-to-apple.html)
+  | - [Mouser: MAX30102](https://www.mouser.in/en/new/analog-devices/maxim-max30102efd-sensor/)
+  | - [TI AFE4410 datasheet](https://ti.com/document-viewer/afe4410/datasheet)
+
+== storyboard: "Smartwatch heart rate sensor with green light (open with this hook: "Smartwatch Aapki Dhadkan Roshni Se Kaise Gin Leti Hai?")" (Claude Code)
