@@ -430,6 +430,33 @@ def ig_comments(state: dict) -> list:
     return out
 
 
+def claude_usage():
+    """How much of the Claude subscription is used (5-hour window and week), saved for the dashboard.
+    Uses the cloud's CLAUDE_CODE_OAUTH_TOKEN, or this PC's Claude login."""
+    tok = os.environ.get("CLAUDE_CODE_OAUTH_TOKEN")
+    if not tok:
+        try:
+            tok = json.loads((Path.home() / ".claude" / ".credentials.json").read_text())["claudeAiOauth"]["accessToken"]
+        except Exception:  # noqa: BLE001
+            return None
+    try:
+        r = requests.get("https://api.anthropic.com/api/oauth/usage", timeout=30,
+                         headers={"Authorization": f"Bearer {tok}", "anthropic-beta": "oauth-2025-04-20"})
+        if not r.ok:
+            print(f"claude usage: {r.status_code}")
+            return None
+        d = r.json()
+        out = {"updated": datetime.now().isoformat(timespec="minutes")}
+        for k in ("five_hour", "seven_day"):
+            if d.get(k):
+                out[k] = {"pct": d[k].get("utilization"), "resets": d[k].get("resets_at")}
+        write(HERE / "analytics" / "claude_usage.json", out)
+        return out
+    except Exception as e:  # noqa: BLE001
+        print(f"claude usage: {e}")
+        return None
+
+
 def fb_comments(state: dict) -> list:
     """New comments on the Page's Facebook Reels."""
     cfg = instagram.load()
@@ -453,6 +480,7 @@ def fb_comments(state: dict) -> list:
 
 
 def cmd_comments():
+    claude_usage()  # cheap; keeps the dashboard's Claude-usage bars fresh (this job runs every 5 minutes)
     state = read(STATE, {"drafts": [], "seen": []})
     new = []
     for name, fetch in (("youtube", yt_comments), ("instagram", ig_comments), ("facebook", fb_comments)):

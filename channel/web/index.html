@@ -213,6 +213,19 @@ function stepper(job, video) {
   ).join('') + '</div>';
 }
 
+// Claude subscription use (5-hour window + week), saved by the comments job every few minutes
+function claudeCard() {
+  const c = S.claude || {};
+  if (!c.updated) return `<div class="kpi"><div class="l">Claude usage</div><div class="v" style="font-size:18px;color:var(--faint)">not read yet</div></div>`;
+  const resets = (iso) => { if (!iso) return ''; const ms = new Date(iso) - Date.now(); if (ms <= 0) return 'resetting'; const h = Math.floor(ms / 3600000), m = Math.round((ms % 3600000) / 60000); return h >= 24 ? `resets ${new Date(iso).toLocaleString([], {weekday:'short', hour:'2-digit', minute:'2-digit'})}` : `resets in ${h ? h + ' h ' : ''}${m} min`; };
+  const row = (label, x) => {
+    if (!x) return '';
+    const p = Math.round(x.pct ?? 0), col = p >= 90 ? 'var(--bad)' : p >= 70 ? 'var(--accent2)' : 'var(--good)';
+    return `<div style="margin-top:6px"><div class="row" style="justify-content:space-between;font-size:12px"><span class="muted">${label}</span><b style="color:${col}">${p}%</b></div>
+      <div class="bar" style="margin-top:3px"><i style="width:${p}%;background:${col}"></i></div><div class="d">${resets(x.resets)}</div></div>`;
+  };
+  return `<div class="kpi"><div class="l">Claude usage <span class="faint">· ${ago(c.updated)}</span></div>${row('This 5 hours', c.five_hour)}${row('This week', c.seven_day)}</div>`;
+}
 function renderKpis() {
   const y = S.youtube || {}, g = S.instagram || {};
   const igViews = S.table.reduce((a, r) => a + (r.igViews || 0), 0);
@@ -223,6 +236,7 @@ function renderKpis() {
     <div class="kpi yt"><div class="l">YouTube subscribers</div><div class="v">${fmt(y.subs)}</div><div class="d">${fmt(ytViews)} total views</div></div>
     <div class="kpi ig"><div class="l">Instagram followers</div><div class="v">${fmt(g.followers)}</div><div class="d">${fmt(igViews)} Reel views</div></div>
     <div class="kpi"><div class="l">Videos posted</div><div class="v">${pub}</div><div class="d">${sch} scheduled</div></div>
+    ${claudeCard()}
     <div class="kpi"><div class="l">Language</div><div class="v">${S.language === 'hi' ? 'हिंदी' : 'English'}</div>
       <div class="d">${S.schedule.language === 'auto' ? `${fmt(f)} / ${fmt(goal)} followers to switch to English` : 'fixed'}</div>
       ${S.schedule.language === 'auto' ? `<div class="bar"><i style="width:${Math.min(100, f / goal * 100).toFixed(2)}%"></i></div>` : ''}</div>`;

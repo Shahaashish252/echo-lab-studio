@@ -85,6 +85,7 @@ def state() -> dict:
         "table": table, "videos": videos, "jobs": jobs,
         "topics": read(HERE / "topics.json", {"queue": []})["queue"][:12],
         "insights": read(HERE / "analytics" / "insights.json", {}),
+        "claude": read(HERE / "analytics" / "claude_usage.json", {}),
         "flagged": read(HERE / "manager.json", {}).get("flagged", [])[-20:],
         "running": {"action": current["action"], "started": current["started"], "alive": bool(p and p.poll() is None),
                     "exit": None if not p else p.poll()},
