@@ -77,3 +77,83 @@ mixed (peak -4.3 dBFS)
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wav (-14 LUFS)
 
 == render
+rendering 2223 frames (0-74.10000000000001s) at 1080x1920, 2 sample(s)/frame
+
+  frame 30/2223  1.9 fps  eta 1150s   
+  frame 60/2223  1.9 fps  eta 1115s   
+  frame 90/2223  1.9 fps  eta 1098s   
+  frame 120/2223  1.9 fps  eta 1082s   
+  frame 150/2223  1.9 fps  eta 1067s   
+  frame 180/2223  1.9 fps  eta 1053s   
+  frame 210/2223  1.9 fps  eta 1039s   
+  frame 240/2223  1.9 fps  eta 1025s   
+  frame 270/2223  1.9 fps  eta 1013s   
+  frame 300/2223  1.9 fps  eta 1002s   
+  frame 330/2223  1.9 fps  eta 989s   
+  frame 360/2223  1.9 fps  eta 973s   
+  frame 390/2223  1.9 fps  eta 952s   
+  frame 420/2223  1.9 fps  eta 933s   
+  frame 450/2223  1.9 fps  eta 915s   
+  frame 480/2223  1.9 fps  eta 897s   
+  frame 510/2223  1.9 fps  eta 880s   
+  frame 540/2223  2.0 fps  eta 863s   
+  frame 570/2223  2.0 fps  eta 846s   
+  frame 600/2223  2.0 fps  eta 828s   
+  frame 630/2223  2.0 fps  eta 812s   
+  frame 660/2223  2.0 fps  eta 797s   
+  frame 690/2223  2.0 fps  eta 783s   
+  frame 720/2223  2.0 fps  eta 770s   
+  frame 750/2223  1.9 fps  eta 756s   
+  frame 780/2223  1.9 fps  eta 741s   
+  frame 810/2223  1.9 fps  eta 727s   
+  frame 840/2223  1.9 fps  eta 712s   
+  frame 870/2223  1.9 fps  eta 698s   
+  frame 900/2223  1.9 fps  eta 683s   
+  frame 930/2223  1.9 fps  eta 667s   
+  frame 960/2223  1.9 fps  eta 652s   
+  frame 990/2223  1.9 fps  eta 637s   
+  frame 1020/2223  1.9 fps  eta 622s   
+  frame 1050/2223  1.9 fps  eta 607s   
+  frame 1080/2223  1.9 fps  eta 592s   
+  frame 1110/2223  1.9 fps  eta 578s   
+  frame 1140/2223  1.9 fps  eta 563s   
+  frame 1170/2223  1.9 fps  eta 548s   
+  frame 1200/2223  1.9 fps  eta 532s   
+  frame 1230/2223  1.9 fps  eta 516s   
+  frame 1260/2223  1.9 fps  eta 500s   
+  frame 1290/2223  1.9 fps  eta 485s   
+  frame 1320/2223  1.9 fps  eta 470s   
+  frame 1350/2223  1.9 fps  eta 454s   
+  frame 1380/2223  1.9 fps  eta 439s   
+  frame 1410/2223  1.9 fps  eta 423s   
+  frame 1440/2223  1.9 fps  eta 408s   
+  frame 1470/2223  1.9 fps  eta 392s   
+  frame 1500/2223  1.9 fps  eta 377s   
+  frame 1530/2223  1.9 fps  eta 361s   
+  frame 1560/2223  1.9 fps  eta 346s   
+  frame 1590/2223  1.9 fps  eta 330s   
+  frame 1620/2223  1.9 fps  eta 315s   
+  frame 1650/2223  1.9 fps  eta 299s   
+  frame 1680/2223  1.9 fps  eta 283s   
+  frame 1710/2223  1.9 fps  eta 268s   
+  frame 1740/2223  1.9 fps  eta 252s   
+  frame 1770/2223  1.9 fps  eta 236s   
+  frame 1800/2223  1.9 fps  eta 221s   
+  frame 1830/2223  1.9 fps  eta 205s   
+  frame 1860/2223  1.9 fps  eta 189s   
+  frame 1890/2223  1.9 fps  eta 174s   
+  frame 1920/2223  1.9 fps  eta 158s   
+  frame 1950/2223  1.9 fps  eta 142s   
+  frame 1980/2223  1.9 fps  eta 127s   
+  frame 2010/2223  1.9 fps  eta 111s   
+  frame 2040/2223  1.9 fps  eta 95s   
+  frame 2070/2223  1.9 fps  eta 80s   
+  frame 2100/2223  1.9 fps  eta 64s   
+  frame 2130/2223  1.9 fps  eta 48s   
+  frame 2160/2223  1.9 fps  eta 33s   
+  frame 2190/2223  1.9 fps  eta 17s   
+  frame 2220/2223  1.9 fps  eta 2s   
+  frame 2223/2223  1.9 fps  eta 0s   
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/street-light-aur-ldr.mp4 (with sound)
+
+== youtube
