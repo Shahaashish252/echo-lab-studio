@@ -1,6 +1,18 @@
 {
   "queue": [
     {
+      "topic": "Fingerprint scanner on phones",
+      "hook": "Phone Aapki Ungli Ko Photo Se Nahi, Bijli Se Pehchanta Hai!"
+    },
+    {
+      "topic": "Hand dryer or tap that starts without touching (IR sensor)",
+      "hook": "Is Tap Ko Pata Hai Aapka Haath Aaya! Kaise?"
+    },
+    {
+      "topic": "Car reverse parking beep sensor",
+      "hook": "Gaadi Peeche Deewar Ko Bina Dekhe Kaise Pehchanti Hai?"
+    },
+    {
       "topic": "How an IR obstacle sensor detects objects",
       "hook": "Is sensor ko andhere mein bhi sab dikhta hai!"
     },
@@ -120,6 +132,8 @@
     "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip)",
     "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip)",
     "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip)",
-    "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip)"
+    "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip)",
+    "Automatic street light turning on at dusk (LDR)",
+    "Smartwatch heart rate sensor with green light"
   ]
 }

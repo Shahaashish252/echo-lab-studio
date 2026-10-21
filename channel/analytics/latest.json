@@ -1,15 +1,42 @@
 {
-  "updated": "21 Oct 2026, 07:31",
+  "updated": "21 Oct 2026, 20:45",
   "youtube": {
     "subs": 3,
-    "views": 756,
+    "views": 791,
     "videos": [
+      {
+        "title": "Street Light Ko Andhera Kaise Pata Chalta Hai? 🤔 #shorts",
+        "id": "uLRF6LMY4GE",
+        "status": "private",
+        "published": "2026-10-21",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
+      {
+        "title": "Ultrasonic Sensor Awaaz Se Kaise Dekhta Hai? 🦇 #shorts",
+        "id": "YFIx75qSV1s",
+        "status": "public",
+        "published": "2026-10-21",
+        "views": 2,
+        "likes": 1,
+        "comments": 2
+      },
+      {
+        "title": "Raat Bhar Charging Se Battery Kharab Hoti Hai? 🤔 #shorts",
+        "id": "0ll4rIi2V7U",
+        "status": "private",
+        "published": "2026-10-21",
+        "views": 1,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Street Light Ko Kaise Pata Chalta Hai Ki Raat Ho Gayi? 🤔 #shorts",
         "id": "ma7mTeADoOk",
         "status": "public",
         "published": "2026-10-20",
-        "views": 118,
+        "views": 188,
         "likes": 4,
         "comments": 0
       },
@@ -36,7 +63,7 @@
         "id": "JNXA3yDus8A",
         "status": "public",
         "published": "2026-10-19",
-        "views": 23,
+        "views": 25,
         "likes": 0,
         "comments": 0
       },
@@ -47,7 +74,7 @@
         "published": "2026-10-18",
         "views": 21,
         "likes": 1,
-        "comments": 1
+        "comments": 2
       },
       {
         "title": "Phone Ko Kaise Pata Chalta Hai Upar Kahan Hai? 🤔 #shorts",
@@ -56,14 +83,14 @@
         "published": "2026-10-18",
         "views": 77,
         "likes": 2,
-        "comments": 1
+        "comments": 2
       },
       {
         "title": "Motion Sensor Aapko Dekhta Nahi! PIR Sensor Kaise Kaam Karta Hai? 🤔 #shorts",
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 523,
+        "views": 526,
         "likes": 9,
         "comments": 2
       },
@@ -331,13 +358,24 @@
     "followers": 2,
     "posts": [
       {
+        "title": "Ultrasonic Sensor Awaaz Se Kaise Dekhta Hai? 🦇",
+        "url": "https://www.instagram.com/reel/Dev0l7zCXEb/",
+        "published": "2026-10-21",
+        "likes": 0,
+        "comments": 0,
+        "reach": 129,
+        "views": 149,
+        "saved": 0,
+        "shares": 0
+      },
+      {
         "title": "Street light ghadi nahi dekhti, phir bhi jaanti hai 🌙",
         "url": "https://www.instagram.com/reel/Det_30gEQu5/",
         "published": "2026-10-20",
         "likes": 4,
-        "comments": 1,
-        "reach": 52,
-        "views": 53,
+        "comments": 2,
+        "reach": 78,
+        "views": 84,
         "saved": 0,
         "shares": 0
       },
@@ -346,7 +384,7 @@
         "url": "https://www.instagram.com/reel/DetPyyLDzhe/",
         "published": "2026-10-20",
         "likes": 1,
-        "comments": 1,
+        "comments": 2,
         "reach": 100,
         "views": 130,
         "saved": 0,
@@ -357,9 +395,9 @@
         "url": "https://www.instagram.com/reel/Deq_wqIEadH/",
         "published": "2026-10-19",
         "likes": 2,
-        "comments": 2,
+        "comments": 4,
         "reach": 36,
-        "views": 52,
+        "views": 53,
         "saved": 2,
         "shares": 1
       },
@@ -368,9 +406,9 @@
         "url": "https://www.instagram.com/reel/Deq_k2zAktg/",
         "published": "2026-10-19",
         "likes": 2,
-        "comments": 3,
+        "comments": 6,
         "reach": 102,
-        "views": 118,
+        "views": 119,
         "saved": 1,
         "shares": 1
       },
@@ -379,7 +417,7 @@
         "url": "https://www.instagram.com/reel/Deq_YaZDN7K/",
         "published": "2026-10-19",
         "likes": 2,
-        "comments": 3,
+        "comments": 6,
         "reach": 109,
         "views": 128,
         "saved": 2,

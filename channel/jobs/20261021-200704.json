@@ -4,7 +4,7 @@
   "hook": "Street Light Ko Andhera Kaise Pata Chalta Hai? Aankh Nahi, Bas Ek Chhota Sa Part!",
   "lang": "hi",
   "started": "2026-10-21T20:07:04",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -39,5 +39,7 @@
       "at": "2026-10-21T20:28:26"
     }
   ],
-  "format": "story"
+  "format": "story",
+  "finished": "2026-10-21T20:28:31",
+  "uploadId": "uLRF6LMY4GE"
 }
