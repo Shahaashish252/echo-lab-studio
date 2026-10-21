@@ -197,6 +197,34 @@ def save_job(job: dict):
     write(JOBS / f"{job['id']}.json", job)
 
 
+def push_progress(job: dict):
+    """Show a cloud job's progress on the online dashboard. Uploads only channel/jobs/<id>.json + .log through the
+    GitHub contents API (no git: the video maker has files open/modified, and git syncing mid-render once reverted
+    them), then rebuilds the dashboard. Never fails the job."""
+    repo, tok = os.environ.get("GITHUB_REPOSITORY"), os.environ.get("GH_TOKEN")
+    if not (repo and tok):
+        return
+    import base64
+    h = {"Authorization": f"Bearer {tok}", "Accept": "application/vnd.github+json"}
+    try:
+        for ext in (".json", ".log"):
+            rel_path = f"channel/jobs/{job['id']}{ext}"
+            f = JOBS / f"{job['id']}{ext}"
+            if not f.exists():
+                continue
+            api = f"https://api.github.com/repos/{repo}/contents/{rel_path}"
+            cur = requests.get(api, headers=h, params={"ref": "main"}, timeout=30)
+            body = {"message": f"making: {job['stages'][-1]['name'][:40] if job['stages'] else 'start'}",
+                    "content": base64.b64encode(f.read_bytes()[-200000:]).decode(), "branch": "main",
+                    "committer": {"name": "echo-lab-bot", "email": "echo-lab-bot@users.noreply.github.com"}}
+            if cur.ok:
+                body["sha"] = cur.json()["sha"]
+            requests.put(api, headers=h, json=body, timeout=60)
+        subprocess.run(["gh", "workflow", "run", "pages.yml"], cwd=ROOT, capture_output=True, timeout=60)
+    except Exception as e:  # noqa: BLE001
+        print(f"(progress not shown online: {e})")
+
+
 def run_tracked(cmd: list, job: dict) -> int:
     """Runs the video maker, mirroring its output to jobs/<id>.log and its "== step" lines to the job's stages,
     so the web dashboard can show the making live."""
@@ -212,9 +240,7 @@ def run_tracked(cmd: list, job: dict) -> int:
             job["stages"].append({"name": line[3:].strip(), "at": now})
             save_job(job)
             if os.environ.get("GITHUB_ACTIONS"):
-                # show the step on the online dashboard: save state and rebuild the page (in the background)
-                subprocess.Popen(["bash", "-c", 'bash .github/scripts/save-state.sh "making: step" && gh workflow run pages.yml'],
-                                 cwd=ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                push_progress(job)
     log.close()
     return p.wait()
 
