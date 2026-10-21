@@ -36,3 +36,35 @@
   story plan: 16 animated beats
 
 == voice (Microsoft Edge: Madhur)
+Downloading soundfile (1.3MiB)
+Downloading aiohttp (1.8MiB)
+Downloading numpy (16.0MiB)
+Downloading onnxruntime (22.7MiB)
+Downloading espeakng-loader (9.6MiB)
+ Downloaded soundfile
+ Downloaded aiohttp
+ Downloaded espeakng-loader
+ Downloaded numpy
+ Downloaded onnxruntime
+Installed 27 packages in 27ms
+[0;93m2026-10-21 20:08:12.646651342 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        6.39s  स्ट्रीट लाइट को अंधेरा कैसे पता चलता है? आँख नहीं, बस एक छोटा सा पार्ट!
+s1-2        3.94s  लोग सोचते हैं कि कोई टाइमर या इंसान स्विच दबाता है।
+s1-3        3.16s  सच ये है कि फैसला एक लाइट सेंसर करता है।
+s1-4        3.73s  ये है असली एल डी आर, यानी लाइट डिपेंडेंट रेजिस्टर।
+s1-5        3.95s  इसकी सतह पर जैसी रोशनी पड़ती है, वैसा ये बदलता है।
+s1-6        3.49s  दिन में रोशनी ज़्यादा, तो रेजिस्टेंस बहुत कम होता है।
+s1-7        3.65s  शाम को रोशनी घटती है, तो रेजिस्टेंस बढ़ने लगता है।
+s1-8        3.39s  ये एक रेजिस्टर के साथ वोल्टेज डिवाइडर बनाता है।
+s1-9        4.24s  वोल्टेज बदलता है, तो कंपैरेटर उसे सेट लेवल से मिलाता है।
+s1-10       3.94s  कंपैरेटर का आउटपुट ट्रांजिस्टर को चलाता है, और वो रिले को।
+s1-11       3.46s  रिले क्लिक करता है और लैंप का सर्किट जुड़ जाता है।
+s1-12       3.27s  और स्ट्रीट लाइट जल उठती है, किसी के छुए बिना!
+s1-13       3.95s  इसीलिए बादल वाली अंधेरी दोपहर में भी लाइट जल सकती है।
+s1-14       4.58s  ऑन और ऑफ लेवल के बीच गैप रखते हैं, ताकि लाइट झिलमिलाए नहीं।
+s1-15       5.05s  और एल डी आर को लैंप की अपनी रोशनी से बचाओ, वरना लाइट खुद बंद होगी।
+s1-16       3.90s  अब बताओ, तुम्हारे घर की कौन सी चीज़ अंधेरा पहचानती है?
+s2-1        5.13s  तुम्हें कौन सा गैजेट सबसे रहस्यमयी लगता है? कमेंट में बताओ!
+wrote 17 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit, network
