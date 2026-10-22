@@ -1,25 +1,25 @@
 {
-  "updated": "2026-10-21T20:06",
-  "videos": 7,
-  "summary": "The PIR motion sensor video is the clear winner, with about 1,900 combined views and most of the shares and saves, mainly from Instagram. Every other video got very little: around 20 to 150 views each. The channel is new and the numbers are small, so these are early signals rather than proof. Still, 'everyday device that seems to act by magic' topics and curiosity-gap titles are doing better than anything else.",
-  "winningPattern": "A familiar sensor or gadget people see in daily life (motion detector, phone, touchscreen, automatic door), a Hindi hook that states a surprising claim ('Motion Sensor Aapko Dekhta Nahi!'), a title built as a myth-bust or a question, and Instagram Reels as the main source of views. The PIR video is the only one that broke out, so the exact reason is still unclear. The strongest guess is the bold 'it doesn't see you' claim combined with a very common device. The Hindi videos with a surprising claim or 'how does my phone know' angle got more shares and saves than plain explainers.",
+  "updated": "2026-10-22T13:50",
+  "videos": 8,
+  "summary": "The PIR motion sensor video is the clear winner, getting far more views, likes, shares and saves than anything else, mostly on Instagram. Other Hindi videos get small but steady Instagram views and almost nothing on YouTube, so YouTube is not picking them up yet. The English Arduino video got decent YouTube views but zero on Instagram, and the data is too small to say the language is the cause.",
+  "winningPattern": "A familiar sensor or everyday device explained as a surprising myth-buster in Hindi (Hinglish), with a title that opens with a bold claim or a question ('X Aapko Dekhta Nahi!', 'Kaise Kaam Karta Hai?'), a thinking emoji and #shorts. It performs best on Instagram Reels, with YouTube a smaller second channel. Subjects people meet daily (motion detection, phones, doors) beat abstract ones.",
   "doMore": [
-    "Open with a bold, slightly shocking claim about a device people use daily, as the PIR title did",
-    "Post Hindi Reels on Instagram first, since it brings about 3 to 10 times the views YouTube does",
-    "Pick sensors people meet in real life (lights, ATMs, doors, AC, fan remotes) rather than lab parts",
-    "Put a clear 'save this' or 'share with a friend' line at the end to raise shares and saves",
-    "Repeat the PIR format with sibling topics (motion, heat, light) and compare results before changing anything else"
+    "Open every title with a surprising claim or myth about a sensor people use daily, like the PIR one.",
+    "Make Instagram the main platform and post there first, since it brings about 3x the views of YouTube.",
+    "Ask viewers to share and save in the last line, such as 'Dost ko bhejo jo sochta hai...', because shares and saves are what the score rewards.",
+    "Pair each sensor topic with a real maker use, such as 'ise Arduino se banao', to attract students and makers.",
+    "Rewatch the PIR video to find what worked (first 2 seconds, pacing, visuals) and copy that structure into the next five videos."
   ],
   "stopDoing": [
-    "Posting English-only videos with no Instagram version, like the Arduino Uno one, since they reach a much smaller audience",
-    "Using plain or technical-sounding titles and hooks (e.g. 'Ultrasonic Sensor Awaaz Se Kaise Dekhta Hai?') without a shocking claim or a relatable scene"
+    "Stop using vague or weak-hook topics like street light or TV remote with a plain question title and no surprise.",
+    "Stop posting English-only videos to a channel whose audience responds in Hindi unless you run a proper test with a Hindi version of the same topic."
   ],
   "nextTopics": [
-    "Automatic street light turning on at dusk (LDR)",
-    "Smartwatch heart rate sensor with green light",
-    "Fingerprint scanner on phones",
-    "Hand dryer or tap that starts without touching (IR sensor)",
-    "Car reverse parking beep sensor"
+    "How a smoke detector senses fire",
+    "How an IR obstacle sensor works",
+    "How a fingerprint scanner reads your finger",
+    "How a metal detector finds metal",
+    "How a gas leak (MQ) sensor works"
   ],
   "bestTimes": {
     "times": [

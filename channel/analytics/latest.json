@@ -1,12 +1,30 @@
 {
-  "updated": "21 Oct 2026, 20:45",
+  "updated": "22 Oct 2026, 14:20",
   "youtube": {
     "subs": 3,
-    "views": 791,
+    "views": 1108,
     "videos": [
+      {
+        "title": "Smoke Detector Fire Kaise Sense Karta Hai? 🤔 #shorts",
+        "id": "wpe2f5b2ej0",
+        "status": "private",
+        "published": "2026-10-22",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Street Light Ko Andhera Kaise Pata Chalta Hai? 🤔 #shorts",
         "id": "uLRF6LMY4GE",
+        "status": "public",
+        "published": "2026-10-22",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
+      {
+        "title": "Smartwatch Dhadkan Roshni Se Kaise Gin Leti Hai? 🤔 #shorts",
+        "id": "kfyWy1aYV8c",
         "status": "private",
         "published": "2026-10-21",
         "views": 0,
@@ -36,8 +54,8 @@
         "id": "ma7mTeADoOk",
         "status": "public",
         "published": "2026-10-20",
-        "views": 188,
-        "likes": 4,
+        "views": 301,
+        "likes": 6,
         "comments": 0
       },
       {
@@ -54,7 +72,7 @@
         "id": "UK5WSZEUI9I",
         "status": "public",
         "published": "2026-10-20",
-        "views": 19,
+        "views": 20,
         "likes": 0,
         "comments": 0
       },
@@ -195,12 +213,6 @@
       }
     ],
     "daily": [
-      {
-        "day": "2026-09-23",
-        "views": 0,
-        "minutes": 0,
-        "subs": 0
-      },
       {
         "day": "2026-09-24",
         "views": 0,
@@ -350,6 +362,12 @@
         "views": 117,
         "minutes": 23,
         "subs": 0
+      },
+      {
+        "day": "2026-10-19",
+        "views": 52,
+        "minutes": 7,
+        "subs": 0
       }
     ]
   },
@@ -358,13 +376,24 @@
     "followers": 2,
     "posts": [
       {
+        "title": "Street light ko andhera kaise pata chalta hai? 💡",
+        "url": "https://www.instagram.com/reel/DeyZePtCfOH/",
+        "published": "2026-10-22",
+        "likes": 1,
+        "comments": 0,
+        "reach": 105,
+        "views": 129,
+        "saved": 0,
+        "shares": 0
+      },
+      {
         "title": "Ultrasonic Sensor Awaaz Se Kaise Dekhta Hai? 🦇",
         "url": "https://www.instagram.com/reel/Dev0l7zCXEb/",
         "published": "2026-10-21",
         "likes": 0,
         "comments": 0,
-        "reach": 129,
-        "views": 149,
+        "reach": 130,
+        "views": 150,
         "saved": 0,
         "shares": 0
       },

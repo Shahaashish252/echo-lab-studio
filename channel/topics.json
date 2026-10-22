@@ -1,6 +1,18 @@
 {
   "queue": [
     {
+      "topic": "How a fingerprint scanner reads your finger",
+      "hook": "Fingerprint Scanner Aapki Ungli Ki Photo Nahi Leta!"
+    },
+    {
+      "topic": "How a metal detector finds metal",
+      "hook": "Metal Detector Ko Sone Ka Pata Kaise Chalta Hai?"
+    },
+    {
+      "topic": "How a gas leak (MQ) sensor works",
+      "hook": "Gas Leak Ki Smell Sensor Ko Kaise Aati Hai?"
+    },
+    {
       "topic": "Fingerprint scanner on phones",
       "hook": "Phone Aapki Ungli Ko Photo Se Nahi, Bijli Se Pehchanta Hai!"
     },
@@ -134,6 +146,8 @@
     "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip)",
     "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip)",
     "Automatic street light turning on at dusk (LDR)",
-    "Smartwatch heart rate sensor with green light"
+    "Smartwatch heart rate sensor with green light",
+    "How a smoke detector senses fire",
+    "How an IR obstacle sensor works"
   ]
 }
