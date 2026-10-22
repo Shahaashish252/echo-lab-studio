@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Smoke detector / fire alarm (open with this hook: \"Smoke Alarm Dhuan Sunta Nahi, Phir Bhi Bajta Kaise Hai?\")\" (Claude Code)",
       "at": "2026-10-22T20:25:12"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-10-22T20:25:46"
     }
   ],
   "format": "story"
