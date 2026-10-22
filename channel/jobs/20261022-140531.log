@@ -68,3 +68,70 @@ mixed (peak -4.2 dBFS)
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wav (-14 LUFS)
 
 == render
+rendering 1833 frames (0-61.1s) at 1080x1920, 2 sample(s)/frame
+
+  frame 30/1833  2.5 fps  eta 728s   
+  frame 60/1833  2.5 fps  eta 713s   
+  frame 90/1833  2.4 fps  eta 713s   
+  frame 120/1833  2.4 fps  eta 702s   
+  frame 150/1833  2.4 fps  eta 691s   
+  frame 180/1833  2.4 fps  eta 679s   
+  frame 210/1833  2.4 fps  eta 667s   
+  frame 240/1833  2.4 fps  eta 657s   
+  frame 270/1833  2.4 fps  eta 645s   
+  frame 300/1833  2.4 fps  eta 635s   
+  frame 330/1833  2.4 fps  eta 622s   
+  frame 360/1833  2.4 fps  eta 609s   
+  frame 390/1833  2.4 fps  eta 593s   
+  frame 420/1833  2.4 fps  eta 578s   
+  frame 450/1833  2.5 fps  eta 564s   
+  frame 480/1833  2.5 fps  eta 551s   
+  frame 510/1833  2.5 fps  eta 539s   
+  frame 540/1833  2.5 fps  eta 526s   
+  frame 570/1833  2.5 fps  eta 512s   
+  frame 600/1833  2.5 fps  eta 499s   
+  frame 630/1833  2.5 fps  eta 486s   
+  frame 660/1833  2.5 fps  eta 472s   
+  frame 690/1833  2.5 fps  eta 461s   
+  frame 720/1833  2.5 fps  eta 449s   
+  frame 750/1833  2.5 fps  eta 437s   
+  frame 780/1833  2.5 fps  eta 425s   
+  frame 810/1833  2.5 fps  eta 414s   
+  frame 840/1833  2.5 fps  eta 403s   
+  frame 870/1833  2.5 fps  eta 391s   
+  frame 900/1833  2.5 fps  eta 380s   
+  frame 930/1833  2.5 fps  eta 368s   
+  frame 960/1833  2.5 fps  eta 355s   
+  frame 990/1833  2.5 fps  eta 343s   
+  frame 1020/1833  2.5 fps  eta 331s   
+  frame 1050/1833  2.5 fps  eta 319s   
+  frame 1080/1833  2.5 fps  eta 307s   
+  frame 1110/1833  2.5 fps  eta 295s   
+  frame 1140/1833  2.5 fps  eta 283s   
+  frame 1170/1833  2.5 fps  eta 271s   
+  frame 1200/1833  2.5 fps  eta 258s   
+  frame 1230/1833  2.5 fps  eta 246s   
+  frame 1260/1833  2.5 fps  eta 234s   
+  frame 1290/1833  2.5 fps  eta 221s   
+  frame 1320/1833  2.5 fps  eta 209s   
+  frame 1350/1833  2.5 fps  eta 197s   
+  frame 1380/1833  2.5 fps  eta 185s   
+  frame 1410/1833  2.4 fps  eta 173s   
+  frame 1440/1833  2.4 fps  eta 161s   
+  frame 1470/1833  2.4 fps  eta 149s   
+  frame 1500/1833  2.4 fps  eta 136s   
+  frame 1530/1833  2.4 fps  eta 124s   
+  frame 1560/1833  2.4 fps  eta 112s   
+  frame 1590/1833  2.4 fps  eta 100s   
+  frame 1620/1833  2.4 fps  eta 87s   
+  frame 1650/1833  2.4 fps  eta 75s   
+  frame 1680/1833  2.4 fps  eta 63s   
+  frame 1710/1833  2.4 fps  eta 51s   
+  frame 1740/1833  2.4 fps  eta 38s   
+  frame 1770/1833  2.4 fps  eta 26s   
+  frame 1800/1833  2.4 fps  eta 14s   
+  frame 1830/1833  2.4 fps  eta 1s   
+  frame 1833/1833  2.4 fps  eta 0s   
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/ir-sensor-andhere-mein.mp4 (with sound)
+
+== youtube
