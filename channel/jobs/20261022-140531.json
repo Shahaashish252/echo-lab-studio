@@ -1,0 +1,15 @@
+{
+  "id": "20261022-140531",
+  "topic": "How an IR obstacle sensor works",
+  "hook": "Ye Sensor Andhere Mein Bhi Deewar Kaise Dekhta Hai?",
+  "lang": "hi",
+  "started": "2026-10-22T14:05:31",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-10-22T14:05:31"
+    }
+  ],
+  "format": "story"
+}
