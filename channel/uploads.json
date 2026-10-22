@@ -232,10 +232,16 @@
     "id": "kfyWy1aYV8c",
     "meta": "channel/videos/auto-smartwatch-heart-rate-secret.json",
     "date": "2026-10-21",
-    "status": "approved",
+    "status": "published",
     "topic": "Smartwatch heart rate sensor with green light",
     "job": "20261021-202834",
-    "postAt": "2026-10-22T19:30"
+    "postAt": "2026-10-22T19:30",
+    "published": {
+      "youtube": "2026-10-22",
+      "instagram": "https://www.instagram.com/reel/DezJc75EYuw/",
+      "facebook": "https://www.facebook.com/reel/1502192615105464/"
+    },
+    "postedAt": "2026-10-22T19:31"
   },
   {
     "id": "wpe2f5b2ej0",
