@@ -1,9 +1,36 @@
 {
-  "updated": "22 Oct 2026, 14:20",
+  "updated": "22 Oct 2026, 20:40",
   "youtube": {
     "subs": 3,
     "views": 1108,
     "videos": [
+      {
+        "title": "Washroom Ka Tap Haath Kaise Pehchanta Hai? 🤔 #shorts",
+        "id": "TmtK-AOD-_k",
+        "status": "private",
+        "published": "2026-10-22",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
+      {
+        "title": "Smartwatch Dhadkan Roshni Se Kaise Gin Leti Hai? 🤔 #shorts",
+        "id": "kfyWy1aYV8c",
+        "status": "public",
+        "published": "2026-10-22",
+        "views": 2,
+        "likes": 1,
+        "comments": 0
+      },
+      {
+        "title": "IR Sensor Andhere Mein Deewar Kaise Dekhta Hai? 🤔 #shorts",
+        "id": "jD5lPQq_aQo",
+        "status": "private",
+        "published": "2026-10-22",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Smoke Detector Fire Kaise Sense Karta Hai? 🤔 #shorts",
         "id": "wpe2f5b2ej0",
@@ -18,25 +45,16 @@
         "id": "uLRF6LMY4GE",
         "status": "public",
         "published": "2026-10-22",
-        "views": 0,
-        "likes": 0,
-        "comments": 0
-      },
-      {
-        "title": "Smartwatch Dhadkan Roshni Se Kaise Gin Leti Hai? 🤔 #shorts",
-        "id": "kfyWy1aYV8c",
-        "status": "private",
-        "published": "2026-10-21",
-        "views": 0,
-        "likes": 0,
-        "comments": 0
+        "views": 5,
+        "likes": 2,
+        "comments": 1
       },
       {
         "title": "Ultrasonic Sensor Awaaz Se Kaise Dekhta Hai? 🦇 #shorts",
         "id": "YFIx75qSV1s",
         "status": "public",
         "published": "2026-10-21",
-        "views": 2,
+        "views": 6,
         "likes": 1,
         "comments": 2
       },
@@ -54,7 +72,7 @@
         "id": "ma7mTeADoOk",
         "status": "public",
         "published": "2026-10-20",
-        "views": 301,
+        "views": 338,
         "likes": 6,
         "comments": 0
       },
@@ -108,7 +126,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 526,
+        "views": 527,
         "likes": 9,
         "comments": 2
       },
@@ -373,18 +391,29 @@
   },
   "instagram": {
     "username": "echo.lab3d",
-    "followers": 2,
+    "followers": 3,
     "posts": [
+      {
+        "title": "Watch ki hari light ka raaz 💚",
+        "url": "https://www.instagram.com/reel/DezJc75EYuw/",
+        "published": "2026-10-22",
+        "likes": 0,
+        "comments": 0,
+        "reach": 34,
+        "views": 63,
+        "saved": 2,
+        "shares": 0
+      },
       {
         "title": "Street light ko andhera kaise pata chalta hai? 💡",
         "url": "https://www.instagram.com/reel/DeyZePtCfOH/",
         "published": "2026-10-22",
         "likes": 1,
         "comments": 0,
-        "reach": 105,
-        "views": 129,
-        "saved": 0,
-        "shares": 0
+        "reach": 216,
+        "views": 247,
+        "saved": 1,
+        "shares": 2
       },
       {
         "title": "Ultrasonic Sensor Awaaz Se Kaise Dekhta Hai? 🦇",
@@ -392,8 +421,8 @@
         "published": "2026-10-21",
         "likes": 0,
         "comments": 0,
-        "reach": 130,
-        "views": 150,
+        "reach": 131,
+        "views": 152,
         "saved": 0,
         "shares": 0
       },
@@ -404,7 +433,7 @@
         "likes": 4,
         "comments": 2,
         "reach": 78,
-        "views": 84,
+        "views": 85,
         "saved": 0,
         "shares": 0
       },
@@ -459,7 +488,7 @@
         "likes": 11,
         "comments": 2,
         "reach": 1202,
-        "views": 1411,
+        "views": 1412,
         "saved": 3,
         "shares": 4
       },

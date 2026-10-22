@@ -250,7 +250,7 @@
     "status": "approved",
     "topic": "How a smoke detector senses fire",
     "job": "20261022-135101",
-    "postAt": "2026-10-23T12:30"
+    "postAt": "2026-10-22T21:00"
   },
   {
     "id": "jD5lPQq_aQo",
@@ -259,6 +259,24 @@
     "status": "approved",
     "topic": "How an IR obstacle sensor works",
     "job": "20261022-140531",
-    "postAt": "2026-10-23T19:30"
+    "postAt": "2026-10-23T12:00"
+  },
+  {
+    "id": "TmtK-AOD-_k",
+    "meta": "channel/videos/auto-tap-sensor-ka-raaz.json",
+    "date": "2026-10-22",
+    "status": "approved",
+    "topic": "Automatic tap sensor in public washrooms",
+    "job": "20261022-200819",
+    "postAt": "2026-10-23T21:00"
+  },
+  {
+    "id": "DfurMASCqo4",
+    "meta": "channel/videos/auto-smoke-alarm-kaise-bajta-hai.json",
+    "date": "2026-10-22",
+    "status": "approved",
+    "topic": "Smoke detector / fire alarm",
+    "job": "20261022-202451",
+    "postAt": "2026-10-24T12:00"
   }
 ]

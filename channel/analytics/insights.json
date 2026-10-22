@@ -1,31 +1,32 @@
 {
-  "updated": "2026-10-22T13:50",
-  "videos": 8,
-  "summary": "The PIR motion sensor video is the clear winner, getting far more views, likes, shares and saves than anything else, mostly on Instagram. Other Hindi videos get small but steady Instagram views and almost nothing on YouTube, so YouTube is not picking them up yet. The English Arduino video got decent YouTube views but zero on Instagram, and the data is too small to say the language is the cause.",
-  "winningPattern": "A familiar sensor or everyday device explained as a surprising myth-buster in Hindi (Hinglish), with a title that opens with a bold claim or a question ('X Aapko Dekhta Nahi!', 'Kaise Kaam Karta Hai?'), a thinking emoji and #shorts. It performs best on Instagram Reels, with YouTube a smaller second channel. Subjects people meet daily (motion detection, phones, doors) beat abstract ones.",
+  "updated": "2026-10-22T20:08",
+  "videos": 9,
+  "summary": "Almost all of your views come from Instagram, not YouTube. The PIR motion sensor video is the clear winner, with about 1,400 Instagram views and the most likes, shares and saves, and the other Hindi 'how does this everyday thing work' videos do modestly on Instagram. YouTube is barely moving (most videos under 80 views), and the only English video got a little YouTube reach and nothing on Instagram. Newer videos are also still early, so their numbers may grow.",
+  "winningPattern": "Hindi explainer about a sensor people meet in daily life (motion, street light, phone, door), posted on Instagram. The title opens with a curiosity question or a surprising claim ('Aapko Dekhta Nahi!', 'Ungli Nahi, Bijli!'), uses simple Hinglish, and ends with 🤔 #shorts. The best one pairs a bold 'it doesn't work how you think' statement with a familiar object.",
   "doMore": [
-    "Open every title with a surprising claim or myth about a sensor people use daily, like the PIR one.",
-    "Make Instagram the main platform and post there first, since it brings about 3x the views of YouTube.",
-    "Ask viewers to share and save in the last line, such as 'Dost ko bhejo jo sochta hai...', because shares and saves are what the score rewards.",
-    "Pair each sensor topic with a real maker use, such as 'ise Arduino se banao', to attract students and makers.",
-    "Rewatch the PIR video to find what worked (first 2 seconds, pacing, visuals) and copy that structure into the next five videos."
+    "Lead with a surprising myth-busting claim in the title, like the PIR 'doesn't see you' hook",
+    "Pick everyday objects people touch or walk past daily (sensors in homes, malls, phones, streets)",
+    "Keep narration in Hindi/Hinglish, since every Hindi video reached Instagram and the English one did not",
+    "Prioritise Instagram, and end each video with a share or save prompt like 'dost ko bhejo' since shares and saves signal quality",
+    "Repost your top-performing topic from a new angle (e.g. PIR in lights, alarms, taps) to build on what worked"
   ],
   "stopDoing": [
-    "Stop using vague or weak-hook topics like street light or TV remote with a plain question title and no surprise.",
-    "Stop posting English-only videos to a channel whose audience responds in Hindi unless you run a proper test with a Hindi version of the same topic."
+    "Publishing English-only videos for now, as they got no Instagram traction",
+    "Niche or abstract topics with no visible daily-life link (heartbeat via light, ultrasonic) without a stronger hook",
+    "Posting several videos in a few days with weak hooks; spend the effort on a sharper first line instead"
   ],
   "nextTopics": [
-    "How a smoke detector senses fire",
-    "How an IR obstacle sensor works",
-    "How a fingerprint scanner reads your finger",
-    "How a metal detector finds metal",
-    "How a gas leak (MQ) sensor works"
+    "Automatic tap sensor in public washrooms",
+    "Smoke detector / fire alarm",
+    "Burglar alarm door sensor using magnet",
+    "Fingerprint scanner on phone",
+    "Automatic night lamp with LDR"
   ],
   "bestTimes": {
     "times": [
-      "12:30",
-      "19:30"
+      "12:00",
+      "21:00"
     ],
-    "reason": "Indian Shorts/Reels prime time (lunch 12:30 and evening 19:30 IST) until we have enough of our own data"
+    "reason": "from our own posts: these hours averaged the most views (8 posts)"
   }
 }

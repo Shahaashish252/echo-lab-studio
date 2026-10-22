@@ -1,6 +1,18 @@
 {
   "queue": [
     {
+      "topic": "Burglar alarm door sensor using magnet",
+      "hook": "Ek chhota magnet chor ko pakad leta hai! Kaise?"
+    },
+    {
+      "topic": "Fingerprint scanner on phone",
+      "hook": "Phone Aapki Ungli Nahi, Uski Photo Nahi Padhta!"
+    },
+    {
+      "topic": "Automatic night lamp with LDR",
+      "hook": "Ye lamp andhera hote hi khud kyun jal jaata hai?"
+    },
+    {
       "topic": "How a fingerprint scanner reads your finger",
       "hook": "Fingerprint Scanner Aapki Ungli Ki Photo Nahi Leta!"
     },
@@ -148,6 +160,8 @@
     "Automatic street light turning on at dusk (LDR)",
     "Smartwatch heart rate sensor with green light",
     "How a smoke detector senses fire",
-    "How an IR obstacle sensor works"
+    "How an IR obstacle sensor works",
+    "Automatic tap sensor in public washrooms",
+    "Smoke detector / fire alarm"
   ]
 }
