@@ -58,3 +58,68 @@ mixed (peak -4.2 dBFS)
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wav (-14 LUFS)
 
 == render
+rendering 1791 frames (0-59.7s) at 1080x1920, 2 sample(s)/frame
+
+  frame 30/1791  2.3 fps  eta 761s   
+  frame 60/1791  2.4 fps  eta 717s   
+  frame 90/1791  2.4 fps  eta 701s   
+  frame 120/1791  2.4 fps  eta 686s   
+  frame 150/1791  2.4 fps  eta 671s   
+  frame 180/1791  2.4 fps  eta 658s   
+  frame 210/1791  2.5 fps  eta 645s   
+  frame 240/1791  2.4 fps  eta 635s   
+  frame 270/1791  2.4 fps  eta 625s   
+  frame 300/1791  2.4 fps  eta 615s   
+  frame 330/1791  2.4 fps  eta 602s   
+  frame 360/1791  2.4 fps  eta 590s   
+  frame 390/1791  2.4 fps  eta 576s   
+  frame 420/1791  2.4 fps  eta 562s   
+  frame 450/1791  2.4 fps  eta 548s   
+  frame 480/1791  2.5 fps  eta 535s   
+  frame 510/1791  2.5 fps  eta 521s   
+  frame 540/1791  2.5 fps  eta 507s   
+  frame 570/1791  2.5 fps  eta 494s   
+  frame 600/1791  2.5 fps  eta 480s   
+  frame 630/1791  2.5 fps  eta 467s   
+  frame 660/1791  2.5 fps  eta 455s   
+  frame 690/1791  2.5 fps  eta 443s   
+  frame 720/1791  2.5 fps  eta 433s   
+  frame 750/1791  2.5 fps  eta 421s   
+  frame 780/1791  2.5 fps  eta 410s   
+  frame 810/1791  2.5 fps  eta 398s   
+  frame 840/1791  2.5 fps  eta 387s   
+  frame 870/1791  2.5 fps  eta 375s   
+  frame 900/1791  2.5 fps  eta 363s   
+  frame 930/1791  2.5 fps  eta 351s   
+  frame 960/1791  2.5 fps  eta 339s   
+  frame 990/1791  2.5 fps  eta 327s   
+  frame 1020/1791  2.5 fps  eta 314s   
+  frame 1050/1791  2.5 fps  eta 302s   
+  frame 1080/1791  2.5 fps  eta 290s   
+  frame 1110/1791  2.5 fps  eta 278s   
+  frame 1140/1791  2.5 fps  eta 266s   
+  frame 1170/1791  2.5 fps  eta 253s   
+  frame 1200/1791  2.4 fps  eta 241s   
+  frame 1230/1791  2.4 fps  eta 229s   
+  frame 1260/1791  2.4 fps  eta 217s   
+  frame 1290/1791  2.4 fps  eta 205s   
+  frame 1320/1791  2.4 fps  eta 192s   
+  frame 1350/1791  2.4 fps  eta 180s   
+  frame 1380/1791  2.4 fps  eta 168s   
+  frame 1410/1791  2.4 fps  eta 156s   
+  frame 1440/1791  2.4 fps  eta 143s   
+  frame 1470/1791  2.4 fps  eta 131s   
+  frame 1500/1791  2.4 fps  eta 119s   
+  frame 1530/1791  2.4 fps  eta 107s   
+  frame 1560/1791  2.4 fps  eta 94s   
+  frame 1590/1791  2.4 fps  eta 82s   
+  frame 1620/1791  2.4 fps  eta 70s   
+  frame 1650/1791  2.4 fps  eta 58s   
+  frame 1680/1791  2.4 fps  eta 45s   
+  frame 1710/1791  2.4 fps  eta 33s   
+  frame 1740/1791  2.4 fps  eta 21s   
+  frame 1770/1791  2.4 fps  eta 9s   
+  frame 1791/1791  2.4 fps  eta 0s   
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/smoke-detector-ka-raaz.mp4 (with sound)
+
+== youtube
