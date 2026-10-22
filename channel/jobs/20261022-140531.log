@@ -1,2 +1,33 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. An IR LED (about 940 nm, invisible to the eye) shines forward. Some modules pulse it, and the cheap ones just keep it on.
+  | 2. If an object is in front, it reflects part of that IR back.
+  | 3. A photodiode or phototransistor next to the LED picks up the reflection. More reflection means more current.
+  | 4. An LM393 comparator checks that signal against a threshold set by the potentiometer.
+  | 5. The output pin goes LOW (obstacle) or HIGH (clear), and the onboard LED lights up.
+  | 6. The same idea works in the dark, because the sensor sends its own light and doesn't need room light. That's your hook: "Andhere mein bhi."
+  | 
+  | **REAL PARTS**
+  | - The common 3-pin "IR obstacle avoidance module" uses an IR LED, a photodiode and an LM393.
+  | - TCRT5000 is a reflective sensor that combines both emitters in one package. It is used in line-follower modules.
+  | - VS1838B / TSOP1838 are 38 kHz receivers. They reject ambient light, but they are for remote controls, not for the TCRT5000 type of module.
+  | 
+  | **MYTH**
+  | - Myth: it measures distance.
+  | - Truth: the cheap module only gives yes/no, tuned by the pot. Reflectivity decides what it sees. Black or matte surfaces absorb IR and can be missed, while white or shiny ones are seen from farther away.
+  | 
+  | **SURPRISING FACT**
+  | - The TCRT5000 itself only works at about 2–15 mm. Vendor listings disagree on that range, so check the datasheet. Cheap obstacle modules reach a few cm to tens of cm.
+  | - Wavelength is listed as 880 nm in some sources and 950 nm in others.
+  | 
+  | **TIP**
+  | - Sunlight contains lots of IR and can saturate the sensor. Shade the sensor, or aim it away from direct sun.
+  | - Test with white paper, then black cloth, and adjust the pot for each.
+  | 
+  | **Sources**
+  | - [LCSC TCRT5000 blog](https://www.lcsc.com/blog/tcrt5000-infrared-sensor-specs-wiring-and-uses/)
+  | - [Soldered TCRT5000 docs](https://docs.soldered.com/tcrt5000/how-it-works/)
+  | - [ProtoSupplies IR receiver](https://protosupplies.com/product/ir-receiver-module/)
+
+== storyboard: "How an IR obstacle sensor works (open with this hook: "Ye Sensor Andhere Mein Bhi Deewar Kaise Dekhta Hai?")" (Claude Code)
