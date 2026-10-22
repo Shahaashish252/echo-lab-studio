@@ -1,0 +1,15 @@
+{
+  "id": "20261022-200819",
+  "topic": "Automatic tap sensor in public washrooms",
+  "hook": "Ye nal haath dekh ke nahi, kuch aur dekh ke chalta hai!",
+  "lang": "hi",
+  "started": "2026-10-22T20:08:19",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-10-22T20:08:19"
+    }
+  ],
+  "format": "story"
+}
