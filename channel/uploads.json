@@ -247,10 +247,16 @@
     "id": "wpe2f5b2ej0",
     "meta": "channel/videos/auto-smoke-detector-ka-raaz.json",
     "date": "2026-10-22",
-    "status": "approved",
+    "status": "published",
     "topic": "How a smoke detector senses fire",
     "job": "20261022-135101",
-    "postAt": "2026-10-22T21:00"
+    "postAt": "2026-10-22T21:00",
+    "published": {
+      "youtube": "2026-10-23",
+      "instagram": "https://www.instagram.com/reel/DezwzUmkb2W/",
+      "facebook": "https://www.facebook.com/reel/943177618582120/"
+    },
+    "postedAt": "2026-10-23T01:15"
   },
   {
     "id": "jD5lPQq_aQo",
