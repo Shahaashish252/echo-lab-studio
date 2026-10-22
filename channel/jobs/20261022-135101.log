@@ -1,2 +1,22 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS (ionization type: "kuch aur" = ions, not smoke)**
+  | 1. A tiny Americium-241 source emits alpha particles into a small chamber.
+  | 2. The alpha particles ionize the air, so it carries a weak, steady current between two plates.
+  | 3. Smoke particles attach to the ions and slow them down. The current drops.
+  | 4. The control chip sees the drop and sounds the buzzer.
+  | 5. Photoelectric type: an LED beam, and smoke scatters light onto a photodiode.
+  | 
+  | **REAL PARTS:**
+  | - Am-241 ionization chamber
+  | - Photodiode and LED optical chamber
+  | - Detector ICs (I recall the MC145010 and RE46C series, but I didn't verify these)
+  | - MQ-2 is a hobby gas/smoke sensor, a different technology from a real alarm. I'm going from memory here, not the search.
+  | 
+  | **MYTH:** "The alarm senses smoke directly, and all alarms work alike." In fact ionization types sense changes in ion current, and photoelectric types sense scattered light. The two types suit different fires.
+  | 
+  | **SURPRISING FACT:** In NIST tests, ionization alarms sounded about 50 s earlier in flaming fires. Photoelectric alarms sounded about 30 min earlier in smoldering fires. The Am-241 source is roughly 1/5000 of a gram.
+  | 
+  | **TIP:** Use photoelectric or combination alarms near bedrooms, and test them monthly. Keep them away from kitchens and steamy bathrooms, which cause false alarms.
+
+== storyboard: "How a smoke detector senses fire (open with this hook: "Smoke Detector Dhuan Nahi, Kuch Aur Dekhta Hai!")" (Claude Code)
