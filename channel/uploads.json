@@ -217,10 +217,16 @@
     "id": "uLRF6LMY4GE",
     "meta": "channel/videos/auto-street-light-aur-ldr.json",
     "date": "2026-10-21",
-    "status": "approved",
+    "status": "published",
     "topic": "Automatic street light turning on at dusk (LDR)",
     "job": "20261021-200704",
-    "postAt": "2026-10-22T12:30"
+    "postAt": "2026-10-22T12:30",
+    "published": {
+      "youtube": "2026-10-22",
+      "instagram": "https://www.instagram.com/reel/DeyZePtCfOH/",
+      "facebook": "https://www.facebook.com/reel/1420653609685093/"
+    },
+    "postedAt": "2026-10-22T12:32"
   },
   {
     "id": "kfyWy1aYV8c",
