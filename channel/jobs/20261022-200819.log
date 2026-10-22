@@ -1,2 +1,35 @@
 
 == research: reading about the topic on the web
+  | **Hook:** "Ye nal haath dekh ke nahi, kuch aur dekh ke chalta hai!"
+  | 
+  | **HOW IT WORKS**
+  | 1. An IR LED sends out invisible light pulses continuously.
+  | 2. Your hand reflects some of that light back.
+  | 3. A photodiode or phototransistor catches the reflection.
+  | 4. The circuit compares it to a preset threshold. A microcontroller or comparator decides whether something is there.
+  | 5. If it is, a driver transistor energizes the solenoid valve coil and water flows.
+  | 6. When the reflection drops, the valve closes. It resets for the next user.
+  | 
+  | **REAL PARTS**
+  | - IR LED plus photodiode pair. I didn't verify the specific part numbers, so use these as generic examples only: TCRT5000, E18-D80NK (a hobby module), or an LM393 comparator.
+  | - A microcontroller.
+  | - A transistor or MOSFET driver.
+  | - A 6V DC solenoid valve, usually battery-powered.
+  | 
+  | **MYTH**
+  | - Myth: it senses body heat or "sees" your hand.
+  | - Truth: most faucets are active IR. They sense reflected light, not heat. One patent notes the water stream itself can reflect IR and keep the tap running.
+  | 
+  | **SURPRISING FACT**
+  | - KWC's IQUA faucet has a factory flow time of 1 second, and that time is adjustable. I found no verified timeout for public-washroom brands.
+  | 
+  | **TIP**
+  | - If the tap won't respond, wipe the sensor window and avoid shiny surfaces. Mirrors and polished steel basins can cause false triggers, per KWC. Keep your hand within the installer-set range.
+  | 
+  | Sources:
+  | - [robinage.com](https://www.robinage.com/?p=202867)
+  | - [Moen](https://www.moen.com/professional/tools-and-resources/articles/design-trends/electronic-faucets-that-work-every-time)
+  | - [KWC](https://kwc.com/en/iqua_p125259)
+  | - [Hunker](https://www.hunker.com/13417611/troubleshooting-a-touchless-faucet/)
+
+== storyboard: "Automatic tap sensor in public washrooms (open with this hook: "Ye nal haath dekh ke nahi, kuch aur dekh ke chalta hai!")" (Claude Code)
