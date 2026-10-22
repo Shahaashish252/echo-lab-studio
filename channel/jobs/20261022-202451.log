@@ -1,2 +1,31 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS** (the hook's answer: the alarm detects smoke *particles*, not the smoke you smell)
+  | 1. A sensing chamber lets air in but blocks room light.
+  | 2. Ionization type: a tiny americium-241 source (about 1/5000 g) ionizes the air between two plates, so a small steady current flows.
+  | 3. Smoke particles attach to the ions, the current drops, and the circuit triggers.
+  | 4. Photoelectric type: an LED beam normally misses the photodiode. Smoke scatters light onto it.
+  | 5. The control IC sees the change, sounds the piezo buzzer (about 85 dB), and flashes the LED.
+  | 
+  | **REAL PARTS**
+  | - Americium-241 source (ionization type)
+  | - IR LED + photodiode (photoelectric type)
+  | - Piezo buzzer
+  | - Hobby alternative: MQ-2 gas/smoke sensor. It is not a certified alarm.
+  | - I did not find a source for the detector IC part numbers, so I'm leaving them out.
+  | 
+  | **MYTH**
+  | - Myth: "Alarms sense heat or smell."
+  | - Truth: they sense particles. Ionization types react faster to flaming fires and photoelectric types to smouldering fires. The sources I found say NFPA recommends both technologies, or a single alarm certified to the current UL 217 standard.
+  | 
+  | **SURPRISING FACT**
+  | - Replace the whole alarm 10 years after its manufacture date, not its purchase or installation date. The date is printed on the back of the unit.
+  | 
+  | **TIP**
+  | - Test it monthly. If it chirps, replace the battery. If it still chirps with a fresh battery, or a sealed-battery unit chirps, replace the whole unit.
+  | 
+  | Sources:
+  | - [Koorsen: ionization vs photoelectric](https://blog.koorsen.com/what-is-the-difference-between-ionization-and-photoelectric-smoke-alarms)
+  | - [Safety+Health: when to replace](https://safetyandhealthmagazine.com/articles/14777-when-should-a-smoke-alarm-be-replaced-survey-shows-90-of-people-dont-know)
+
+== storyboard: "Smoke detector / fire alarm (open with this hook: "Smoke Alarm Dhuan Sunta Nahi, Phir Bhi Bajta Kaise Hai?")" (Claude Code)
