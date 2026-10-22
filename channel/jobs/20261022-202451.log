@@ -66,3 +66,67 @@ mixed (peak -3.7 dBFS)
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wav (-14 LUFS)
 
 == render
+rendering 1745 frames (0-58.166666666666664s) at 1080x1920, 2 sample(s)/frame
+
+  frame 30/1745  2.1 fps  eta 816s   
+  frame 60/1745  2.1 fps  eta 799s   
+  frame 90/1745  2.1 fps  eta 800s   
+  frame 120/1745  2.1 fps  eta 789s   
+  frame 150/1745  2.1 fps  eta 775s   
+  frame 180/1745  2.1 fps  eta 761s   
+  frame 210/1745  2.0 fps  eta 750s   
+  frame 240/1745  2.0 fps  eta 737s   
+  frame 270/1745  2.0 fps  eta 725s   
+  frame 300/1745  2.0 fps  eta 712s   
+  frame 330/1745  2.0 fps  eta 698s   
+  frame 360/1745  2.0 fps  eta 685s   
+  frame 390/1745  2.0 fps  eta 668s   
+  frame 420/1745  2.0 fps  eta 653s   
+  frame 450/1745  2.0 fps  eta 636s   
+  frame 480/1745  2.0 fps  eta 619s   
+  frame 510/1745  2.1 fps  eta 602s   
+  frame 540/1745  2.1 fps  eta 585s   
+  frame 570/1745  2.1 fps  eta 569s   
+  frame 600/1745  2.1 fps  eta 553s   
+  frame 630/1745  2.1 fps  eta 537s   
+  frame 660/1745  2.1 fps  eta 522s   
+  frame 690/1745  2.1 fps  eta 508s   
+  frame 720/1745  2.1 fps  eta 494s   
+  frame 750/1745  2.1 fps  eta 480s   
+  frame 780/1745  2.1 fps  eta 466s   
+  frame 810/1745  2.1 fps  eta 452s   
+  frame 840/1745  2.1 fps  eta 438s   
+  frame 870/1745  2.1 fps  eta 423s   
+  frame 900/1745  2.1 fps  eta 409s   
+  frame 930/1745  2.1 fps  eta 394s   
+  frame 960/1745  2.1 fps  eta 380s   
+  frame 990/1745  2.1 fps  eta 366s   
+  frame 1020/1745  2.1 fps  eta 352s   
+  frame 1050/1745  2.1 fps  eta 338s   
+  frame 1080/1745  2.1 fps  eta 324s   
+  frame 1110/1745  2.1 fps  eta 309s   
+  frame 1140/1745  2.1 fps  eta 295s   
+  frame 1170/1745  2.1 fps  eta 280s   
+  frame 1200/1745  2.0 fps  eta 266s   
+  frame 1230/1745  2.0 fps  eta 252s   
+  frame 1260/1745  2.0 fps  eta 237s   
+  frame 1290/1745  2.0 fps  eta 223s   
+  frame 1320/1745  2.0 fps  eta 208s   
+  frame 1350/1745  2.0 fps  eta 193s   
+  frame 1380/1745  2.0 fps  eta 179s   
+  frame 1410/1745  2.0 fps  eta 164s   
+  frame 1440/1745  2.0 fps  eta 150s   
+  frame 1470/1745  2.0 fps  eta 135s   
+  frame 1500/1745  2.0 fps  eta 120s   
+  frame 1530/1745  2.0 fps  eta 106s   
+  frame 1560/1745  2.0 fps  eta 91s   
+  frame 1590/1745  2.0 fps  eta 76s   
+  frame 1620/1745  2.0 fps  eta 61s   
+  frame 1650/1745  2.0 fps  eta 47s   
+  frame 1680/1745  2.0 fps  eta 32s   
+  frame 1710/1745  2.0 fps  eta 17s   
+  frame 1740/1745  2.0 fps  eta 2s   
+  frame 1745/1745  2.0 fps  eta 0s   
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/smoke-alarm-kaise-bajta-hai.mp4 (with sound)
+
+== youtube
