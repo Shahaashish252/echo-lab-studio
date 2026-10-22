@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Automatic tap sensor in public washrooms (open with this hook: \"Ye nal haath dekh ke nahi, kuch aur dekh ke chalta hai!\")\" (Claude Code)",
       "at": "2026-10-22T20:08:41"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-10-22T20:09:12"
     }
   ],
   "format": "story"
