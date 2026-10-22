@@ -33,3 +33,7 @@
   | - [Hunker](https://www.hunker.com/13417611/troubleshooting-a-touchless-faucet/)
 
 == storyboard: "Automatic tap sensor in public washrooms (open with this hook: "Ye nal haath dekh ke nahi, kuch aur dekh ke chalta hai!")" (Claude Code)
+  s1 sim     Tap haath nahi *DEKHTA*!
+  s2 outro   Ab tap ka *RAAZ* khula!
+
+== simulation (Claude Code writes it, renders it, reviews it)
