@@ -20,3 +20,7 @@
   | **TIP:** Use photoelectric or combination alarms near bedrooms, and test them monthly. Keep them away from kitchens and steamy bathrooms, which cause false alarms.
 
 == storyboard: "How a smoke detector senses fire (open with this hook: "Smoke Detector Dhuan Nahi, Kuch Aur Dekhta Hai!")" (Claude Code)
+  s1 sim     Dhuan nahi, *KUCH AUR*!
+  s2 outro   Ab aap *SOCHO*!
+
+== simulation (Claude Code writes it, renders it, reviews it)
