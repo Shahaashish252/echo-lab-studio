@@ -1,0 +1,15 @@
+{
+  "id": "20261022-202451",
+  "topic": "Smoke detector / fire alarm",
+  "hook": "Smoke Alarm Dhuan Sunta Nahi, Phir Bhi Bajta Kaise Hai?",
+  "lang": "hi",
+  "started": "2026-10-22T20:24:51",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-10-22T20:24:51"
+    }
+  ],
+  "format": "story"
+}
