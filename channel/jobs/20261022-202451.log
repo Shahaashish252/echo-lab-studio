@@ -29,3 +29,7 @@
   | - [Safety+Health: when to replace](https://safetyandhealthmagazine.com/articles/14777-when-should-a-smoke-alarm-be-replaced-survey-shows-90-of-people-dont-know)
 
 == storyboard: "Smoke detector / fire alarm (open with this hook: "Smoke Alarm Dhuan Sunta Nahi, Phir Bhi Bajta Kaise Hai?")" (Claude Code)
+  s1 sim     Alarm *DHUAN* sunta nahi?
+  s2 outro   Alarm ki *DATE* dekhi?
+
+== simulation (Claude Code writes it, renders it, reviews it)
