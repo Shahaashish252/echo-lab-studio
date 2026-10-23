@@ -1,6 +1,22 @@
 {
   "queue": [
     {
+      "topic": "Lift (elevator) door sensor stopping on your hand",
+      "hook": "Lift ka darwaza aapko dekhe bina kaise ruk jata hai?"
+    },
+    {
+      "topic": "Automatic tap / hand dryer sensor",
+      "hook": "Yeh tap aapka haath dekhta nahi, phir bhi paani deta hai!"
+    },
+    {
+      "topic": "Car reverse parking beeper",
+      "hook": "Gaadi peeche ki deewar ko bina dekhe kaise jaan leti hai?"
+    },
+    {
+      "topic": "Phone proximity sensor turning off screen during calls",
+      "hook": "Call pe kaan lagate hi screen band kyun ho jati hai?"
+    },
+    {
       "topic": "Fridge door light and magnetic reed switch",
       "hook": "Fridge ki light band kaise hoti hai jab darwaza band ho?"
     },

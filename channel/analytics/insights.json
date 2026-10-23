@@ -1,25 +1,26 @@
 {
-  "updated": "2026-10-23T13:41",
+  "updated": "2026-10-23T19:52",
   "videos": 11,
-  "summary": "Almost all of the audience is on Instagram, where the Hindi videos get 100 to 1,400 views, while YouTube Shorts barely moves (most videos under 25 views). The PIR motion sensor video is the clear winner, with about 1,900 total views and the most likes, shares and saves, followed by the street light video. Sample sizes are tiny and the videos are only a few days old, so treat these as early signals, not proof.",
-  "winningPattern": "Hindi, Instagram-first explainers about a common sensor people meet in daily life (PIR motion sensor, street light sensor). The title opens with a surprising claim or a 'how does it know?' question ('Motion Sensor Aapko Dekhta Nahi!'), uses Hinglish with a thinking emoji, and promises one simple answer. Videos that tie a sensor to something viewers see every day get the shares and saves.",
+  "summary": "Instagram is carrying the channel: almost every Hindi video gets 100-1,400 views there, while YouTube Shorts barely moves (mostly under 30 views). The best video, the PIR motion sensor one, got about 1,400 Instagram views and 529 YouTube views, far above the rest. The only English video did better on YouTube (157) than most Hindi ones, but it has no Instagram numbers, so the data is too thin to say language is the problem. Shares and saves are very low everywhere, so viewers watch but rarely act.",
+  "winningPattern": "Everyday device or sensor people meet daily (motion sensor, street light, phone orientation) + a curiosity hook that flips an assumption ('Aapko Dekhta Nahi!', 'Kaise Pata Chalta Hai?') + Hinglish question title with 🤔 and #shorts, posted mainly on Instagram Reels. The top video also has a surprising claim in the title, which the weaker ones lack.",
   "doMore": [
-    "Pick everyday things people have seen (lights, doors, taps, ATMs) and explain the hidden sensor inside",
-    "Open with a bold, slightly shocking claim in the title, like the PIR 'doesn't see you' line",
-    "Post Instagram-first and keep Hindi narration, since English Arduino video got no IG views and few YT views",
-    "End with a prompt that invites saves or shares, such as 'Save this for your next project' or 'Send to a friend who wonders about this'",
-    "Reuse the PIR angle with a part 2 or a related myth-busting follow-up, then compare results"
+    "Lead titles and first lines with a surprising claim or myth-flip, like the PIR video, instead of a plain 'how does X work' question",
+    "Pick familiar devices people touch daily (lift sensor, fridge door, ATM, fan regulator, AC remote) over abstract modules",
+    "Treat Instagram as the main platform and test YouTube separately with a few English or bilingual titles, since the Arduino Uno video got 157 views there",
+    "End each video with a save or share prompt such as 'Save karo exam ke liye' or 'Dost ko bhejo jo yeh sochta hai', since saves and shares are near zero",
+    "Post on a steady schedule and compare same-topic videos across a week before judging a format, as most videos are only 1-6 days old"
   ],
   "stopDoing": [
-    "Generic title patterns that only ask a plain question (Smoke Detector, Smartwatch, IR Sensor) which got low shares and saves",
-    "Posting English-language videos or relying on YouTube Shorts for reach until you find a hook that works there"
+    "Judging YouTube performance from Hindi titles alone; test, don't assume",
+    "Plain neutral titles with no surprise (Smartwatch, Smoke Detector, Mall Door got little reaction)",
+    "Reading too much into single videos with a few days of data"
   ],
   "nextTopics": [
-    "Automatic tap sensor in washrooms",
-    "ATM/lift door safety sensor",
-    "Fridge door light and magnetic reed switch",
-    "Clap switch / sound sensor light",
-    "Car reverse parking sensor beep"
+    "Lift (elevator) door sensor stopping on your hand",
+    "Automatic tap / hand dryer sensor",
+    "Fingerprint scanner on phone",
+    "Car reverse parking beeper",
+    "Phone proximity sensor turning off screen during calls"
   ],
   "bestTimes": {
     "times": [
