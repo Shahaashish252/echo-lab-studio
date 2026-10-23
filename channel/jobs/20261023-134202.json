@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Automatic tap sensor in washrooms (open with this hook: \"Ye tap aapka haath dekhta nahi, kuch aur hi sense karta hai!\")\" (Claude Code)",
       "at": "2026-10-23T13:42:19"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-10-23T13:42:50"
     }
   ],
   "format": "story"
