@@ -277,10 +277,16 @@
     "id": "TmtK-AOD-_k",
     "meta": "channel/videos/auto-tap-sensor-ka-raaz.json",
     "date": "2026-10-22",
-    "status": "approved",
+    "status": "published",
     "topic": "Automatic tap sensor in public washrooms",
     "job": "20261022-200819",
-    "postAt": "2026-10-24T01:00"
+    "postAt": "2026-10-24T01:00",
+    "published": {
+      "youtube": "2026-10-24",
+      "instagram": "https://www.instagram.com/reel/De2V0kfDU4B/",
+      "facebook": "https://www.facebook.com/reel/1123957296754477/"
+    },
+    "postedAt": "2026-10-24T01:17"
   },
   {
     "id": "DfurMASCqo4",
