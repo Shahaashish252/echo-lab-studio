@@ -65,3 +65,63 @@ mixed (peak -4.2 dBFS)
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wav (-14 LUFS)
 
 == render
+rendering 1630 frames (0-54.333333333333336s) at 1080x1920, 2 sample(s)/frame
+
+  frame 30/1630  1.9 fps  eta 855s   
+  frame 60/1630  2.0 fps  eta 794s   
+  frame 90/1630  2.0 fps  eta 778s   
+  frame 120/1630  2.0 fps  eta 761s   
+  frame 150/1630  2.0 fps  eta 745s   
+  frame 180/1630  2.0 fps  eta 730s   
+  frame 210/1630  2.0 fps  eta 718s   
+  frame 240/1630  2.0 fps  eta 705s   
+  frame 270/1630  2.0 fps  eta 691s   
+  frame 300/1630  2.0 fps  eta 677s   
+  frame 330/1630  2.0 fps  eta 662s   
+  frame 360/1630  2.0 fps  eta 645s   
+  frame 390/1630  2.0 fps  eta 625s   
+  frame 420/1630  2.0 fps  eta 606s   
+  frame 450/1630  2.0 fps  eta 591s   
+  frame 480/1630  2.0 fps  eta 575s   
+  frame 510/1630  2.0 fps  eta 558s   
+  frame 540/1630  2.0 fps  eta 541s   
+  frame 570/1630  2.0 fps  eta 524s   
+  frame 600/1630  2.0 fps  eta 508s   
+  frame 630/1630  2.0 fps  eta 493s   
+  frame 660/1630  2.0 fps  eta 479s   
+  frame 690/1630  2.0 fps  eta 464s   
+  frame 720/1630  2.0 fps  eta 450s   
+  frame 750/1630  2.0 fps  eta 435s   
+  frame 780/1630  2.0 fps  eta 420s   
+  frame 810/1630  2.0 fps  eta 406s   
+  frame 840/1630  2.0 fps  eta 391s   
+  frame 870/1630  2.0 fps  eta 376s   
+  frame 900/1630  2.0 fps  eta 362s   
+  frame 930/1630  2.0 fps  eta 347s   
+  frame 960/1630  2.0 fps  eta 332s   
+  frame 990/1630  2.0 fps  eta 317s   
+  frame 1020/1630  2.0 fps  eta 303s   
+  frame 1050/1630  2.0 fps  eta 288s   
+  frame 1080/1630  2.0 fps  eta 273s   
+  frame 1110/1630  2.0 fps  eta 258s   
+  frame 1140/1630  2.0 fps  eta 243s   
+  frame 1170/1630  2.0 fps  eta 229s   
+  frame 1200/1630  2.0 fps  eta 214s   
+  frame 1230/1630  2.0 fps  eta 199s   
+  frame 1260/1630  2.0 fps  eta 184s   
+  frame 1290/1630  2.0 fps  eta 169s   
+  frame 1320/1630  2.0 fps  eta 154s   
+  frame 1350/1630  2.0 fps  eta 139s   
+  frame 1380/1630  2.0 fps  eta 124s   
+  frame 1410/1630  2.0 fps  eta 109s   
+  frame 1440/1630  2.0 fps  eta 94s   
+  frame 1470/1630  2.0 fps  eta 79s   
+  frame 1500/1630  2.0 fps  eta 65s   
+  frame 1530/1630  2.0 fps  eta 50s   
+  frame 1560/1630  2.0 fps  eta 35s   
+  frame 1590/1630  2.0 fps  eta 20s   
+  frame 1620/1630  2.0 fps  eta 5s   
+  frame 1630/1630  2.0 fps  eta 0s   
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/automatic-tap-ka-raaz.mp4 (with sound)
+
+== youtube
