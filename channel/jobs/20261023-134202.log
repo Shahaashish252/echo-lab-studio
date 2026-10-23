@@ -27,3 +27,7 @@
   | Sources: [Electronics For U](https://electronicsforu.com/electronics-projects/automatic-infrared-faucet-controller), [Sloan IR FAQ](https://www.sloan.com/sites/default/files/2019-02/IR-FAQs-2-19.pdf), [US patent 5025516](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/5025516)
 
 == storyboard: "Automatic tap sensor in washrooms (open with this hook: "Ye tap aapka haath dekhta nahi, kuch aur hi sense karta hai!")" (Claude Code)
+  s1 sim     Tap haath *DEKHTA* nahi!
+  s2 outro   Light ka *KHEL*!
+
+== simulation (Claude Code writes it, renders it, reviews it)
