@@ -1,0 +1,15 @@
+{
+  "id": "20261023-135710",
+  "topic": "ATM/lift door safety sensor",
+  "hook": "Lift ka darwaza aapko kaise rok deta hai? Jaadu nahi hai!",
+  "lang": "hi",
+  "started": "2026-10-23T13:57:10",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-10-23T13:57:11"
+    }
+  ],
+  "format": "story"
+}
