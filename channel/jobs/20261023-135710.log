@@ -29,3 +29,7 @@
   | Sources: [Avire](https://avire-global.com/products/elevator-2d-3d-door-detection), [Fujitec](https://www.fujitecamerica.com/wp-content/uploads/2022/01/Infrared-Door-Detector.pdf), [Tarion](https://home-explorer.tarion.com/node/637), [TSSA](https://Tssa.org/sites/default/files/2023-10/ED-Procedure-Testing-Door-Closing-Force-Advisory-Rev2-2008.pdf)
 
 == storyboard: "ATM/lift door safety sensor (open with this hook: "Lift ka darwaza aapko kaise rok deta hai? Jaadu nahi hai!")" (Claude Code)
+  s1 sim     Lift ka darwaza *JAADU* nahi!
+  s2 outro   Ab aap *jaante* ho!
+
+== simulation (Claude Code writes it, renders it, reviews it)
