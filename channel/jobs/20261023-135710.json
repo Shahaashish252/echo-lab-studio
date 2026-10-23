@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"ATM/lift door safety sensor (open with this hook: \"Lift ka darwaza aapko kaise rok deta hai? Jaadu nahi hai!\")\" (Claude Code)",
       "at": "2026-10-23T13:57:31"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-10-23T13:58:07"
     }
   ],
   "format": "story"
