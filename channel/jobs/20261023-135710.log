@@ -1,0 +1,31 @@
+
+== research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. One door edge holds a row of IR LEDs. The opposite edge holds matching photodiodes or phototransistors.
+  | 2. The controller pulses each LED in sequence, and the matching receiver checks for that pulse.
+  | 3. Pulsing at a set frequency lets the receiver ignore sunlight and other stray IR.
+  | 4. If a receiver misses its pulse, that beam is blocked, so the controller reads it as an obstruction.
+  | 5. The controller stops the door motor and reverses it to reopen.
+  | 6. 3D versions add angled beams that detect a person before they reach the doorway.
+  | 
+  | **REAL PARTS**
+  | - Infrared light curtain (Fujitec and Avire sell commercial ones, with about 40 beams in one product).
+  | - Mechanical safety edge (a rubber contact strip).
+  | - IR LED and photodiode pairs.
+  | - Door-operator controller.
+  | - I could not find specific chip names in these sources. A DIY version would use a TSOP1738 or a 38 kHz IR receiver, which is my suggestion, not from the research.
+  | 
+  | **MYTH**
+  | - Myth: the door "feels" you by touch or pressure.
+  | - Truth: modern doors mostly detect you without touching you, using IR beams. A mechanical edge is only the older or backup method.
+  | 
+  | **SURPRISING FACT**
+  | - Code limits the static force that can stop a closing door to 30 lbf (about 135 N). Normal closing kinetic energy is capped at 7 ft-lbf (9.5 J).
+  | - The 7 ft-lbf figure comes from a study-aid source, so verify it against ASME A17.1 before using it on screen.
+  | 
+  | **TIP**
+  | - Don't force the doors with your hand or a bag. Dirt or blocked sensors can cause nuisance reopening, so report it to the building.
+  | 
+  | Sources: [Avire](https://avire-global.com/products/elevator-2d-3d-door-detection), [Fujitec](https://www.fujitecamerica.com/wp-content/uploads/2022/01/Infrared-Door-Detector.pdf), [Tarion](https://home-explorer.tarion.com/node/637), [TSSA](https://Tssa.org/sites/default/files/2023-10/ED-Procedure-Testing-Door-Closing-Force-Advisory-Rev2-2008.pdf)
+
+== storyboard: "ATM/lift door safety sensor (open with this hook: "Lift ka darwaza aapko kaise rok deta hai? Jaadu nahi hai!")" (Claude Code)
