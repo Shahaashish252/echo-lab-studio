@@ -1,2 +1,29 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. An IR LED sends out pulses of invisible infrared light. It's modulated (one patent uses about 750 Hz), so room light doesn't fool it.
+  | 2. Your hand reflects some of that IR back.
+  | 3. A photodiode or phototransistor catches the reflection. An amplifier and filter clean up the signal.
+  | 4. A comparator or Schmitt trigger decides whether a hand is there. Its hysteresis stops the water flickering on and off.
+  | 5. The microcontroller opens a solenoid valve, so water flows.
+  | 6. When the reflection disappears, the valve closes. A timer also cuts the flow, usually within about a minute.
+  | 
+  | **REAL PARTS**
+  | - TCRT5000: reflective IR sensor used in DIY builds.
+  | - LM393: comparator on common IR modules. I didn't confirm it in my searches.
+  | - Relay or solenoid valve.
+  | - Commercial example: the Sloan EAF-150 uses a 6V lithium 2CR5 battery.
+  | 
+  | **MYTH**
+  | - Myth: the tap "sees" your hand like a camera, or senses body heat.
+  | - Truth: it's active IR. It emits light and measures the reflection. It senses reflected light, not heat or a picture.
+  | 
+  | **SURPRISING FACT**
+  | - Sloan rates the EAF-150 at about 3 years on one battery at 8,000 uses a month. Sloan says up to 5 years is possible under its worst-case conditions.
+  | 
+  | **TIP**
+  | - If the tap won't stop or won't start, check for a dirty sensor window or strong reflections off the sink or a shiny surface. Wipe the window.
+  | 
+  | Sources: [Electronics For U](https://electronicsforu.com/electronics-projects/automatic-infrared-faucet-controller), [Sloan IR FAQ](https://www.sloan.com/sites/default/files/2019-02/IR-FAQs-2-19.pdf), [US patent 5025516](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/5025516)
+
+== storyboard: "Automatic tap sensor in washrooms (open with this hook: "Ye tap aapka haath dekhta nahi, kuch aur hi sense karta hai!")" (Claude Code)
