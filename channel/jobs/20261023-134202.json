@@ -1,0 +1,15 @@
+{
+  "id": "20261023-134202",
+  "topic": "Automatic tap sensor in washrooms",
+  "hook": "Ye tap aapka haath dekhta nahi, kuch aur hi sense karta hai!",
+  "lang": "hi",
+  "started": "2026-10-23T13:42:02",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-10-23T13:42:03"
+    }
+  ],
+  "format": "story"
+}
