@@ -1,9 +1,45 @@
 {
-  "updated": "22 Oct 2026, 20:40",
+  "updated": "23 Oct 2026, 14:15",
   "youtube": {
     "subs": 3,
-    "views": 1108,
+    "views": 1193,
     "videos": [
+      {
+        "title": "Automatic Tap Haath Kaise Pehchanta Hai? 🤔 #shorts",
+        "id": "D_vS9GmRqGk",
+        "status": "private",
+        "published": "2026-10-23",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
+      {
+        "title": "IR Sensor Andhere Mein Deewar Kaise Dekhta Hai? 🤔 #shorts",
+        "id": "jD5lPQq_aQo",
+        "status": "public",
+        "published": "2026-10-23",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
+      {
+        "title": "Smoke Detector Fire Kaise Sense Karta Hai? 🤔 #shorts",
+        "id": "wpe2f5b2ej0",
+        "status": "public",
+        "published": "2026-10-22",
+        "views": 5,
+        "likes": 0,
+        "comments": 0
+      },
+      {
+        "title": "Smoke Alarm Dhuan Sunta Nahi, Phir Bhi Kaise Bajta Hai? 🤔 #shorts",
+        "id": "DfurMASCqo4",
+        "status": "private",
+        "published": "2026-10-22",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Washroom Ka Tap Haath Kaise Pehchanta Hai? 🤔 #shorts",
         "id": "TmtK-AOD-_k",
@@ -18,26 +54,8 @@
         "id": "kfyWy1aYV8c",
         "status": "public",
         "published": "2026-10-22",
-        "views": 2,
+        "views": 4,
         "likes": 1,
-        "comments": 0
-      },
-      {
-        "title": "IR Sensor Andhere Mein Deewar Kaise Dekhta Hai? 🤔 #shorts",
-        "id": "jD5lPQq_aQo",
-        "status": "private",
-        "published": "2026-10-22",
-        "views": 0,
-        "likes": 0,
-        "comments": 0
-      },
-      {
-        "title": "Smoke Detector Fire Kaise Sense Karta Hai? 🤔 #shorts",
-        "id": "wpe2f5b2ej0",
-        "status": "private",
-        "published": "2026-10-22",
-        "views": 0,
-        "likes": 0,
         "comments": 0
       },
       {
@@ -45,9 +63,9 @@
         "id": "uLRF6LMY4GE",
         "status": "public",
         "published": "2026-10-22",
-        "views": 5,
+        "views": 6,
         "likes": 2,
-        "comments": 1
+        "comments": 2
       },
       {
         "title": "Ultrasonic Sensor Awaaz Se Kaise Dekhta Hai? 🦇 #shorts",
@@ -72,7 +90,7 @@
         "id": "ma7mTeADoOk",
         "status": "public",
         "published": "2026-10-20",
-        "views": 338,
+        "views": 355,
         "likes": 6,
         "comments": 0
       },
@@ -90,7 +108,7 @@
         "id": "UK5WSZEUI9I",
         "status": "public",
         "published": "2026-10-20",
-        "views": 20,
+        "views": 22,
         "likes": 0,
         "comments": 0
       },
@@ -126,7 +144,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 527,
+        "views": 529,
         "likes": 9,
         "comments": 2
       },
@@ -231,12 +249,6 @@
       }
     ],
     "daily": [
-      {
-        "day": "2026-09-24",
-        "views": 0,
-        "minutes": 0,
-        "subs": 0
-      },
       {
         "day": "2026-09-25",
         "views": 0,
@@ -386,6 +398,12 @@
         "views": 52,
         "minutes": 7,
         "subs": 0
+      },
+      {
+        "day": "2026-10-20",
+        "views": 187,
+        "minutes": 22,
+        "subs": 0
       }
     ]
   },
@@ -394,13 +412,35 @@
     "followers": 3,
     "posts": [
       {
+        "title": "Andhere mein bhi deewar kaise dikhti hai? 🔦",
+        "url": "https://www.instagram.com/reel/De06vwYCcS-/",
+        "published": "2026-10-23",
+        "likes": 1,
+        "comments": 0,
+        "reach": 110,
+        "views": 119,
+        "saved": 0,
+        "shares": 0
+      },
+      {
+        "title": "Smoke detector dhuan nahi dekhta! 🔥",
+        "url": "https://www.instagram.com/reel/DezwzUmkb2W/",
+        "published": "2026-10-22",
+        "likes": 1,
+        "comments": 0,
+        "reach": 200,
+        "views": 235,
+        "saved": 1,
+        "shares": 1
+      },
+      {
         "title": "Watch ki hari light ka raaz 💚",
         "url": "https://www.instagram.com/reel/DezJc75EYuw/",
         "published": "2026-10-22",
-        "likes": 0,
+        "likes": 1,
         "comments": 0,
-        "reach": 34,
-        "views": 63,
+        "reach": 101,
+        "views": 129,
         "saved": 2,
         "shares": 0
       },
@@ -408,11 +448,11 @@
         "title": "Street light ko andhera kaise pata chalta hai? 💡",
         "url": "https://www.instagram.com/reel/DeyZePtCfOH/",
         "published": "2026-10-22",
-        "likes": 1,
+        "likes": 7,
         "comments": 0,
-        "reach": 216,
-        "views": 247,
-        "saved": 1,
+        "reach": 519,
+        "views": 584,
+        "saved": 2,
         "shares": 2
       },
       {

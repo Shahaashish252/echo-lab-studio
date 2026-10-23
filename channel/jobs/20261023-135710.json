@@ -4,7 +4,7 @@
   "hook": "Lift ka darwaza aapko kaise rok deta hai? Jaadu nahi hai!",
   "lang": "hi",
   "started": "2026-10-23T13:57:10",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -39,5 +39,7 @@
       "at": "2026-10-23T14:15:35"
     }
   ],
-  "format": "story"
+  "format": "story",
+  "finished": "2026-10-23T14:15:40",
+  "uploadId": "CCTv-pNY0Is"
 }

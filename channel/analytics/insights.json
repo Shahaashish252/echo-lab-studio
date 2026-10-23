@@ -1,32 +1,31 @@
 {
-  "updated": "2026-10-22T20:08",
-  "videos": 9,
-  "summary": "Almost all of your views come from Instagram, not YouTube. The PIR motion sensor video is the clear winner, with about 1,400 Instagram views and the most likes, shares and saves, and the other Hindi 'how does this everyday thing work' videos do modestly on Instagram. YouTube is barely moving (most videos under 80 views), and the only English video got a little YouTube reach and nothing on Instagram. Newer videos are also still early, so their numbers may grow.",
-  "winningPattern": "Hindi explainer about a sensor people meet in daily life (motion, street light, phone, door), posted on Instagram. The title opens with a curiosity question or a surprising claim ('Aapko Dekhta Nahi!', 'Ungli Nahi, Bijli!'), uses simple Hinglish, and ends with 🤔 #shorts. The best one pairs a bold 'it doesn't work how you think' statement with a familiar object.",
+  "updated": "2026-10-23T13:41",
+  "videos": 11,
+  "summary": "Almost all of the audience is on Instagram, where the Hindi videos get 100 to 1,400 views, while YouTube Shorts barely moves (most videos under 25 views). The PIR motion sensor video is the clear winner, with about 1,900 total views and the most likes, shares and saves, followed by the street light video. Sample sizes are tiny and the videos are only a few days old, so treat these as early signals, not proof.",
+  "winningPattern": "Hindi, Instagram-first explainers about a common sensor people meet in daily life (PIR motion sensor, street light sensor). The title opens with a surprising claim or a 'how does it know?' question ('Motion Sensor Aapko Dekhta Nahi!'), uses Hinglish with a thinking emoji, and promises one simple answer. Videos that tie a sensor to something viewers see every day get the shares and saves.",
   "doMore": [
-    "Lead with a surprising myth-busting claim in the title, like the PIR 'doesn't see you' hook",
-    "Pick everyday objects people touch or walk past daily (sensors in homes, malls, phones, streets)",
-    "Keep narration in Hindi/Hinglish, since every Hindi video reached Instagram and the English one did not",
-    "Prioritise Instagram, and end each video with a share or save prompt like 'dost ko bhejo' since shares and saves signal quality",
-    "Repost your top-performing topic from a new angle (e.g. PIR in lights, alarms, taps) to build on what worked"
+    "Pick everyday things people have seen (lights, doors, taps, ATMs) and explain the hidden sensor inside",
+    "Open with a bold, slightly shocking claim in the title, like the PIR 'doesn't see you' line",
+    "Post Instagram-first and keep Hindi narration, since English Arduino video got no IG views and few YT views",
+    "End with a prompt that invites saves or shares, such as 'Save this for your next project' or 'Send to a friend who wonders about this'",
+    "Reuse the PIR angle with a part 2 or a related myth-busting follow-up, then compare results"
   ],
   "stopDoing": [
-    "Publishing English-only videos for now, as they got no Instagram traction",
-    "Niche or abstract topics with no visible daily-life link (heartbeat via light, ultrasonic) without a stronger hook",
-    "Posting several videos in a few days with weak hooks; spend the effort on a sharper first line instead"
+    "Generic title patterns that only ask a plain question (Smoke Detector, Smartwatch, IR Sensor) which got low shares and saves",
+    "Posting English-language videos or relying on YouTube Shorts for reach until you find a hook that works there"
   ],
   "nextTopics": [
-    "Automatic tap sensor in public washrooms",
-    "Smoke detector / fire alarm",
-    "Burglar alarm door sensor using magnet",
-    "Fingerprint scanner on phone",
-    "Automatic night lamp with LDR"
+    "Automatic tap sensor in washrooms",
+    "ATM/lift door safety sensor",
+    "Fridge door light and magnetic reed switch",
+    "Clap switch / sound sensor light",
+    "Car reverse parking sensor beep"
   ],
   "bestTimes": {
     "times": [
-      "12:00",
-      "21:00"
+      "01:00",
+      "12:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (8 posts)"
+    "reason": "from our own posts: these hours averaged the most views (10 posts)"
   }
 }
