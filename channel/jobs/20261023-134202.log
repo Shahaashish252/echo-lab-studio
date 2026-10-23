@@ -34,3 +34,25 @@
   story plan: 16 animated beats
 
 == voice (Microsoft Edge: Madhur)
+Installed 27 packages in 21ms
+[0;93m2026-10-23 13:42:54.572430774 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        3.92s  ये टैप आपका हाथ देखता नहीं, कुछ और ही सेंस करता है!
+s1-2        2.29s  न कैमरा है, न गर्मी पकड़ता है।
+s1-3        2.95s  इसके अंदर होता है एक इन्फ्रारेड सेंसर।
+s1-4        2.80s  टैप से अदृश्य रोशनी की पल्स निकलती है।
+s1-5        2.95s  ये रोशनी बहुत तेज़ी से ब्लिंक करती रहती है।
+s1-6        3.13s  आपका हाथ उस रोशनी को वापस उछाल देता है।
+s1-7        2.24s  सेंसर वो रिफ्लेक्शन पकड़ लेता है।
+s1-8        2.65s  सिग्नल जितना तगड़ा, हाथ उतना पास।
+s1-9        2.99s  चिप तय करती है, और वाल्व को हुक्म मिलता है।
+s1-10       2.11s  वाल्व खुला और पानी बहने लगा।
+s1-11       2.80s  हाथ हटा, रिफ्लेक्शन गायब, वाल्व बंद।
+s1-12       2.48s  ये है असली आई आर सेंसर मॉड्यूल।
+s1-13       3.07s  एक बैटरी पर ये करीब तीन साल चल सकता है।
+s1-14       3.11s  ये गर्मी या फोटो नहीं, रिफ्लेक्शन नापता है।
+s1-15       2.51s  टैप अटके तो सेंसर की खिड़की पोंछ दो।
+s1-16       2.93s  आपके यहाँ का टैप कब सबसे ज़्यादा पागल हुआ?
+s2-1        4.53s  आपके यहाँ का टैप कब सबसे ज़्यादा पागल हुआ? कमेंट करो!
+wrote 17 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit, network
