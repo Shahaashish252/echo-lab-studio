@@ -66,3 +66,75 @@ mixed (peak -4.2 dBFS)
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wav (-14 LUFS)
 
 == render
+rendering 1989 frames (0-66.3s) at 1080x1920, 2 sample(s)/frame
+
+  frame 30/1989  2.1 fps  eta 954s   
+  frame 60/1989  2.0 fps  eta 950s   
+  frame 90/1989  2.0 fps  eta 948s   
+  frame 120/1989  2.0 fps  eta 940s   
+  frame 150/1989  2.0 fps  eta 929s   
+  frame 180/1989  2.0 fps  eta 916s   
+  frame 210/1989  2.0 fps  eta 900s   
+  frame 240/1989  2.0 fps  eta 885s   
+  frame 270/1989  2.0 fps  eta 870s   
+  frame 300/1989  2.0 fps  eta 856s   
+  frame 330/1989  2.0 fps  eta 842s   
+  frame 360/1989  2.0 fps  eta 828s   
+  frame 390/1989  2.0 fps  eta 810s   
+  frame 420/1989  2.0 fps  eta 792s   
+  frame 450/1989  2.0 fps  eta 775s   
+  frame 480/1989  2.0 fps  eta 759s   
+  frame 510/1989  2.0 fps  eta 743s   
+  frame 540/1989  2.0 fps  eta 727s   
+  frame 570/1989  2.0 fps  eta 711s   
+  frame 600/1989  2.0 fps  eta 695s   
+  frame 630/1989  2.0 fps  eta 678s   
+  frame 660/1989  2.0 fps  eta 662s   
+  frame 690/1989  2.0 fps  eta 647s   
+  frame 720/1989  2.0 fps  eta 633s   
+  frame 750/1989  2.0 fps  eta 619s   
+  frame 780/1989  2.0 fps  eta 605s   
+  frame 810/1989  2.0 fps  eta 591s   
+  frame 840/1989  2.0 fps  eta 577s   
+  frame 870/1989  2.0 fps  eta 561s   
+  frame 900/1989  2.0 fps  eta 547s   
+  frame 930/1989  2.0 fps  eta 532s   
+  frame 960/1989  2.0 fps  eta 517s   
+  frame 990/1989  2.0 fps  eta 502s   
+  frame 1020/1989  2.0 fps  eta 488s   
+  frame 1050/1989  2.0 fps  eta 474s   
+  frame 1080/1989  2.0 fps  eta 458s   
+  frame 1110/1989  2.0 fps  eta 444s   
+  frame 1140/1989  2.0 fps  eta 429s   
+  frame 1170/1989  2.0 fps  eta 413s   
+  frame 1200/1989  2.0 fps  eta 398s   
+  frame 1230/1989  2.0 fps  eta 383s   
+  frame 1260/1989  2.0 fps  eta 368s   
+  frame 1290/1989  2.0 fps  eta 353s   
+  frame 1320/1989  2.0 fps  eta 337s   
+  frame 1350/1989  2.0 fps  eta 322s   
+  frame 1380/1989  2.0 fps  eta 307s   
+  frame 1410/1989  2.0 fps  eta 292s   
+  frame 1440/1989  2.0 fps  eta 277s   
+  frame 1470/1989  2.0 fps  eta 262s   
+  frame 1500/1989  2.0 fps  eta 247s   
+  frame 1530/1989  2.0 fps  eta 232s   
+  frame 1560/1989  2.0 fps  eta 217s   
+  frame 1590/1989  2.0 fps  eta 202s   
+  frame 1620/1989  2.0 fps  eta 187s   
+  frame 1650/1989  2.0 fps  eta 171s   
+  frame 1680/1989  2.0 fps  eta 156s   
+  frame 1710/1989  2.0 fps  eta 141s   
+  frame 1740/1989  2.0 fps  eta 126s   
+  frame 1770/1989  2.0 fps  eta 111s   
+  frame 1800/1989  2.0 fps  eta 96s   
+  frame 1830/1989  2.0 fps  eta 80s   
+  frame 1860/1989  2.0 fps  eta 65s   
+  frame 1890/1989  2.0 fps  eta 50s   
+  frame 1920/1989  2.0 fps  eta 35s   
+  frame 1950/1989  2.0 fps  eta 20s   
+  frame 1980/1989  2.0 fps  eta 5s   
+  frame 1989/1989  2.0 fps  eta 0s   
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/lift-door-safety-sensor.mp4 (with sound)
+
+== youtube
