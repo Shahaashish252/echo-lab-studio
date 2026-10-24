@@ -292,10 +292,16 @@
     "id": "DfurMASCqo4",
     "meta": "channel/videos/auto-smoke-alarm-kaise-bajta-hai.json",
     "date": "2026-10-22",
-    "status": "approved",
+    "status": "published",
     "topic": "Smoke detector / fire alarm",
     "job": "20261022-202451",
-    "postAt": "2026-10-24T12:00"
+    "postAt": "2026-10-24T12:00",
+    "published": {
+      "youtube": "2026-10-24",
+      "instagram": "https://www.instagram.com/reel/De3fiedmGhP/",
+      "facebook": "https://www.facebook.com/reel/2616659172136621/"
+    },
+    "postedAt": "2026-10-24T12:02"
   },
   {
     "id": "D_vS9GmRqGk",
