@@ -310,7 +310,7 @@
     "status": "approved",
     "topic": "Automatic tap sensor in washrooms",
     "job": "20261023-134202",
-    "postAt": "2026-10-25T19:30"
+    "postAt": "2026-10-25T21:00"
   },
   {
     "id": "CCTv-pNY0Is",
@@ -319,7 +319,7 @@
     "status": "approved",
     "topic": "ATM/lift door safety sensor",
     "job": "20261023-135710",
-    "postAt": "2026-10-25T12:30"
+    "postAt": "2026-10-25T12:00"
   },
   {
     "id": "uaetzbQjMGA",
@@ -328,7 +328,7 @@
     "status": "approved",
     "topic": "Lift knows which floor you pressed",
     "job": "20261024-132051",
-    "postAt": "2026-10-26T19:30"
+    "postAt": "2026-10-26T21:00"
   },
   {
     "id": "9m6XMbAw_3U",
@@ -337,6 +337,15 @@
     "status": "approved",
     "topic": "Automatic hand dryer sensor",
     "job": "20261024-133650",
-    "postAt": "2026-10-26T12:30"
+    "postAt": "2026-10-26T12:00"
+  },
+  {
+    "id": "aSecaiZshXI",
+    "meta": "channel/videos/auto-robot-deewar-se-kaise-bachta.json",
+    "date": "2026-10-24",
+    "status": "approved",
+    "topic": "Arduino obstacle avoiding robot: IR sensor se robot deewar se kaise bachta hai",
+    "job": "20261024-232710",
+    "postAt": "2026-10-27T12:00"
   }
 ]

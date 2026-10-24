@@ -1,0 +1,33 @@
+{
+  "file": "out/auto/robot-deewar-se-kaise-bachta.mp4",
+  "title": "Robot Deewar Se Kaise Bachta Hai? 🤔 IR Sensor Explained #shorts",
+  "description": "Aapka robot deewar se takraye bina kaise ruk jaata hai? Raaz hai ek chhota sa IR sensor!\n🤖 FC-51 IR sensor ka 3D view\n💡 IR LED aur photodiode ka kaam\n🧠 LM393 comparator aur pot ka role\n🔌 Arduino se wiring aur code\nAise aur videos ke liye subscribe karo!\n#shorts #arduino #irsensor #robotics #hindi #electronics",
+  "tags": [
+    "arduino obstacle avoiding robot",
+    "ir sensor kaise kaam karta hai",
+    "fc-51 ir sensor",
+    "ir obstacle sensor in hindi",
+    "lm393 comparator",
+    "arduino robot hindi",
+    "obstacle avoiding robot kaise banaye",
+    "ir sensor arduino code",
+    "ir sensor vs ultrasonic",
+    "photodiode kaise kaam karta hai",
+    "arduino projects in hindi",
+    "robot deewar se kaise bachta hai",
+    "l298n motor driver arduino",
+    "electronics explained hindi"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Arduino Robotics: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Robot deewar se kaise bachta hai? 🤖\nEk chhota sa IR sensor, aur andar ka poora science.\nChaliye dekhte hain andar kya hota hai 👇\n💡 IR LED hamesha infrared roshni bhejti hai\n👁️ Photodiode wapas aayi roshni pakadta hai\n🧠 LM393 threshold se compare karke OUT LOW karta hai\n⚠️ Yeh doori nahi naapta, sirf obstacle batata hai\n💾 Save karo, robot banate waqt kaam aayega\n📤 Us dost ko bhejo jo Arduino seekh raha hai\n💬 Aapka robot pehli baar kis cheez se takraya tha?\n#arduino #robotics #electronics #irsensor #obstaclerobot",
+    "tiktok": "Robot deewar se kaise bachta hai? 🤖 IR sensor ka poora raaz 3D mein! Aapka robot kahan takraya tha? Comment karo 👇 #learnontiktok #arduino #robotics #irsensor #electronics"
+  }
+}

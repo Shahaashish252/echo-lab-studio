@@ -1,31 +1,30 @@
 {
-  "updated": "2026-10-24T22:27",
+  "updated": "2026-10-24T23:26",
   "videos": 13,
-  "summary": "Instagram is carrying almost all the attention: the Hindi videos get 100 to 1,400 views there, while YouTube Shorts mostly gets under 30 views. The PIR motion sensor video is the clear winner on both platforms, with the most views, likes, shares and saves. Street light and everyday-device questions do fine on Instagram, but the channel is still very small, so these results are early signals rather than proof.",
-  "winningPattern": "Hindi explainer about a familiar everyday sensor that people meet daily (motion sensor, street light), with a curiosity hook that says a surprising fact or asks 'how does it know?' (e.g. 'Motion Sensor Aapko Dekhta Nahi!'). Title is Hinglish, one short question, a 🤔 emoji and #shorts. Instagram Reels is the main driver; the PIR video was also the only one to get real YouTube traction.",
+  "summary": "Instagram is carrying the channel: almost every Hindi video gets 100-1400 views there, while YouTube Shorts mostly gets under 30 views. The best video was the PIR motion sensor one, which got far more views, likes, shares and saves than anything else. Videos on 'how does this thing around me know?' get the most attention, while generic or sound-based titles (smoke alarm, ultrasonic, remote) get little engagement. Sample size is small and videos are only days old, so treat this as early signal.",
+  "winningPattern": "Everyday sensor that seems to 'magically' react to you (motion, street light, phone orientation), explained in Hindi. Hook is a surprising claim or a curiosity question in Hinglish ('X aapko dekhta nahi!' / 'Kaise pata chalta hai?'), with a 🤔 emoji and #shorts. Instagram Reels is the main traction platform; YouTube Shorts is weak so far, though the PIR video and the English Arduino video got the most YouTube views.",
   "doMore": [
-    "Make videos about sensors people see every day (lights, doors, taps, alarms) and open with a surprising claim like 'It doesn't see you!'",
-    "Lead titles with the shocking statement, then the question, as the PIR title does",
-    "Post to Instagram first and treat it as the main platform, then repost to YouTube",
-    "Ask a question in each video that invites shares and saves, since shares and saves are what the best videos got",
-    "Keep to one sensor per video and revisit the PIR topic with a follow-up (e.g. PIR vs IR sensor)"
+    "Pick relatable daily-life sensors people see every day (lifts, ATM, automatic lights, fan remote) and open with a twist claim like 'Yeh aapko dekhta nahi!'",
+    "Use a bold 'myth-bust' first line before the question, since the PIR title with that format beat the plain-question titles",
+    "Prioritise Instagram Reels for posting and testing; add a clear 'save this for your project' call to action to raise saves and shares",
+    "Make follow-up videos on the PIR winner (PIR + Arduino build, why it fails in heat) to reuse the proven topic",
+    "Test one or two YouTube titles in a different style (shorter, with the English keyword like 'PIR Sensor') to find out why YouTube is lagging"
   ],
   "stopDoing": [
-    "Publishing near-duplicate topics like two smoke detector videos within days of each other",
-    "Mixing in English titles for now, since the Hindi videos are where the audience is",
-    "Abstract or internal topics (touchscreen, phone orientation) without a visible daily-life hook"
+    "Plain 'X kaise sense karta hai?' titles on niche items like smoke detectors, which get low shares and saves",
+    "Posting several near-duplicate topics in a row (two smoke alarm videos in 3 days) that split the audience"
   ],
   "nextTopics": [
-    "Automatic hand dryer in washrooms",
-    "Escalator that starts when you step near",
-    "Room light that turns on with a clap or motion",
-    "Car reverse parking sensor beeping",
-    "Fridge door light turning off when closed"
+    "Automatic lift door sensor",
+    "Clap switch / sound sensor light",
+    "Automatic hand sanitizer dispenser",
+    "Fingerprint scanner",
+    "Car reverse parking sensor"
   ],
   "bestTimes": {
     "times": [
-      "01:00",
-      "12:00"
+      "12:00",
+      "21:00"
     ],
     "reason": "from our own posts: these hours averaged the most views (12 posts)"
   }

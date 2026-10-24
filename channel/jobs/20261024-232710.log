@@ -72,3 +72,13 @@ wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wa
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/robot-deewar-se-kaise-bachta.mp4 (12 parts, 14.4 min)
 
 == youtube
+  Robot Deewar Se Kaise Bachta Hai? 🤔 IR Sensor Explained #shorts
+  metadata: channel/videos/auto-robot-deewar-se-kaise-bachta.json
+
+  uploading  40.4%
+  uploading  80.8%
+uploaded https://youtu.be/aSecaiZshXI  (private)
+created playlist Arduino Robotics: Shorts
+! not added to the playlist (<HttpError 409 when requesting https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned "T)
+
+DONE in 17.7 min -> /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/robot-deewar-se-kaise-bachta.mp4

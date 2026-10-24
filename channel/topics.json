@@ -1,6 +1,22 @@
 {
   "queue": [
     {
+      "topic": "Automatic lift door sensor",
+      "hook": "Lift ka darwaza aapko rokta nahi, ye sensor dekh raha hai!"
+    },
+    {
+      "topic": "Automatic hand sanitizer dispenser",
+      "hook": "Sanitizer machine haath nahi, roshni dekhti hai!"
+    },
+    {
+      "topic": "Fingerprint scanner",
+      "hook": "Fingerprint scanner aapki ungli ki photo nahi leta!"
+    },
+    {
+      "topic": "Car reverse parking sensor",
+      "hook": "Car ko peeche ki deewar kaise dikhti hai? 🤔"
+    },
+    {
       "topic": "Automatic hand dryer in washrooms",
       "hook": "Hand Dryer Bina Button Dabaye Kaise Chalu Hota Hai?"
     },
@@ -242,6 +258,7 @@
     "Automatic tap sensor in washrooms",
     "ATM/lift door safety sensor",
     "Lift knows which floor you pressed",
-    "Automatic hand dryer sensor"
+    "Automatic hand dryer sensor",
+    "Arduino obstacle avoiding robot: IR sensor se robot deewar se kaise bachta hai"
   ]
 }

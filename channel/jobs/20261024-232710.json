@@ -4,7 +4,7 @@
   "hook": "",
   "lang": "hi",
   "started": "2026-10-24T23:27:10",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -40,5 +40,7 @@
     }
   ],
   "format": "studio",
-  "module": "ir"
+  "module": "ir",
+  "finished": "2026-10-24T23:44:56",
+  "uploadId": "aSecaiZshXI"
 }
