@@ -1,2 +1,28 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. An IR LED sends out a weak, invisible infrared beam.
+  | 2. With no hands there, the beam doesn't bounce back. The floor is too far away.
+  | 3. A hand in the zone reflects the IR back to the receiver, a photodiode or phototransistor.
+  | 4. A small circuit (a comparator or microcontroller) sees the signal rise above a threshold.
+  | 5. It switches on the fan motor and the heater, usually through a relay or triac.
+  | 6. When the hand leaves, the reflection stops and the dryer shuts off. Some units also cut out after about 1 minute if an object stays in the zone.
+  | 
+  | **REAL PARTS**
+  | - IR LED plus phototransistor/photodiode pair. Wave's page describes only a basic IR emitter/receiver, so I found no confirmed part numbers.
+  | - Sensor modules in hobby builds, such as the E18-D80NK IR obstacle sensor or an LM393 comparator board. These are my suggestions from general knowledge, not from the sources.
+  | - Relay or triac to switch the load.
+  | - Heating element. Dyson's Airblade V has none (cold air only).
+  | 
+  | **MYTH**
+  | Many people think it senses body heat or "magic". Some designs do passively read the infrared your hands emit. The common design is active: it emits IR and detects the reflection, so it isn't a pressure or heat switch.
+  | 
+  | **SURPRISING FACT**
+  | Dyson Airblade V airflow is 690 km/h at the apertures. It uses about 1000 W, with no heater.
+  | 
+  | **TIP**
+  | If it doesn't start, move your hands closer. If it keeps blowing without hands, check for something sitting in the sensor zone.
+  | 
+  | Sources: [Naked Scientists](https://www.thenakedscientists.com/node/179908), [Mitsubishi Wave](https://wave.mitsubishielectric.co.uk/automatic-hand-dryers/how-do-automatic-hand-dryers-work/), [Dyson Airblade V](https://www.sa.dyson.com/en-SA/for-business/hand-dryers/airblade-v-white)
+
+== storyboard: "Automatic hand dryer in washrooms (open with this hook: "Hand Dryer Bina Button Dabaye Kaise Chalu Hota Hai?")" (Claude Code)
