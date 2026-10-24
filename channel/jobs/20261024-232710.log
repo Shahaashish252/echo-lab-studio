@@ -23,3 +23,6 @@
   | - [HC-SR04 datasheet (Cytron)](https://embedded.fel.cvut.cz/sites/default/files/kurzy/lpe/ultrasonic_hc-sr04/HCSR04_DS_Cytron.pdf)
 
 == storyboard: "Arduino obstacle avoiding robot: IR sensor se robot deewar se kaise bachta hai" (Claude Code)
+  s1 sim     Robot deewar se KYUN nahi takraata?
+
+== simulation (Claude Code writes it, renders it, reviews it)
