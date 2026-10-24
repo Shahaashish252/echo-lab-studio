@@ -1,0 +1,16 @@
+{
+  "id": "20261024-232710",
+  "topic": "Arduino obstacle avoiding robot: IR sensor se robot deewar se kaise bachta hai",
+  "hook": "",
+  "lang": "hi",
+  "started": "2026-10-24T23:27:10",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-10-24T23:27:11"
+    }
+  ],
+  "format": "studio",
+  "module": "ir"
+}
