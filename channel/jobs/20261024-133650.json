@@ -1,0 +1,15 @@
+{
+  "id": "20261024-133650",
+  "topic": "Automatic hand dryer sensor",
+  "hook": "Hand Dryer Aapke Haath Ko Dekhta Nahi, Phir Bhi Chalta Hai!",
+  "lang": "hi",
+  "started": "2026-10-24T13:36:50",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-10-24T13:36:50"
+    }
+  ],
+  "format": "story"
+}
