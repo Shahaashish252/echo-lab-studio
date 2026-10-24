@@ -6,6 +6,7 @@ import '@fontsource/ibm-plex-mono/500.css';
 import '@fontsource/nunito/400.css';
 import '@fontsource/nunito/700.css';
 import '@fontsource/nunito/800.css';
+import '@fontsource/michroma/400.css';
 import { Engine } from './engine/engine';
 import type { Cue, Frame } from './engine/scene';
 import { H as BASE_H, VIDEO, W as BASE_W } from './format';
@@ -46,7 +47,7 @@ async function prepare(t: number) {
 
 async function fontsReady() {
   await Promise.all(
-    ['500 40px Archivo', '800 40px Archivo', '900 40px Archivo', '400 20px "IBM Plex Mono"', '500 20px "IBM Plex Mono"', '400 40px Nunito', '700 40px Nunito', '800 40px Nunito'].map(
+    ['500 40px Archivo', '800 40px Archivo', '900 40px Archivo', '400 20px "IBM Plex Mono"', '500 20px "IBM Plex Mono"', '400 40px Nunito', '700 40px Nunito', '800 40px Nunito', '400 40px Michroma'].map(
       (f) => document.fonts.load(f),
     ),
   );

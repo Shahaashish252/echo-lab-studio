@@ -53,6 +53,8 @@ export abstract class Scene {
   cues?(dur: number): Cue[];
   /** Called once with the renderer before the plate's first 3D render (e.g. to build an environment map). */
   init3D?(renderer: THREE.WebGLRenderer): void;
+  /** Draws the plate's 3D layer itself into the frame (target) instead of the default render (e.g. with depth of field). */
+  render3D?(renderer: THREE.WebGLRenderer, target: THREE.WebGLRenderTarget): void;
   /** Loads anything frame `f` needs (footage images). The renderer awaits it before render(); the preview doesn't. */
   prepare?(f: Frame): Promise<void>;
 }

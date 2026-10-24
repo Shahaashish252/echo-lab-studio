@@ -262,6 +262,11 @@ def make_video(topic: dict | None = None) -> dict | None:
         # only a JSON plan (app/src/scenes/auto/story-lib.js + auto.ts --story)
         job["format"] = "story"
         code = run_tracked(["bun", "scripts/auto.ts", prompt, "--upload", "--story", "--lang", lang], job)
+    elif fmt == "studio":
+        # premium 3D product explainer (owner's reference reel, 2026-10-24): app/src/scenes/auto/studio.ts films a
+        # photoreal module from Claude's shot list (auto.ts --studio)
+        job["format"] = "studio"
+        code = run_tracked(["bun", "scripts/auto.ts", prompt, "--upload", "--studio", "--lang", lang], job)
     elif fmt == "cinematic":
         # the viral-reference style: photoreal shots + word captions (channel/cinematic.py), far less Claude than "sim"
         job["format"] = "cinematic"

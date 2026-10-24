@@ -26,7 +26,7 @@ const opt = (name: string, def?: string) => {
   const i = argv.indexOf(`--${name}`);
   return i >= 0 ? argv[i + 1] : def;
 };
-const SWITCHES = ['--stock', '--upload', '--classic', '--flat', '--3d', '--photo', '--ai', '--story'];
+const SWITCHES = ['--stock', '--upload', '--classic', '--flat', '--3d', '--photo', '--ai', '--story', '--studio'];
 const flagged = new Set(argv.flatMap((a, i) => (SWITCHES.includes(a) ? [i] : a.startsWith('--') ? [i, i + 1] : [])));
 const STOCK = argv.includes('--stock');
 const UPLOAD = argv.includes('--upload');
@@ -43,7 +43,10 @@ const AI = argv.includes('--ai');
 const SIM = !CLASSIC && !FLAT && !MODEL3D && !PHOTO_FMT && !AI;
 /** --story: the animated-story style of the best performer (PIR short). Reuses the sim scene, but its drawing is
  *  the hand-made library src/scenes/auto/story-lib.js; Claude only writes a JSON plan (no code, no review rounds). */
-const STORY_MODE = argv.includes('--story');
+/** --studio: the premium 3D product-explainer style (src/scenes/auto/studio.ts) the owner picked on 2026-10-24. Also a
+ *  story-mode video (research, one Claude call, no code): Claude writes the narration and a shot list. */
+const STUDIO_MODE = argv.includes('--studio');
+const STORY_MODE = argv.includes('--story') || STUDIO_MODE;
 /** render -> review -> rewrite rounds; each rewrite re-sends the whole module, so this is the main cost knob */
 const MAX_ROUNDS = Number(process.env.ECHO_ROUNDS || 2);
 /** Claude model for the video work. Sonnet costs far less of the subscription limit than the default (Opus) and is
@@ -750,6 +753,56 @@ async function research(): Promise<string> {
   }
 }
 
+const PROMPT_STUDIO = `Write a viral vertical explainer Short (45-60 seconds) about:
+"${topic}"
+
+The style is a premium 3D product explainer (like the reels "How does a LDR sensor work?"): the REAL module as a
+photoreal 3D model on a dark stage, slow cinematic camera moves with a blurred background, close-ups of its parts,
+a part splitting into its layers, glass "inside the material" diagrams, then the module wired to an Arduino.
+The narration is calm, clear and curious, one idea per line. The caption shows ONE word at a time, big and white.
+
+The 3D module available is "ir": the FC-51 IR obstacle-avoidance sensor (an IR LED emitter, a black IR photodiode
+receiver, a blue trimmer pot, an LM393 comparator chip, a PWR LED and an OBS LED, pins VCC GND OUT; OUT goes LOW and the
+OBS LED lights when an object reflects the IR back). Explain THIS module.
+
+Reply with ONLY a JSON object, no markdown fences, no commentary:
+{
+  "title": "short video title, max 28 characters",
+  "kicker": "series label, max 22 characters",
+${SOCIAL_FIELDS}
+  "module": "ir",
+  "scenes": [
+    { "type": "sim", "headline": "the hook, 3-7 words",
+      "lines": [ 12-15 objects {"text": "the subtitle, 4-9 words", "say": "exactly what the voice says"} ] }
+  ],
+  "shots": [ one object per line, same order: {"line": 0-based index, "shot": "<type>", ...fields} ]
+}
+
+Shot types (use ONLY these):
+- assemble                         the module's parts fly in and click together (use for line 0)
+- hero                             slow orbit around the whole module
+- macro    {"part": "sensor|emitter|receiver|chip|pot|pins|leds"}   close-up of that part, blurred background
+- layers   {"part": "receiver|emitter"}   that part splits apart: epoxy shell, P and N silicon layers, metal cup, legs
+- beam     {"obstacle": true|false}  the IR LED sends its invisible beam; with an obstacle it bounces back into the
+                                     receiver and the OBS LED lights
+- inside   {"light": true|false}     glass cutaway of the receiver's silicon: electrons locked in place (false), or light
+                                     knocks electrons free and a current flows (true)
+- compare  {"cross": true|false}     glass comparator = the LM393: the signal level against the threshold set by the pot;
+                                     crossing it switches the output on
+- pot                                close-up of the blue trimmer turning (sets the detection distance)
+- wiring   {"detect": true|false}    the module wired to an Arduino Uno on a cutting mat; with detect the OUT signal
+                                     pulses down the wire and the Uno's LED lights
+Story rules: line 0 = a curiosity hook about something everyday (robots, taps, doors) with "assemble". Then: what the
+parts are (macro), the beam and its bounce, inside the receiver (layers, inside false then true), the comparator and the
+pot, the OBS LED, wiring to an Arduino with a practical tip, and the last line a question that invites comments
+(use hero). Never the same shot type more than twice in a row. At most 3 numbers. Every claim accurate.`;
+
+const STUDIO_NOTE = `
+
+STUDIO CAPTIONS: "text" is shown one word at a time in a Latin-only font, so write every "text" in Roman-script
+Hinglish (e.g. "Yeh sensor roshni ko wapas pakadta hai"), never Devanagari; put the natural spoken Hindi for the voice
+in "say" (Devanagari is fine there).`;
+
 const SIM_FILE = join(SCENES, 'sim.gen.js');
 /** each sim line's planned on-screen event */
 const SIM_EVENTS = new Map<string, string>();
@@ -868,7 +921,7 @@ background clip: one concrete, filmable, photorealistic shot (subject, action, c
 "Cinematic macro close-up of a finger touching a glowing smartphone screen, slow push in, shallow depth of field,
 dark studio". Real-world scenes only: no text, logos, diagrams, UI with readable words, or detailed circuit internals.`;
 
-const PROMPT = AI ? PROMPT_AI : CLASSIC ? CLASSIC_PROMPT : FLAT ? FLAT_PROMPT : MODEL3D ? PROMPT_3D : PHOTO_FMT ? PROMPT_PHOTO : STORY_MODE ? PROMPT_STORY : PROMPT_SIM;
+const PROMPT = AI ? PROMPT_AI : CLASSIC ? CLASSIC_PROMPT : FLAT ? FLAT_PROMPT : MODEL3D ? PROMPT_3D : PHOTO_FMT ? PROMPT_PHOTO : STUDIO_MODE ? PROMPT_STUDIO : STORY_MODE ? PROMPT_STORY : PROMPT_SIM;
 
 function claude(prompt: string): string {
   const cli = Bun.which('claude');
@@ -1099,6 +1152,10 @@ const NOTES = STORY_MODE ? await research() : '';
 step(`storyboard: "${topic}" (Claude Code)`);
 let story: ReturnType<typeof normalize> | undefined;
 let STORY_PLAN: { beats: unknown[] } = { beats: [] };
+let STUDIO_PLAN: { module: string; shots: unknown[] } = { module: 'ir', shots: [] };
+// a studio plan left from an earlier video would turn this one's simulation into the 3D stage
+const STUDIO_FILE = join(SCENES, 'studio.gen.json');
+rmSync(STUDIO_FILE, { force: true });
 const RESEARCH_NOTE = NOTES ? `
 
 Research notes gathered from the web just now (use these facts; stay accurate):
@@ -1106,9 +1163,12 @@ ${NOTES}
 ` : '';
 for (let attempt = 1; attempt <= 2 && !story; attempt++) {
   try {
-    const raw = parse(claude(PROMPT + RESEARCH_NOTE + (HINDI ? HINDI_NOTE : '')));
+    const raw = parse(claude(PROMPT + RESEARCH_NOTE + (HINDI ? HINDI_NOTE + (STUDIO_MODE ? STUDIO_NOTE : '') : '')));
     story = normalize(raw);
-    if (STORY_MODE) {
+    if (STUDIO_MODE) {
+      STUDIO_PLAN = { module: str((raw as Raw).module, 20) || 'ir', shots: Array.isArray((raw as Raw).shots) ? ((raw as Raw).shots as unknown[]) : [] };
+      if (!STUDIO_PLAN.shots.length) throw new Error('the studio plan has no shots');
+    } else if (STORY_MODE) {
       STORY_PLAN = { beats: Array.isArray((raw as Raw).beats) ? ((raw as Raw).beats as unknown[]) : [] };
       if (!STORY_PLAN.beats.length) throw new Error('the story plan has no beats');
     }
@@ -1160,7 +1220,14 @@ if (simScene) {
     s.length = Math.max(MIN[s.type] ?? 2.5, TIMING.lead + s.lines.reduce((n, id) => n + story!.lines[id].text.split(/\s+/).length * 0.34 + TIMING.gap, 0) + TIMING.tail);
   writeFileSync(join(SCENES, 'voice.json'), JSON.stringify({ engine: 'kokoro', lines: story.lines }, null, 2));
   writeFileSync(join(SCENES, 'storyboard.json'), JSON.stringify({ topic, title: story.title, kicker: story.kicker, timing: TIMING, scenes: story.scenes }, null, 2));
-  if (STORY_MODE) {
+  if (STUDIO_MODE) {
+    // the 3D stage (studio.ts) films it from the shot list; just check that it renders without errors
+    writeFileSync(STUDIO_FILE, JSON.stringify(STUDIO_PLAN));
+    writeFileSync(SIM_FILE, 'export default function () {}\n');
+    const { errors } = checkSim(simScene);
+    if (errors) throw new Error(`studio render check failed: ${errors.slice(0, 300)}`);
+    console.log(`  studio plan: ${STUDIO_PLAN.shots.length} shots of the ${STUDIO_PLAN.module} module`);
+  } else if (STORY_MODE) {
     // the hand-made animation library draws it; just check that it renders without errors
     writeFileSync(SIM_FILE, `import { makeDraw } from './story-lib.js';\nexport default makeDraw(${JSON.stringify(STORY_PLAN)});\n`);
     const { errors } = checkSim(simScene);

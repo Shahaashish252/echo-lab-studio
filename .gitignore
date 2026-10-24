@@ -34,3 +34,4 @@ channel/*.prev.json
 .DS_Store
 Thumbs.db
 !channel/jobs/*.log
+app/src/scenes/auto/studio.gen.json

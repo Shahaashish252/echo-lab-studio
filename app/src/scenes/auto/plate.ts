@@ -12,6 +12,7 @@ import { type Anim, drawDiagram, ensureDiagram } from './diagram';
 import { type Anim3D, drawLabels3D, Model3D } from './model3d';
 import { drawPhoto, ensurePhoto, type PhotoCue } from './photo';
 import { drawSim, PALETTE } from './sim';
+import { Studio, STUDIO_PLAN } from './studio';
 import { beats, dur as lineDur, lineText, type Beats } from './script';
 import { STORY, type PlateData, type StoryScene } from './storyboard';
 
@@ -213,12 +214,21 @@ export default class AutoPlate extends Scene {
       this.uses3D = true;
       this.model = new Model3D(this.three);
     }
+    // studio videos: the narration plate is a 3D stage (studio.ts) instead of the 2D simulation
+    if (this.s?.type === 'sim' && STUDIO_PLAN) {
+      this.uses3D = true;
+      const studio = new Studio(this.three, this.camera, STUDIO_PLAN);
+      this.studio = studio;
+      this.render3D = (r, target) => studio.render(r, target);
+    }
   }
 
   private readonly model?: Model3D;
+  private readonly studio?: Studio;
 
   init3D(renderer: THREE.WebGLRenderer) {
-    Model3D.init(renderer, this.three);
+    if (this.studio) this.studio.init(renderer);
+    else Model3D.init(renderer, this.three);
   }
 
   /** Diagram cues are timed by narration line; turn them into scene seconds, in order. */
@@ -252,6 +262,8 @@ export default class AutoPlate extends Scene {
       ...(s.type === 'sim' ? [] : [{ t: 0, kind: 'pulse', dur, gain: d.index === 0 ? 0.12 : 0.2 }]),
       ...this.B.cues(),
     ];
+    // studio videos: a soft whoosh on every camera cut
+    if (this.studio) c.push(...s.lines.slice(1).map((id) => ({ t: this.B!.at(id) - 0.08, kind: 'whoosh', gain: 0.22 })));
     const items = s.items?.length ?? 0;
     switch (s.type) {
       case 'hook':
@@ -396,7 +408,11 @@ export default class AutoPlate extends Scene {
         // one continuous instrument panel; the narration's timings drive it
         const B = this.B!;
         const lines = s.lines.map((id) => ({ text: lineText(id).replace(/\*/g, ''), start: B.at(id), end: B.end(id) }));
-        drawSim(fg, t, L, s.headline ?? '', lines);
+        if (this.studio) {
+          const idx = lines.reduce((k, l, i) => (t >= l.start - 0.05 ? i : k), 0);
+          this.studio.update(t, lines, idx);
+          this.studio.captions(fg, t, lines, idx);
+        } else drawSim(fg, t, L, s.headline ?? '', lines);
         break;
       }
       default:

@@ -123,7 +123,8 @@ export class Engine {
       scene.camera.aspect = this.w / this.h;
       scene.camera.updateProjectionMatrix();
       r.clearDepth();
-      r.render(scene.three, scene.camera);
+      if (scene.render3D) scene.render3D(r, this.rt);
+      else r.render(scene.three, scene.camera);
     }
     r.render(this.fg.scene, this.quadCam);
 
