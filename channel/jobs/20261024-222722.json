@@ -1,0 +1,16 @@
+{
+  "id": "20261024-222722",
+  "topic": "Automatic hand dryer in washrooms",
+  "hook": "Hand Dryer Bina Button Dabaye Kaise Chalu Hota Hai?",
+  "lang": "hi",
+  "started": "2026-10-24T22:27:22",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-10-24T22:27:22"
+    }
+  ],
+  "format": "studio",
+  "module": "ir"
+}
