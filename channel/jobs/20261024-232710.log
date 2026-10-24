@@ -29,3 +29,23 @@
   studio plan: 15 shots of the ir module
 
 == voice (Microsoft Edge: Madhur)
+Installed 27 packages in 24ms
+[0;93m2026-10-24 23:29:26.627334868 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        2.11s  रोबोट दीवार से क्यों नहीं टकराता?
+s1-2        2.53s  ये है एफसी इक्यावन आईआर सेंसर।
+s1-3        1.96s  इसके हर पार्ट का अलग काम है।
+s1-4        4.41s  साफ एलईडी इन्फ्रारेड रोशनी भेजती है, नौ सौ चालीस नैनोमीटर।
+s1-5        2.14s  ये रोशनी लगातार जलती रहती है।
+s1-6        2.85s  काला फोटोडायोड वापस आई रोशनी पकड़ता है।
+s1-7        2.78s  अंदर पी और एन सिलिकॉन की परतें होती हैं।
+s1-8        2.86s  रोशनी पड़ते ही इलेक्ट्रॉन आज़ाद हो जाते हैं।
+s1-9        3.41s  एलएम तीन सौ तिरानवे सिग्नल को थ्रेशोल्ड से मिलाता है।
+s1-10       3.38s  नीला पॉट दो से तीस सेंटीमीटर रेंज सेट करता है।
+s1-11       2.38s  चीज़ मिलते ही आउट पिन लो हो जाती है।
+s1-12       2.44s  आर्डुइनो इसे डिजिटल रीड से पढ़ता है।
+s1-13       3.58s  काली सतह कम रोशनी लौटाती है, पास आकर दिखती है।
+s1-14       3.32s  आपका रोबोट कहाँ अटका? कमेंट में बताओ।
+s1-15       2.00s  ऐसे और वीडियो के लिए फॉलो करो
+wrote 15 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit
