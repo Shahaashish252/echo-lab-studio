@@ -16,7 +16,7 @@ export interface AppInfo {
   plates: { id: string; start: number; end: number }[];
 }
 
-export async function openApp({ video, scale = 1, clean = false }: { video?: string; scale?: number; clean?: boolean }) {
+export async function openApp({ video, scale = 1, clean = false, lite = false }: { video?: string; scale?: number; clean?: boolean; lite?: boolean }) {
   // No watcher and no HMR: editing files mid-render must not reload the page.
   const server = await createServer({
     root: appDir,
@@ -40,7 +40,7 @@ export async function openApp({ video, scale = 1, clean = false }: { video?: str
       // HMR is off on purpose, so ignore the Vite client's websocket complaints.
       if (m.type() === 'error' && !/404|websocket|vite/i.test(m.text())) console.error('[page]', m.text());
     });
-    await page.goto(`${base}?render=1&scale=${scale}${video ? `&video=${encodeURIComponent(video)}` : ''}${clean ? '&clean=1' : ''}`);
+    await page.goto(`${base}?render=1&scale=${scale}${video ? `&video=${encodeURIComponent(video)}` : ''}${clean ? '&clean=1' : ''}${lite ? '&lite=1' : ''}`);
     await page.waitForFunction(() => (window as any).__macReady === true, null, { timeout: 60_000 });
     const info: AppInfo = await page.evaluate(() => {
       const m = (window as any).__mac;

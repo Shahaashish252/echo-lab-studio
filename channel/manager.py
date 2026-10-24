@@ -101,9 +101,35 @@ def schedule() -> dict:
 
 # ---- topics -------------------------------------------------------------------------------------
 
+# the 3D modules the studio format can film (app/src/scenes/auto/studio.ts), and the topics each one explains;
+# checked in this order, so "street light" is the LDR before anything else
+STUDIO_MODULES = {
+    "flame": (r"flame|fire", "a flame sensor module (fire alarms, candle detection)"),
+    "sound": (r"sound|clap|noise|microphone|\bmic\b|voice", "a sound sensor module KY-038 (clap switches, noise alarms)"),
+    "ldr": (r"\bldr\b|light sensor|street ?light|night ?lamp|dark|photoresistor|day.?night|automatic light|solar light",
+            "an LDR light sensor module (automatic street lights, night lamps)"),
+    "ir": (r"\bir\b|infrared|obstacle|proximity|\btap\b|faucet|sanitizer|dryer|\blift\b|elevator|robot|line follower|"
+           r"object counter|fc-51|automatic door|dustbin",
+           "an IR obstacle sensor module FC-51 (robots, automatic taps, sanitizer dispensers, lift doors, smart dustbins)"),
+}
+
+
+def studio_module(topic: dict) -> str | None:
+    """Which 3D module a topic can be explained with (studio format), or None."""
+    import re
+    text = f"{topic.get('topic', '')} {topic.get('hook', '')}".lower()
+    return next((m for m, (pat, _) in STUDIO_MODULES.items() if re.search(pat, text)), None)
+
+
 def next_topic() -> dict:
     t = read(TOPICS, {"queue": [], "done": []})
-    if len(t["queue"]) < 3:
+    studio = schedule().get("format") == "studio"
+    if studio:
+        # studio videos need a 3D module: take the first queued topic that has one
+        fits = [q for q in t["queue"] if studio_module(q)]
+        if fits:
+            return fits[0]
+    if len(t["queue"]) < 3 or (studio and not any(studio_module(q) for q in t["queue"])):
         # top up the queue with fresh ideas that fit the channel and haven't been done,
         # steered by what has actually performed (saved by the dashboard)
         perf = read(HERE / "analytics" / "videos.json", [])
@@ -120,12 +146,18 @@ def next_topic() -> dict:
                "and makers use and search for. Write the topic and hook in simple English.\n" if video_language() == "hi"
                else "The videos are in English for a global audience.\n") +
             f"{perf_txt}"
+            + ("Every topic MUST be explainable with one of these real hobby modules, as an everyday use of it: "
+               + "; ".join(d for _, d in STUDIO_MODULES.values()) + ". Name the everyday use in the topic.\n" if studio else "") +
             f"Already done or queued (don't repeat): {json.dumps(t['done'] + [q['topic'] for q in t['queue']])}\n"
             'Reply with ONLY a JSON array of {"topic": "short topic", "hook": "the first line on screen, max 12 words, '
             'a curiosity hook"}. Concrete, visual, popular search topics.'
         )
         t["queue"] += [{"topic": str(i["topic"])[:80], "hook": str(i.get("hook", ""))[:120]} for i in ideas if i.get("topic")]
         write(TOPICS, t)
+    if studio:
+        fits = [q for q in t["queue"] if studio_module(q)]
+        if fits:
+            return fits[0]
     return t["queue"][0]
 
 
@@ -262,11 +294,16 @@ def make_video(topic: dict | None = None) -> dict | None:
         # only a JSON plan (app/src/scenes/auto/story-lib.js + auto.ts --story)
         job["format"] = "story"
         code = run_tracked(["bun", "scripts/auto.ts", prompt, "--upload", "--story", "--lang", lang], job)
-    elif fmt == "studio":
-        # premium 3D product explainer (owner's reference reel, 2026-10-24): app/src/scenes/auto/studio.ts films a
-        # photoreal module from Claude's shot list (auto.ts --studio)
+    elif fmt == "studio" and studio_module(topic):
+        # premium 3D product explainer (owner's reference reel, approved 2026-10-24): app/src/scenes/auto/studio.ts
+        # films a photoreal module from Claude's shot list (auto.ts --studio); ends on a "follow" line
         job["format"] = "studio"
-        code = run_tracked(["bun", "scripts/auto.ts", prompt, "--upload", "--studio", "--lang", lang], job)
+        job["module"] = studio_module(topic)
+        code = run_tracked(["bun", "scripts/auto.ts", prompt, "--upload", "--studio", "--module", job["module"], "--lang", lang], job)
+    elif fmt == "studio":
+        # no 3D module fits this topic: the animated story format instead
+        job["format"] = "story"
+        code = run_tracked(["bun", "scripts/auto.ts", prompt, "--upload", "--story", "--lang", lang], job)
     elif fmt == "cinematic":
         # the viral-reference style: photoreal shots + word captions (channel/cinematic.py), far less Claude than "sim"
         job["format"] = "cinematic"

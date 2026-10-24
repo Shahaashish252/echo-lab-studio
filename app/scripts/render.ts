@@ -2,6 +2,7 @@
 // and pipes PNG frames into ffmpeg (libx264).
 //
 //   bun scripts/render.ts video  [--video rutherford] [--samples 6] [--shutter 0.5] [--scale 1] [--crf 17] [--only <plate>] [--out file.mp4]
+//                                [--part k/n: only the k-th of n equal frame ranges, silent, for cloud-render.ts] [--lite: cheaper 3D for GPU-less machines]
 //   bun scripts/render.ts stills [--video rutherford] --t 1.5,9.2,fire@0.6 [--only <plate>] [--samples 1] [--out dir]
 import { spawn } from 'node:child_process';
 import { once } from 'node:events';
@@ -23,7 +24,7 @@ const crf = opt('crf', '17')!;
 const only = opt('only');
 
 // --clean: no slates, headings or captions (thumbnails)
-const { page, info, close } = await openApp({ video: opt('video'), scale, clean: argv.includes('--clean') });
+const { page, info, close } = await openApp({ video: opt('video'), scale, clean: argv.includes('--clean'), lite: argv.includes('--lite') });
 
 let exitCode = 0;
 try {
@@ -65,12 +66,16 @@ try {
   } else {
     const start = plate?.start ?? 0;
     const end = plate?.end ?? info.duration;
-    const frames = Math.round((end - start) * info.fps);
+    const all = Math.round((end - start) * info.fps);
+    // --part k/n renders frames [k*all/n, (k+1)*all/n) without sound; cloud-render.ts joins the parts
+    const part = opt('part')?.split('/').map(Number);
+    const first = part ? Math.floor((part[0] * all) / part[1]) : 0;
+    const frames = part ? Math.floor(((part[0] + 1) * all) / part[1]) - first : all;
     const out = resolve(opt('out', join(outRoot, plate ? `${info.video}_${plate.id}.mp4` : `${info.video}.mp4`))!);
     mkdirSync(dirname(out), { recursive: true });
     // soundtrack made by scripts/sound.ts
     const vo = resolve(appDir, 'public', 'audio', `${info.video}.wav`);
-    const withAudio = !plate && existsSync(vo);
+    const withAudio = !plate && !part && existsSync(vo);
 
     const ff = spawn(
       'ffmpeg',
@@ -88,7 +93,7 @@ try {
     console.log(`rendering ${frames} frames (${start}-${end}s) at ${info.width}x${info.height}, ${samples} sample(s)/frame`);
     const t0 = performance.now();
     for (let i = 0; i < frames; i++) {
-      const png = await grab(start + i / info.fps);
+      const png = await grab(start + (first + i) / info.fps);
       if (!ff.stdin.write(png)) await once(ff.stdin, 'drain');
       if (i % 30 === 29 || i === frames - 1) {
         const el = (performance.now() - t0) / 1000;

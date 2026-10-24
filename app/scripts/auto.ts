@@ -753,6 +753,62 @@ async function research(): Promise<string> {
   }
 }
 
+/** the 3D module the studio video explains (studio.ts MODULES); manager.py picks it from the topic */
+const STUDIO_MODULE = opt('module', 'ir')!;
+const STUDIO_MODULES: Record<string, { about: string; beam: string; layers: string; inside: string; macro: string; story: string }> = {
+  ir: {
+    about: `"ir": the FC-51 IR obstacle-avoidance sensor (a clear IR LED emitter at about 940 nm, a black IR photodiode
+receiver, a blue trimmer pot that sets the detection distance (about 2-30 cm), an LM393 comparator chip, a PWR LED and
+an OBS LED, pins VCC (3.3-5 V), GND, OUT; OUT goes LOW and the OBS LED lights when an object reflects enough IR back;
+dark/black surfaces reflect less IR, so they are detected closer; the IR LED shines steadily - it is NOT pulsed at
+38 kHz like TV-remote receivers)`,
+    beam: `{"obstacle": true|false}  the IR LED sends its invisible beam; with an obstacle it bounces back into the receiver and the OBS LED lights`,
+    layers: `{"part": "receiver|emitter", "label": "max 18 chars"}  that part splits apart: epoxy shell, P and N silicon layers, metal cup, legs`,
+    inside: `glass cutaway of the receiver's silicon: electrons locked in place (false), or light knocks electrons free and a current flows (true)`,
+    macro: 'sensor|emitter|receiver|chip|pot|pins|leds',
+    story: 'the beam and its bounce, inside the receiver (layers, inside false then true)',
+  },
+  ldr: {
+    about: `"ldr": the LDR light-sensor module (an LDR = CdS photoresistor: a cadmium-sulphide zigzag track on a ceramic disc;
+about 1 megaohm or more in darkness, falling to around a kilohm or less in bright light; a blue trimmer pot sets the
+light threshold, an LM393 comparator, PWR and DO LEDs, pins VCC (3.3-5 V), GND, DO (digital out: switches when the
+light crosses the pot's threshold), AO (analog voltage that follows the light); used in automatic street lights and
+night lamps)`,
+    beam: `{"light": true|false}  a lamp shines a cone of light onto the LDR (true) or goes dark (false); the DO LED follows`,
+    layers: `{"part": "sensor", "label": "max 18 chars"}  the LDR splits apart: clear coating, CdS zigzag track, ceramic base, legs`,
+    inside: `glass cutaway of the CdS track: electrons locked in place in the dark (false), or light frees electrons so the resistance falls and current flows (true)`,
+    macro: 'sensor|chip|pot|pins|leds',
+    story: 'light falling on the LDR (beam), inside the CdS track (layers, inside false then true)',
+  },
+  flame: {
+    about: `"flame": the flame-sensor module (a black IR photodiode/phototransistor that "sees" the infrared from a flame,
+about 760-1100 nm, about 60 degrees viewing angle, up to roughly 1 m for a lighter flame; a blue trimmer pot sets the
+sensitivity, an LM393 comparator, PWR and DO LEDs, pins VCC (3.3-5 V), GND, DO, AO; sunlight also contains IR and can
+trigger it; it is a hobby/learning sensor, not a certified fire alarm)`,
+    beam: `{"fire": true|false}  a candle flame flickers and sends invisible IR waves to the black sensor (true) or is blown out (false)`,
+    layers: `{"part": "sensor", "label": "max 18 chars"}  the black IR receiver splits apart: dark epoxy (blocks visible light), P and N silicon, metal cup, legs`,
+    inside: `glass cutaway of the receiver's silicon: electrons locked (false), or the flame's IR frees electrons and a current flows (true)`,
+    macro: 'sensor|chip|pot|pins|leds',
+    story: 'the flame and its invisible IR (beam), inside the receiver (layers, inside false then true)',
+  },
+  sound: {
+    about: `"sound": the sound-sensor module (KY-038 style: an electret condenser microphone capsule - a thin charged
+diaphragm in front of a backplate; sound pressure moves the diaphragm, the capacitance changes and a tiny voltage
+appears, buffered by a FET inside the capsule; a blue trimmer pot sets the loudness threshold, an LM393 comparator,
+PWR and DO LEDs, pins VCC, GND, DO (switches on a loud sound such as a clap), AO; used for clap switches)`,
+    beam: `{"loud": true|false}  sound waves (a clap) roll in and hit the microphone; with loud the DO LED flashes`,
+    layers: `{"part": "sensor", "label": "max 18 chars"}  the microphone capsule splits apart: felt cover, metal case, diaphragm, backplate, FET`,
+    inside: `glass cutaway of the microphone: the diaphragm at rest (false), or sound makes it vibrate near the backplate and a signal current flows (true)`,
+    macro: 'sensor|chip|pot|pins|leds',
+    story: 'sound waves arriving (beam), inside the microphone (layers, inside false then true)',
+  },
+};
+const SM = STUDIO_MODULES[STUDIO_MODULE] ?? STUDIO_MODULES.ir;
+/** every studio video ends on this line (enforced after Claude's reply too) */
+const FOLLOW = HINDI
+  ? { text: 'Aise aur videos ke liye follow karo', say: 'ऐसे और वीडियो के लिए फॉलो करो', head: '*FOLLOW* karo' }
+  : { text: 'Follow for more videos like this', say: 'Follow for more videos like this', head: '*FOLLOW* for more' };
+
 const PROMPT_STUDIO = `Write a viral vertical explainer Short (50-60 seconds) about:
 "${topic}"
 
@@ -762,20 +818,16 @@ exploded view, a part splitting into its layers, glass "inside the material" dia
 Arduino. LENGTH: 55-60 seconds spoken, about 130-150 spoken words in total - every "say" is short (max 10 words).
 Captions are our story style: 2-5 BIG headline words per shot (one *key* word glows orange) plus the subtitle.
 The narration is calm, clear, curious and DETAILED: real part names, what each part physically does, and the real
-numbers that make it concrete (wavelength, range, voltage) - one idea per line, no filler.
+numbers that make it concrete - one idea per line, no filler. Connect it to the everyday use in the topic.
 
-The 3D module available is "ir": the FC-51 IR obstacle-avoidance sensor (a clear IR LED emitter at about 940 nm, a
-black IR photodiode receiver, a blue trimmer pot that sets the detection distance (about 2-30 cm), an LM393 comparator
-chip, a PWR LED and an OBS LED, pins VCC (3.3-5 V), GND, OUT; OUT goes LOW and the OBS LED lights when an object
-reflects enough IR back; dark/black surfaces reflect less IR, so they are detected closer; the FC-51's IR LED shines
-steadily - it is NOT pulsed at 38 kHz like TV-remote receivers). Explain THIS module.
+The 3D module is ${SM.about}. Explain THIS module.
 
 Reply with ONLY a JSON object, no markdown fences, no commentary:
 {
   "title": "short video title, max 28 characters",
   "kicker": "series label, max 22 characters",
 ${SOCIAL_FIELDS}
-  "module": "ir",
+  "module": "${STUDIO_MODULE}",
   "scenes": [
     { "type": "sim", "headline": "the hook, 3-7 words",
       "lines": [ 13-15 objects {"text": "the subtitle, 4-8 words", "say": "what the voice says: the same words as text, max 10 words"} ] }
@@ -787,23 +839,20 @@ Shot types (use ONLY these):
 - assemble                         the module's parts fly in and click together (use for line 0)
 - explode                          exploded view: every part floats above the board with its name label
 - hero                             slow orbit around the whole module
-- macro    {"part": "sensor|emitter|receiver|chip|pot|pins|leds", "label": "part name + one fact, max 18 chars"}
+- macro    {"part": "${SM.macro}", "label": "part name + one fact, max 18 chars"}
                                    close-up of that part with a name label, blurred background
-- layers   {"part": "receiver|emitter", "label": "max 18 chars"}  that part splits apart: epoxy shell, P and N silicon
-                                   layers, metal cup, legs
-- beam     {"obstacle": true|false}  the IR LED sends its invisible beam; with an obstacle it bounces back into the
-                                   receiver and the OBS LED lights
-- inside   {"light": true|false}     glass cutaway of the receiver's silicon: electrons locked in place (false), or light
-                                   knocks electrons free and a current flows (true)
+- layers   ${SM.layers}
+- beam     ${SM.beam}
+- inside   {"light": true|false}     ${SM.inside}
 - compare  {"cross": true|false}     glass comparator = the LM393: the signal level against the threshold set by the pot;
                                    crossing it switches the output
-- pot                                close-up of the blue trimmer turning (sets the detection distance)
-- wiring   {"detect": true|false}    the module wired to an Arduino Uno (VCC to 5V, GND, OUT to a digital pin); with detect
-                                   the OUT signal pulses down the wire and the Uno's LED lights
-Story rules: line 0 = a curiosity hook about something everyday (robots, taps, doors) with "assemble"; line 1 an
-"explode" naming the parts. Then the beam and its bounce, inside the receiver (layers, inside false then true), the
-comparator and the pot, the OBS LED, wiring to an Arduino with one practical tip, and the last line a question that
-invites comments (use hero). Never the same shot type more than twice in a row. Every claim accurate.`;
+- pot                                close-up of the blue trimmer turning (sets the threshold / range)
+- wiring   {"detect": true|false}    the module wired to an Arduino Uno (VCC to 5V, GND, the digital output to a digital
+                                   pin); with detect the signal pulses down the wire and the Uno's LED lights
+Story rules: line 0 = a curiosity hook about the everyday use with "assemble"; line 1 an "explode" naming the parts.
+Then ${SM.story}, the comparator and the pot, the output LED, wiring to an Arduino with one practical tip, then a
+question that invites comments, and the LAST line is exactly {"text": "${FOLLOW.text}", "say": "${FOLLOW.say}"} with
+shot hero and text "${FOLLOW.head}". Never the same shot type more than twice in a row. Every claim accurate.`;
 
 const STUDIO_NOTE = `
 
@@ -1172,9 +1221,18 @@ ${NOTES}
 for (let attempt = 1; attempt <= 2 && !story; attempt++) {
   try {
     const raw = parse(claude(PROMPT + RESEARCH_NOTE + (HINDI ? HINDI_NOTE + (STUDIO_MODE ? STUDIO_NOTE : '') : '')));
+    if (STUDIO_MODE) {
+      // every studio video ends with the follow line, whatever the reply did
+      const sim = ((raw as Raw).scenes ?? []).find((x: Raw) => x.type === 'sim');
+      const lines = sim?.lines as Raw[] | undefined;
+      if (lines?.length && !/follow/i.test(JSON.stringify(lines[lines.length - 1]))) {
+        lines.push({ text: FOLLOW.text, say: FOLLOW.say });
+        ((raw as Raw).shots ??= []).push({ line: lines.length - 1, shot: 'hero', text: FOLLOW.head });
+      }
+    }
     story = normalize(raw);
     if (STUDIO_MODE) {
-      STUDIO_PLAN = { module: str((raw as Raw).module, 20) || 'ir', shots: Array.isArray((raw as Raw).shots) ? ((raw as Raw).shots as unknown[]) : [] };
+      STUDIO_PLAN = { module: STUDIO_MODULE, shots: Array.isArray((raw as Raw).shots) ? ((raw as Raw).shots as unknown[]) : [] };
       if (!STUDIO_PLAN.shots.length) throw new Error('the studio plan has no shots');
     } else if (STORY_MODE) {
       STORY_PLAN = { beats: Array.isArray((raw as Raw).beats) ? ((raw as Raw).beats as unknown[]) : [] };
@@ -1330,7 +1388,9 @@ run('bun', ['scripts/sound.ts', '--video', 'auto', '--no-mux']);
 step('render');
 const out = resolve(opt('out', join(outRoot, 'auto', `${slug(story.title)}.mp4`))!);
 mkdirSync(resolve(out, '..'), { recursive: true });
-run('bun', ['scripts/render.ts', 'video', '--video', 'auto', '--samples', opt('samples', '2')!, '--crf', '16', '--out', out]);
+// the 3D studio format is too slow for one GPU-less cloud runner: split it across parallel runs (cloud-render.ts)
+if (STUDIO_MODE && process.env.ECHO_RENDER_PARTS) run('bun', ['scripts/cloud-render.ts', '--parts', process.env.ECHO_RENDER_PARTS, '--out', out]);
+else run('bun', ['scripts/render.ts', 'video', '--video', 'auto', '--samples', opt('samples', '2')!, '--crf', '16', '--out', out]);
 writeFileSync(out.replace(/\.mp4$/, '.txt'), `${story.title}\n\n${Object.values(story.lines).map((l) => l.text.replace(/\*/g, '')).join(' ')}\n`);
 
 // keep everything this video was made from, so it can be re-rendered later (scripts/rerender.ts)
