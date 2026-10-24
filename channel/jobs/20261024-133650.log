@@ -29,3 +29,7 @@
   | Sources: [Naked Scientists](https://www.thenakedscientists.com/node/179908), [Supreme Airforce manual](https://media.cetnaj.com.au/Installation/Supreme/Supreme_Airforce.pdf), [ProDryers troubleshooting](https://www.prodryers.com/blog/commercial-hand-dryer-troubleshooting-guide-6-common-problems-expert-fixes-preventive-maintenance/), [FMLink on Dyson Airblade Tap](https://www.fmlink.com/dyson-airblade-tap-hand-dryer-washes-and-dries-hands-at-the-sink/)
 
 == storyboard: "Automatic hand dryer sensor (open with this hook: "Hand Dryer Aapke Haath Ko Dekhta Nahi, Phir Bhi Chalta Hai!")" (Claude Code)
+  s1 sim     Hand Dryer Haath Ko *DEKHTA* Nahi!
+  s2 outro   Dekhna Nahi, ECHO!
+
+== simulation (Claude Code writes it, renders it, reviews it)
