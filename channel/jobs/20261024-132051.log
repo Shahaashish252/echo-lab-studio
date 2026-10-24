@@ -35,3 +35,24 @@
   story plan: 15 animated beats
 
 == voice (Microsoft Edge: Madhur)
+Installed 27 packages in 24ms
+[0;93m2026-10-24 13:21:48.337482235 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        3.26s  लिफ्ट को कैसे पता, आप कौन सी फ्लोर दबाते हो?
+s1-2        4.00s  क्या लिफ्ट कैमरे से देखती है? बिल्कुल नहीं!
+s1-3        4.20s  ना कैमरा, ना अंदाज़ा। बस सिग्नल और गिनती।
+s1-4        2.87s  आप बटन दबाते हो, तो सिग्नल निकलता है।
+s1-5        3.38s  सिग्नल लटकती केबल से ऊपर कंट्रोलर तक जाता है।
+s1-6        3.36s  कंट्रोलर उस फ्लोर की कॉल मेमोरी में सेव कर लेता है।
+s1-7        1.98s  फिर बटन की लाइट जल जाती है।
+s1-8        2.88s  पर लिफ्ट को अपनी पोज़ीशन कैसे पता चलती है?
+s1-9        3.33s  शाफ्ट में हर फ्लोर पर मैग्नेट या वेन लगे होते हैं।
+s1-10       3.44s  लिफ्ट चलती है, और सेंसर हर फ्लोर गिनता जाता है।
+s1-11       3.11s  मंज़िल के पास कंट्रोलर लिफ्ट को धीमा कर देता है।
+s1-12       3.74s  सेंसर बराबर आते ही लिफ्ट रुकती है, दरवाज़ा खुलता है।
+s1-13       3.54s  सच यह है: लिफ्ट फ्लोर देखती नहीं, बस गिनती है।
+s1-14       2.92s  बटन बार-बार दबाने से लिफ्ट तेज़ नहीं आती।
+s1-15       2.95s  आपने कभी लिफ्ट का बटन कितनी बार दबाया है?
+s2-1        3.92s  आप लिफ्ट में सबसे ज़्यादा क्या करते हो? कमेंट करो!
+wrote 16 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit, network
