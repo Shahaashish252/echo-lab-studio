@@ -59,3 +59,9 @@ wrote 16 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/v
   2 scenes, 54.4s
 
 == sound
+auto: 22 cues over 54.43333333333334s
+voice: kokoro
+mixed (peak -4.1 dBFS)
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wav (-14 LUFS)
+
+== render
