@@ -1,32 +1,33 @@
 {
-  "updated": "2026-10-23T19:52",
-  "videos": 11,
-  "summary": "Instagram is carrying the channel: almost every Hindi video gets 100-1,400 views there, while YouTube Shorts barely moves (mostly under 30 views). The best video, the PIR motion sensor one, got about 1,400 Instagram views and 529 YouTube views, far above the rest. The only English video did better on YouTube (157) than most Hindi ones, but it has no Instagram numbers, so the data is too thin to say language is the problem. Shares and saves are very low everywhere, so viewers watch but rarely act.",
-  "winningPattern": "Everyday device or sensor people meet daily (motion sensor, street light, phone orientation) + a curiosity hook that flips an assumption ('Aapko Dekhta Nahi!', 'Kaise Pata Chalta Hai?') + Hinglish question title with 🤔 and #shorts, posted mainly on Instagram Reels. The top video also has a surprising claim in the title, which the weaker ones lack.",
+  "updated": "2026-10-24T13:20",
+  "videos": 13,
+  "summary": "Instagram is carrying almost all the attention: the Hindi videos get 100 to 1,400 views there, while YouTube gives most of them under 25 views. The best video by far is the PIR motion sensor one, which hooks people with a surprising 'it doesn't actually see you' claim about a device they meet daily. Weaker videos cover abstract or less visible topics (smartwatch, ultrasonic, TV remote) and get views but almost no likes, shares or saves. The only English video did a bit better on YouTube than most Hindi ones, but the sample is just one video.",
+  "winningPattern": "Everyday device people see in daily life (motion sensor, street light) + a myth-busting or 'it doesn't work how you think' hook in Hinglish + a question title ending with 🤔 #shorts, posted mainly for Instagram Reels. The PIR video also worked on YouTube, so a strong surprising opening line matters more than anything else.",
   "doMore": [
-    "Lead titles and first lines with a surprising claim or myth-flip, like the PIR video, instead of a plain 'how does X work' question",
-    "Pick familiar devices people touch daily (lift sensor, fridge door, ATM, fan regulator, AC remote) over abstract modules",
-    "Treat Instagram as the main platform and test YouTube separately with a few English or bilingual titles, since the Arduino Uno video got 157 views there",
-    "End each video with a save or share prompt such as 'Save karo exam ke liye' or 'Dost ko bhejo jo yeh sochta hai', since saves and shares are near zero",
-    "Post on a steady schedule and compare same-topic videos across a week before judging a format, as most videos are only 1-6 days old"
+    "Open with a surprising negative claim ('X doesn't actually see/hear/feel...') then explain how it really works",
+    "Pick devices viewers touch or walk past every day: lifts, ATMs, fans, AC remotes, car parking sensors",
+    "Put the key hook line big on screen in the first second and keep the title as one clear question",
+    "Lead with Instagram Reels and cross-post to YouTube, checking which sensor topics also get YouTube views",
+    "End each video with a share or save prompt like 'Dost ko bhejo jo yeh nahi jaanta' since shares and saves are the strongest signal",
+    "Test a few English-narrated versions of the best Hindi topics to compare against the single English data point"
   ],
   "stopDoing": [
-    "Judging YouTube performance from Hindi titles alone; test, don't assume",
-    "Plain neutral titles with no surprise (Smartwatch, Smoke Detector, Mall Door got little reaction)",
-    "Reading too much into single videos with a few days of data"
+    "Stop picking abstract or invisible-feeling topics with no familiar object in the scene (smartwatch light, ultrasonic bat comparison)",
+    "Stop publishing near-duplicate topics close together (two smoke alarm videos in days split the audience)",
+    "Stop judging by views alone; videos with views but zero shares and saves are not building a following"
   ],
   "nextTopics": [
-    "Lift (elevator) door sensor stopping on your hand",
-    "Automatic tap / hand dryer sensor",
-    "Fingerprint scanner on phone",
-    "Car reverse parking beeper",
-    "Phone proximity sensor turning off screen during calls"
+    "Lift knows which floor you pressed",
+    "Automatic hand dryer sensor",
+    "Car reverse parking sensor beeps",
+    "Fan regulator / dimmer working",
+    "Fingerprint scanner on phone"
   ],
   "bestTimes": {
     "times": [
       "01:00",
       "12:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (10 posts)"
+    "reason": "from our own posts: these hours averaged the most views (12 posts)"
   }
 }

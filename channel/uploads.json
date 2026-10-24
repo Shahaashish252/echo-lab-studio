@@ -320,5 +320,23 @@
     "topic": "ATM/lift door safety sensor",
     "job": "20261023-135710",
     "postAt": "2026-10-25T12:00"
+  },
+  {
+    "id": "uaetzbQjMGA",
+    "meta": "channel/videos/auto-lift-ko-kaise-pata-chalta-hai.json",
+    "date": "2026-10-24",
+    "status": "approved",
+    "topic": "Lift knows which floor you pressed",
+    "job": "20261024-132051",
+    "postAt": "2026-10-26T01:00"
+  },
+  {
+    "id": "9m6XMbAw_3U",
+    "meta": "channel/videos/auto-hand-dryer-ka-sensor.json",
+    "date": "2026-10-24",
+    "status": "approved",
+    "topic": "Automatic hand dryer sensor",
+    "job": "20261024-133650",
+    "postAt": "2026-10-26T12:00"
   }
 ]

@@ -4,7 +4,7 @@
   "hook": "Lift Ko Kaise Pata Aap Kaun Si Floor Dabate Ho?",
   "lang": "hi",
   "started": "2026-10-24T13:20:51",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -39,5 +39,7 @@
       "at": "2026-10-24T13:36:43"
     }
   ],
-  "format": "story"
+  "format": "story",
+  "finished": "2026-10-24T13:36:47",
+  "uploadId": "uaetzbQjMGA"
 }

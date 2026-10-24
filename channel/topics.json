@@ -1,6 +1,14 @@
 {
   "queue": [
     {
+      "topic": "Car reverse parking sensor beeps",
+      "hook": "Gaadi Ka Sensor Deewar Ko Dekh Nahi Sakta, Phir Bhi Beep Karta Hai"
+    },
+    {
+      "topic": "Fan regulator / dimmer working",
+      "hook": "Fan Ki Speed Bijli Bachakar Nahi, Kaat Kar Kam Hoti Hai!"
+    },
+    {
       "topic": "Lift (elevator) door sensor stopping on your hand",
       "hook": "Lift ka darwaza aapko dekhe bina kaise ruk jata hai?"
     },
@@ -192,6 +200,8 @@
     "Automatic tap sensor in public washrooms",
     "Smoke detector / fire alarm",
     "Automatic tap sensor in washrooms",
-    "ATM/lift door safety sensor"
+    "ATM/lift door safety sensor",
+    "Lift knows which floor you pressed",
+    "Automatic hand dryer sensor"
   ]
 }

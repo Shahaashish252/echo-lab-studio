@@ -4,7 +4,7 @@
   "hook": "Hand Dryer Aapke Haath Ko Dekhta Nahi, Phir Bhi Chalta Hai!",
   "lang": "hi",
   "started": "2026-10-24T13:36:50",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -39,5 +39,7 @@
       "at": "2026-10-24T13:51:54"
     }
   ],
-  "format": "story"
+  "format": "story",
+  "finished": "2026-10-24T13:51:58",
+  "uploadId": "9m6XMbAw_3U"
 }

@@ -1,9 +1,36 @@
 {
-  "updated": "23 Oct 2026, 19:52",
+  "updated": "24 Oct 2026, 13:52",
   "youtube": {
     "subs": 3,
-    "views": 1193,
+    "views": 1227,
     "videos": [
+      {
+        "title": "Lift Ko Kaise Pata Aap Kaun Si Floor Dabate Ho? 🤔 #shorts",
+        "id": "uaetzbQjMGA",
+        "status": "private",
+        "published": "2026-10-24",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
+      {
+        "title": "Smoke Alarm Dhuan Sunta Nahi, Phir Bhi Kaise Bajta Hai? 🤔 #shorts",
+        "id": "DfurMASCqo4",
+        "status": "public",
+        "published": "2026-10-24",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
+      {
+        "title": "Washroom Ka Tap Haath Kaise Pehchanta Hai? 🤔 #shorts",
+        "id": "TmtK-AOD-_k",
+        "status": "public",
+        "published": "2026-10-23",
+        "views": 5,
+        "likes": 1,
+        "comments": 2
+      },
       {
         "title": "Lift Ka Darwaza Aapko Kaise Rokta Hai? 🤔 #shorts",
         "id": "CCTv-pNY0Is",
@@ -27,7 +54,7 @@
         "id": "jD5lPQq_aQo",
         "status": "public",
         "published": "2026-10-23",
-        "views": 4,
+        "views": 7,
         "likes": 0,
         "comments": 0
       },
@@ -36,25 +63,7 @@
         "id": "wpe2f5b2ej0",
         "status": "public",
         "published": "2026-10-22",
-        "views": 5,
-        "likes": 0,
-        "comments": 0
-      },
-      {
-        "title": "Smoke Alarm Dhuan Sunta Nahi, Phir Bhi Kaise Bajta Hai? 🤔 #shorts",
-        "id": "DfurMASCqo4",
-        "status": "private",
-        "published": "2026-10-22",
-        "views": 0,
-        "likes": 0,
-        "comments": 0
-      },
-      {
-        "title": "Washroom Ka Tap Haath Kaise Pehchanta Hai? 🤔 #shorts",
-        "id": "TmtK-AOD-_k",
-        "status": "private",
-        "published": "2026-10-22",
-        "views": 0,
+        "views": 14,
         "likes": 0,
         "comments": 0
       },
@@ -81,7 +90,7 @@
         "id": "YFIx75qSV1s",
         "status": "public",
         "published": "2026-10-21",
-        "views": 6,
+        "views": 8,
         "likes": 1,
         "comments": 2
       },
@@ -117,7 +126,7 @@
         "id": "UK5WSZEUI9I",
         "status": "public",
         "published": "2026-10-20",
-        "views": 22,
+        "views": 23,
         "likes": 0,
         "comments": 0
       },
@@ -153,7 +162,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 529,
+        "views": 533,
         "likes": 9,
         "comments": 2
       },
@@ -258,12 +267,6 @@
       }
     ],
     "daily": [
-      {
-        "day": "2026-09-25",
-        "views": 0,
-        "minutes": 0,
-        "subs": 0
-      },
       {
         "day": "2026-09-26",
         "views": 0,
@@ -413,6 +416,12 @@
         "views": 187,
         "minutes": 22,
         "subs": 0
+      },
+      {
+        "day": "2026-10-21",
+        "views": 163,
+        "minutes": 21,
+        "subs": 0
       }
     ]
   },
@@ -421,15 +430,37 @@
     "followers": 3,
     "posts": [
       {
+        "title": "Alarm dhuan sunta nahi, phir bhi bajta hai? 🔥",
+        "url": "https://www.instagram.com/reel/De3fiedmGhP/",
+        "published": "2026-10-24",
+        "likes": 2,
+        "comments": 0,
+        "reach": 153,
+        "views": 177,
+        "saved": 0,
+        "shares": 0
+      },
+      {
+        "title": "Ye tap haath dekh ke nahi chalta! 🚰",
+        "url": "https://www.instagram.com/reel/De2V0kfDU4B/",
+        "published": "2026-10-23",
+        "likes": 2,
+        "comments": 0,
+        "reach": 168,
+        "views": 183,
+        "saved": 0,
+        "shares": 0
+      },
+      {
         "title": "Andhere mein bhi deewar kaise dikhti hai? 🔦",
         "url": "https://www.instagram.com/reel/De06vwYCcS-/",
         "published": "2026-10-23",
-        "likes": 1,
+        "likes": 2,
         "comments": 0,
-        "reach": 145,
-        "views": 157,
-        "saved": 0,
-        "shares": 0
+        "reach": 242,
+        "views": 264,
+        "saved": 1,
+        "shares": 1
       },
       {
         "title": "Smoke detector dhuan nahi dekhta! 🔥",
@@ -437,8 +468,8 @@
         "published": "2026-10-22",
         "likes": 1,
         "comments": 0,
-        "reach": 214,
-        "views": 248,
+        "reach": 229,
+        "views": 266,
         "saved": 1,
         "shares": 1
       },
@@ -448,8 +479,8 @@
         "published": "2026-10-22",
         "likes": 1,
         "comments": 0,
-        "reach": 105,
-        "views": 134,
+        "reach": 106,
+        "views": 135,
         "saved": 2,
         "shares": 0
       },
@@ -457,11 +488,11 @@
         "title": "Street light ko andhera kaise pata chalta hai? 💡",
         "url": "https://www.instagram.com/reel/DeyZePtCfOH/",
         "published": "2026-10-22",
-        "likes": 7,
+        "likes": 8,
         "comments": 0,
-        "reach": 629,
-        "views": 694,
-        "saved": 2,
+        "reach": 676,
+        "views": 744,
+        "saved": 3,
         "shares": 2
       },
       {
