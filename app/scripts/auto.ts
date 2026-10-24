@@ -753,17 +753,22 @@ async function research(): Promise<string> {
   }
 }
 
-const PROMPT_STUDIO = `Write a viral vertical explainer Short (45-60 seconds) about:
+const PROMPT_STUDIO = `Write a viral vertical explainer Short (50-60 seconds) about:
 "${topic}"
 
-The style is a premium 3D product explainer (like the reels "How does a LDR sensor work?"): the REAL module as a
-photoreal 3D model on a dark stage, slow cinematic camera moves with a blurred background, close-ups of its parts,
-a part splitting into its layers, glass "inside the material" diagrams, then the module wired to an Arduino.
-The narration is calm, clear and curious, one idea per line. The caption shows ONE word at a time, big and white.
+The style is a premium, detailed 3D product explainer: the REAL module as a photoreal 3D model (real KiCad part models)
+on a dark stage, slow cinematic camera moves with a blurred background, close-ups of each part with a name label, an
+exploded view, a part splitting into its layers, glass "inside the material" diagrams, then the module wired to an
+Arduino. LENGTH: 55-60 seconds spoken, about 130-150 spoken words in total - every "say" is short (max 10 words).
+Captions are our story style: 2-5 BIG headline words per shot (one *key* word glows orange) plus the subtitle.
+The narration is calm, clear, curious and DETAILED: real part names, what each part physically does, and the real
+numbers that make it concrete (wavelength, range, voltage) - one idea per line, no filler.
 
-The 3D module available is "ir": the FC-51 IR obstacle-avoidance sensor (an IR LED emitter, a black IR photodiode
-receiver, a blue trimmer pot, an LM393 comparator chip, a PWR LED and an OBS LED, pins VCC GND OUT; OUT goes LOW and the
-OBS LED lights when an object reflects the IR back). Explain THIS module.
+The 3D module available is "ir": the FC-51 IR obstacle-avoidance sensor (a clear IR LED emitter at about 940 nm, a
+black IR photodiode receiver, a blue trimmer pot that sets the detection distance (about 2-30 cm), an LM393 comparator
+chip, a PWR LED and an OBS LED, pins VCC (3.3-5 V), GND, OUT; OUT goes LOW and the OBS LED lights when an object
+reflects enough IR back; dark/black surfaces reflect less IR, so they are detected closer; the FC-51's IR LED shines
+steadily - it is NOT pulsed at 38 kHz like TV-remote receivers). Explain THIS module.
 
 Reply with ONLY a JSON object, no markdown fences, no commentary:
 {
@@ -773,35 +778,38 @@ ${SOCIAL_FIELDS}
   "module": "ir",
   "scenes": [
     { "type": "sim", "headline": "the hook, 3-7 words",
-      "lines": [ 12-15 objects {"text": "the subtitle, 4-9 words", "say": "exactly what the voice says"} ] }
+      "lines": [ 13-15 objects {"text": "the subtitle, 4-8 words", "say": "what the voice says: the same words as text, max 10 words"} ] }
   ],
-  "shots": [ one object per line, same order: {"line": 0-based index, "shot": "<type>", ...fields} ]
+  "shots": [ one object per line, same order: {"line": 0-based index, "shot": "<type>", "text": "2-5 headline words with one *key* word", ...fields} ]
 }
 
 Shot types (use ONLY these):
 - assemble                         the module's parts fly in and click together (use for line 0)
+- explode                          exploded view: every part floats above the board with its name label
 - hero                             slow orbit around the whole module
-- macro    {"part": "sensor|emitter|receiver|chip|pot|pins|leds"}   close-up of that part, blurred background
-- layers   {"part": "receiver|emitter"}   that part splits apart: epoxy shell, P and N silicon layers, metal cup, legs
+- macro    {"part": "sensor|emitter|receiver|chip|pot|pins|leds", "label": "part name + one fact, max 18 chars"}
+                                   close-up of that part with a name label, blurred background
+- layers   {"part": "receiver|emitter", "label": "max 18 chars"}  that part splits apart: epoxy shell, P and N silicon
+                                   layers, metal cup, legs
 - beam     {"obstacle": true|false}  the IR LED sends its invisible beam; with an obstacle it bounces back into the
-                                     receiver and the OBS LED lights
+                                   receiver and the OBS LED lights
 - inside   {"light": true|false}     glass cutaway of the receiver's silicon: electrons locked in place (false), or light
-                                     knocks electrons free and a current flows (true)
+                                   knocks electrons free and a current flows (true)
 - compare  {"cross": true|false}     glass comparator = the LM393: the signal level against the threshold set by the pot;
-                                     crossing it switches the output on
+                                   crossing it switches the output
 - pot                                close-up of the blue trimmer turning (sets the detection distance)
-- wiring   {"detect": true|false}    the module wired to an Arduino Uno on a cutting mat; with detect the OUT signal
-                                     pulses down the wire and the Uno's LED lights
-Story rules: line 0 = a curiosity hook about something everyday (robots, taps, doors) with "assemble". Then: what the
-parts are (macro), the beam and its bounce, inside the receiver (layers, inside false then true), the comparator and the
-pot, the OBS LED, wiring to an Arduino with a practical tip, and the last line a question that invites comments
-(use hero). Never the same shot type more than twice in a row. At most 3 numbers. Every claim accurate.`;
+- wiring   {"detect": true|false}    the module wired to an Arduino Uno (VCC to 5V, GND, OUT to a digital pin); with detect
+                                   the OUT signal pulses down the wire and the Uno's LED lights
+Story rules: line 0 = a curiosity hook about something everyday (robots, taps, doors) with "assemble"; line 1 an
+"explode" naming the parts. Then the beam and its bounce, inside the receiver (layers, inside false then true), the
+comparator and the pot, the OBS LED, wiring to an Arduino with one practical tip, and the last line a question that
+invites comments (use hero). Never the same shot type more than twice in a row. Every claim accurate.`;
 
 const STUDIO_NOTE = `
 
-STUDIO CAPTIONS: "text" is shown one word at a time in a Latin-only font, so write every "text" in Roman-script
-Hinglish (e.g. "Yeh sensor roshni ko wapas pakadta hai"), never Devanagari; put the natural spoken Hindi for the voice
-in "say" (Devanagari is fine there).`;
+STUDIO CAPTIONS: write every "text" (subtitle) and every shot "text" (headline) in Roman-script Hinglish
+(e.g. "Yeh sensor roshni ko wapas pakadta hai", "Deewar se *WAPAS*"), never Devanagari; put the natural spoken Hindi
+for the voice in "say" (Devanagari is fine there). Part labels stay short English (e.g. "LM393 COMPARATOR").`;
 
 const SIM_FILE = join(SCENES, 'sim.gen.js');
 /** each sim line's planned on-screen event */

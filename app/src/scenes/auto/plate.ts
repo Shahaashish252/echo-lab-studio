@@ -12,7 +12,7 @@ import { type Anim, drawDiagram, ensureDiagram } from './diagram';
 import { type Anim3D, drawLabels3D, Model3D } from './model3d';
 import { drawPhoto, ensurePhoto, type PhotoCue } from './photo';
 import { drawSim, PALETTE } from './sim';
-import { Studio, STUDIO_PLAN } from './studio';
+import { loadStudioModels, Studio, STUDIO_PLAN } from './studio';
 import { beats, dur as lineDur, lineText, type Beats } from './script';
 import { STORY, type PlateData, type StoryScene } from './storyboard';
 
@@ -248,6 +248,7 @@ export default class AutoPlate extends Scene {
   async prepare(f: Frame) {
     const s = this.s;
     if (s?.frames) await ensure(s.id, frameIndex(f.lt, s.frames));
+    if (this.studio) await loadStudioModels();
     if (s?.type === 'diagram' && s.svg) await ensureDiagram(s.id, s.svg);
     if (s?.type === 'photo' && s.photo) await ensurePhoto(s.photo.src);
   }
@@ -412,6 +413,7 @@ export default class AutoPlate extends Scene {
           const idx = lines.reduce((k, l, i) => (t >= l.start - 0.05 ? i : k), 0);
           this.studio.update(t, lines, idx);
           this.studio.captions(fg, t, lines, idx);
+          this.B?.subs(fg, t, 1660);
         } else drawSim(fg, t, L, s.headline ?? '', lines);
         break;
       }

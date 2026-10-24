@@ -1,15 +1,17 @@
 // Studio 3D format (2026-10-24): a premium 3D product explainer in the style of the reference reel the owner
 // picked (schematikio, "How does a LDR sensor work?"): the real module as a photoreal 3D model on a dark stage,
 // slow camera moves with a shallow depth of field, parts flying together, layers splitting apart, glass
-// "inside the material" diagrams, the module wired to an Arduino on a cutting mat, and one big white word at a
-// time as the caption. scripts/auto.ts --studio asks Claude only for a shot list (studio.gen.json); everything
-// here is a pure function of time (seek-safe). Units: 1 = 1 cm.
+// "inside the material" diagrams, the module wired to an Arduino on a cutting mat. Real component models come from
+// the KiCad 3D library (kicad.ts); captions are the channel's story style (big headline words, *key* word in
+// orange, plus the subtitle line). scripts/auto.ts --studio asks Claude only for a shot list (studio.gen.json);
+// everything here is a pure function of time (seek-safe). Units: 1 = 1 cm.
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
 import { clamp, hash, inOutCubic, lerp, outCubic, range, smooth } from '../../engine/ease';
 import { H, W, type Ctx } from '../../kit';
 import { BOARD_H, BOARD_W, drawUno } from './arduino';
+import { kicad, loadKicad, type KicadSurface } from './kicad';
 
 export interface Shot {
   line: number;
@@ -19,6 +21,10 @@ export interface Shot {
   light?: boolean;
   cross?: boolean;
   detect?: boolean;
+  /** the big headline words for this shot (2-5 words, *key* word) */
+  text?: string;
+  /** a part-name callout (macro / layers shots) */
+  label?: string;
 }
 export interface StudioPlan {
   module: string;
@@ -32,6 +38,19 @@ export interface StudioLine {
 
 const found = import.meta.glob<StudioPlan>('./studio.gen.json', { eager: true, import: 'default' });
 export const STUDIO_PLAN: StudioPlan | undefined = Object.values(found)[0];
+
+/** the KiCad models the stage uses; loaded before the first frame (AutoPlate.prepare) */
+const MODELS = [
+  'SOIC-8_3.9x4.9mm_P1.27mm', 'R_0805_2012Metric', 'C_0805_2012Metric', 'LED_0805_2012Metric',
+  'LED_D5.0mm_Horizontal_O1.27mm_Z3.0mm_Clear', 'LED_D5.0mm_Horizontal_O1.27mm_Z3.0mm_IRBlack', 'PinHeader_1x03_P2.54mm_Horizontal',
+  'DIP-28_W7.62mm_Socket', 'DIP-28_W7.62mm', 'PinSocket_1x08_P2.54mm_Vertical', 'PinSocket_1x10_P2.54mm_Vertical',
+  'PinSocket_1x06_P2.54mm_Vertical', 'Crystal_HC49-4H_Vertical', 'SW_PUSH_6mm', 'CP_Radial_D6.3mm_P2.50mm', 'SOT-223', 'TQFP-32_7x7mm_P0.8mm',
+];
+let modelsReady: Promise<unknown> | undefined;
+export function loadStudioModels() {
+  modelsReady ??= Promise.all(MODELS.map((m) => loadKicad(m).catch((e) => console.warn('kicad model missing:', e))));
+  return modelsReady;
+}
 
 const V = (x = 0, y = 0, z = 0) => new THREE.Vector3(x, y, z);
 const lin = (hex: number) => new THREE.Color(hex).convertSRGBToLinear();
@@ -59,7 +78,7 @@ function makeMats() {
     edge: std(0x8f6c38, 0.5, 0.15),
     glass: phys(0xdce8ff, { transmission: 1, thickness: 0.35, roughness: 0.05, ior: 1.5 }),
     frosted: phys(0xcfe0ff, { transmission: 1, thickness: 0.6, roughness: 0.3, ior: 1.45 }),
-    clearLed: phys(0xeaf2ff, { transmission: 1, thickness: 0.5, roughness: 0.03, ior: 1.52 }),
+    clearLed: phys(0xdfe8ff, { transmission: 1, thickness: 0.9, roughness: 0.16, ior: 1.52 }),
     pLayer: std(0xe46a9b, 0.4),
     nLayer: std(0x3c6fe0, 0.4),
     plastic: std(0xd9dadc, 0.6),
@@ -98,6 +117,55 @@ function box(w: number, h: number, d: number, mat: THREE.Material) {
 function cyl(r: number, h: number, mat: THREE.Material, seg = 32) {
   return new THREE.Mesh(new THREE.CylinderGeometry(r, r, h, seg), mat);
 }
+// KiCad material names -> physically based materials
+const PBR = new Map<string, THREE.Material>();
+function pbrFor(s: KicadSurface): THREE.Material {
+  let m = PBR.get(s.mat);
+  if (m) return m;
+  const n = s.mat;
+  if (n === 'PIN-01') m = M.tin;
+  else if (n === 'PIN-02') m = M.gold;
+  else if (n.startsWith('MET') || n === 'C717171') m = M.steel;
+  else if (n.startsWith('IC-BODY-EPOXY') || n === 'RES-SMD-01') m = M.black;
+  else if (n === 'LED-WHITE') m = M.clearLed;
+  else if (n === 'LED-BLACK') m = M.gloss;
+  else if (n === 'IC-LABEL-01') m = new THREE.MeshStandardMaterial({ color: s.color, roughness: 0.85 });
+  else if (n.startsWith('CAP-CERAMIC')) m = new THREE.MeshStandardMaterial({ color: s.color, roughness: 0.6 });
+  else m = new THREE.MeshPhysicalMaterial({ color: s.color, roughness: 0.42, clearcoat: 0.3, clearcoatRoughness: 0.4 });
+  PBR.set(n, m);
+  return m;
+}
+/** A KiCad part as a group of meshes (undefined if its model didn't load); `over` swaps materials by KiCad name. */
+function kmesh(name: string, over: Record<string, THREE.Material> = {}) {
+  const k = kicad(name);
+  if (!k) return undefined;
+  const g = new THREE.Group();
+  for (const s of k.surfaces) {
+    const mesh = new THREE.Mesh(s.geo, over[s.mat] ?? pbrFor(s));
+    mesh.castShadow = mesh.receiveShadow = true;
+    g.add(mesh);
+  }
+  return g;
+}
+
+let SHADOW_TEX: THREE.Texture;
+/** A soft dark patch under a part: the ambient-occlusion look that seats it on the board. */
+function contact(w: number, d: number, strength = 0.55) {
+  const m = new THREE.Mesh(
+    new THREE.PlaneGeometry(w * 1.5, d * 1.5),
+    new THREE.MeshBasicMaterial({ map: SHADOW_TEX, color: 0x000000, transparent: true, opacity: strength, depthWrite: false }),
+  );
+  m.rotation.x = -Math.PI / 2;
+  m.renderOrder = 1;
+  return m;
+}
+/** a solder joint where a leg goes through the board */
+function fillet() {
+  const m = new THREE.Mesh(new THREE.ConeGeometry(0.055, 0.035, 20, 1, true), M.tin);
+  m.position.y = 0.0175;
+  return m;
+}
+
 function label(text: string, hex = '#ffffff', size = 0.5) {
   const tex = canvasTex(512, 128, (ctx) => {
     ctx.font = '400 64px Michroma, "IBM Plex Mono", monospace';
@@ -114,6 +182,11 @@ function label(text: string, hex = '#ffffff', size = 0.5) {
 // ---------- components (each sits on +Y, origin at its footprint centre) ----------
 
 function resistor(cap = false) {
+  const k = kmesh(cap ? 'C_0805_2012Metric' : 'R_0805_2012Metric');
+  if (k) {
+    k.add(contact(0.2, 0.125, 0.45));
+    return k;
+  }
   const g = new THREE.Group();
   const body = rbox(0.13, 0.055, 0.125, 0.012, cap ? M.ceramic : M.resBlack);
   body.position.y = 0.03;
@@ -128,9 +201,17 @@ function resistor(cap = false) {
 
 function soic(text: string) {
   const g = new THREE.Group();
-  const body = rbox(0.49, 0.15, 0.39, 0.02, M.black);
-  body.position.y = 0.105;
-  g.add(body);
+  const k = kmesh('SOIC-8_3.9x4.9mm_P1.27mm');
+  if (k) {
+    // KiCad has its pins on the +-x sides; this layout wants them on +-z
+    k.rotation.y = Math.PI / 2;
+    g.add(k);
+  } else {
+    const body = rbox(0.49, 0.15, 0.39, 0.02, M.black);
+    body.position.y = 0.105;
+    g.add(body);
+  }
+  g.add(contact(0.55, 0.6, 0.6));
   const top = new THREE.Mesh(
     new THREE.PlaneGeometry(0.47, 0.37),
     new THREE.MeshStandardMaterial({
@@ -151,8 +232,9 @@ function soic(text: string) {
     }),
   );
   top.rotation.x = -Math.PI / 2;
-  top.position.y = 0.181;
+  top.position.y = k ? 0.177 : 0.181;
   g.add(top);
+  if (k) return g;
   for (let i = 0; i < 4; i++)
     for (const s of [-1, 1]) {
       const x = -0.19 + i * 0.127;
@@ -187,6 +269,19 @@ function trimmer() {
 }
 
 function header(n: number) {
+  const k = n === 3 ? kmesh('PinHeader_1x03_P2.54mm_Horizontal') : undefined;
+  if (k) {
+    // KiCad: pin 1 at the origin, pins along +z, bent pins pointing +x; centre the row on z
+    k.position.set(-0.08, 0, -0.254);
+    const g = new THREE.Group();
+    g.add(k, contact(0.4, 0.85, 0.55));
+    for (let i = 0; i < n; i++) {
+      const f = fillet();
+      f.position.set(-0.08, 0, (i - 1) * 0.254);
+      g.add(f);
+    }
+    return { group: g, tips: [0, 1, 2].map((i) => V(0.9, 0.127, (i - 1) * 0.254)) };
+  }
   const g = new THREE.Group();
   const block = rbox(0.25, 0.25, 0.254 * n, 0.02, M.black);
   block.position.y = 0.125;
@@ -204,20 +299,30 @@ function header(n: number) {
 
 function smdLed(hex: number) {
   const g = new THREE.Group();
-  const body = rbox(0.2, 0.07, 0.125, 0.01, M.white);
-  body.position.y = 0.035;
-  g.add(body);
-  const lens = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.025, 0.1), emissive(hex, 0x553333));
+  const lensMat = emissive(hex, 0x553333);
+  const k = kmesh('LED_0805_2012Metric', { 'PLASTIC-GREEN-01': lensMat });
+  if (k) g.add(k, contact(0.2, 0.125, 0.45));
+  else {
+    const body = rbox(0.2, 0.07, 0.125, 0.01, M.white);
+    body.position.y = 0.035;
+    g.add(body);
+  }
+  const lens = k ? new THREE.Mesh() : new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.025, 0.1), lensMat);
+  lens.material = lensMat;
   lens.position.y = 0.075;
   g.add(lens);
-  const halo = glowSprite(hex, 0.45);
+  const halo = glowSprite(hex, 0.6);
+  const light = new THREE.PointLight(lin(hex), 0, 1.4, 2);
+  light.position.y = 0.2;
+  g.add(light);
   halo.position.y = 0.12;
   g.add(halo);
   return {
     group: g,
     set(on: number) {
-      (lens.material as THREE.MeshStandardMaterial).emissiveIntensity = on * 6;
-      halo.material.opacity = on * 0.55;
+      lensMat.emissiveIntensity = on * 10;
+      halo.material.opacity = on * 0.9;
+      light.intensity = on * 0.25;
     },
   };
 }
@@ -278,7 +383,9 @@ class Led {
     this.group.add(obj);
     this.layers.push({ obj, home: obj.position.y, out, grow });
   }
+  on = 0;
   set(on: number, explode: number) {
+    this.on = on;
     for (const l of this.layers) {
       l.obj.position.y = l.home + explode * l.out;
       if (l.grow) l.obj.scale.setScalar(1 + (l.grow - 1) * explode);
@@ -343,23 +450,27 @@ class IrModule {
     const tex = canvasTex(1550, 725, (ctx) => drawFc51(ctx, w, h));
     tex.repeat.set(1 / w, 1 / h);
     tex.offset.set(0.5, 0.5);
-    const top = phys(0xffffff, { map: tex, roughness: 0.48, clearcoat: 0.3, clearcoatRoughness: 0.35 });
+    const top = phys(0xffffff, { map: tex, roughness: 0.55, clearcoat: 0.15, clearcoatRoughness: 0.45, envMapIntensity: 0.45 });
     const board = new THREE.Mesh(geo, [top, M.edge]);
     this.group.add(board);
     this.part(board, V(0, -2.5, 0.5), new THREE.Euler(0.6, 0.4, 0), 0);
 
     const hd = header(3);
     at(hd.group, 1.33, 0);
+    this.named.pins = hd.group;
     this.part(hd.group, V(2.5, 1.5, 0), new THREE.Euler(0, 0, 1.2), 0.18);
     this.pinTips = hd.tips.map((p) => p.clone().add(hd.group.position));
 
     const pot = trimmer();
+    pot.group.add(contact(0.62, 0.62, 0.6));
     at(pot.group, -0.45, 0);
+    this.named.pot = pot.group;
     this.knob = pot.knob;
     this.part(pot.group, V(-0.5, 3.2, -1), new THREE.Euler(0.8, 1, 0), 0.26);
 
     const chip = soic('LM393');
     at(chip, 0.42, 0.22);
+    this.named.chip = chip;
     this.part(chip, V(0.8, 3, -1.5), new THREE.Euler(-0.7, 0.6, 0.3), 0.34);
 
     for (const [x, y, rot, cap, d] of [
@@ -386,16 +497,46 @@ class IrModule {
     ] as const) {
       const holder = new THREE.Group();
       led.group.rotation.z = Math.PI / 2;
+      led.group.position.y = 0.3;
       holder.add(led.group);
-      at(holder, -1.15, y, 0, 0.3);
-      for (const dz of [-0.1, 0.1]) {
-        const v = cyl(0.022, 0.3, M.tin, 12);
-        v.position.set(-1.0, T + 0.15, -y + dz);
-        const hz = cyl(0.022, 0.2, M.tin, 12);
-        hz.rotation.z = Math.PI / 2;
-        hz.position.set(-1.08, T + 0.3, -y + dz);
-        this.group.add(v, hz);
-      }
+      // the real part (KiCad's horizontal 5 mm LED: clear for the emitter, IR-black for the receiver); the layered
+      // model above stands in for it only in the "layers" shot
+      const real = kmesh(led === this.emitter ? 'LED_D5.0mm_Horizontal_O1.27mm_Z3.0mm_Clear' : 'LED_D5.0mm_Horizontal_O1.27mm_Z3.0mm_IRBlack');
+      if (real) {
+        real.rotation.y = -Math.PI / 2;
+        real.position.set(0.15, 0, -0.127);
+        holder.add(real);
+        if (led === this.emitter) {
+          // what you see through the clear epoxy: the reflector cup and the glowing die on the cathode post
+          const cup = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.05, 0.1, 32, 1, true), M.tin);
+          cup.rotation.z = Math.PI / 2;
+          cup.position.set(-0.36, 0.3, 0);
+          const die = box(0.03, 0.05, 0.05, this.emitDie);
+          die.position.set(-0.4, 0.3, 0);
+          real.parent!.add(cup, die);
+        }
+        const glow = glowSprite(led === this.emitter ? 0xff3b6b : 0x6fb6ff, 0.7);
+        glow.position.set(-0.8, 0.3, 0);
+        holder.add(glow);
+        this.realGlow.push({ led, glow });
+        led.group.visible = false;
+        (led === this.emitter ? this.realLeds : this.realLeds).push({ real, layered: led.group });
+        for (const dz of [-0.127, 0.127]) {
+          const f = fillet();
+          f.position.set(0.15, 0, dz);
+          holder.add(f);
+        }
+      } else
+        for (const dz of [-0.1, 0.1]) {
+          const v = cyl(0.022, 0.3, M.tin, 12);
+          v.position.set(0.15, 0.15, dz);
+          const hz = cyl(0.022, 0.2, M.tin, 12);
+          hz.rotation.z = Math.PI / 2;
+          hz.position.set(0.07, 0.3, dz);
+          holder.add(v, hz);
+        }
+      at(holder, -1.15, y);
+      this.named[led === this.emitter ? 'emitter' : 'receiver'] = holder;
       this.part(holder, V(-3, 1.2, -y * 4), new THREE.Euler(0, 0, -1.4), d);
     }
 
@@ -421,6 +562,32 @@ class IrModule {
 
   private part(obj: THREE.Object3D, from: THREE.Vector3, spin: THREE.Euler, delay: number) {
     this.parts.push({ obj, home: obj.position.clone(), homeQ: obj.quaternion.clone(), from, spin, delay });
+  }
+
+  private realLeds: { real: THREE.Object3D; layered: THREE.Object3D }[] = [];
+  readonly named: Record<string, THREE.Object3D> = {};
+  readonly emitDie = emissive(0xff3b6b, 0x2a2a30);
+  private realGlow: { led: Led; glow: THREE.Sprite }[] = [];
+  /** mirrors the layered LEDs' state onto the real ones (call after posing) */
+  sync() {
+    this.emitDie.emissiveIntensity = this.emitter.on * 8;
+    for (const r of this.realGlow) r.glow.material.opacity = r.glow.parent!.visible && !r.led.group.visible ? r.led.on * 0.5 : 0;
+  }
+  /** the layered LED models replace the real ones (for the "layers" shot) */
+  layers(on: boolean) {
+    for (const l of this.realLeds) {
+      l.real.visible = !on;
+      l.layered.visible = on;
+    }
+  }
+
+  /** e: 0..1 the exploded view: every part lifts straight up off the board, higher the later it was fitted */
+  lift(e: number) {
+    this.assemble(1);
+    this.parts.forEach((p, i) => {
+      if (i === 0) return;
+      p.obj.position.set(p.home.x * (1 + 0.3 * e), p.home.y + e * (0.55 + p.delay * 1.6), p.home.z * (1 + 0.9 * e));
+    });
   }
 
   private q = new THREE.Quaternion();
@@ -776,11 +943,33 @@ class Bench {
     };
     put(rbox(1.63, 1.1, 1.2, 0.03, M.tin), -6.3, 9.4, 16.3, 12, 1.1);
     put(rbox(1.4, 1.1, 0.9, 0.05, M.black), -1.9, 40.4, 14, 9, 1.1);
-    put(rbox(3.56, 0.35, 0.76, 0.03, M.black), 30, 33.6, 35.6, 7.6, 0.35);
-    put(rbox(2.6, 0.85, 0.25, 0.02, M.black), 16.6, 0.6, 26, 2.5, 0.85);
-    put(rbox(2.06, 0.85, 0.25, 0.02, M.black), 43.2, 0.6, 20.6, 2.5, 0.85);
-    put(rbox(2.06, 0.85, 0.25, 0.02, M.black), 26.6, 49.9, 20.6, 2.5, 0.85);
-    put(rbox(1.55, 0.85, 0.25, 0.02, M.black), 49.5, 49.9, 15.5, 2.5, 0.85);
+    // real parts from the KiCad library where they loaded: pin 1 at (x, y) mm on the board, rotated about Y
+    const real = (name: string, x: number, y: number, rot = 0, over: Record<string, THREE.Material> = {}) => {
+      const k = kmesh(name, over);
+      if (!k) return false;
+      k.position.copy(U(x, y));
+      k.rotation.y = rot;
+      uno.add(k);
+      return true;
+    };
+    // ATmega328P in its socket (the row runs along +x)
+    if (!(real('DIP-28_W7.62mm_Socket', 31.5, 41.2, Math.PI / 2) && real('DIP-28_W7.62mm', 31.5, 41.2, Math.PI / 2)))
+      put(rbox(3.56, 0.35, 0.76, 0.03, M.black), 30, 33.6, 35.6, 7.6, 0.35);
+    // female headers: digital 10 + 8 on the top edge, power 8 + analog 6 on the bottom edge
+    const sockets: [string, number, number, number, number, number][] = [
+      ['PinSocket_1x10_P2.54mm_Vertical', 17.9, 2.05, 16.6, 26, 0.6],
+      ['PinSocket_1x08_P2.54mm_Vertical', 44.5, 2.05, 43.2, 20.6, 0.6],
+      ['PinSocket_1x08_P2.54mm_Vertical', 27.9, 51.35, 26.6, 20.6, 49.9],
+      ['PinSocket_1x06_P2.54mm_Vertical', 50.8, 51.35, 49.5, 15.5, 49.9],
+    ];
+    for (const [name, x, y, bx, bw, by] of sockets)
+      if (!real(name, x, y, Math.PI / 2)) put(rbox(bw / 10, 0.85, 0.25, 0.02, M.black), bx, by, bw, 2.5, 0.85);
+    real('Crystal_HC49-4H_Vertical', 20.5, 26.9);
+    real('SW_PUSH_6mm', 1.8, 1.8);
+    real('CP_Radial_D6.3mm_P2.50mm', 15.0, 44.0);
+    real('CP_Radial_D6.3mm_P2.50mm', 21.5, 44.0);
+    real('SOT-223', 10.7, 34.2);
+    real('TQFP-32_7x7mm_P0.8mm', 16.2, 13.8, Math.PI / 4);
     this.lGlow.position.copy(U(25, 8.9)).add(V(0, 0.08, 0));
     uno.add(this.lGlow);
     g.add(uno);
@@ -929,6 +1118,16 @@ void main() {
 
 // ---------- the director ----------
 
+const PART_LABEL: Record<string, string> = {
+  sensor: 'IR pair',
+  emitter: 'IR LED 940 nm',
+  receiver: 'IR photodiode',
+  chip: 'LM393 comparator',
+  pot: 'Sensitivity pot',
+  pins: 'VCC GND OUT',
+  leds: 'PWR + OBS LEDs',
+};
+
 const DEFAULT_SHOTS = ['assemble', 'hero', 'macro', 'beam', 'layers', 'inside', 'compare', 'pot', 'wiring', 'hero'];
 
 export class Studio {
@@ -950,6 +1149,7 @@ export class Studio {
   private scale = 6;
   private target = V();
   private last?: [number, StudioLine[], number];
+  private callouts: { at: THREE.Vector3; text: string; side: number }[] = [];
   private posed = false;
 
   constructor(
@@ -971,6 +1171,15 @@ export class Studio {
       ctx.fillRect(0, 0, 128, 128);
     });
     GLOW_TEX.colorSpace = THREE.NoColorSpace;
+    SHADOW_TEX = canvasTex(128, 128, (ctx) => {
+      const g = ctx.createRadialGradient(64, 64, 8, 64, 64, 64);
+      g.addColorStop(0, 'rgba(255,255,255,1)');
+      g.addColorStop(0.55, 'rgba(255,255,255,0.55)');
+      g.addColorStop(1, 'rgba(255,255,255,0)');
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, 128, 128);
+    });
+    SHADOW_TEX.colorSpace = THREE.NoColorSpace;
     r.shadowMap.enabled = true;
     r.shadowMap.type = THREE.PCFSoftShadowMap;
     const pm = new THREE.PMREMGenerator(r);
@@ -1073,6 +1282,12 @@ export class Studio {
     m.emitter.set(0, 0);
     m.receiver.set(0, 0);
     m.knob.rotation.y = 0.6;
+    m.layers(false);
+    this.callouts = [];
+    const callout = (part: string, text?: string, side = 1) => {
+      const at = part === 'chip' ? A.chip : part === 'pot' ? A.pot.clone().add(V(0, 0.05, 0)) : A[part] ?? A.board;
+      this.callouts.push({ at: at.clone(), text: (text || PART_LABEL[part] || part).toUpperCase(), side });
+    };
     (this.beamOut.material as THREE.ShaderMaterial).uniforms.on.value = 0;
     (this.beamBack.material as THREE.ShaderMaterial).uniforms.on.value = 0;
     this.wall.visible = false;
@@ -1091,8 +1306,13 @@ export class Studio {
         const part = sh.part && A[sh.part] ? sh.part : 'sensor';
         const front = part === 'sensor' || part === 'emitter' || part === 'receiver';
         const az = front ? -1.25 + dir * 0.35 - 0.25 * p * dir : part === 'pins' ? 1.35 - 0.3 * p : 0.4 * dir + 0.35 * p * dir;
-        this.rig(A[part], az, lerp(0.42, 0.3, p), lerp(3.6, 3.0, inOutCubic(p)), 24);
+        const close = part === 'emitter' || part === 'receiver' ? 1.35 : 1;
+        this.rig(A[part], az, lerp(0.42, 0.3, p), lerp(3.6, 3.0, inOutCubic(p)) * close, 24);
         if (part === 'emitter' || part === 'sensor') m.emitter.set(1, 0);
+        if (part === 'sensor') {
+          callout('emitter', 'IR LED', -1);
+          callout('receiver', sh.label || PART_LABEL.receiver, 1);
+        } else callout(part, sh.label, dir);
         if (part === 'leds') m.obs.set(p > 0.5 ? 1 : 0);
         this.scale = 9;
         break;
@@ -1100,10 +1320,32 @@ export class Studio {
       case 'layers': {
         const led = sh.part === 'emitter' ? m.emitter : m.receiver;
         const ex = outCubic(range(p, 0.08, 0.6));
+        m.layers(true);
         led.set(sh.part === 'emitter' ? 0.6 : 0.3 * ex, ex);
         const anchor = (sh.part === 'emitter' ? A.emitter : A.receiver).clone().add(V(-0.25 - 0.6 * ex, 0, 0));
         this.rig(anchor, Math.PI / 2 - 0.3 * dir, 0.95, lerp(5.2, 6.4, ex), 24);
         this.scale = 8;
+        break;
+      }
+      case 'explode': {
+        // exploded view: every part floats above the board, each one named
+        const e = smooth(range(p, 0.05, 0.45));
+        m.lift(e);
+        m.emitter.set(0, 0);
+        this.rig(V(-0.2, 0.9 * e + 0.3, 0), 0.5 * dir + 0.35 * p * dir, 0.5, lerp(11, 12.5, e), 28);
+        this.set.module.updateMatrixWorld(true);
+        const named = (k: string, side: number) => {
+          const o = m.named[k];
+          if (o) this.callouts.push({ at: o.getWorldPosition(V()).add(V(0, 0.3, 0)), text: PART_LABEL[k].toUpperCase(), side });
+        };
+        if (e > 0.6) {
+          named('emitter', -1);
+          named('receiver', -1);
+          named('chip', 1);
+          named('pot', 1);
+          named('pins', 1);
+        }
+        this.scale = 4;
         break;
       }
       case 'beam': {
@@ -1180,6 +1422,8 @@ export class Studio {
         this.scale = 6;
       }
     }
+    m.sync();
+    this.bench.module.sync();
     // rack focus on every cut: starts soft and pulls into focus
     this.scale += 18 * (1 - outCubic(clamp(lt / 0.45)));
     const k = this.key;
@@ -1211,39 +1455,110 @@ export class Studio {
     r.render(this.dofScene, this.quadCam);
   }
 
-  /** One big white word at a time, like the reference. */
+  /** The channel's story captions: big headline words for the shot, the *key* word in orange (the subtitle line
+   *  is drawn by the plate), plus part-name callouts. */
   captions(ctx: Ctx, t: number, lines: StudioLine[], idx: number) {
     const L = lines[idx];
-    if (!L || t < L.start - 0.05 || t > L.end + 0.15) return;
-    const words = L.text.replace(/\*/g, '').split(/\s+/).filter(Boolean);
-    if (!words.length) return;
-    const wts = words.map((w) => w.length + 2.5);
-    const sum = wts.reduce((a, b) => a + b, 0);
-    const u = clamp((t - L.start) / Math.max(0.3, L.end - L.start)) * sum;
-    let acc = 0;
-    let k = 0;
-    for (; k < words.length - 1; k++) {
-      if (u < acc + wts[k]) break;
-      acc += wts[k];
+    if (!L) return;
+    const next = lines[idx + 1];
+    const p = clamp((t - L.start) / Math.max(0.6, (next ? next.start : L.end + 0.6) - L.start));
+    const sh = this.shotAt(idx);
+    const text = sh.text || L.text.replace(/\*/g, '').split(/\s+/).slice(0, 3).join(' ');
+    headline(ctx, text, p);
+    // lay the labels out per side, top to bottom, at least 84 px apart so they never overlap
+    const placed = this.callouts.map((c) => {
+      const v = c.at.clone().project(this.camera);
+      return { ...c, x: ((v.x + 1) / 2) * W, y: ((1 - v.y) / 2) * H, ly: 0 };
+    });
+    for (const side of [-1, 1]) {
+      const col = placed.filter((c) => c.side === side).sort((a, b) => a.y - b.y);
+      let prev = 420 - 84;
+      for (const c of col) prev = c.ly = Math.max(clamp(c.y - 170, 420, H - 420), prev + 84);
     }
-    const wordStart = L.start + (acc / sum) * (L.end - L.start);
-    const pop = 1 - outCubic(clamp((t - wordStart) / 0.12));
-    let size = 66;
+    for (const c of placed) this.callout(ctx, c.x, c.y, c.ly, c.text, c.side, p);
+  }
+
+  private callout(ctx: Ctx, x: number, y: number, ly: number, text: string, side: number, p: number) {
+    const a = outCubic(clamp((p - 0.12) * 4));
+    if (a <= 0) return;
+    const lx = clamp(x + side * 230, 150, W - 150);
     ctx.save();
-    ctx.font = `400 ${size}px Michroma, "Archivo", sans-serif`;
-    const word = words[k].toUpperCase();
-    while (size > 34 && ctx.measureText(word).width > W - 140) {
-      size -= 4;
-      ctx.font = `400 ${size}px Michroma, "Archivo", sans-serif`;
-    }
-    ctx.translate(W / 2, 1440);
-    ctx.scale(1 + 0.1 * pop, 1 + 0.1 * pop);
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.shadowColor = 'rgba(0,0,0,0.75)';
-    ctx.shadowBlur = 24;
+    ctx.globalAlpha = a;
+    ctx.strokeStyle = 'rgba(255,255,255,0.85)';
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.arc(x, y, 9, 0, Math.PI * 2);
+    ctx.moveTo(x + Math.sign(lx - x) * 9, y);
+    ctx.lineTo(lerp(x, lx, a), lerp(y, ly, a));
+    ctx.stroke();
+    ctx.font = '600 32px "IBM Plex Mono", Consolas, monospace';
+    const w = ctx.measureText(text).width + 36;
+    const bx = clamp(side > 0 ? lx : lx - w, 24, W - w - 24);
+    ctx.fillStyle = 'rgba(10,12,16,0.78)';
+    ctx.beginPath();
+    ctx.roundRect(bx, ly - 30, w, 60, 12);
+    ctx.fill();
+    ctx.stroke();
     ctx.fillStyle = '#ffffff';
-    ctx.fillText(word, 0, 0);
+    ctx.textBaseline = 'middle';
+    ctx.fillText(text, bx + 18, ly + 2);
     ctx.restore();
   }
+}
+
+const HOT = '#ff6a2b';
+const LINE = '#f1ece2';
+/** Big kinetic headline words, word by word, the *key* word in orange with a glow (story-lib.js style). */
+function headline(ctx: Ctx, text: string, p: number, y = 300, size = 104, maxW = 960) {
+  const words = String(text).split(/\s+/).filter(Boolean);
+  if (!words.length) return;
+  const font = (s: number) => `900 ${s}px Archivo, "Segoe UI", sans-serif`;
+  ctx.save();
+  ctx.font = font(size);
+  while (size > 48 && Math.max(...words.map((w) => ctx.measureText(w.replace(/\*/g, '')).width)) > maxW) ctx.font = font((size -= 6));
+  let rows: string[][];
+  for (;;) {
+    rows = [];
+    let cur: string[] = [];
+    for (const w of words) {
+      const test = [...cur, w].join(' ').replace(/\*/g, '');
+      if (cur.length && ctx.measureText(test).width > maxW) {
+        rows.push(cur);
+        cur = [w];
+      } else cur.push(w);
+    }
+    if (cur.length) rows.push(cur);
+    if (rows.length <= 2 || size <= 60) break;
+    ctx.font = font((size -= 6));
+  }
+  // a soft dark band behind the words so they read over any shot
+  const g = ctx.createLinearGradient(0, y - size * 1.6, 0, y + rows.length * size * 1.1 + size * 0.6);
+  g.addColorStop(0, 'rgba(0,0,0,0)');
+  g.addColorStop(0.35, 'rgba(0,0,0,0.38)');
+  g.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = g;
+  ctx.fillRect(0, y - size * 1.6, W, rows.length * size * 1.1 + size * 2.2);
+  let k = 0;
+  rows.forEach((row, ri) => {
+    const plain = row.map((w) => w.replace(/\*/g, ''));
+    const widths = plain.map((w) => ctx.measureText(w + ' ').width);
+    let x = W / 2 - (widths.reduce((a, b) => a + b, 0) - ctx.measureText(' ').width) / 2;
+    const yy = y + ri * size * 1.08;
+    row.forEach((w, wi) => {
+      const a = outCubic(clamp((p - k * 0.06) * 4));
+      ctx.save();
+      ctx.globalAlpha = a;
+      ctx.translate(0, (1 - a) * 40);
+      const key = w.includes('*');
+      ctx.fillStyle = key ? HOT : LINE;
+      ctx.shadowColor = key ? HOT : 'rgba(0,0,0,0.6)';
+      ctx.shadowBlur = key ? 28 : 16;
+      ctx.textBaseline = 'alphabetic';
+      ctx.fillText(plain[wi], x, yy);
+      ctx.restore();
+      x += widths[wi];
+      k++;
+    });
+  });
+  ctx.restore();
 }

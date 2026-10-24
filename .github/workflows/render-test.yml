@@ -1,0 +1,26 @@
+name: Render speed test (3D studio)
+# How fast the GitHub runner (no GPU) renders the 3D studio format: 3 stills, then 10, timed. Posts nothing.
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-core > /dev/null
+      - run: cd app && bun install
+      - name: 3D studio frames
+        run: |
+          cd app
+          echo '{"module":"ir","shots":[{"line":0,"shot":"hero","text":"Test *ONE*"},{"line":1,"shot":"macro","part":"chip"},{"line":2,"shot":"inside","light":true},{"line":3,"shot":"wiring","detect":true},{"line":4,"shot":"explode"}]}' > src/scenes/auto/studio.gen.json
+          /usr/bin/time -f "3 stills: %e s" bun scripts/render.ts stills --video auto --t s1@0.05,s1@0.15,s1@0.25 --samples 2 --out /tmp/warm
+          /usr/bin/time -f "10 stills: %e s" bun scripts/render.ts stills --video auto --t s1@0.1,s1@0.2,s1@0.3,s1@0.4,s1@0.5,s1@0.6,s1@0.7,s1@0.8,s1@0.9,s1@0.95 --samples 2 --out /tmp/st
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stills
+          path: /tmp/st

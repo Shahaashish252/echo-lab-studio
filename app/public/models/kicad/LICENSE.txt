@@ -1,0 +1,2 @@
+3D models from the KiCad 3D library (https://github.com/KiCad/kicad-packages3D), by the KiCad library team / kicad StepUp.
+Licensed CC-BY-SA 4.0 with the KiCad libraries exception (see the header of each .wrl file).

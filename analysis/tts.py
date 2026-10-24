@@ -46,7 +46,7 @@ def edge(text, voice):
         fd, name = tempfile.mkstemp(suffix=".mp3")
         os.close(fd)  # Windows: the open handle would block edge-tts from writing the file
         mp3 = Path(name)
-        asyncio.run(edge_tts.Communicate(text, voice, rate=kcfg.get("rate", "+6%")).save(str(mp3)))
+        asyncio.run(edge_tts.Communicate(text, voice, rate=kcfg.get("rate", "+12%")).save(str(mp3)))
         wav = mp3.with_suffix(".wav")
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(mp3), "-ar", "24000", "-ac", "1", str(wav)], check=True)
         samples, sr = sf.read(str(wav), dtype="float32")
