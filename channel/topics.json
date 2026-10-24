@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Lift sensor: how the lift door stops when you put a hand",
+      "hook": "Lift Ka Darwaza Haath Dekhkar Nahi Rukta! Phir Kaise?"
+    },
+    {
+      "topic": "Automatic hand dryer / sanitizer dispenser sensor",
+      "hook": "Sanitizer Machine Aapka Haath Dekhti Nahi, Bas Ye Karti Hai!"
+    },
+    {
+      "topic": "Car reverse parking beeper using ultrasonic",
+      "hook": "Car Ka Beep Deewar Ko Dekhta Nahi, Awaaz Sunta Hai!"
+    },
+    {
+      "topic": "Phone proximity sensor turning screen off during calls",
+      "hook": "Call Pe Screen Kaise Bujh Jati Hai? Phone Aapka Gaal Mehsoos Karta Hai!"
+    },
+    {
+      "topic": "Fridge door light and door sensor",
+      "hook": "Fridge Ko Kaise Pata Darwaza Band Hai? Andar Chhupa Magnet!"
+    },
+    {
       "topic": "Car reverse parking sensor beeps",
       "hook": "Gaadi Ka Sensor Deewar Ko Dekh Nahi Sakta, Phir Bhi Beep Karta Hai"
     },

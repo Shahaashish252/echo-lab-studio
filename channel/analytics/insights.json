@@ -1,27 +1,26 @@
 {
-  "updated": "2026-10-24T13:20",
+  "updated": "2026-10-24T19:02",
   "videos": 13,
-  "summary": "Instagram is carrying almost all the attention: the Hindi videos get 100 to 1,400 views there, while YouTube gives most of them under 25 views. The best video by far is the PIR motion sensor one, which hooks people with a surprising 'it doesn't actually see you' claim about a device they meet daily. Weaker videos cover abstract or less visible topics (smartwatch, ultrasonic, TV remote) and get views but almost no likes, shares or saves. The only English video did a bit better on YouTube than most Hindi ones, but the sample is just one video.",
-  "winningPattern": "Everyday device people see in daily life (motion sensor, street light) + a myth-busting or 'it doesn't work how you think' hook in Hinglish + a question title ending with 🤔 #shorts, posted mainly for Instagram Reels. The PIR video also worked on YouTube, so a strong surprising opening line matters more than anything else.",
+  "summary": "Instagram is doing nearly all the work: Hindi videos get 100 to 1,400 views there, while YouTube Shorts barely move (mostly under 30 views). The PIR motion sensor video is the clear winner, with the most views, likes, shares and saves on both platforms. The one English video got views only on YouTube and nothing on Instagram, and all videos are still very small, so these are early signals, not proof.",
+  "winningPattern": "Hindi, Instagram-first, everyday-object sensor explainers. The best video takes a familiar device (motion sensor, street light) and opens with a surprising 'it does not actually do what you think' claim ('Motion Sensor Aapko Dekhta Nahi!'), followed by a 'Kaise Kaam Karta Hai?' question title with the 🤔 emoji. Short curiosity-gap titles about things people see daily (street light, phone rotation, auto door) get the most saves and shares.",
   "doMore": [
-    "Open with a surprising negative claim ('X doesn't actually see/hear/feel...') then explain how it really works",
-    "Pick devices viewers touch or walk past every day: lifts, ATMs, fans, AC remotes, car parking sensors",
-    "Put the key hook line big on screen in the first second and keep the title as one clear question",
-    "Lead with Instagram Reels and cross-post to YouTube, checking which sensor topics also get YouTube views",
-    "End each video with a share or save prompt like 'Dost ko bhejo jo yeh nahi jaanta' since shares and saves are the strongest signal",
-    "Test a few English-narrated versions of the best Hindi topics to compare against the single English data point"
+    "Open with a 'myth-breaking' line: 'X does not actually do Y' before explaining how it works",
+    "Pick sensors people meet daily (fan, lift, ATM, AC, car parking beeper) and name the device in the title",
+    "Post Instagram-first and test a few Hindi titles on YouTube with a stronger first-second visual",
+    "End each video with a save-worthy line or mini cheat sheet so saves and shares go up",
+    "Repeat the PIR format on close siblings: one hidden-sense reveal, one simple analogy, one real-life example"
   ],
   "stopDoing": [
-    "Stop picking abstract or invisible-feeling topics with no familiar object in the scene (smartwatch light, ultrasonic bat comparison)",
-    "Stop publishing near-duplicate topics close together (two smoke alarm videos in days split the audience)",
-    "Stop judging by views alone; videos with views but zero shares and saves are not building a following"
+    "Publishing near-duplicate topics (two smoke detector videos, two IR/dark-sensing videos) that split the audience",
+    "Posting English videos with no Instagram version while the audience is responding to Hindi",
+    "Vague or generic titles that don't contain a surprising claim"
   ],
   "nextTopics": [
-    "Lift knows which floor you pressed",
-    "Automatic hand dryer sensor",
-    "Car reverse parking sensor beeps",
-    "Fan regulator / dimmer working",
-    "Fingerprint scanner on phone"
+    "Lift sensor: how the lift door stops when you put a hand",
+    "Automatic hand dryer / sanitizer dispenser sensor",
+    "Car reverse parking beeper using ultrasonic",
+    "Phone proximity sensor turning screen off during calls",
+    "Fridge door light and door sensor"
   ],
   "bestTimes": {
     "times": [
