@@ -1,2 +1,25 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. The IR LED sends out infrared light all the time.
+  | 2. If a wall is ahead, the light bounces back to the photodiode (receiver).
+  | 3. The LM393 comparator checks that signal against a threshold set by the potentiometer.
+  | 4. The OUT pin goes LOW when an obstacle is detected, and the on-board LED lights up.
+  | 5. Arduino reads that pin with digitalRead().
+  | 6. The code stops the motors, reverses or turns, then drives forward again, using an L298N driver.
+  | 
+  | **REAL PARTS:** Arduino Uno, IR obstacle module (FC-51 or HW-201), LM393 comparator, L298N motor driver, HC-SR04 as an alternative.
+  | 
+  | **MYTH:** "The IR sensor measures distance." It doesn't. It only reports obstacle or no obstacle against a threshold. The reading depends on surface colour and object size. Sources disagree on whether white or black reflects farther, so test your own target.
+  | 
+  | **SURPRISING FACT:** The module detects roughly 2–30 cm, adjustable with the pot, and has a ~35° detection angle. Some sellers list only about 7 cm, so real range varies. The HC-SR04 ranges 2–400 cm and isn't affected by sunlight.
+  | 
+  | **TIP:** Use the robot indoors, away from sunlight, because ambient IR gives false triggers. Turn the pot until the LED just switches at your wall distance, and test on dark surfaces. They can absorb the IR light and go undetected.
+  | 
+  | Sources:
+  | - [IR Infrared Obstacle Avoidance Sensor Module (Robojax)](https://robojax.com/product_view.php?id=365)
+  | - [HW-201 datasheet](https://ocw.cs.pub.ro/courses/_media/pm/prj2025/iotelea/datasheet_ir_sensor_hw-201.pdf)
+  | - [IR Sensor vs Ultrasonic (Zbotic)](https://zbotic.in/ir-sensor-vs-ultrasonic-communication-proximity-differences/)
+  | - [HC-SR04 datasheet (Cytron)](https://embedded.fel.cvut.cz/sites/default/files/kurzy/lpe/ultrasonic_hc-sr04/HCSR04_DS_Cytron.pdf)
+
+== storyboard: "Arduino obstacle avoiding robot: IR sensor se robot deewar se kaise bachta hai" (Claude Code)
