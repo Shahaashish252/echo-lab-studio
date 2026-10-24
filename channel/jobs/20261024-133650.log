@@ -65,3 +65,63 @@ mixed (peak -4.1 dBFS)
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wav (-14 LUFS)
 
 == render
+rendering 1633 frames (0-54.43333333333334s) at 1080x1920, 2 sample(s)/frame
+
+  frame 30/1633  2.1 fps  eta 773s   
+  frame 60/1633  2.1 fps  eta 755s   
+  frame 90/1633  2.1 fps  eta 751s   
+  frame 120/1633  2.0 fps  eta 744s   
+  frame 150/1633  2.0 fps  eta 736s   
+  frame 180/1633  2.0 fps  eta 724s   
+  frame 210/1633  2.0 fps  eta 712s   
+  frame 240/1633  2.0 fps  eta 699s   
+  frame 270/1633  2.0 fps  eta 686s   
+  frame 300/1633  2.0 fps  eta 669s   
+  frame 330/1633  2.0 fps  eta 655s   
+  frame 360/1633  2.0 fps  eta 640s   
+  frame 390/1633  2.0 fps  eta 624s   
+  frame 420/1633  2.0 fps  eta 606s   
+  frame 450/1633  2.0 fps  eta 590s   
+  frame 480/1633  2.0 fps  eta 573s   
+  frame 510/1633  2.0 fps  eta 556s   
+  frame 540/1633  2.0 fps  eta 539s   
+  frame 570/1633  2.0 fps  eta 522s   
+  frame 600/1633  2.0 fps  eta 506s   
+  frame 630/1633  2.0 fps  eta 490s   
+  frame 660/1633  2.1 fps  eta 474s   
+  frame 690/1633  2.0 fps  eta 460s   
+  frame 720/1633  2.0 fps  eta 446s   
+  frame 750/1633  2.0 fps  eta 432s   
+  frame 780/1633  2.0 fps  eta 417s   
+  frame 810/1633  2.0 fps  eta 404s   
+  frame 840/1633  2.0 fps  eta 390s   
+  frame 870/1633  2.0 fps  eta 375s   
+  frame 900/1633  2.0 fps  eta 361s   
+  frame 930/1633  2.0 fps  eta 346s   
+  frame 960/1633  2.0 fps  eta 331s   
+  frame 990/1633  2.0 fps  eta 316s   
+  frame 1020/1633  2.0 fps  eta 301s   
+  frame 1050/1633  2.0 fps  eta 287s   
+  frame 1080/1633  2.0 fps  eta 272s   
+  frame 1110/1633  2.0 fps  eta 258s   
+  frame 1140/1633  2.0 fps  eta 243s   
+  frame 1170/1633  2.0 fps  eta 228s   
+  frame 1200/1633  2.0 fps  eta 214s   
+  frame 1230/1633  2.0 fps  eta 199s   
+  frame 1260/1633  2.0 fps  eta 184s   
+  frame 1290/1633  2.0 fps  eta 169s   
+  frame 1320/1633  2.0 fps  eta 155s   
+  frame 1350/1633  2.0 fps  eta 140s   
+  frame 1380/1633  2.0 fps  eta 125s   
+  frame 1410/1633  2.0 fps  eta 110s   
+  frame 1440/1633  2.0 fps  eta 95s   
+  frame 1470/1633  2.0 fps  eta 81s   
+  frame 1500/1633  2.0 fps  eta 66s   
+  frame 1530/1633  2.0 fps  eta 51s   
+  frame 1560/1633  2.0 fps  eta 36s   
+  frame 1590/1633  2.0 fps  eta 21s   
+  frame 1620/1633  2.0 fps  eta 6s   
+  frame 1633/1633  2.0 fps  eta 0s   
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/hand-dryer-ka-sensor.mp4 (with sound)
+
+== youtube
