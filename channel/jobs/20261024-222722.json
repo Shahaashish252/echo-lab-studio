@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Automatic hand dryer in washrooms (open with this hook: \"Hand Dryer Bina Button Dabaye Kaise Chalu Hota Hai?\")\" (Claude Code)",
       "at": "2026-10-24T22:27:40"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-10-24T22:28:13"
     }
   ],
   "format": "studio",
