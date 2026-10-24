@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Arduino obstacle avoiding robot: IR sensor se robot deewar se kaise bachta hai\" (Claude Code)",
       "at": "2026-10-24T23:27:29"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-10-24T23:27:48"
     }
   ],
   "format": "studio",
