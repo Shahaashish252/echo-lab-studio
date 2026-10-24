@@ -1,2 +1,30 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. You press a button on the car panel. The signal travels up the traveling cable (the flexible cable that hangs from the car) to the controller.
+  | 2. The controller registers the call. It sets a memory entry for that floor, lights the button lamp, and can shorten the door-open time.
+  | 3. Some controllers only accept a call for a floor ahead of the car in its direction of travel (patent US 4,365,694).
+  | 4. The car's position is tracked by an encoder or speed pulses. Magnets, vanes or Hall sensors in the shaft mark each floor.
+  | 5. Floor-number code vanes can give a binary floor code. Older systems used a stepper relay that counted pulses.
+  | 6. Near the target floor, the controller slows the car and stops it when the landing sensors line up. Then the doors open.
+  | 
+  | **REAL PARTS**
+  | - Hall-effect sensors with shaft magnets
+  | - Reflective or code vanes on a hoistway tape
+  | - Proximity switches
+  | - Stepper relay (old design)
+  | - Traveling cable
+  | - Car controller in the machine room
+  | 
+  | **MYTH**
+  | Myth: the lift "sees" the floor number with a camera or by guessing. Truth: it never looks at floors. It combines a stored call, a position count, and fixed sensors or magnets at each landing.
+  | 
+  | **SURPRISING FACT**
+  | Some old DC button wiring grounded a line to register a call. A short in the traveling cable could falsely register a call, which is why other designs added a relay per button. I found no figure for how many wires a cable carries. One patent describes a four-wire cable.
+  | 
+  | **TIP**
+  | Pressing a button repeatedly doesn't speed anything up. The call is already stored and the lamp is lit.
+  | 
+  | Sources: patents US 4,120,381, US 4,594,570, US 4,365,694, US 4,750,592 (Google Patents / USPTO).
+
+== storyboard: "Lift knows which floor you pressed (open with this hook: "Lift Ko Kaise Pata Aap Kaun Si Floor Dabate Ho?")" (Claude Code)
