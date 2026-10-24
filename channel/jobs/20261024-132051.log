@@ -28,3 +28,7 @@
   | Sources: patents US 4,120,381, US 4,594,570, US 4,365,694, US 4,750,592 (Google Patents / USPTO).
 
 == storyboard: "Lift knows which floor you pressed (open with this hook: "Lift Ko Kaise Pata Aap Kaun Si Floor Dabate Ho?")" (Claude Code)
+  s1 sim     Lift ko kaise *PATA*?
+  s2 outro   Magnet ka KHEL!
+
+== simulation (Claude Code writes it, renders it, reviews it)
