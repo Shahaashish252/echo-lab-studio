@@ -755,7 +755,7 @@ async function research(): Promise<string> {
 
 /** the 3D module the studio video explains (studio.ts MODULES); manager.py picks it from the topic */
 const STUDIO_MODULE = opt('module', 'ir')!;
-const STUDIO_MODULES: Record<string, { about: string; beam: string; layers: string; inside: string; macro: string; story: string }> = {
+const STUDIO_MODULES: Record<string, { about: string; beam: string; layers: string; inside: string; macro: string; story: string; uses: string }> = {
   ir: {
     about: `"ir": the FC-51 IR obstacle-avoidance sensor (a clear IR LED emitter at about 940 nm, a black IR photodiode
 receiver, a blue trimmer pot that sets the detection distance (about 2-30 cm), an LM393 comparator chip, a PWR LED and
@@ -767,6 +767,7 @@ dark/black surfaces reflect less IR, so they are detected closer; the IR LED shi
     inside: `glass cutaway of the receiver's silicon: electrons locked in place (false), or light knocks electrons free and a current flows (true)`,
     macro: 'sensor|emitter|receiver|chip|pot|pins|leds',
     story: 'the beam and its bounce, inside the receiver (layers, inside false then true)',
+    uses: 'robot (a robot car drives at a wall and stops) | tap (a hand under an automatic tap, water flows) | door (lift doors close, a hand makes them reopen)',
   },
   ldr: {
     about: `"ldr": the LDR light-sensor module (an LDR = CdS photoresistor: a cadmium-sulphide zigzag track on a ceramic disc;
@@ -779,6 +780,7 @@ night lamps)`,
     inside: `glass cutaway of the CdS track: electrons locked in place in the dark (false), or light frees electrons so the resistance falls and current flows (true)`,
     macro: 'sensor|chip|pot|pins|leds',
     story: 'light falling on the LDR (beam), inside the CdS track (layers, inside false then true)',
+    uses: 'lamp (a street light: the sky goes dark and the lamp switches itself on)',
   },
   flame: {
     about: `"flame": the flame-sensor module (a black IR photodiode/phototransistor that "sees" the infrared from a flame,
@@ -790,6 +792,7 @@ trigger it; it is a hobby/learning sensor, not a certified fire alarm)`,
     inside: `glass cutaway of the receiver's silicon: electrons locked (false), or the flame's IR frees electrons and a current flows (true)`,
     macro: 'sensor|chip|pot|pins|leds',
     story: 'the flame and its invisible IR (beam), inside the receiver (layers, inside false then true)',
+    uses: 'alarm (a candle catches fire, the module sees it, the buzzer and red light go off)',
   },
   sound: {
     about: `"sound": the sound-sensor module (KY-038 style: an electret condenser microphone capsule - a thin charged
@@ -801,6 +804,7 @@ PWR and DO LEDs, pins VCC, GND, DO (switches on a loud sound such as a clap), AO
     inside: `glass cutaway of the microphone: the diaphragm at rest (false), or sound makes it vibrate near the backplate and a signal current flows (true)`,
     macro: 'sensor|chip|pot|pins|leds',
     story: 'sound waves arriving (beam), inside the microphone (layers, inside false then true)',
+    uses: 'clap (hands clap, the sound rolls to the module, a bulb switches on)',
   },
 };
 const SM = STUDIO_MODULES[STUDIO_MODULE] ?? STUDIO_MODULES.ir;
@@ -849,10 +853,17 @@ Shot types (use ONLY these):
 - pot                                close-up of the blue trimmer turning (sets the threshold / range)
 - wiring   {"detect": true|false}    the module wired to an Arduino Uno (VCC to 5V, GND, the digital output to a digital
                                    pin); with detect the signal pulses down the wire and the Uno's LED lights
-Story rules: line 0 = a curiosity hook about the everyday use with "assemble"; line 1 an "explode" naming the parts.
-Then ${SM.story}, the comparator and the pot, the output LED, wiring to an Arduino with one practical tip, then a
-question that invites comments, and the LAST line is exactly {"text": "${FOLLOW.text}", "say": "${FOLLOW.say}"} with
-shot hero and text "${FOLLOW.head}". Never the same shot type more than twice in a row. Every claim accurate.`;
+- scene    {"use": "<one of: ${SM.uses}>"}  the everyday use in 3D, with the real module in it
+- uno      {"pin": "D2|5V|GND|A0"}  close-up of that pin on the Arduino Uno, where the module's wire goes
+- code     {"code": ["up to 6 short lines of Arduino code"]}  the Arduino code that reads the module, line by line
+SHOW WHAT IS SAID: every line's shot must show exactly what that line talks about. An everyday device or use ->
+scene; the Arduino, its pins or wiring -> wiring / uno; the program -> code; a part -> macro with its label; how it
+works inside -> layers / inside / compare / beam. There is NO fixed order: build the story THIS topic needs (topics
+about a device spend more time in its scene; topics about Arduino projects spend more time on wiring, pins and code),
+so every video looks different. Line 0 = a curiosity hook (a scene, or assemble). Never the same shot type more
+than twice in a row. Then a question that invites comments, and the LAST line is exactly
+{"text": "${FOLLOW.text}", "say": "${FOLLOW.say}"} with shot hero and text "${FOLLOW.head}". Every claim accurate.
+Useful facts for the mechanism: ${SM.story}.`;
 
 const STUDIO_NOTE = `
 

@@ -25,6 +25,14 @@ export interface Shot {
   text?: string;
   /** a part-name callout (macro / layers shots) */
   label?: string;
+  /** scene shots: the everyday use to show (robot | tap | door | lamp | alarm | clap) */
+  use?: string;
+  /** uno shots: the Arduino pin to show (D2 | 5V | GND | A0) */
+  pin?: string;
+  /** code shots: up to 6 short lines of Arduino code */
+  code?: string[];
+  fire?: boolean;
+  loud?: boolean;
 }
 export interface StudioPlan {
   module: string;
@@ -1184,6 +1192,349 @@ class Props {
   }
 }
 
+/** A simple stylised hand (palm, four fingers, thumb), fingers along -x. */
+function makeHand(scale = 1) {
+  const skin = std(0xd9a37e, 0.6);
+  const g = new THREE.Group();
+  const palm = rbox(1.6, 0.55, 1.5, 0.25, skin);
+  g.add(palm);
+  for (let i = 0; i < 4; i++) {
+    const f = new THREE.Mesh(new THREE.CapsuleGeometry(0.16, 0.85 - Math.abs(i - 1.5) * 0.12, 6, 12), skin);
+    f.rotation.z = Math.PI / 2;
+    f.position.set(-1.25, 0, -0.55 + i * 0.37);
+    g.add(f);
+  }
+  const th = new THREE.Mesh(new THREE.CapsuleGeometry(0.18, 0.6, 6, 12), skin);
+  th.rotation.set(0, 0.7, Math.PI / 2);
+  th.position.set(-0.5, 0, 0.95);
+  g.add(th);
+  g.scale.setScalar(scale);
+  g.traverse((o) => {
+    if ((o as THREE.Mesh).isMesh) o.castShadow = o.receiveShadow = true;
+  });
+  return g;
+}
+
+/** The everyday uses the script talks about, each a small 3D scene with the real module in it. */
+class Uses {
+  readonly group = new THREE.Group();
+  readonly scenes: Record<string, THREE.Group> = {};
+  private mods: Record<string, SensorModule> = {};
+  private parts: Record<string, Record<string, THREE.Object3D>> = {};
+  private beams: Record<string, THREE.Mesh> = {};
+  private mats: Record<string, THREE.MeshStandardMaterial> = {};
+  private glows: Record<string, THREE.Sprite> = {};
+  private lights: Record<string, THREE.PointLight> = {};
+  readonly focus: Record<string, THREE.Vector3> = {};
+
+  constructor(readonly kind: string) {
+    const floor = new THREE.Mesh(new THREE.CircleGeometry(40, 64), std(0x15171c, 0.85));
+    floor.rotation.x = -Math.PI / 2;
+    floor.receiveShadow = true;
+    this.group.add(floor);
+    const mk = (name: string) => {
+      const g = new THREE.Group();
+      g.visible = false;
+      this.group.add(g);
+      this.scenes[name] = g;
+      this.parts[name] = {};
+      return g;
+    };
+    const mod = (name: string, k: string, at: THREE.Vector3, rotY = 0, scale = 1) => {
+      const m = new SensorModule(k);
+      m.group.position.copy(at);
+      m.group.rotation.y = rotY;
+      m.group.scale.setScalar(scale);
+      this.scenes[name].add(m.group);
+      this.mods[name] = m;
+      return m;
+    };
+    if (this.kind === 'ir') {
+      // robot car driving at a wall
+      const robot = mk('robot');
+      const car = new THREE.Group();
+      const deck = rbox(7, 0.25, 4.6, 0.3, phys(0x1c2a3a, { roughness: 0.3, clearcoat: 0.8, transmission: 0.2, thickness: 0.2 }));
+      deck.position.y = 1.5;
+      car.add(deck);
+      for (const z of [-2.6, 2.6]) {
+        const wheel = cyl(1.3, 0.7, std(0x18191c, 0.8), 40);
+        wheel.rotation.x = Math.PI / 2;
+        wheel.position.set(1.2, 1.3, z);
+        const hub = cyl(0.55, 0.75, std(0xf2c230, 0.5), 24);
+        hub.rotation.x = Math.PI / 2;
+        hub.position.copy(wheel.position);
+        const motor = rbox(1.8, 0.9, 0.9, 0.1, std(0xf2c230, 0.5));
+        motor.position.set(1.2, 1.0, z * 0.62);
+        car.add(wheel, hub, motor);
+      }
+      const caster = new THREE.Mesh(new THREE.SphereGeometry(0.45, 24, 16), M.steel);
+      caster.position.set(-2.6, 0.45, 0);
+      const battery = rbox(2.4, 0.9, 1.4, 0.15, std(0x2b6ad8, 0.45));
+      battery.position.set(0.2, 2.1, 0);
+      const brain = rbox(2.2, 0.15, 1.7, 0.05, std(0x006570, 0.45));
+      brain.position.set(1.9, 1.75, 0);
+      car.add(caster, battery, brain);
+      robot.add(car);
+      this.parts.robot.car = car;
+      const m = mod('robot', 'ir', V(-3.6, 1.62, 0), 0, 0.9);
+      car.add(m.group);
+      const wall = rbox(0.6, 6, 14, 0.1, std(0x8d8a84, 0.75));
+      wall.position.set(-14, 3, 0);
+      wall.receiveShadow = true;
+      robot.add(wall);
+      const b = beam(1, 0.12, 1.3, 0xff3b6b);
+      b.rotation.z = Math.PI / 2;
+      car.add(b);
+      this.beams.robot = b;
+      this.focus.robot = V(-4, 2.2, 0);
+      // automatic tap: faucet over a basin, a hand comes under, water flows
+      const tap = mk('tap');
+      const basin = rbox(9, 2.2, 7, 0.9, std(0xf1f1ee, 0.25));
+      basin.position.set(0, 1.1, 0);
+      const bowl = new THREE.Mesh(new THREE.CylinderGeometry(3, 2.4, 0.3, 48), std(0xdcdcd8, 0.2));
+      bowl.position.set(0, 2.1, 0);
+      const spout = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([V(3.2, 2.2, 0), V(3.2, 6.2, 0), V(2.6, 7.0, 0), V(1.0, 7.0, 0), V(0.6, 6.4, 0)]), 64, 0.38, 24), M.steel);
+      tap.add(basin, bowl, spout);
+      const tm = mod('tap', 'ir', V(1.25, 6.55, 0), Math.PI, 0.32);
+      tm.group.rotation.set(0, 0, Math.PI / 2);
+      const water = beam(1, 0.22, 0.32, 0x6fc4ff);
+      water.position.set(0.6, 6.2, 0);
+      water.rotation.z = Math.PI;
+      water.scale.y = 4;
+      tap.add(water);
+      this.beams.tap = water;
+      const hand = makeHand(1);
+      tap.add(hand);
+      this.parts.tap.hand = hand;
+      this.focus.tap = V(0.8, 4.5, 0);
+      // lift doors closing; a hand between them makes them open again
+      const door = mk('door');
+      const frame = rbox(0.6, 9, 9.6, 0.05, M.steel);
+      frame.position.set(-0.5, 4.5, 0);
+      const inside = rbox(0.2, 8.4, 8.4, 0.05, std(0x2a2d33, 0.6));
+      inside.position.set(-0.9, 4.2, 0);
+      const left = rbox(0.3, 8.2, 4.1, 0.05, phys(0xb9bec5, { metalness: 0.9, roughness: 0.25 }));
+      const right = left.clone();
+      door.add(frame, inside, left, right);
+      this.parts.door.left = left;
+      this.parts.door.right = right;
+      const dm = mod('door', 'ir', V(0.2, 4.4, 0), 0, 0.55);
+      dm.group.rotation.set(0, Math.PI / 2, Math.PI / 2);
+      const dhand = makeHand(0.9);
+      door.add(dhand);
+      this.parts.door.hand = dhand;
+      this.focus.door = V(0.5, 4.3, 0);
+    }
+    if (this.kind === 'ldr') {
+      // street light on a pole; the sky darkens and the lamp switches itself on
+      const lamp = mk('lamp');
+      const sky = new THREE.Mesh(new THREE.PlaneGeometry(80, 40), new THREE.MeshBasicMaterial({ color: lin(0x6aa6e6) }));
+      sky.position.set(-20, 12, 0);
+      sky.rotation.y = Math.PI / 2;
+      this.parts.lamp.sky = sky;
+      const pole = cyl(0.3, 14, M.steel, 24);
+      pole.position.set(0, 7, 0);
+      const arm = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([V(0, 13.6, 0), V(-1, 14.4, 0), V(-4, 14.4, 0)]), 32, 0.2, 12), M.steel);
+      const head = rbox(2.6, 0.5, 1.4, 0.2, std(0x30343a, 0.5));
+      head.position.set(-4.4, 14.1, 0);
+      this.mats.lamp = emissive(0xffe0a0, 0xdddddd);
+      const lens = rbox(2.2, 0.1, 1.0, 0.05, this.mats.lamp);
+      lens.position.set(-4.4, 13.83, 0);
+      const glow = glowSprite(0xffd890, 2.6);
+      glow.position.set(-4.4, 13.5, 0);
+      this.glows.lamp = glow;
+      const pool = new THREE.PointLight(lin(0xffd890), 0, 30, 1.2);
+      pool.position.set(-4.4, 13, 0);
+      this.lights.lamp = pool;
+      const cone = beam(13, 0.6, 4.5, 0xffd890);
+      cone.position.set(-4.4, 13.7, 0);
+      cone.rotation.z = Math.PI;
+      this.beams.lamp = cone;
+      lamp.add(sky, pole, arm, head, lens, glow, pool, cone);
+      const lm = mod('lamp', 'ldr', V(0.55, 11.2, 0), 0, 0.9);
+      lm.group.rotation.set(0, 0, -Math.PI / 2);
+      this.focus.lamp = V(-1.5, 9.5, 0);
+    }
+    if (this.kind === 'flame') {
+      // fire alarm: a candle catches, the module sees it, the buzzer and the red light go off
+      const alarm = mk('alarm');
+      const table = rbox(16, 0.6, 10, 0.1, std(0x5a3e2b, 0.6));
+      table.position.y = 0.3;
+      alarm.add(table);
+      const am = mod('alarm', 'flame', V(1.5, 0.6, 0), 0, 1.4);
+      void am;
+      const wax = cyl(0.5, 2.6, std(0xf1e8d6, 0.75), 40);
+      wax.position.set(-4, 1.9, 0);
+      this.mats.flame = emissive(0xffb050, 0xffffff);
+      const flame = new THREE.Mesh(new THREE.SphereGeometry(0.18, 24, 16), this.mats.flame);
+      flame.position.set(-4, 3.55, 0);
+      this.parts.alarm.flame = flame;
+      const fg = glowSprite(0xff9a3a, 2.4);
+      fg.position.copy(flame.position);
+      this.glows.flame = fg;
+      const fl = new THREE.PointLight(lin(0xff9a3a), 0, 9, 1.5);
+      fl.position.copy(flame.position);
+      this.lights.flame = fl;
+      const buzzer = cyl(0.7, 0.7, M.black, 32);
+      buzzer.position.set(5.5, 0.95, -1.5);
+      this.mats.siren = emissive(0xff2020, 0x401010);
+      const siren = new THREE.Mesh(new THREE.SphereGeometry(0.8, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), this.mats.siren);
+      siren.position.set(5.5, 0.6, 1.8);
+      const sg = glowSprite(0xff2020, 3);
+      sg.position.set(5.5, 1.1, 1.8);
+      this.glows.siren = sg;
+      const ir = beam(1, 0.3, 0.3, 0xff3020);
+      const from = flame.position.clone();
+      const to = V(1.5 - 1.75 * 1.4, 0.6 + 0.46 * 1.4, 0);
+      ir.position.copy(from);
+      ir.quaternion.setFromUnitVectors(V(0, 1, 0), to.clone().sub(from).normalize());
+      ir.scale.set(1, to.distanceTo(from), 1);
+      this.beams.alarm = ir;
+      alarm.add(wax, flame, fg, fl, buzzer, siren, sg, ir);
+      this.focus.alarm = V(-0.8, 1.8, 0);
+    }
+    if (this.kind === 'sound') {
+      // clap switch: a clap rolls in, the module hears it, the bulb comes on
+      const clap = mk('clap');
+      const table = rbox(16, 0.6, 10, 0.1, std(0x5a3e2b, 0.6));
+      table.position.y = 0.3;
+      clap.add(table);
+      mod('clap', 'sound', V(0, 0.6, 1.5), 0, 1.4);
+      const stand = cyl(0.12, 3.2, M.steel, 16);
+      stand.position.set(4, 2.2, -1.5);
+      const base = cyl(1.0, 0.25, M.black, 32);
+      base.position.set(4, 0.72, -1.5);
+      this.mats.bulb = emissive(0xffe6a8, 0xf4f4f4);
+      const bulb = new THREE.Mesh(new THREE.SphereGeometry(0.9, 32, 24), phys(0xffffff, { transmission: 0.6, roughness: 0.1, thickness: 0.5, emissive: lin(0xffe6a8), emissiveIntensity: 0 }));
+      bulb.position.set(4, 4.4, -1.5);
+      this.parts.clap.bulb = bulb;
+      const bg = glowSprite(0xffd890, 5);
+      bg.position.copy(bulb.position);
+      this.glows.bulb = bg;
+      const bl = new THREE.PointLight(lin(0xffd890), 0, 14, 1.4);
+      bl.position.copy(bulb.position);
+      this.lights.bulb = bl;
+      const hands = [makeHand(0.8), makeHand(0.8)];
+      hands[0].position.set(-6, 3, 0.4);
+      hands[1].position.set(-6, 3, -0.4);
+      hands[0].rotation.x = Math.PI / 2;
+      hands[1].rotation.x = -Math.PI / 2;
+      this.parts.clap.h0 = hands[0];
+      this.parts.clap.h1 = hands[1];
+      const rings: THREE.Mesh[] = [];
+      for (let i = 0; i < 5; i++) {
+        const r = new THREE.Mesh(new THREE.TorusGeometry(0.8, 0.04, 8, 64), new THREE.MeshBasicMaterial({ color: lin(0x9fdcff), transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false }));
+        r.rotation.y = Math.PI / 2;
+        clap.add(r);
+        rings.push(r);
+        this.parts.clap[`r${i}`] = r;
+      }
+      clap.add(stand, base, bulb, bg, bl, ...hands);
+      this.focus.clap = V(-1.2, 2.6, 0);
+    }
+    this.group.traverse((o) => {
+      if ((o as THREE.Mesh).isMesh && o !== floor) o.castShadow = o.receiveShadow = true;
+    });
+  }
+
+  /** Which scenes exist for this module (the ones Claude may ask for). */
+  get names() {
+    return Object.keys(this.scenes);
+  }
+
+  update(name: string, t: number, p: number) {
+    for (const [n, g] of Object.entries(this.scenes)) g.visible = n === name;
+    const P = this.parts[name];
+    const m = this.mods[name];
+    if (m) {
+      m.pwr.set(1);
+      m.t = t;
+    }
+    const setBeam = (b: THREE.Mesh | undefined, on: number) => {
+      if (!b) return;
+      const u = (b.material as THREE.ShaderMaterial).uniforms;
+      u.on.value = on;
+      u.time.value = t;
+    };
+    if (name === 'robot') {
+      const x = lerp(7, -2, outCubic(range(p, 0, 0.6)));
+      P.car.position.x = x;
+      P.car.rotation.y = 0.9 * smooth(range(p, 0.72, 1));
+      const near = clamp(range(p, 0.45, 0.6));
+      m.emitter.set(1, 0);
+      m.receiver.set(near, 0);
+      m.obs.set(near > 0.6 ? 1 : 0);
+      const b = this.beams.robot;
+      b.position.set(-3.6 - 2.0 * 0.9, 1.62 + 0.46 * 0.9, -0.32);
+      b.scale.y = Math.max(0.5, -14 + 0.3 - (x - 5.4));
+      setBeam(b, 1);
+      m.sync();
+    } else if (name === 'tap') {
+      const h = outCubic(range(p, 0.05, 0.4));
+      P.hand.position.set(lerp(-9, 0.4, h), 4.0, 0.2);
+      const on = clamp(range(p, 0.35, 0.45));
+      setBeam(this.beams.tap, on);
+      m.receiver.set(on, 0);
+      m.obs.set(on > 0.5 ? 1 : 0);
+      m.sync();
+    } else if (name === 'door') {
+      const close = smooth(range(p, 0.0, 0.35)) * (1 - smooth(range(p, 0.5, 0.75)));
+      const gap = lerp(4.1, 0.35, close);
+      P.left.position.set(-0.2, 4.2, -gap / 2 - 2.05);
+      P.right.position.set(-0.2, 4.2, gap / 2 + 2.05);
+      const hin = outCubic(range(p, 0.3, 0.45));
+      P.hand.position.set(lerp(9, 1.2, hin), 4.6, 0);
+      m.receiver.set(hin, 0);
+      m.obs.set(hin > 0.7 ? 1 : 0);
+      m.sync();
+    } else if (name === 'lamp') {
+      const dark = smooth(range(p, 0.1, 0.55));
+      ((P.sky as THREE.Mesh).material as THREE.MeshBasicMaterial).color.copy(lin(0x6aa6e6)).lerp(lin(0x0b1024), dark);
+      const on = dark > 0.6 ? clamp((dark - 0.6) * 5) : 0;
+      this.mats.lamp.emissiveIntensity = on * 8;
+      this.glows.lamp.material.opacity = on * 0.9;
+      this.lights.lamp.intensity = on * 30;
+      setBeam(this.beams.lamp, on * 0.22);
+      m.receiver.set(1 - dark, 0);
+      m.obs.set(on > 0.5 ? 1 : 0);
+    } else if (name === 'alarm') {
+      const fire = smooth(range(p, 0.08, 0.3));
+      const f = 1 + 0.12 * Math.sin(t * 13) + 0.07 * Math.sin(t * 29 + 1);
+      P.flame.visible = fire > 0.02;
+      P.flame.scale.set(fire, 2.4 * f * fire, fire);
+      this.mats.flame.emissiveIntensity = 6;
+      this.glows.flame.material.opacity = fire * 0.85 * f;
+      this.lights.flame.intensity = fire * 2.2 * f;
+      setBeam(this.beams.alarm, fire);
+      const alarmOn = fire > 0.7 ? (Math.sin(t * 10) > 0 ? 1 : 0.15) : 0;
+      this.mats.siren.emissiveIntensity = alarmOn * 9;
+      this.glows.siren.material.opacity = alarmOn * 0.9;
+      m.receiver.set(fire, 0);
+      m.obs.set(fire > 0.7 ? 1 : 0);
+      m.sync();
+    } else if (name === 'clap') {
+      const c = range(p, 0.1, 0.3);
+      const apart = 0.4 + 0.5 * Math.abs(Math.cos(c * Math.PI * 3));
+      (P.h0 as THREE.Object3D).position.z = apart;
+      (P.h1 as THREE.Object3D).position.z = -apart;
+      const loud = c > 0.15 ? 1 : 0;
+      for (let i = 0; i < 5; i++) {
+        const r = P[`r${i}`] as THREE.Mesh;
+        const u = (t * 0.8 + i / 5) % 1;
+        r.position.set(-5.5 + u * 5.2, 2.6 - u * 1.4, 0.8);
+        r.scale.setScalar(0.5 + u);
+        (r.material as THREE.MeshBasicMaterial).opacity = loud * (1 - u) * 0.9 * (p < 0.7 ? 1 : 0);
+      }
+      const on = p > 0.35 ? 1 : 0;
+      ((P.bulb as THREE.Mesh).material as THREE.MeshPhysicalMaterial).emissiveIntensity = on * 6;
+      this.glows.bulb.material.opacity = on * 0.9;
+      this.lights.bulb.intensity = on * 12;
+      m.receiver.set(loud, 0, t);
+      m.obs.set(on);
+    }
+  }
+}
+
 /** The LM393 comparator as two glass tubes: the signal level against the threshold set by the pot. */
 class Comparator {
   readonly group = new THREE.Group();
@@ -1472,9 +1823,10 @@ varying vec2 vUv;
 float linZ(float d) { return near * far / (far - d * (far - near)); }
 float coc(float z) { return clamp(abs(1.0 / focus - 1.0 / z) * scale, 0.0, 1.0) * maxBlur; }
 vec3 aces(vec3 x) { return clamp((x * (2.51 * x + 0.03)) / (x * (2.43 * x + 0.59) + 0.14), 0.0, 1.0); }
+uniform vec3 bgA; uniform vec3 bgB;
 vec3 bg(vec2 uv) {
   vec2 c = (uv - vec2(0.5, 0.52)) * vec2(1.0, 0.62);
-  return mix(vec3(0.034, 0.037, 0.046), vec3(0.008, 0.009, 0.012), smoothstep(0.0, 0.62, length(c)));
+  return mix(bgA, bgB, smoothstep(0.0, 0.62, length(c)));
 }
 vec4 samp(vec2 uv) {
   float d = texture2D(tDepth, uv).x;
@@ -1523,15 +1875,25 @@ function partLabel(kind: string, part: string) {
   return PART_LABEL[part] ?? part;
 }
 
+/** a look per video, picked from the plan: background tone, rim light and the headline's key colour */
+const THEMES = [
+  { a: [0.034, 0.037, 0.046], b: [0.008, 0.009, 0.012], rim: 0x9cc4ff, hot: '#ff6a2b' },
+  { a: [0.02, 0.045, 0.05], b: [0.004, 0.012, 0.014], rim: 0x7fffe0, hot: '#ffd23f' },
+  { a: [0.05, 0.035, 0.03], b: [0.012, 0.008, 0.007], rim: 0xffc48a, hot: '#3fd0ff' },
+  { a: [0.04, 0.028, 0.055], b: [0.01, 0.006, 0.016], rim: 0xd4a8ff, hot: '#ff4fa3' },
+  { a: [0.028, 0.04, 0.03], b: [0.006, 0.01, 0.007], rim: 0xb8ffb0, hot: '#ff8a3d' },
+];
+
 const DEFAULT_SHOTS = ['assemble', 'hero', 'macro', 'beam', 'layers', 'inside', 'compare', 'pot', 'wiring', 'hero'];
 
 export class Studio {
   private built = false;
-  private set!: { module: THREE.Group; lattice: THREE.Group; compare: THREE.Group; bench: THREE.Group; membrane: THREE.Group };
+  private set!: { module: THREE.Group; lattice: THREE.Group; compare: THREE.Group; bench: THREE.Group; membrane: THREE.Group; uses: THREE.Group };
   private mod!: SensorModule;
   private kind = 'ir';
   private props!: Props;
   private membrane!: Membrane;
+  private uses!: Uses;
   private lattice!: Lattice;
   private comparator!: Comparator;
   private bench!: Bench;
@@ -1591,7 +1953,11 @@ export class Studio {
     this.key.shadow.bias = -0.0004;
     this.key.shadow.normalBias = 0.015;
     this.key.shadow.radius = 4;
-    const rim = new THREE.DirectionalLight(lin(0x9cc4ff), 1.6);
+    // one look per video (the same plan always gets the same look)
+    const seed = [...JSON.stringify(this.plan.shots.map((x) => x.text ?? ''))].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+    const theme = THEMES[seed % THEMES.length];
+    HOT = theme.hot;
+    const rim = new THREE.DirectionalLight(lin(theme.rim), 1.6);
     rim.position.set(-6, 4, -7);
     const fill = new THREE.DirectionalLight(lin(0xffffff), 0.35);
     fill.position.set(-4, 2, 6);
@@ -1614,7 +1980,8 @@ export class Studio {
     this.comparator = new Comparator();
     this.bench = new Bench(this.kind);
     this.membrane = new Membrane();
-    this.set = { module, lattice: this.lattice.group, compare: this.comparator.group, bench: this.bench.group, membrane: this.membrane.group };
+    this.uses = new Uses(this.kind);
+    this.set = { module, lattice: this.lattice.group, compare: this.comparator.group, bench: this.bench.group, membrane: this.membrane.group, uses: this.uses.group };
     for (const g of Object.values(this.set)) {
       g.visible = false;
       this.three.add(g);
@@ -1634,6 +2001,8 @@ export class Studio {
         maxBlur: { value: (22 * size.y) / 1920 },
         exposure: { value: 1.0 },
         radStep: { value: LITE ? 3.2 : 1.25 },
+        bgA: { value: new THREE.Vector3(...theme.a) },
+        bgB: { value: new THREE.Vector3(...theme.b) },
       },
       vertexShader: QUAD_VERT,
       fragmentShader: DOF_FRAG,
@@ -1838,6 +2207,40 @@ export class Studio {
         this.scale = 9;
         break;
       }
+      case 'scene': {
+        // the everyday use the line talks about
+        const names = this.uses.names;
+        const name = names.includes(sh.use ?? '') ? sh.use! : names[idx % names.length];
+        this.set.module.visible = false;
+        this.uses.group.visible = true;
+        this.uses.update(name, t, p);
+        const f = this.uses.focus[name];
+        const wide = ({ lamp: 28, robot: 34, tap: 20, door: 26, alarm: 25, clap: 25 } as Record<string, number>)[name] ?? 22;
+        this.rig(f, 0.75 * dir + 0.25 * p * dir, name === 'lamp' ? 0.12 : 0.3, lerp(wide, wide * 0.9, p), 30);
+        this.scale = 3;
+        shadowBox = 16;
+        break;
+      }
+      case 'uno':
+      case 'code': {
+        // close on the Arduino: the pin the module is wired to (uno), or the code running on it (code, drawn in 2D)
+        this.set.module.visible = false;
+        this.bench.group.visible = true;
+        this.bench.update(t, sh.detect === false ? 0 : p > 0.4 ? 1 : 0);
+        const pins: Record<string, [number, number]> = { D2: [57.2, 2.05], '5V': [38.06, 51.35], GND: [40.6, 51.35], A0: [50.8, 51.35] };
+        const [px, py] = pins[(sh.pin || 'D2').toUpperCase()] ?? pins.D2;
+        const at = V((px - BOARD_W / 2) / 10, 1.0, (py - BOARD_H / 2) / 10 - 1.5);
+        if (sh.shot === 'uno') {
+          this.rig(at, 0.6 * dir + 0.2 * p, 0.75, lerp(5.5, 4.6, p), 24);
+          this.callouts.push({ at: at.clone(), text: `PIN ${(sh.pin || 'D2').toUpperCase()}`, side: dir });
+          this.scale = 8;
+        } else {
+          this.rig(V(0, 0.6, -1.5), 0.3 + 0.15 * p, 1.0, 13, 28);
+          this.scale = 4;
+        }
+        shadowBox = 10;
+        break;
+      }
       case 'wiring': {
         this.set.module.visible = false;
         this.bench.group.visible = true;
@@ -1899,6 +2302,7 @@ export class Studio {
     const sh = this.shotAt(idx);
     const text = sh.text || L.text.replace(/\*/g, '').split(/\s+/).slice(0, 3).join(' ');
     headline(ctx, text, p);
+    if (sh.shot === 'code') codePanel(ctx, sh.code?.length ? sh.code : DEFAULT_CODE[this.kind] ?? DEFAULT_CODE.ir, p);
     // lay the labels out per side, top to bottom, at least 84 px apart so they never overlap
     const placed = this.callouts.map((c) => {
       const v = c.at.clone().project(this.camera);
@@ -1940,7 +2344,62 @@ export class Studio {
   }
 }
 
-const HOT = '#ff6a2b';
+const DEFAULT_CODE: Record<string, string[]> = {
+  ir: ['void loop() {', '  int obstacle = digitalRead(2);', '  if (obstacle == LOW)', '    stopMotors();', '}'],
+  ldr: ['void loop() {', '  int dark = digitalRead(2);', '  digitalWrite(13, dark);', '  int light = analogRead(A0);', '}'],
+  flame: ['void loop() {', '  if (digitalRead(2) == LOW)', '    digitalWrite(BUZZER, HIGH);', '}'],
+  sound: ['bool on = false;', 'void loop() {', '  if (digitalRead(2) == HIGH)', '    on = !on;  // clap!', '  digitalWrite(13, on);', '}'],
+};
+
+/** An Arduino IDE-style code panel; the running line is highlighted. */
+function codePanel(ctx: Ctx, code: string[], p: number) {
+  const lines = code.slice(0, 7);
+  const a = outCubic(clamp(p * 4));
+  const x = 70;
+  const y = 560;
+  const w = W - 140;
+  const lh = 58;
+  const h = 90 + lines.length * lh;
+  ctx.save();
+  ctx.globalAlpha = a;
+  ctx.translate(0, (1 - a) * 40);
+  ctx.fillStyle = 'rgba(12,16,22,0.9)';
+  ctx.strokeStyle = 'rgba(0,151,156,0.9)';
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.roundRect(x, y, w, h, 22);
+  ctx.fill();
+  ctx.stroke();
+  ctx.fillStyle = '#00979c';
+  ctx.beginPath();
+  ctx.roundRect(x, y, w, 52, [22, 22, 0, 0]);
+  ctx.fill();
+  ctx.font = '600 28px "IBM Plex Mono", monospace';
+  ctx.fillStyle = '#ffffff';
+  ctx.fillText('sketch.ino', x + 28, y + 35);
+  const cur = Math.min(lines.length - 1, Math.floor(p * lines.length * 1.1));
+  ctx.font = '500 34px "IBM Plex Mono", monospace';
+  lines.forEach((l, i) => {
+    const ly = y + 100 + i * lh;
+    if (i === cur) {
+      ctx.fillStyle = 'rgba(255,106,43,0.18)';
+      ctx.fillRect(x + 8, ly - 40, w - 16, lh - 4);
+    }
+    ctx.fillStyle = '#5c6370';
+    ctx.fillText(String(i + 1).padStart(2), x + 22, ly);
+    // a light touch of syntax colour
+    let cx = x + 90;
+    for (const tok of l.split(/(\b(?:void|int|bool|if|else|return|true|false|HIGH|LOW)\b|\/\/.*$|\d+)/)) {
+      if (!tok) continue;
+      ctx.fillStyle = /^\/\//.test(tok) ? '#7f8c98' : /^(void|int|bool|if|else|return)$/.test(tok) ? '#00b5bb' : /^(true|false|HIGH|LOW)$/.test(tok) ? '#ffb347' : /^\d+$/.test(tok) ? '#f07178' : '#e6edf3';
+      ctx.fillText(tok, cx, ly);
+      cx += ctx.measureText(tok).width;
+    }
+  });
+  ctx.restore();
+}
+
+let HOT = '#ff6a2b';
 const LINE = '#f1ece2';
 /** Big kinetic headline words, word by word, the *key* word in orange with a glow (story-lib.js style). */
 function headline(ctx: Ctx, text: string, p: number, y = 300, size = 104, maxW = 960) {
