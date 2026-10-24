@@ -75,3 +75,36 @@ wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wa
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/hand-dryer-ka-secret.mp4 (12 parts, 18.4 min)
 
 == youtube
+  Hand Dryer Bina Button Kaise Chalu Hota Hai? 🤔 #shorts
+  metadata: channel/videos/auto-hand-dryer-ka-secret.json
+
+  uploading  30.7%
+  uploading  61.4%
+  uploading  92.1%
+uploaded https://youtu.be/GwSp0dC__r4  (private)
+created playlist Kaise Kaam Karta Hai: Shorts
+Traceback (most recent call last):
+  File "/home/runner/work/echo-lab-studio/echo-lab-studio/channel/youtube.py", line 283, in <module>
+    COMMANDS[sys.argv[1]](*sys.argv[2:])
+  File "/home/runner/work/echo-lab-studio/echo-lab-studio/channel/youtube.py", line 190, in cmd_upload
+    y.playlistItems().insert(part="snippet", body={"snippet": {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": vid}}}).execute()
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/googleapiclient/http.py", line 1018, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 409 when requesting https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned "The operation was aborted.". Details: "[{'domain': 'youtube.CoreErrorDomain', 'reason': 'SERVICE_UNAVAILABLE'}]">
+117 | }
+118 | const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50) || 'video';
+119 | 
+120 | function run(cmd: string, args: string[], cwd = appDir) {
+121 |   const r = spawnSync(cmd, args, { cwd, stdio: 'inherit', shell: false });
+122 |   if (r.status !== 0) throw new Error(`${cmd} ${args.slice(0, 3).join(' ')} failed (exit ${r.status})`);
+                                      ^
+error: python -m uv run failed (exit 1)
+      at run (/home/runner/work/echo-lab-studio/echo-lab-studio/app/scripts/auto.ts:122:33)
+      at /home/runner/work/echo-lab-studio/echo-lab-studio/app/scripts/auto.ts:1431:13
+
+::error file=app/scripts/auto.ts,line=122,col=33,title=error: python -m uv run failed (exit 1)::%0A      at run (/home/runner/work/echo-lab-studio/echo-lab-studio/app/scripts/auto.ts:122:33)%0A      at /home/runner/work/echo-lab-studio/echo-lab-studio/app/scripts/auto.ts:1431:13
+
+Bun v1.4.4 (Linux x64)

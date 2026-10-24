@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Automatic hand dryer in washrooms",
+      "hook": "Hand Dryer Bina Button Dabaye Kaise Chalu Hota Hai?"
+    },
+    {
+      "topic": "Escalator that starts when you step near",
+      "hook": "Escalator Ko Pata Hai Aap Aa Rahe Ho!"
+    },
+    {
+      "topic": "Room light that turns on with a clap or motion",
+      "hook": "Taali Bajao, Light Jale: Yeh Jaadu Nahi Hai!"
+    },
+    {
+      "topic": "Car reverse parking sensor beeping",
+      "hook": "Gaadi Peeche Deewar Ko Kaise Dekh Leti Hai?"
+    },
+    {
+      "topic": "Fridge door light turning off when closed",
+      "hook": "Fridge Band Hote Hi Light Kaise Bujh Jaati Hai?"
+    },
+    {
       "topic": "Lift sensor: how the lift door stops when you put a hand",
       "hook": "Lift Ka Darwaza Haath Dekhkar Nahi Rukta! Phir Kaise?"
     },

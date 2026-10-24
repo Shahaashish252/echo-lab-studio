@@ -4,7 +4,7 @@
   "hook": "Hand Dryer Bina Button Dabaye Kaise Chalu Hota Hai?",
   "lang": "hi",
   "started": "2026-10-24T22:27:22",
-  "status": "running",
+  "status": "failed",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -40,5 +40,6 @@
     }
   ],
   "format": "studio",
-  "module": "ir"
+  "module": "ir",
+  "finished": "2026-10-24T22:48:33"
 }

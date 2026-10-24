@@ -1,26 +1,26 @@
 {
-  "updated": "2026-10-24T19:02",
+  "updated": "2026-10-24T22:27",
   "videos": 13,
-  "summary": "Instagram is doing nearly all the work: Hindi videos get 100 to 1,400 views there, while YouTube Shorts barely move (mostly under 30 views). The PIR motion sensor video is the clear winner, with the most views, likes, shares and saves on both platforms. The one English video got views only on YouTube and nothing on Instagram, and all videos are still very small, so these are early signals, not proof.",
-  "winningPattern": "Hindi, Instagram-first, everyday-object sensor explainers. The best video takes a familiar device (motion sensor, street light) and opens with a surprising 'it does not actually do what you think' claim ('Motion Sensor Aapko Dekhta Nahi!'), followed by a 'Kaise Kaam Karta Hai?' question title with the 🤔 emoji. Short curiosity-gap titles about things people see daily (street light, phone rotation, auto door) get the most saves and shares.",
+  "summary": "Instagram is carrying almost all the attention: the Hindi videos get 100 to 1,400 views there, while YouTube Shorts mostly gets under 30 views. The PIR motion sensor video is the clear winner on both platforms, with the most views, likes, shares and saves. Street light and everyday-device questions do fine on Instagram, but the channel is still very small, so these results are early signals rather than proof.",
+  "winningPattern": "Hindi explainer about a familiar everyday sensor that people meet daily (motion sensor, street light), with a curiosity hook that says a surprising fact or asks 'how does it know?' (e.g. 'Motion Sensor Aapko Dekhta Nahi!'). Title is Hinglish, one short question, a 🤔 emoji and #shorts. Instagram Reels is the main driver; the PIR video was also the only one to get real YouTube traction.",
   "doMore": [
-    "Open with a 'myth-breaking' line: 'X does not actually do Y' before explaining how it works",
-    "Pick sensors people meet daily (fan, lift, ATM, AC, car parking beeper) and name the device in the title",
-    "Post Instagram-first and test a few Hindi titles on YouTube with a stronger first-second visual",
-    "End each video with a save-worthy line or mini cheat sheet so saves and shares go up",
-    "Repeat the PIR format on close siblings: one hidden-sense reveal, one simple analogy, one real-life example"
+    "Make videos about sensors people see every day (lights, doors, taps, alarms) and open with a surprising claim like 'It doesn't see you!'",
+    "Lead titles with the shocking statement, then the question, as the PIR title does",
+    "Post to Instagram first and treat it as the main platform, then repost to YouTube",
+    "Ask a question in each video that invites shares and saves, since shares and saves are what the best videos got",
+    "Keep to one sensor per video and revisit the PIR topic with a follow-up (e.g. PIR vs IR sensor)"
   ],
   "stopDoing": [
-    "Publishing near-duplicate topics (two smoke detector videos, two IR/dark-sensing videos) that split the audience",
-    "Posting English videos with no Instagram version while the audience is responding to Hindi",
-    "Vague or generic titles that don't contain a surprising claim"
+    "Publishing near-duplicate topics like two smoke detector videos within days of each other",
+    "Mixing in English titles for now, since the Hindi videos are where the audience is",
+    "Abstract or internal topics (touchscreen, phone orientation) without a visible daily-life hook"
   ],
   "nextTopics": [
-    "Lift sensor: how the lift door stops when you put a hand",
-    "Automatic hand dryer / sanitizer dispenser sensor",
-    "Car reverse parking beeper using ultrasonic",
-    "Phone proximity sensor turning screen off during calls",
-    "Fridge door light and door sensor"
+    "Automatic hand dryer in washrooms",
+    "Escalator that starts when you step near",
+    "Room light that turns on with a clap or motion",
+    "Car reverse parking sensor beeping",
+    "Fridge door light turning off when closed"
   ],
   "bestTimes": {
     "times": [
