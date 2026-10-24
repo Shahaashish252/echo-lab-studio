@@ -186,9 +186,13 @@ def cmd_upload(meta_path: str):
         except Exception as e:  # unverified channels and Shorts can't take custom thumbnails
             print(f"! thumbnail not set ({e}). Verify the channel at youtube.com/verify, or pick a frame in the app for Shorts.")
     if m.get("playlist"):
-        pid = playlist_id(y, m["playlist"]["title"], m["playlist"].get("description", ""))
-        y.playlistItems().insert(part="snippet", body={"snippet": {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": vid}}}).execute()
-        print(f'added to playlist {m["playlist"]["title"]}')
+        # a playlist hiccup (YouTube sometimes answers 409 "operation aborted") must not lose the uploaded video
+        try:
+            pid = playlist_id(y, m["playlist"]["title"], m["playlist"].get("description", ""))
+            y.playlistItems().insert(part="snippet", body={"snippet": {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": vid}}}).execute()
+            print(f'added to playlist {m["playlist"]["title"]}')
+        except Exception as e:  # noqa: BLE001
+            print(f"! not added to the playlist ({str(e)[:120]})")
     log = HERE / "uploads.json"
     hist = json.loads(log.read_text(encoding="utf-8")) if log.exists() else []
     hist.append({"id": vid, "meta": meta_path, "date": date.today().isoformat()})

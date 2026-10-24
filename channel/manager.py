@@ -855,6 +855,18 @@ def video_table() -> list:
     return sorted(rows, key=lambda r: -r["score"])
 
 
+def two_slots(ranked_hours: list) -> list:
+    """The best hour and the best one at least 5 hours from it, both while people are awake (09-22 local)."""
+    awake = [h for h in ranked_hours if 9 <= h <= 22]
+    if not awake:
+        return []
+    first = awake[0]
+    second = next((h for h in awake[1:] if abs(h - first) >= 5), None)
+    if second is None:
+        second = first + 7 if first + 7 <= 22 else first - 7
+    return sorted([first, second])
+
+
 def best_times(rows: list) -> dict:
     """Two daily post times: Instagram's 'when your followers are online' if it has enough data, else the hours
     our own posts did best at, else proven prime times for the audience (India for Hindi)."""
@@ -870,10 +882,10 @@ def best_times(rows: list) -> dict:
             import time
             off = time.localtime().tm_gmtoff // 3600
             ranked = sorted(vals.items(), key=lambda kv: -kv[1])
-            hours = sorted({(int(h) + 7 + off) % 24 for h, _ in ranked[:6]})
-            pick = [hours[0], hours[-1]] if len(hours) > 1 else hours * 2
-            reason = "from Instagram: the hours most of your followers are online"
-            return {"times": [f"{h:02d}:00" for h in pick], "reason": reason}
+            pick = two_slots([(int(h) + 7 + off) % 24 for h, _ in ranked])
+            if pick:
+                reason = "from Instagram: the waking hours most of your followers are online"
+                return {"times": [f"{h:02d}:00" for h in pick], "reason": reason}
     except Exception as e:  # noqa: BLE001
         reason = f"(Instagram online-followers unavailable: {str(e)[:60]})"
     timed = [r for r in rows if r.get("postedAt")]
@@ -882,8 +894,9 @@ def best_times(rows: list) -> dict:
         for r in timed:
             by_hour.setdefault(int(r["postedAt"][11:13]), []).append(r["score"])
         ranked = sorted(by_hour, key=lambda h: -sum(by_hour[h]) / len(by_hour[h]))
-        pick = sorted(ranked[:2]) if len(ranked) > 1 else ranked * 2
-        return {"times": [f"{h:02d}:00" for h in pick], "reason": f"from our own posts: these hours averaged the most views ({len(timed)} posts)"}
+        pick = two_slots(ranked)
+        if pick:
+            return {"times": [f"{h:02d}:00" for h in pick], "reason": f"from our own posts: these hours averaged the most views ({len(timed)} posts)"}
     if video_language() == "hi":
         return {"times": [local_from_ist("12:30"), local_from_ist("19:30")],
                 "reason": "Indian Shorts/Reels prime time (lunch 12:30 and evening 19:30 IST) until we have enough of our own data"}
