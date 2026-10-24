@@ -1,2 +1,31 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. An IR LED sends out weak infrared pulses.
+  | 2. The beam is too weak to bounce back from the floor, so the receiver sees almost nothing.
+  | 3. A hand reflects the IR back into the receiver beside the LED.
+  | 4. The control board compares the signal with a threshold. Some models have a trimmer pot for sensitivity.
+  | 5. If the signal is above the threshold, the board switches on the fan and heater.
+  | 6. When the hand leaves, the reflection drops and the fan stops. Some dryers also stop at the end of a timed cycle.
+  | 
+  | **REAL PARTS**
+  | - IR LED plus an IR photodiode or phototransistor receiver (the sources describe this pair, not specific part numbers).
+  | - A sensitivity trimmer pot (from the Supreme manual).
+  | - Dyson Airblade Tap: IR sensors plus the Dyson digital motor V4.
+  | - I did not verify a comparator part such as the LM393. If you mention it, call it "typical".
+  | 
+  | **MYTH**
+  | - Myth: the dryer "sees" your hand or senses heat.
+  | - Truth: most designs emit their own IR and detect its reflection. Some designs only receive IR that hands give off.
+  | 
+  | **SURPRISING FACT**
+  | - Mirrors, polished steel and glossy tile can keep the sensor triggered.
+  | - Sunlight can also cause activation when nobody is there.
+  | - The only number I found is a vendor rule of thumb: after cleaning, a dryer that shuts off in 1–2 seconds had a dirty sensor. I found no other verified numbers.
+  | 
+  | **TIP**
+  | - If the dryer runs by itself or won't start, clean the sensor window with a soft cloth.
+  | 
+  | Sources: [Naked Scientists](https://www.thenakedscientists.com/node/179908), [Supreme Airforce manual](https://media.cetnaj.com.au/Installation/Supreme/Supreme_Airforce.pdf), [ProDryers troubleshooting](https://www.prodryers.com/blog/commercial-hand-dryer-troubleshooting-guide-6-common-problems-expert-fixes-preventive-maintenance/), [FMLink on Dyson Airblade Tap](https://www.fmlink.com/dyson-airblade-tap-hand-dryer-washes-and-dries-hands-at-the-sink/)
+
+== storyboard: "Automatic hand dryer sensor (open with this hook: "Hand Dryer Aapke Haath Ko Dekhta Nahi, Phir Bhi Chalta Hai!")" (Claude Code)
