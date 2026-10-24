@@ -1,0 +1,15 @@
+{
+  "id": "20261024-132051",
+  "topic": "Lift knows which floor you pressed",
+  "hook": "Lift Ko Kaise Pata Aap Kaun Si Floor Dabate Ho?",
+  "lang": "hi",
+  "started": "2026-10-24T13:20:51",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-10-24T13:20:52"
+    }
+  ],
+  "format": "story"
+}
