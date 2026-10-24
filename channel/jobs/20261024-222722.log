@@ -32,3 +32,22 @@
   studio plan: 14 shots of the ir module
 
 == voice (Microsoft Edge: Madhur)
+Installed 27 packages in 21ms
+[0;93m2026-10-24 22:29:23.010188221 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/VMBUS:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        2.85s  हैंड ड्रायर बिना बटन दबाए कैसे चालू होता है?
+s1-2        3.26s  यह है इन्फ्रारेड सेंसर मॉड्यूल, और इसके पार्ट्स।
+s1-3        4.57s  यह इन्फ्रारेड एलईडी नौ सौ चालीस नैनोमीटर की अदृश्य रोशनी देती है।
+s1-4        2.87s  हाथ नहीं है, तो रोशनी आगे निकल जाती है।
+s1-5        2.88s  हाथ आते ही रोशनी टकराकर वापस लौटती है।
+s1-6        4.70s  काला रिसीवर फोटोडायोड है: ऊपर एपॉक्सी, अंदर पी और एन सिलिकॉन।
+s1-7        4.07s  अंधेरे में इलेक्ट्रॉन अपनी जगह फँसे रहते हैं, करंट नहीं बहता।
+s1-8        3.82s  इन्फ्रारेड पड़ते ही इलेक्ट्रॉन आज़ाद होते हैं, करंट बहता है।
+s1-9        3.48s  एलएम तीन नौ तीन चिप सिग्नल को थ्रेशोल्ड से मिलाती है।
+s1-10       4.49s  नीला पॉट थ्रेशोल्ड सेट करता है, यानी दो से तीस सेंटीमीटर रेंज।
+s1-11       3.22s  आउट लो होता है और ओबीएस एलईडी जल जाती है।
+s1-12       4.13s  आउट को डिजिटल पिन पर जोड़ो; काली चीज़ें पास आने पर ही दिखेंगी।
+s1-13       3.88s  आपके यहाँ ड्रायर कभी अटका है? कमेंट करो।
+s1-14       2.00s  ऐसे और वीडियो के लिए फॉलो करो
+wrote 14 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit
