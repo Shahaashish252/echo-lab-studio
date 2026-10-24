@@ -333,6 +333,7 @@ function renderJourneys() {
     return `<div class="journey"><div class="jh"><b>${esc(title)}</b><span class="tag ${esc(st)}">${esc(label)}</span>${smallBar(progress(job, video))}
       ${(job?.lang || video?.language) ? `<span class="tag ${job?.lang || video?.language}">${(job?.lang || video?.language) === 'hi' ? 'HI' : 'EN'}</span>` : ''}
       <span class="faint" style="font-size:12px">${esc(ago(job?.started) || video?.date || '')}</span>
+      ${video ? `<button class="btn" style="font-size:12px;padding:3px 10px" data-preview="${esc(video.id)}">&#9654; Preview</button>` : ''}
       ${video ? `<a style="font-size:12px" href="https://youtu.be/${esc(video.id)}" target="_blank">YouTube</a>` : ''}
       ${video?.published?.instagram?.startsWith?.('http') ? `<a style="font-size:12px" href="${esc(video.published.instagram)}" target="_blank">Instagram</a>` : ''}
       ${video?.published?.facebook?.startsWith?.('http') ? `<a style="font-size:12px" href="${esc(video.published.facebook)}" target="_blank">Facebook</a>` : ''}</div>
@@ -340,6 +341,25 @@ function renderJourneys() {
       ${job ? `<details><summary>Making log</summary><pre class="log" data-job="${esc(job.id)}"></pre></details>` : ''}</div>`;
   }).join('');
   document.querySelectorAll('#journeys details').forEach((d) => d.addEventListener('toggle', () => d.open && loadLog(d.querySelector('pre'))));
+  document.querySelectorAll('#journeys [data-preview]').forEach((b) => b.addEventListener('click', () => preview(S.videos.find((v) => v.id === b.dataset.preview))));
+}
+
+/** Plays a video right in the dashboard: the stored file before it is posted, the YouTube player after. */
+function preview(v) {
+  if (!v) return;
+  const file = v.file ? `https://github.com/Shahaashish252/echo-lab-studio/releases/download/videos/${encodeURIComponent(v.file)}` : '';
+  const posted = v.status === 'published';
+  const box = document.createElement('div');
+  box.style.cssText = 'position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.86);display:flex;align-items:center;justify-content:center;padding:16px';
+  box.innerHTML = `<div style="width:min(420px,100%);text-align:center">
+    ${posted ? `<iframe src="https://www.youtube.com/embed/${esc(v.id)}" style="width:100%;aspect-ratio:9/16;border:0;border-radius:14px" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
+      : `<video src="${file}" controls autoplay playsinline style="width:100%;max-height:80vh;border-radius:14px;background:#000"></video>`}
+    <div style="margin-top:10px;color:#ddd;font-size:14px">${esc(v.title.replace(/#shorts/i, ''))}</div>
+    <div class="faint" style="font-size:12px;margin-top:4px">${posted ? 'posted video' : 'not posted yet - preview of the finished file'} &middot; tap outside to close</div></div>`;
+  box.addEventListener('click', (e) => { if (e.target === box) box.remove(); });
+  const vid = box.querySelector('video');
+  if (vid) vid.addEventListener('error', () => { vid.outerHTML = `<div style="color:#ddd;padding:40px 10px">The file isn't stored any more (it is deleted once posted everywhere). <a href="https://youtu.be/${esc(v.id)}" target="_blank">Open on YouTube</a></div>`; });
+  document.body.appendChild(box);
 }
 
 function renderSide() {

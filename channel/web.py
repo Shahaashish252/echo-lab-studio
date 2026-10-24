@@ -68,7 +68,9 @@ def state() -> dict:
             continue
         videos.append({"id": u["id"], "title": m.get("title", ""), "status": u.get("status") or "uploaded", "postAt": u.get("postAt"),
                        "postedAt": u.get("postedAt"), "date": u.get("date"), "language": m.get("language", "en"),
-                       "published": u.get("published", {}), "job": u.get("job"), "topic": u.get("topic")})
+                       "published": u.get("published", {}), "job": u.get("job"), "topic": u.get("topic"),
+                       # the file in the "videos" release (kept there until it is posted everywhere): the dashboard's preview
+                       "file": str(m.get("file", "")).replace("\\", "/").rsplit("/", 1)[-1]})
     try:
         table = manager.video_table()
     except Exception:  # noqa: BLE001
