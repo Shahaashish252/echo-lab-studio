@@ -427,6 +427,14 @@ def publish_entry(entry: dict):
             pub["instagram"] = instagram.post(entry["meta"], video_url=public_video_url(entry)) or date.today().isoformat()
         except (Exception, SystemExit) as e:  # noqa: BLE001  one platform failing must not stop the others
             print(f"instagram: {e}")
+    # the same video on the Instagram Story too (owner's request 2026-10-25); never blocks the other platforms
+    if "instagram" in pub and "instagram_story" not in pub and instagram.TOKEN_FILE.exists():
+        try:
+            url = public_video_url(entry)
+            if url:
+                pub["instagram_story"] = instagram.post_story(url)
+        except (Exception, SystemExit) as e:  # noqa: BLE001
+            print(f"instagram story: {e}")
     if "facebook" not in pub and instagram.TOKEN_FILE.exists():
         try:
             import facebook

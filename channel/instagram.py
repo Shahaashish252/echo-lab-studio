@@ -173,6 +173,27 @@ def post_from_url(m: dict, video_url: str, cfg: dict) -> str:
     raise RuntimeError("Instagram could not process the video from its link")
 
 
+def post_story(video_url: str) -> str:
+    """Also puts the video on the Instagram Story (same public link), so followers who watch Stories see it too.
+    The API can't add stickers (no link sticker); returns the story's media id."""
+    cfg = load()
+    token, uid = cfg["token"], cfg["userId"]
+    GRAPH = GRAPH_FB if cfg.get("mode") == "facebook" else GRAPH_IG
+    cid = _check(requests.post(f"{GRAPH}/{uid}/media", data={"media_type": "STORIES", "video_url": video_url, "access_token": token}, timeout=60))["id"]
+    code, st = None, {}
+    for _ in range(60):
+        st = _check(requests.get(f"{GRAPH}/{cid}", params={"fields": "status_code,status", "access_token": token}, timeout=30))
+        code = st.get("status_code")
+        if code in ("FINISHED", "ERROR", "EXPIRED"):
+            break
+        time.sleep(10)
+    if code != "FINISHED":
+        raise RuntimeError(f"story not processed: {code} {st.get('status')}")
+    pub = _check(requests.post(f"{GRAPH}/{uid}/media_publish", data={"creation_id": cid, "access_token": token}, timeout=60))
+    print("instagram: story posted")
+    return pub["id"]
+
+
 def post(meta_path: str, video_url: str | None = None) -> str:
     cfg = load()
     token, uid = cfg["token"], cfg["userId"]
