@@ -1,25 +1,26 @@
 {
-  "updated": "2026-10-24T23:26",
+  "updated": "2026-10-25T13:27",
   "videos": 13,
-  "summary": "Instagram is carrying the channel: almost every Hindi video gets 100-1400 views there, while YouTube Shorts mostly gets under 30 views. The best video was the PIR motion sensor one, which got far more views, likes, shares and saves than anything else. Videos on 'how does this thing around me know?' get the most attention, while generic or sound-based titles (smoke alarm, ultrasonic, remote) get little engagement. Sample size is small and videos are only days old, so treat this as early signal.",
-  "winningPattern": "Everyday sensor that seems to 'magically' react to you (motion, street light, phone orientation), explained in Hindi. Hook is a surprising claim or a curiosity question in Hinglish ('X aapko dekhta nahi!' / 'Kaise pata chalta hai?'), with a 🤔 emoji and #shorts. Instagram Reels is the main traction platform; YouTube Shorts is weak so far, though the PIR video and the English Arduino video got the most YouTube views.",
+  "summary": "Instagram is carrying the channel: most Hindi videos get 100-1400 views there, while YouTube Shorts mostly get under 30 views. The best video, the PIR motion sensor one, got about 2,000 combined views and the most likes, shares and saves because its hook is a surprising claim about a sensor people see daily. Engagement (shares and saves) is very low overall, and the single English video did well on YouTube only, so the sample is too small to judge language.",
+  "winningPattern": "Everyday sensor people meet in real life (motion sensor, street light, phone orientation) + a hook that states a surprising or counterintuitive claim ('doesn't see you!') followed by a 'Kaise?' question, in Hinglish title with 🤔 and #shorts, posted mainly to Instagram Reels. Titles that name a familiar object plus a twist outperform generic 'X kaise kaam karta hai' or niche-component titles (ultrasonic, IR, smartwatch).",
   "doMore": [
-    "Pick relatable daily-life sensors people see every day (lifts, ATM, automatic lights, fan remote) and open with a twist claim like 'Yeh aapko dekhta nahi!'",
-    "Use a bold 'myth-bust' first line before the question, since the PIR title with that format beat the plain-question titles",
-    "Prioritise Instagram Reels for posting and testing; add a clear 'save this for your project' call to action to raise saves and shares",
-    "Make follow-up videos on the PIR winner (PIR + Arduino build, why it fails in heat) to reuse the proven topic",
-    "Test one or two YouTube titles in a different style (shorter, with the English keyword like 'PIR Sensor') to find out why YouTube is lagging"
+    "Open with a bold myth-busting line ('X aapko dekhta nahi!') in the first 2 seconds",
+    "Pick sensors from daily life everyone has seen: ATM, lift, AC, fridge, traffic signal",
+    "Prioritise Instagram Reels as the main platform and cross-post to YouTube with a more searchable title",
+    "End each video with a save/share prompt like 'Dost ko bhejo jo ye sochta hai'",
+    "Test one English or bilingual title on YouTube, since the English Arduino video got 160 views there versus about 10-25 for Hindi"
   ],
   "stopDoing": [
-    "Plain 'X kaise sense karta hai?' titles on niche items like smoke detectors, which get low shares and saves",
-    "Posting several near-duplicate topics in a row (two smoke alarm videos in 3 days) that split the audience"
+    "Near-duplicate topics like two smoke detector videos in 3 days",
+    "Component-focused titles with no everyday hook (IR, ultrasonic, smartwatch light)",
+    "Posting many videos in a week without varying the hook style"
   ],
   "nextTopics": [
     "Automatic lift door sensor",
-    "Clap switch / sound sensor light",
-    "Automatic hand sanitizer dispenser",
-    "Fingerprint scanner",
-    "Car reverse parking sensor"
+    "Fridge door light and alarm",
+    "ATM card reader / magnetic stripe",
+    "Automatic hand dryer or sanitizer dispenser",
+    "Phone proximity sensor during calls"
   ],
   "bestTimes": {
     "times": [

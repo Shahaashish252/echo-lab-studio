@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Automatic lift door sensor",
+      "hook": "Lift ka darwaza aapko rokta nahi, bas dekhta hai!"
+    },
+    {
+      "topic": "Fridge door light and alarm",
+      "hook": "Fridge ko pata hai aapne darwaza khula chhoda!"
+    },
+    {
+      "topic": "ATM card reader / magnetic stripe",
+      "hook": "ATM aapka card chhoota bhi nahi, phir bhi padh leta hai!"
+    },
+    {
+      "topic": "Automatic hand dryer or sanitizer dispenser",
+      "hook": "Sanitizer machine aapka haath dekh nahi sakti, phir bhi?"
+    },
+    {
+      "topic": "Phone proximity sensor during calls",
+      "hook": "Call pe kaan lagate hi screen band kyun hoti hai?"
+    },
+    {
       "topic": "Car reverse parking sensor",
       "hook": "Car ko peeche ki deewar kaise dikhti hai? 🤔"
     },

@@ -1,9 +1,18 @@
 {
-  "updated": "24 Oct 2026, 23:26",
+  "updated": "25 Oct 2026, 13:28",
   "youtube": {
     "subs": 3,
     "views": 1244,
     "videos": [
+      {
+        "title": "Robot Deewar Se Kaise Bachta Hai? 🤔 IR Sensor Explained #shorts",
+        "id": "aSecaiZshXI",
+        "status": "private",
+        "published": "2026-10-24",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Hand Dryer Bina Button Kaise Chalu Hota Hai? 🤔 #shorts",
         "id": "GwSp0dC__r4",
@@ -18,7 +27,7 @@
         "id": "9m6XMbAw_3U",
         "status": "private",
         "published": "2026-10-24",
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0
       },
@@ -27,7 +36,7 @@
         "id": "uaetzbQjMGA",
         "status": "private",
         "published": "2026-10-24",
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0
       },
@@ -36,7 +45,7 @@
         "id": "DfurMASCqo4",
         "status": "public",
         "published": "2026-10-24",
-        "views": 4,
+        "views": 13,
         "likes": 0,
         "comments": 0
       },
@@ -45,7 +54,7 @@
         "id": "TmtK-AOD-_k",
         "status": "public",
         "published": "2026-10-23",
-        "views": 8,
+        "views": 9,
         "likes": 1,
         "comments": 2
       },
@@ -54,7 +63,7 @@
         "id": "CCTv-pNY0Is",
         "status": "private",
         "published": "2026-10-23",
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0
       },
@@ -63,7 +72,7 @@
         "id": "D_vS9GmRqGk",
         "status": "private",
         "published": "2026-10-23",
-        "views": 0,
+        "views": 2,
         "likes": 0,
         "comments": 0
       },
@@ -72,7 +81,7 @@
         "id": "jD5lPQq_aQo",
         "status": "public",
         "published": "2026-10-23",
-        "views": 7,
+        "views": 8,
         "likes": 0,
         "comments": 0
       },
@@ -81,7 +90,7 @@
         "id": "wpe2f5b2ej0",
         "status": "public",
         "published": "2026-10-22",
-        "views": 23,
+        "views": 24,
         "likes": 0,
         "comments": 0
       },
@@ -117,7 +126,7 @@
         "id": "0ll4rIi2V7U",
         "status": "private",
         "published": "2026-10-21",
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0
       },
@@ -126,7 +135,7 @@
         "id": "ma7mTeADoOk",
         "status": "public",
         "published": "2026-10-20",
-        "views": 355,
+        "views": 356,
         "likes": 6,
         "comments": 0
       },
@@ -171,7 +180,7 @@
         "id": "fxIqZGwbWMo",
         "status": "public",
         "published": "2026-10-18",
-        "views": 77,
+        "views": 78,
         "likes": 2,
         "comments": 2
       },
@@ -180,7 +189,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 534,
+        "views": 537,
         "likes": 9,
         "comments": 2
       },
@@ -189,7 +198,7 @@
         "id": "OECteBF_a74",
         "status": "private",
         "published": "2026-10-11",
-        "views": 2,
+        "views": 3,
         "likes": 0,
         "comments": 0
       },
@@ -198,7 +207,7 @@
         "id": "G2ksz8lJrEk",
         "status": "private",
         "published": "2026-10-10",
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0
       },
@@ -207,7 +216,7 @@
         "id": "oXiHrWCsqN0",
         "status": "private",
         "published": "2026-10-08",
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0
       },
@@ -216,7 +225,7 @@
         "id": "9e0ItfEMinY",
         "status": "private",
         "published": "2026-10-08",
-        "views": 2,
+        "views": 3,
         "likes": 0,
         "comments": 0
       },
@@ -279,18 +288,12 @@
         "id": "SFQcu1H9THc",
         "status": "public",
         "published": "2026-10-08",
-        "views": 157,
+        "views": 160,
         "likes": 3,
         "comments": 8
       }
     ],
     "daily": [
-      {
-        "day": "2026-09-26",
-        "views": 0,
-        "minutes": 0,
-        "subs": 0
-      },
       {
         "day": "2026-09-27",
         "views": 0,
@@ -440,6 +443,12 @@
         "views": 163,
         "minutes": 21,
         "subs": 0
+      },
+      {
+        "day": "2026-10-22",
+        "views": 70,
+        "minutes": 12,
+        "subs": 0
       }
     ]
   },
@@ -453,8 +462,8 @@
         "published": "2026-10-24",
         "likes": 3,
         "comments": 0,
-        "reach": 255,
-        "views": 293,
+        "reach": 316,
+        "views": 355,
         "saved": 0,
         "shares": 0
       },
@@ -464,8 +473,8 @@
         "published": "2026-10-23",
         "likes": 2,
         "comments": 0,
-        "reach": 194,
-        "views": 213,
+        "reach": 204,
+        "views": 222,
         "saved": 0,
         "shares": 0
       },
