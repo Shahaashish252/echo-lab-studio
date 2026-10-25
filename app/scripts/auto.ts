@@ -13,7 +13,7 @@
 //    (as private: unaudited API projects can't upload public videos, so publish it after watching)
 // With --stock, the Pixabay key comes from PIXABAY_API_KEY or MoneyPrinterTurbo's config.toml.
 import { spawnSync } from 'node:child_process';
-import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync, statSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, relative, resolve } from 'node:path';
 import { PARTS } from '../src/scenes/auto/arduino';
@@ -810,16 +810,21 @@ PWR and DO LEDs, pins VCC, GND, DO (switches on a loud sound such as a clap), AO
 const SM = STUDIO_MODULES[STUDIO_MODULE] ?? STUDIO_MODULES.ir;
 /** every studio video ends on this line (enforced after Claude's reply too) */
 const FOLLOW = HINDI
-  ? { text: 'Aise aur videos ke liye follow karo', say: 'ऐसे और वीडियो के लिए फॉलो करो', head: '*FOLLOW* karo' }
-  : { text: 'Follow for more videos like this', say: 'Follow for more videos like this', head: '*FOLLOW* for more' };
+  ? { text: 'Aur dekhne ke liye follow karo', say: 'फॉलो करो!', head: '*FOLLOW* karo' }
+  : { text: 'Follow for more', say: 'Follow for more!', head: '*FOLLOW* for more' };
 
-const PROMPT_STUDIO = `Write a viral vertical explainer Short (50-60 seconds) about:
+const PROMPT_STUDIO = `Write a viral vertical explainer Short (25-35 seconds) about:
 "${topic}"
 
 The style is a premium, detailed 3D product explainer: the REAL module as a photoreal 3D model (real KiCad part models)
 on a dark stage, slow cinematic camera moves with a blurred background, close-ups of each part with a name label, an
 exploded view, a part splitting into its layers, glass "inside the material" diagrams, then the module wired to an
-Arduino. LENGTH: 55-60 seconds spoken, about 130-150 spoken words in total - every "say" is short (max 10 words).
+Arduino. LENGTH: 25-35 seconds spoken, about 65-85 spoken words in total - every "say" is short (max 9 words).
+RETENTION IS EVERYTHING (our data: viewers leave after ~15 s, so YouTube stops pushing): line 0 must SHOW the most
+surprising moment of the topic at once (a "scene" shot of the result: the robot stopping just before the wall, water
+starting by itself, the lamp switching itself on) with a 3-5 word curiosity question as its headline - no slow intro,
+no greeting, no "aaj hum". Every line must add something new. The last spoken line before the follow line LOOPS back
+to line 0 (it ends on the same question/moment, so the video replays naturally).
 Captions are our story style: 2-5 BIG headline words per shot (one *key* word glows orange) plus the subtitle.
 The narration is calm, clear, curious and DETAILED: real part names, what each part physically does, and the real
 numbers that make it concrete - one idea per line, no filler. Connect it to the everyday use in the topic.
@@ -834,7 +839,7 @@ ${SOCIAL_FIELDS}
   "module": "${STUDIO_MODULE}",
   "scenes": [
     { "type": "sim", "headline": "the hook, 3-7 words",
-      "lines": [ 13-15 objects {"text": "the subtitle, 4-8 words", "say": "what the voice says: the same words as text, max 10 words"} ] }
+      "lines": [ 8-10 objects {"text": "the subtitle, 3-7 words", "say": "what the voice says: the same words as text, max 9 words"} ] }
   ],
   "shots": [ one object per line, same order: {"line": 0-based index, "shot": "<type>", "text": "2-5 headline words with one *key* word", ...fields} ]
 }
@@ -860,10 +865,32 @@ SHOW WHAT IS SAID: every line's shot must show exactly what that line talks abou
 scene; the Arduino, its pins or wiring -> wiring / uno; the program -> code; a part -> macro with its label; how it
 works inside -> layers / inside / compare / beam. There is NO fixed order: build the story THIS topic needs (topics
 about a device spend more time in its scene; topics about Arduino projects spend more time on wiring, pins and code),
-so every video looks different. Line 0 = a curiosity hook (a scene, or assemble). Never the same shot type more
+so every video looks different. Line 0 = the hook scene (see RETENTION). Never the same shot type more
 than twice in a row. Then a question that invites comments, and the LAST line is exactly
 {"text": "${FOLLOW.text}", "say": "${FOLLOW.say}"} with shot hero and text "${FOLLOW.head}". Every claim accurate.
 Useful facts for the mechanism: ${SM.story}.`;
+
+/** the channel's recent titles: a new one must not look like them (same "Kaise...? 🤔" pattern sank reach) */
+const RECENT_TITLES = (() => {
+  try {
+    const dir = join(ROOT, 'channel', 'videos');
+    return readdirSync(dir)
+      .filter((f) => f.endsWith('.json'))
+      .map((f) => ({ f, t: statSync(join(dir, f)).mtimeMs }))
+      .sort((a, b) => b.t - a.t)
+      .slice(0, 15)
+      .map(({ f }) => JSON.parse(readFileSync(join(dir, f), 'utf8')).title as string)
+      .filter(Boolean);
+  } catch {
+    return [] as string[];
+  }
+})();
+const TITLE_NOTE = `
+
+TITLE: youtube.title must NOT follow the pattern of our recent titles (they nearly all read "<thing> Kaise ...? 🤔
+#shorts" and viewers scroll past the sameness). Use a different shape each time - a bold claim, a myth-bust, a
+number, a "nobody tells you" line, a challenge - max 55 characters + " #shorts", at most one emoji, and not 🤔.
+Our recent titles: ${JSON.stringify(RECENT_TITLES)}`;
 
 const STUDIO_NOTE = `
 
@@ -1231,7 +1258,7 @@ ${NOTES}
 ` : '';
 for (let attempt = 1; attempt <= 2 && !story; attempt++) {
   try {
-    const raw = parse(claude(PROMPT + RESEARCH_NOTE + (HINDI ? HINDI_NOTE + (STUDIO_MODE ? STUDIO_NOTE : '') : '')));
+    const raw = parse(claude(PROMPT + RESEARCH_NOTE + (HINDI ? HINDI_NOTE + (STUDIO_MODE ? STUDIO_NOTE : '') : '') + TITLE_NOTE));
     if (STUDIO_MODE) {
       // every studio video ends with the follow line, whatever the reply did
       const sim = ((raw as Raw).scenes ?? []).find((x: Raw) => x.type === 'sim');

@@ -21,6 +21,7 @@ Files: topics.json (queue), schedule.json (times), uploads.json (videos and thei
 manager.json (comment drafts, seen comments), analytics/history.json (daily totals), logs/.
 """
 import json
+import re
 import os
 import shutil
 import subprocess
@@ -121,8 +122,28 @@ def studio_module(topic: dict) -> str | None:
     return next((m for m, (pat, _) in STUDIO_MODULES.items() if re.search(pat, text)), None)
 
 
+def _words(text: str) -> set:
+    stop = {"the", "a", "an", "how", "and", "or", "of", "to", "in", "on", "with", "your", "you", "sensor", "works", "work", "kaise", "ka", "ki", "ke", "hai"}
+    return {w for w in re.findall(r"[a-z0-9]+", text.lower()) if w not in stop and len(w) > 2}
+
+
+def too_similar(topic: str, others: list) -> bool:
+    """A topic that mostly repeats one already made (or queued earlier) - viewers and YouTube see the same video again."""
+    a = _words(topic)
+    return any(a and len(a & _words(o)) / max(1, min(len(a), len(_words(o)))) >= 0.5 for o in others)
+
+
 def next_topic() -> dict:
     t = read(TOPICS, {"queue": [], "done": []})
+    # drop queued topics that repeat something already made or queued before them
+    seen, kept = list(t["done"]), []
+    for q in t["queue"]:
+        if not too_similar(q["topic"], seen):
+            kept.append(q)
+            seen.append(q["topic"])
+    if len(kept) != len(t["queue"]):
+        t["queue"] = kept
+        write(TOPICS, t)
     studio = schedule().get("format") == "studio"
     if studio:
         # studio videos need a 3D module: take the first queued topic that has one
@@ -149,6 +170,8 @@ def next_topic() -> dict:
             + ("Every topic MUST be explainable with one of these real hobby modules, as an everyday use of it: "
                + "; ".join(d for _, d in STUDIO_MODULES.values()) + ". Name the everyday use in the topic.\n" if studio else "") +
             f"Already done or queued (don't repeat): {json.dumps(t['done'] + [q['topic'] for q in t['queue']])}\n"
+            'Every topic must be clearly DIFFERENT from all of those (not the same device in other words). Prefer everyday '
+            '"why does this happen?" mysteries people search for (our best: PIR motion sensor 534 views, street light 355).\n'
             'Reply with ONLY a JSON array of {"topic": "short topic", "hook": "the first line on screen, max 12 words, '
             'a curiosity hook"}. Concrete, visual, popular search topics.'
         )
@@ -856,7 +879,7 @@ def video_table() -> list:
 
 
 def two_slots(ranked_hours: list) -> list:
-    """The best hour and the best one at least 5 hours from it, both while people are awake (09-22 local)."""
+    """The best hour and the best one at least 5 hours from it, both while people are awake (09-22 local); best first."""
     awake = [h for h in ranked_hours if 9 <= h <= 22]
     if not awake:
         return []
@@ -864,7 +887,7 @@ def two_slots(ranked_hours: list) -> list:
     second = next((h for h in awake[1:] if abs(h - first) >= 5), None)
     if second is None:
         second = first + 7 if first + 7 <= 22 else first - 7
-    return sorted([first, second])
+    return [first, second]
 
 
 def best_times(rows: list) -> dict:
@@ -898,7 +921,7 @@ def best_times(rows: list) -> dict:
         if pick:
             return {"times": [f"{h:02d}:00" for h in pick], "reason": f"from our own posts: these hours averaged the most views ({len(timed)} posts)"}
     if video_language() == "hi":
-        return {"times": [local_from_ist("12:30"), local_from_ist("19:30")],
+        return {"times": [local_from_ist("19:30"), local_from_ist("12:30")],
                 "reason": "Indian Shorts/Reels prime time (lunch 12:30 and evening 19:30 IST) until we have enough of our own data"}
     return {"times": [local_from_ist("07:30"), local_from_ist("19:30")],
             "reason": "US evening (07:30 IST) and India/Europe evening (19:30 IST) until we have enough of our own data"}
@@ -936,8 +959,10 @@ def cmd_analyze():
     bt = best_times(rows)
     insights["bestTimes"] = bt
     s = read(SCHEDULE, {})
-    if s.get("autoTimes", True) and bt["times"] != post_times():
-        s["postAt"] = bt["times"]
+    # schedule.json perDay: how many videos a day (owner chose 1 strong one a day, 2026-10-25); the best slots first
+    times = sorted(bt["times"][: int(s.get("perDay", 2))])
+    if s.get("autoTimes", True) and times != post_times():
+        s["postAt"] = times
         write(SCHEDULE, s)
         # move videos that are waiting to the new times
         ups = uploads()
@@ -947,7 +972,7 @@ def cmd_analyze():
         for u in waiting:
             u["postAt"] = next_slot([x.get("postAt") for x in ups if x.get("postAt") and x.get("status") == "approved"])
         write(UPLOADS, ups)
-    print("post times:", bt["times"], "-", bt["reason"])
+    print("post times:", times, "-", bt["reason"])
     write(INSIGHTS, insights)
     return insights
 

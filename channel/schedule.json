@@ -2,7 +2,6 @@
   "timezone": "Asia/Kolkata",
   "makeAt": "09:00",
   "postAt": [
-    "12:00",
     "21:00"
   ],
   "autopilot": true,
@@ -11,5 +10,6 @@
   "niche": "Echo Lab 3D explains how sensors, circuits, Arduino modules and everyday tech work, for students, makers and curious people",
   "note": "All times are India time (IST). The cloud jobs run with TZ=Asia/Kolkata.",
   "format": "studio",
-  "formatNote": "studio = photoreal 3D module explainer (studio.ts; owner approved 2026-10-24; modules ir/ldr/flame/sound, other topics fall back to story); story = animated story like the PIR short (story-lib.js); cinematic = photos/stock footage (owner found it bad); sim = old instrument panel"
+  "formatNote": "studio = photoreal 3D module explainer (studio.ts; owner approved 2026-10-24; modules ir/ldr/flame/sound, other topics fall back to story); story = animated story like the PIR short (story-lib.js); cinematic = photos/stock footage (owner found it bad); sim = old instrument panel",
+  "perDay": 1
 }
