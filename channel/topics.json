@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Lift knows which floor you pressed and when to stop",
+      "hook": "Lift Ko Nahi Pata Aap Kaunsi Floor Par Ho! Phir Bhi Rukti Hai"
+    },
+    {
+      "topic": "Automatic hand dryer / sanitizer dispenser sensor",
+      "hook": "Sanitizer Machine Aapka Haath Dekhti Nahi, Bas Ye Mehsoos Karti Hai"
+    },
+    {
+      "topic": "Car reverse parking sensor beep",
+      "hook": "Gaadi Ki Beep Deewar Ko Dekhti Nahi, Awaaz Sunti Hai!"
+    },
+    {
+      "topic": "Phone auto-brightness light sensor",
+      "hook": "Phone Ki Screen Aapki Aankhon Se Pehle Andhera Pehchanti Hai"
+    },
+    {
+      "topic": "Fingerprint scanner on phones and attendance machines",
+      "hook": "Fingerprint Scanner Aapki Ungli Ki Photo Nahi Leta!"
+    },
+    {
       "topic": "Automatic lift door sensor",
       "hook": "Lift ka darwaza aapko rokta nahi, bas dekhta hai!"
     },
