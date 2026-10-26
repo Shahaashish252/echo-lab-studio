@@ -29,5 +29,6 @@
   "social": {
     "instagram": "Robot deewar se kaise bachta hai? 🤖\nEk chhota sa IR sensor, aur andar ka poora science.\nChaliye dekhte hain andar kya hota hai 👇\n💡 IR LED hamesha infrared roshni bhejti hai\n👁️ Photodiode wapas aayi roshni pakadta hai\n🧠 LM393 threshold se compare karke OUT LOW karta hai\n⚠️ Yeh doori nahi naapta, sirf obstacle batata hai\n💾 Save karo, robot banate waqt kaam aayega\n📤 Us dost ko bhejo jo Arduino seekh raha hai\n💬 Aapka robot pehli baar kis cheez se takraya tha?\n#arduino #robotics #electronics #irsensor #obstaclerobot",
     "tiktok": "Robot deewar se kaise bachta hai? 🤖 IR sensor ka poora raaz 3D mein! Aapka robot kahan takraya tha? Comment karo 👇 #learnontiktok #arduino #robotics #irsensor #electronics"
-  }
+  },
+  "cover": "/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/robot-deewar-se-kaise-bachta.cover.jpg"
 }

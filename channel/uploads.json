@@ -343,9 +343,16 @@
     "id": "aSecaiZshXI",
     "meta": "channel/videos/auto-robot-deewar-se-kaise-bachta.json",
     "date": "2026-10-24",
-    "status": "approved",
+    "status": "published",
     "topic": "Arduino obstacle avoiding robot: IR sensor se robot deewar se kaise bachta hai",
     "job": "20261024-232710",
-    "postAt": "2026-10-26T12:00"
+    "postAt": "2026-10-26T12:00",
+    "published": {
+      "youtube": "2026-10-26",
+      "instagram": "https://www.instagram.com/reel/De8tV8cHeel/",
+      "instagram_story": "17951468655312727",
+      "facebook": "https://www.facebook.com/reel/1635895281406941/"
+    },
+    "postedAt": "2026-10-26T12:39"
   }
 ]
