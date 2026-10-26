@@ -1,14 +1,14 @@
 {
-  "updated": "25 Oct 2026, 19:19",
+  "updated": "26 Oct 2026, 13:49",
   "youtube": {
     "subs": 3,
-    "views": 1244,
+    "views": 1281,
     "videos": [
       {
         "title": "Robot Deewar Se Kaise Bachta Hai? 🤔 IR Sensor Explained #shorts",
         "id": "aSecaiZshXI",
-        "status": "private",
-        "published": "2026-10-24",
+        "status": "public",
+        "published": "2026-10-26",
         "views": 0,
         "likes": 0,
         "comments": 0
@@ -45,7 +45,7 @@
         "id": "DfurMASCqo4",
         "status": "public",
         "published": "2026-10-24",
-        "views": 13,
+        "views": 14,
         "likes": 0,
         "comments": 0
       },
@@ -54,7 +54,7 @@
         "id": "TmtK-AOD-_k",
         "status": "public",
         "published": "2026-10-23",
-        "views": 15,
+        "views": 16,
         "likes": 1,
         "comments": 2
       },
@@ -189,7 +189,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 537,
+        "views": 540,
         "likes": 9,
         "comments": 2
       },
@@ -294,12 +294,6 @@
       }
     ],
     "daily": [
-      {
-        "day": "2026-09-27",
-        "views": 0,
-        "minutes": 0,
-        "subs": 0
-      },
       {
         "day": "2026-09-28",
         "views": 0,
@@ -449,21 +443,38 @@
         "views": 70,
         "minutes": 12,
         "subs": 0
+      },
+      {
+        "day": "2026-10-23",
+        "views": 30,
+        "minutes": 6,
+        "subs": 0
       }
     ]
   },
   "instagram": {
     "username": "echo.lab3d",
-    "followers": 3,
+    "followers": 5,
     "posts": [
+      {
+        "title": "Robot deewar se kaise bachta hai? 🤖",
+        "url": "https://www.instagram.com/reel/De8tV8cHeel/",
+        "published": "2026-10-26",
+        "likes": 1,
+        "comments": 0,
+        "reach": 104,
+        "views": 159,
+        "saved": 0,
+        "shares": 0
+      },
       {
         "title": "Alarm dhuan sunta nahi, phir bhi bajta hai? 🔥",
         "url": "https://www.instagram.com/reel/De3fiedmGhP/",
         "published": "2026-10-24",
-        "likes": 3,
+        "likes": 4,
         "comments": 0,
-        "reach": 318,
-        "views": 356,
+        "reach": 320,
+        "views": 358,
         "saved": 0,
         "shares": 0
       },
@@ -471,10 +482,10 @@
         "title": "Ye tap haath dekh ke nahi chalta! 🚰",
         "url": "https://www.instagram.com/reel/De2V0kfDU4B/",
         "published": "2026-10-23",
-        "likes": 2,
+        "likes": 3,
         "comments": 0,
-        "reach": 204,
-        "views": 222,
+        "reach": 205,
+        "views": 223,
         "saved": 0,
         "shares": 0
       },
@@ -482,10 +493,10 @@
         "title": "Andhere mein bhi deewar kaise dikhti hai? 🔦",
         "url": "https://www.instagram.com/reel/De06vwYCcS-/",
         "published": "2026-10-23",
-        "likes": 2,
+        "likes": 3,
         "comments": 0,
-        "reach": 244,
-        "views": 266,
+        "reach": 245,
+        "views": 267,
         "saved": 1,
         "shares": 1
       },
@@ -493,10 +504,10 @@
         "title": "Smoke detector dhuan nahi dekhta! 🔥",
         "url": "https://www.instagram.com/reel/DezwzUmkb2W/",
         "published": "2026-10-22",
-        "likes": 1,
+        "likes": 2,
         "comments": 0,
-        "reach": 229,
-        "views": 266,
+        "reach": 230,
+        "views": 267,
         "saved": 1,
         "shares": 1
       },
@@ -504,10 +515,10 @@
         "title": "Watch ki hari light ka raaz 💚",
         "url": "https://www.instagram.com/reel/DezJc75EYuw/",
         "published": "2026-10-22",
-        "likes": 1,
+        "likes": 2,
         "comments": 0,
-        "reach": 106,
-        "views": 135,
+        "reach": 108,
+        "views": 136,
         "saved": 2,
         "shares": 0
       },
@@ -515,10 +526,10 @@
         "title": "Street light ko andhera kaise pata chalta hai? 💡",
         "url": "https://www.instagram.com/reel/DeyZePtCfOH/",
         "published": "2026-10-22",
-        "likes": 8,
+        "likes": 9,
         "comments": 0,
-        "reach": 676,
-        "views": 744,
+        "reach": 678,
+        "views": 747,
         "saved": 3,
         "shares": 2
       },
@@ -526,10 +537,10 @@
         "title": "Ultrasonic Sensor Awaaz Se Kaise Dekhta Hai? 🦇",
         "url": "https://www.instagram.com/reel/Dev0l7zCXEb/",
         "published": "2026-10-21",
-        "likes": 0,
+        "likes": 1,
         "comments": 0,
-        "reach": 131,
-        "views": 152,
+        "reach": 132,
+        "views": 153,
         "saved": 0,
         "shares": 0
       },
@@ -537,10 +548,10 @@
         "title": "Street light ghadi nahi dekhti, phir bhi jaanti hai 🌙",
         "url": "https://www.instagram.com/reel/Det_30gEQu5/",
         "published": "2026-10-20",
-        "likes": 4,
+        "likes": 5,
         "comments": 2,
-        "reach": 78,
-        "views": 85,
+        "reach": 79,
+        "views": 86,
         "saved": 0,
         "shares": 0
       },
@@ -548,10 +559,10 @@
         "title": "Aapka TV remote har baar roshni phenkta hai 👀",
         "url": "https://www.instagram.com/reel/DetPyyLDzhe/",
         "published": "2026-10-20",
-        "likes": 1,
+        "likes": 2,
         "comments": 2,
-        "reach": 100,
-        "views": 130,
+        "reach": 101,
+        "views": 131,
         "saved": 0,
         "shares": 0
       },
@@ -559,10 +570,10 @@
         "title": "Mall ka darwaza aapko dekhta hi nahi 😳",
         "url": "https://www.instagram.com/reel/Deq_wqIEadH/",
         "published": "2026-10-19",
-        "likes": 2,
+        "likes": 3,
         "comments": 4,
-        "reach": 36,
-        "views": 53,
+        "reach": 37,
+        "views": 54,
         "saved": 2,
         "shares": 1
       },
@@ -570,10 +581,10 @@
         "title": "Aapka phone ungli nahi, bijli mehsoos karta hai ⚡",
         "url": "https://www.instagram.com/reel/Deq_k2zAktg/",
         "published": "2026-10-19",
-        "likes": 2,
+        "likes": 3,
         "comments": 6,
-        "reach": 102,
-        "views": 119,
+        "reach": 103,
+        "views": 120,
         "saved": 1,
         "shares": 1
       },
@@ -581,9 +592,9 @@
         "title": "Aapka phone ghoomna kaise feel karta hai? 🤯",
         "url": "https://www.instagram.com/reel/Deq_YaZDN7K/",
         "published": "2026-10-19",
-        "likes": 2,
+        "likes": 3,
         "comments": 6,
-        "reach": 109,
+        "reach": 110,
         "views": 128,
         "saved": 2,
         "shares": 1
@@ -592,10 +603,10 @@
         "title": "Motion sensor aapko DEKHTA nahi 👀❌",
         "url": "https://www.instagram.com/reel/DelhN5_k5L0/",
         "published": "2026-10-17",
-        "likes": 11,
+        "likes": 12,
         "comments": 2,
-        "reach": 1202,
-        "views": 1412,
+        "reach": 1205,
+        "views": 1415,
         "saved": 3,
         "shares": 4
       },
@@ -603,10 +614,10 @@
         "title": "This tiny board can control almost anything 🤯",
         "url": "https://www.instagram.com/reel/DeNu-rugIfQ/",
         "published": "2026-10-08",
-        "likes": 2,
+        "likes": 3,
         "comments": 6,
-        "reach": 104,
-        "views": 124,
+        "reach": 105,
+        "views": 125,
         "saved": 0,
         "shares": 0
       }

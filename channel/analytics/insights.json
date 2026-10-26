@@ -1,32 +1,32 @@
 {
-  "updated": "2026-10-25T19:18",
-  "videos": 13,
-  "summary": "Instagram is carrying the channel: most Hindi videos get 100-1400 views there, while YouTube Shorts barely gets any (mostly under 30 views). The best video by far is the PIR motion sensor one, which opened with a surprising claim and a question about a device people see every day. Smoke alarm, street light and IR sensor videos did okay on Instagram but get few likes, shares or saves, so viewers watch but don't engage much. The English Arduino video is the only one getting real YouTube views (160), but it has no Instagram numbers, so it's too early to say English is better.",
-  "winningPattern": "Everyday 'how does it know?' sensor subjects (PIR, street light, auto door, tap) with a shock-style Hindi hook that says the device does NOT do the obvious thing (e.g. 'Motion Sensor Aapko Dekhta Nahi!'), followed by a short curious question title with the 🤔 emoji. It works best on Instagram Reels, where reach is 5-10x higher than YouTube.",
+  "updated": "2026-10-26T13:49",
+  "videos": 14,
+  "summary": "Almost all views come from Instagram, where the Hindi videos get a few hundred views each, while YouTube Shorts barely reaches anyone (mostly under 30 views). The best video, the PIR motion sensor one, did much better than the rest because it names a familiar device and opens with a surprising claim. Many other videos get views but almost no shares or saves, and the newest ones are still very small, so the data is early and not conclusive.",
+  "winningPattern": "Everyday device you meet in real life (motion sensor, street light) + a surprising 'it can't actually do X, so how?' hook in Hinglish + a question-style title ending with 🤔 #shorts, posted mainly on Instagram Reels. The top video (PIR) opens with a shock claim ('Motion Sensor Aapko Dekhta Nahi!'). Videos about a familiar everyday object that people can relate to, like the street light, also earned shares and saves, while generic technical titles ('Smoke Detector Fire Kaise Sense Karta Hai?') and robot/IR-sensor topics got little.",
   "doMore": [
-    "Open every title and first line with a surprising 'it does NOT do X' claim, like the PIR video",
-    "Pick sensors people meet daily (lifts, ATM, AC, fan, car parking beep) and ask how it knows",
-    "Post Reels on Instagram first and treat it as the main platform for now",
-    "End each video with a clear ask to share or save (e.g. 'Dost ko bhejo jo sochta hai ye magic hai')",
-    "Test 2-3 English or Hinglish videos on both platforms to see if YouTube grows with them"
+    "Open with a bold, slightly shocking claim that contradicts what people assume, then answer it (like 'Dekhta Nahi!').",
+    "Pick sensors people see daily (lights, doors, taps, phones) and name that object in the title.",
+    "Post Instagram Reels first, since that is where nearly all views, shares and saves come from.",
+    "End each video with a clear reason to save or share, like 'Save karo, exam mein kaam aayega' or 'Dost ko bhejo jo ye nahi jaanta'.",
+    "Post a follow-up to the PIR video, since it is the proven winner, and test the same hook style on 2-3 more topics before changing anything."
   ],
   "stopDoing": [
-    "Making near-duplicate topics (two smoke alarm videos in 3 days) that split the audience",
-    "Using generic titles without a shock claim, like 'Touchscreen Kaise Kaam Karta Hai?' style plain questions",
-    "Judging YouTube performance from Hindi uploads alone without testing different hooks or language"
+    "Stop making near-duplicate topics (two smoke detector videos, two IR sensor videos) that split the audience.",
+    "Stop expecting YouTube Shorts to grow with the same upload; fix the hook and title for it separately or deprioritize it.",
+    "Stop using plain textbook titles without a surprise or a question that creates curiosity."
   ],
   "nextTopics": [
-    "Lift knows which floor you pressed and when to stop",
     "Automatic hand dryer / sanitizer dispenser sensor",
-    "Car reverse parking sensor beep",
-    "Phone auto-brightness light sensor",
-    "Fingerprint scanner on phones and attendance machines"
+    "Lift (elevator) door safety sensor",
+    "Fingerprint scanner",
+    "Phone proximity sensor during calls",
+    "Car reverse parking sensor beep"
   ],
   "bestTimes": {
     "times": [
       "12:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (12 posts)"
+    "reason": "from our own posts: these hours averaged the most views (13 posts)"
   }
 }

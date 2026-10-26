@@ -1,6 +1,14 @@
 {
   "queue": [
     {
+      "topic": "Lift (elevator) door safety sensor",
+      "hook": "Lift Ka Darwaza Aapko Kaise Pehchanta Hai Bina Choone Ke?"
+    },
+    {
+      "topic": "Fingerprint scanner",
+      "hook": "Fingerprint Scanner Aapki Ungli Ki Photo Nahi Leta! Phir Kya?"
+    },
+    {
       "topic": "Lift knows which floor you pressed and when to stop",
       "hook": "Lift Ko Nahi Pata Aap Kaunsi Floor Par Ho! Phir Bhi Rukti Hai"
     },
