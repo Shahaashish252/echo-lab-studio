@@ -1,26 +1,25 @@
 {
-  "updated": "2026-10-26T13:49",
+  "updated": "2026-10-26T21:45",
   "videos": 14,
-  "summary": "Almost all views come from Instagram, where the Hindi videos get a few hundred views each, while YouTube Shorts barely reaches anyone (mostly under 30 views). The best video, the PIR motion sensor one, did much better than the rest because it names a familiar device and opens with a surprising claim. Many other videos get views but almost no shares or saves, and the newest ones are still very small, so the data is early and not conclusive.",
-  "winningPattern": "Everyday device you meet in real life (motion sensor, street light) + a surprising 'it can't actually do X, so how?' hook in Hinglish + a question-style title ending with 🤔 #shorts, posted mainly on Instagram Reels. The top video (PIR) opens with a shock claim ('Motion Sensor Aapko Dekhta Nahi!'). Videos about a familiar everyday object that people can relate to, like the street light, also earned shares and saves, while generic technical titles ('Smoke Detector Fire Kaise Sense Karta Hai?') and robot/IR-sensor topics got little.",
+  "summary": "Instagram is carrying the channel: almost every Hindi video gets hundreds of views there, while YouTube Shorts barely moves (most under 30 views). The best videos are Hindi explainers about a sensor that seems to 'see' or 'sense' something magically (PIR motion sensor, robot avoiding walls), and they earn the most shares and saves. Weak ones are generic or feature-style titles (smoke detector, ultrasonic, TV remote, touchscreen) that get views but almost no shares or saves.",
+  "winningPattern": "Hindi (Hinglish) Instagram Reels about a familiar everyday or robot behavior framed as a mystery: 'X doesn't do Y, so how does it Z?' The title opens with a surprising claim or 'kaise' question, ends with 🤔, and names one sensor (PIR, IR). Robot/security/motion subjects beat abstract phone or display topics. Shares come from relatable 'robot avoids wall' style stories.",
   "doMore": [
-    "Open with a bold, slightly shocking claim that contradicts what people assume, then answer it (like 'Dekhta Nahi!').",
-    "Pick sensors people see daily (lights, doors, taps, phones) and name that object in the title.",
-    "Post Instagram Reels first, since that is where nearly all views, shares and saves come from.",
-    "End each video with a clear reason to save or share, like 'Save karo, exam mein kaam aayega' or 'Dost ko bhejo jo ye nahi jaanta'.",
-    "Post a follow-up to the PIR video, since it is the proven winner, and test the same hook style on 2-3 more topics before changing anything."
+    "Lead with a contradiction hook ('Sensor aapko dekhta nahi!') and answer it within 3 seconds of the video",
+    "Pick subjects that feel like a robot or security behavior (obstacle avoidance, motion detection, line following)",
+    "Post Hindi Reels to Instagram first, since it gives about 10-100x more views than YouTube",
+    "End with a share-worthy line or a prompt like 'Doston ko bhejo jo sochte hain...' to lift shares and saves",
+    "Make a short series on one sensor family (PIR, IR) with the same title format, since those two topped the list"
   ],
   "stopDoing": [
-    "Stop making near-duplicate topics (two smoke detector videos, two IR sensor videos) that split the audience.",
-    "Stop expecting YouTube Shorts to grow with the same upload; fix the hook and title for it separately or deprioritize it.",
-    "Stop using plain textbook titles without a surprise or a question that creates curiosity."
+    "Near-duplicate topics like two smoke detector videos and two IR videos within days; combine or space them out",
+    "Cross-posting Hindi titles to YouTube Shorts expecting the same result; test an English title and hook there instead, since the English Arduino video got 160 views on YouTube"
   ],
   "nextTopics": [
-    "Automatic hand dryer / sanitizer dispenser sensor",
-    "Lift (elevator) door safety sensor",
-    "Fingerprint scanner",
-    "Phone proximity sensor during calls",
-    "Car reverse parking sensor beep"
+    "Line follower robot and IR sensors",
+    "Burglar alarm with PIR and buzzer",
+    "Automatic night lamp with LDR",
+    "Parking sensor in cars",
+    "Clap switch circuit"
   ],
   "bestTimes": {
     "times": [

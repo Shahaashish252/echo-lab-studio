@@ -1,6 +1,22 @@
 {
   "queue": [
     {
+      "topic": "Line follower robot and IR sensors",
+      "hook": "Robot kaali line ko kaise follow karta hai? Aankh nahi, phir bhi!"
+    },
+    {
+      "topic": "Burglar alarm with PIR and buzzer",
+      "hook": "Chor ko alarm kaise pata chalta hai? Koi dekh nahi raha!"
+    },
+    {
+      "topic": "Parking sensor in cars",
+      "hook": "Car peeche ki deewar ko bina dekhe kaise pehchanti hai?"
+    },
+    {
+      "topic": "Clap switch circuit",
+      "hook": "Taali bajao, light on! Bulb ko awaaz kaise sunayi deti hai?"
+    },
+    {
       "topic": "Lift (elevator) door safety sensor",
       "hook": "Lift Ka Darwaza Aapko Kaise Pehchanta Hai Bina Choone Ke?"
     },
