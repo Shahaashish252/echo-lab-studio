@@ -37,3 +37,20 @@
   studio plan: 10 shots of the sound module
 
 == voice (Microsoft Edge: Madhur)
+Downloading onnxruntime (22.7MiB)
+ Downloaded onnxruntime
+Installed 27 packages in 29ms
+[0;93m2026-10-27 14:04:28.926679041 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        3.73s  ताली बजाओ, लाइट जलाओ! ये जादू नहीं है।
+s1-2        3.11s  ये साउंड सेंसर मॉड्यूल है, बस एक छोटा कान।
+s1-3        3.70s  माइक के अंदर पतला डायाफ्राम और पीछे बैकप्लेट होती है।
+s1-4        4.51s  ताली से डायाफ्राम हिलता है, कैपेसिटेंस बदलता है, वोल्टेज बनता है।
+s1-5        3.71s  एलएम तीन-नौ-तीन कंपेरेटर सिग्नल को थ्रेशोल्ड से मिलाता है।
+s1-6        3.73s  नीला पॉट थ्रेशोल्ड सेट करता है, यानी संवेदनशीलता।
+s1-7        2.60s  डीओ तार आर्डुइनो के पिन दो पर जाता है।
+s1-8        3.42s  ये ताली नहीं पहचानता, बस तेज आवाज़ पकड़ता है।
+s1-9        2.47s  कमेंट में बताओ, ताली से लाइट कैसे जली?
+s1-10       0.73s  फॉलो करो!
+wrote 10 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit
