@@ -1,31 +1,32 @@
 {
-  "updated": "2026-10-26T21:45",
-  "videos": 14,
-  "summary": "Instagram is carrying the channel: almost every Hindi video gets hundreds of views there, while YouTube Shorts barely moves (most under 30 views). The best videos are Hindi explainers about a sensor that seems to 'see' or 'sense' something magically (PIR motion sensor, robot avoiding walls), and they earn the most shares and saves. Weak ones are generic or feature-style titles (smoke detector, ultrasonic, TV remote, touchscreen) that get views but almost no shares or saves.",
-  "winningPattern": "Hindi (Hinglish) Instagram Reels about a familiar everyday or robot behavior framed as a mystery: 'X doesn't do Y, so how does it Z?' The title opens with a surprising claim or 'kaise' question, ends with 🤔, and names one sensor (PIR, IR). Robot/security/motion subjects beat abstract phone or display topics. Shares come from relatable 'robot avoids wall' style stories.",
+  "updated": "2026-10-27T14:02",
+  "videos": 15,
+  "summary": "Instagram is where almost all the audience is: Hindi videos get hundreds to over 1,000 views there, while YouTube gives almost nothing (mostly under 30 views). The best videos explain a hidden sensor behind something people see daily or a robot behaving cleverly, and they get shares and saves. The channel is new, numbers are small, and the last video (Lift door) is too fresh to judge.",
+  "winningPattern": "Hindi Instagram Reels about a sensor in a relatable everyday or robot situation. The title is a curiosity question in Hinglish ('X Kaise Kaam Karta Hai? 🤔') with a surprising twist, like 'Motion Sensor Aapko Dekhta Nahi!' or 'Robot Deewar Se Kaise Bachta Hai?'. Short, single-sensor topics with a clear visual payoff get the most shares and saves.",
   "doMore": [
-    "Lead with a contradiction hook ('Sensor aapko dekhta nahi!') and answer it within 3 seconds of the video",
-    "Pick subjects that feel like a robot or security behavior (obstacle avoidance, motion detection, line following)",
-    "Post Hindi Reels to Instagram first, since it gives about 10-100x more views than YouTube",
-    "End with a share-worthy line or a prompt like 'Doston ko bhejo jo sochte hain...' to lift shares and saves",
-    "Make a short series on one sensor family (PIR, IR) with the same title format, since those two topped the list"
+    "Make Instagram the main platform and post the Reel there first",
+    "Open with a bold surprising claim, then the question (e.g. 'Sensor Dekhta Nahi!')",
+    "Pick one sensor tied to a robot or daily scene people recognise (robot, street light, tap, door)",
+    "Make shareable, save-worthy videos: a clear one-line takeaway or a simple circuit at the end",
+    "Reuse the top topics from new angles, such as PIR and IR sensors in new situations, and check results after 48 hours before judging"
   ],
   "stopDoing": [
-    "Near-duplicate topics like two smoke detector videos and two IR videos within days; combine or space them out",
-    "Cross-posting Hindi titles to YouTube Shorts expecting the same result; test an English title and hook there instead, since the English Arduino video got 160 views on YouTube"
+    "Near-duplicate topics (two smoke detector videos and two IR sensor videos split the views)",
+    "Plain 'How X works' titles or vague object-only hooks that lack a surprising claim",
+    "Expecting YouTube Shorts to grow with the same Hinglish formula without testing a YouTube-specific change"
   ],
   "nextTopics": [
     "Line follower robot and IR sensors",
-    "Burglar alarm with PIR and buzzer",
-    "Automatic night lamp with LDR",
-    "Parking sensor in cars",
-    "Clap switch circuit"
+    "Automatic dustbin lid opening",
+    "Clap switch using a sound sensor",
+    "Fingerprint scanner",
+    "Parking sensor beeping in cars"
   ],
   "bestTimes": {
     "times": [
       "12:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (13 posts)"
+    "reason": "from our own posts: these hours averaged the most views (14 posts)"
   }
 }

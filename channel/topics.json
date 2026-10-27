@@ -1,112 +1,32 @@
 {
   "queue": [
     {
+      "topic": "Parking sensor beeping in cars",
+      "hook": "Car Ko Peeche Ki Deewar Ka Kaise Pata Chalta Hai?"
+    },
+    {
       "topic": "Line follower robot and IR sensors",
       "hook": "Robot kaali line ko kaise follow karta hai? Aankh nahi, phir bhi!"
-    },
-    {
-      "topic": "Burglar alarm with PIR and buzzer",
-      "hook": "Chor ko alarm kaise pata chalta hai? Koi dekh nahi raha!"
-    },
-    {
-      "topic": "Parking sensor in cars",
-      "hook": "Car peeche ki deewar ko bina dekhe kaise pehchanti hai?"
-    },
-    {
-      "topic": "Clap switch circuit",
-      "hook": "Taali bajao, light on! Bulb ko awaaz kaise sunayi deti hai?"
-    },
-    {
-      "topic": "Lift (elevator) door safety sensor",
-      "hook": "Lift Ka Darwaza Aapko Kaise Pehchanta Hai Bina Choone Ke?"
-    },
-    {
-      "topic": "Fingerprint scanner",
-      "hook": "Fingerprint Scanner Aapki Ungli Ki Photo Nahi Leta! Phir Kya?"
-    },
-    {
-      "topic": "Lift knows which floor you pressed and when to stop",
-      "hook": "Lift Ko Nahi Pata Aap Kaunsi Floor Par Ho! Phir Bhi Rukti Hai"
-    },
-    {
-      "topic": "Automatic hand dryer / sanitizer dispenser sensor",
-      "hook": "Sanitizer Machine Aapka Haath Dekhti Nahi, Bas Ye Mehsoos Karti Hai"
     },
     {
       "topic": "Car reverse parking sensor beep",
       "hook": "Gaadi Ki Beep Deewar Ko Dekhti Nahi, Awaaz Sunti Hai!"
     },
     {
-      "topic": "Phone auto-brightness light sensor",
-      "hook": "Phone Ki Screen Aapki Aankhon Se Pehle Andhera Pehchanti Hai"
-    },
-    {
-      "topic": "Fingerprint scanner on phones and attendance machines",
-      "hook": "Fingerprint Scanner Aapki Ungli Ki Photo Nahi Leta!"
-    },
-    {
-      "topic": "Automatic lift door sensor",
-      "hook": "Lift ka darwaza aapko rokta nahi, bas dekhta hai!"
-    },
-    {
-      "topic": "Fridge door light and alarm",
-      "hook": "Fridge ko pata hai aapne darwaza khula chhoda!"
-    },
-    {
       "topic": "ATM card reader / magnetic stripe",
       "hook": "ATM aapka card chhoota bhi nahi, phir bhi padh leta hai!"
-    },
-    {
-      "topic": "Automatic hand dryer or sanitizer dispenser",
-      "hook": "Sanitizer machine aapka haath dekh nahi sakti, phir bhi?"
     },
     {
       "topic": "Phone proximity sensor during calls",
       "hook": "Call pe kaan lagate hi screen band kyun hoti hai?"
     },
     {
-      "topic": "Car reverse parking sensor",
-      "hook": "Car ko peeche ki deewar kaise dikhti hai? 🤔"
-    },
-    {
       "topic": "Escalator that starts when you step near",
       "hook": "Escalator Ko Pata Hai Aap Aa Rahe Ho!"
     },
     {
-      "topic": "Room light that turns on with a clap or motion",
-      "hook": "Taali Bajao, Light Jale: Yeh Jaadu Nahi Hai!"
-    },
-    {
-      "topic": "Fridge door light turning off when closed",
-      "hook": "Fridge Band Hote Hi Light Kaise Bujh Jaati Hai?"
-    },
-    {
-      "topic": "Lift sensor: how the lift door stops when you put a hand",
-      "hook": "Lift Ka Darwaza Haath Dekhkar Nahi Rukta! Phir Kaise?"
-    },
-    {
-      "topic": "Phone proximity sensor turning screen off during calls",
-      "hook": "Call Pe Screen Kaise Bujh Jati Hai? Phone Aapka Gaal Mehsoos Karta Hai!"
-    },
-    {
       "topic": "Fan regulator / dimmer working",
       "hook": "Fan Ki Speed Bijli Bachakar Nahi, Kaat Kar Kam Hoti Hai!"
-    },
-    {
-      "topic": "Fridge door light and magnetic reed switch",
-      "hook": "Fridge ki light band kaise hoti hai jab darwaza band ho?"
-    },
-    {
-      "topic": "Clap switch / sound sensor light",
-      "hook": "Taali bajate hi light kaise jal jaati hai? 👏"
-    },
-    {
-      "topic": "Burglar alarm door sensor using magnet",
-      "hook": "Ek chhota magnet chor ko pakad leta hai! Kaise?"
-    },
-    {
-      "topic": "Automatic night lamp with LDR",
-      "hook": "Ye lamp andhera hote hi khud kyun jal jaata hai?"
     },
     {
       "topic": "How a metal detector finds metal",
@@ -115,10 +35,6 @@
     {
       "topic": "How a gas leak (MQ) sensor works",
       "hook": "Gas Leak Ki Smell Sensor Ko Kaise Aati Hai?"
-    },
-    {
-      "topic": "TV remote IR signal",
-      "hook": "Remote ki roshni aapki aankhein nahi dekh sakti, camera dekh sakta hai!"
     },
     {
       "topic": "LiDAR",
@@ -137,20 +53,12 @@
       "hook": "This sensor knows when your plant is thirsty."
     },
     {
-      "topic": "Stepper motor",
-      "hook": "How 3D printers move in perfect tiny steps."
-    },
-    {
       "topic": "Relay",
       "hook": "How a tiny 5 V signal switches a 230 V lamp."
     },
     {
       "topic": "Potentiometer",
       "hook": "The knob that turns position into voltage."
-    },
-    {
-      "topic": "MEMS microphone",
-      "hook": "How your phone turns your voice into numbers."
     },
     {
       "topic": "Speaker",
@@ -211,6 +119,7 @@
     "ATM/lift door safety sensor",
     "Lift knows which floor you pressed",
     "Automatic hand dryer sensor",
-    "Arduino obstacle avoiding robot: IR sensor se robot deewar se kaise bachta hai"
+    "Arduino obstacle avoiding robot: IR sensor se robot deewar se kaise bachta hai",
+    "Clap switch using a sound sensor"
   ]
 }

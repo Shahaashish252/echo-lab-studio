@@ -1,9 +1,18 @@
 {
-  "updated": "26 Oct 2026, 21:45",
+  "updated": "27 Oct 2026, 14:41",
   "youtube": {
     "subs": 3,
-    "views": 1289,
+    "views": 1295,
     "videos": [
+      {
+        "title": "Lift Ka Darwaza Aapko Kaise Rokta Hai? 🤔 #shorts",
+        "id": "CCTv-pNY0Is",
+        "status": "public",
+        "published": "2026-10-27",
+        "views": 1,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Robot Deewar Se Kaise Bachta Hai? 🤔 IR Sensor Explained #shorts",
         "id": "aSecaiZshXI",
@@ -45,7 +54,7 @@
         "id": "DfurMASCqo4",
         "status": "public",
         "published": "2026-10-24",
-        "views": 15,
+        "views": 19,
         "likes": 0,
         "comments": 0
       },
@@ -57,15 +66,6 @@
         "views": 16,
         "likes": 1,
         "comments": 2
-      },
-      {
-        "title": "Lift Ka Darwaza Aapko Kaise Rokta Hai? 🤔 #shorts",
-        "id": "CCTv-pNY0Is",
-        "status": "private",
-        "published": "2026-10-23",
-        "views": 1,
-        "likes": 0,
-        "comments": 0
       },
       {
         "title": "Automatic Tap Haath Kaise Pehchanta Hai? 🤔 #shorts",
@@ -153,7 +153,7 @@
         "id": "UK5WSZEUI9I",
         "status": "public",
         "published": "2026-10-20",
-        "views": 23,
+        "views": 24,
         "likes": 0,
         "comments": 0
       },
@@ -189,7 +189,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 540,
+        "views": 542,
         "likes": 9,
         "comments": 2
       },
@@ -294,12 +294,6 @@
       }
     ],
     "daily": [
-      {
-        "day": "2026-09-28",
-        "views": 0,
-        "minutes": 0,
-        "subs": 0
-      },
       {
         "day": "2026-09-29",
         "views": 0,
@@ -449,6 +443,12 @@
         "views": 30,
         "minutes": 6,
         "subs": 0
+      },
+      {
+        "day": "2026-10-24",
+        "views": 51,
+        "minutes": 8,
+        "subs": 0
       }
     ]
   },
@@ -457,24 +457,35 @@
     "followers": 9,
     "posts": [
       {
+        "title": "Lift ka darwaza aapko kaise rokta hai? 🚪",
+        "url": "https://www.instagram.com/reel/De_aGm9ANDp/",
+        "published": "2026-10-27",
+        "likes": 0,
+        "comments": 0,
+        "reach": 43,
+        "views": 63,
+        "saved": 0,
+        "shares": 0
+      },
+      {
         "title": "Robot deewar se kaise bachta hai? 🤖",
         "url": "https://www.instagram.com/reel/De8tV8cHeel/",
         "published": "2026-10-26",
-        "likes": 14,
+        "likes": 15,
         "comments": 2,
-        "reach": 1216,
-        "views": 1337,
-        "saved": 3,
+        "reach": 1227,
+        "views": 1353,
+        "saved": 4,
         "shares": 10
       },
       {
         "title": "Alarm dhuan sunta nahi, phir bhi bajta hai? 🔥",
         "url": "https://www.instagram.com/reel/De3fiedmGhP/",
         "published": "2026-10-24",
-        "likes": 4,
+        "likes": 5,
         "comments": 0,
-        "reach": 322,
-        "views": 359,
+        "reach": 323,
+        "views": 361,
         "saved": 0,
         "shares": 0
       },
@@ -485,7 +496,7 @@
         "likes": 3,
         "comments": 0,
         "reach": 206,
-        "views": 224,
+        "views": 227,
         "saved": 0,
         "shares": 0
       },
@@ -493,10 +504,10 @@
         "title": "Andhere mein bhi deewar kaise dikhti hai? 🔦",
         "url": "https://www.instagram.com/reel/De06vwYCcS-/",
         "published": "2026-10-23",
-        "likes": 3,
+        "likes": 4,
         "comments": 0,
         "reach": 246,
-        "views": 268,
+        "views": 269,
         "saved": 1,
         "shares": 1
       },
@@ -507,7 +518,7 @@
         "likes": 2,
         "comments": 0,
         "reach": 231,
-        "views": 269,
+        "views": 270,
         "saved": 1,
         "shares": 1
       },
@@ -518,7 +529,7 @@
         "likes": 2,
         "comments": 0,
         "reach": 109,
-        "views": 137,
+        "views": 138,
         "saved": 2,
         "shares": 0
       },
@@ -528,8 +539,8 @@
         "published": "2026-10-22",
         "likes": 9,
         "comments": 0,
-        "reach": 678,
-        "views": 748,
+        "reach": 679,
+        "views": 751,
         "saved": 3,
         "shares": 2
       },
@@ -550,7 +561,7 @@
         "published": "2026-10-20",
         "likes": 5,
         "comments": 2,
-        "reach": 80,
+        "reach": 81,
         "views": 87,
         "saved": 0,
         "shares": 0
@@ -572,8 +583,8 @@
         "published": "2026-10-19",
         "likes": 3,
         "comments": 4,
-        "reach": 38,
-        "views": 56,
+        "reach": 39,
+        "views": 58,
         "saved": 2,
         "shares": 1
       },
@@ -594,8 +605,8 @@
         "published": "2026-10-19",
         "likes": 3,
         "comments": 6,
-        "reach": 111,
-        "views": 130,
+        "reach": 112,
+        "views": 131,
         "saved": 2,
         "shares": 1
       },
