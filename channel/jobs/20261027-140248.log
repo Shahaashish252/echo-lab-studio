@@ -1,2 +1,33 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. A clap makes a sudden pressure wave that hits the electret microphone's diaphragm.
+  | 2. The mic turns it into a tiny voltage swing. An amplifier stage (LM358, or a transistor) boosts it.
+  | 3. An LM393 comparator checks the signal against a threshold you set with the onboard pot.
+  | 4. If the sound is louder than the threshold, the digital output (DO) goes HIGH. The analog output (AO) gives a voltage that follows loudness.
+  | 5. An Arduino or 555/flip-flop circuit sees the pulse. It usually waits for 2 claps within about 1 second.
+  | 6. It toggles a relay module, and the relay switches the lamp.
+  | 
+  | **REAL PARTS**
+  | - KY-038 and LM393 sound sensor modules
+  | - Electret mic capsule
+  | - LM358 op-amp
+  | - 5V relay module (opto-isolated)
+  | - Arduino Uno or Nano
+  | - CD4017 or 555 for non-Arduino builds
+  | 
+  | **MYTH**
+  | - Belief: it "hears" claps and recognises them.
+  | - Truth: it only detects loudness. Any loud bang, a door slam or a shout can trigger it. The "clap" logic is just counting peaks and timing them.
+  | 
+  | **SURPRISING FACT**
+  | - Typical designs count 2 peaks within about 1 second. The comparator module only gives a HIGH/LOW result against your threshold, so the pot setting decides how sensitive it is.
+  | - I found no sourced figure for the response time. Don't state one in the Short.
+  | 
+  | **TIP**
+  | - Tune the pot until the DO LED only lights on a real clap. Add a short debounce of about 100–200 ms so one clap's echo isn't counted twice.
+  | - Use an isolated relay board for mains lamps. Mains voltage is dangerous.
+  | 
+  | Sources: [Zbotic clap light](https://zbotic.in/clap-light-control-using-arduino-and-sound-sensor/), [code-bude](https://en.code-bude.net/2014/12/08/how-to-build-a-clap-switch-using-arduino/)
+
+== storyboard: "Clap switch using a sound sensor (open with this hook: "Taali Bajao, Light Jalao! Ye Jaadu Nahi Hai 👏")" (Claude Code)
