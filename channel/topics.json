@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Line follower robot and IR sensor",
+      "hook": "Robot Kaali Line Par Kaise Chalta Hai? Dimaag Nahi Hai!"
+    },
+    {
+      "topic": "Ultrasonic sensor in a parking reverse beep",
+      "hook": "Gaadi Ka Beep Deewar Ko Dekhe Bina Kaise Bajta Hai?"
+    },
+    {
+      "topic": "Automatic hand sanitizer dispenser",
+      "hook": "Sanitizer Machine Aapka Haath Dekhti Nahi, Phir Bhi Kaise Jaanti Hai?"
+    },
+    {
+      "topic": "PIR sensor part 2: why it works on humans only",
+      "hook": "PIR Sensor Kutte Ko Kyun Nahi Pakadta? 🤔"
+    },
+    {
+      "topic": "LDR sensor in an automatic night lamp",
+      "hook": "Raat Ka Lamp Khud Kaise Jalta Hai? Sirf 1 Chhota Resistor!"
+    },
+    {
       "topic": "Parking sensor beeping in cars",
       "hook": "Car Ko Peeche Ki Deewar Ka Kaise Pata Chalta Hai?"
     },
