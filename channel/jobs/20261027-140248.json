@@ -1,0 +1,16 @@
+{
+  "id": "20261027-140248",
+  "topic": "Clap switch using a sound sensor",
+  "hook": "Taali Bajao, Light Jalao! Ye Jaadu Nahi Hai 👏",
+  "lang": "hi",
+  "started": "2026-10-27T14:02:48",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-10-27T14:02:49"
+    }
+  ],
+  "format": "studio",
+  "module": "sound"
+}
