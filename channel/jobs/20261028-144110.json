@@ -1,0 +1,16 @@
+{
+  "id": "20261028-144110",
+  "topic": "Line follower robot and IR sensor",
+  "hook": "Robot Kaali Line Par Kaise Chalta Hai? Dimaag Nahi Hai!",
+  "lang": "hi",
+  "started": "2026-10-28T14:41:10",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-10-28T14:41:11"
+    }
+  ],
+  "format": "studio",
+  "module": "ir"
+}
