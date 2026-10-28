@@ -376,5 +376,14 @@
     "topic": "Clap switch using a sound sensor",
     "job": "20261027-140248",
     "postAt": "2026-10-29T12:00"
+  },
+  {
+    "id": "iahxwpQgd8A",
+    "meta": "channel/videos/auto-line-follower-robot-secret.json",
+    "date": "2026-10-28",
+    "status": "approved",
+    "topic": "Line follower robot and IR sensor",
+    "job": "20261028-144110",
+    "postAt": "2026-10-30T12:00"
   }
 ]

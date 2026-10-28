@@ -4,7 +4,7 @@
   "hook": "Robot Kaali Line Par Kaise Chalta Hai? Dimaag Nahi Hai!",
   "lang": "hi",
   "started": "2026-10-28T14:41:10",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -40,5 +40,7 @@
     }
   ],
   "format": "studio",
-  "module": "ir"
+  "module": "ir",
+  "finished": "2026-10-28T14:56:32",
+  "uploadId": "iahxwpQgd8A"
 }

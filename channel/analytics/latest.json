@@ -1,9 +1,18 @@
 {
-  "updated": "27 Oct 2026, 20:59",
+  "updated": "28 Oct 2026, 14:56",
   "youtube": {
     "subs": 3,
-    "views": 1295,
+    "views": 1319,
     "videos": [
+      {
+        "title": "Automatic Tap Haath Kaise Pehchanta Hai? 🤔 #shorts",
+        "id": "D_vS9GmRqGk",
+        "status": "public",
+        "published": "2026-10-28",
+        "views": 3,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Clap Switch Taali Nahi, Sirf Shor Sunta Hai 👏 #shorts",
         "id": "24-dufDGzxc",
@@ -18,7 +27,7 @@
         "id": "CCTv-pNY0Is",
         "status": "public",
         "published": "2026-10-27",
-        "views": 11,
+        "views": 16,
         "likes": 1,
         "comments": 2
       },
@@ -27,7 +36,7 @@
         "id": "aSecaiZshXI",
         "status": "public",
         "published": "2026-10-26",
-        "views": 3,
+        "views": 5,
         "likes": 1,
         "comments": 2
       },
@@ -75,15 +84,6 @@
         "views": 16,
         "likes": 1,
         "comments": 2
-      },
-      {
-        "title": "Automatic Tap Haath Kaise Pehchanta Hai? 🤔 #shorts",
-        "id": "D_vS9GmRqGk",
-        "status": "private",
-        "published": "2026-10-23",
-        "views": 2,
-        "likes": 0,
-        "comments": 0
       },
       {
         "title": "IR Sensor Andhere Mein Deewar Kaise Dekhta Hai? 🤔 #shorts",
@@ -144,7 +144,7 @@
         "id": "ma7mTeADoOk",
         "status": "public",
         "published": "2026-10-20",
-        "views": 357,
+        "views": 358,
         "likes": 6,
         "comments": 0
       },
@@ -198,7 +198,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 542,
+        "views": 544,
         "likes": 9,
         "comments": 2
       },
@@ -303,12 +303,6 @@
       }
     ],
     "daily": [
-      {
-        "day": "2026-09-29",
-        "views": 0,
-        "minutes": 0,
-        "subs": 0
-      },
       {
         "day": "2026-09-30",
         "views": 0,
@@ -458,6 +452,12 @@
         "views": 51,
         "minutes": 8,
         "subs": 0
+      },
+      {
+        "day": "2026-10-25",
+        "views": 13,
+        "minutes": 1,
+        "subs": 0
       }
     ]
   },
@@ -466,13 +466,24 @@
     "followers": 9,
     "posts": [
       {
+        "title": "Tap haath dekhta hi nahi! 🚰",
+        "url": "https://www.instagram.com/reel/DfCC7k8jMMp/",
+        "published": "2026-10-28",
+        "likes": 1,
+        "comments": 0,
+        "reach": 1,
+        "views": 14,
+        "saved": 0,
+        "shares": 0
+      },
+      {
         "title": "Lift ka darwaza aapko kaise rokta hai? 🚪",
         "url": "https://www.instagram.com/reel/De_aGm9ANDp/",
         "published": "2026-10-27",
         "likes": 3,
         "comments": 2,
-        "reach": 252,
-        "views": 297,
+        "reach": 495,
+        "views": 557,
         "saved": 0,
         "shares": 0
       },
@@ -482,8 +493,8 @@
         "published": "2026-10-26",
         "likes": 15,
         "comments": 2,
-        "reach": 1228,
-        "views": 1355,
+        "reach": 1229,
+        "views": 1356,
         "saved": 4,
         "shares": 10
       },
@@ -625,8 +636,8 @@
         "published": "2026-10-17",
         "likes": 12,
         "comments": 2,
-        "reach": 1206,
-        "views": 1416,
+        "reach": 1207,
+        "views": 1418,
         "saved": 3,
         "shares": 4
       },
@@ -636,8 +647,8 @@
         "published": "2026-10-08",
         "likes": 3,
         "comments": 6,
-        "reach": 105,
-        "views": 125,
+        "reach": 106,
+        "views": 126,
         "saved": 0,
         "shares": 0
       }

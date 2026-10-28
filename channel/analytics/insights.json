@@ -1,31 +1,32 @@
 {
-  "updated": "2026-10-27T20:58",
-  "videos": 15,
-  "summary": "Instagram Reels in Hindi are doing nearly all the work: the best videos get 1,300+ views there, while YouTube Shorts mostly get under 25 views. Videos about sensors in everyday places or robots (PIR motion sensor, robot IR sensor, street light) get the most views, shares and saves. Overall numbers are still small, and the smoke alarm, lift, tap and phone-orientation videos barely get shares or saves.",
-  "winningPattern": "Hindi Instagram Reels about one familiar sensor that seems to act like magic (motion, robot, street light). The title opens with a surprising claim or a 'kaise' question, such as 'Aapko Dekhta Nahi!' or 'Robot Deewar Se Kaise Bachta Hai?', names the sensor, and ends with the 🤔 emoji. The best ones tie the sensor to a robot or a daily-life scene viewers recognise. Shares and saves come from videos that feel like 'now I get it'.",
+  "updated": "2026-10-28T14:40",
+  "videos": 16,
+  "summary": "Instagram is carrying almost all of the channel's views, while YouTube Shorts is nearly dead for the Hindi videos (most under 25 views). The best videos explain a familiar sensor that people meet in daily life (motion detector, robot avoiding a wall, street light) with a curious 'how does it know?' question, and the top two get real shares and saves. Weak videos are narrower or less visual topics (lift door, tap, smartwatch) with little engagement, and the one English video got YouTube views but no Instagram posting.",
+  "winningPattern": "Sensor-in-daily-life subject, especially PIR and IR sensors and things that seem to 'see' or 'think' (motion detection, robot avoiding walls, street light sensing dark). Hook is a surprising claim or question in Hinglish ('Motion Sensor Aapko Dekhta Nahi!', 'Robot Deewar Se Kaise Bachta Hai?') with a 🤔 emoji and #shorts. Instagram Reels is the platform that delivers (700 to 1400 views); YouTube gives under 25 views on most Hindi videos, so Instagram is the growth engine for now.",
   "doMore": [
-    "Open with a bold, slightly shocking claim about a sensor, like 'X Aapko Dekhta Nahi!', then explain it",
-    "Pick robot and maker-project angles (IR, PIR, line follower, obstacle avoidance) since they earn the most shares and saves",
-    "Post Instagram-first and test a short re-edit for YouTube with a stronger first-second hook",
-    "End each video with a save-worthy takeaway, like a one-line wiring tip or a 'save this for your project' prompt",
-    "Make follow-up videos on the winners, e.g. PIR part 2 or IR sensor in a robot, and keep using the same title format"
+    "Make more PIR and IR sensor videos from fresh angles, such as robots, security, and things that sense people or obstacles",
+    "Open with a bold myth-busting statement before the question, like the PIR title that says the sensor does not see you",
+    "Pick topics that show a robot or machine reacting visibly, since the robot video got the most shares (10)",
+    "Test the English Arduino-style titles on YouTube again, since the English video got 161 views there versus a Hindi average under 25, and also post it to Instagram",
+    "Make a short series from the top videos (part 2 of PIR, IR on a robot) and end each with a question to invite saves and shares"
   ],
   "stopDoing": [
-    "Posting near-duplicate topics (two smoke detector and two IR sensor videos) that split the audience",
-    "Mixing in English videos or flat, generic titles like 'Smoke Detector Fire Kaise Sense Karta Hai?' with no surprise"
+    "Near-duplicate topics such as two smoke detector videos and two IR videos in one week, which split the audience and drop engagement",
+    "Generic or vague 'Kaise Pehchanta Hai' tap and door topics with no visual surprise (the automatic tap video got 2 IG views)",
+    "Expecting YouTube to grow from Hindi titles with the same format as Instagram without changing the hook or title"
   ],
   "nextTopics": [
     "Line follower robot and IR sensor",
-    "Ultrasonic sensor in a parking reverse beep",
-    "Automatic hand sanitizer dispenser",
-    "PIR sensor part 2: why it works on humans only",
-    "LDR sensor in an automatic night lamp"
+    "Security alarm using PIR sensor",
+    "Ultrasonic sensor in car parking",
+    "Light sensor LDR in automatic lights",
+    "Obstacle avoiding robot with Arduino"
   ],
   "bestTimes": {
     "times": [
       "12:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (14 posts)"
+    "reason": "from our own posts: these hours averaged the most views (15 posts)"
   }
 }
