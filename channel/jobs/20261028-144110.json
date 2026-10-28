@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Line follower robot and IR sensor (open with this hook: \"Robot Kaali Line Par Kaise Chalta Hai? Dimaag Nahi Hai!\")\" (Claude Code)",
       "at": "2026-10-28T14:41:30"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-10-28T14:42:01"
     }
   ],
   "format": "studio",
