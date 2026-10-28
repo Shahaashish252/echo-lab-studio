@@ -1,2 +1,26 @@
 
 == research: reading about the topic on the web
+  | **Hook:** "Robot Kaali Line Par Kaise Chalta Hai? Dimaag Nahi Hai!"
+  | 
+  | **HOW IT WORKS**
+  | 1. The IR LED under the robot shines invisible infrared light (about 940 nm) at the floor.
+  | 2. A white floor reflects most of it. A black line absorbs most of it.
+  | 3. A phototransistor next to the LED picks up the reflected light. More reflection gives a stronger signal.
+  | 4. An LM393 comparator compares that signal with a threshold set by the trimmer pot. It outputs a clean HIGH or LOW.
+  | 5. The microcontroller (Arduino, for example) reads the left and right sensors. If the left sensor sees the line, it steers left. If the right sensor sees it, it steers right.
+  | 6. It repeats this check many times a second, so the robot keeps correcting itself and stays on the line.
+  | 
+  | **REAL PARTS:** TCRT5000 (Vishay reflective sensor), LM393 comparator, L298N motor driver, Arduino Uno, TT gear motors.
+  | 
+  | **MYTH:** "The robot sees the line like a camera or has a brain." The truth is that it only measures how much IR light bounces back. There is no vision and no thinking, just reflected-light measurement and simple if/else logic.
+  | 
+  | **SURPRISING FACT:** The TCRT5000's usable range is only about 0.2–15 mm. It is most sensitive at about 2.5 mm, so a sensor mounted too high stops working.
+  | 
+  | **TIP:** Mount the sensors 2–5 mm above the floor. Then turn the pot until the module's LED switches cleanly between white and black. Test under your actual room lighting, because strong sunlight contains IR and can confuse the sensor. The TCRT5000 has a daylight-blocking filter, but it isn't perfect.
+  | 
+  | Sources:
+  | - [Soldered TCRT5000 docs](https://docs.soldered.com/tcrt5000/how-it-works/)
+  | - [SunFounder track module](https://docs.sunfounder.com/projects/sf-components/en/latest/component_track_module.html)
+  | - [Vishay TCRT5000 datasheet](https://www.radiolocman.com/datasheet/pdf.html?di=186127)
+
+== storyboard: "Line follower robot and IR sensor (open with this hook: "Robot Kaali Line Par Kaise Chalta Hai? Dimaag Nahi Hai!")" (Claude Code)
