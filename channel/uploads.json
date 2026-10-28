@@ -307,10 +307,17 @@
     "id": "D_vS9GmRqGk",
     "meta": "channel/videos/auto-automatic-tap-ka-raaz.json",
     "date": "2026-10-23",
-    "status": "approved",
+    "status": "published",
     "topic": "Automatic tap sensor in washrooms",
     "job": "20261023-134202",
-    "postAt": "2026-10-28T12:00"
+    "postAt": "2026-10-28T12:00",
+    "published": {
+      "youtube": "2026-10-28",
+      "instagram": "https://www.instagram.com/reel/DfCC7k8jMMp/",
+      "instagram_story": "18139552837558082",
+      "facebook": "https://www.facebook.com/reel/1320874706762985/"
+    },
+    "postedAt": "2026-10-28T14:24"
   },
   {
     "id": "CCTv-pNY0Is",
