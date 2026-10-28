@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Line follower robot and how it stays on track",
+      "hook": "Ye robot kaali line se bahar kyun nahi jata?"
+    },
+    {
+      "topic": "Clap switch: how a sound turns on a light",
+      "hook": "Taali bajao aur light on, ye jaadu nahi hai!"
+    },
+    {
+      "topic": "Fingerprint scanner on phones and attendance machines",
+      "hook": "Aapki ungli ka nishaan machine ko kaise yaad rehta hai?"
+    },
+    {
+      "topic": "Gas leak sensor in kitchens",
+      "hook": "Gas leak ki smell aapse pehle machine ko kaise aati hai?"
+    },
+    {
+      "topic": "Self-balancing robot using a gyro sensor",
+      "hook": "Ye robot gir kyun nahi raha? Raaz isme hai!"
+    },
+    {
       "topic": "Parking sensor beeping in cars",
       "hook": "Car Ko Peeche Ki Deewar Ka Kaise Pata Chalta Hai?"
     },
