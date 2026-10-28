@@ -30,3 +30,20 @@
   studio plan: 10 shots of the ir module
 
 == voice (Microsoft Edge: Madhur)
+Downloading onnxruntime (22.7MiB)
+ Downloaded onnxruntime
+Installed 27 packages in 19ms
+[0;93m2026-10-28 14:42:44.601908129 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        4.43s  रोबोट काली लाइन पर कैसे चलता है? दिमाग नहीं है!
+s1-2        3.07s  यह एफसी इक्यावन इन्फ्रारेड सेंसर मॉड्यूल है।
+s1-3        3.26s  एलईडी फर्श पर अदृश्य इन्फ्रारेड रोशनी फेंकती है।
+s1-4        3.12s  सफेद फर्श ज्यादा रोशनी लौटाता है, काला कम।
+s1-5        2.85s  काला फोटोडायोड वापस आई रोशनी पकड़ता है।
+s1-6        3.00s  रोशनी इलेक्ट्रॉन छुड़ाती है, तो करंट बहता है।
+s1-7        3.75s  एलएम तीन नौ तीन सिग्नल को पॉट के थ्रेशहोल्ड से मिलाता है।
+s1-8        2.67s  आउट पिन आर्डुइनो को हाई या लो बताती है।
+s1-9        2.90s  बिना दिमाग रोबोट काली लाइन पर कैसे चलता है?
+s1-10       0.73s  फॉलो करो!
+wrote 10 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit
