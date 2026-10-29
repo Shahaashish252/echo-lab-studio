@@ -1,2 +1,29 @@
 
 == research: reading about the topic on the web
+  | **Hook:** "Ye robot gir kyun nahi raha? Raaz isme hai!"
+  | 
+  | **HOW IT WORKS**
+  | 1. The MPU6050 (gyro + accelerometer) measures how fast the robot is tipping.
+  | 2. The gyro rate is integrated to get a tilt angle. This drifts over time.
+  | 3. The accelerometer senses gravity, so it gives an absolute tilt reference. It is noisy and gets fooled when the robot moves.
+  | 4. A complementary filter blends the two. One tutorial uses a 98% gyro / 2% accel split.
+  | 5. A PID controller turns the angle error into motor speed. Leaning forward makes the wheels drive forward under the robot.
+  | 6. The loop repeats every 5–20 ms, depending on the build.
+  | 
+  | **REAL PARTS:** MPU6050 (GY-521 board), Arduino Nano/Uno, L298N motor driver, DC gear motors. Many builds add encoders.
+  | 
+  | **MYTH:** "The gyro alone knows the tilt." In fact a gyro measures rotation rate, not angle. Integrating it accumulates error, so it drifts. It needs the accelerometer's gravity reference to correct it.
+  | 
+  | **SURPRISING FACT:** One Arduino Uno study reported gains of Kp=35, Ki=0.8, Kd=25. That gave about ±2° average error from vertical.
+  | 
+  | **TIP:** Tune Kp first until the robot oscillates, then add Kd to damp it, and add Ki last. Keep the loop time fixed and short, and mount the sensor rigidly near the wheel axis.
+  | 
+  | **Caveat:** These figures come from individual project write-ups, so they are examples, not standards. I didn't verify the L298N's slow switching limiting balance performance.
+  | 
+  | Sources:
+  | - [ShillehTek](https://shillehtek.com/blogs/news/arduino-nano-mpu6050-self-balancing-robot)
+  | - [ITN journal](https://ejournal.itn.ac.id/alinier/article/view/14468)
+  | - [Luis Llamas](https://www.luisllamas.es/en/arduino-self-balancing-robot-pid/)
+  | - [UBC](https://open.library.ubc.ca/cIRcle/collections/52966/items/1.0074460)
+
+== storyboard: "Self-balancing robot using a gyro sensor (open with this hook: "Ye robot gir kyun nahi raha? Raaz isme hai!")" (Claude Code)
