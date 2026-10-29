@@ -1,0 +1,16 @@
+{
+  "id": "20261029-144015",
+  "topic": "Self-balancing robot using a gyro sensor",
+  "hook": "Ye robot gir kyun nahi raha? Raaz isme hai!",
+  "lang": "hi",
+  "started": "2026-10-29T14:40:15",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-10-29T14:40:15"
+    }
+  ],
+  "format": "studio",
+  "module": "ir"
+}
