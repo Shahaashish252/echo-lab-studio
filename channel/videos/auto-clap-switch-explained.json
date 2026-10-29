@@ -30,5 +30,6 @@
   "social": {
     "instagram": "Taali bajao, light jalao, jaadu nahi hai 👏\nIs clap switch ke andar ka sound sensor 3D mein dekho, mic se Arduino tak 👇\n🎤 Electret mic ka diaphragm taali se hilta hai\n⚡ LM393 comparator signal ko threshold se milata hai\n🔧 Blue pot sensitivity set karta hai\n🧠 Ye taali nahi pehchanta, bas tez awaaz pakadta hai\n💾 Save karo apne next Arduino project ke liye\n📤 Send karo us dost ko jo ghar mein clap switch banana chahta hai\n💬 Tum is sensor se aur kya control karoge?\n#arduino #electronics #soundsensor #clapswitch #diyprojects",
     "tiktok": "Taali bajao, light jalao, jaadu nahi hai 👏 Dekho sound sensor andar se kaise kaam karta hai. Tum isse kya control karoge? #learnontiktok #arduino #electronics #soundsensor #clapswitch"
-  }
+  },
+  "cover": "/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/clap-switch-explained.cover.jpg"
 }

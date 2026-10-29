@@ -372,10 +372,17 @@
     "id": "24-dufDGzxc",
     "meta": "channel/videos/auto-clap-switch-explained.json",
     "date": "2026-10-27",
-    "status": "approved",
+    "status": "published",
     "topic": "Clap switch using a sound sensor",
     "job": "20261027-140248",
-    "postAt": "2026-10-29T12:00"
+    "postAt": "2026-10-29T12:00",
+    "published": {
+      "youtube": "2026-10-29",
+      "instagram": "https://www.instagram.com/reel/DfEXkH5D12M/",
+      "instagram_story": "18127399081913818",
+      "facebook": "https://www.facebook.com/reel/39703352015976794/"
+    },
+    "postedAt": "2026-10-29T12:02"
   },
   {
     "id": "iahxwpQgd8A",
