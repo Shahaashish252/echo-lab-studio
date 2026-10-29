@@ -392,5 +392,14 @@
     "topic": "Line follower robot and IR sensor",
     "job": "20261028-144110",
     "postAt": "2026-10-30T12:00"
+  },
+  {
+    "id": "A4PXvpSAuqQ",
+    "meta": "channel/videos/auto-self-balancing-robot-secret.json",
+    "date": "2026-10-29",
+    "status": "approved",
+    "topic": "Self-balancing robot using a gyro sensor",
+    "job": "20261029-144015",
+    "postAt": "2026-10-31T12:00"
   }
 ]

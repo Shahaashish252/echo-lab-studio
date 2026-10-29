@@ -72,3 +72,13 @@ wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wa
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/self-balancing-robot-secret.mp4 (12 parts, 11.8 min)
 
 == youtube
+  Gyro Ke Bina Ye Robot Turant Gir Jaata 🤖 #shorts
+  metadata: channel/videos/auto-self-balancing-robot-secret.json
+
+  uploading  45.4%
+  uploading  90.8%
+uploaded https://youtu.be/A4PXvpSAuqQ  (private)
+created playlist Robotics In 3d: Shorts
+! not added to the playlist (<HttpError 409 when requesting https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned "T)
+
+DONE in 14.8 min -> /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/self-balancing-robot-secret.mp4

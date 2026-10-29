@@ -4,7 +4,7 @@
   "hook": "Ye robot gir kyun nahi raha? Raaz isme hai!",
   "lang": "hi",
   "started": "2026-10-29T14:40:15",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -40,5 +40,7 @@
     }
   ],
   "format": "studio",
-  "module": "ir"
+  "module": "ir",
+  "finished": "2026-10-29T14:55:03",
+  "uploadId": "A4PXvpSAuqQ"
 }
