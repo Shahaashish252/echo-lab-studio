@@ -1,26 +1,26 @@
 {
-  "updated": "2026-10-29T14:40",
+  "updated": "2026-10-29T21:48",
   "videos": 17,
-  "summary": "Instagram is carrying the channel: almost every Hindi video gets 100 to 1,400 views there, while YouTube Shorts mostly gets under 25 views. The best performers are relatable, everyday-device or robot questions (PIR motion sensor, robot avoiding walls, street light), and the ones people share and save are the ones that explain a 'hidden magic' of something they see daily. The one English video did well on YouTube (161 views) but never went to Instagram, and several near-duplicate topics (two smoke alarms, two IR sensors, two taps) split the audience without adding much.",
-  "winningPattern": "Short Hindi video about a sensor hidden inside a familiar everyday object or robot behavior, opened with a curiosity question or a surprising claim ('X doesn't see you!', 'How does Y know...?'), written in Hinglish with a 🤔 emoji, posted mainly on Instagram Reels. Titles that flip an assumption (sensor doesn't 'see') or name a daily situation get the most views, shares and saves.",
+  "summary": "Instagram Reels is carrying the channel: almost every Hindi video gets 100 to 1,400 views there, while YouTube Shorts mostly get under 50 views. The best performers are relatable sensor topics with a question or surprising hook, and they earn shares and saves, which is a strong sign. Many videos are near-duplicate topics (smoke alarm, IR sensor, tap) that split attention and score low, and the one English video only worked on YouTube.",
+  "winningPattern": "Hindi Reels about a sensor or gadget people meet in daily life or in robotics projects (PIR motion sensor, robot IR obstacle sensor, clap switch, street light). The title opens with a surprising claim or a 'Kaise' question, such as 'Aapko Dekhta Nahi!' or 'Taali Nahi, Sirf Shor Sunta Hai', followed by one emoji. Posted mainly on Instagram, where shares and saves come from a clear 'myth vs reality' reveal and a maker-friendly project angle.",
   "doMore": [
-    "Lead with a surprising 'myth-flip' hook like 'Sensor doesn't see you!' since the PIR and robot videos got the most shares and saves",
-    "Pick everyday-life objects people meet daily (street light, lift, tap, door, phone) and name the sensor inside as the reveal",
-    "Add a clear save/share prompt at the end, e.g. 'Save this for your next project', as saves and shares are weak on most videos",
-    "Cross-post the English Arduino video to Instagram and test whether English titles can lift YouTube, where Hindi is nearly invisible",
-    "Make one topic once, then follow with a series angle (e.g. 'Sensors in your home, Part 2') instead of near-duplicate videos"
+    "Open with a contradiction or myth-buster hook ('X nahi, Y se kaam karta hai') as the clap switch and PIR videos do",
+    "Pick maker-relevant topics tied to a buildable project (robot, clap switch, PIR alarm) and end with 'save this for your project'",
+    "Add a clear share or save prompt, since the top videos draw the most shares and saves",
+    "Publish one topic per concept and make each one distinct instead of remaking the same sensor",
+    "Test YouTube separately: try a stronger first-second visual and a shorter title, or concentrate on Reels until YouTube picks up"
   ],
   "stopDoing": [
-    "Publishing near-duplicate topics (second smoke detector, second IR, two automatic taps) within days of each other",
-    "Generic 'How does X work' titles without a twist or surprise, like the TV remote and ultrasonic ones that flatlined",
-    "Judging YouTube with the same Hindi-only Hinglish titles that get almost no views there"
+    "Repeating near-identical topics (three smoke/IR/tap variants) with only the title changed",
+    "Generic 'X Kaise Kaam Karta Hai?' titles with no surprising claim, like the phone orientation, mall door and touchscreen videos",
+    "Mixing in English videos without a plan, since the Arduino Uno video got zero Instagram reach"
   ],
   "nextTopics": [
-    "Why a fridge door light turns off when closed",
-    "Car reverse parking sensor beeps",
-    "Automatic night lamp using LDR",
-    "Fingerprint scanner on phones",
-    "Burglar alarm door magnet sensor"
+    "Ultrasonic parking sensor in cars",
+    "LDR night lamp circuit",
+    "Line follower robot with IR sensors",
+    "Temperature sensor LM35 / DHT11",
+    "Buzzer and relay clicking"
   ],
   "bestTimes": {
     "times": [

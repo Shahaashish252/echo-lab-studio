@@ -1,16 +1,25 @@
 {
-  "updated": "29 Oct 2026, 14:55",
+  "updated": "29 Oct 2026, 21:48",
   "youtube": {
     "subs": 3,
-    "views": 1342,
+    "views": 1346,
     "videos": [
+      {
+        "title": "Gyro Ke Bina Ye Robot Turant Gir Jaata 🤖 #shorts",
+        "id": "A4PXvpSAuqQ",
+        "status": "private",
+        "published": "2026-10-29",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Clap Switch Taali Nahi, Sirf Shor Sunta Hai 👏 #shorts",
         "id": "24-dufDGzxc",
         "status": "public",
         "published": "2026-10-29",
-        "views": 15,
-        "likes": 0,
+        "views": 44,
+        "likes": 1,
         "comments": 0
       },
       {
@@ -27,7 +36,7 @@
         "id": "D_vS9GmRqGk",
         "status": "public",
         "published": "2026-10-28",
-        "views": 9,
+        "views": 10,
         "likes": 0,
         "comments": 0
       },
@@ -36,7 +45,7 @@
         "id": "CCTv-pNY0Is",
         "status": "public",
         "published": "2026-10-27",
-        "views": 20,
+        "views": 21,
         "likes": 1,
         "comments": 2
       },
@@ -99,7 +108,7 @@
         "id": "jD5lPQq_aQo",
         "status": "public",
         "published": "2026-10-23",
-        "views": 11,
+        "views": 12,
         "likes": 0,
         "comments": 0
       },
@@ -478,21 +487,21 @@
         "title": "Taali bajao, light jalao, jaadu nahi hai 👏",
         "url": "https://www.instagram.com/reel/DfEXkH5D12M/",
         "published": "2026-10-29",
-        "likes": 3,
-        "comments": 0,
-        "reach": 182,
-        "views": 226,
-        "saved": 1,
-        "shares": 0
+        "likes": 14,
+        "comments": 2,
+        "reach": 1085,
+        "views": 1241,
+        "saved": 10,
+        "shares": 2
       },
       {
         "title": "Tap haath dekhta hi nahi! 🚰",
         "url": "https://www.instagram.com/reel/DfCC7k8jMMp/",
         "published": "2026-10-28",
-        "likes": 7,
+        "likes": 8,
         "comments": 4,
-        "reach": 402,
-        "views": 430,
+        "reach": 410,
+        "views": 440,
         "saved": 0,
         "shares": 0
       },
@@ -500,10 +509,10 @@
         "title": "Lift ka darwaza aapko kaise rokta hai? 🚪",
         "url": "https://www.instagram.com/reel/De_aGm9ANDp/",
         "published": "2026-10-27",
-        "likes": 3,
+        "likes": 4,
         "comments": 2,
-        "reach": 499,
-        "views": 560,
+        "reach": 502,
+        "views": 564,
         "saved": 0,
         "shares": 0
       },
@@ -514,7 +523,7 @@
         "likes": 15,
         "comments": 2,
         "reach": 1232,
-        "views": 1357,
+        "views": 1360,
         "saved": 4,
         "shares": 10
       },

@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Ultrasonic parking sensor in cars",
+      "hook": "Car Ko Peeche Ki Deewar Kaise Dikhti Hai? Awaaz Se!"
+    },
+    {
+      "topic": "LDR night lamp circuit",
+      "hook": "Ye Bulb Din Mein Band Kyun Ho Jata Hai? Aankh Nahi, LDR!"
+    },
+    {
+      "topic": "Line follower robot with IR sensors",
+      "hook": "Robot Kaali Line Par Hi Kyun Chalta Hai? Raaz Ye Hai"
+    },
+    {
+      "topic": "Temperature sensor LM35 / DHT11",
+      "hook": "Thermometer Garmi Ko Kaise Naapta Hai? Bijli Se!"
+    },
+    {
+      "topic": "Buzzer and relay clicking",
+      "hook": "Relay Ki 'Click' Awaaz Ka Asli Matlab Kya Hai?"
+    },
+    {
       "topic": "Car reverse parking sensor beeps",
       "hook": "Car Ka Sensor Deewar Dekhta Nahi, Sirf Awaaz Sunta Hai!"
     },
