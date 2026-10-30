@@ -35,3 +35,20 @@
   studio plan: 10 shots of the ir module
 
 == voice (Microsoft Edge: Madhur)
+Downloading onnxruntime (22.7MiB)
+ Downloaded onnxruntime
+Installed 27 packages in 23ms
+[0;93m2026-10-30 14:53:11.659740918 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        2.35s  कॉल पे कान लगाते ही स्क्रीन बंद क्यों?
+s1-2        2.77s  फोन में एक छोटा इन्फ्रारेड सेंसर होता है।
+s1-3        2.76s  एलईडी अदृश्य इन्फ्रारेड रोशनी भेजती है।
+s1-4        2.68s  चेहरा पास हो, तो रोशनी वापस लौटती है।
+s1-5        2.71s  फोटोडायोड वापस आई रोशनी को नापता है।
+s1-6        3.50s  रोशनी सिलिकॉन में इलेक्ट्रॉन छुड़ाती है, करंट बनता है।
+s1-7        3.81s  कंपैरेटर एलएम तीन नौ तीन रीडिंग को थ्रेशोल्ड से मिलाता है।
+s1-8        2.73s  पॉट घुमाओ, दूरी दो से तीस सेंटीमीटर।
+s1-9        2.52s  तो बताओ, कॉल पे स्क्रीन बंद क्यों होती है?
+s1-10       0.73s  फॉलो करो!
+wrote 10 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit
