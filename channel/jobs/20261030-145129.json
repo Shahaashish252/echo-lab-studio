@@ -1,0 +1,16 @@
+{
+  "id": "20261030-145129",
+  "topic": "Phone proximity sensor during calls",
+  "hook": "Call pe kaan lagate hi screen band kyun hoti hai?",
+  "lang": "hi",
+  "started": "2026-10-30T14:51:29",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-10-30T14:51:29"
+    }
+  ],
+  "format": "studio",
+  "module": "ir"
+}
