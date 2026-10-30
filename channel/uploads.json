@@ -388,10 +388,17 @@
     "id": "iahxwpQgd8A",
     "meta": "channel/videos/auto-line-follower-robot-secret.json",
     "date": "2026-10-28",
-    "status": "approved",
+    "status": "published",
     "topic": "Line follower robot and IR sensor",
     "job": "20261028-144110",
-    "postAt": "2026-10-30T12:00"
+    "postAt": "2026-10-30T12:00",
+    "published": {
+      "youtube": "2026-10-30",
+      "instagram": "https://www.instagram.com/reel/DfHNfgYITS4/",
+      "instagram_story": "17989741038118492",
+      "facebook": "https://www.facebook.com/reel/4698389100438992/"
+    },
+    "postedAt": "2026-10-30T14:32"
   },
   {
     "id": "A4PXvpSAuqQ",
