@@ -1,2 +1,31 @@
 
 == research: reading about the topic on the web
+  | **Hook:** "Call pe kaan lagate hi screen band kyun hoti hai?"
+  | 
+  | **HOW IT WORKS**
+  | 1. A tiny IR LED near the earpiece pulses invisible light (~940 nm).
+  | 2. A photodiode next to it measures how much light bounces back.
+  | 3. Phone to ear: the face reflects almost all of it, so the reading jumps (one patent example: full scale ≈1024, threshold ≈400).
+  | 4. The sensor samples with the LED on and off, then subtracts ambient IR such as sunlight.
+  | 5. The OS compares the reading with the threshold, then turns off the display and touch.
+  | 6. Move the phone away and the reading drops, so the screen wakes.
+  | 
+  | **REAL PARTS**
+  | - Avago APDS-9800: combined ambient-light and proximity module
+  | - Osram SFH 7773 and SFH 7770
+  | - onsemi NOA3301
+  | - ams TMD27713
+  | - VCNL4040 (a Vishay part from my own knowledge; the searches didn't confirm it)
+  | 
+  | **MYTH**
+  | Many people think it's a touch or heat sensor. It's optical: it measures reflected IR and doesn't need contact. It is also not the same thing as VL53L0X-style laser time-of-flight ranging.
+  | 
+  | **SURPRISING FACT**
+  | Osram's SFH 7773 detects objects up to 15 cm away, and the SFH 7770 up to 30 cm. Phones use only a small part of that range.
+  | 
+  | **TIP**
+  | A thick or cheap screen protector, or a film over the sensor, raises the baseline reading. This can leave the screen stuck off or on during calls. Cut the film clear of the sensor area, or clean the area near the earpiece.
+  | 
+  | Sources: [USPTO patent 11443701](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11443701), [USPTO patent 11011131](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11011131), [Design News on Osram](https://www.designnews.com/sensors/osram-s-digital-sensor-combines-proximity-and-ambient-light-sensors), [ElectronicSpecifier on Avago](https://www.electronicspecifier.com/industries/wireless/avago-technologies-announces-ultra-thin-integrated-ambient-light-and-proximity-sensor-module-for-use-in-mobile-phones/)
+
+== storyboard: "Phone proximity sensor during calls (open with this hook: "Call pe kaan lagate hi screen band kyun hoti hai?")" (Claude Code)
