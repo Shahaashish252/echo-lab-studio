@@ -1,9 +1,18 @@
 {
-  "updated": "29 Oct 2026, 21:48",
+  "updated": "30 Oct 2026, 15:05",
   "youtube": {
     "subs": 3,
-    "views": 1346,
+    "views": 1514,
     "videos": [
+      {
+        "title": "Line Follower Robot Ke Paas Dimaag Nahi Hota 🤖 #shorts",
+        "id": "iahxwpQgd8A",
+        "status": "public",
+        "published": "2026-10-30",
+        "views": 2,
+        "likes": 1,
+        "comments": 0
+      },
       {
         "title": "Gyro Ke Bina Ye Robot Turant Gir Jaata 🤖 #shorts",
         "id": "A4PXvpSAuqQ",
@@ -18,34 +27,25 @@
         "id": "24-dufDGzxc",
         "status": "public",
         "published": "2026-10-29",
-        "views": 44,
-        "likes": 1,
-        "comments": 0
-      },
-      {
-        "title": "Line Follower Robot Ke Paas Dimaag Nahi Hota 🤖 #shorts",
-        "id": "iahxwpQgd8A",
-        "status": "private",
-        "published": "2026-10-28",
-        "views": 0,
-        "likes": 0,
-        "comments": 0
+        "views": 271,
+        "likes": 2,
+        "comments": 1
       },
       {
         "title": "Automatic Tap Haath Kaise Pehchanta Hai? 🤔 #shorts",
         "id": "D_vS9GmRqGk",
         "status": "public",
         "published": "2026-10-28",
-        "views": 10,
-        "likes": 0,
-        "comments": 0
+        "views": 14,
+        "likes": 1,
+        "comments": 1
       },
       {
         "title": "Lift Ka Darwaza Aapko Kaise Rokta Hai? 🤔 #shorts",
         "id": "CCTv-pNY0Is",
         "status": "public",
         "published": "2026-10-27",
-        "views": 21,
+        "views": 24,
         "likes": 1,
         "comments": 2
       },
@@ -322,12 +322,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-01",
-        "views": 0,
-        "minutes": 0,
-        "subs": 0
-      },
-      {
         "day": "2026-10-02",
         "views": 0,
         "minutes": 0,
@@ -476,6 +470,12 @@
         "views": 9,
         "minutes": 3,
         "subs": 0
+      },
+      {
+        "day": "2026-10-27",
+        "views": 23,
+        "minutes": 4,
+        "subs": 0
       }
     ]
   },
@@ -484,13 +484,24 @@
     "followers": 9,
     "posts": [
       {
+        "title": "Robot ko dimaag nahi, phir bhi line pakadta hai 🤖",
+        "url": "https://www.instagram.com/reel/DfHNfgYITS4/",
+        "published": "2026-10-30",
+        "likes": 0,
+        "comments": 0,
+        "reach": 0,
+        "views": 24,
+        "saved": 0,
+        "shares": 0
+      },
+      {
         "title": "Taali bajao, light jalao, jaadu nahi hai 👏",
         "url": "https://www.instagram.com/reel/DfEXkH5D12M/",
         "published": "2026-10-29",
         "likes": 14,
         "comments": 2,
-        "reach": 1085,
-        "views": 1241,
+        "reach": 1101,
+        "views": 1253,
         "saved": 10,
         "shares": 2
       },
@@ -500,8 +511,8 @@
         "published": "2026-10-28",
         "likes": 8,
         "comments": 4,
-        "reach": 410,
-        "views": 440,
+        "reach": 414,
+        "views": 447,
         "saved": 0,
         "shares": 0
       },
@@ -512,7 +523,7 @@
         "likes": 4,
         "comments": 2,
         "reach": 502,
-        "views": 564,
+        "views": 565,
         "saved": 0,
         "shares": 0
       },
@@ -523,7 +534,7 @@
         "likes": 15,
         "comments": 2,
         "reach": 1232,
-        "views": 1360,
+        "views": 1361,
         "saved": 4,
         "shares": 10
       },
@@ -666,7 +677,7 @@
         "likes": 12,
         "comments": 2,
         "reach": 1209,
-        "views": 1419,
+        "views": 1421,
         "saved": 3,
         "shares": 4
       },

@@ -74,3 +74,12 @@ wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wa
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/phone-proximity-sensor.mp4 (12 parts, 11.9 min)
 
 == youtube
+  Kaan Lagate Hi Screen Band: Raaz IR Light Ka #shorts
+  metadata: channel/videos/auto-phone-proximity-sensor.json
+
+  uploading  65.5%
+uploaded https://youtu.be/ZzilLf1hScY  (private)
+created playlist Sensors In 3d: Shorts
+! not added to the playlist (<HttpError 409 when requesting https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned "T)
+
+DONE in 14.4 min -> /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/phone-proximity-sensor.mp4

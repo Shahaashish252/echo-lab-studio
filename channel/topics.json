@@ -1,18 +1,6 @@
 {
   "queue": [
     {
-      "topic": "Ultrasonic parking sensor in cars",
-      "hook": "Car Ko Peeche Ki Deewar Kaise Dikhti Hai? Awaaz Se!"
-    },
-    {
-      "topic": "LDR night lamp circuit",
-      "hook": "Ye Bulb Din Mein Band Kyun Ho Jata Hai? Aankh Nahi, LDR!"
-    },
-    {
-      "topic": "Line follower robot with IR sensors",
-      "hook": "Robot Kaali Line Par Hi Kyun Chalta Hai? Raaz Ye Hai"
-    },
-    {
       "topic": "Temperature sensor LM35 / DHT11",
       "hook": "Thermometer Garmi Ko Kaise Naapta Hai? Bijli Se!"
     },
@@ -37,10 +25,6 @@
       "hook": "ATM aapka card chhoota bhi nahi, phir bhi padh leta hai!"
     },
     {
-      "topic": "Phone proximity sensor during calls",
-      "hook": "Call pe kaan lagate hi screen band kyun hoti hai?"
-    },
-    {
       "topic": "Escalator that starts when you step near",
       "hook": "Escalator Ko Pata Hai Aap Aa Rahe Ho!"
     },
@@ -61,16 +45,8 @@
       "hook": "How your laptop knows the lid is shut."
     },
     {
-      "topic": "DHT11 temperature and humidity sensor",
-      "hook": "How a sensor measures water in the air."
-    },
-    {
       "topic": "Soil moisture sensor",
       "hook": "This sensor knows when your plant is thirsty."
-    },
-    {
-      "topic": "Relay",
-      "hook": "How a tiny 5 V signal switches a 230 V lamp."
     },
     {
       "topic": "Potentiometer",
@@ -138,6 +114,7 @@
     "Arduino obstacle avoiding robot: IR sensor se robot deewar se kaise bachta hai",
     "Clap switch using a sound sensor",
     "Line follower robot and IR sensor",
-    "Self-balancing robot using a gyro sensor"
+    "Self-balancing robot using a gyro sensor",
+    "Phone proximity sensor during calls"
   ]
 }

@@ -4,7 +4,7 @@
   "hook": "Call pe kaan lagate hi screen band kyun hoti hai?",
   "lang": "hi",
   "started": "2026-10-30T14:51:29",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -40,5 +40,7 @@
     }
   ],
   "format": "studio",
-  "module": "ir"
+  "module": "ir",
+  "finished": "2026-10-30T15:05:55",
+  "uploadId": "ZzilLf1hScY"
 }
