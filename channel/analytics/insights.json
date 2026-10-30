@@ -1,30 +1,30 @@
 {
-  "updated": "2026-10-30T14:51",
+  "updated": "2026-10-30T21:37",
   "videos": 18,
-  "summary": "Instagram is carrying the channel: almost every Hindi video gets 100 to 1,400 views there, while YouTube Shorts mostly gets under 30 views. The best videos explain a surprising 'how does it know?' trick about a familiar device (PIR motion sensor, clap switch, robot avoiding walls), and those also get the shares and saves. Near-duplicate topics (two smoke detector videos, two IR sensor videos, two tap videos) and the newest video, which has barely any data yet, are not adding anything.",
-  "winningPattern": "A common object or 'magic' behavior explained by one hidden sensor, on Instagram Reels in Hindi. The title opens with a myth-busting or curiosity line ('Aapko Dekhta Nahi!', 'Taali Nahi, Sirf Shor Sunta Hai', 'Robot Deewar Se Kaise Bachta Hai?') followed by the sensor name, and the idea is simple enough to grasp in one sentence. Titles that flip an assumption (it doesn't see you, it doesn't hear claps) beat plain 'how does X detect Y' titles. Shares and saves come from robot and DIY-relevant topics that makers want to build.",
+  "summary": "Your Hindi videos do far better on Instagram than YouTube: Instagram gets hundreds to over a thousand views per video, while YouTube mostly gets under 30. The best performers are Clap Switch, Robot/IR Sensor and PIR Motion Sensor, which turn a familiar thing into a surprising 'it doesn't do what you think' idea and earn shares and saves. Generic 'how does X detect Y' videos about taps, doors and smoke alarms get views but almost no shares or saves, and the one English video only reached YouTube.",
+  "winningPattern": "Hindi Instagram Reels about a simple, hands-on maker sensor or robot (PIR, clap switch, IR, line follower) with a myth-busting or surprise hook that says what the device cannot do ('Nahi Dekhta', 'Nahi Sunta', 'Dimaag Nahi Hota'), or a curiosity question about a robot behaviour. Titles are short, Hinglish, with one emoji, and name the sensor or project. Sensors a student could build or buy beat everyday-building devices like taps, lifts and mall doors.",
   "doMore": [
-    "Post Instagram-first and treat YouTube as secondary until its Hindi reach improves",
-    "Open titles with a surprising negative claim that flips what people assume ('X nahi, sirf Y')",
-    "Pick topics with a maker angle (clap switch, robot, PIR) since they earn saves and shares",
-    "Add a closing line that invites a share or save, such as 'Apne dost ko bhejo jo robot bana raha hai'",
-    "Check which hooks work after 48 hours, then make a follow-up to each top video"
+    "Open with a 'X doesn't actually do Y' twist, as in the Clap Switch and PIR videos",
+    "Make videos about buildable maker projects and robots (line follower, obstacle avoidance, clap switch) rather than building fixtures",
+    "Ask for a share or save in the last line, e.g. 'Save karo jab project banao', since shares and saves drive the score",
+    "Prioritise Instagram, and repost the strongest Reels to YouTube with a punchier first second and a clear title, since YouTube is lagging far behind",
+    "Make a short series on one sensor family (PIR, IR, sound) and point each video to the next"
   ],
   "stopDoing": [
-    "Making several near-identical videos on one sensor (smoke, tap, IR) within the same week",
-    "Plain 'Kaise kaam karta hai?' titles with no surprise or myth to bust",
-    "Mixing English into a Hindi channel, as the English Arduino video got no Instagram views"
+    "Near-duplicate topics (two smoke detector videos, two automatic tap videos, two IR videos) that split the audience",
+    "Generic 'kaise pehchanta hai' videos on everyday devices like mall doors, lifts and washroom taps",
+    "Mixing in English narration on a Hindi channel without a clear test plan"
   ],
   "nextTopics": [
-    "Sound sensor vs. whistle-controlled light",
-    "Obstacle-avoiding robot using ultrasonic sensor",
-    "Automatic night lamp using LDR",
-    "Why a TV remote works through a phone camera",
-    "Fingerprint sensor reading"
+    "Sound sensor module: why it reacts to noise, not claps",
+    "Ultrasonic obstacle-avoiding robot built step by step",
+    "LDR light sensor in an automatic night lamp project",
+    "Touch sensor module TTP223 works through a plastic cover",
+    "Why a line follower robot gets confused on a black table"
   ],
   "bestTimes": {
     "times": [
-      "12:00",
+      "14:00",
       "21:00"
     ],
     "reason": "from our own posts: these hours averaged the most views (17 posts)"

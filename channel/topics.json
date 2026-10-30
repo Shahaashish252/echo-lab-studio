@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Sound sensor module: why it reacts to noise, not claps",
+      "hook": "Aapka Arduino Taali Nahi, Sirf Shor Sunta Hai!"
+    },
+    {
+      "topic": "Ultrasonic obstacle-avoiding robot built step by step",
+      "hook": "Ye Robot Aankhon Ke Bina Deewar Kaise Dekhta Hai?"
+    },
+    {
+      "topic": "LDR light sensor in an automatic night lamp project",
+      "hook": "Ye Lamp Andhera Dekhta Nahi, Bas Ek Resistor Badalta Hai"
+    },
+    {
+      "topic": "Touch sensor module TTP223 works through a plastic cover",
+      "hook": "Ye Button Dabta Nahi Hai, Phir Bhi Kaam Karta Hai!"
+    },
+    {
+      "topic": "Why a line follower robot gets confused on a black table",
+      "hook": "Line Follower Robot Ko Kaala Rang Kyun Confuse Karta Hai?"
+    },
+    {
       "topic": "Temperature sensor LM35 / DHT11",
       "hook": "Thermometer Garmi Ko Kaise Naapta Hai? Bijli Se!"
     },
