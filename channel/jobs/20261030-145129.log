@@ -29,3 +29,6 @@
   | Sources: [USPTO patent 11443701](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11443701), [USPTO patent 11011131](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11011131), [Design News on Osram](https://www.designnews.com/sensors/osram-s-digital-sensor-combines-proximity-and-ambient-light-sensors), [ElectronicSpecifier on Avago](https://www.electronicspecifier.com/industries/wireless/avago-technologies-announces-ultra-thin-integrated-ambient-light-and-proximity-sensor-module-for-use-in-mobile-phones/)
 
 == storyboard: "Phone proximity sensor during calls (open with this hook: "Call pe kaan lagate hi screen band kyun hoti hai?")" (Claude Code)
+  s1 sim     Call pe screen kyun band?
+
+== simulation (Claude Code writes it, renders it, reviews it)
