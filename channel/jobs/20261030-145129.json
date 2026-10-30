@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Phone proximity sensor during calls (open with this hook: \"Call pe kaan lagate hi screen band kyun hoti hai?\")\" (Claude Code)",
       "at": "2026-10-30T14:51:48"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-10-30T14:52:25"
     }
   ],
   "format": "studio",
