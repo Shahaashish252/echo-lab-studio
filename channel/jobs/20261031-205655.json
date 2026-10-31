@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Speaker (open with this hook: \"How a magnet and a coil make every sound you hear.\")\" (Claude Code)",
       "at": "2026-10-31T20:57:17"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-10-31T20:57:50"
     }
   ],
   "format": "studio",
