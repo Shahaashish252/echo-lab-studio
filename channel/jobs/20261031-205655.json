@@ -1,0 +1,16 @@
+{
+  "id": "20261031-205655",
+  "topic": "Speaker",
+  "hook": "How a magnet and a coil make every sound you hear.",
+  "lang": "hi",
+  "started": "2026-10-31T20:56:55",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-10-31T20:56:55"
+    }
+  ],
+  "format": "studio",
+  "module": "sound"
+}
