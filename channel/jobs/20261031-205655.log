@@ -1,2 +1,32 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. An amplifier sends a varying audio current through the voice coil.
+  | 2. The coil sits in the gap of a fixed permanent magnet.
+  | 3. The current makes the coil a variable electromagnet. The Lorentz force on it is F = B·L·i.
+  | 4. The force pushes the coil forward or back, and the direction follows the current direction.
+  | 5. The coil is glued to the cone, so the cone moves with it. The spider and surround suspension act as a spring that pulls it back to rest.
+  | 6. The cone alternately compresses and rarefies the air, and that is sound.
+  | 
+  | **REAL PARTS**
+  | - 8Ω 0.5W mini speaker
+  | - MAX98357A I2S class-D amp module (Adafruit, DFRobot DFR0954): about 3.2W into 4Ω, 1.8W into 8Ω, 2.7–5.5V supply
+  | - PAM8403 2×3W analog stereo amp module
+  | 
+  | **MYTH**
+  | - Myth: the magnet moves the cone.
+  | - Truth: the permanent magnet stays fixed. The coil's changing current makes it push against that fixed field, and the coil moves the cone.
+  | 
+  | **SURPRISING FACT**
+  | - One MIT report says dynamic speakers turn only about 0.5–2% of their electrical power into sound. The rest becomes heat. The source is older and informal, so treat the figure as a rough estimate.
+  | 
+  | **TIP**
+  | - Cap the volume or gain on a small 0.5W speaker. Both amp modules can output more than 1.8W into 8Ω, which is enough to damage it.
+  | 
+  | Sources:
+  | - [How Speakers Work (diyAudio)](https://www.diyaudio.com/archive/wiki/how_speakers_work.html)
+  | - [MIT speaker report](https://web.mit.edu/2.972/www/reports/speaker/speaker.html)
+  | - [DFRobot MAX98357 module](https://wiki.dfrobot.com/SKU_DFR0954_MAX98357_I2S_Amplifier_Module)
+  | - [PAM8403 amp (Protosupplies)](https://protosupplies.com/product/pam8403-mini-stereo-audio-amp/)
+
+== storyboard: "Speaker (open with this hook: "How a magnet and a coil make every sound you hear.")" (Claude Code)
