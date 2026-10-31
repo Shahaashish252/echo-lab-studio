@@ -404,10 +404,17 @@
     "id": "A4PXvpSAuqQ",
     "meta": "channel/videos/auto-self-balancing-robot-secret.json",
     "date": "2026-10-29",
-    "status": "approved",
+    "status": "published",
     "topic": "Self-balancing robot using a gyro sensor",
     "job": "20261029-144015",
-    "postAt": "2026-10-31T14:00"
+    "postAt": "2026-10-31T14:00",
+    "published": {
+      "youtube": "2026-10-31",
+      "instagram": "https://www.instagram.com/reel/DfJ66WSiYJA/",
+      "instagram_story": "17974047299981912",
+      "facebook": "https://www.facebook.com/reel/1758455302118992/"
+    },
+    "postedAt": "2026-10-31T15:47"
   },
   {
     "id": "ZzilLf1hScY",
