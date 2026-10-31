@@ -424,5 +424,14 @@
     "topic": "Phone proximity sensor during calls",
     "job": "20261030-145129",
     "postAt": "2026-11-01T14:00"
+  },
+  {
+    "id": "mKcPrgXveU4",
+    "meta": "channel/videos/auto-magnet-coil-aur-awaaz.json",
+    "date": "2026-10-31",
+    "status": "approved",
+    "topic": "Speaker",
+    "job": "20261031-205655",
+    "postAt": "2026-11-02T14:00"
   }
 ]

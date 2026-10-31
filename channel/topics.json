@@ -1,44 +1,8 @@
 {
   "queue": [
     {
-      "topic": "Sound sensor module and LED",
-      "hook": "Yeh sensor sunta hai, par samajhta kuch nahi!"
-    },
-    {
-      "topic": "Ultrasonic obstacle-avoiding robot",
-      "hook": "Robot ki aankhein nahi hoti, phir bhi deewar se bachta hai"
-    },
-    {
-      "topic": "LDR night lamp",
-      "hook": "Ek chhota resistor andhera pehchanta hai, bina dimaag ke"
-    },
-    {
-      "topic": "Bluetooth HC-05 car control",
-      "hook": "Aapka phone gaadi ko kaise chalata hai? Sirf 2 wire!"
-    },
-    {
-      "topic": "Servo motor angle control",
-      "hook": "Servo ko pata hai woh kahan ghoom raha hai, kaise?"
-    },
-    {
-      "topic": "Sound sensor module: why it reacts to noise, not claps",
-      "hook": "Aapka Arduino Taali Nahi, Sirf Shor Sunta Hai!"
-    },
-    {
-      "topic": "Ultrasonic obstacle-avoiding robot built step by step",
-      "hook": "Ye Robot Aankhon Ke Bina Deewar Kaise Dekhta Hai?"
-    },
-    {
-      "topic": "LDR light sensor in an automatic night lamp project",
-      "hook": "Ye Lamp Andhera Dekhta Nahi, Bas Ek Resistor Badalta Hai"
-    },
-    {
-      "topic": "Touch sensor module TTP223 works through a plastic cover",
-      "hook": "Ye Button Dabta Nahi Hai, Phir Bhi Kaam Karta Hai!"
-    },
-    {
-      "topic": "Why a line follower robot gets confused on a black table",
-      "hook": "Line Follower Robot Ko Kaala Rang Kyun Confuse Karta Hai?"
+      "topic": "Bluetooth HC-05 module",
+      "hook": "Bluetooth Module Aapka Phone Nahi, Sirf Signal Sunta Hai"
     },
     {
       "topic": "Temperature sensor LM35 / DHT11",
@@ -91,10 +55,6 @@
     {
       "topic": "Potentiometer",
       "hook": "The knob that turns position into voltage."
-    },
-    {
-      "topic": "Speaker",
-      "hook": "How a magnet and a coil make every sound you hear."
     },
     {
       "topic": "Infrared thermometer",
@@ -155,6 +115,7 @@
     "Clap switch using a sound sensor",
     "Line follower robot and IR sensor",
     "Self-balancing robot using a gyro sensor",
-    "Phone proximity sensor during calls"
+    "Phone proximity sensor during calls",
+    "Speaker"
   ]
 }

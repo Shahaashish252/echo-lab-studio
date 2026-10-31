@@ -1,0 +1,33 @@
+{
+  "file": "out/auto/magnet-coil-aur-awaaz.mp4",
+  "title": "Yeh Chhota Mic Speaker Ka Ulta Kaam Karta Hai 🎤 #shorts",
+  "description": "Ek taali aur bulb on! Magnet aur coil se awaaz kaise banti hai, aur sound sensor use wapas bijli mein kaise badalta hai?\n🎤 KY-038 sound sensor ka 3D model\n🧲 Speaker mein magnet aur coil ka kaam\n🔬 Electret mic ke andar diaphragm aur backplate\n⚡ LM393 comparator aur blue pot ka threshold\n🔌 Arduino se wiring aur clap switch\nAise aur videos ke liye subscribe karo.\n#shorts #arduino #sound #microphone #electronics #hindi",
+  "tags": [
+    "sound sensor kaise kaam karta hai",
+    "ky-038 sound sensor",
+    "electret microphone explained",
+    "speaker kaise kaam karta hai",
+    "magnet and coil speaker",
+    "clap switch arduino",
+    "lm393 comparator",
+    "sound sensor arduino in hindi",
+    "microphone working in hindi",
+    "speaker working principle",
+    "how speakers work",
+    "arduino sound sensor tutorial",
+    "taali se light on",
+    "electronics in hindi"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "3d Explainer: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Ek taali aur light on? 👏\nYeh chhota mic speaker ka ulta kaam karta hai. Magnet aur coil se awaaz banti hai, aur yeh use wapas signal banata hai 👇\n🎤 Electret mic mein patla diaphragm hilta hai\n🧲 Speaker mein magnet fixed rehta hai, coil hilti hai\n⚡ LM393 signal ko threshold se compare karta hai\n🔌 DO pin Arduino ko clap ka signal deta hai\n💾 Save karo, project banate waqt kaam aayega\n📤 Bhejo us dost ko jo clap switch banana chahta hai\n💬 Tumhara pehla Arduino project kaunsa tha?\n#electronics #arduino #soundsensor #lm393 #clapswitch",
+    "tiktok": "Ek taali se light on kaise hoti hai? 👏 Jaano mic aur speaker ka magnet-coil raaz. Tumne kabhi clap switch banaya hai? #learnontiktok #arduino #electronics #soundsensor #hindi"
+  }
+}

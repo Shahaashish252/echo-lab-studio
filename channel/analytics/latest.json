@@ -1,9 +1,18 @@
 {
-  "updated": "31 Oct 2026, 14:38",
+  "updated": "31 Oct 2026, 21:10",
   "youtube": {
     "subs": 3,
     "views": 2101,
     "videos": [
+      {
+        "title": "Gyro Ke Bina Ye Robot Turant Gir Jaata 🤖 #shorts",
+        "id": "A4PXvpSAuqQ",
+        "status": "public",
+        "published": "2026-10-31",
+        "views": 60,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Kaan Lagate Hi Screen Band: Raaz IR Light Ka #shorts",
         "id": "ZzilLf1hScY",
@@ -18,17 +27,8 @@
         "id": "iahxwpQgd8A",
         "status": "public",
         "published": "2026-10-30",
-        "views": 223,
+        "views": 236,
         "likes": 1,
-        "comments": 0
-      },
-      {
-        "title": "Gyro Ke Bina Ye Robot Turant Gir Jaata 🤖 #shorts",
-        "id": "A4PXvpSAuqQ",
-        "status": "private",
-        "published": "2026-10-29",
-        "views": 0,
-        "likes": 0,
         "comments": 0
       },
       {
@@ -36,7 +36,7 @@
         "id": "24-dufDGzxc",
         "status": "public",
         "published": "2026-10-29",
-        "views": 585,
+        "views": 592,
         "likes": 4,
         "comments": 2
       },
@@ -490,16 +490,27 @@
   },
   "instagram": {
     "username": "echo.lab3d",
-    "followers": 9,
+    "followers": 12,
     "posts": [
+      {
+        "title": "Ye robot gir kyun nahi raha? 🤖",
+        "url": "https://www.instagram.com/reel/DfJ66WSiYJA/",
+        "published": "2026-10-31",
+        "likes": 19,
+        "comments": 0,
+        "reach": 963,
+        "views": 1130,
+        "saved": 12,
+        "shares": 1
+      },
       {
         "title": "Robot ko dimaag nahi, phir bhi line pakadta hai 🤖",
         "url": "https://www.instagram.com/reel/DfHNfgYITS4/",
         "published": "2026-10-30",
         "likes": 20,
         "comments": 0,
-        "reach": 1085,
-        "views": 1253,
+        "reach": 1088,
+        "views": 1255,
         "saved": 3,
         "shares": 1
       },
@@ -509,8 +520,8 @@
         "published": "2026-10-29",
         "likes": 14,
         "comments": 2,
-        "reach": 1105,
-        "views": 1258,
+        "reach": 1106,
+        "views": 1264,
         "saved": 10,
         "shares": 2
       },
@@ -674,8 +685,8 @@
         "published": "2026-10-19",
         "likes": 3,
         "comments": 6,
-        "reach": 112,
-        "views": 131,
+        "reach": 113,
+        "views": 132,
         "saved": 2,
         "shares": 1
       },

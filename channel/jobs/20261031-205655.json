@@ -4,7 +4,7 @@
   "hook": "How a magnet and a coil make every sound you hear.",
   "lang": "hi",
   "started": "2026-10-31T20:56:55",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -40,5 +40,7 @@
     }
   ],
   "format": "studio",
-  "module": "sound"
+  "module": "sound",
+  "finished": "2026-10-31T21:10:34",
+  "uploadId": "mKcPrgXveU4"
 }
