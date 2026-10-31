@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Sound sensor module and LED",
+      "hook": "Yeh sensor sunta hai, par samajhta kuch nahi!"
+    },
+    {
+      "topic": "Ultrasonic obstacle-avoiding robot",
+      "hook": "Robot ki aankhein nahi hoti, phir bhi deewar se bachta hai"
+    },
+    {
+      "topic": "LDR night lamp",
+      "hook": "Ek chhota resistor andhera pehchanta hai, bina dimaag ke"
+    },
+    {
+      "topic": "Bluetooth HC-05 car control",
+      "hook": "Aapka phone gaadi ko kaise chalata hai? Sirf 2 wire!"
+    },
+    {
+      "topic": "Servo motor angle control",
+      "hook": "Servo ko pata hai woh kahan ghoom raha hai, kaise?"
+    },
+    {
       "topic": "Sound sensor module: why it reacts to noise, not claps",
       "hook": "Aapka Arduino Taali Nahi, Sirf Shor Sunta Hai!"
     },

@@ -1,26 +1,26 @@
 {
-  "updated": "2026-10-30T21:37",
+  "updated": "2026-10-31T14:38",
   "videos": 18,
-  "summary": "Your Hindi videos do far better on Instagram than YouTube: Instagram gets hundreds to over a thousand views per video, while YouTube mostly gets under 30. The best performers are Clap Switch, Robot/IR Sensor and PIR Motion Sensor, which turn a familiar thing into a surprising 'it doesn't do what you think' idea and earn shares and saves. Generic 'how does X detect Y' videos about taps, doors and smoke alarms get views but almost no shares or saves, and the one English video only reached YouTube.",
-  "winningPattern": "Hindi Instagram Reels about a simple, hands-on maker sensor or robot (PIR, clap switch, IR, line follower) with a myth-busting or surprise hook that says what the device cannot do ('Nahi Dekhta', 'Nahi Sunta', 'Dimaag Nahi Hota'), or a curiosity question about a robot behaviour. Titles are short, Hinglish, with one emoji, and name the sensor or project. Sensors a student could build or buy beat everyday-building devices like taps, lifts and mall doors.",
+  "summary": "Instagram is doing nearly all the work: most Hindi videos get 100 to 1,400 views there, while YouTube Shorts mostly gets under 30 views. The best videos use a surprising 'it can't do X, yet it does' hook (like the clap switch that only hears noise) about familiar sensors such as motion, IR and line-follower robots. Weak ones are plain 'how does X work?' titles on everyday gadgets (taps, doors, smoke alarms), which get few likes, shares or saves.",
+  "winningPattern": "Hindi, Instagram-first Shorts about a simple sensor or robot behaviour that makers can build with Arduino. The title opens with a surprising or personified claim ('Clap Switch Taali Nahi, Sirf Shor Sunta Hai', 'Line Follower Robot Ke Paas Dimaag Nahi Hota', 'Motion Sensor Aapko Dekhta Nahi!'), then ends with a question or an emoji. Robot or maker projects get the shares and saves; generic public-place gadgets do not.",
   "doMore": [
-    "Open with a 'X doesn't actually do Y' twist, as in the Clap Switch and PIR videos",
-    "Make videos about buildable maker projects and robots (line follower, obstacle avoidance, clap switch) rather than building fixtures",
-    "Ask for a share or save in the last line, e.g. 'Save karo jab project banao', since shares and saves drive the score",
-    "Prioritise Instagram, and repost the strongest Reels to YouTube with a punchier first second and a clear title, since YouTube is lagging far behind",
-    "Make a short series on one sensor family (PIR, IR, sound) and point each video to the next"
+    "Open every title with a surprising contradiction: 'X can't do Y, yet it does'",
+    "Pick sensors and robots a student can build with Arduino, such as clap switch, PIR, IR and line follower",
+    "Post to Instagram first and optimise for shares and saves, since that is where the audience is",
+    "End each video with a clear takeaway or a 'save this for your project' line to raise saves",
+    "Test YouTube separately with a stronger first 2 seconds, as the same cut is not landing there"
   ],
   "stopDoing": [
-    "Near-duplicate topics (two smoke detector videos, two automatic tap videos, two IR videos) that split the audience",
-    "Generic 'kaise pehchanta hai' videos on everyday devices like mall doors, lifts and washroom taps",
-    "Mixing in English narration on a Hindi channel without a clear test plan"
+    "Stop making near-duplicate videos on the same topic (two smoke detector, two automatic tap, two IR sensor videos split the audience)",
+    "Stop plain 'X kaise kaam karta hai?' titles for everyday public gadgets like mall doors, lifts and washroom taps",
+    "Stop mixing in English videos with no Instagram version until you have tested them there"
   ],
   "nextTopics": [
-    "Sound sensor module: why it reacts to noise, not claps",
-    "Ultrasonic obstacle-avoiding robot built step by step",
-    "LDR light sensor in an automatic night lamp project",
-    "Touch sensor module TTP223 works through a plastic cover",
-    "Why a line follower robot gets confused on a black table"
+    "Sound sensor module and LED",
+    "Ultrasonic obstacle-avoiding robot",
+    "LDR night lamp",
+    "Bluetooth HC-05 car control",
+    "Servo motor angle control"
   ],
   "bestTimes": {
     "times": [
