@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Infrared thermometer (open with this hook: \"How a thermometer measures you without touching.\")\" (Claude Code)",
       "at": "2026-11-01T15:26:32"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-11-01T15:27:10"
     }
   ],
   "format": "studio",
