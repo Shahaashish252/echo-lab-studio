@@ -57,10 +57,6 @@
       "hook": "The knob that turns position into voltage."
     },
     {
-      "topic": "Infrared thermometer",
-      "hook": "How a thermometer measures you without touching."
-    },
-    {
       "topic": "GPS",
       "hook": "Your phone listens to 4 satellites at once."
     },
@@ -116,6 +112,7 @@
     "Line follower robot and IR sensor",
     "Self-balancing robot using a gyro sensor",
     "Phone proximity sensor during calls",
-    "Speaker"
+    "Speaker",
+    "Infrared thermometer"
   ]
 }

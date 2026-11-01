@@ -440,5 +440,14 @@
     "topic": "Speaker",
     "job": "20261031-205655",
     "postAt": "2026-11-02T14:00"
+  },
+  {
+    "id": "mgYNJJc0QeA",
+    "meta": "channel/videos/auto-touchless-thermometer-ir.json",
+    "date": "2026-11-01",
+    "status": "approved",
+    "topic": "Infrared thermometer",
+    "job": "20261101-152614",
+    "postAt": "2026-11-03T14:00"
   }
 ]

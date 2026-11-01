@@ -1,32 +1,31 @@
 {
-  "updated": "2026-10-31T20:56",
-  "videos": 19,
-  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly gets under 100 views. The best videos (Clap Switch, PIR Sensor, Gyro Robot, Line Follower, IR Robot) explain a familiar gadget or robot with a surprising or 'it can't do X' hook, and they earn the most likes, saves and shares. Everyday-object videos (taps, lifts, smoke alarms, remote) get far fewer views and almost no saves or shares, and the English Arduino video has no Instagram presence at all.",
-  "winningPattern": "Robot or sensor-behavior subjects that makers relate to (clap switch, PIR, line follower, gyro, IR obstacle robot), with a contrarian or curiosity hook ('doesn't listen to claps, only noise', 'doesn't see you', 'has no brain', 'would fall instantly'). Titles are short Hinglish with one bold claim, an emoji and #shorts. Instagram Reels is the main driver, with saves and shares highest on the build-it-yourself style topics.",
+  "updated": "2026-11-01T15:26",
+  "videos": 20,
+  "summary": "Instagram is carrying the channel: almost every Hindi video gets 400-1,400 views there, while YouTube Shorts mostly gets under 30 views. The best videos explain a 'dumb-looking' machine or sensor with a surprising claim (clap switch, gyro robot, PIR sensor, line follower), and they earn more likes and saves. Generic 'how does X work?' videos about doors, taps, smoke detectors and touchscreens get little attention, and the one English video did not reach Instagram at all.",
+  "winningPattern": "Robot/maker-project subjects (clap switch, gyro balancing robot, PIR, line follower, IR obstacle robot) with a surprising or 'it can't actually do what you think' Hindi hook, titled as a bold statement ('X Nahi, Sirf Y Sunta Hai', 'Gyro Ke Bina Ye Robot Turant Gir Jaata') rather than a plain question. Posted on Instagram Reels first, where reach is 5-20x higher than YouTube. Saves and shares come from concrete builds students can copy, while everyday-appliance explainers underperform.",
   "doMore": [
-    "Lead with a surprising 'X doesn't actually do Y' claim in the first line, as the Clap Switch and PIR videos do",
-    "Pick robot and Arduino-module topics (motors, servo, line/obstacle robots, balancing) over generic household devices",
-    "Make each video useful to save: end with the one component or wiring tip people can note down",
-    "Add a share trigger such as a common myth or 'send this to a friend building a robot'",
-    "Post on Instagram first and test a different, more search-friendly title and hook on YouTube, since it lags badly there"
+    "Make Arduino/robot build-based videos (balancing, line follower, obstacle avoidance) with a bold 'it has no brain / can't see' claim",
+    "Use statement-style Hindi titles with a twist instead of 'Kaise Kaam Karta Hai? 🤔'",
+    "End with a save-worthy prompt like 'Save karo, project banana hai' and show the module name and wiring",
+    "Prioritize Instagram Reels and post there first; cross-post to YouTube with a stronger first-frame hook",
+    "Continue the clap switch, PIR and gyro series as follow-ups (Part 2, build guide)"
   ],
   "stopDoing": [
-    "Making near-duplicate topics (two IR sensor, two tap, two smoke detector videos) that split the audience and underperform",
-    "Generic 'Kaise Kaam Karta Hai? 🤔' titles on everyday objects with no surprising angle",
-    "Publishing English or any video on one platform only"
+    "Generic everyday-appliance explainers (tap, mall door, lift, smoke detector) with the same question-style title",
+    "Posting near-duplicate topics (two IR sensor, two smoke, two tap videos) within days of each other"
   ],
   "nextTopics": [
-    "Servo motor angle control",
-    "Self-balancing robot",
-    "Bluetooth HC-05 module",
-    "Ultrasonic obstacle-avoiding robot",
-    "Motor driver L298N"
+    "Self-balancing robot with MPU6050 build",
+    "Sound sensor module vs. clap switch circuit",
+    "Obstacle avoiding robot with ultrasonic sensor",
+    "Line follower robot with two IR sensors",
+    "PIR sensor night alarm with Arduino"
   ],
   "bestTimes": {
     "times": [
       "14:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (18 posts)"
+    "reason": "from our own posts: these hours averaged the most views (19 posts)"
   }
 }

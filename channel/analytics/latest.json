@@ -1,25 +1,34 @@
 {
-  "updated": "31 Oct 2026, 21:10",
+  "updated": "01 Nov 2026, 15:42",
   "youtube": {
     "subs": 3,
-    "views": 2101,
+    "views": 2396,
     "videos": [
+      {
+        "title": "Kaan Lagate Hi Screen Band: Raaz IR Light Ka #shorts",
+        "id": "ZzilLf1hScY",
+        "status": "public",
+        "published": "2026-11-01",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
+      {
+        "title": "Yeh Chhota Mic Speaker Ka Ulta Kaam Karta Hai 🎤 #shorts",
+        "id": "mKcPrgXveU4",
+        "status": "private",
+        "published": "2026-10-31",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Gyro Ke Bina Ye Robot Turant Gir Jaata 🤖 #shorts",
         "id": "A4PXvpSAuqQ",
         "status": "public",
         "published": "2026-10-31",
-        "views": 60,
-        "likes": 0,
-        "comments": 0
-      },
-      {
-        "title": "Kaan Lagate Hi Screen Band: Raaz IR Light Ka #shorts",
-        "id": "ZzilLf1hScY",
-        "status": "private",
-        "published": "2026-10-30",
-        "views": 0,
-        "likes": 0,
+        "views": 226,
+        "likes": 2,
         "comments": 0
       },
       {
@@ -27,8 +36,8 @@
         "id": "iahxwpQgd8A",
         "status": "public",
         "published": "2026-10-30",
-        "views": 236,
-        "likes": 1,
+        "views": 364,
+        "likes": 2,
         "comments": 0
       },
       {
@@ -36,7 +45,7 @@
         "id": "24-dufDGzxc",
         "status": "public",
         "published": "2026-10-29",
-        "views": 592,
+        "views": 593,
         "likes": 4,
         "comments": 2
       },
@@ -331,12 +340,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-03",
-        "views": 0,
-        "minutes": 0,
-        "subs": 0
-      },
-      {
         "day": "2026-10-04",
         "views": 0,
         "minutes": 0,
@@ -485,6 +488,12 @@
         "views": 22,
         "minutes": 4,
         "subs": 0
+      },
+      {
+        "day": "2026-10-29",
+        "views": 278,
+        "minutes": 27,
+        "subs": 0
       }
     ]
   },
@@ -493,13 +502,24 @@
     "followers": 12,
     "posts": [
       {
+        "title": "Kaan lagate hi screen band kyun? 📱",
+        "url": "https://www.instagram.com/reel/DfMTpAuiLCk/",
+        "published": "2026-11-01",
+        "likes": 10,
+        "comments": 1,
+        "reach": 1050,
+        "views": 1219,
+        "saved": 2,
+        "shares": 0
+      },
+      {
         "title": "Ye robot gir kyun nahi raha? 🤖",
         "url": "https://www.instagram.com/reel/DfJ66WSiYJA/",
         "published": "2026-10-31",
         "likes": 19,
         "comments": 0,
-        "reach": 963,
-        "views": 1130,
+        "reach": 1059,
+        "views": 1180,
         "saved": 12,
         "shares": 1
       },
@@ -510,7 +530,7 @@
         "likes": 20,
         "comments": 0,
         "reach": 1088,
-        "views": 1255,
+        "views": 1256,
         "saved": 3,
         "shares": 1
       },
@@ -520,8 +540,8 @@
         "published": "2026-10-29",
         "likes": 14,
         "comments": 2,
-        "reach": 1106,
-        "views": 1264,
+        "reach": 1108,
+        "views": 1266,
         "saved": 10,
         "shares": 2
       },
@@ -554,7 +574,7 @@
         "likes": 15,
         "comments": 2,
         "reach": 1232,
-        "views": 1361,
+        "views": 1362,
         "saved": 4,
         "shares": 10
       },
@@ -686,7 +706,7 @@
         "likes": 3,
         "comments": 6,
         "reach": 113,
-        "views": 132,
+        "views": 133,
         "saved": 2,
         "shares": 1
       },

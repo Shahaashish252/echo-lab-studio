@@ -1,0 +1,33 @@
+{
+  "file": "out/auto/touchless-thermometer-ir.mp4",
+  "title": "Thermometer Gun Aapki Roshni Padhti Hai 👀 #shorts",
+  "description": "Bina chhue thermometer aapka temperature kaise napta hai? Chaliye infrared ka poora raaz 3D mein dekhte hain.\n🌡️ Skin se nikalti invisible infrared aur thermopile ka kaam\n🔦 FC-51 module kaise khud IR beam bhejta hai\n⚡ Photodiode ke andar electrons aur chhota current\n🧠 LM393 comparator aur blue pot ki range setting\n🔌 Module ko Arduino se jodna\nAise aur 3D explainers ke liye subscribe karo.\n#shorts #infrared #arduino #sensor #electronics #hindi #stem",
+  "tags": [
+    "infrared thermometer kaise kaam karta hai",
+    "how infrared thermometer works",
+    "touchless thermometer in hindi",
+    "thermopile sensor explained",
+    "mlx90614 explained",
+    "fc-51 ir sensor",
+    "ir obstacle sensor arduino",
+    "ir sensor kaise kaam karta hai",
+    "infrared light kya hai",
+    "lm393 comparator",
+    "photodiode explained",
+    "thermometer gun science",
+    "arduino sensor in hindi",
+    "electronics explained 3d"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "How Sensors Work: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Bina chhue thermometer aapko kaise napta hai? 🌡️\nSkin se invisible infrared nikalti hai, aur sensor use pakadta hai. Is video mein dekho ek IR sensor module andar se 👇\n🌡️ Skin infrared chhodti hai, thermopile usse chhota voltage banata hai\n🔦 FC-51 module khud 940 nm ki IR beam bhejta hai\n⚡ Photodiode mein roshni se chhota current bahta hai\n🎛️ Blue pot se 2 se 30 cm range set hoti hai\n💾 Save karo\n📤 Bhejo us dost ko jo thermometer gun se darta hai\n💬 Aapko kaunsa sensor sabse jyada confusing lagta hai?\n#electronics #science #arduino #infrared #sensors",
+    "tiktok": "Thermometer bina chhue aapko kaise napta hai? 🌡️ Dekho infrared aur IR sensor ka 3D raaz. Aapko kaunsa sensor next chahiye? #learnontiktok #electronics #arduino #infrared #sensors"
+  }
+}
