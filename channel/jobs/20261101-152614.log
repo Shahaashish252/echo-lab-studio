@@ -36,3 +36,20 @@
   studio plan: 10 shots of the ir module
 
 == voice (Microsoft Edge: Madhur)
+Downloading onnxruntime (22.7MiB)
+ Downloaded onnxruntime
+Installed 27 packages in 22ms
+[0;93m2026-11-01 15:28:17.454847502 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        2.62s  थर्मामीटर बिना छुए आपको कैसे नापता है?
+s1-2        4.01s  त्वचा इन्फ्रारेड छोड़ती है, थर्मोपाइल उससे वोल्टेज बनाता है।
+s1-3        3.69s  एफसी इक्यावन अलग है, यह खुद इन्फ्रारेड भेजता है।
+s1-4        2.49s  किरण चीज़ से टकराकर वापस लौटती है।
+s1-5        3.43s  रोशनी इलेक्ट्रॉन छुड़ाती है, तो छोटा करंट बहता है।
+s1-6        3.48s  एलएम तीन सौ तिरानवे इसे पॉट की सीमा से मिलाता है।
+s1-7        3.58s  पॉट रेंज सेट करता है, काली चीज़ पास पकड़ी जाती है।
+s1-8        3.36s  चीज़ दिखे तो आउटपुट लो होता है, एलईडी जलती है।
+s1-9        2.77s  तो थर्मामीटर बिना छुए आपको कैसे नापता है?
+s1-10       0.73s  फॉलो करो!
+wrote 10 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit
