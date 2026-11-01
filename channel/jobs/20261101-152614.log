@@ -1,2 +1,32 @@
 
 == research: reading about the topic on the web
+  | **Hook:** "How a thermometer measures you without touching."
+  | 
+  | **HOW IT WORKS**
+  | 1. Every warm object, including skin, emits invisible infrared (IR) light. Hotter objects emit more.
+  | 2. A lens or window focuses that IR onto a thermopile. A filter in the package blocks visible and near-IR light.
+  | 3. The thermopile is a stack of thermocouples. IR heats one side of it, and that makes a tiny voltage.
+  | 4. A second sensor measures the sensor's own temperature, which gives a reference.
+  | 5. An ADC and DSP turn the voltage into a temperature. A set emissivity value corrects for how well skin radiates.
+  | 6. The display shows the reading.
+  | 
+  | **REAL PARTS**
+  | - Melexis MLX90614 (I²C, 17-bit ADC, medical-grade variant).
+  | - Other thermopile sensors exist, but I didn't verify their part numbers.
+  | 
+  | **MYTH**
+  | Myth: forehead "guns" read core temperature exactly. Truth: they read skin surface temperature. Distance, sweat and position all change the result. An NPL review says the built-in emissivity correction in forehead devices is at best unsubstantiated.
+  | 
+  | **SURPRISING FACT**
+  | The MLX90614 is accurate to ±0.5 °C at room temperature. The medical version is ±0.2 °C, but only in a limited range near body temperature. Both figures are guaranteed only when the sensor is in thermal equilibrium. Walk in from the cold and it can read wrong.
+  | 
+  | **TIP**
+  | Let the thermometer sit in the room for a while, and wipe sweat off your forehead before you measure. Hold it at the distance the manual gives.
+  | 
+  | **Not verified:** the spectral band (5.5–14 µm) and the exact field of view. Check the Melexis datasheet before stating them.
+  | 
+  | Sources:
+  | - [MLX90614 datasheet](https://media.melexis.com/-/media/files/documents/datasheets/mlx90614-datasheet-melexis.pdf)
+  | - [NPL body temperature review](https://www.npl.co.uk/getattachment/fce2a6cd-5122-4051-822c-f5ef89e97a3b/CCT-TG-on-Body-Temperature-measurement.pdf?lang=en-GB)
+
+== storyboard: "Infrared thermometer (open with this hook: "How a thermometer measures you without touching.")" (Claude Code)
