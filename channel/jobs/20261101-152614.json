@@ -1,0 +1,16 @@
+{
+  "id": "20261101-152614",
+  "topic": "Infrared thermometer",
+  "hook": "How a thermometer measures you without touching.",
+  "lang": "hi",
+  "started": "2026-11-01T15:26:14",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-11-01T15:26:14"
+    }
+  ],
+  "format": "studio",
+  "module": "ir"
+}
