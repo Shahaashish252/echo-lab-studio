@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Self-balancing robot with MPU6050",
+      "hook": "Ye robot girta kyun nahi? Jawab sirf 1 chip mein"
+    },
+    {
+      "topic": "Obstacle avoiding robot with ultrasonic sensor",
+      "hook": "Is robot ki aankhen nahi hain, phir bhi takrata nahi"
+    },
+    {
+      "topic": "Bluetooth car with HC-05",
+      "hook": "Ye gaadi wire ke bina phone se kaise chalti hai?"
+    },
+    {
+      "topic": "Light-following robot with LDR",
+      "hook": "Is robot ko roshni se pyaar hai, dimaag nahi"
+    },
+    {
+      "topic": "Sound-activated light with a mic module",
+      "hook": "Ye bulb kaan se nahi, chip se sunta hai"
+    },
+    {
       "topic": "Bluetooth HC-05 module",
       "hook": "Bluetooth Module Aapka Phone Nahi, Sirf Signal Sunta Hai"
     },
