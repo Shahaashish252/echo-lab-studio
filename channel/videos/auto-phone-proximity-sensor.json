@@ -29,5 +29,6 @@
   "social": {
     "instagram": "Kaan lagate hi screen band kyun? 📱\nPhone ke andar ek invisible light chhupi hai.\nDekho 3D mein kaise kaam karti hai 👇\n🔦 IR LED 940 nm ki invisible light bhejti hai\n📡 Photodiode wapas aayi light naapta hai\n🧠 Comparator threshold se compare karke decide karta hai\n💾 Save it for your next electronics revision\n📤 Send it to a friend who thinks it's a touch sensor\n💬 Aapke phone ki screen kabhi call pe atki hai?\n#electronics #sensors #arduino #proximitysensor #irsensor",
     "tiktok": "Call pe kaan lagate hi screen band kyun? 📱 Dekho invisible IR light ka kamaal! Aapki screen kabhi call pe atki hai? #learnontiktok #electronics #arduino #sensors #hindi"
-  }
+  },
+  "cover": "/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/phone-proximity-sensor.cover.jpg"
 }
