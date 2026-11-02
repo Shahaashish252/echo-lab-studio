@@ -1,2 +1,31 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. The microcontroller (Arduino or ESP) sends a TRIG pulse of at least 10 µs.
+  | 2. The module emits a burst of eight 40 kHz ultrasonic pulses from the TX transducer.
+  | 3. The sound hits the wall and reflects back to the RX transducer.
+  | 4. ECHO goes HIGH for exactly the round-trip time.
+  | 5. Distance = echo time × speed of sound ÷ 2. The datasheet uses 340 m/s, and the shortcut is µs ÷ 58 = cm.
+  | 6. The code maps the distance to beeps: closer means faster beeps. Wait more than 60 ms between triggers.
+  | 
+  | **REAL PARTS**
+  | - HC-SR04 (ElecFreaks) with two 40 kHz transducers, one TX and one RX.
+  | - Arduino Uno or ESP32 to time the echo (pulseIn()).
+  | - Active buzzer or LEDs for the alert.
+  | - Waterproof alternatives: JSN-SR04T and the A02YYUW. I know these from memory and didn't verify them in this research.
+  | 
+  | **MYTH**
+  | - Myth: the sensor "sees" the wall like a camera.
+  | - Truth: it only measures time of flight. Soft or angled targets (foam, fabric, slanted surfaces) absorb or deflect the sound, so they can go undetected.
+  | 
+  | **SURPRISING FACT**
+  | - Range is 2–400 cm, and the datasheet claims 3 mm accuracy. One source says realistic precision is closer to 1 cm.
+  | - The speed of sound changes about 0.17% per °C, so a hot or cold day shifts readings. This figure comes from lambdageeks, a lower-quality source.
+  | 
+  | **TIP**
+  | - Add a temperature sensor (DHT22 or DS18B20) and correct the speed of sound: v ≈ 331 + 0.6·T m/s.
+  | - Beam angle is about 15°, so mount the sensor level and aimed away from the ground. There is also a dead zone under 2 cm.
+  | 
+  | Sources: [ElecFreaks datasheet copy](https://mischianti.org/wp-content/uploads/2025/11/Datasheet-HCSR04-classic.pdf), [Microchip ultrasonic limits](https://onlinedocs.microchip.com/pr/GUID-96D864E8-9F26-4895-9ABC-7ABC158C55B2-en-US-6/GUID-737BF3D3-873E-4759-9CB3-F5D10B4D96F1.html), [lambdageeks](https://lambdageeks.com/?p=249788)
+
+== storyboard: "Car reverse parking sensor: HC-SR04 ultrasonic se gaadi deewar ki doori kaise napti hai" (Claude Code)
