@@ -1,0 +1,34 @@
+{
+  "file": "out/auto/stair-light-pir-sensor.mp4",
+  "title": "Sensor Aapko Dekhta Nahi, Bas Garmi Mehsoos Karta Hai #shorts",
+  "description": "Seedhi pe kadam rakha aur light khud jal gayi! Kaise? Jaaniye HC-SR501 PIR sensor ka poora raaz.\n🔥 Body heat se motion kaise pakadta hai\n🔍 Fresnel dome aur twin pyroelectric elements ke andar kya hai\n🧠 BISS0001 chip signal ko HIGH kaise banata hai\n🎛️ Time aur sensitivity pot se 3 se 7 meter ki setting\n🔌 Arduino se wiring aur 3.3V output\nAise aur 3D explainers ke liye subscribe karo.\n#shorts #pirsensor #hcsr501 #arduino #electronics #hindi #motionsensor",
+  "tags": [
+    "pir sensor",
+    "hc-sr501",
+    "pir sensor kaise kaam karta hai",
+    "motion sensor in hindi",
+    "automatic stair light",
+    "pir motion sensor arduino",
+    "pyroelectric sensor",
+    "fresnel lens",
+    "biss0001",
+    "hc-sr501 explained",
+    "arduino sensor hindi",
+    "how pir sensor works",
+    "motion sensor light kaise jalti hai",
+    "electronics in hindi",
+    "arduino project hindi"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "How It Works: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Seedhi ki light khud kaise jalti hai? 💡\nYeh sensor aapko DEKHTA nahi, sirf garmi mehsoos karta hai.\nPIR HC-SR501 ke andar ka poora raaz 👇\n🔥 Do pyroelectric halves garmi ka change pakadte hain\n⚪ Fresnel dome room ko zones mein baantta hai\n🎛️ Pots se hold time aur 3-7 m range set hoti hai\n💾 Save karo\n📤 Us dost ko bhejo jo Arduino seekh raha hai\n💬 Aapke ghar mein motion light kahan lagi hai?\n#electronics #arduino #pirsensor #hcsr501 #motionsensor",
+    "tiktok": "Light khud kaise jali? 💡 PIR sensor garmi ka change pakadta hai, aapko dekhta nahi! Aapke ghar mein motion light kahan hai? #learnontiktok #arduino #pirsensor #electronics #hindi"
+  }
+}

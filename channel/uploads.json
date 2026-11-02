@@ -474,5 +474,14 @@
     "topic": "Car reverse parking sensor: HC-SR04 ultrasonic se gaadi deewar ki doori kaise napti hai",
     "job": "20261102-201310",
     "postAt": "2026-11-03T15:00"
+  },
+  {
+    "id": "nHR2_Dsl4I0",
+    "meta": "channel/videos/auto-stair-light-pir-sensor.json",
+    "date": "2026-11-02",
+    "status": "approved",
+    "topic": "Automatic stair light: PIR motion sensor aapki body heat se kaise light jalata hai",
+    "job": "20261102-222216",
+    "postAt": "2026-11-04T15:00"
   }
 ]

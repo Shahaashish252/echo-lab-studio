@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-02T20:12",
+  "updated": "2026-11-02T22:22",
   "videos": 21,
-  "summary": "Instagram is doing nearly all the work: most Hindi videos get 1,000+ views there, while YouTube gives almost nothing (often under 30 views). The best videos are short, punchy Hindi pieces about a robot or sensor behaving in a surprising way, with a bold claim in the title. Generic 'how does X work?' videos about everyday devices (taps, doors, smoke alarms) get weak views, few likes and almost no saves or shares.",
-  "winningPattern": "Robot or maker-project subject (gyro robot, clap switch, line follower, PIR, IR obstacle robot, mic) + a surprising 'it cannot do X, yet it does' hook in casual Hinglish + a short title ending with an emoji and #shorts, posted mainly for Instagram Reels. Titles that make a claim ('Taali Nahi, Sirf Shor Sunta Hai', 'Dimaag Nahi Hota', 'Bina Gyro Gir Jaata') beat neutral questions ('Kaise Kaam Karta Hai?'). Maker-relevant modules that viewers can build themselves earn the most likes, saves and shares.",
+  "summary": "Instagram is doing the work: almost every Hindi video gets 1,000+ views there, while YouTube Shorts barely moves except for a few videos. The best ones show a robot or a simple gadget doing something surprising, with a bold, funny or provocative title. Plain 'how does X work?' videos about doors, taps and alarms get far fewer views, likes, shares and saves.",
+  "winningPattern": "Robots and hands-on maker gadgets (gyro robot, clap switch, line follower, mic vs speaker) with a surprising, personified claim in short Hindi-English (Hinglish) titles, e.g. 'X ke bina Y gir jaata', 'Z sunta hai, dekhta nahi'. They are posted mainly on Instagram, where they get 1,200-1,400 views and the most likes and saves. The few YouTube hits (500-700 views) share the same topics: gyro, clap switch, PIR sensor.",
   "doMore": [
-    "Make robot and Arduino-module videos (gyro, clap switch, line follower, IR, mic) that students can copy, since these get the most views, likes and saves",
-    "Open with a bold or counter-intuitive claim in the title and first line instead of 'Kaise kaam karta hai?'",
-    "Show a visible before/after or fail/success moment (robot falls without gyro, light turns on with a clap) in the first 2 seconds",
-    "Add a save-worthy ending such as 'Save karo, build karte waqt kaam aayega' and a clear share prompt to boost saves and shares",
-    "Treat Instagram as the main platform and test YouTube separately with a different title, thumbnail frame or posting time before putting more effort there"
+    "Make robot and Arduino-module videos where something visibly reacts, falls or moves in the first 2 seconds",
+    "Write titles as a surprising contradiction: 'Yeh X karta nahi, phir bhi Y kaise?'",
+    "Post to Instagram first, since it reliably gets 10x the views, then cross-post to YouTube only the strongest ones",
+    "Reuse the proven topics (gyro, clap, PIR, line follower, mic) with new angles or sensors from the same family",
+    "End with a reason to save, such as a 'circuit cheat sheet' or 'try this at home' prompt, because saves are the clearest sign of interest"
   ],
   "stopDoing": [
-    "Stop making generic everyday-device explainers (washroom tap, mall door, lift door, street light, smoke detector) with no build angle",
-    "Stop posting near-duplicate topics (two smoke detector videos, two automatic tap videos, two IR sensor videos) within days of each other",
-    "Stop expecting the same title and format to work on YouTube and Instagram without any changes"
+    "Stop making generic 'X kaise kaam karta hai?' videos on public-place gadgets (lift, mall door, taps, street light, smoke detector); several near-duplicate videos on the same topic split the audience",
+    "Stop posting English-only or flat explainer titles; the one English video got 161 YouTube views and 0 on Instagram",
+    "Stop using the repeated '🤔 Kaise...?' title template for every video, since the audience has stopped responding to it"
   ],
   "nextTopics": [
-    "Servo motor without a brain",
-    "Ultrasonic obstacle-avoiding robot",
-    "LDR light-following robot",
-    "Bluetooth module HC-05 controlling a car",
-    "Buzzer and touch sensor Arduino build"
+    "Self-balancing robot with MPU6050 gyro",
+    "Sound sensor module: why a whistle triggers it too",
+    "Obstacle-avoiding robot with ultrasonic sensor",
+    "Speaker works as a microphone",
+    "LDR light sensor night lamp on Arduino"
   ],
   "bestTimes": {
     "times": [

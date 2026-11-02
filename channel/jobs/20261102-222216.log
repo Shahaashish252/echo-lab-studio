@@ -76,3 +76,12 @@ exported to /home/runner/work/echo-lab-studio/echo-lab-studio/out/blender: scene
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/stair-light-pir-sensor.mp4 (12 parts, 12.4 min)
 
 == youtube
+  Sensor Aapko Dekhta Nahi, Bas Garmi Mehsoos Karta Hai #shorts
+  metadata: channel/videos/auto-stair-light-pir-sensor.json
+
+  uploading  77.8%
+uploaded https://youtu.be/nHR2_Dsl4I0  (private)
+created playlist How It Works: Shorts
+! not added to the playlist (<HttpError 409 when requesting https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned "T)
+
+DONE in 33.1 min -> /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/stair-light-pir-sensor.mp4
