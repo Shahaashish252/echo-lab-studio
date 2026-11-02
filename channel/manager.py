@@ -102,24 +102,59 @@ def schedule() -> dict:
 
 # ---- topics -------------------------------------------------------------------------------------
 
-# the 3D modules the studio format can film (app/src/scenes/auto/studio.ts), and the topics each one explains;
-# checked in this order, so "street light" is the LDR before anything else
+# the 3D modules the studio format can film (app/src/scenes/auto/studio.ts MODULE_KINDS) and what each one GENUINELY
+# explains - a topic only gets a module when the device in it really works on that module's principle
 STUDIO_MODULES = {
-    "flame": (r"flame|fire", "a flame sensor module (fire alarms, candle detection)"),
-    "sound": (r"sound|clap|noise|microphone|\bmic\b|voice", "a sound sensor module KY-038 (clap switches, noise alarms)"),
-    "ldr": (r"\bldr\b|light sensor|street ?light|night ?lamp|dark|photoresistor|day.?night|automatic light|solar light",
-            "an LDR light sensor module (automatic street lights, night lamps)"),
-    "ir": (r"\bir\b|infrared|obstacle|proximity|\btap\b|faucet|sanitizer|dryer|\blift\b|elevator|robot|line follower|"
-           r"object counter|fc-51|automatic door|dustbin",
-           "an IR obstacle sensor module FC-51 (robots, automatic taps, sanitizer dispensers, lift doors, smart dustbins)"),
+    "ir": "FC-51 IR obstacle sensor: an IR LED and a photodiode notice a NEARBY object by reflected infrared "
+          "(robots avoiding walls, automatic taps and sanitizer dispensers, smart dustbins, object counters, line followers)",
+    "ldr": "LDR light sensor module: a photoresistor whose resistance falls in light (automatic street lights, night lamps, "
+           "solar garden lights, auto-brightness)",
+    "flame": "flame sensor module: a black IR receiver that sees the infrared of a flame (fire alarms, candle detectors, gas-stove flame checks)",
+    "sound": "KY-038 sound sensor: an electret MICROPHONE that hears loud sounds (clap switches, noise alarms, sound-activated lights)",
 }
 
 
+def studio_modules() -> dict:
+    """The modules the 3D stage can film right now (new ones are added to STUDIO_MODULES as they are built)."""
+    return STUDIO_MODULES
+
+
+def classify_topics(queue: list) -> None:
+    """Asks Haiku once per topic which module (if any) really explains it, and saves the answer on the topic.
+    A keyword match put a self-balancing (gyro) robot and an infrared thermometer on the IR obstacle sensor."""
+    todo = [q for q in queue if "module" not in q]
+    if not todo:
+        return
+    mods = studio_modules()
+    try:
+        out = ai_json(
+            "For each topic, pick the hobby sensor module whose working principle the topic's device REALLY uses, or "
+            '"none". Be strict: a gyro robot is none, an infrared (non-contact) thermometer is none (thermopile), a '
+            "Bluetooth car is none, a speaker is none (it is not a microphone); only pick a module if a correct video "
+            "about the topic would explain THAT module.\nModules:\n"
+            + "\n".join(f"- {k}: {v}" for k, v in mods.items())
+            + f"\nTopics: {json.dumps([q['topic'] for q in todo], ensure_ascii=False)}\n"
+            'Reply with ONLY a JSON array of {"topic": "...", "module": "<one of the module ids, or none>"}, same order.'
+        )
+        got = {str(o.get("topic", "")): str(o.get("module", "none")) for o in out if isinstance(o, dict)}
+    except Exception as e:  # noqa: BLE001
+        print(f"topic check failed ({e}); trying again next time")
+        return
+    for q in todo:
+        m = got.get(q["topic"], "none")
+        q["module"] = m if m in mods else ""
+
+
+def recent_modules(n: int = 2) -> list:
+    """The modules of the last n studio videos (so the next one films a different sensor)."""
+    jobs = sorted((read(j, None) or {} for j in JOBS.glob("*.json")), key=lambda j: j.get("started", ""), reverse=True)
+    return [j["module"] for j in jobs if j.get("module") and j.get("status") != "failed"][:n]
+
+
 def studio_module(topic: dict) -> str | None:
-    """Which 3D module a topic can be explained with (studio format), or None."""
-    import re
-    text = f"{topic.get('topic', '')} {topic.get('hook', '')}".lower()
-    return next((m for m, (pat, _) in STUDIO_MODULES.items() if re.search(pat, text)), None)
+    """Which 3D module a topic is explained with (checked by classify_topics), or None."""
+    m = topic.get("module")
+    return m if m in studio_modules() else None
 
 
 def _words(text: str) -> set:
@@ -145,12 +180,21 @@ def next_topic() -> dict:
         t["queue"] = kept
         write(TOPICS, t)
     studio = schedule().get("format") == "studio"
-    if studio:
-        # studio videos need a 3D module: take the first queued topic that has one
+
+    def pick():
+        """studio: a topic with a module, a different sensor from the last two videos when possible"""
+        classify_topics(t["queue"])
+        write(TOPICS, t)
         fits = [q for q in t["queue"] if studio_module(q)]
-        if fits:
-            return fits[0]
-    if len(t["queue"]) < 3 or (studio and not any(studio_module(q) for q in t["queue"])):
+        recent = recent_modules()
+        fresh = [q for q in fits if q["module"] not in recent]
+        return (fresh or fits or [None])[0], len(fresh)
+
+    if studio:
+        got, fresh = pick()
+        if got and fresh:
+            return got
+    if len(t["queue"]) < 3 or studio:
         # top up the queue with fresh ideas that fit the channel and haven't been done,
         # steered by what has actually performed (saved by the dashboard)
         perf = read(HERE / "analytics" / "videos.json", [])
@@ -161,26 +205,36 @@ def next_topic() -> dict:
                         + json.dumps([[v["title"], v.get("views", 0), v.get("likes", 0), v.get("comments", 0)] for v in ranked[:25]], ensure_ascii=False)
                         + "\nThink like a top Shorts creator: lean into the subjects and hook styles of the winners, drop what flopped, "
                           "and mix in a few broader everyday-tech topics with big search demand to reach new viewers.\n")
+        mods = studio_modules()
+        recent = recent_modules()
         ideas = ai_json(
-            f"Suggest 10 new topics for 30-45 second vertical explainer videos on a channel where {schedule()['niche']}. "
+            f"Suggest 10 new topics for 25-35 second vertical explainer videos on a channel where {schedule()['niche']}. "
             + ("The videos are narrated in Hindi for viewers in India: favour gadgets, appliances and electronics Indian students "
                "and makers use and search for. Write the topic and hook in simple English.\n" if video_language() == "hi"
                else "The videos are in English for a global audience.\n") +
             f"{perf_txt}"
-            + ("Every topic MUST be explainable with one of these real hobby modules, as an everyday use of it: "
-               + "; ".join(d for _, d in STUDIO_MODULES.values()) + ". Name the everyday use in the topic.\n" if studio else "") +
+            + ("Each topic must be an everyday device or project that REALLY works with one of these hobby modules, and the "
+               "topics must be SPREAD EVENLY over all of them (at least 2 per module"
+               + (f", and favour modules other than {recent}" if recent else "") + "):\n"
+               + "\n".join(f"- {k}: {v}" for k, v in mods.items()) + "\n" if studio else "") +
             f"Already done or queued (don't repeat): {json.dumps(t['done'] + [q['topic'] for q in t['queue']])}\n"
             'Every topic must be clearly DIFFERENT from all of those (not the same device in other words). Prefer everyday '
             '"why does this happen?" mysteries people search for (our best: PIR motion sensor 534 views, street light 355).\n'
             'Reply with ONLY a JSON array of {"topic": "short topic", "hook": "the first line on screen, max 12 words, '
-            'a curiosity hook"}. Concrete, visual, popular search topics.'
+            'a curiosity hook"' + (', "module": "<module id>"' if studio else "") + '}. Concrete, visual, popular search topics.'
         )
-        t["queue"] += [{"topic": str(i["topic"])[:80], "hook": str(i.get("hook", ""))[:120]} for i in ideas if i.get("topic")]
+        for i in ideas:
+            if not i.get("topic") or too_similar(str(i["topic"]), t["done"] + [q["topic"] for q in t["queue"]]):
+                continue
+            q = {"topic": str(i["topic"])[:80], "hook": str(i.get("hook", ""))[:120]}
+            if studio and i.get("module") in mods:
+                q["module"] = i["module"]
+            t["queue"].append(q)
         write(TOPICS, t)
     if studio:
-        fits = [q for q in t["queue"] if studio_module(q)]
-        if fits:
-            return fits[0]
+        got, _ = pick()
+        if got:
+            return got
     return t["queue"][0]
 
 
@@ -312,6 +366,8 @@ def make_video(topic: dict | None = None) -> dict | None:
            "started": datetime.now().isoformat(timespec="seconds"), "status": "running", "stages": []}
     save_job(job)
     fmt = schedule().get("format", "story")
+    if fmt == "studio" and "module" not in topic:
+        classify_topics([topic])  # a topic typed in by hand: check which module (if any) really explains it
     if fmt == "story":
         # animated story like the PIR short (owner's choice 2026-10-21): hand-made animation library, Claude writes
         # only a JSON plan (app/src/scenes/auto/story-lib.js + auto.ts --story)

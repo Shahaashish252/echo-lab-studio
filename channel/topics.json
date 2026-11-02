@@ -2,75 +2,93 @@
   "queue": [
     {
       "topic": "Temperature sensor LM35 / DHT11",
-      "hook": "Thermometer Garmi Ko Kaise Naapta Hai? Bijli Se!"
+      "hook": "Thermometer Garmi Ko Kaise Naapta Hai? Bijli Se!",
+      "module": ""
     },
     {
       "topic": "Buzzer and relay clicking",
-      "hook": "Relay Ki 'Click' Awaaz Ka Asli Matlab Kya Hai?"
+      "hook": "Relay Ki 'Click' Awaaz Ka Asli Matlab Kya Hai?",
+      "module": ""
     },
     {
       "topic": "Car reverse parking sensor beeps",
-      "hook": "Car Ka Sensor Deewar Dekhta Nahi, Sirf Awaaz Sunta Hai!"
+      "hook": "Car Ka Sensor Deewar Dekhta Nahi, Sirf Awaaz Sunta Hai!",
+      "module": ""
     },
     {
       "topic": "Gas leak sensor in kitchens",
-      "hook": "Gas leak ki smell aapse pehle machine ko kaise aati hai?"
+      "hook": "Gas leak ki smell aapse pehle machine ko kaise aati hai?",
+      "module": ""
     },
     {
       "topic": "Parking sensor beeping in cars",
-      "hook": "Car Ko Peeche Ki Deewar Ka Kaise Pata Chalta Hai?"
+      "hook": "Car Ko Peeche Ki Deewar Ka Kaise Pata Chalta Hai?",
+      "module": ""
     },
     {
       "topic": "ATM card reader / magnetic stripe",
-      "hook": "ATM aapka card chhoota bhi nahi, phir bhi padh leta hai!"
+      "hook": "ATM aapka card chhoota bhi nahi, phir bhi padh leta hai!",
+      "module": ""
     },
     {
       "topic": "Escalator that starts when you step near",
-      "hook": "Escalator Ko Pata Hai Aap Aa Rahe Ho!"
+      "hook": "Escalator Ko Pata Hai Aap Aa Rahe Ho!",
+      "module": "ir"
     },
     {
       "topic": "Fan regulator / dimmer working",
-      "hook": "Fan Ki Speed Bijli Bachakar Nahi, Kaat Kar Kam Hoti Hai!"
+      "hook": "Fan Ki Speed Bijli Bachakar Nahi, Kaat Kar Kam Hoti Hai!",
+      "module": ""
     },
     {
       "topic": "How a metal detector finds metal",
-      "hook": "Metal Detector Ko Sone Ka Pata Kaise Chalta Hai?"
+      "hook": "Metal Detector Ko Sone Ka Pata Kaise Chalta Hai?",
+      "module": ""
     },
     {
       "topic": "LiDAR",
-      "hook": "How self-driving cars see in 3D with lasers."
+      "hook": "How self-driving cars see in 3D with lasers.",
+      "module": ""
     },
     {
       "topic": "Hall effect sensor",
-      "hook": "How your laptop knows the lid is shut."
+      "hook": "How your laptop knows the lid is shut.",
+      "module": ""
     },
     {
       "topic": "Soil moisture sensor",
-      "hook": "This sensor knows when your plant is thirsty."
+      "hook": "This sensor knows when your plant is thirsty.",
+      "module": ""
     },
     {
       "topic": "Potentiometer",
-      "hook": "The knob that turns position into voltage."
+      "hook": "The knob that turns position into voltage.",
+      "module": ""
     },
     {
       "topic": "GPS",
-      "hook": "Your phone listens to 4 satellites at once."
+      "hook": "Your phone listens to 4 satellites at once.",
+      "module": ""
     },
     {
       "topic": "RFID and NFC",
-      "hook": "How a card with no battery pays for your metro ride."
+      "hook": "How a card with no battery pays for your metro ride.",
+      "module": ""
     },
     {
       "topic": "Load cell (weighing scale)",
-      "hook": "How a metal bar feels your weight."
+      "hook": "How a metal bar feels your weight.",
+      "module": ""
     },
     {
       "topic": "Rain sensor",
-      "hook": "How car wipers know it's raining."
+      "hook": "How car wipers know it's raining.",
+      "module": ""
     },
     {
       "topic": "CMOS camera sensor",
-      "hook": "Every photo is millions of tiny light buckets."
+      "hook": "Every photo is millions of tiny light buckets.",
+      "module": ""
     }
   ],
   "done": [
