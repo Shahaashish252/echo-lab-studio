@@ -226,6 +226,14 @@ export default class AutoPlate extends Scene {
   private readonly model?: Model3D;
   private readonly studio?: Studio;
 
+  /** For scripts/export-blender.ts: this studio plate's stage, animated over its whole length. */
+  async exportBlender(fps: number, dur: number) {
+    if (!this.studio || !this.B || !this.s) return null;
+    const B = this.B;
+    const lines = this.s.lines.map((id) => ({ text: lineText(id).replace(/\*/g, ''), start: B.at(id), end: B.end(id) }));
+    return this.studio.exportBlender(fps, dur, (t) => lines.reduce((k, l, i) => (t >= l.start - 0.05 ? i : k), 0), lines);
+  }
+
   init3D(renderer: THREE.WebGLRenderer) {
     if (this.studio) this.studio.init(renderer);
     else Model3D.init(renderer, this.three);

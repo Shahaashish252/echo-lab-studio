@@ -1,0 +1,44 @@
+name: Blender render test (Kaggle GPU)
+# Exports a test studio stage and renders a handful of preview frames photo-real with Blender on Kaggle. Posts nothing.
+on:
+  workflow_dispatch:
+    inputs:
+      module:
+        description: "Sensor module to test"
+        type: string
+        default: "ultrasonic"
+      step:
+        description: "Render every n-th frame (1 = the whole video)"
+        type: string
+        default: "120"
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+      KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-core > /dev/null
+          python -m pip install -q kaggle
+      - run: cd app && bun install
+      - name: Export the stage
+        run: |
+          cd app
+          echo '{"module":"${{ inputs.module }}","shots":[{"line":0,"shot":"scene"},{"line":1,"shot":"macro","part":"sensor"},{"line":2,"shot":"beam"},{"line":3,"shot":"explode"},{"line":4,"shot":"layers","part":"receiver"},{"line":5,"shot":"hero"},{"line":6,"shot":"wiring","detect":true},{"line":7,"shot":"macro","part":"pins"}]}' > src/scenes/auto/studio.gen.json
+          bun scripts/export-blender.ts --out ../out/blender
+      - name: Render on Kaggle
+        run: cd app && bun scripts/kaggle-render.ts --in ../out/blender --out ../out/blender/result --samples 48 --step ${{ inputs.step }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: blender-preview
+          path: out/blender/result

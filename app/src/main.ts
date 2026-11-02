@@ -81,6 +81,24 @@ if (RENDER) {
       });
       return all.filter((c) => c.t >= 0 && c.t < DURATION).sort((a, b) => a.t - b.t);
     },
+    /** Blender export of the studio plate (scripts/export-blender.ts): kept on the page, fetched in chunks. */
+    async exportBlender(fps: number) {
+      const i = plates.findIndex((p) => typeof (p.scene as any).exportBlender === 'function' && (p.scene as any).studio);
+      if (i < 0) return null;
+      const p = plates[i];
+      await prepare(p.start + 0.01);
+      draw(p.start + 0.01, true);
+      const res = await (p.scene as any).exportBlender(fps, p.end - p.start);
+      if (!res) return null;
+      const bytes = new Uint8Array(res.glb);
+      let bin = '';
+      for (let k = 0; k < bytes.length; k += 0x8000) bin += String.fromCharCode(...bytes.subarray(k, k + 0x8000));
+      (window as any).__export = { glb: btoa(bin), anim: JSON.stringify({ ...res.anim, start: p.start }) };
+      return { glb: (window as any).__export.glb.length, anim: (window as any).__export.anim.length };
+    },
+    exportChunk(key: 'glb' | 'anim', from: number, size: number) {
+      return ((window as any).__export[key] as string).slice(from, from + size);
+    },
     /** Renders time t and returns a PNG data URL. samples > 1 averages sub-frames over the shutter. */
     async frame(t: number, samples = 1, shutter = 0.5): Promise<string> {
       if (samples <= 1) {

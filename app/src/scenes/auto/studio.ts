@@ -2697,6 +2697,7 @@ class Comparator {
   private outMat = emissive(0x33ff66, 0x203020);
   private outGlow = glowSprite(0x33ff66, 1.6);
   private knob: THREE.Group;
+  private setCol!: THREE.Mesh;
   readonly focus = V(0, 1.1, 0.2);
 
   constructor() {
@@ -2721,6 +2722,7 @@ class Comparator {
     g.add(this.ring);
     const column = new THREE.Mesh(new THREE.CylinderGeometry(0.3, 0.3, 1, 40), setMat);
     column.name = 'set';
+    this.setCol = column;
     g.add(column);
     const pot = trimmer();
     pot.group.position.set(1.55, 0.18, 0.7);
@@ -2752,7 +2754,7 @@ class Comparator {
     this.sig.scale.y = hgt;
     this.sig.position.y = 0.3 + hgt / 2;
     this.sigMat.emissiveIntensity = 2.5 + level * 2;
-    const set = this.group.getObjectByName('set')!;
+    const set = this.setCol;
     set.scale.y = thr * 2.2;
     set.position.set(0.7, 0.3 + (thr * 2.2) / 2, -0.2);
     this.ring.position.set(0.7, 0.3 + thr * 2.2, -0.2);
@@ -3581,6 +3583,126 @@ export class Studio {
     k.shadow.camera.near = 0.5;
     k.shadow.camera.far = 40;
     k.shadow.camera.updateProjectionMatrix();
+  }
+
+  /**
+   * Blender export (photo-real renders on a GPU, scripts/export-blender.ts + blender/render_studio.py): the whole stage
+   * as one glTF (every set, hidden ones too) plus, per frame, what moves - node transforms and visibility, glow
+   * strengths, lamp powers - the camera (matrix, fov, focus, blur) and the look. Only changes are stored.
+   */
+  async exportBlender(fps: number, dur: number, idxOf: (t: number) => number, lines: StudioLine[]) {
+    const { GLTFExporter } = await import('three/examples/jsm/exporters/GLTFExporter.js');
+    const frames = Math.max(1, Math.round(dur * fps));
+    const nodes: THREE.Object3D[] = [];
+    this.three.traverse((o) => {
+      if ((o as THREE.Sprite).isSprite || o.type === 'DirectionalLight' || (o as THREE.Light).isLight && o.type === 'AmbientLight') return;
+      o.userData.origName = o.name;
+      o.name = `n${nodes.length}`;
+      nodes.push(o);
+    });
+    // custom shaders (beams, energy flow) and additive glows become plain emissive materials Blender understands
+    const swaps: { mesh: THREE.Mesh; orig: THREE.Material | THREE.Material[]; next: THREE.Material | THREE.Material[] }[] = [];
+    const glowOf = new Map<THREE.Material, () => number>();
+    const named = new Map<THREE.Material, string>();
+    const nameMat = (m: THREE.Material) => {
+      if (!named.has(m)) named.set(m, (m.name = `m${named.size}`));
+      return named.get(m)!;
+    };
+    for (const o of nodes) {
+      const mesh = o as THREE.Mesh;
+      if (!mesh.isMesh) continue;
+      const one = (m: THREE.Material): THREE.Material => {
+        if (m instanceof THREE.ShaderMaterial && m.uniforms?.on) {
+          const c = (m.uniforms.color?.value as THREE.Color) ?? new THREE.Color(1, 1, 1);
+          const sub = new THREE.MeshStandardMaterial({ color: 0x000000, emissive: c.clone(), emissiveIntensity: 1, transparent: true, opacity: 0.55, depthWrite: false });
+          sub.userData.beam = true;
+          glowOf.set(sub, () => m.uniforms.on.value as number);
+          return sub;
+        }
+        if (m instanceof THREE.MeshBasicMaterial && m.blending === THREE.AdditiveBlending) {
+          const sub = new THREE.MeshStandardMaterial({ color: 0x000000, emissive: m.color.clone(), emissiveIntensity: 1, transparent: true, opacity: 0.6, depthWrite: false });
+          glowOf.set(sub, () => m.opacity);
+          return sub;
+        }
+        return m;
+      };
+      const orig = mesh.material;
+      const next = Array.isArray(orig) ? orig.map(one) : one(orig);
+      // the stand-ins go in only while the glTF is written; the stage keeps animating its own materials
+      if (next !== orig) swaps.push({ mesh, orig, next });
+      for (const m of Array.isArray(next) ? next : [next]) nameMat(m);
+    }
+    const emissive = [...named.keys()].filter((m) => (m as THREE.MeshStandardMaterial).emissive && ((m as THREE.MeshStandardMaterial).emissiveIntensity > 0 || glowOf.has(m)));
+    const lamps = nodes.filter((o) => (o as THREE.PointLight).isPointLight || (o as THREE.SpotLight).isSpotLight) as THREE.Light[];
+    const eff = (o: THREE.Object3D) => {
+      for (let x: THREE.Object3D | null = o; x; x = x.parent) if (!x.visible) return 0;
+      return 1;
+    };
+    const anim = {
+      fps, frames, width: W, height: H,
+      nodes: {} as Record<string, { trs?: number[][]; vis?: number[][] }>,
+      mats: {} as Record<string, number[][]>,
+      lamps: {} as Record<string, number[][]>,
+      camera: [] as number[][],
+      looks: [] as number[],
+      lines: lines.map((l) => [l.start, l.end]),
+    };
+    const lastTrs = new Map<THREE.Object3D, number[]>();
+    const lastVis = new Map<THREE.Object3D, number>();
+    const lastMat = new Map<THREE.Material, number>();
+    const lastLamp = new Map<THREE.Light, number>();
+    const near = (a: number[], b: number[]) => a.every((v, i) => Math.abs(v - b[i]) < 1e-5);
+    let glb: ArrayBuffer | undefined;
+    for (let f = 0; f < frames; f++) {
+      const t = f / fps;
+      this.update(t, lines, idxOf(t));
+      this.three.updateMatrixWorld(true);
+      if (f === 0) {
+        // the scene as it stands at the first frame, everything included (hidden sets get keyed visibility)
+        for (const w of swaps) w.mesh.material = w.next;
+        glb = (await new GLTFExporter().parseAsync(this.three, { binary: true, onlyVisible: false, maxTextureSize: 2048 })) as ArrayBuffer;
+        for (const w of swaps) w.mesh.material = w.orig;
+      }
+      for (const o of nodes) {
+        const trs = [...o.position.toArray(), ...o.quaternion.toArray(), ...o.scale.toArray()];
+        const prev = lastTrs.get(o);
+        if (prev && !near(prev, trs)) {
+          // keys are held (constant) until the next one: the first change also keys where it started
+          const tr = ((anim.nodes[o.name] ??= {}).trs ??= []);
+          if (!tr.length) tr.push([0, ...prev.map((v) => +v.toFixed(5))]);
+          tr.push([f, ...trs.map((v) => +v.toFixed(5))]);
+        }
+        if (!prev || !near(prev, trs)) lastTrs.set(o, trs);
+        if ((o as THREE.Mesh).isMesh || (o as THREE.Light).isLight) {
+          const v = eff(o);
+          if (lastVis.get(o) !== v) {
+            ((anim.nodes[o.name] ??= {}).vis ??= []).push([f, v]);
+            lastVis.set(o, v);
+          }
+        }
+      }
+      for (const m of emissive) {
+        const g = glowOf.get(m);
+        const v = +(g ? g() * 4 : (m as THREE.MeshStandardMaterial).emissiveIntensity).toFixed(3);
+        if (lastMat.get(m) !== v) {
+          (anim.mats[m.name] ??= []).push([f, v]);
+          lastMat.set(m, v);
+        }
+      }
+      for (const l of lamps) {
+        const v = +l.intensity.toFixed(3);
+        if (lastLamp.get(l) !== v) {
+          (anim.lamps[l.name] ??= []).push([f, v]);
+          lastLamp.set(l, v);
+        }
+      }
+      const c = this.camera;
+      anim.camera.push([...c.matrixWorld.elements.map((v) => +v.toFixed(5)), c.fov, +this.focusDist.toFixed(4), +this.scale.toFixed(3)]);
+      anim.looks.push(this.look === 'real' ? 0 : this.look === 'blueprint' ? 1 : 2);
+    }
+    // put the page back as it was
+    for (const o of nodes) o.name = o.userData.origName ?? '';
+    return { glb: glb!, anim };
   }
 
   /** Renders the 3D stage with depth of field into the engine's frame (target). */
