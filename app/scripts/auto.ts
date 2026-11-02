@@ -927,11 +927,16 @@ NOT available for this module (don't use): ${SM.no}` : ''}
 - scene    {"use": "<one of: ${SM.uses}>"}  the everyday use in 3D, with the real module in it
 - uno      {"pin": "D2|5V|GND|A0"}  close-up of that pin on the Arduino Uno, where the module's wire goes
 - code     {"code": ["up to 6 short lines of Arduino code"]}  the Arduino code that reads the module, line by line
+- blueprint {"part": "optional: receiver|chip|pot|pins"}  a technical LINE DRAWING of the module on white paper with
+                                   handwritten part labels (great for "what are the parts" and "how it is built")
+- icon                             a clean flat diagram of the module on navy with glowing energy in its traces (great
+                                   for "how the signal flows")
 SHOW WHAT IS SAID: every line's shot must show exactly what that line talks about. An everyday device or use ->
 scene; the Arduino, its pins or wiring -> wiring / uno; the program -> code; a part -> macro with its label; how it
 works inside -> layers / inside / compare / beam. There is NO fixed order: build the story THIS topic needs (topics
 about a device spend more time in its scene; topics about Arduino projects spend more time on wiring, pins and code),
-so every video looks different. Line 0 = the hook scene (see RETENTION). Never the same shot type more
+so every video looks different. Mix the LOOKS like a premium explainer: photoreal shots, at least one blueprint and
+one icon shot per video. Line 0 = the hook scene (see RETENTION). Never the same shot type more
 than twice in a row. Then a question that invites comments, and the LAST line is exactly
 {"text": "${FOLLOW.text}", "say": "${FOLLOW.say}"} with shot hero and text "${FOLLOW.head}". Every claim accurate.
 Useful facts for the mechanism: ${SM.story}.`;

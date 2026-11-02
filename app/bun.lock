@@ -6,6 +6,7 @@
       "name": "motion-as-code",
       "dependencies": {
         "@fontsource/archivo": "^5.3.0",
+        "@fontsource/caveat": "5.2.6",
         "@fontsource/ibm-plex-mono": "^5.3.0",
         "@fontsource/michroma": "5.2.5",
         "@fontsource/nunito": "^5.3.0",
@@ -27,6 +28,8 @@
     "@elevenlabs/elevenlabs-js": ["@elevenlabs/elevenlabs-js@2.70.0", "", { "dependencies": { "command-exists": "^1.2.9", "node-fetch": "^2.7.0", "ws": "^8.18.3" } }, "sha512-7HH/PTliPIItBlRcWF3DLzr6FKpVdlKBLE1XVnOA2KKLF3r8lRB54ZHcBRje7sP97wGfalWuC2XpKbKWMMrGyQ=="],
 
     "@fontsource/archivo": ["@fontsource/archivo@5.3.0", "", {}, "sha512-5DIMgPVJRi62OqdOVoogCFxP73EkNM/E0YVTSDIQlDEJfDbxqZduwM/YoNZwC9Sx1CDgpKinqf8ckRY1QNIecw=="],
+
+    "@fontsource/caveat": ["@fontsource/caveat@5.2.6", "", {}, "sha512-OKS809xrwMZq7wFQFBQ5DfK7EL7Pd0dVl7/cKyx3bwplugYhwLDp/+/7/PJH9F6KCHuit9aVdxMCxAbxFgKhSA=="],
 
     "@fontsource/ibm-plex-mono": ["@fontsource/ibm-plex-mono@5.3.0", "", {}, "sha512-eTgnZjZEGk1QtD3ZstF+Vclo2HLAni8YMy34/DxllwZvyz1lR/1RF/xTiAquOBO7MvqBx8D2Ig2WCPMVfdZu7Q=="],
 

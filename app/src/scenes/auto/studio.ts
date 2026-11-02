@@ -827,6 +827,13 @@ class SensorModule {
   anchors: Record<string, THREE.Vector3> = {};
   w = 3.1;
   h = 1.45;
+  /** glowing energy along the copper traces (LM393 boards) */
+  private flowMat?: THREE.ShaderMaterial;
+  flow(t: number, on: number) {
+    if (!this.flowMat) return;
+    this.flowMat.uniforms.on.value = on;
+    this.flowMat.uniforms.time.value = t;
+  }
 
   constructor(readonly kind = 'ir') {
     this.receiver =
@@ -1023,6 +1030,20 @@ class SensorModule {
       leds: V(0.75, T + 0.05, 0.48),
       pins: V(1.6, T + 0.12, 0),
     };
+    this.flowMat = new THREE.ShaderMaterial({
+      uniforms: { time: { value: 0 }, on: { value: 0 }, color: { value: lin(0x5fd4ff) } },
+      vertexShader: BEAM_VERT,
+      fragmentShader: FLOW_FRAG,
+      transparent: true,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+    });
+    for (const tr of TRACES) {
+      const curve = new THREE.CatmullRomCurve3(tr.map(([x, y]) => V(x, T + 0.006, -y)), false, 'catmullrom', 0.05);
+      const line = new THREE.Mesh(new THREE.TubeGeometry(curve, 48, 0.03, 6), this.flowMat);
+      line.renderOrder = 4;
+      this.group.add(line);
+    }
     if (kind === 'gas' || kind === 'soil') {
       const at2 = kind === 'gas' ? V(-0.55, T + 1.15, 0) : V(-1.4, 0.12, 2.1);
       Object.assign(this.anchors, { sensor: at2, emitter: at2, receiver: at2, emitTip: at2.clone().add(V(0, 0.3, 0)), recvTip: at2.clone().add(V(0, 0.3, 0)) });
@@ -1348,6 +1369,31 @@ function buildDht(m: SensorModule) {
 
 const CUSTOM_BOARDS: Record<string, (m: SensorModule) => void> = { ultrasonic: buildHcsr04, pir: buildPir, dht: buildDht };
 
+/** the copper traces of the LM393 boards (board cm): printed on the mask and lit up when energy flows */
+const TRACES: number[][][] = [
+  [[-1.0, 0.46], [-0.9, 0.5], [-0.82, 0.5]],
+  [[-1.0, -0.46], [-0.9, -0.5], [-0.82, -0.5]],
+  [[-0.7, 0.5], [-0.3, 0.55], [0.0, 0.62], [0.42, 0.62]],
+  [[-0.7, -0.5], [-0.3, -0.42], [0.12, -0.42]],
+  [[0.24, -0.48], [0.42, -0.2], [0.42, -0.08]],
+  [[0.67, 0.22], [1.0, 0.3], [1.33, 0.254]],
+  [[0.95, -0.48], [1.2, -0.3], [1.33, -0.254]],
+  [[0.55, -0.48], [0.7, -0.62], [1.2, -0.62], [1.33, -0.254]],
+  [[1.0, 0.45], [1.2, 0.4], [1.33, 0.254]],
+  [[-0.45, 0.31], [-0.45, 0.62], [-0.2, 0.68], [0.75, 0.68], [0.75, 0.53]],
+  [[1.33, 0], [1.2, 0], [0.75, -0.3], [-0.2, -0.65], [-1.3, -0.65]],
+];
+
+const FLOW_FRAG = /* glsl */ `
+uniform float time; uniform float on; uniform vec3 color;
+varying vec2 vUv; varying vec3 vN; varying vec3 vV;
+void main() {
+  float d = fract(vUv.x * 3.0 - time * 1.6);
+  float pulse = smoothstep(0.0, 0.15, d) * (1.0 - smoothstep(0.15, 0.55, d));
+  float a = (0.25 + pulse) * on;
+  gl_FragColor = vec4(color * a * 6.0, a);
+}`;
+
 function drawBoard(ctx: Ctx, w: number, h: number, kind: string) {
   const k = ctx.canvas.width / w;
   const X = (x: number) => (x + w / 2) * k;
@@ -1364,18 +1410,9 @@ function drawBoard(ctx: Ctx, w: number, h: number, kind: string) {
     pts.forEach(([x, y], i) => (i ? ctx.lineTo(X(x), Y(y)) : ctx.moveTo(X(x), Y(y))));
     ctx.stroke();
   };
-  path([[-1.0, 0.46], [-0.9, 0.5], [-0.82, 0.5]]);
-  path([[-1.0, -0.46], [-0.9, -0.5], [-0.82, -0.5]]);
-  path([[-0.7, 0.5], [-0.3, 0.55], [0.0, 0.62], [0.42, 0.62]]);
-  path([[-0.7, -0.5], [-0.3, -0.42], [0.12, -0.42]]);
-  path([[0.24, -0.48], [0.42, -0.2], [0.42, -0.08]]);
-  path([[0.67, 0.22], [1.0, 0.3], [1.33, 0.254]]);
-  path([[0.95, -0.48], [1.2, -0.3], [1.33, -0.254]]);
-  path([[0.55, -0.48], [0.7, -0.62], [1.2, -0.62], [1.33, -0.254]]);
-  path([[1.0, 0.45], [1.2, 0.4], [1.33, 0.254]]);
-  path([[-0.45, 0.31], [-0.45, 0.62], [-0.2, 0.68], [0.75, 0.68], [0.75, 0.53]]);
+  TRACES.slice(0, -1).forEach(path);
   ctx.lineWidth = 0.1 * k;
-  path([[1.33, 0], [1.2, 0], [0.75, -0.3], [-0.2, -0.65], [-1.3, -0.65]]);
+  path(TRACES[TRACES.length - 1]);
   // vias
   for (const [x, y] of [[-0.2, 0.68], [0.75, -0.3], [-0.3, -0.42], [1.2, 0.4]]) {
     ctx.fillStyle = '#d9b25e';
@@ -3014,6 +3051,59 @@ const THEMES = [
   { a: [0.028, 0.04, 0.03], b: [0.006, 0.01, 0.007], rim: 0xb8ffb0, hot: '#ff8a3d' },
 ];
 
+/** Swaps a group's look for the line-drawing (blueprint) and flat-diagram (icon) shots, and back. */
+class Looks {
+  private edges = new Map<THREE.Mesh, THREE.LineSegments>();
+  private orig = new Map<THREE.Mesh, THREE.Material | THREE.Material[]>();
+  private flat = new Map<THREE.Material, THREE.Material>();
+  private paper = new THREE.MeshBasicMaterial({ color: lin(0xfbf9f3) });
+  private ink = new THREE.LineBasicMaterial({ color: 0x000000 });
+  private neon = new THREE.LineBasicMaterial({ color: lin(0x7fdcff), transparent: true, opacity: 0.85 });
+  current: 'real' | 'blueprint' | 'icon' = 'real';
+  constructor(private readonly root: THREE.Object3D) {}
+  private edgesFor(m: THREE.Mesh) {
+    let e = this.edges.get(m);
+    if (!e) {
+      e = new THREE.LineSegments(new THREE.EdgesGeometry(m.geometry, 28), this.ink);
+      e.raycast = () => {};
+      m.add(e);
+      this.edges.set(m, e);
+    }
+    return e;
+  }
+  private flatFor(mat: THREE.Material) {
+    let f = this.flat.get(mat);
+    if (!f) {
+      const c = ((mat as THREE.MeshStandardMaterial).color ?? new THREE.Color(0.5, 0.5, 0.5)).clone();
+      const hsl = { h: 0, s: 0, l: 0 };
+      c.getHSL(hsl);
+      f = new THREE.MeshLambertMaterial({ color: new THREE.Color().setHSL(hsl.h, Math.min(1, hsl.s * 0.8 + 0.1), 0.25 + hsl.l * 0.5), emissive: new THREE.Color().setHSL(0.6, 0.6, 0.04) });
+      this.flat.set(mat, f);
+    }
+    return f;
+  }
+  set(look: 'real' | 'blueprint' | 'icon') {
+    if (look === this.current) return;
+    this.current = look;
+    this.root.traverse((o) => {
+      const m = o as THREE.Mesh;
+      if (!m.isMesh || !m.geometry?.attributes?.position || m.material instanceof THREE.ShaderMaterial || (m as unknown as THREE.Sprite).isSprite) return;
+      if (!this.orig.has(m)) this.orig.set(m, m.material);
+      const orig = this.orig.get(m)!;
+      if (look === 'real') {
+        m.material = orig;
+        const e = this.edges.get(m);
+        if (e) e.visible = false;
+        return;
+      }
+      const e = this.edgesFor(m);
+      e.visible = true;
+      e.material = look === 'blueprint' ? this.ink : this.neon;
+      m.material = look === 'blueprint' ? this.paper : Array.isArray(orig) ? orig.map((x) => this.flatFor(x)) : this.flatFor(orig);
+    });
+  }
+}
+
 const DEFAULT_SHOTS = ['assemble', 'hero', 'macro', 'beam', 'layers', 'inside', 'compare', 'pot', 'wiring', 'hero'];
 
 export class Studio {
@@ -3024,6 +3114,11 @@ export class Studio {
   private props!: Props;
   private membrane!: Membrane;
   private uses!: Uses;
+  private looks!: Looks;
+  /** the current shot's look: real, a line drawing on paper, or a flat diagram on navy */
+  private look: 'real' | 'blueprint' | 'icon' = 'real';
+  private lastRig = { target: V(), az: 0, el: 0, dist: 10, fov: 26 };
+  private theme = { a: [0, 0, 0], b: [0, 0, 0] };
   private more!: MoreProps;
   private cell?: Cell;
   private lattice!: Lattice;
@@ -3088,6 +3183,7 @@ export class Studio {
     // one look per video (the same plan always gets the same look)
     const seed = [...JSON.stringify(this.plan.shots.map((x) => x.text ?? ''))].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
     const theme = THEMES[seed % THEMES.length];
+    this.theme = theme;
     HOT = theme.hot;
     const rim = new THREE.DirectionalLight(lin(theme.rim), 1.6);
     rim.position.set(-6, 4, -7);
@@ -3124,6 +3220,7 @@ export class Studio {
       g.visible = false;
       this.three.add(g);
     }
+    this.looks = new Looks(this.mod.group);
 
     const size = r.getDrawingBufferSize(new THREE.Vector2());
     this.rt = new THREE.WebGLRenderTarget(size.x, size.y, { type: THREE.HalfFloatType, samples: LITE ? 2 : 4, depthTexture: new THREE.DepthTexture(size.x, size.y) });
@@ -3168,6 +3265,7 @@ export class Studio {
     c.updateMatrixWorld();
     this.target.copy(target);
     this.focusDist = dist;
+    this.lastRig = { target: target.clone(), az, el, dist, fov };
   }
 
   /** Poses the whole stage for time t. */
@@ -3196,6 +3294,7 @@ export class Studio {
     m.t = t;
     this.props.hide();
     this.more.hide();
+    this.look = 'real';
     this.callouts = [];
     const callout = (part: string, text?: string, side = 1) => {
       const at = part === 'chip' ? A.chip : part === 'pot' ? A.pot.clone().add(V(0, 0.05, 0)) : A[part] ?? A.board;
@@ -3431,6 +3530,21 @@ export class Studio {
         shadowBox = 12;
         break;
       }
+      case 'blueprint':
+      case 'icon': {
+        // the schematikio-style explainer looks: a technical line drawing on paper, or a flat glowing diagram on navy
+        this.look = shot === 'blueprint' ? 'blueprint' : 'icon';
+        const part = sh.part && A[sh.part] ? sh.part : null;
+        const e = shot === 'blueprint' ? smooth(range(p, 0.1, 0.6)) * 0.6 : 0;
+        if (e > 0) m.lift(e);
+        if (part) this.rig(A[part], 0.75 * dir, 0.62, 5.5 * sz, 22);
+        else this.rig(V(-0.2, 0.3 + e * 0.6, 0), 0.75 * dir + 0.15 * p * dir, 0.62, 13 * sz, 22);
+        if (shot === 'icon') m.flow(t, 1);
+        for (const [k, side] of [['receiver', -1], ['chip', 1], ['pot', 1], ['pins', 1]] as const)
+          if (m.named[k]) this.callouts.push({ at: m.named[k].getWorldPosition(V()).add(V(0, 0.3, 0)), text: partLabel(this.kind, k).toUpperCase(), side });
+        this.scale = 0;
+        break;
+      }
       default: {
         // hero: a slow orbit around the whole module
         m.emitter.set(1, 0);
@@ -3438,10 +3552,23 @@ export class Studio {
         this.scale = 6;
       }
     }
+    // fast pacing (schematikio cuts every ~2 s): long lines get a second angle half way, closer and from the other side
+    const span = end - start;
+    const cuts = span > 3.0 && !['code', 'blueprint', 'icon', 'explode', 'assemble'].includes(shot) ? 2 : 1;
+    const cut = Math.min(cuts - 1, Math.floor(((t - start) / Math.max(0.5, span)) * cuts));
+    let since = lt;
+    if (cut > 0) {
+      const r = this.lastRig;
+      this.rig(r.target, r.az - 0.9 * dir, Math.min(1.2, r.el + 0.12), r.dist * 0.72, r.fov);
+      since = lt - (span / cuts) * cut;
+    }
+    // energy glows along the traces whenever the sensor is responding
+    if (shot !== 'icon') m.flow(t, clamp(m.receiver.on));
+    this.looks.set(this.look);
     m.sync();
     this.bench.module.sync();
     // rack focus on every cut: starts soft and pulls into focus
-    this.scale += 18 * (1 - outCubic(clamp(lt / 0.45)));
+    if (this.look === 'real') this.scale += 18 * (1 - outCubic(clamp(since / 0.45)));
     const k = this.key;
     k.position.copy(this.target).add(V(4, 9, 6));
     k.target.position.copy(this.target);
@@ -3463,6 +3590,9 @@ export class Studio {
     r.clear(true, true, true);
     r.render(this.three, this.camera);
     const u = this.dof.uniforms;
+    const bgs = { real: [this.theme.a, this.theme.b], blueprint: [[0.86, 0.84, 0.79], [0.74, 0.72, 0.67]], icon: [[0.025, 0.035, 0.07], [0.008, 0.012, 0.03]] }[this.look];
+    (u.bgA.value as THREE.Vector3).set(bgs[0][0], bgs[0][1], bgs[0][2]);
+    (u.bgB.value as THREE.Vector3).set(bgs[1][0], bgs[1][1], bgs[1][2]);
     u.focus.value = this.focusDist;
     u.scale.value = this.scale;
     u.near.value = this.camera.near;
@@ -3492,13 +3622,32 @@ export class Studio {
       let prev = 420 - 84;
       for (const c of col) prev = c.ly = Math.max(clamp(c.y - 170, 420, H - 420), prev + 84);
     }
-    for (const c of placed) this.callout(ctx, c.x, c.y, c.ly, c.text, c.side, p);
+    for (const c of placed) this.callout(ctx, c.x, c.y, c.ly, c.text, c.side, p, this.look === 'blueprint');
   }
 
-  private callout(ctx: Ctx, x: number, y: number, ly: number, text: string, side: number, p: number) {
+  private callout(ctx: Ctx, x: number, y: number, ly: number, text: string, side: number, p: number, ink = false) {
     const a = outCubic(clamp((p - 0.12) * 4));
     if (a <= 0) return;
     const lx = clamp(x + side * 230, 150, W - 150);
+    if (ink) {
+      // handwritten label with a pen line, like a sketch in a notebook
+      ctx.save();
+      ctx.globalAlpha = a;
+      ctx.strokeStyle = '#1b1d22';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      ctx.lineTo(lerp(x, lx, a), lerp(y, ly, a));
+      ctx.stroke();
+      ctx.font = '700 52px Caveat, "Segoe Print", cursive';
+      const w = ctx.measureText(text).width;
+      const bx = clamp(side > 0 ? lx + 10 : lx - w - 10, 20, W - w - 20);
+      ctx.fillStyle = '#1b1d22';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(text.charAt(0) + text.slice(1).toLowerCase(), bx, ly);
+      ctx.restore();
+      return;
+    }
     ctx.save();
     ctx.globalAlpha = a;
     ctx.strokeStyle = 'rgba(255,255,255,0.85)';
