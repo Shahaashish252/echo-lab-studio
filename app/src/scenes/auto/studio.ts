@@ -3613,8 +3613,7 @@ export class Studio {
     const next = lines[idx + 1];
     const p = clamp((t - L.start) / Math.max(0.6, (next ? next.start : L.end + 0.6) - L.start));
     const sh = this.shotAt(idx);
-    const text = sh.text || L.text.replace(/\*/g, '').split(/\s+/).slice(0, 3).join(' ');
-    headline(ctx, text, p);
+    oneWord(ctx, t, L, this.look === 'blueprint');
     if (sh.shot === 'code') codePanel(ctx, sh.code?.length ? sh.code : DEFAULT_CODE[this.kind] ?? DEFAULT_CODE.ir, p);
     // lay the labels out per side, top to bottom, at least 84 px apart so they never overlap
     const placed = this.callouts.map((c) => {
@@ -3626,18 +3625,20 @@ export class Studio {
       let prev = 420 - 84;
       for (const c of col) prev = c.ly = Math.max(clamp(c.y - 170, 420, H - 420), prev + 84);
     }
-    for (const c of placed) this.callout(ctx, c.x, c.y, c.ly, c.text, c.side, p, this.look === 'blueprint');
+    for (const c of placed.slice(0, 2)) this.callout(ctx, c.x, c.y, c.ly, c.text, c.side, p, this.look === 'blueprint');
   }
 
   private callout(ctx: Ctx, x: number, y: number, ly: number, text: string, side: number, p: number, ink = false) {
     const a = outCubic(clamp((p - 0.12) * 4));
     if (a <= 0) return;
     const lx = clamp(x + side * 230, 150, W - 150);
-    if (ink) {
-      // handwritten label with a pen line, like a sketch in a notebook
+    {
+      // a thin handwritten label with a pen line: black ink on the blueprint paper, white chalk on the dark shots
       ctx.save();
       ctx.globalAlpha = a;
-      ctx.strokeStyle = '#1b1d22';
+      ctx.strokeStyle = ink ? '#1b1d22' : 'rgba(255,255,255,0.9)';
+      ctx.shadowColor = ink ? 'transparent' : 'rgba(0,0,0,0.7)';
+      ctx.shadowBlur = ink ? 0 : 10;
       ctx.lineWidth = 3;
       ctx.beginPath();
       ctx.moveTo(x, y);
@@ -3646,7 +3647,7 @@ export class Studio {
       ctx.font = '700 52px Caveat, "Segoe Print", cursive';
       const w = ctx.measureText(text).width;
       const bx = clamp(side > 0 ? lx + 10 : lx - w - 10, 20, W - w - 20);
-      ctx.fillStyle = '#1b1d22';
+      ctx.fillStyle = ink ? '#1b1d22' : '#ffffff';
       ctx.textBaseline = 'middle';
       ctx.fillText(text.charAt(0) + text.slice(1).toLowerCase(), bx, ly);
       ctx.restore();
@@ -3733,6 +3734,40 @@ function codePanel(ctx: Ctx, code: string[], p: number) {
       cx += ctx.measureText(tok).width;
     }
   });
+  ctx.restore();
+}
+
+/** One clean white word at a time, lower middle of the frame (the schematikio look the owner picked). Words are
+ *  timed by their length across the narration line; a gentle pop as each appears. */
+function oneWord(ctx: Ctx, t: number, L: StudioLine, ink = false) {
+  if (t < L.start - 0.05 || t > L.end + 0.15) return;
+  const words = L.text.replace(/\*/g, '').split(/\s+/).filter(Boolean);
+  if (!words.length) return;
+  const wts = words.map((w) => w.length + 2.5);
+  const sum = wts.reduce((a, b) => a + b, 0);
+  const u = clamp((t - L.start) / Math.max(0.3, L.end - L.start)) * sum;
+  let acc = 0;
+  let k = 0;
+  for (; k < words.length - 1; k++) {
+    if (u < acc + wts[k]) break;
+    acc += wts[k];
+  }
+  const wordStart = L.start + (acc / sum) * (L.end - L.start);
+  const pop = 1 - outCubic(clamp((t - wordStart) / 0.12));
+  let size = 62;
+  ctx.save();
+  const font = (n: number) => `800 ${n}px Archivo, "Segoe UI", sans-serif`;
+  ctx.font = font(size);
+  const word = words[k];
+  while (size > 36 && ctx.measureText(word).width > W - 160) ctx.font = font((size -= 4));
+  ctx.translate(W / 2, 1450);
+  ctx.scale(1 + 0.08 * pop, 1 + 0.08 * pop);
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.shadowColor = ink ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.75)';
+  ctx.shadowBlur = 20;
+  ctx.fillStyle = ink ? '#14161a' : '#ffffff';
+  ctx.fillText(word, 0, 0);
   ctx.restore();
 }
 

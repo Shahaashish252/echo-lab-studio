@@ -413,7 +413,6 @@ export default class AutoPlate extends Scene {
           const idx = lines.reduce((k, l, i) => (t >= l.start - 0.05 ? i : k), 0);
           this.studio.update(t, lines, idx);
           this.studio.captions(fg, t, lines, idx);
-          this.B?.subs(fg, t, 1660);
         } else drawSim(fg, t, L, s.headline ?? '', lines);
         break;
       }
