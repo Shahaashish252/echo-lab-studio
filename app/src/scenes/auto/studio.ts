@@ -3118,6 +3118,7 @@ export class Studio {
   /** the current shot's look: real, a line drawing on paper, or a flat diagram on navy */
   private look: 'real' | 'blueprint' | 'icon' = 'real';
   private lastRig = { target: V(), az: 0, el: 0, dist: 10, fov: 26 };
+  private center = V(-0.4, 0.3, 0);
   private theme = { a: [0, 0, 0], b: [0, 0, 0] };
   private more!: MoreProps;
   private cell?: Cell;
@@ -3221,6 +3222,9 @@ export class Studio {
       this.three.add(g);
     }
     this.looks = new Looks(this.mod.group);
+    // the middle of whatever board this is (the HC-SR04 stands 4 cm tall): overview shots aim here
+    this.mod.group.updateMatrixWorld(true);
+    new THREE.Box3().setFromObject(this.mod.group).getCenter(this.center);
 
     const size = r.getDrawingBufferSize(new THREE.Vector2());
     this.rt = new THREE.WebGLRenderTarget(size.x, size.y, { type: THREE.HalfFloatType, samples: LITE ? 2 : 4, depthTexture: new THREE.DepthTexture(size.x, size.y) });
@@ -3305,7 +3309,7 @@ export class Studio {
     this.wall.visible = false;
     this.scale = 6;
     let shadowBox = 4;
-    const base = V(-0.4, 0.3, 0);
+    const base = this.center.clone();
     // bigger boards need the camera further back
     const sz = ({ ultrasonic: 1.55, pir: 1.35, gas: 1.3, soil: 1.5, dht: 1.05 } as Record<string, number>)[this.kind] ?? 1;
 
@@ -3363,7 +3367,7 @@ export class Studio {
         const e = smooth(range(p, 0.05, 0.45));
         m.lift(e);
         m.emitter.set(0, 0);
-        this.rig(V(-0.2, 0.9 * e + 0.3, 0), 0.5 * dir + 0.35 * p * dir, 0.5, lerp(11, 12.5, e) * sz, 28);
+        this.rig(this.center.clone().add(V(0, 0.9 * e, 0)), 0.5 * dir + 0.35 * p * dir, 0.5, lerp(11, 12.5, e) * sz, 28);
         this.set.module.updateMatrixWorld(true);
         const named = (k: string, side: number) => {
           const o = m.named[k];
@@ -3538,7 +3542,7 @@ export class Studio {
         const e = shot === 'blueprint' ? smooth(range(p, 0.1, 0.6)) * 0.6 : 0;
         if (e > 0) m.lift(e);
         if (part) this.rig(A[part], 0.75 * dir, 0.62, 5.5 * sz, 22);
-        else this.rig(V(-0.2, 0.3 + e * 0.6, 0), 0.75 * dir + 0.15 * p * dir, 0.62, 13 * sz, 22);
+        else this.rig(this.center.clone().add(V(0, e * 0.6, 0)), 0.75 * dir + 0.15 * p * dir, 0.62, 13 * sz, 22);
         if (shot === 'icon') m.flow(t, 1);
         for (const [k, side] of [['receiver', -1], ['chip', 1], ['pot', 1], ['pins', 1]] as const)
           if (m.named[k]) this.callouts.push({ at: m.named[k].getWorldPosition(V()).add(V(0, 0.3, 0)), text: partLabel(this.kind, k).toUpperCase(), side });

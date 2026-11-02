@@ -452,19 +452,19 @@
     "id": "mgYNJJc0QeA",
     "meta": "channel/videos/auto-touchless-thermometer-ir.json",
     "date": "2026-11-01",
-    "status": "approved",
+    "status": "rejected",
     "topic": "Infrared thermometer",
     "job": "20261101-152614",
-    "postAt": "2026-11-03T15:00"
+    "rejectedReason": "explains the wrong sensor (made before the topic check, 2026-11-02)"
   },
   {
     "id": "l9UHPD4T0LY",
     "meta": "channel/videos/auto-phone-se-robot-control.json",
     "date": "2026-11-02",
-    "status": "approved",
+    "status": "rejected",
     "topic": "Bluetooth car robot control",
     "job": "20261102-155319",
-    "postAt": "2026-11-04T15:00"
+    "rejectedReason": "explains the wrong sensor (made before the topic check, 2026-11-02)"
   },
   {
     "id": "ujU6WQJ6c_8",
@@ -473,6 +473,6 @@
     "status": "approved",
     "topic": "Car reverse parking sensor: HC-SR04 ultrasonic se gaadi deewar ki doori kaise napti hai",
     "job": "20261102-201310",
-    "postAt": "2026-11-05T15:00"
+    "postAt": "2026-11-03T15:00"
   }
 ]
