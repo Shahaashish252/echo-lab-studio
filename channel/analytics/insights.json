@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-02T22:22",
+  "updated": "2026-11-03T01:10",
   "videos": 21,
-  "summary": "Instagram is doing the work: almost every Hindi video gets 1,000+ views there, while YouTube Shorts barely moves except for a few videos. The best ones show a robot or a simple gadget doing something surprising, with a bold, funny or provocative title. Plain 'how does X work?' videos about doors, taps and alarms get far fewer views, likes, shares and saves.",
-  "winningPattern": "Robots and hands-on maker gadgets (gyro robot, clap switch, line follower, mic vs speaker) with a surprising, personified claim in short Hindi-English (Hinglish) titles, e.g. 'X ke bina Y gir jaata', 'Z sunta hai, dekhta nahi'. They are posted mainly on Instagram, where they get 1,200-1,400 views and the most likes and saves. The few YouTube hits (500-700 views) share the same topics: gyro, clap switch, PIR sensor.",
+  "summary": "Instagram is where nearly all your audience is: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly get under 30 views. The best videos are about robots or sensors that 'do something surprising' (gyro robot, clap switch, line follower) and they earn the most likes and saves. Generic 'how does X work?' videos about everyday items (smoke detector, lift, tap, mall door) get low views and almost no engagement.",
+  "winningPattern": "Short, punchy Hindi titles about a robot or maker-project sensor with a surprising or contradictory claim ('Gyro ke bina robot gir jaata', 'Clap switch taali nahi, shor sunta hai', 'Line follower ke paas dimaag nahi hota'). Visual demo of a robot or Arduino-style build, shown on Instagram Reels first. Newest posts (Oct 29 to Nov 2) do best, suggesting the robot/maker angle is gaining momentum.",
   "doMore": [
-    "Make robot and Arduino-module videos where something visibly reacts, falls or moves in the first 2 seconds",
-    "Write titles as a surprising contradiction: 'Yeh X karta nahi, phir bhi Y kaise?'",
-    "Post to Instagram first, since it reliably gets 10x the views, then cross-post to YouTube only the strongest ones",
-    "Reuse the proven topics (gyro, clap, PIR, line follower, mic) with new angles or sensors from the same family",
-    "End with a reason to save, such as a 'circuit cheat sheet' or 'try this at home' prompt, because saves are the clearest sign of interest"
+    "Make robot and maker-project videos (balancing, line follower, obstacle avoidance, sound or light triggered switches)",
+    "Open with a bold 'X ke bina Y nahi hota' or 'X nahi, Y karta hai' claim that flips what viewers expect",
+    "Show a physical build failing or working on screen in the first 2 seconds to boost saves and shares",
+    "Post to Instagram first and treat it as the main platform; reuse the same clip on YouTube with a sharper title",
+    "End with a clear save-worthy takeaway (a pin diagram or one-line rule) since saves are your strongest signal"
   ],
   "stopDoing": [
-    "Stop making generic 'X kaise kaam karta hai?' videos on public-place gadgets (lift, mall door, taps, street light, smoke detector); several near-duplicate videos on the same topic split the audience",
-    "Stop posting English-only or flat explainer titles; the one English video got 161 YouTube views and 0 on Instagram",
-    "Stop using the repeated '🤔 Kaise...?' title template for every video, since the audience has stopped responding to it"
+    "Generic 'Kaise kaam karta hai? 🤔' titles on everyday items like taps, lifts, smoke alarms and mall doors",
+    "Making several near-duplicate videos on the same topic (two smoke detector, two automatic tap, two IR sensor videos)",
+    "Posting English-titled videos when the audience is responding to Hindi"
   ],
   "nextTopics": [
-    "Self-balancing robot with MPU6050 gyro",
-    "Sound sensor module: why a whistle triggers it too",
-    "Obstacle-avoiding robot with ultrasonic sensor",
-    "Speaker works as a microphone",
-    "LDR light sensor night lamp on Arduino"
+    "Self-balancing robot with MPU6050",
+    "Ultrasonic obstacle-avoiding robot",
+    "Light-following robot using LDR",
+    "Bluetooth controlled car with HC-05",
+    "Servo motor: how it knows its angle"
   ],
   "bestTimes": {
     "times": [

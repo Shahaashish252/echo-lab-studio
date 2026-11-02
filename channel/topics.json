@@ -1,6 +1,22 @@
 {
   "queue": [
     {
+      "topic": "Self-balancing robot with MPU6050",
+      "hook": "Ye robot khada kaise rehta hai? Andar sirf ek chhoti chip!"
+    },
+    {
+      "topic": "Light-following robot using LDR",
+      "hook": "Ye robot roshni ke peeche kyun bhaagta hai?"
+    },
+    {
+      "topic": "Bluetooth controlled car with HC-05",
+      "hook": "Wire nahi, remote nahi, phir bhi ye gaadi chalti hai"
+    },
+    {
+      "topic": "Servo motor: how it knows its angle",
+      "hook": "Servo ko pata hai wo kitna ghoom chuka hai, kaise?"
+    },
+    {
       "topic": "Self-balancing robot with MPU6050 gyro",
       "hook": "Is robot ko dhakka do, yeh phir bhi khada rahega!"
     },

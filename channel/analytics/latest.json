@@ -1,9 +1,18 @@
 {
-  "updated": "02 Nov 2026, 22:21",
+  "updated": "03 Nov 2026, 01:10",
   "youtube": {
     "subs": 4,
     "views": 2958,
     "videos": [
+      {
+        "title": "Sensor Aapko Dekhta Nahi, Bas Garmi Mehsoos Karta Hai #shorts",
+        "id": "nHR2_Dsl4I0",
+        "status": "private",
+        "published": "2026-11-02",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Gaadi Ko Deewar Dikhti Nahi, Sirf Sunti Hai 🚗 #shorts",
         "id": "ujU6WQJ6c_8",
@@ -27,7 +36,7 @@
         "id": "mKcPrgXveU4",
         "status": "public",
         "published": "2026-11-02",
-        "views": 12,
+        "views": 25,
         "likes": 2,
         "comments": 2
       },
@@ -45,8 +54,8 @@
         "id": "ZzilLf1hScY",
         "status": "public",
         "published": "2026-11-01",
-        "views": 122,
-        "likes": 0,
+        "views": 144,
+        "likes": 1,
         "comments": 0
       },
       {
@@ -63,7 +72,7 @@
         "id": "iahxwpQgd8A",
         "status": "public",
         "published": "2026-10-30",
-        "views": 384,
+        "views": 385,
         "likes": 2,
         "comments": 0
       },
@@ -367,12 +376,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-05",
-        "views": 0,
-        "minutes": 0,
-        "subs": 0
-      },
-      {
         "day": "2026-10-06",
         "views": 0,
         "minutes": 0,
@@ -534,8 +537,8 @@
         "published": "2026-11-02",
         "likes": 23,
         "comments": 2,
-        "reach": 1169,
-        "views": 1371,
+        "reach": 1170,
+        "views": 1376,
         "saved": 3,
         "shares": 3
       },
@@ -545,8 +548,8 @@
         "published": "2026-11-01",
         "likes": 10,
         "comments": 2,
-        "reach": 1127,
-        "views": 1253,
+        "reach": 1129,
+        "views": 1254,
         "saved": 2,
         "shares": 0
       },
@@ -557,7 +560,7 @@
         "likes": 19,
         "comments": 0,
         "reach": 1068,
-        "views": 1189,
+        "views": 1191,
         "saved": 12,
         "shares": 1
       },
@@ -568,7 +571,7 @@
         "likes": 20,
         "comments": 0,
         "reach": 1090,
-        "views": 1258,
+        "views": 1259,
         "saved": 3,
         "shares": 1
       },
@@ -578,8 +581,8 @@
         "published": "2026-10-29",
         "likes": 14,
         "comments": 2,
-        "reach": 1109,
-        "views": 1267,
+        "reach": 1110,
+        "views": 1268,
         "saved": 10,
         "shares": 2
       },
@@ -589,8 +592,8 @@
         "published": "2026-10-28",
         "likes": 8,
         "comments": 4,
-        "reach": 414,
-        "views": 447,
+        "reach": 415,
+        "views": 448,
         "saved": 0,
         "shares": 0
       },
@@ -600,8 +603,8 @@
         "published": "2026-10-27",
         "likes": 4,
         "comments": 2,
-        "reach": 502,
-        "views": 565,
+        "reach": 503,
+        "views": 566,
         "saved": 0,
         "shares": 0
       },
@@ -612,7 +615,7 @@
         "likes": 15,
         "comments": 2,
         "reach": 1232,
-        "views": 1363,
+        "views": 1364,
         "saved": 4,
         "shares": 10
       },
@@ -622,8 +625,8 @@
         "published": "2026-10-24",
         "likes": 5,
         "comments": 0,
-        "reach": 324,
-        "views": 363,
+        "reach": 325,
+        "views": 364,
         "saved": 0,
         "shares": 0
       },
@@ -633,8 +636,8 @@
         "published": "2026-10-23",
         "likes": 3,
         "comments": 0,
-        "reach": 207,
-        "views": 228,
+        "reach": 208,
+        "views": 229,
         "saved": 0,
         "shares": 0
       },
@@ -644,8 +647,8 @@
         "published": "2026-10-23",
         "likes": 4,
         "comments": 0,
-        "reach": 247,
-        "views": 273,
+        "reach": 248,
+        "views": 274,
         "saved": 1,
         "shares": 1
       },
@@ -655,8 +658,8 @@
         "published": "2026-10-22",
         "likes": 2,
         "comments": 0,
-        "reach": 231,
-        "views": 270,
+        "reach": 232,
+        "views": 271,
         "saved": 1,
         "shares": 1
       },
@@ -666,8 +669,8 @@
         "published": "2026-10-22",
         "likes": 2,
         "comments": 0,
-        "reach": 109,
-        "views": 138,
+        "reach": 110,
+        "views": 139,
         "saved": 2,
         "shares": 0
       },
@@ -678,7 +681,7 @@
         "likes": 10,
         "comments": 0,
         "reach": 679,
-        "views": 752,
+        "views": 753,
         "saved": 3,
         "shares": 2
       },
@@ -755,7 +758,7 @@
         "likes": 12,
         "comments": 2,
         "reach": 1211,
-        "views": 1422,
+        "views": 1423,
         "saved": 3,
         "shares": 4
       },
