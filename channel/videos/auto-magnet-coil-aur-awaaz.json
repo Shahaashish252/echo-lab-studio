@@ -29,5 +29,6 @@
   "social": {
     "instagram": "Ek taali aur light on? 👏\nYeh chhota mic speaker ka ulta kaam karta hai. Magnet aur coil se awaaz banti hai, aur yeh use wapas signal banata hai 👇\n🎤 Electret mic mein patla diaphragm hilta hai\n🧲 Speaker mein magnet fixed rehta hai, coil hilti hai\n⚡ LM393 signal ko threshold se compare karta hai\n🔌 DO pin Arduino ko clap ka signal deta hai\n💾 Save karo, project banate waqt kaam aayega\n📤 Bhejo us dost ko jo clap switch banana chahta hai\n💬 Tumhara pehla Arduino project kaunsa tha?\n#electronics #arduino #soundsensor #lm393 #clapswitch",
     "tiktok": "Ek taali se light on kaise hoti hai? 👏 Jaano mic aur speaker ka magnet-coil raaz. Tumne kabhi clap switch banaya hai? #learnontiktok #arduino #electronics #soundsensor #hindi"
-  }
+  },
+  "cover": "/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/magnet-coil-aur-awaaz.cover.jpg"
 }

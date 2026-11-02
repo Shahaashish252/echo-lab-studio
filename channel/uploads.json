@@ -436,10 +436,17 @@
     "id": "mKcPrgXveU4",
     "meta": "channel/videos/auto-magnet-coil-aur-awaaz.json",
     "date": "2026-10-31",
-    "status": "approved",
+    "status": "published",
     "topic": "Speaker",
     "job": "20261031-205655",
-    "postAt": "2026-11-02T15:00"
+    "postAt": "2026-11-02T15:00",
+    "published": {
+      "youtube": "2026-11-02",
+      "instagram": "https://www.instagram.com/reel/DfPBQpaDRNM/",
+      "instagram_story": "18154833559527261",
+      "facebook": "https://www.facebook.com/reel/2165308414195841/"
+    },
+    "postedAt": "2026-11-02T15:19"
   },
   {
     "id": "mgYNJJc0QeA",
