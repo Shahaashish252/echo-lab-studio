@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Car reverse parking sensor: HC-SR04 ultrasonic se gaadi deewar ki doori kaise napti hai\" (Claude Code)",
       "at": "2026-11-02T20:13:37"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-11-02T20:14:09"
     }
   ],
   "format": "studio",
