@@ -29,3 +29,6 @@
   | Sources: [ElecFreaks datasheet copy](https://mischianti.org/wp-content/uploads/2025/11/Datasheet-HCSR04-classic.pdf), [Microchip ultrasonic limits](https://onlinedocs.microchip.com/pr/GUID-96D864E8-9F26-4895-9ABC-7ABC158C55B2-en-US-6/GUID-737BF3D3-873E-4759-9CB3-F5D10B4D96F1.html), [lambdageeks](https://lambdageeks.com/?p=249788)
 
 == storyboard: "Car reverse parking sensor: HC-SR04 ultrasonic se gaadi deewar ki doori kaise napti hai" (Claude Code)
+  s1 sim     Deewar se *PEHLE* kaise ruki?
+
+== simulation (Claude Code writes it, renders it, reviews it)
