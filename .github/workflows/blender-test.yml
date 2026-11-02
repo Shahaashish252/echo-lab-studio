@@ -28,7 +28,7 @@ jobs:
       - run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-noto-core > /dev/null
-          python -m pip install -q kaggle
+          python -m pip install -q kaggle six
       - run: cd app && bun install
       - name: Export the stage
         run: |
