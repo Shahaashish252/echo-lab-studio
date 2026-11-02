@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-01T21:43",
-  "videos": 20,
-  "summary": "Instagram is doing most of the work: nearly every Hindi video gets 1,000+ views there, while YouTube Shorts mostly gets under 50 views. The best videos are about robots and common sensors, with a surprising or curious first line. Videos on everyday gadgets like taps, doors and smoke alarms, and repeated topics like IR and smoke sensors, get much less attention.",
-  "winningPattern": "Instagram-first Hindi Shorts about robots or simple sensor tricks (clap switch, gyro, line follower, IR robot). The title opens with a surprising claim or a 'cannot-do' twist (e.g. 'Taali Nahi, Sirf Shor Sunta Hai', 'Ke Paas Dimaag Nahi Hota', 'Ke Bina Gir Jaata'), is short, and promises one clear secret. Robot or maker-project visuals get more likes, saves and shares than public-place gadgets (mall door, lift, washroom tap).",
+  "updated": "2026-11-02T15:53",
+  "videos": 21,
+  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly gets under 50 views. The best videos are about robots and 'dumb-but-clever' sensors (gyro, clap switch, PIR, line follower), and they also earn the most likes, shares and saves. Everyday-object explainers (taps, doors, smoke alarms, touchscreens) and the one English video get little attention, and the newest posts have too little data to judge yet.",
+  "winningPattern": "Hindi Instagram Reels about a robot or a sensor that seems to have a 'missing sense' or surprising limitation. Title is a bold, curious statement with a twist, such as 'X ke bina robot gir jaata', 'Taali nahi, sirf shor sunta hai' or 'Dimaag nahi hota'. The hook names the surprise in the first line and the video then explains the one core component simply. Robot/maker subjects beat household-appliance subjects, and the 🤖 or 👏 emoji with a short title works better than a generic '🤔 Kaise Pata Chalta Hai?' question.",
   "doMore": [
-    "Make robot and maker-project explainers (balancing, obstacle avoidance, line following) with a bold, counter-intuitive title",
-    "Use the 'X doesn't have Y, yet it does Z' title style that worked for Clap Switch and Line Follower",
-    "Post Instagram first and add a save/share prompt, since saves and shares come from project-style videos",
-    "Test a different title and thumbnail on YouTube, since the same Hindi videos get almost no views there",
-    "End with a quick 'build it yourself' hint with an Arduino module to boost saves"
+    "Make robot and maker-project videos (gyro, line follower, IR, clap switch) the main series, since they win on both platforms",
+    "Write titles as a surprising claim ('X nahi hota, phir bhi...') instead of a plain 'Kaise kaam karta hai?' question",
+    "Post to Instagram first and treat it as the main platform; test on YouTube with a stronger first-second visual hook",
+    "Add a clear share or save prompt at the end, such as 'Dost ko bhejo jo robot banata hai', because shares and saves are the strongest signals",
+    "Turn the best performers into follow-ups, such as part 2 or a related component, and reuse their title shape"
   ],
   "stopDoing": [
-    "Making several near-duplicate videos on the same sensor (IR, smoke, automatic tap) within days",
-    "Generic question titles about public-place gadgets like mall doors, lifts and washroom taps",
-    "Posting English videos without a plan, since the one English upload only reached 161 YouTube views and nothing on Instagram"
+    "Stop making household-appliance explainers (taps, mall doors, lifts, smoke detectors) with the '🤔 Kaise...?' title format",
+    "Stop posting near-duplicate topics (two smoke detector videos, two IR sensor videos, two tap videos) in the same week",
+    "Stop English narration for now; the single English video did not reach Instagram and earned little"
   ],
   "nextTopics": [
-    "Self-balancing robot with MPU6050",
-    "Obstacle avoiding robot with ultrasonic sensor",
-    "Bluetooth car with HC-05",
+    "Servo motor without feedback",
+    "Obstacle avoiding robot with ultrasonic",
+    "Self-balancing robot",
     "Light-following robot with LDR",
-    "Sound-activated light with a mic module"
+    "Bluetooth car robot control"
   ],
   "bestTimes": {
     "times": [
-      "15:00",
+      "14:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (19 posts)"
+    "reason": "from our own posts: these hours averaged the most views (20 posts)"
   }
 }

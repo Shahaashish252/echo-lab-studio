@@ -4,7 +4,7 @@
   "hook": "Phone Se Robot Kaise Sunta Hai? Bina Taar Ke!",
   "lang": "hi",
   "started": "2026-11-02T15:53:19",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -40,5 +40,7 @@
     }
   ],
   "format": "studio",
-  "module": "ir"
+  "module": "ir",
+  "finished": "2026-11-02T16:10:02",
+  "uploadId": "l9UHPD4T0LY"
 }

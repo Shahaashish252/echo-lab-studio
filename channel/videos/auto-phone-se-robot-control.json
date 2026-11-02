@@ -1,0 +1,34 @@
+{
+  "file": "out/auto/phone-se-robot-control.mp4",
+  "title": "Robot Awaaz Nahi, Sirf Ek Akshar Sunta Hai 🤖 #shorts",
+  "description": "Phone se robot bina taar ke kaise chalta hai? Sirf ek akshar se, aur FC-51 IR sensor use deewar se bachata hai!\n📱 Phone Bluetooth se sirf ek akshar (F, L, R) bhejta hai\n🔌 HC-05 module use 9600 baud serial banata hai\n💡 FC-51 IR sensor 940 nm ki infrared roshni se rukawat dekhta hai\n🎚️ Neela pot 2 se 30 cm ki range set karta hai\nAise aur 3D explainers ke liye subscribe karo!\n#shorts #arduino #bluetooth #robotics #hindi #electronics #stem",
+  "tags": [
+    "phone se robot kaise chalta hai",
+    "bluetooth car robot arduino",
+    "bluetooth robot in hindi",
+    "hc-05 arduino tutorial",
+    "fc-51 ir sensor",
+    "ir obstacle sensor in hindi",
+    "arduino robot car",
+    "bluetooth control car",
+    "obstacle avoidance robot",
+    "lm393 comparator",
+    "arduino projects hindi",
+    "robot kaise sunta hai",
+    "how bluetooth robot works",
+    "hc-05 kaise kaam karta hai",
+    "arduino for beginners hindi"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Robot Explained: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Phone se robot bina taar ke kaise chalta? 🤖\nSirf ek akshar bhejte ho, aur robot chal padta hai. Par deewar se kaun bachata hai? 👇\n📱 Bluetooth sirf ek akshar bhejta hai, awaaz nahi\n🔌 HC-05 use 9600 baud serial banata hai\n💡 FC-51 IR sensor 940 nm roshni se rukawat pakadta hai\n🎚️ Neela pot 2 se 30 cm range set karta hai\n💾 Save karo, project banate waqt kaam aayega\n📤 Bhejo us dost ko jise robot banana hai\n💬 Tumhara pehla Arduino project kya tha?\n#arduino #robotics #electronics #bluetooth #hc05",
+    "tiktok": "Phone se robot bina taar ke kaise sunta hai? 🤖 Seekho Bluetooth aur IR sensor ka asli kaam. Tumhara pehla robot kaisa tha? #learnontiktok #arduino #robotics #bluetooth #hindi"
+  }
+}

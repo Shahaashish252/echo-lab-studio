@@ -1,9 +1,18 @@
 {
-  "updated": "01 Nov 2026, 21:43",
+  "updated": "02 Nov 2026, 16:10",
   "youtube": {
-    "subs": 3,
-    "views": 2396,
+    "subs": 4,
+    "views": 2958,
     "videos": [
+      {
+        "title": "Yeh Chhota Mic Speaker Ka Ulta Kaam Karta Hai 🎤 #shorts",
+        "id": "mKcPrgXveU4",
+        "status": "public",
+        "published": "2026-11-02",
+        "views": 2,
+        "likes": 1,
+        "comments": 2
+      },
       {
         "title": "Thermometer Gun Aapki Roshni Padhti Hai 👀 #shorts",
         "id": "mgYNJJc0QeA",
@@ -18,16 +27,7 @@
         "id": "ZzilLf1hScY",
         "status": "public",
         "published": "2026-11-01",
-        "views": 42,
-        "likes": 0,
-        "comments": 0
-      },
-      {
-        "title": "Yeh Chhota Mic Speaker Ka Ulta Kaam Karta Hai 🎤 #shorts",
-        "id": "mKcPrgXveU4",
-        "status": "private",
-        "published": "2026-10-31",
-        "views": 0,
+        "views": 95,
         "likes": 0,
         "comments": 0
       },
@@ -36,8 +36,8 @@
         "id": "A4PXvpSAuqQ",
         "status": "public",
         "published": "2026-10-31",
-        "views": 413,
-        "likes": 2,
+        "views": 629,
+        "likes": 4,
         "comments": 0
       },
       {
@@ -45,7 +45,7 @@
         "id": "iahxwpQgd8A",
         "status": "public",
         "published": "2026-10-30",
-        "views": 382,
+        "views": 384,
         "likes": 2,
         "comments": 0
       },
@@ -72,7 +72,7 @@
         "id": "CCTv-pNY0Is",
         "status": "public",
         "published": "2026-10-27",
-        "views": 24,
+        "views": 25,
         "likes": 1,
         "comments": 2
       },
@@ -243,7 +243,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 545,
+        "views": 547,
         "likes": 9,
         "comments": 2
       },
@@ -348,12 +348,6 @@
       }
     ],
     "daily": [
-      {
-        "day": "2026-10-04",
-        "views": 0,
-        "minutes": 0,
-        "subs": 0
-      },
       {
         "day": "2026-10-05",
         "views": 0,
@@ -503,21 +497,38 @@
         "views": 278,
         "minutes": 27,
         "subs": 0
+      },
+      {
+        "day": "2026-10-30",
+        "views": 549,
+        "minutes": 53,
+        "subs": 1
       }
     ]
   },
   "instagram": {
     "username": "echo.lab3d",
-    "followers": 12,
+    "followers": 13,
     "posts": [
+      {
+        "title": "Ek taali aur light on? 👏",
+        "url": "https://www.instagram.com/reel/DfPBQpaDRNM/",
+        "published": "2026-11-02",
+        "likes": 5,
+        "comments": 2,
+        "reach": 89,
+        "views": 189,
+        "saved": 1,
+        "shares": 1
+      },
       {
         "title": "Kaan lagate hi screen band kyun? 📱",
         "url": "https://www.instagram.com/reel/DfMTpAuiLCk/",
         "published": "2026-11-01",
         "likes": 10,
         "comments": 2,
-        "reach": 1120,
-        "views": 1242,
+        "reach": 1125,
+        "views": 1250,
         "saved": 2,
         "shares": 0
       },
@@ -527,8 +538,8 @@
         "published": "2026-10-31",
         "likes": 19,
         "comments": 0,
-        "reach": 1063,
-        "views": 1182,
+        "reach": 1064,
+        "views": 1184,
         "saved": 12,
         "shares": 1
       },
@@ -616,7 +627,7 @@
         "likes": 4,
         "comments": 0,
         "reach": 247,
-        "views": 271,
+        "views": 273,
         "saved": 1,
         "shares": 1
       },
@@ -646,10 +657,10 @@
         "title": "Street light ko andhera kaise pata chalta hai? 💡",
         "url": "https://www.instagram.com/reel/DeyZePtCfOH/",
         "published": "2026-10-22",
-        "likes": 9,
+        "likes": 10,
         "comments": 0,
         "reach": 679,
-        "views": 751,
+        "views": 752,
         "saved": 3,
         "shares": 2
       },
@@ -659,8 +670,8 @@
         "published": "2026-10-21",
         "likes": 1,
         "comments": 0,
-        "reach": 133,
-        "views": 155,
+        "reach": 134,
+        "views": 156,
         "saved": 0,
         "shares": 0
       },
@@ -671,7 +682,7 @@
         "likes": 5,
         "comments": 2,
         "reach": 81,
-        "views": 87,
+        "views": 88,
         "saved": 0,
         "shares": 0
       },
@@ -681,7 +692,7 @@
         "published": "2026-10-20",
         "likes": 2,
         "comments": 2,
-        "reach": 102,
+        "reach": 103,
         "views": 133,
         "saved": 0,
         "shares": 0
@@ -725,8 +736,8 @@
         "published": "2026-10-17",
         "likes": 12,
         "comments": 2,
-        "reach": 1209,
-        "views": 1421,
+        "reach": 1211,
+        "views": 1422,
         "saved": 3,
         "shares": 4
       },

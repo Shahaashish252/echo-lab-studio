@@ -455,6 +455,15 @@
     "status": "approved",
     "topic": "Infrared thermometer",
     "job": "20261101-152614",
-    "postAt": "2026-11-03T15:00"
+    "postAt": "2026-11-03T14:00"
+  },
+  {
+    "id": "l9UHPD4T0LY",
+    "meta": "channel/videos/auto-phone-se-robot-control.json",
+    "date": "2026-11-02",
+    "status": "approved",
+    "topic": "Bluetooth car robot control",
+    "job": "20261102-155319",
+    "postAt": "2026-11-04T14:00"
   }
 ]
