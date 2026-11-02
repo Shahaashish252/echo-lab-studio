@@ -1,0 +1,16 @@
+{
+  "id": "20261102-222216",
+  "topic": "Automatic stair light: PIR motion sensor aapki body heat se kaise light jalata hai",
+  "hook": "",
+  "lang": "hi",
+  "started": "2026-11-02T22:22:16",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-11-02T22:22:18"
+    }
+  ],
+  "format": "studio",
+  "module": "pir"
+}
