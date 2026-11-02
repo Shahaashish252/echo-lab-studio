@@ -1,2 +1,23 @@
 
 == research: reading about the topic on the web
+  | **Hook:** "Phone Se Robot Kaise Sunta Hai? Bina Taar Ke!"
+  | 
+  | **HOW IT WORKS**
+  | 1. The phone app (Serial Bluetooth Terminal, or an MIT App Inventor app) sends one character, such as 'F', 'B', 'L', 'R' or 'S', over Bluetooth SPP, which acts like a wireless serial cable.
+  | 2. The HC-05 or HC-06 module receives it on 2.4 GHz and outputs it as UART serial, at 9600 baud by default.
+  | 3. The Arduino reads the character on its RX pin.
+  | 4. A switch/case in the code maps each character to a motor command.
+  | 5. An L298N or L293D motor driver takes the Arduino's low-current signals and switches the bigger motor current. PWM sets the speed.
+  | 6. The wheels turn.
+  | 
+  | **REAL PARTS:** HC-05 (master or slave), HC-06 (slave only), Arduino Uno, L298N, L293D, and a 2WD chassis with BO motors.
+  | 
+  | **MYTH:** "Bluetooth sends the commands as sound or voice." It doesn't. It sends plain serial data bytes. Only voice-control apps convert speech to a letter first.
+  | 
+  | **SURPRISING FACT:** The HC-05 uses 9600 baud in data mode but 38400 baud in AT command mode. It's Class 2, so the typical range is about 10 m. That range is a rule of thumb, because I couldn't confirm it from a datasheet.
+  | 
+  | **TIP:** The module's RX pin is 3.3 V logic. Put a voltage divider (for example 1 kΩ and 2 kΩ) between the Arduino's 5 V TX pin and the module's RX. Also disconnect the module from Arduino pins 0 and 1 while uploading code.
+  | 
+  | Sources: [Instructables](https://www.instructables.com/Intro-73), [ShillehTek manual](https://shillehtek.com/blogs/shillehtek-product-manuals/hc-05-6pin-bluetooth-module-no-button-manual), [Components101](https://components101.com/wireless/hc-05-bluetooth-module)
+
+== storyboard: "Bluetooth car robot control (open with this hook: "Phone Se Robot Kaise Sunta Hai? Bina Taar Ke!")" (Claude Code)
