@@ -62,3 +62,17 @@ exported to /home/runner/work/echo-lab-studio/echo-lab-studio/out/blender: scene
   photo-real render skipped (bun scripts/kaggle-render.ts --in /home/runner/work/echo-lab-studio/echo-lab-studio/out/blender failed (exit 1)); using the normal look
 
 == render
+  dispatched 12 render parts (job 1793639542791)
+  render parts done: 0/12
+  render parts done: 2/12
+  render parts done: 3/12
+  render parts done: 5/12
+  render parts done: 6/12
+  render parts done: 8/12
+  render parts done: 9/12
+  render parts done: 10/12
+  render parts done: 11/12
+  render parts done: 12/12
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/stair-light-pir-sensor.mp4 (12 parts, 12.4 min)
+
+== youtube
