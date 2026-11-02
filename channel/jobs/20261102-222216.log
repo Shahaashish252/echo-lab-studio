@@ -1,2 +1,24 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. Your body (~34°C skin) radiates infrared, peaking near 9.4 µm.
+  | 2. A Fresnel lens (dome) splits the view into many zones and focuses IR onto the sensor. Its window filters to about 8–14 µm.
+  | 3. The pyroelectric sensor (RE200B or LHI778) has two opposite-wired elements. Each makes a tiny charge when its IR level changes.
+  | 4. When you cross zones, one element sees a change before the other. This gives a +/– signal swing. Steady background heat, sunlight and vibration cancel out.
+  | 5. A BISS0001 chip amplifies the signal and compares it to a threshold. It then sets the output HIGH.
+  | 6. That output drives a transistor or relay, which switches the stair light. A timer keeps the light on, then turns it off.
+  | 
+  | **REAL PARTS:** HC-SR501 module, RE200B or LHI778 sensor, BISS0001 IC, FL65 Fresnel lens, relay or MOSFET, LDR (so it works only in the dark).
+  | 
+  | **MYTH:** "PIR sends out a beam or radiation." The truth is that it is passive. It emits nothing and only senses changes in IR. A person standing perfectly still can go undetected.
+  | 
+  | **SURPRISING FACT:** The HC-SR501 covers about a 110° cone and 3–7 m. It needs about 1 minute to warm up after power-on.
+  | 
+  | **TIP:** Turn the delay and sensitivity pots (the delay range varies by board, so check yours). Keep the sensor away from heaters and direct sun. Mount it so people walk across its zones, not straight at it.
+  | 
+  | Sources:
+  | - [Zbotic HC-SR501](https://zbotic.in/hcsr501-pir-sensor-sensitivity-and-time-delay-tuning/)
+  | - [Circuit Cellar PIR](https://circuitcellar.com/archive-article/passive-infrared-sensors/)
+  | - [RE200B datasheet](https://www.mikrocontroller.net/attachment/235885/RE200B.pdf)
+
+== storyboard: "Automatic stair light: PIR motion sensor aapki body heat se kaise light jalata hai" (Claude Code)
