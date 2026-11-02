@@ -22,3 +22,7 @@
   | - [RE200B datasheet](https://www.mikrocontroller.net/attachment/235885/RE200B.pdf)
 
 == storyboard: "Automatic stair light: PIR motion sensor aapki body heat se kaise light jalata hai" (Claude Code)
+  attempt 1: JSON Parse error: Expected '}'
+  s1 sim     Light khud kaise jali?
+
+== simulation (Claude Code writes it, renders it, reviews it)
