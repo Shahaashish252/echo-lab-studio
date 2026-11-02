@@ -69,7 +69,7 @@ for (;;) {
   const min = (Date.now() - t0) / 60000;
   if (/complete|error|cancel/i.test(status)) break;
   if (Math.round(min) % 10 === 0) console.log(`  still rendering (${min.toFixed(0)} min)`);
-  if (min > 600) throw new Error('Kaggle render took over 10 hours');
+  if (min > Number(opt('max-wait', '600'))) throw new Error(`Kaggle render not done after ${min.toFixed(0)} min`);
 }
 rmSync(output, { recursive: true, force: true });
 mkdirSync(output, { recursive: true });

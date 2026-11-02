@@ -329,7 +329,7 @@ function renderJourneys() {
   $('#journeys').innerHTML = all.map(({ job, video }) => {
     const title = video?.title?.replace(/#shorts/i, '') || job?.topic;
     const st = job?.status === 'running' ? 'running' : job?.status === 'failed' ? 'failed' : video?.status || job?.status;
-    const label = { approved: 'scheduled', published: 'posted', 'held-english': 'saved for English', pending: 'waiting', running: 'making', failed: 'failed', done: 'made' }[st] || st;
+    const label = { held: 'waiting for your OK', approved: 'scheduled', published: 'posted', 'held-english': 'saved for English', pending: 'waiting', running: 'making', failed: 'failed', done: 'made' }[st] || st;
     return `<div class="journey"><div class="jh"><b>${esc(title)}</b><span class="tag ${esc(st)}">${esc(label)}</span>${smallBar(progress(job, video))}
       ${(job?.lang || video?.language) ? `<span class="tag ${job?.lang || video?.language}">${(job?.lang || video?.language) === 'hi' ? 'HI' : 'EN'}</span>` : ''}
       <span class="faint" style="font-size:12px">${esc(ago(job?.started) || video?.date || '')}</span>

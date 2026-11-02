@@ -1505,7 +1505,7 @@ if (STUDIO_MODE && process.env.ECHO_BLENDER === '1' && process.env.KAGGLE_USERNA
     const dir = join(outRoot, 'blender');
     rmSync(dir, { recursive: true, force: true });
     run('bun', ['scripts/export-blender.ts', '--out', dir]);
-    run('bun', ['scripts/kaggle-render.ts', '--in', dir, '--out', join(dir, 'result'), '--samples', opt('blender-samples', '64')!]);
+    run('bun', ['scripts/kaggle-render.ts', '--in', dir, '--out', join(dir, 'result'), '--samples', opt('blender-samples', '64')!, '--max-wait', '120']);
     const mp4 = join(dir, 'result', 'blender.mp4');
     if (!existsSync(mp4)) throw new Error('Kaggle made no video');
     mkdirSync(BLENDER_FRAMES, { recursive: true });
