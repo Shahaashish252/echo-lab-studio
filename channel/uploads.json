@@ -455,7 +455,7 @@
     "status": "approved",
     "topic": "Infrared thermometer",
     "job": "20261101-152614",
-    "postAt": "2026-11-03T14:00"
+    "postAt": "2026-11-03T15:00"
   },
   {
     "id": "l9UHPD4T0LY",
@@ -464,6 +464,15 @@
     "status": "approved",
     "topic": "Bluetooth car robot control",
     "job": "20261102-155319",
-    "postAt": "2026-11-04T14:00"
+    "postAt": "2026-11-04T15:00"
+  },
+  {
+    "id": "ujU6WQJ6c_8",
+    "meta": "channel/videos/auto-parking-sensor-hc-sr04.json",
+    "date": "2026-11-02",
+    "status": "approved",
+    "topic": "Car reverse parking sensor: HC-SR04 ultrasonic se gaadi deewar ki doori kaise napti hai",
+    "job": "20261102-201310",
+    "postAt": "2026-11-05T15:00"
   }
 ]

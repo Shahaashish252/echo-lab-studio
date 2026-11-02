@@ -1,0 +1,33 @@
+{
+  "file": "out/auto/parking-sensor-hc-sr04.mp4",
+  "title": "Gaadi Ko Deewar Dikhti Nahi, Sirf Sunti Hai 🚗 #shorts",
+  "description": "Reverse parking mein gaadi deewar se pehle kaise ruk jaati hai? Jawab hai ek chhota HC-SR04 ultrasonic sensor.\n🔊 40 kHz ki anasuni awaaz ka ping\n🧪 Piezo disc 3D mein andar se\n⏱️ Echo time se distance: microseconds ÷ 58 = cm\n🔌 Arduino ke saath TRIG aur ECHO wiring\n🧽 Kapda aur tirchi deewar kyun fail hoti hain\nAur 3D explainers ke liye subscribe karo!\n#shorts #hcsr04 #arduino #ultrasonicsensor #parkingsensor #electronics #hindi",
+  "tags": [
+    "hc-sr04 explained",
+    "ultrasonic sensor kaise kaam karta hai",
+    "parking sensor kaise kaam karta hai",
+    "reverse parking sensor",
+    "hc-sr04 arduino",
+    "ultrasonic distance sensor",
+    "arduino distance sensor in hindi",
+    "gaadi ka parking sensor",
+    "how ultrasonic sensor works",
+    "time of flight sound",
+    "pulseIn arduino",
+    "echo pin trig pin",
+    "arduino project in hindi",
+    "electronics in hindi"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Gaadi deewar se pehle khud kaise rukti hai? 🚗\nYeh jaadu nahi, ek chhota HC-SR04 sensor hai. Dekho andar kya hota hai 👇\n🔊 T transducer 40 kHz ki anasuni awaaz bhejta hai\n⏱️ ECHO pin round-trip time tak HIGH rehta hai\n📏 microseconds ÷ 58 = distance in cm\n🧽 Kapda aur tirchi deewar weak echo deti hain\n💾 Save karo apne next Arduino project ke liye\n📤 Bhejo us dost ko jo parking se darta hai\n💬 Tumhari gaadi ka parking sensor kab sabse zyada beep karta hai?\n#electronics #arduino #hcsr04 #parkingsensor #ultrasonic",
+    "tiktok": "Gaadi deewar se pehle kaise rukti hai? 🚗 Seekho HC-SR04 ka echo wala jaadu: sound ka time = distance. Tumhari gaadi ka sensor kab galat beep karta hai? #learnontiktok #arduino #hcsr04 #electronics #parkingsensor"
+  }
+}

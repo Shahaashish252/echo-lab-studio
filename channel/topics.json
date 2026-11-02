@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Servo motor without a brain",
+      "hook": "Yeh Motor Jaanti Hai Ki Wo Kitna Ghoomi. Kaise?"
+    },
+    {
+      "topic": "Ultrasonic obstacle-avoiding robot",
+      "hook": "Is Robot Ki Aankhen Nahi, Phir Bhi Deewar Se Nahi Takrata"
+    },
+    {
+      "topic": "LDR light-following robot",
+      "hook": "Yeh Robot Roshni Ke Peeche Pagal Hai 💡"
+    },
+    {
+      "topic": "Bluetooth module HC-05 controlling a car",
+      "hook": "Phone Se Robot Chalta Hai, Bina Taar Ke!"
+    },
+    {
+      "topic": "Buzzer and touch sensor Arduino build",
+      "hook": "Sirf 3 Taar Aur Ye Sensor Ungli Pehchaan Leta Hai"
+    },
+    {
       "topic": "Temperature sensor LM35 / DHT11",
       "hook": "Thermometer Garmi Ko Kaise Naapta Hai? Bijli Se!",
       "module": "dht"
@@ -128,6 +148,7 @@
     "Phone proximity sensor during calls",
     "Speaker",
     "Infrared thermometer",
-    "Bluetooth car robot control"
+    "Bluetooth car robot control",
+    "Car reverse parking sensor: HC-SR04 ultrasonic se gaadi deewar ki doori kaise napti hai"
   ]
 }

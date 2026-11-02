@@ -1,16 +1,25 @@
 {
-  "updated": "02 Nov 2026, 16:10",
+  "updated": "02 Nov 2026, 20:12",
   "youtube": {
     "subs": 4,
     "views": 2958,
     "videos": [
       {
+        "title": "Robot Awaaz Nahi, Sirf Ek Akshar Sunta Hai 🤖 #shorts",
+        "id": "l9UHPD4T0LY",
+        "status": "private",
+        "published": "2026-11-02",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
+      {
         "title": "Yeh Chhota Mic Speaker Ka Ulta Kaam Karta Hai 🎤 #shorts",
         "id": "mKcPrgXveU4",
         "status": "public",
         "published": "2026-11-02",
-        "views": 2,
-        "likes": 1,
+        "views": 12,
+        "likes": 2,
         "comments": 2
       },
       {
@@ -27,7 +36,7 @@
         "id": "ZzilLf1hScY",
         "status": "public",
         "published": "2026-11-01",
-        "views": 95,
+        "views": 116,
         "likes": 0,
         "comments": 0
       },
@@ -36,7 +45,7 @@
         "id": "A4PXvpSAuqQ",
         "status": "public",
         "published": "2026-10-31",
-        "views": 629,
+        "views": 677,
         "likes": 4,
         "comments": 0
       },
@@ -508,18 +517,18 @@
   },
   "instagram": {
     "username": "echo.lab3d",
-    "followers": 13,
+    "followers": 14,
     "posts": [
       {
         "title": "Ek taali aur light on? 👏",
         "url": "https://www.instagram.com/reel/DfPBQpaDRNM/",
         "published": "2026-11-02",
-        "likes": 5,
+        "likes": 23,
         "comments": 2,
-        "reach": 89,
-        "views": 189,
-        "saved": 1,
-        "shares": 1
+        "reach": 1164,
+        "views": 1365,
+        "saved": 3,
+        "shares": 3
       },
       {
         "title": "Kaan lagate hi screen band kyun? 📱",
@@ -527,8 +536,8 @@
         "published": "2026-11-01",
         "likes": 10,
         "comments": 2,
-        "reach": 1125,
-        "views": 1250,
+        "reach": 1127,
+        "views": 1253,
         "saved": 2,
         "shares": 0
       },
@@ -538,8 +547,8 @@
         "published": "2026-10-31",
         "likes": 19,
         "comments": 0,
-        "reach": 1064,
-        "views": 1184,
+        "reach": 1066,
+        "views": 1186,
         "saved": 12,
         "shares": 1
       },
@@ -549,8 +558,8 @@
         "published": "2026-10-30",
         "likes": 20,
         "comments": 0,
-        "reach": 1088,
-        "views": 1257,
+        "reach": 1090,
+        "views": 1258,
         "saved": 3,
         "shares": 1
       },

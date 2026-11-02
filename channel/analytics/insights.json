@@ -1,30 +1,30 @@
 {
-  "updated": "2026-11-02T15:53",
+  "updated": "2026-11-02T20:12",
   "videos": 21,
-  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly gets under 50 views. The best videos are about robots and 'dumb-but-clever' sensors (gyro, clap switch, PIR, line follower), and they also earn the most likes, shares and saves. Everyday-object explainers (taps, doors, smoke alarms, touchscreens) and the one English video get little attention, and the newest posts have too little data to judge yet.",
-  "winningPattern": "Hindi Instagram Reels about a robot or a sensor that seems to have a 'missing sense' or surprising limitation. Title is a bold, curious statement with a twist, such as 'X ke bina robot gir jaata', 'Taali nahi, sirf shor sunta hai' or 'Dimaag nahi hota'. The hook names the surprise in the first line and the video then explains the one core component simply. Robot/maker subjects beat household-appliance subjects, and the 🤖 or 👏 emoji with a short title works better than a generic '🤔 Kaise Pata Chalta Hai?' question.",
+  "summary": "Instagram is doing nearly all the work: most Hindi videos get 1,000+ views there, while YouTube gives almost nothing (often under 30 views). The best videos are short, punchy Hindi pieces about a robot or sensor behaving in a surprising way, with a bold claim in the title. Generic 'how does X work?' videos about everyday devices (taps, doors, smoke alarms) get weak views, few likes and almost no saves or shares.",
+  "winningPattern": "Robot or maker-project subject (gyro robot, clap switch, line follower, PIR, IR obstacle robot, mic) + a surprising 'it cannot do X, yet it does' hook in casual Hinglish + a short title ending with an emoji and #shorts, posted mainly for Instagram Reels. Titles that make a claim ('Taali Nahi, Sirf Shor Sunta Hai', 'Dimaag Nahi Hota', 'Bina Gyro Gir Jaata') beat neutral questions ('Kaise Kaam Karta Hai?'). Maker-relevant modules that viewers can build themselves earn the most likes, saves and shares.",
   "doMore": [
-    "Make robot and maker-project videos (gyro, line follower, IR, clap switch) the main series, since they win on both platforms",
-    "Write titles as a surprising claim ('X nahi hota, phir bhi...') instead of a plain 'Kaise kaam karta hai?' question",
-    "Post to Instagram first and treat it as the main platform; test on YouTube with a stronger first-second visual hook",
-    "Add a clear share or save prompt at the end, such as 'Dost ko bhejo jo robot banata hai', because shares and saves are the strongest signals",
-    "Turn the best performers into follow-ups, such as part 2 or a related component, and reuse their title shape"
+    "Make robot and Arduino-module videos (gyro, clap switch, line follower, IR, mic) that students can copy, since these get the most views, likes and saves",
+    "Open with a bold or counter-intuitive claim in the title and first line instead of 'Kaise kaam karta hai?'",
+    "Show a visible before/after or fail/success moment (robot falls without gyro, light turns on with a clap) in the first 2 seconds",
+    "Add a save-worthy ending such as 'Save karo, build karte waqt kaam aayega' and a clear share prompt to boost saves and shares",
+    "Treat Instagram as the main platform and test YouTube separately with a different title, thumbnail frame or posting time before putting more effort there"
   ],
   "stopDoing": [
-    "Stop making household-appliance explainers (taps, mall doors, lifts, smoke detectors) with the '🤔 Kaise...?' title format",
-    "Stop posting near-duplicate topics (two smoke detector videos, two IR sensor videos, two tap videos) in the same week",
-    "Stop English narration for now; the single English video did not reach Instagram and earned little"
+    "Stop making generic everyday-device explainers (washroom tap, mall door, lift door, street light, smoke detector) with no build angle",
+    "Stop posting near-duplicate topics (two smoke detector videos, two automatic tap videos, two IR sensor videos) within days of each other",
+    "Stop expecting the same title and format to work on YouTube and Instagram without any changes"
   ],
   "nextTopics": [
-    "Servo motor without feedback",
-    "Obstacle avoiding robot with ultrasonic",
-    "Self-balancing robot",
-    "Light-following robot with LDR",
-    "Bluetooth car robot control"
+    "Servo motor without a brain",
+    "Ultrasonic obstacle-avoiding robot",
+    "LDR light-following robot",
+    "Bluetooth module HC-05 controlling a car",
+    "Buzzer and touch sensor Arduino build"
   ],
   "bestTimes": {
     "times": [
-      "14:00",
+      "15:00",
       "21:00"
     ],
     "reason": "from our own posts: these hours averaged the most views (20 posts)"
