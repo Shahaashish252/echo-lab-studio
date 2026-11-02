@@ -1,0 +1,16 @@
+{
+  "id": "20261102-201310",
+  "topic": "Car reverse parking sensor: HC-SR04 ultrasonic se gaadi deewar ki doori kaise napti hai",
+  "hook": "",
+  "lang": "hi",
+  "started": "2026-11-02T20:13:10",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-11-02T20:13:13"
+    }
+  ],
+  "format": "studio",
+  "module": "ultrasonic"
+}
