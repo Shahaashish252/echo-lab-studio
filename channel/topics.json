@@ -3,7 +3,7 @@
     {
       "topic": "Temperature sensor LM35 / DHT11",
       "hook": "Thermometer Garmi Ko Kaise Naapta Hai? Bijli Se!",
-      "module": ""
+      "module": "dht"
     },
     {
       "topic": "Buzzer and relay clicking",
@@ -13,17 +13,17 @@
     {
       "topic": "Car reverse parking sensor beeps",
       "hook": "Car Ka Sensor Deewar Dekhta Nahi, Sirf Awaaz Sunta Hai!",
-      "module": ""
+      "module": "ultrasonic"
     },
     {
       "topic": "Gas leak sensor in kitchens",
       "hook": "Gas leak ki smell aapse pehle machine ko kaise aati hai?",
-      "module": ""
+      "module": "gas"
     },
     {
       "topic": "Parking sensor beeping in cars",
       "hook": "Car Ko Peeche Ki Deewar Ka Kaise Pata Chalta Hai?",
-      "module": ""
+      "module": "ultrasonic"
     },
     {
       "topic": "ATM card reader / magnetic stripe",
@@ -58,7 +58,7 @@
     {
       "topic": "Soil moisture sensor",
       "hook": "This sensor knows when your plant is thirsty.",
-      "module": ""
+      "module": "soil"
     },
     {
       "topic": "Potentiometer",

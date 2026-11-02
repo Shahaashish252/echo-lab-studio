@@ -755,7 +755,7 @@ async function research(): Promise<string> {
 
 /** the 3D module the studio video explains (studio.ts MODULES); manager.py picks it from the topic */
 const STUDIO_MODULE = opt('module', 'ir')!;
-const STUDIO_MODULES: Record<string, { about: string; beam: string; layers: string; inside: string; macro: string; story: string; uses: string }> = {
+const STUDIO_MODULES: Record<string, { about: string; beam: string; layers: string; inside: string; macro: string; story: string; uses: string; no?: string }> = {
   ir: {
     about: `"ir": the FC-51 IR obstacle-avoidance sensor (a clear IR LED emitter at about 940 nm, a black IR photodiode
 receiver, a blue trimmer pot that sets the detection distance (about 2-30 cm), an LM393 comparator chip, a PWR LED and
@@ -806,6 +806,71 @@ PWR and DO LEDs, pins VCC, GND, DO (switches on a loud sound such as a clap), AO
     story: 'sound waves arriving (beam), inside the microphone (layers, inside false then true)',
     uses: 'clap (hands clap, the sound rolls to the module, a bulb switches on)',
   },
+  gas: {
+    about: `"gas": the MQ-2 gas/smoke sensor module (a tin-dioxide (SnO2) layer on a ceramic tube, heated by a small coil to
+about 200-300 C inside a double stainless-steel mesh can (the mesh stops it igniting gas); in clean air oxygen on the
+SnO2 holds electrons so resistance is high; LPG, propane, methane, hydrogen or smoke react with that oxygen, electrons
+are freed and resistance FALLS; it needs about 20-60 s to warm up and draws about 150 mA for its heater; an LM393 and a
+blue pot set the alarm threshold; pins VCC (5 V), GND, DO, AO; a learning sensor, not a certified gas alarm)`,
+    beam: `{"on": true|false}  a cloud of gas drifts in and reaches the MQ-2 (true); its DO LED lights`,
+    layers: `{"part": "sensor", "label": "max 18 chars"}  the MQ-2 splits apart: mesh cap, double mesh can, SnO2 tube with heater coil, base and pins`,
+    inside: `glass cutaway of the hot SnO2 bead: oxygen holds the electrons (false), or gas molecules react, the oxygen lets go and a current flows (true)`,
+    macro: 'sensor|leds|pins',
+    story: 'the gas reaching the sensor (beam), inside the heated tin-oxide (layers, inside false then true)',
+    uses: 'kitchen (a gas cylinder hose leaks, the MQ-2 smells it, the alarm flashes)',
+    no: 'pot (it sits under the board)',
+  },
+  soil: {
+    about: `"soil": the soil-moisture sensor (a fork-shaped probe with two exposed tracks, wired to an LM393 board: water in the
+soil lets current flow between the prongs, so wet soil = low resistance, dry soil = high resistance; the blue pot sets
+the "dry" threshold; pins VCC, GND, DO, AO; tip: power it only when reading - the bare prongs corrode)`,
+    beam: `{"on": true|false}  water drops soak the soil around the probe (true); the DO LED changes`,
+    layers: `{"part": "sensor", "label": "max 18 chars"}  the probe splits apart: protective lacquer, metal tracks, fibreglass fork`,
+    inside: `glass cutaway: soil between two metal plates; dry, almost no current (false), or water soaks in and a current flows (true)`,
+    macro: 'sensor|chip|pot|pins|leds',
+    story: 'water reaching the soil (beam), inside the soil between the prongs (inside false then true)',
+    uses: 'plant (a pot plant dries out, the probe notices, a pump waters it until wet)',
+  },
+  ultrasonic: {
+    about: `"ultrasonic": the HC-SR04 ultrasonic distance sensor (the T transducer sends 8 pulses of 40 kHz sound - too high to
+hear - the R transducer listens for the echo; the Arduino sends a 10 microsecond pulse on TRIG, the ECHO pin stays HIGH
+for the round trip; distance = time x 343 m/s / 2, or cm = microseconds / 58; range about 2-400 cm; soft cloth and
+angled surfaces give weak echoes; pins VCC (5 V), TRIG, ECHO, GND)`,
+    beam: `{"on": true|false}  the ping leaves the T transducer, bounces off a wall and the echo returns to R`,
+    layers: `{"part": "receiver|emitter", "label": "max 18 chars"}  a transducer splits apart: mesh front, aluminium can, piezo disc, cone`,
+    inside: `glass cutaway of the piezo transducer: the disc at rest (false), or it vibrates 40,000 times a second (true)`,
+    macro: 'sensor|emitter|receiver|chip|pins',
+    story: 'the ping and its echo (beam), the piezo disc vibrating (layers, inside), and the time-to-distance maths',
+    uses: 'parking (a car reverses towards a wall, the sensor beeps faster and it stops in time)',
+    no: 'compare and pot (there is no comparator or pot on this board)',
+  },
+  pir: {
+    about: `"pir": the HC-SR501 PIR motion sensor (it does NOT see you - a pyroelectric element with TWO halves feels the infrared
+heat of a warm body; the white Fresnel dome splits the room into zones, so when you move, first one half then the other
+warms and that difference is the signal; still people are invisible to it; the BISS0001 chip turns it into a HIGH on OUT;
+two orange pots set the hold time (about 3 s to 5 min) and the sensitivity (about 3-7 m); 3.3 V output; pins VCC, OUT,
+GND; it needs about a minute to settle after power-on)`,
+    beam: `{"on": true|false}  a warm person walks past; their heat crosses the dome's detection zones one after another`,
+    layers: `{"part": "sensor", "label": "max 18 chars"}  it splits apart: Fresnel dome, the sensor can, its IR window, the twin pyroelectric elements`,
+    inside: `glass cutaway: the two pyroelectric halves A and B; nothing moves (false), or a warm body passes and A then B warms, giving a signal (true)`,
+    macro: 'sensor|pot|pins',
+    story: 'the warm body crossing the zones (beam), inside the twin elements (layers, inside false then true), the time and sensitivity pots',
+    uses: 'room (someone walks into a room, the PIR on the wall sees their warmth, the ceiling light comes on)',
+    no: 'compare (it uses a BISS0001 chip, not an LM393)',
+  },
+  dht: {
+    about: `"dht": the DHT11 temperature and humidity sensor (inside the blue grille: a humidity-sensing layer between two
+electrodes whose resistance changes as it absorbs water vapour, and an NTC thermistor whose resistance falls as it warms;
+a tiny chip measures both and sends digital numbers on ONE data wire; range 0-50 C (+-2 C) and 20-90 % humidity
+(+-5 %); read it at most once a second; pins S (data), VCC, GND)`,
+    beam: `{"on": true|false}  warm humid air (steam) rises around the sensor; its readings climb`,
+    layers: `{"part": "sensor", "label": "max 18 chars"}  it splits apart: blue grille, humidity layer with electrodes, thermistor bead, chip`,
+    inside: `glass cutaway of the humidity layer: dry (false), or water molecules land on it and a current flows (true)`,
+    macro: 'sensor|pins|leds',
+    story: 'humid warm air arriving (beam), inside the humidity layer and the thermistor (layers, inside false then true)',
+    uses: 'weather (the room warms up, the DHT11 reads it, the display shows it and the fan switches on)',
+    no: 'compare and pot (there is no comparator or pot)',
+  },
 };
 const SM = STUDIO_MODULES[STUDIO_MODULE] ?? STUDIO_MODULES.ir;
 /** every studio video ends on this line (enforced after Claude's reply too) */
@@ -852,7 +917,8 @@ Shot types (use ONLY these):
                                    close-up of that part with a name label, blurred background
 - layers   ${SM.layers}
 - beam     ${SM.beam}
-- inside   {"light": true|false}     ${SM.inside}
+- inside   {"light": true|false}     ${SM.inside}${SM.no ? `
+NOT available for this module (don't use): ${SM.no}` : ''}
 - compare  {"cross": true|false}     glass comparator = the LM393: the signal level against the threshold set by the pot;
                                    crossing it switches the output
 - pot                                close-up of the blue trimmer turning (sets the threshold / range)

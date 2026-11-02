@@ -111,6 +111,11 @@ STUDIO_MODULES = {
            "solar garden lights, auto-brightness)",
     "flame": "flame sensor module: a black IR receiver that sees the infrared of a flame (fire alarms, candle detectors, gas-stove flame checks)",
     "sound": "KY-038 sound sensor: an electret MICROPHONE that hears loud sounds (clap switches, noise alarms, sound-activated lights)",
+    "gas": "MQ-2 gas/smoke sensor: a heated tin-oxide element that smells LPG, methane and smoke (kitchen gas-leak alarms, smoke detectors)",
+    "soil": "soil-moisture sensor: a fork probe whose resistance falls in wet soil (automatic plant watering, garden moisture checks)",
+    "ultrasonic": "HC-SR04 ultrasonic sensor: 40 kHz sound pings and echoes measure distance (car parking sensors, water-tank level, robot distance)",
+    "pir": "HC-SR501 PIR motion sensor: feels the infrared HEAT of a moving person (automatic room/stair lights, intruder alarms, motion cameras)",
+    "dht": "DHT11 temperature and humidity sensor (room thermometers, weather stations, automatic fans and humidifiers)",
 }
 
 

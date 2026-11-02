@@ -33,6 +33,8 @@ export interface Shot {
   code?: string[];
   fire?: boolean;
   loud?: boolean;
+  /** beam switch for gas / soil / pir / ultrasonic / dht */
+  on?: boolean;
 }
 export interface StudioPlan {
   module: string;
@@ -570,7 +572,228 @@ class Mic extends Stack implements Layered {
   }
 }
 
-// ---------- the sensor modules (FC-51 IR; LDR, flame and sound modules on the same LM393 board) ----------
+/** MQ-2 gas sensor: black bakelite base, double stainless mesh can, inside a ceramic tube with a heater coil and the
+ *  tin-dioxide (SnO2) sensing layer. Axis +Y = up (it stands on the board). */
+class Mq extends Stack implements Layered {
+  private coilMat = emissive(0xff6a20, 0x553322);
+  constructor() {
+    super();
+    const meshTex = canvasTex(256, 256, (ctx) => {
+      ctx.clearRect(0, 0, 256, 256);
+      ctx.strokeStyle = 'rgba(205,210,216,1)';
+      ctx.lineWidth = 3;
+      for (let k = -256; k <= 512; k += 12) {
+        ctx.beginPath();
+        ctx.moveTo(k, 0);
+        ctx.lineTo(k - 256, 256);
+        ctx.moveTo(k - 256, 0);
+        ctx.lineTo(k, 256);
+        ctx.stroke();
+      }
+    });
+    meshTex.wrapS = meshTex.wrapT = THREE.RepeatWrapping;
+    meshTex.repeat.set(5, 2);
+    const meshMat = new THREE.MeshStandardMaterial({ map: meshTex, alphaTest: 0.4, metalness: 0.9, roughness: 0.35, side: THREE.DoubleSide });
+    const base = cyl(0.82, 0.22, std(0x17181b, 0.55), 48);
+    base.position.y = 0.11;
+    this.add(base, 0);
+    const tube = new THREE.Group();
+    const ceramic = cyl(0.13, 0.42, std(0xeeeae0, 0.6), 24);
+    const sno2 = cyl(0.15, 0.24, std(0x6d6f73, 0.85), 24);
+    const coil = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(Array.from({ length: 40 }, (_, i) => V(Math.cos(i * 0.9) * 0.07, -0.18 + i * 0.009, Math.sin(i * 0.9) * 0.07))), 120, 0.012, 6), this.coilMat);
+    tube.add(ceramic, sno2, coil);
+    tube.position.y = 0.55;
+    for (const a of [0, 1, 2, 3, 4, 5]) {
+      const w = cyl(0.008, 0.35, M.gold, 6);
+      w.position.set(Math.cos(a) * 0.3, 0.38, Math.sin(a) * 0.3);
+      w.rotation.z = Math.cos(a) * 0.5;
+      tube.add(w);
+    }
+    this.add(tube, 0.55, 1.8);
+    const outer = new THREE.Mesh(new THREE.CylinderGeometry(0.72, 0.72, 0.9, 48, 1, true), meshMat);
+    outer.position.y = 0.67;
+    const ring = new THREE.Mesh(new THREE.TorusGeometry(0.73, 0.035, 10, 48), M.steel);
+    ring.rotation.x = Math.PI / 2;
+    ring.position.y = 0.24;
+    const shell = new THREE.Group();
+    shell.add(outer, ring);
+    this.add(shell, 1.0);
+    const cap = new THREE.Mesh(new THREE.CircleGeometry(0.72, 48), meshMat);
+    cap.rotation.x = -Math.PI / 2;
+    cap.position.y = 1.12;
+    this.add(cap, 1.5);
+  }
+  set(on: number, explode: number) {
+    this.on = on;
+    this.spread(explode);
+    this.coilMat.emissiveIntensity = 1.5 + on * 5;
+  }
+}
+
+/** The fork probe of a soil-moisture sensor: two long prongs with exposed nickel traces. Lies flat, +Y up. */
+class Probe extends Stack implements Layered {
+  private traceMat = std(0xc9ccd1, 0.3, 0.9);
+  constructor() {
+    super();
+    const fork = new THREE.Shape();
+    fork.moveTo(0.9, -0.6);
+    fork.lineTo(0.9, 0.6);
+    fork.lineTo(-0.2, 0.6);
+    fork.lineTo(-0.2, 0.42);
+    fork.lineTo(-3.4, 0.42);
+    fork.lineTo(-3.6, 0.32);
+    fork.lineTo(-3.4, 0.2);
+    fork.lineTo(-0.4, 0.2);
+    fork.lineTo(-0.4, -0.2);
+    fork.lineTo(-3.4, -0.2);
+    fork.lineTo(-3.6, -0.32);
+    fork.lineTo(-3.4, -0.42);
+    fork.lineTo(-0.2, -0.42);
+    fork.lineTo(-0.2, -0.6);
+    fork.lineTo(0.9, -0.6);
+    const geo = new THREE.ExtrudeGeometry(fork, { depth: 0.1, bevelEnabled: false });
+    geo.rotateX(-Math.PI / 2);
+    const pcb = new THREE.Mesh(geo, [std(0x143f9c, 0.5), M.edge]);
+    this.add(pcb, 0);
+    const traces = new THREE.Group();
+    for (const z of [-0.31, 0.31]) {
+      const t = box(3.3, 0.012, 0.12, this.traceMat);
+      t.position.set(-1.85, 0.106, z);
+      traces.add(t);
+    }
+    for (const z of [-0.3, 0.3]) {
+      const pad = box(0.25, 0.015, 0.2, M.gold);
+      pad.position.set(0.65, 0.107, z);
+      traces.add(pad);
+    }
+    this.add(traces, 0.45);
+    const lacquer = box(3.2, 0.01, 1.0, phys(0xdfe8ff, { transmission: 0.9, roughness: 0.2, thickness: 0.05 }));
+    lacquer.position.set(-1.7, 0.125, 0);
+    this.add(lacquer, 0.9);
+  }
+  set(on: number, explode: number) {
+    this.on = on;
+    this.spread(explode);
+  }
+}
+
+/** One HC-SR04 transducer: mesh front, aluminium can, piezo disc, paper cone. Axis +Y = where it faces. */
+class Transducer extends Stack implements Layered {
+  private disc: THREE.Mesh;
+  private home = 0;
+  constructor() {
+    super();
+    const cone = new THREE.Mesh(new THREE.CylinderGeometry(0.62, 0.1, 0.3, 40, 1, true), std(0x2a2b2f, 0.8));
+    cone.position.y = 0.45;
+    this.add(cone, 0.3);
+    this.disc = cyl(0.42, 0.03, std(0xd9b25e, 0.3, 0.85), 40);
+    this.disc.position.y = 0.3;
+    this.home = 0.3;
+    this.add(this.disc, 0.6, 1.3);
+    const can = new THREE.Mesh(new THREE.CylinderGeometry(0.8, 0.8, 1.2, 56, 1, true), M.tin);
+    can.position.y = 0.6;
+    this.add(can, 1.0);
+    const mesh = cyl(0.66, 0.02, new THREE.MeshStandardMaterial({
+      map: canvasTex(128, 128, (ctx) => {
+        ctx.fillStyle = '#25272b';
+        ctx.fillRect(0, 0, 128, 128);
+        ctx.strokeStyle = 'rgba(205,210,216,0.6)';
+        ctx.lineWidth = 2;
+        for (let k = -128; k <= 256; k += 8) {
+          ctx.beginPath();
+          ctx.moveTo(k, 0);
+          ctx.lineTo(k - 128, 128);
+          ctx.moveTo(k - 128, 0);
+          ctx.lineTo(k, 128);
+          ctx.stroke();
+        }
+      }),
+      roughness: 0.6,
+    }), 48);
+    mesh.position.y = 1.19;
+    this.add(mesh, 1.5);
+  }
+  set(on: number, explode: number, t = 0) {
+    this.on = on;
+    this.spread(explode);
+    this.disc.position.y = this.home + explode * 0.6 + on * 0.015 * Math.sin(t * 60);
+  }
+}
+
+/** HC-SR501's white Fresnel dome over the pyroelectric sensor (TO-5 can, IR window, twin elements). +Y = up. */
+class PyroDome extends Stack implements Layered {
+  private elA = emissive(0xff8a3d, 0x3a2a20);
+  private elB = emissive(0xff8a3d, 0x3a2a20);
+  constructor() {
+    super();
+    const elems = new THREE.Group();
+    for (const [x, m] of [[-0.06, this.elA], [0.06, this.elB]] as const) {
+      const e = box(0.08, 0.01, 0.16, m);
+      e.position.set(x, 0.29, 0);
+      elems.add(e);
+    }
+    this.add(elems, 0.55, 3);
+    const can = cyl(0.3, 0.25, M.tin, 40);
+    can.position.y = 0.13;
+    this.add(can, 0.15);
+    const win = box(0.26, 0.01, 0.26, phys(0x3a3550, { roughness: 0.1, metalness: 0.4 }));
+    win.position.y = 0.26;
+    this.add(win, 0.9);
+    const facets = new THREE.SphereGeometry(1.15, 18, 9, 0, Math.PI * 2, 0, Math.PI / 2);
+    const dome = new THREE.Mesh(facets, phys(0xf5f5f2, { roughness: 0.35, transmission: 0.35, thickness: 0.3, flatShading: true }));
+    const rim = cyl(1.18, 0.12, std(0xf0f0ec, 0.5), 48);
+    rim.position.y = 0.06;
+    const shell = new THREE.Group();
+    shell.add(dome, rim);
+    this.add(shell, 1.6);
+  }
+  /** a: how much heat each element sees (A then B as a warm body passes) */
+  heat(a: number, b: number) {
+    this.elA.emissiveIntensity = a * 6;
+    this.elB.emissiveIntensity = b * 6;
+  }
+  set(on: number, explode: number) {
+    this.on = on;
+    this.spread(explode);
+  }
+}
+
+/** DHT11: blue grilled housing over a humidity-sensing substrate and an NTC thermistor bead, on a tiny IC. +Y up. */
+class DhtStack extends Stack implements Layered {
+  private wetMat = std(0x5f6b78, 0.7);
+  constructor() {
+    super();
+    const ic = box(0.4, 0.06, 0.3, M.black);
+    ic.position.set(0.25, 0.05, 0);
+    this.add(ic, 0);
+    const sub = box(0.75, 0.04, 0.55, this.wetMat);
+    sub.position.set(-0.15, 0.12, 0);
+    const comb = box(0.6, 0.012, 0.42, M.gold);
+    comb.position.set(-0.15, 0.147, 0);
+    const layer = new THREE.Group();
+    layer.add(sub, comb);
+    this.add(layer, 0.45, 1.5);
+    const ntc = new THREE.Mesh(new THREE.SphereGeometry(0.06, 16, 12), M.black);
+    ntc.position.set(0.4, 0.14, 0.18);
+    this.add(ntc, 0.75, 2);
+    const grille = canvasTex(256, 256, (ctx) => {
+      ctx.fillStyle = '#2f6fd6';
+      ctx.fillRect(0, 0, 256, 256);
+      ctx.fillStyle = '#10264f';
+      for (let r = 0; r < 6; r++) for (let c = 0; c < 4; c++) ctx.fillRect(28 + c * 54, 22 + r * 38, 40, 24);
+    });
+    const cover = new THREE.Mesh(new RoundedBoxGeometry(1.2, 0.55, 1.55, 3, 0.06), [M.potBlue, M.potBlue, new THREE.MeshPhysicalMaterial({ map: grille, roughness: 0.4, clearcoat: 0.4 }), M.potBlue, M.potBlue, M.potBlue]);
+    cover.position.y = 0.28;
+    this.add(cover, 1.3);
+  }
+  set(on: number, explode: number) {
+    this.on = on;
+    this.spread(explode);
+    this.wetMat.color.copy(lin(0x5f6b78)).lerp(lin(0x2f5f9a), on);
+  }
+}
+
+// ---------- the sensor modules (FC-51 IR; LDR, flame, sound, gas and soil on the same LM393 board; HC-SR04, HC-SR501 and DHT11 boards) ----------
 
 interface Part {
   obj: THREE.Object3D;
@@ -581,25 +804,42 @@ interface Part {
   delay: number;
 }
 
-export const MODULE_KINDS = ['ir', 'ldr', 'flame', 'sound'];
+export const MODULE_KINDS = ['ir', 'ldr', 'flame', 'sound', 'gas', 'soil', 'ultrasonic', 'pir', 'dht'];
 
 class SensorModule {
   readonly group = new THREE.Group();
   readonly parts: Part[] = [];
-  readonly emitter = new Led('ir');
-  /** the sensing part: the IR receiver (ir, flame), the LDR or the microphone */
-  readonly receiver: Layered;
-  readonly knob: THREE.Group;
+  /** the IR LED (ir) or the transmitting transducer (ultrasonic); a spare LED that is never shown otherwise */
+  emitter: Layered = new Led('ir');
+  /** the sensing part: the IR receiver (ir, flame), LDR, microphone, MQ-2, soil probe, transducer, PIR dome, DHT11 */
+  receiver: Layered;
+  knob: THREE.Group = new THREE.Group();
   readonly pwr = smdLed(0xff3030);
   readonly obs = smdLed(0x33ff66);
-  readonly pinTips: THREE.Vector3[];
-  readonly anchors: Record<string, THREE.Vector3>;
-  readonly w = 3.1;
-  readonly h = 1.45;
+  pinTips: THREE.Vector3[] = [];
+  /** what each pin is (the bench wires them to the right Arduino pins) and which way the pins point */
+  pinNames: string[] = [];
+  pinDir = V(1, 0, 0);
+  /** where the sensing part looks: forward (-X) or up */
+  facing: 'front' | 'up' = 'front';
+  /** an LM393 comparator board (the compare / pot shots make sense) */
+  lm393 = true;
+  anchors: Record<string, THREE.Vector3> = {};
+  w = 3.1;
+  h = 1.45;
 
   constructor(readonly kind = 'ir') {
-    this.receiver = kind === 'ldr' ? new Ldr() : kind === 'sound' ? new Mic() : new Led('pd');
+    this.receiver =
+      kind === 'ldr' ? new Ldr() : kind === 'sound' ? new Mic() : kind === 'gas' ? new Mq() : kind === 'soil' ? new Probe()
+        : kind === 'ultrasonic' ? new Transducer() : kind === 'pir' ? new PyroDome() : kind === 'dht' ? new DhtStack() : new Led('pd');
+    if (CUSTOM_BOARDS[kind]) {
+      CUSTOM_BOARDS[kind](this);
+      this.shade();
+      return;
+    }
+    if (kind === 'gas') this.h = 2.1;
     const pins = kind === 'ir' ? 3 : 4;
+    this.pinNames = pins === 3 ? ['VCC', 'GND', 'OUT'] : ['VCC', 'GND', 'DO', 'AO'];
     const { w, h } = this;
     const at = (obj: THREE.Object3D, x: number, y: number, rot = 0, lift = 0) => {
       obj.position.set(x, T + lift, -y);
@@ -653,6 +893,7 @@ class SensorModule {
     this.named.chip = chip;
     this.part(chip, V(0.8, 3, -1.5), new THREE.Euler(-0.7, 0.6, 0.3), 0.34);
 
+    const res: THREE.Object3D[] = [];
     for (const [x, y, rot, cap, d] of [
       [-0.82, 0.5, 0, false, 0.4],
       [-0.82, -0.5, 0, false, 0.43],
@@ -663,8 +904,14 @@ class SensorModule {
     ] as const) {
       const c = resistor(cap);
       at(c, x, y, rot);
+      res.push(c);
       this.part(c, V(x * 0.6, 2.6 + d, -y * 2), new THREE.Euler(1.2, d * 3, 0.4), d);
     }
+    if (kind === 'gas')
+      for (const o of [pot.group, chip, ...res]) {
+        o.position.y = 0;
+        o.rotation.x = Math.PI;
+      }
     at(this.pwr.group, 0.95, -0.48);
     at(this.obs.group, 0.55, -0.48);
     this.part(this.pwr.group, V(1, 2.8, 1.4), new THREE.Euler(1, 0, 0.5), 0.5);
@@ -734,6 +981,33 @@ class SensorModule {
       this.named.receiver = holder;
       this.part(holder, V(-3, 1.2, 0), new THREE.Euler(0, 0, -1.4), 0.62);
     }
+    if (kind === 'gas') {
+      const holder = new THREE.Group();
+      holder.add(this.receiver.group, contact(1.6, 1.6, 0.6));
+      at(holder, -0.55, 0);
+      this.named.receiver = holder;
+      this.part(holder, V(0, 3.5, 0), new THREE.Euler(0.4, 0, 0.6), 0.62);
+    }
+    if (kind === 'soil') {
+      // two pins at the front for the probe's wires; the fork probe lies in front of the board
+      const h2 = header(2);
+      h2.group.rotation.y = Math.PI;
+      at(h2.group, -1.25, 0);
+      this.part(h2.group, V(-2, 1.5, 0), new THREE.Euler(0, 0, -1.2), 0.6);
+      const probe = new THREE.Group();
+      probe.add(this.receiver.group);
+      probe.position.set(0.3, 0, 2.1);
+      this.group.add(probe);
+      this.named.receiver = probe;
+      this.part(probe, V(0, 2.5, 2), new THREE.Euler(0, 0.5, 0), 0.66);
+      h2.group.updateMatrix();
+      [0xd8322a, 0x1a1a1a].forEach((c, i) => {
+        const tip = h2.tips[i].clone().applyMatrix4(h2.group.matrix);
+        const pad = V(0.95, 0.12, 2.1 + (i ? -0.3 : 0.3));
+        const curve = new THREE.CatmullRomCurve3([tip, tip.clone().add(V(-0.4, 0.05, 0)), V(tip.x - 0.5, 0.5, 1.0), V(pad.x + 0.4, 0.45, pad.z), pad]);
+        this.group.add(new THREE.Mesh(new THREE.TubeGeometry(curve, 60, 0.045, 8), phys(c, { roughness: 0.4, clearcoat: 0.6 })));
+      });
+    }
 
     const front = kind === 'ldr' ? V(-1.45, T + 0.6, 0) : kind === 'sound' ? V(-1.55, T + 0.47, 0) : V(-1.75, T + 0.3, 0);
     const single = kind !== 'ir';
@@ -749,6 +1023,11 @@ class SensorModule {
       leds: V(0.75, T + 0.05, 0.48),
       pins: V(1.6, T + 0.12, 0),
     };
+    if (kind === 'gas' || kind === 'soil') {
+      const at2 = kind === 'gas' ? V(-0.55, T + 1.15, 0) : V(-1.4, 0.12, 2.1);
+      Object.assign(this.anchors, { sensor: at2, emitter: at2, receiver: at2, emitTip: at2.clone().add(V(0, 0.3, 0)), recvTip: at2.clone().add(V(0, 0.3, 0)) });
+      this.facing = 'up';
+    }
     this.group.traverse((o) => {
       if ((o as THREE.Mesh).isMesh) {
         o.castShadow = true;
@@ -757,7 +1036,13 @@ class SensorModule {
     });
   }
 
-  private part(obj: THREE.Object3D, from: THREE.Vector3, spin: THREE.Euler, delay: number) {
+  shade() {
+    this.group.traverse((o) => {
+      if ((o as THREE.Mesh).isMesh) o.castShadow = o.receiveShadow = true;
+    });
+  }
+
+  part(obj: THREE.Object3D, from: THREE.Vector3, spin: THREE.Euler, delay: number) {
     this.parts.push({ obj, home: obj.position.clone(), homeQ: obj.quaternion.clone(), from, spin, delay });
   }
 
@@ -801,6 +1086,267 @@ class SensorModule {
     }
   }
 }
+
+/** A plain rounded PCB (w along x, h along -z), top face drawn by `draw` (canvas in board cm), lying on y = 0. */
+function pcbBoard(w: number, h: number, draw: (ctx: Ctx, X: (x: number) => number, Y: (y: number) => number, k: number) => void, holes: [number, number, number][] = []) {
+  const shape = new THREE.Shape();
+  const r = 0.1;
+  shape.moveTo(-w / 2 + r, -h / 2);
+  shape.lineTo(w / 2 - r, -h / 2);
+  shape.quadraticCurveTo(w / 2, -h / 2, w / 2, -h / 2 + r);
+  shape.lineTo(w / 2, h / 2 - r);
+  shape.quadraticCurveTo(w / 2, h / 2, w / 2 - r, h / 2);
+  shape.lineTo(-w / 2 + r, h / 2);
+  shape.quadraticCurveTo(-w / 2, h / 2, -w / 2, h / 2 - r);
+  shape.lineTo(-w / 2, -h / 2 + r);
+  shape.quadraticCurveTo(-w / 2, -h / 2, -w / 2 + r, -h / 2);
+  for (const [x, y, rad] of holes) {
+    const p = new THREE.Path();
+    p.absarc(x, y, rad, 0, Math.PI * 2, true);
+    shape.holes.push(p);
+  }
+  const geo = new THREE.ExtrudeGeometry(shape, { depth: T - 0.03, bevelEnabled: true, bevelThickness: 0.015, bevelSize: 0.012, bevelSegments: 2, curveSegments: 32 });
+  geo.rotateX(-Math.PI / 2);
+  geo.translate(0, 0.015, 0);
+  const px = Math.round(500 * w);
+  const tex = canvasTex(Math.min(2048, px), Math.min(2048, Math.round((Math.min(2048, px) * h) / w)), (ctx) => {
+    const k = ctx.canvas.width / w;
+    draw(ctx, (x) => (x + w / 2) * k, (y) => (h / 2 - y) * k, k);
+  });
+  tex.repeat.set(1 / w, 1 / h);
+  tex.offset.set(0.5, 0.5);
+  const top = phys(0xffffff, { map: tex, roughness: 0.55, clearcoat: 0.15, clearcoatRoughness: 0.45, envMapIntensity: 0.45 });
+  return new THREE.Mesh(geo, [top, M.edge]);
+}
+
+/** silkscreen helpers for the custom boards */
+function silk(ctx: Ctx, k: number, mask: string, texts: [string, number, number, number?][], X: (x: number) => number, Y: (y: number) => number) {
+  ctx.fillStyle = mask;
+  ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  ctx.fillStyle = '#f3f6fb';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  for (const [s, x, y, size] of texts) {
+    ctx.font = `600 ${(size ?? 0.09) * k}px "IBM Plex Mono", monospace`;
+    ctx.fillText(s, X(x), Y(y));
+  }
+}
+
+/** Vertical gold pins hanging under a board edge (HC-SR501 / HC-SR04 style), with their black plastic strip. */
+function downPins(n: number, horizontal = false) {
+  const g = new THREE.Group();
+  const strip = rbox(0.25, 0.25, 0.254 * n, 0.02, M.black);
+  strip.position.y = -0.125;
+  g.add(strip);
+  const tips: THREE.Vector3[] = [];
+  for (let i = 0; i < n; i++) {
+    const z = (i - (n - 1) / 2) * 0.254;
+    const pin = box(horizontal ? 0.72 : 0.064, horizontal ? 0.064 : 0.72, 0.064, M.gold);
+    pin.position.set(0, -0.36, z);
+    g.add(pin);
+    tips.push(V(0, -0.72, z));
+  }
+  return { group: g, tips };
+}
+
+/** HC-SR04: stands upright, its two transducers looking forward (-X); pins point down. */
+function buildHcsr04(m: SensorModule) {
+  const inner = new THREE.Group();
+  const board = pcbBoard(2.0, 4.5, (ctx, X, Y, k) => {
+    silk(ctx, k, '#1a54b8', [['HC-SR04', 0.55, 0, 0.14], ['T', 0.6, 1.3, 0.16], ['R', 0.6, -1.3, 0.16], ['VCC  Trig  Echo  Gnd', -0.75, 0, 0.08]], X, Y);
+    ctx.fillStyle = '#d9b25e';
+    for (const [x, y] of [[-0.85, -2.05], [-0.85, 2.05], [0.85, -2.05], [0.85, 2.05]]) {
+      ctx.beginPath();
+      ctx.arc(X(x), Y(y), 0.13 * k, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }, [[-0.85, -2.05, 0.08], [-0.85, 2.05, 0.08], [0.85, -2.05, 0.08], [0.85, 2.05, 0.08]]);
+  inner.add(board);
+  m.part(board, V(0, -2.5, 0), new THREE.Euler(0.6, 0.4, 0), 0);
+  const tx = new Transducer();
+  const rx = m.receiver as Transducer;
+  for (const [tr, z, d] of [[tx, 1.3, 0.45], [rx, -1.3, 0.55]] as const) {
+    const holder = new THREE.Group();
+    holder.add(tr.group);
+    holder.position.set(0.15, T, z);
+    inner.add(holder);
+    m.part(holder, V(0, 3, z), new THREE.Euler(0.8, 0, 0), d);
+    m.named[tr === tx ? 'emitter' : 'receiver'] = holder;
+  }
+  m.emitter = tx;
+  const xtal = kmesh('Crystal_HC49-4H_Vertical');
+  if (xtal) {
+    xtal.position.set(0.75, T, -0.55);
+    xtal.rotation.y = Math.PI / 2;
+    inner.add(xtal);
+    m.part(xtal, V(0, 2.5, 0), new THREE.Euler(1, 0, 0), 0.3);
+  }
+  for (const z of [-1.2, 0, 1.2]) {
+    const c = soic(z === 0 ? 'MAX232' : z > 0 ? 'EM78P153' : 'LM324');
+    c.rotation.x = Math.PI;
+    c.position.set(0.1, 0, z);
+    inner.add(c);
+    m.part(c, V(0, -2, z), new THREE.Euler(0.5, 0, 0), 0.2);
+  }
+  const hd = header(4);
+  hd.group.rotation.y = Math.PI;
+  hd.group.position.set(-0.85, T, 0);
+  inner.add(hd.group);
+  m.named.pins = hd.group;
+  m.part(hd.group, V(-2, 0, 0), new THREE.Euler(0, 0, 1), 0.15);
+  // stand it up: the board's top faces -X, its "x" becomes up
+  const outer = new THREE.Group();
+  outer.rotation.z = Math.PI / 2;
+  outer.position.y = 1.95;
+  outer.add(inner);
+  m.group.add(outer);
+  outer.updateMatrix();
+  inner.updateMatrix();
+  hd.group.updateMatrix();
+  const W = (v: THREE.Vector3) => v.clone().applyMatrix4(inner.matrix).applyMatrix4(outer.matrix);
+  m.pinTips = hd.tips.map((t) => W(t.clone().applyMatrix4(hd.group.matrix)));
+  m.pinNames = ['VCC', 'TRIG', 'ECHO', 'GND'];
+  m.pinDir = V(0, -1, 0);
+  const front = (z: number) => W(V(0.15, T + 1.2, z));
+  m.anchors = {
+    board: W(V(0, T, 0)),
+    sensor: W(V(0.15, T + 0.9, 0)),
+    emitter: front(1.3),
+    receiver: front(-1.3),
+    emitTip: front(1.3).add(V(-0.1, 0, 0)),
+    recvTip: front(-1.3).add(V(-0.1, 0, 0)),
+    pot: W(V(0.75, T + 0.2, -0.55)),
+    chip: W(V(0.75, T + 0.2, -0.55)),
+    leds: W(V(0.55, T + 0.1, 0)),
+    pins: W(V(-1.4, T / 2, 0)),
+  };
+  m.named.chip = xtal ?? board;
+}
+
+/** HC-SR501 PIR: green board, white Fresnel dome, orange TIME and SENS pots, the trigger jumper, 3 pins down. */
+function buildPir(m: SensorModule) {
+  const board = pcbBoard(3.2, 2.4, (ctx, X, Y, k) => {
+    silk(ctx, k, '#1d6b3a', [['HC-SR501', -0.2, -1.05, 0.11], ['TIME', 1.15, 0.95, 0.08], ['SENS', 1.15, -0.95, 0.08], ['H  L', 1.15, -0.1, 0.07]], X, Y);
+  }, [[-1.35, 1.0, 0.1], [-1.35, -1.0, 0.1]]);
+  m.group.add(board);
+  m.part(board, V(0, -2.5, 0.5), new THREE.Euler(0.6, 0.4, 0), 0);
+  const holder = new THREE.Group();
+  holder.add(m.receiver.group);
+  holder.position.set(-0.3, T, 0);
+  m.group.add(holder);
+  m.named.receiver = holder;
+  m.part(holder, V(0, 3.5, 0), new THREE.Euler(0.5, 0, 0.4), 0.55);
+  const potMat = phys(0xf08a24, { roughness: 0.4, clearcoat: 0.4 });
+  let knob: THREE.Group | undefined;
+  for (const [y, d] of [[0.62, 0.3], [-0.62, 0.36]] as const) {
+    const pot = new THREE.Group();
+    const body = rbox(0.5, 0.42, 0.5, 0.04, potMat);
+    body.position.y = 0.21;
+    const kn = new THREE.Group();
+    const disc = cyl(0.17, 0.05, M.white, 32);
+    const slot = box(0.24, 0.025, 0.04, M.black);
+    slot.position.y = 0.03;
+    kn.add(disc, slot);
+    kn.position.y = 0.44;
+    pot.add(body, kn, contact(0.5, 0.5, 0.55));
+    pot.position.set(1.15, T, -y);
+    m.group.add(pot);
+    m.part(pot, V(1, 2.8, -y * 2), new THREE.Euler(1, 0.4, 0), d);
+    if (!knob) {
+      knob = kn;
+      m.named.pot = pot;
+    }
+  }
+  m.knob = knob!;
+  const jumper = new THREE.Group();
+  for (let i = 0; i < 3; i++) {
+    const pin = box(0.06, 0.4, 0.06, M.gold);
+    pin.position.set(0, 0.2, (i - 1) * 0.254);
+    jumper.add(pin);
+  }
+  const cap = rbox(0.24, 0.3, 0.5, 0.03, std(0xf2c230, 0.5));
+  cap.position.set(0, 0.35, -0.127);
+  jumper.add(cap);
+  jumper.position.set(1.15, T, 0);
+  m.group.add(jumper);
+  m.part(jumper, V(1.5, 2.6, 0), new THREE.Euler(0, 0, 1), 0.42);
+  const chip = soic('BISS0001');
+  chip.rotation.x = Math.PI;
+  chip.position.set(-0.3, 0, 0);
+  m.group.add(chip);
+  m.named.chip = chip;
+  m.part(chip, V(0, -2, 0), new THREE.Euler(0.5, 0, 0), 0.2);
+  const pins = downPins(3);
+  pins.group.position.set(1.45, 0, 0);
+  m.group.add(pins.group);
+  m.named.pins = pins.group;
+  m.part(pins.group, V(1.5, -2, 0), new THREE.Euler(0, 0, 1), 0.15);
+  m.pinTips = pins.tips.map((t) => t.clone().add(pins.group.position));
+  m.pinNames = ['GND', 'OUT', 'VCC'];
+  m.pinDir = V(0, -1, 0);
+  m.facing = 'up';
+  m.lm393 = false;
+  m.anchors = {
+    board: V(0, T, 0),
+    sensor: V(-0.3, T + 0.9, 0),
+    emitter: V(-0.3, T + 0.9, 0),
+    receiver: V(-0.3, T + 0.9, 0),
+    emitTip: V(-0.3, T + 1.2, 0),
+    recvTip: V(-0.3, T + 1.2, 0),
+    pot: V(1.15, T + 0.45, -0.62),
+    chip: V(-0.3, 0, 0),
+    leds: V(1.15, T + 0.4, 0),
+    pins: V(1.45, -0.3, 0),
+  };
+}
+
+/** DHT11 module: the blue grilled sensor on a small board with its pull-up resistor, a power LED and 3 pins. */
+function buildDht(m: SensorModule) {
+  const board = pcbBoard(2.8, 1.6, (ctx, X, Y, k) => {
+    silk(ctx, k, '#143f9c', [['DHT11', 0.55, 0.62, 0.09], ['S', 1.06, 0.254, 0.08], ['+', 1.06, 0, 0.09], ['-', 1.06, -0.254, 0.09], ['PWR', 0.55, -0.6, 0.07]], X, Y);
+  });
+  m.group.add(board);
+  m.part(board, V(0, -2.5, 0.5), new THREE.Euler(0.6, 0.4, 0), 0);
+  const holder = new THREE.Group();
+  holder.add(m.receiver.group);
+  holder.position.set(-0.45, T, 0);
+  m.group.add(holder);
+  m.named.receiver = holder;
+  m.part(holder, V(-1, 3, 0), new THREE.Euler(0.5, 0, 0.4), 0.5);
+  const r = resistor();
+  r.position.set(0.55, T, -0.3);
+  m.group.add(r);
+  m.part(r, V(0.5, 2.6, -0.6), new THREE.Euler(1.2, 0.3, 0.4), 0.3);
+  m.pwr.group.position.set(0.55, T, 0.45);
+  m.group.add(m.pwr.group);
+  m.part(m.pwr.group, V(1, 2.8, 1.4), new THREE.Euler(1, 0, 0.5), 0.35);
+  m.obs.group.visible = false;
+  const hd = header(3);
+  hd.group.position.set(1.15, T, 0);
+  m.group.add(hd.group);
+  m.named.pins = hd.group;
+  m.part(hd.group, V(2.5, 1.5, 0), new THREE.Euler(0, 0, 1.2), 0.18);
+  m.pinTips = hd.tips.map((p) => p.clone().add(hd.group.position));
+  m.pinNames = ['S', 'VCC', 'GND'];
+  m.knob = new THREE.Group();
+  m.facing = 'up';
+  m.lm393 = false;
+  m.anchors = {
+    board: V(0, T, 0),
+    sensor: V(-0.45, T + 0.45, 0),
+    emitter: V(-0.45, T + 0.45, 0),
+    receiver: V(-0.45, T + 0.45, 0),
+    emitTip: V(-0.45, T + 0.7, 0),
+    recvTip: V(-0.45, T + 0.7, 0),
+    pot: V(0.55, T + 0.05, -0.3),
+    chip: V(0.55, T + 0.05, -0.3),
+    leds: V(0.55, T + 0.05, 0.45),
+    pins: V(1.6, T + 0.12, 0),
+  };
+  m.named.chip = r;
+}
+
+const CUSTOM_BOARDS: Record<string, (m: SensorModule) => void> = { ultrasonic: buildHcsr04, pir: buildPir, dht: buildDht };
 
 function drawBoard(ctx: Ctx, w: number, h: number, kind: string) {
   const k = ctx.canvas.width / w;
@@ -865,11 +1411,11 @@ function drawBoard(ctx: Ctx, w: number, h: number, kind: string) {
   ctx.font = `600 ${0.075 * k}px "IBM Plex Mono", monospace`;
   ctx.fillText('PWR', X(0.95), Y(-0.62));
   ctx.fillText(kind === 'ir' ? 'OBS' : 'DO', X(0.55), Y(-0.62));
-  ctx.fillText({ ir: 'IR', ldr: 'LDR', flame: 'FLAME', sound: 'MIC' }[kind] ?? 'IR', X(-1.25), Y(0.62));
+  ctx.fillText(({ ir: 'IR', ldr: 'LDR', flame: 'FLAME', sound: 'MIC', gas: 'MQ-2', soil: 'PROBE' } as Record<string, string>)[kind] ?? 'IR', X(-1.25), Y(0.62));
   ctx.strokeRect(X(-0.79), Y(0.34), 0.68 * k, 0.68 * k);
   ctx.strokeRect(X(0.15), Y(0.47), 0.55 * k, 0.5 * k);
   ctx.font = `600 ${0.07 * k}px "IBM Plex Mono", monospace`;
-  ctx.fillText({ ir: 'FC-51', ldr: 'LM393 LDR', flame: 'FLAME SENSOR', sound: 'KY-038' }[kind] ?? 'FC-51', X(-0.45), Y(-0.55));
+  ctx.fillText(({ ir: 'FC-51', ldr: 'LM393 LDR', flame: 'FLAME SENSOR', sound: 'KY-038', gas: 'MQ-2 GAS', soil: 'SOIL MOISTURE' } as Record<string, string>)[kind] ?? 'FC-51', X(-0.45), Y(-0.55));
 }
 
 // ---------- glass diagrams ----------
@@ -1226,6 +1772,7 @@ class Uses {
   private glows: Record<string, THREE.Sprite> = {};
   private lights: Record<string, THREE.PointLight> = {};
   readonly focus: Record<string, THREE.Vector3> = {};
+  private lcd?: { canvas: HTMLCanvasElement; tex: THREE.CanvasTexture };
 
   constructor(readonly kind: string) {
     const floor = new THREE.Mesh(new THREE.CircleGeometry(40, 64), std(0x15171c, 0.85));
@@ -1432,6 +1979,178 @@ class Uses {
       clap.add(stand, base, bulb, bg, bl, ...hands);
       this.focus.clap = V(-1.2, 2.6, 0);
     }
+    if (this.kind === 'ultrasonic') {
+      // parking sensor: a car reverses towards a wall and stops just in time
+      const park = mk('parking');
+      const car = new THREE.Group();
+      const paint = phys(0xc8202a, { roughness: 0.25, clearcoat: 1, clearcoatRoughness: 0.08, metalness: 0.4 });
+      const body = rbox(9, 1.8, 4.4, 0.7, paint);
+      body.position.y = 1.5;
+      const cabin = rbox(4.6, 1.6, 4.0, 0.7, phys(0x1b2433, { roughness: 0.1, clearcoat: 1, metalness: 0.2 }));
+      cabin.position.set(0.6, 3.0, 0);
+      car.add(body, cabin);
+      for (const x of [-2.9, 2.9])
+        for (const z of [-2.2, 2.2]) {
+          const w = cyl(0.9, 0.6, std(0x141518, 0.8), 32);
+          w.rotation.x = Math.PI / 2;
+          w.position.set(x, 0.9, z);
+          car.add(w);
+        }
+      park.add(car);
+      this.parts.parking.car = car;
+      const pm = mod('parking', 'ultrasonic', V(-4.6, 0.75, 0), 0, 0.35);
+      car.add(pm.group);
+      const wall = rbox(0.6, 6, 14, 0.1, std(0x8d8a84, 0.75));
+      wall.position.set(-15, 3, 0);
+      park.add(wall);
+      this.parts.parking.rings = new THREE.Group();
+      for (let i = 0; i < 5; i++) {
+        const r = new THREE.Mesh(new THREE.TorusGeometry(0.5, 0.04, 8, 64), new THREE.MeshBasicMaterial({ color: lin(0x9fdcff), transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false }));
+        r.rotation.y = Math.PI / 2;
+        (this.parts.parking.rings as THREE.Group).add(r);
+      }
+      park.add(this.parts.parking.rings);
+      this.focus.parking = V(-7, 2, 0);
+    }
+    if (this.kind === 'pir') {
+      // a room: someone walks in, the PIR on the wall sees their warmth, the ceiling light comes on
+      const room = mk('room');
+      const back = rbox(0.4, 10, 16, 0.05, std(0x3a3f48, 0.8));
+      back.position.set(-6, 5, 0);
+      room.add(back);
+      const pm = mod('room', 'pir', V(-5.6, 7.2, -3), 0, 0.8);
+      pm.group.rotation.z = Math.PI / 2;
+      this.mats.ceiling = emissive(0xffe6b0, 0xe8e8e8);
+      const lampDisc = cyl(1.4, 0.2, this.mats.ceiling, 40);
+      lampDisc.position.set(0, 9.9, 0);
+      const lg = glowSprite(0xffe0a0, 6);
+      lg.position.set(0, 9.5, 0);
+      this.glows.ceiling = lg;
+      const ll = new THREE.PointLight(lin(0xffe0a0), 0, 30, 1.2);
+      ll.position.set(0, 9, 0);
+      this.lights.ceiling = ll;
+      const person = makePerson();
+      room.add(lampDisc, lg, ll, person);
+      this.parts.room.person = person;
+      this.focus.room = V(-2, 4.5, 0);
+    }
+    if (this.kind === 'gas') {
+      // kitchen: the cylinder's hose leaks, the MQ-2 smells it, the alarm goes off
+      const kit = mk('kitchen');
+      const counter = rbox(16, 3.4, 7, 0.1, std(0x6b5240, 0.6));
+      counter.position.set(0, 1.7, -1);
+      const top = rbox(16.4, 0.3, 7.4, 0.05, std(0x2a2c30, 0.3));
+      top.position.set(0, 3.55, -1);
+      const stove = rbox(5, 0.4, 3.2, 0.1, std(0x111214, 0.3));
+      stove.position.set(2, 3.9, -1);
+      kit.add(counter, top, stove);
+      for (const x of [0.9, 3.1]) {
+        const burner = new THREE.Mesh(new THREE.TorusGeometry(0.6, 0.1, 10, 32), M.steel);
+        burner.rotation.x = Math.PI / 2;
+        burner.position.set(x, 4.15, -1);
+        kit.add(burner);
+      }
+      const cyl1 = cyl(1.2, 4.2, phys(0xd23a1e, { roughness: 0.35, clearcoat: 0.8 }), 40);
+      cyl1.position.set(-5.5, 2.1, 3.2);
+      const dome = new THREE.Mesh(new THREE.SphereGeometry(1.2, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), cyl1.material);
+      dome.position.set(-5.5, 4.2, 3.2);
+      const valve = cyl(0.3, 0.5, M.steel, 16);
+      valve.position.set(-5.5, 5.5, 3.2);
+      const hose = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([V(-5.5, 5.7, 3.2), V(-4, 6.2, 2), V(-1, 4.6, 0.4), V(0.6, 4.0, -0.4)]), 48, 0.12, 10), std(0xe86a1e, 0.6));
+      kit.add(cyl1, dome, valve, hose);
+      mod('kitchen', 'gas', V(4.5, 3.7, 1.6), 0, 0.9);
+      this.mats.siren = emissive(0xff2020, 0x401010);
+      const siren = new THREE.Mesh(new THREE.SphereGeometry(0.7, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), this.mats.siren);
+      siren.position.set(6.8, 3.7, 1.2);
+      const sg = glowSprite(0xff2020, 3);
+      sg.position.set(6.8, 4.2, 1.2);
+      this.glows.siren = sg;
+      kit.add(siren, sg);
+      const puffs = new THREE.Group();
+      for (let i = 0; i < 14; i++) {
+        const pf = new THREE.Mesh(new THREE.SphereGeometry(0.5, 16, 12), new THREE.MeshStandardMaterial({ color: lin(0xa89ab8), transparent: true, opacity: 0, depthWrite: false, roughness: 1 }));
+        puffs.add(pf);
+      }
+      kit.add(puffs);
+      this.parts.kitchen.puffs = puffs;
+      this.focus.kitchen = V(0, 4, 0.5);
+    }
+    if (this.kind === 'soil') {
+      // a plant pot: the soil dries, the probe notices, the pump waters it until it's wet again
+      const plant = mk('plant');
+      const pot = new THREE.Mesh(new THREE.CylinderGeometry(2.2, 1.6, 3.2, 40), std(0xb5602f, 0.75));
+      pot.position.set(0, 1.6, 0);
+      this.mats.soil = std(0x8a6a48, 0.95);
+      const dirt = cyl(2.05, 0.2, this.mats.soil, 40);
+      dirt.position.set(0, 3.1, 0);
+      const stem = cyl(0.12, 3.2, std(0x3f7a2a, 0.6), 12);
+      stem.position.set(-0.4, 4.6, -0.3);
+      plant.add(pot, dirt, stem);
+      for (let i = 0; i < 7; i++) {
+        const leaf = new THREE.Mesh(new THREE.SphereGeometry(0.6, 16, 10), std(0x4f9a35, 0.55));
+        leaf.scale.set(1.6, 0.25, 0.8);
+        leaf.position.set(-0.4 + Math.cos(i * 0.9) * 0.9, 4.0 + i * 0.35, -0.3 + Math.sin(i * 0.9) * 0.9);
+        leaf.rotation.set(0.3, i * 0.9, 0.4);
+        plant.add(leaf);
+      }
+      const sm = mod('plant', 'soil', V(5.2, 0, 1.2), -0.3, 0.9);
+      void sm;
+      const tube = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([V(6, 0.3, -2.5), V(4, 5.8, -1.6), V(1.2, 5.2, -0.4), V(0.9, 4.0, 0.2)]), 48, 0.1, 10), phys(0xdfe8ff, { transmission: 0.8, roughness: 0.1, thickness: 0.1 }));
+      plant.add(tube);
+      const drops = new THREE.Group();
+      for (let i = 0; i < 8; i++) drops.add(new THREE.Mesh(new THREE.SphereGeometry(0.1, 12, 8), phys(0x8fd0ff, { transmission: 0.8, roughness: 0.05, thickness: 0.1 })));
+      plant.add(drops);
+      this.parts.plant.drops = drops;
+      this.focus.plant = V(1.8, 3, 0);
+    }
+    if (this.kind === 'dht') {
+      // weather station: the room heats up, the DHT11 reads it, the display shows it and the fan comes on
+      const desk = mk('weather');
+      const table = rbox(16, 0.6, 10, 0.1, std(0x5a3e2b, 0.6));
+      table.position.y = 0.3;
+      desk.add(table);
+      mod('weather', 'dht', V(-3, 0.6, 1.5), 0, 1.4);
+      const lcdCanvas = document.createElement('canvas');
+      lcdCanvas.width = 512;
+      lcdCanvas.height = 160;
+      const lcdTex = new THREE.CanvasTexture(lcdCanvas);
+      lcdTex.colorSpace = THREE.SRGBColorSpace;
+      const lcd = new THREE.Group();
+      const pcb = rbox(4.2, 0.2, 1.8, 0.05, std(0x1d6b3a, 0.5));
+      const screen = new THREE.Mesh(new THREE.PlaneGeometry(3.6, 1.12), new THREE.MeshStandardMaterial({ map: lcdTex, emissive: lin(0xffffff), emissiveMap: lcdTex, emissiveIntensity: 0.9, roughness: 0.4 }));
+      screen.rotation.x = -Math.PI / 2;
+      screen.position.y = 0.11;
+      lcd.add(pcb, screen);
+      lcd.position.set(2.2, 1.6, 0.5);
+      lcd.rotation.x = 0.9;
+      const stand = rbox(0.4, 1.4, 0.4, 0.05, M.black);
+      stand.position.set(2.2, 0.9, 0.1);
+      desk.add(lcd, stand);
+      this.parts.weather.lcd = lcd;
+      this.lcd = { canvas: lcdCanvas, tex: lcdTex };
+      const fan = new THREE.Group();
+      const fbase = cyl(1.0, 0.3, M.black, 32);
+      fbase.position.y = 0.75;
+      const fpole = cyl(0.12, 2.6, M.steel, 12);
+      fpole.position.y = 2.0;
+      const blades = new THREE.Group();
+      for (let i = 0; i < 3; i++) {
+        const b = rbox(1.6, 0.05, 0.5, 0.2, std(0x2f7fd6, 0.4));
+        b.position.x = 0.85;
+        const arm = new THREE.Group();
+        arm.rotation.z = (i / 3) * Math.PI * 2;
+        arm.add(b);
+        blades.add(arm);
+      }
+      blades.position.set(0, 3.4, 0);
+      blades.rotation.y = Math.PI / 2;
+      fan.add(fbase, fpole, blades);
+      fan.position.set(5.6, 0, -1.5);
+      fan.rotation.y = -0.6;
+      desk.add(fan);
+      this.parts.weather.blades = blades;
+      this.focus.weather = V(0.8, 1.8, 0);
+    }
     this.group.traverse((o) => {
       if ((o as THREE.Mesh).isMesh && o !== floor) o.castShadow = o.receiveShadow = true;
     });
@@ -1531,8 +2250,405 @@ class Uses {
       this.lights.bulb.intensity = on * 12;
       m.receiver.set(loud, 0, t);
       m.obs.set(on);
+    } else if (name === 'parking') {
+      const x = lerp(8, -4.5, outCubic(range(p, 0, 0.65)));
+      P.car.position.x = x;
+      const gap = x - 4.6 * 1 - -15;
+      const near = clamp(1 - (gap - 2) / 6);
+      const rings = (P.rings as THREE.Group).children as THREE.Mesh[];
+      rings.forEach((r, i) => {
+        const u = (t * (1.2 + near * 2) + i / rings.length) % 1;
+        r.position.set(x - 4.8 - u * Math.max(0.5, gap - 0.5), 1.6, 0);
+        r.scale.setScalar(0.5 + u * 1.5);
+        (r.material as THREE.MeshBasicMaterial).opacity = (1 - u) * 0.9;
+      });
+      m.receiver.set(near, 0, t);
+      m.obs.set(near > 0.5 ? 1 : 0);
+    } else if (name === 'room') {
+      const walk = outCubic(range(p, 0, 0.55));
+      (P.person as THREE.Object3D).position.set(lerp(2, -1.5, walk), 0, lerp(9, 0.5, walk));
+      (P.person as THREE.Object3D).rotation.y = -0.4;
+      const on = p > 0.42 ? 1 : 0;
+      this.mats.ceiling.emissiveIntensity = on * 7;
+      this.glows.ceiling.material.opacity = on * 0.9;
+      this.lights.ceiling.intensity = on * 40;
+      m.receiver.set(on, 0);
+      m.obs.set(on);
+    } else if (name === 'kitchen') {
+      const leak = smooth(range(p, 0.05, 0.4));
+      const puffs = (P.puffs as THREE.Group).children as THREE.Mesh[];
+      puffs.forEach((pf, i) => {
+        const u = (t * 0.22 + i / puffs.length) % 1;
+        pf.position.set(lerp(0.6, 4.5, u) + Math.sin(i * 2.1 + t) * 0.4, 4.1 + u * 0.8 + Math.sin(i * 1.3) * 0.3, lerp(-0.4, 1.6, u));
+        pf.scale.setScalar(0.6 + u * 1.6);
+        (pf.material as THREE.MeshStandardMaterial).opacity = leak * 0.32 * Math.sin(u * Math.PI);
+      });
+      const alarm = leak > 0.7 ? (Math.sin(t * 10) > 0 ? 1 : 0.15) : 0;
+      this.mats.siren.emissiveIntensity = alarm * 9;
+      this.glows.siren.material.opacity = alarm * 0.9;
+      m.receiver.set(leak, 0);
+      m.obs.set(leak > 0.7 ? 1 : 0);
+    } else if (name === 'plant') {
+      // dry -> the probe notices -> the pump waters -> wet again
+      const water = smooth(range(p, 0.35, 0.8));
+      const pumping = p > 0.35 && p < 0.8;
+      this.mats.soil.color.copy(lin(0x9a7a56)).lerp(lin(0x3a2616), water);
+      ((P.drops as THREE.Group).children as THREE.Mesh[]).forEach((d, i) => {
+        d.visible = pumping;
+        const u = (t * 1.2 + i / 8) % 1;
+        d.position.set(0.9 + Math.sin(i) * 0.1, 3.9 - u * 0.8, 0.2);
+      });
+      m.receiver.set(water, 0);
+      m.obs.set(water < 0.5 ? 1 : 0);
+    } else if (name === 'weather') {
+      const heat = smooth(range(p, 0.05, 0.6));
+      const temp = Math.round(24 + heat * 10);
+      const hum = Math.round(48 + heat * 22);
+      if (this.lcd) {
+        const c = this.lcd.canvas.getContext('2d')!;
+        c.fillStyle = '#7fbf3f';
+        c.fillRect(0, 0, 512, 160);
+        c.fillStyle = '#10240a';
+        c.font = '600 54px "IBM Plex Mono", monospace';
+        c.fillText(`TEMP: ${temp} C`, 26, 66);
+        c.fillText(`HUM : ${hum} %`, 26, 136);
+        this.lcd.tex.needsUpdate = true;
+      }
+      const fanOn = temp >= 30 ? 1 : 0;
+      (P.blades as THREE.Object3D).rotation.z = fanOn * t * 14;
+      m.receiver.set(heat, 0);
+      m.pwr.set(1);
     }
   }
+}
+
+/** The new modules' "beam" props: an ultrasonic ping and echo, a warm body crossing a PIR's zones, a gas cloud,
+ *  water soaking soil, rising humidity. Built around the sensor's position `at`. */
+class MoreProps {
+  readonly group = new THREE.Group();
+  private rings: THREE.Mesh[] = [];
+  private echo: THREE.Mesh[] = [];
+  private wall: THREE.Mesh;
+  private walker: THREE.Group;
+  private zones: THREE.Mesh[] = [];
+  private puffs: THREE.Mesh[] = [];
+  private drops: THREE.Mesh[] = [];
+  private soil: THREE.Mesh;
+  private soilMat = std(0x6b4a2e, 0.95);
+  private wisps: THREE.Mesh[] = [];
+  constructor(readonly kind: string, readonly at: THREE.Vector3) {
+    const g = this.group;
+    const ringMat = () => new THREE.MeshBasicMaterial({ color: lin(0x9fdcff), transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false });
+    if (kind === 'ultrasonic') {
+      for (let i = 0; i < 5; i++) {
+        const r = new THREE.Mesh(new THREE.TorusGeometry(0.6, 0.03, 8, 64), ringMat());
+        r.rotation.y = Math.PI / 2;
+        const e = r.clone();
+        e.material = ringMat();
+        (e.material as THREE.MeshBasicMaterial).color.copy(lin(0xffb27a));
+        g.add(r, e);
+        this.rings.push(r);
+        this.echo.push(e);
+      }
+    }
+    this.wall = rbox(0.4, 3.6, 4.4, 0.08, std(0x9a968f, 0.7));
+    this.wall.position.set(at.x - 4.5, 1.8, 0);
+    g.add(this.wall);
+    // a warm body (glowing silhouette) and the Fresnel lens's detection zones
+    this.walker = new THREE.Group();
+    const warm = new THREE.MeshStandardMaterial({ color: lin(0x331a10), emissive: lin(0xff7a2a), emissiveIntensity: 2.5, transparent: true, opacity: 0.85 });
+    const body = new THREE.Mesh(new THREE.CapsuleGeometry(0.45, 1.6, 8, 16), warm);
+    body.position.y = 1.25;
+    const head = new THREE.Mesh(new THREE.SphereGeometry(0.38, 24, 16), warm);
+    head.position.y = 2.6;
+    const halo = glowSprite(0xff7a2a, 3.5);
+    halo.position.y = 1.6;
+    halo.material.opacity = 0.5;
+    this.walker.add(body, head, halo);
+    g.add(this.walker);
+    for (let i = 0; i < 7; i++) {
+      const z = beam(5, 0.05, 0.5, 0xff9a5a);
+      z.position.copy(at);
+      z.rotation.set(0, 0, (Math.PI / 2) * 0.7 + 0.15);
+      z.rotateX(((i - 3) / 3) * 0.9);
+      g.add(z);
+      this.zones.push(z);
+    }
+    for (let i = 0; i < 16; i++) {
+      const pmat = new THREE.MeshStandardMaterial({ color: lin(0xa89ab8), transparent: true, opacity: 0, roughness: 1, depthWrite: false });
+      const pf = new THREE.Mesh(new THREE.SphereGeometry(0.35, 16, 12), pmat);
+      g.add(pf);
+      this.puffs.push(pf);
+    }
+    this.soil = rbox(4.2, 0.5, 1.6, 0.2, this.soilMat);
+    this.soil.position.set(at.x, 0.3, at.z);
+    g.add(this.soil);
+    for (let i = 0; i < 10; i++) {
+      const d = new THREE.Mesh(new THREE.SphereGeometry(0.09, 12, 8), phys(0x8fd0ff, { transmission: 0.8, roughness: 0.05, thickness: 0.1 }));
+      g.add(d);
+      this.drops.push(d);
+    }
+    for (let i = 0; i < 10; i++) {
+      const w = new THREE.Mesh(new THREE.SphereGeometry(0.22, 12, 10), new THREE.MeshStandardMaterial({ color: 0xffffff, transparent: true, opacity: 0, depthWrite: false, roughness: 1 }));
+      g.add(w);
+      this.wisps.push(w);
+    }
+    g.traverse((o) => {
+      if ((o as THREE.Mesh).isMesh) o.castShadow = true;
+    });
+  }
+  hide() {
+    this.group.visible = false;
+  }
+  /** poses the prop for the module's kind; returns how strongly the sensor responds (0..1) */
+  update(t: number, on: number, emit: THREE.Vector3, recv: THREE.Vector3): number {
+    const g = this.group;
+    g.visible = true;
+    for (const o of g.children) o.visible = false;
+    if (this.kind === 'ultrasonic') {
+      this.wall.visible = true;
+      const wx = this.wall.position.x + 0.25;
+      this.rings.forEach((r, i) => {
+        const u = (t * 0.8 + i / 5) % 1;
+        r.visible = this.echo[i].visible = true;
+        r.position.set(lerp(emit.x - 0.2, wx, u), emit.y, emit.z);
+        r.scale.setScalar(0.6 + u * 1.2);
+        (r.material as THREE.MeshBasicMaterial).opacity = on * (1 - u * 0.6) * 0.9;
+        const v = (t * 0.8 + i / 5 + 0.5) % 1;
+        this.echo[i].position.set(lerp(wx, recv.x - 0.2, v), recv.y, recv.z);
+        this.echo[i].scale.setScalar(1.8 - v * 1.0);
+        (this.echo[i].material as THREE.MeshBasicMaterial).opacity = on * (0.4 + v * 0.6) * 0.8;
+      });
+      return on;
+    }
+    if (this.kind === 'pir') {
+      this.walker.visible = true;
+      const zpos = lerp(-5, 5, (t * 0.12) % 1);
+      this.walker.position.set(this.at.x - 3.2, 0, zpos);
+      let hit = 0;
+      this.zones.forEach((z, i) => {
+        z.visible = true;
+        const zc = ((i - 3) / 3) * 3.4;
+        const near = Math.max(0, 1 - Math.abs(zpos - zc) / 0.9);
+        hit = Math.max(hit, near);
+        const u = (z.material as THREE.ShaderMaterial).uniforms;
+        u.on.value = on * (0.18 + near * 0.8);
+        u.time.value = t;
+      });
+      return on * hit;
+    }
+    if (this.kind === 'gas') {
+      this.puffs.forEach((pf, i) => {
+        pf.visible = true;
+        const u = (t * 0.25 + i / this.puffs.length) % 1;
+        pf.position.set(lerp(this.at.x - 4.5, this.at.x, u) + Math.sin(i * 2.1 + t) * 0.3, this.at.y + 0.2 + Math.sin(i * 1.3) * 0.5 + u * 0.4, Math.cos(i * 1.7) * 0.8 * (1 - u));
+        pf.scale.setScalar(0.6 + u * 1.4);
+        (pf.material as THREE.MeshStandardMaterial).opacity = on * 0.35 * Math.sin(u * Math.PI);
+      });
+      return on;
+    }
+    if (this.kind === 'soil') {
+      this.soil.visible = true;
+      this.soilMat.color.copy(lin(0x8a6a48)).lerp(lin(0x3a2616), on);
+      this.drops.forEach((d, i) => {
+        d.visible = on > 0.02;
+        const u = (t * 0.9 + i / this.drops.length) % 1;
+        d.position.set(this.at.x - 1.6 + (i % 5) * 0.8, 3.2 - u * 2.7, this.at.z + ((i * 7) % 3 - 1) * 0.4);
+      });
+      return on;
+    }
+    if (this.kind === 'dht') {
+      this.wisps.forEach((w, i) => {
+        w.visible = true;
+        const u = (t * 0.35 + i / this.wisps.length) % 1;
+        w.position.set(this.at.x + Math.sin(i * 2.3 + t * 0.6) * 0.5, this.at.y + 0.3 + u * 2.6, Math.cos(i * 1.9) * 0.5);
+        w.scale.setScalar(0.6 + u * 1.6);
+        (w.material as THREE.MeshStandardMaterial).opacity = on * 0.3 * Math.sin(u * Math.PI);
+      });
+      return on;
+    }
+    return on;
+  }
+}
+
+/** Inside diagrams for the new modules, on the glass stage: the MQ's tin-oxide bead, soil between two plates,
+ *  the DHT's humidity layer, the PIR's twin pyroelectric elements. A tube carries the current to a meter. */
+class Cell {
+  readonly group = new THREE.Group();
+  readonly focus = V(0, 1.0, 0);
+  private dots: THREE.Mesh[] = [];
+  private curve: THREE.CatmullRomCurve3;
+  private coreMat = emissive(0x4aa8ff, 0x203050);
+  private lampMat = emissive(0x4aa8ff, 0x203050);
+  private lampGlow = glowSprite(0x4aa8ff, 1.2);
+  private movers: { m: THREE.Mesh; a: THREE.Vector3; b: THREE.Vector3; ph: number }[] = [];
+  private stuck: { m: THREE.Mesh; home: THREE.Vector3; ph: number }[] = [];
+  private heatMat = emissive(0xff6a20, 0x553322);
+  private elA = emissive(0xff8a3d, 0x3a2a20);
+  private elB = emissive(0xff8a3d, 0x3a2a20);
+  private blob?: THREE.Mesh;
+  private level?: THREE.Mesh;
+  constructor(readonly kind: string) {
+    const g = this.group;
+    stage(g);
+    const sph = (r: number, mat: THREE.Material) => new THREE.Mesh(new THREE.SphereGeometry(r, 16, 12), mat);
+    if (kind === 'gas') {
+      const bead = sph(0.6, std(0x707276, 0.85));
+      bead.position.set(-0.3, 0.9, 0);
+      const coil = new THREE.Mesh(new THREE.TorusGeometry(0.55, 0.05, 10, 48), this.heatMat);
+      coil.rotation.x = Math.PI / 2;
+      coil.position.set(-0.3, 0.42, 0);
+      g.add(bead, coil);
+      const ox = emissive(0xff4040, 0x802020);
+      ox.emissiveIntensity = 2;
+      for (let i = 0; i < 14; i++) {
+        const a = (i / 14) * Math.PI * 2;
+        const home = V(-0.3 + Math.cos(a) * 0.66, 0.9 + Math.sin(a * 1.7) * 0.4, Math.sin(a) * 0.66);
+        const m = sph(0.08, ox);
+        g.add(m);
+        this.stuck.push({ m, home, ph: hash(i) });
+      }
+      const gm = emissive(0xb070ff, 0x402060);
+      gm.emissiveIntensity = 2;
+      for (let i = 0; i < 8; i++) {
+        const m = sph(0.11, gm);
+        g.add(m);
+        this.movers.push({ m, a: V(-2.4, 1.0 + (i % 3) * 0.3, -0.6 + (i % 4) * 0.4), b: V(-0.85, 0.9, -0.3 + (i % 3) * 0.3), ph: hash(i * 3.3) });
+      }
+    } else if (kind === 'soil') {
+      const trough = rbox(2.6, 1.2, 1.4, 0.08, M.glass);
+      trough.position.set(-0.3, 0.8, 0);
+      g.add(trough);
+      const soilMat = std(0x6b4a2e, 0.95);
+      for (let i = 0; i < 70; i++) {
+        const m = sph(0.07 + hash(i) * 0.06, soilMat);
+        m.position.set(-1.45 + hash(i * 1.3) * 2.3, 0.3 + hash(i * 2.7) * 0.6, -0.55 + hash(i * 3.9) * 1.1);
+        g.add(m);
+      }
+      for (const x of [-1.0, 0.4]) {
+        const plate = box(0.06, 1.3, 1.2, M.tin);
+        plate.position.set(x, 0.95, 0);
+        g.add(plate);
+      }
+      this.level = box(2.4, 1, 1.25, phys(0x4aa8ff, { transmission: 0.6, roughness: 0.1, thickness: 0.5, transparent: true, opacity: 0.7 }));
+      g.add(this.level);
+      const wm = phys(0x8fd0ff, { transmission: 0.8, roughness: 0.05, thickness: 0.1 });
+      for (let i = 0; i < 10; i++) {
+        const m = sph(0.08, wm);
+        g.add(m);
+        this.movers.push({ m, a: V(-1.3 + (i % 5) * 0.5, 2.6, -0.3 + (i % 2) * 0.6), b: V(-1.3 + (i % 5) * 0.5, 1.0, -0.3 + (i % 2) * 0.6), ph: hash(i) });
+      }
+    } else if (kind === 'dht') {
+      const sub = rbox(2.4, 0.16, 1.6, 0.05, std(0x5f6b78, 0.7));
+      sub.position.set(-0.3, 0.35, 0);
+      g.add(sub);
+      for (let i = 0; i < 8; i++) {
+        const f = box(0.06, 0.02, 1.3, M.gold);
+        f.position.set(-1.3 + i * 0.28, 0.44, i % 2 ? 0.1 : -0.1);
+        g.add(f);
+      }
+      const ntc = sph(0.22, this.heatMat);
+      ntc.position.set(1.4, 0.55, 0.9);
+      g.add(ntc);
+      const wm = phys(0x4aa8ff, { transmission: 0.5, roughness: 0.1, thickness: 0.1 });
+      for (let i = 0; i < 18; i++) {
+        const m = sph(0.07, wm);
+        g.add(m);
+        this.movers.push({ m, a: V(-1.4 + hash(i) * 2.2, 2.4, -0.6 + hash(i * 2.1) * 1.2), b: V(-1.4 + hash(i) * 2.2, 0.5, -0.6 + hash(i * 2.1) * 1.2), ph: hash(i * 5.1) });
+      }
+    } else if (kind === 'pir') {
+      for (const [x, mat] of [[-0.9, this.elA], [0.3, this.elB]] as const) {
+        const e = rbox(0.9, 0.12, 1.4, 0.04, mat);
+        e.position.set(x, 0.4, 0);
+        g.add(e);
+      }
+      const a = label('A', '#ffd2a8', 0.3);
+      a.position.set(-0.9, 0.75, 0.9);
+      const b = label('B', '#ffd2a8', 0.3);
+      b.position.set(0.3, 0.75, 0.9);
+      g.add(a, b);
+      this.blob = sph(0.45, new THREE.MeshStandardMaterial({ color: lin(0x331a10), emissive: lin(0xff7a2a), emissiveIntensity: 3, transparent: true, opacity: 0.85 }));
+      const halo = glowSprite(0xff7a2a, 2.5);
+      halo.material.opacity = 0.6;
+      this.blob.add(halo);
+      g.add(this.blob);
+    }
+    this.curve = new THREE.CatmullRomCurve3([V(0.9, 0.5, 0), V(1.45, 0.55, 0.3), V(1.7, 0.6, 0.9), V(1.0, 0.45, 1.25)]);
+    g.add(new THREE.Mesh(new THREE.TubeGeometry(this.curve, 48, 0.08, 12), M.glass), new THREE.Mesh(new THREE.TubeGeometry(this.curve, 48, 0.025, 8), this.coreMat));
+    const meter = cyl(0.26, 0.3, M.black, 32);
+    meter.position.set(0.75, 0.33, 1.3);
+    const lamp = new THREE.Mesh(new THREE.SphereGeometry(0.13, 24, 16), this.lampMat);
+    lamp.position.set(0.75, 0.56, 1.3);
+    this.lampGlow.position.copy(lamp.position);
+    g.add(meter, lamp, this.lampGlow);
+    const dm = emissive(0x8fd0ff, 0x4f8fff);
+    dm.emissiveIntensity = 3;
+    for (let i = 0; i < 10; i++) {
+      const m = new THREE.Mesh(new THREE.SphereGeometry(0.045, 12, 8), dm);
+      g.add(m);
+      this.dots.push(m);
+    }
+    g.traverse((o) => {
+      if ((o as THREE.Mesh).isMesh) o.castShadow = o.receiveShadow = true;
+    });
+  }
+  update(t: number, on: number) {
+    let current = on;
+    this.heatMat.emissiveIntensity = 3;
+    this.movers.forEach((v) => {
+      const u = (t * 0.45 + v.ph) % 1;
+      v.m.visible = on > 0.03;
+      v.m.position.lerpVectors(v.a, v.b, this.kind === 'gas' ? smooth(u) : u);
+    });
+    if (this.kind === 'gas')
+      this.stuck.forEach((s) => {
+        // gas molecules react with the oxygen held on the bead: the oxygen lets go, electrons are freed
+        const gone = clamp((on - s.ph * 0.8) * 4);
+        const u = (t * 0.4 + s.ph) % 1;
+        s.m.position.copy(s.home).addScaledVector(s.home.clone().sub(V(-0.3, 0.9, 0)).normalize(), gone * u * 1.5);
+        s.m.visible = gone < 0.98 || u < 0.9;
+      });
+    if (this.level) {
+      const h = 0.05 + on * 0.9;
+      this.level.scale.y = h;
+      this.level.position.set(-0.3, 0.25 + h / 2, 0);
+    }
+    if (this.blob) {
+      const x = lerp(-2.2, 1.6, (t * 0.3) % 1);
+      this.blob.position.set(x, 1.6, 0);
+      this.blob.visible = on > 0.03;
+      const a = Math.max(0, 1 - Math.abs(x + 0.9) / 0.9) * on;
+      const b = Math.max(0, 1 - Math.abs(x - 0.3) / 0.9) * on;
+      this.elA.emissiveIntensity = a * 6;
+      this.elB.emissiveIntensity = b * 6;
+      current = Math.abs(a - b);
+    }
+    this.coreMat.emissiveIntensity = current * 5;
+    this.lampMat.emissiveIntensity = current * 7;
+    this.lampGlow.material.opacity = current * 0.9;
+    this.dots.forEach((d, i) => {
+      d.visible = current > 0.05;
+      d.position.copy(this.curve.getPointAt((t * 0.4 + i / this.dots.length) % 1));
+    });
+  }
+}
+
+/** A simple mannequin for the PIR room scene. */
+function makePerson() {
+  const g = new THREE.Group();
+  const mat = std(0x3a5f8f, 0.7);
+  const skin = std(0xd9a37e, 0.6);
+  const body = new THREE.Mesh(new THREE.CapsuleGeometry(0.55, 1.6, 8, 16), mat);
+  body.position.y = 2.4;
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.42, 24, 16), skin);
+  head.position.y = 3.8;
+  const legs = new THREE.Mesh(new THREE.CapsuleGeometry(0.42, 1.4, 8, 16), std(0x222630, 0.7));
+  legs.position.y = 1.0;
+  g.add(body, head, legs);
+  g.traverse((o) => {
+    if ((o as THREE.Mesh).isMesh) o.castShadow = o.receiveShadow = true;
+  });
+  return g;
 }
 
 /** The LM393 comparator as two glass tubes: the signal level against the threshold set by the pot. */
@@ -1719,25 +2835,30 @@ class Bench {
     mod.updateMatrixWorld(true);
     const tips = this.module.pinTips.map((p) => p.clone().applyMatrix4(mod.matrix));
     const hdrTop = (x: number, y: number) => U(x, y).add(uno.position).add(V(0, 0.95, 0));
-    // VCC -> 5V, GND -> GND, OUT/DO -> D2, AO -> A0
-    const ends = [hdrTop(38.06, 51.2), hdrTop(40.6, 51.2), hdrTop(57.2, 1.9), hdrTop(50.8, 51.2)];
-    const colors = [0xd8322a, 0x1a1a1a, 0xf2c230, 0x2fae5a];
+    // VCC -> 5V, GND -> GND, the signal (OUT / DO / S / ECHO) -> D2, TRIG -> D3, AO -> A0
+    const SIGNAL = ['OUT', 'DO', 'S', 'ECHO'];
+    const endFor = (n: string) =>
+      n === 'VCC' ? hdrTop(38.06, 51.2) : n === 'GND' ? hdrTop(40.6, 51.2) : n === 'TRIG' ? hdrTop(54.66, 1.9) : n === 'AO' ? hdrTop(50.8, 51.2) : hdrTop(57.2, 1.9);
+    const colorFor = (n: string) => (n === 'VCC' ? 0xd8322a : n === 'GND' ? 0x1a1a1a : n === 'TRIG' ? 0x3a7bd5 : n === 'AO' ? 0x2fae5a : 0xf2c230);
+    const dir = this.module.pinDir.clone().applyQuaternion(mod.quaternion).normalize();
     tips.forEach((tip, i) => {
-      const e = ends[i];
-      const out = tip.clone().add(V(0, 0, -0.55));
+      const name = this.module.pinNames[i] ?? 'OUT';
+      const e = endFor(name);
+      const out = tip.clone().addScaledVector(dir, 0.55);
       const curve = new THREE.CatmullRomCurve3([
-        tip.clone().add(V(0, 0, -0.3)),
+        tip.clone().addScaledVector(dir, 0.3),
         out,
         V(lerp(out.x, e.x, 0.3), 1.6 + i * 0.35, lerp(out.z, e.z, 0.3)),
         V(lerp(out.x, e.x, 0.75), 2.0 + i * 0.3, lerp(out.z, e.z, 0.75)),
         e.clone().add(V(0, 0.9, 0)),
         e.clone().add(V(0, 0.35, 0)),
       ]);
-      if (i === 2) this.outCurve = curve;
-      const wire = new THREE.Mesh(new THREE.TubeGeometry(curve, 120, 0.055, 10), phys(colors[i], { roughness: 0.4, clearcoat: 0.6 }));
+      if (SIGNAL.includes(name) && !this.outCurve) this.outCurve = curve;
+      const wire = new THREE.Mesh(new THREE.TubeGeometry(curve, 120, 0.055, 10), phys(colorFor(name), { roughness: 0.4, clearcoat: 0.6 }));
       g.add(wire);
       const housing = rbox(0.25, 0.25, 0.55, 0.03, M.black);
-      housing.position.copy(tip).add(V(0, 0, -0.28));
+      housing.position.copy(tip).addScaledVector(dir, 0.28);
+      housing.quaternion.setFromUnitVectors(V(0, 0, 1), dir);
       const plug = rbox(0.25, 0.55, 0.25, 0.03, M.black);
       plug.position.copy(e).add(V(0, 0.32, 0));
       g.add(housing, plug);
@@ -1868,9 +2989,18 @@ const PART_LABEL: Record<string, string> = {
 };
 
 function partLabel(kind: string, part: string) {
+  if (kind === 'ultrasonic' && part === 'emitter') return 'TX transducer 40 kHz';
+  if (kind === 'ultrasonic' && part === 'receiver') return 'RX transducer';
   if (part === 'sensor' || (part === 'receiver' && kind !== 'ir'))
-    return ({ ir: 'IR pair', ldr: 'LDR  CdS cell', flame: 'IR flame sensor', sound: 'Electret mic' } as Record<string, string>)[kind] ?? PART_LABEL.sensor;
-  if (part === 'pins') return kind === 'ir' ? 'VCC GND OUT' : 'VCC GND DO AO';
+    return (
+      { ir: 'IR pair', ldr: 'LDR  CdS cell', flame: 'IR flame sensor', sound: 'Electret mic', gas: 'MQ-2 gas sensor', soil: 'Soil probe', ultrasonic: 'HC-SR04 sonar', pir: 'Fresnel lens + PIR', dht: 'DHT11 sensor' } as Record<string, string>
+    )[kind] ?? PART_LABEL.sensor;
+  if (part === 'pins')
+    return ({ ir: 'VCC GND OUT', ultrasonic: 'VCC TRIG ECHO GND', pir: 'VCC OUT GND', dht: 'S VCC GND' } as Record<string, string>)[kind] ?? 'VCC GND DO AO';
+  if (kind === 'ultrasonic' && part === 'chip') return '16 MHz crystal';
+  if (kind === 'pir' && part === 'pot') return 'Time + sensitivity';
+  if (kind === 'pir' && part === 'chip') return 'BISS0001 chip';
+  if (kind === 'dht' && part === 'chip') return 'Pull-up resistor';
   if (part === 'leds') return kind === 'ir' ? 'PWR + OBS LEDs' : 'PWR + DO LEDs';
   return PART_LABEL[part] ?? part;
 }
@@ -1888,12 +3018,14 @@ const DEFAULT_SHOTS = ['assemble', 'hero', 'macro', 'beam', 'layers', 'inside', 
 
 export class Studio {
   private built = false;
-  private set!: { module: THREE.Group; lattice: THREE.Group; compare: THREE.Group; bench: THREE.Group; membrane: THREE.Group; uses: THREE.Group };
+  private set!: { module: THREE.Group; lattice: THREE.Group; compare: THREE.Group; bench: THREE.Group; membrane: THREE.Group; uses: THREE.Group; cell: THREE.Group };
   private mod!: SensorModule;
   private kind = 'ir';
   private props!: Props;
   private membrane!: Membrane;
   private uses!: Uses;
+  private more!: MoreProps;
+  private cell?: Cell;
   private lattice!: Lattice;
   private comparator!: Comparator;
   private bench!: Bench;
@@ -1969,6 +3101,8 @@ export class Studio {
     module.add(this.mod.group);
     this.props = new Props(this.mod.anchors.sensor.clone());
     module.add(this.props.lamp, this.props.candle, this.props.speaker);
+    this.more = new MoreProps(this.kind, this.mod.anchors.sensor.clone());
+    module.add(this.more.group);
     this.beamOut = beam(9, 0.12, 1.1, 0xff3b6b);
     this.beamOut.rotation.z = Math.PI / 2;
     this.beamOut.position.copy(this.mod.anchors.emitTip);
@@ -1981,7 +3115,11 @@ export class Studio {
     this.bench = new Bench(this.kind);
     this.membrane = new Membrane();
     this.uses = new Uses(this.kind);
-    this.set = { module, lattice: this.lattice.group, compare: this.comparator.group, bench: this.bench.group, membrane: this.membrane.group, uses: this.uses.group };
+    if (['gas', 'soil', 'dht', 'pir'].includes(this.kind)) this.cell = new Cell(this.kind);
+    this.set = {
+      module, lattice: this.lattice.group, compare: this.comparator.group, bench: this.bench.group, membrane: this.membrane.group, uses: this.uses.group,
+      cell: this.cell?.group ?? new THREE.Group(),
+    };
     for (const g of Object.values(this.set)) {
       g.visible = false;
       this.three.add(g);
@@ -2057,6 +3195,7 @@ export class Studio {
     m.layers(false);
     m.t = t;
     this.props.hide();
+    this.more.hide();
     this.callouts = [];
     const callout = (part: string, text?: string, side = 1) => {
       const at = part === 'chip' ? A.chip : part === 'pot' ? A.pot.clone().add(V(0, 0.05, 0)) : A[part] ?? A.board;
@@ -2068,25 +3207,37 @@ export class Studio {
     this.scale = 6;
     let shadowBox = 4;
     const base = V(-0.4, 0.3, 0);
+    // bigger boards need the camera further back
+    const sz = ({ ultrasonic: 1.55, pir: 1.35, gas: 1.3, soil: 1.5, dht: 1.05 } as Record<string, number>)[this.kind] ?? 1;
 
-    switch (sh.shot) {
+    // shots a board can't do (no comparator / no pot / parts underneath) become a close-up of its sensor
+    let shot = sh.shot;
+    if (shot === 'compare' && !m.lm393) shot = 'macro';
+    if (shot === 'pot' && ['ultrasonic', 'dht', 'gas'].includes(this.kind)) shot = 'macro';
+    if (shot === 'layers' && sh.part === 'emitter' && !['ir', 'ultrasonic'].includes(this.kind)) sh.part = 'receiver';
+    switch (shot) {
       case 'assemble': {
         m.assemble(range(p, -0.3, 0.8));
-        this.rig(base, 0.75 - 0.45 * inOutCubic(p), lerp(0.62, 0.42, p), lerp(16, 13, outCubic(p)));
+        this.rig(base, 0.75 - 0.45 * inOutCubic(p), lerp(0.62, 0.42, p), lerp(16, 13, outCubic(p)) * sz);
         this.scale = 7;
         break;
       }
       case 'macro': {
-        const part = sh.part && A[sh.part] ? sh.part : 'sensor';
+        let part = sh.part && A[sh.part] && sh.shot === 'macro' ? sh.part : 'sensor';
+        // chips and pots underneath (MQ-2, PIR) can't be seen from above
+        if ((part === 'chip' && ['gas', 'pir'].includes(this.kind)) || (part === 'pot' && this.kind === 'gas')) part = 'sensor';
         const front = part === 'sensor' || part === 'emitter' || part === 'receiver';
         const az = front ? -1.25 + dir * 0.35 - 0.25 * p * dir : part === 'pins' ? 1.35 - 0.3 * p : 0.4 * dir + 0.35 * p * dir;
         const close = this.kind === 'sound' && (part === 'sensor' || part === 'receiver') ? 2.1 : part === 'emitter' || part === 'receiver' ? 1.35 : 1;
-        this.rig(A[part], az, lerp(0.42, 0.3, p), lerp(3.6, 3.0, inOutCubic(p)) * close, 24);
+        const up = m.facing === 'up' && (part === 'sensor' || part === 'receiver' || part === 'emitter');
+        const big = front ? (({ gas: 1.6, pir: 2.5, ultrasonic: 1.7, soil: 2.4, dht: 2.5 } as Record<string, number>)[this.kind] ?? 1) : part === 'pot' && this.kind === 'pir' ? 1.6 : 1;
+        if (up) this.rig(A[part], 0.6 * dir + 0.3 * p * dir, 0.95, lerp(3.4, 2.9, inOutCubic(p)) * big, 24);
+        else this.rig(A[part], az, lerp(0.42, 0.3, p), lerp(3.6, 3.0, inOutCubic(p)) * close * big, 24);
         if (part === 'emitter' || part === 'sensor') m.emitter.set(1, 0);
         if (part === 'sensor') {
-          if (this.kind === 'ir') {
-            callout('emitter', 'IR LED', -1);
-            callout('receiver', sh.label || PART_LABEL.receiver, 1);
+          if (this.kind === 'ir' || this.kind === 'ultrasonic') {
+            callout('emitter', this.kind === 'ir' ? 'IR LED' : 'TX 40 kHz', -1);
+            callout('receiver', sh.label || partLabel(this.kind, 'receiver'), 1);
           } else callout('sensor', sh.label, dir);
         } else callout(part, sh.label, dir);
         if (part === 'leds') m.obs.set(p > 0.5 ? 1 : 0);
@@ -2099,7 +3250,11 @@ export class Studio {
         m.layers(true);
         led.set(sh.part === 'emitter' ? 0.6 : 0.3 * ex, ex);
         const anchor = (sh.part === 'emitter' ? A.emitter : A.receiver).clone().add(V(-0.25 - 0.6 * ex, 0, 0));
-        if (this.kind === 'ldr' || this.kind === 'sound') this.rig(anchor, -Math.PI / 2 + 1.0 * dir, 0.3, lerp(4.6, 6.2, ex) * (this.kind === 'sound' ? 1.3 : 1), 24);
+        if (m.facing === 'up') {
+          const a2 = (sh.part === 'emitter' ? A.emitter : A.receiver).clone().add(V(0, 0.5 * ex, 0));
+          this.rig(a2, 0.7 * dir, 0.25, lerp(4.5, 6.5, ex) * (['gas', 'pir'].includes(this.kind) ? 1.6 : this.kind === 'soil' ? 1.8 : 1), 24);
+        } else if (this.kind === 'ldr' || this.kind === 'sound' || this.kind === 'ultrasonic')
+          this.rig(anchor, -Math.PI / 2 + 1.0 * dir, 0.3, lerp(4.6, 6.2, ex) * (this.kind === 'sound' ? 1.3 : this.kind === 'ultrasonic' ? 1.8 : 1), 24);
         else this.rig(anchor, Math.PI / 2 - 0.3 * dir, 0.95, lerp(5.2, 6.4, ex), 24);
         this.scale = 8;
         break;
@@ -2109,7 +3264,7 @@ export class Studio {
         const e = smooth(range(p, 0.05, 0.45));
         m.lift(e);
         m.emitter.set(0, 0);
-        this.rig(V(-0.2, 0.9 * e + 0.3, 0), 0.5 * dir + 0.35 * p * dir, 0.5, lerp(11, 12.5, e), 28);
+        this.rig(V(-0.2, 0.9 * e + 0.3, 0), 0.5 * dir + 0.35 * p * dir, 0.5, lerp(11, 12.5, e) * sz, 28);
         this.set.module.updateMatrixWorld(true);
         const named = (k: string, side: number) => {
           const o = m.named[k];
@@ -2126,6 +3281,22 @@ export class Studio {
         break;
       }
       case 'beam': {
+        if (['gas', 'soil', 'ultrasonic', 'pir', 'dht'].includes(this.kind)) {
+          const on = sh.on === false ? 0 : smooth(range(p, 0.08, 0.35));
+          if (this.kind === 'ultrasonic') m.emitter.set(on, 0, t);
+          const hit = this.more.update(t, on, A.emitTip, A.recvTip);
+          m.receiver.set(hit, 0, t);
+          m.obs.set(hit > 0.5 ? 1 : 0);
+          const k = this.kind;
+          if (k === 'ultrasonic' || k === 'gas') this.rig(V(A.sensor.x - 2.3, 1.4, 0), 0.6 * dir + 0.1 * p, 0.22, 13, 28);
+          else if (k === 'pir') this.rig(V(A.sensor.x - 1.8, 1.4, 0), 1.15 + 0.15 * dir, 0.42, 13, 28);
+          else if (k === 'soil') this.rig(A.sensor.clone().add(V(0, 0.8, 0)), 0.5 * dir + 0.1 * p, 0.6, 9, 28);
+          else this.rig(A.sensor.clone().add(V(0, 1.2, 0)), 0.6 * dir + 0.1 * p, 0.3, 8, 28);
+          this.focusDist = this.camera.position.distanceTo(A.sensor);
+          this.scale = 4;
+          shadowBox = 8;
+          break;
+        }
         if (this.kind !== 'ir') {
           const want = this.kind === 'ldr' ? sh.light : this.kind === 'flame' ? (sh as Shot & { fire?: boolean }).fire : (sh as Shot & { loud?: boolean }).loud;
           const on = want === false ? 0 : smooth(range(p, 0.08, 0.35));
@@ -2176,7 +3347,15 @@ export class Studio {
       }
       case 'inside': {
         this.set.module.visible = false;
-        if (this.kind === 'sound') {
+        if (this.cell) {
+          this.cell.group.visible = true;
+          this.cell.update(t, sh.light === false ? 0 : smooth(range(p, 0.12, 0.45)));
+          this.rig(this.cell.focus, 0.7 * dir + 0.25 * p * dir, 0.55, lerp(10, 9, p), 28);
+          this.scale = 5;
+          shadowBox = 5;
+          break;
+        }
+        if (this.kind === 'sound' || this.kind === 'ultrasonic') {
           this.membrane.group.visible = true;
           this.membrane.update(t, sh.light === false ? 0 : smooth(range(p, 0.12, 0.4)));
           this.rig(this.membrane.focus, 0.75 * dir + 0.25 * p * dir, 0.35, lerp(9.5, 8.6, p), 28);
@@ -2203,7 +3382,7 @@ export class Studio {
       }
       case 'pot': {
         m.knob.rotation.y = 0.6 + 2.2 * inOutCubic(range(p, 0.1, 0.9));
-        this.rig(A.pot, 0.5 * dir + 0.2 * p, 0.85, lerp(3.4, 2.9, p), 24);
+        this.rig(A.pot, 0.5 * dir + 0.2 * p, 0.85, lerp(3.4, 2.9, p) * (this.kind === 'pir' ? 1.6 : 1), 24);
         this.scale = 9;
         break;
       }
@@ -2215,7 +3394,7 @@ export class Studio {
         this.uses.group.visible = true;
         this.uses.update(name, t, p);
         const f = this.uses.focus[name];
-        const wide = ({ lamp: 28, robot: 34, tap: 20, door: 26, alarm: 25, clap: 25 } as Record<string, number>)[name] ?? 22;
+        const wide = ({ lamp: 28, robot: 34, tap: 20, door: 26, alarm: 25, clap: 25, parking: 44, room: 30, kitchen: 30, plant: 22, weather: 27 } as Record<string, number>)[name] ?? 22;
         this.rig(f, 0.75 * dir + 0.25 * p * dir, name === 'lamp' ? 0.12 : 0.3, lerp(wide, wide * 0.9, p), 30);
         this.scale = 3;
         shadowBox = 16;
@@ -2227,7 +3406,7 @@ export class Studio {
         this.set.module.visible = false;
         this.bench.group.visible = true;
         this.bench.update(t, sh.detect === false ? 0 : p > 0.4 ? 1 : 0);
-        const pins: Record<string, [number, number]> = { D2: [57.2, 2.05], '5V': [38.06, 51.35], GND: [40.6, 51.35], A0: [50.8, 51.35] };
+        const pins: Record<string, [number, number]> = { D2: [57.2, 2.05], D3: [54.66, 2.05], '5V': [38.06, 51.35], GND: [40.6, 51.35], A0: [50.8, 51.35] };
         const [px, py] = pins[(sh.pin || 'D2').toUpperCase()] ?? pins.D2;
         const at = V((px - BOARD_W / 2) / 10, 1.0, (py - BOARD_H / 2) / 10 - 1.5);
         if (sh.shot === 'uno') {
@@ -2255,7 +3434,7 @@ export class Studio {
       default: {
         // hero: a slow orbit around the whole module
         m.emitter.set(1, 0);
-        this.rig(base, 0.55 * dir + 0.5 * p * dir, 0.4 + 0.08 * Math.sin(p * 3), 10 - p * 0.8);
+        this.rig(base, 0.55 * dir + 0.5 * p * dir, 0.4 + 0.08 * Math.sin(p * 3), (10 - p * 0.8) * sz);
         this.scale = 6;
       }
     }
@@ -2349,6 +3528,11 @@ const DEFAULT_CODE: Record<string, string[]> = {
   ldr: ['void loop() {', '  int dark = digitalRead(2);', '  digitalWrite(13, dark);', '  int light = analogRead(A0);', '}'],
   flame: ['void loop() {', '  if (digitalRead(2) == LOW)', '    digitalWrite(BUZZER, HIGH);', '}'],
   sound: ['bool on = false;', 'void loop() {', '  if (digitalRead(2) == HIGH)', '    on = !on;  // clap!', '  digitalWrite(13, on);', '}'],
+  gas: ['void loop() {', '  int gas = analogRead(A0);', '  if (digitalRead(2) == LOW)', '    tone(BUZZER, 2000);', '}'],
+  soil: ['void loop() {', '  int wet = analogRead(A0);', '  bool dry = digitalRead(2);', '  digitalWrite(PUMP, dry);', '}'],
+  ultrasonic: ['digitalWrite(3, HIGH);', 'delayMicroseconds(10);', 'digitalWrite(3, LOW);', 'long t = pulseIn(2, HIGH);', 'int cm = t / 58;'],
+  pir: ['void loop() {', '  if (digitalRead(2) == HIGH)', '    digitalWrite(LIGHT, HIGH);', '}'],
+  dht: ['#include <DHT.h>', 'DHT dht(2, DHT11);', 'void loop() {', '  float t = dht.readTemperature();', '  float h = dht.readHumidity();', '}'],
 };
 
 /** An Arduino IDE-style code panel; the running line is highlighted. */
