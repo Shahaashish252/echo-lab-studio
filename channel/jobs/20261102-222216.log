@@ -29,3 +29,20 @@
   studio plan: 10 shots of the pir module
 
 == voice (Microsoft Edge: Madhur)
+Downloading onnxruntime (22.7MiB)
+ Downloaded onnxruntime
+Installed 27 packages in 19ms
+[0;93m2026-11-02 22:25:17.423946438 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        2.38s  कदम रखते ही, सीढ़ी की लाइट जल गई!
+s1-2        3.76s  यह PIR सेंसर आपको देखता नहीं, गर्मी महसूस करता है।
+s1-3        2.65s  सफेद डोम कमरे को कई ज़ोन में बाँटता है।
+s1-4        3.11s  अंदर पायरोइलेक्ट्रिक सेंसर के दो हिस्से: A और B।
+s1-5        3.12s  खड़े इंसान पर दोनों बराबर, सिग्नल नहीं बनता।
+s1-6        2.58s  चलते ही पहले A, फिर B गर्म होता है।
+s1-7        4.08s  BISS0001 चिप सिग्नल बढ़ाकर OUT को HIGH करती है।
+s1-8        3.04s  दो ऑरेंज पॉट: समय, और तीन से सात मीटर।
+s1-9        3.02s  तीन पॉइंट तीन वोल्ट HIGH आया, लाइट खुद जली!
+s1-10       0.73s  फॉलो करो!
+wrote 10 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit
