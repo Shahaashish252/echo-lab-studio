@@ -35,3 +35,20 @@
   studio plan: 10 shots of the ultrasonic module
 
 == voice (Microsoft Edge: Madhur)
+Downloading onnxruntime (22.7MiB)
+ Downloaded onnxruntime
+Installed 27 packages in 25ms
+[0;93m2026-11-02 20:14:50.705425936 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        2.34s  गाड़ी दीवार से पहले खुद कैसे रुकी?
+s1-2        3.84s  T ट्रांसड्यूसर चालीस किलोहर्ट्ज़ की अनसुनी आवाज़ भेजता है।
+s1-3        3.38s  R के अंदर पीज़ो डिस्क, आवाज़ को बिजली बनाती है।
+s1-4        3.30s  आठ पल्स दीवार से टकराकर वापस R तक आते हैं।
+s1-5        3.18s  ट्रिग पर दस माइक्रोसेकंड, फिर इको उतनी देर हाई।
+s1-6        2.94s  समय भाग अट्ठावन, यानी सीधे सेंटीमीटर।
+s1-7        3.03s  चार पिन: वीसीसी पाँच वोल्ट, ट्रिग, इको, ग्राउंड।
+s1-8        2.97s  कपड़ा या तिरछी दीवार, कमज़ोर इको लौटाती है।
+s1-9        2.14s  तो दीवार से पहले गाड़ी कैसे रुकी?
+s1-10       0.73s  फॉलो करो!
+wrote 10 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit
