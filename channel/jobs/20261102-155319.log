@@ -27,3 +27,20 @@
   studio plan: 10 shots of the ir module
 
 == voice (Microsoft Edge: Madhur)
+Downloading onnxruntime (22.7MiB)
+ Downloaded onnxruntime
+Installed 27 packages in 25ms
+[0;93m2026-11-02 15:55:34.968871361 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        3.98s  फोन से रोबोट कैसे सुनता है? बिना तार के!
+s1-2        2.93s  फोन बस एक अक्षर भेजता है, जैसे F।
+s1-3        2.72s  मॉड्यूल इसे नौ हज़ार छह सौ बॉड देता है।
+s1-4        2.94s  आवाज़ नहीं जाती, सिर्फ़ डेटा बाइट्स जाते हैं।
+s1-5        3.82s  रोबोट की आँखें हैं, FC-51 इन्फ्रारेड सेंसर।
+s1-6        3.04s  बीम दीवार से टकराकर फोटोडायोड में लौटती है।
+s1-7        3.77s  LM393 सिग्नल को पॉट की सीमा से मिलाता है।
+s1-8        3.38s  नीला पॉट दो से तीस सेंटीमीटर रेंज सेट करता है।
+s1-9        3.98s  फोन से रोबोट कैसे सुनता है? बिना तार के!
+s1-10       0.73s  फॉलो करो!
+wrote 10 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit
