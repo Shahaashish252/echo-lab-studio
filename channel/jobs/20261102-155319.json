@@ -1,0 +1,16 @@
+{
+  "id": "20261102-155319",
+  "topic": "Bluetooth car robot control",
+  "hook": "Phone Se Robot Kaise Sunta Hai? Bina Taar Ke!",
+  "lang": "hi",
+  "started": "2026-11-02T15:53:19",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-11-02T15:53:20"
+    }
+  ],
+  "format": "studio",
+  "module": "ir"
+}
