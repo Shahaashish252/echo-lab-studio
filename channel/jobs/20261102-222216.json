@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Automatic stair light: PIR motion sensor aapki body heat se kaise light jalata hai\" (Claude Code)",
       "at": "2026-11-02T22:22:49"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-11-02T22:23:57"
     }
   ],
   "format": "studio",
