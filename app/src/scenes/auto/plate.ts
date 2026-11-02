@@ -257,6 +257,7 @@ export default class AutoPlate extends Scene {
     const s = this.s;
     if (s?.frames) await ensure(s.id, frameIndex(f.lt, s.frames));
     if (this.studio) await loadStudioModels();
+    if (this.studio && STORY?.blenderFrames) await ensure('blender', frameIndex(f.lt, STORY.blenderFrames));
     if (s?.type === 'diagram' && s.svg) await ensureDiagram(s.id, s.svg);
     if (s?.type === 'photo' && s.photo) await ensurePhoto(s.photo.src);
   }
@@ -420,6 +421,10 @@ export default class AutoPlate extends Scene {
         if (this.studio) {
           const idx = lines.reduce((k, l, i) => (t >= l.start - 0.05 ? i : k), 0);
           this.studio.update(t, lines, idx);
+          // photo-real shots: Blender's frame is the picture (captions and labels still drawn on top)
+          const blend = STORY?.blenderFrames && this.studio.isReal() ? frame('blender', frameIndex(t, STORY.blenderFrames), STORY.blenderFrames) : undefined;
+          if (blend) bg.drawImage(blend, 0, 0, W, H);
+          this.studio.skip3D = !!blend;
           this.studio.captions(fg, t, lines, idx);
         } else drawSim(fg, t, L, s.headline ?? '', lines);
         break;

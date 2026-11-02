@@ -3139,6 +3139,11 @@ export class Studio {
   private scale = 6;
   private target = V();
   private last?: [number, StudioLine[], number];
+  /** the plate drew this frame's Blender render behind the captions: skip our own 3D */
+  skip3D = false;
+  isReal() {
+    return this.look === 'real';
+  }
   private callouts: { at: THREE.Vector3; text: string; side: number }[] = [];
   private posed = false;
 
@@ -3711,6 +3716,7 @@ export class Studio {
     // the first frame is posed before the stage exists (init runs just before the first 3D render): pose it now
     if (!this.posed && this.last) this.update(...this.last);
     this.posed = true;
+    if (this.skip3D) return;
     r.setRenderTarget(this.rt);
     r.setClearColor(0x000000, 1);
     r.clear(true, true, true);

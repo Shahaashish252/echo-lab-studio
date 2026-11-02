@@ -81,6 +81,8 @@ export interface Storyboard {
   kicker: string;
   timing: Timing;
   scenes: StoryScene[];
+  /** studio videos rendered photo-real in Blender: how many frames are at /auto/broll/blender/NNNN.jpg */
+  blenderFrames?: number;
 }
 
 const found = import.meta.glob<Storyboard>('./storyboard.json', { eager: true, import: 'default' });

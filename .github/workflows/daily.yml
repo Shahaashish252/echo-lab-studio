@@ -42,6 +42,10 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       # studio (3D) videos render in 12 parallel "Render part" runs (app/scripts/cloud-render.ts)
       ECHO_RENDER_PARTS: "12"
+      # photo-real studio videos: Blender on Kaggle's free GPUs ("1" once tested; app/scripts/kaggle-render.ts)
+      ECHO_BLENDER: "0"
+      KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+      KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

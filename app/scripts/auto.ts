@@ -1494,6 +1494,33 @@ console.log(`  ${story.scenes.length} scenes, ${total.toFixed(1)}s`);
 step('sound');
 run('bun', ['scripts/sound.ts', '--video', 'auto', '--no-mux']);
 
+// photo-real: Blender renders the studio stage on Kaggle's free GPUs; its frames become the picture of the realistic
+// shots (captions, labels and the blueprint / icon / code shots are still drawn by our renderer). Any failure just
+// leaves the video in the normal look.
+const BLENDER_FRAMES = join(appDir, 'public', 'auto', 'broll', 'blender');
+rmSync(BLENDER_FRAMES, { recursive: true, force: true });
+if (STUDIO_MODE && process.env.ECHO_BLENDER === '1' && process.env.KAGGLE_USERNAME) {
+  step('photo-real render (Blender on Kaggle GPU)');
+  try {
+    const dir = join(outRoot, 'blender');
+    rmSync(dir, { recursive: true, force: true });
+    run('bun', ['scripts/export-blender.ts', '--out', dir]);
+    run('bun', ['scripts/kaggle-render.ts', '--in', dir, '--out', join(dir, 'result'), '--samples', opt('blender-samples', '64')!]);
+    const mp4 = join(dir, 'result', 'blender.mp4');
+    if (!existsSync(mp4)) throw new Error('Kaggle made no video');
+    mkdirSync(BLENDER_FRAMES, { recursive: true });
+    run('ffmpeg', ['-y', '-loglevel', 'error', '-i', mp4, '-q:v', '3', '-start_number', '0', join(BLENDER_FRAMES, '%04d.jpg')]);
+    const n = readdirSync(BLENDER_FRAMES).filter((f) => f.endsWith('.jpg')).length;
+    const sb = JSON.parse(readFileSync(join(SCENES, 'storyboard.json'), 'utf8'));
+    sb.blenderFrames = n;
+    writeFileSync(join(SCENES, 'storyboard.json'), JSON.stringify(sb, null, 2) + '\n');
+    console.log(`  ${n} photo-real frames from Blender`);
+  } catch (e) {
+    console.warn(`  photo-real render skipped (${e instanceof Error ? e.message : e}); using the normal look`);
+    rmSync(BLENDER_FRAMES, { recursive: true, force: true });
+  }
+}
+
 step('render');
 const out = resolve(opt('out', join(outRoot, 'auto', `${slug(story.title)}.mp4`))!);
 mkdirSync(resolve(out, '..'), { recursive: true });
