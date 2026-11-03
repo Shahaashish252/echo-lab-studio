@@ -34,3 +34,20 @@
   studio plan: 10 shots of the sound module
 
 == voice (Microsoft Edge: Madhur)
+Downloading onnxruntime (22.7MiB)
+ Downloaded onnxruntime
+Installed 27 packages in 21ms
+[0;93m2026-11-03 15:52:37.183123837 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        3.62s  यह सेंसर ताली नहीं, सिर्फ़ आवाज़ का वॉल्यूम सुनता है।
+s1-2        3.25s  यह मॉड्यूल: माइक, एलएम तीन-नौ-तीन चिप, नीला पॉट।
+s1-3        3.43s  माइक के अंदर पतला डायाफ्राम, बैकप्लेट के सामने है।
+s1-4        4.53s  आवाज़ से डायाफ्राम हिलता, कैपेसिटेंस बदलती, छोटा वोल्टेज बनता।
+s1-5        2.55s  कम्पैरेटर लेवल को थ्रेशहोल्ड से मिलाता है।
+s1-6        3.14s  नीला ट्रिमपॉट घुमाओ, थ्रेशहोल्ड ऊपर-नीचे होगा।
+s1-7        4.28s  पिच नहीं देखता, सिर्फ़ तेज़ी। सीटी भी ट्रिगर करेगी।
+s1-8        2.64s  डीओ पिन आर्डुइनो को सिग्नल भेज देता है।
+s1-9        2.04s  तो सीटी पर भी लाइट क्यों जलती है?
+s1-10       0.73s  फॉलो करो!
+wrote 10 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit
