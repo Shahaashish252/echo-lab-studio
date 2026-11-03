@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-03T15:50",
+  "updated": "2026-11-03T22:45",
   "videos": 22,
-  "summary": "Instagram is doing most of the work: nearly every Hindi video gets 1,000+ views there, while YouTube Shorts mostly gets under 50 views. The best videos show a robot or a simple gadget behaving in a surprising way, with a short hook about what it can't do (no gyro, no clapping, no brain). Plain 'How does X work?' videos on public gadgets (taps, doors, smoke alarms, street lights) get far less reach and almost no saves or shares.",
-  "winningPattern": "Hindi videos about robots or hobby-style modules (gyro, clap switch, PIR, line follower, mic) with a 'surprise negation' title: 'X doesn't do the obvious thing, it only does Y' or 'Without X, this fails instantly'. Short, punchy Hinglish title with one emoji. Posted on Instagram Reels first, where saves and shares come from the maker-style demo. Published Oct 29 to Nov 2 and the newest ones are climbing.",
+  "summary": "Your Hindi videos do far better on Instagram than YouTube. Instagram gets 1,200-1,400 views on the best ones, while YouTube mostly gets under 50. The winners are robots and 'weird behavior' explanations (a robot falling without a gyro, a clap switch that only hears noise, a tiny mic acting like a speaker). Generic 'how does X work' videos about everyday places (lift, mall door, tap, smoke alarm) get weak results, and the single English video got no Instagram views at all.",
+  "winningPattern": "Short Hindi videos about a robot or a surprising sensor trick, with a curious or contrarian title such as 'X doesn't do Y, it only does Z' or 'without X the robot fails'. The topic is a hands-on maker item (gyro, clap switch, line follower, mic, PIR). Instagram is the main driver, and the best ones also earn saves and likes. The title is short, uses simple Hinglish and often has one emoji.",
   "doMore": [
-    "Lead with a robot or Arduino module doing something surprising, and show the failure or odd behaviour in the first second",
-    "Use the 'Nahi... sirf...' title format (e.g. Clap Switch Taali Nahi, Sirf Shor Sunta Hai)",
-    "Make the video worth saving: show one pin, wiring or part name on screen so makers bookmark it",
-    "Post to Instagram first and treat YouTube as a secondary test, repurposing only the top performers",
-    "Keep the cadence of the last week, since recent videos beat the October batch"
+    "Make robot and maker-project videos that show a clear failure or surprise (what happens without the part).",
+    "Use the 'it doesn't do X, it only does Y' title format, as in Clap Switch and Mic.",
+    "Post Hindi first on Instagram, then repost to YouTube with a stronger first-second hook.",
+    "Aim for saveable content: simple one-idea explainers that students will want to revisit.",
+    "Keep the topic set to Arduino-style parts (gyro, IR, PIR, mic, line sensors) and test one new variation per week."
   ],
   "stopDoing": [
-    "Generic 'Kaise kaam karta hai? 🤔' videos on everyday public gadgets (tap, mall door, lift, street light)",
-    "Near-duplicate topics (two smoke detector videos, two IR sensor videos, two automatic tap videos) that split the audience",
-    "Posting English-only or YouTube-only videos, since the English Arduino video got no Instagram reach"
+    "Stop making near-duplicate videos on the same topic (two IR, two smoke, two tap videos split the audience).",
+    "Stop generic 'Kaise Kaam Karta Hai? 🤔' titles on public-place gadgets like lifts, mall doors and street lights.",
+    "Stop English uploads for now, since there is no sign of an audience for them yet."
   ],
   "nextTopics": [
-    "Servo motor without feedback",
+    "Self-balancing robot and the MPU6050",
     "Obstacle avoiding robot without eyes",
-    "Light sensor LDR night lamp",
-    "Bluetooth car without wires",
-    "Temperature sensor LM35"
+    "Light sensor (LDR) robot that follows a torch",
+    "Buzzer vs speaker difference",
+    "Servo motor remembering its position"
   ],
   "bestTimes": {
     "times": [

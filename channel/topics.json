@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Self-balancing robot and the MPU6050",
+      "hook": "Is Robot Ko Balance Karna Nahi Aata, Sirf Gir Ke Sudharta Hai"
+    },
+    {
+      "topic": "Obstacle avoiding robot without eyes",
+      "hook": "Ye Robot Andha Hai, Phir Bhi Takraata Nahi 🤖"
+    },
+    {
+      "topic": "Light sensor (LDR) robot that follows a torch",
+      "hook": "Torch Dikhao, Robot Peeche Peeche Aayega 🔦"
+    },
+    {
+      "topic": "Buzzer vs speaker difference",
+      "hook": "Buzzer Gaana Kyun Nahi Gaa Sakta?"
+    },
+    {
+      "topic": "Servo motor remembering its position",
+      "hook": "Servo Ko Pata Hai Wo Kahan Ghoom Raha Hai"
+    },
+    {
       "topic": "Temperature sensor LM35",
       "hook": "Ye Chhota Part Garmi Ko Number Mein Badal Deta Hai",
       "module": ""
