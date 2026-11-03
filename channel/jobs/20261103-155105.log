@@ -60,3 +60,10 @@ mixed (peak -4.4 dBFS)
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wav (-14 LUFS)
 
 == photo-real render (Blender on Kaggle GPU)
+exported to /home/runner/work/echo-lab-studio/echo-lab-studio/out/blender: scene.glb 8.6 MB, anim.json 0.4 MB in 9 s
+  render job uploaded to Kaggle
+  Blender is rendering on Kaggle (2 x Tesla T4)
+  Kaggle: aashishpratapsah252/echo-lab-render has status "KernelWorkerStatus.ERROR" after 15 min; got blender-4.2.3-linux-x64
+  photo-real render skipped (bun scripts/kaggle-render.ts --in /home/runner/work/echo-lab-studio/echo-lab-studio/out/blender failed (exit 1)); using the normal look
+
+== render
