@@ -4,7 +4,7 @@
   "hook": "Yeh sensor taali nahi, sirf awaaz ka volume sunta hai",
   "lang": "hi",
   "started": "2026-11-03T15:51:05",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -44,5 +44,7 @@
     }
   ],
   "format": "studio",
-  "module": "sound"
+  "module": "sound",
+  "finished": "2026-11-03T16:20:18",
+  "uploadId": "yg0sWNjFBTs"
 }

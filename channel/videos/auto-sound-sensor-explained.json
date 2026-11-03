@@ -1,0 +1,33 @@
+{
+  "file": "out/auto/sound-sensor-explained.mp4",
+  "title": "Clap Switch Ko Seeti Bhi Chala Deti Hai, Kyun? #shorts",
+  "description": "Sound sensor taali nahi pehchanta, sirf awaaz ka volume naapta hai. Isliye seeti bhi use trigger kar deti hai!\n🎤 Electret mic ke andar diaphragm aur backplate ka kaam\n⚡ LM393 comparator aur threshold ka khel\n🔧 Neela trimpot se sensitivity set karna\n🔌 Arduino se DO pin ka connection\nAur Arduino sensors seekhne ke liye subscribe karo!\n#shorts #arduino #soundsensor #ky038 #electronics #hindi #clapswitch",
+  "tags": [
+    "sound sensor kaise kaam karta hai",
+    "ky-038 sound sensor",
+    "sound sensor arduino",
+    "clap switch kaise banate hain",
+    "lm393 comparator explained",
+    "electret microphone working",
+    "sound sensor in hindi",
+    "arduino sensors in hindi",
+    "sound sensor whistle trigger",
+    "trimpot sensitivity adjust",
+    "sound detection module",
+    "arduino clap switch",
+    "3d electronics explained",
+    "sound sensor module explained"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Arduino Sensors 3d: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Clap switch seeti se bhi ON kyun hota hai? 🎤\nYeh sensor taali nahi sunta, sirf volume naapta hai.\nAndar kya chal raha hai, dekho 👇\n🎤 Electret mic awaaz ko chhote voltage mein badalta hai\n⚖️ LM393 volume ko threshold se compare karta hai\n🔧 Neela trimpot threshold set karta hai\n🔊 Pitch nahi dekhta, isliye seeti, taali, knock sab chalte hain\n💾 Save karo apne Arduino project ke liye\n📤 Bhejo us dost ko jo clap switch banana chahta hai\n💬 Tumhare hisaab se sensor taali aur seeti mein farak kaise kare?\n#arduino #electronics #soundsensor #ky038 #clapswitch",
+    "tiktok": "Taali nahi, sirf volume sunta hai! 🎤 Jaano seeti se bhi sound sensor kyun trigger hota hai. Tum kya banaoge isse? #learnontiktok #arduino #soundsensor #electronics #hindi"
+  }
+}

@@ -489,6 +489,15 @@
     "status": "approved",
     "topic": "Automatic stair light: PIR motion sensor aapki body heat se kaise light jalata hai",
     "job": "20261102-222216",
-    "postAt": "2026-11-04T15:00"
+    "postAt": "2026-11-04T14:00"
+  },
+  {
+    "id": "yg0sWNjFBTs",
+    "meta": "channel/videos/auto-sound-sensor-explained.json",
+    "date": "2026-11-03",
+    "status": "approved",
+    "topic": "Sound sensor module: why a whistle triggers it too",
+    "job": "20261103-155105",
+    "postAt": "2026-11-05T14:00"
   }
 ]

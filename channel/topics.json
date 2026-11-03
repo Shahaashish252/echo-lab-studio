@@ -1,75 +1,14 @@
 {
   "queue": [
     {
-      "topic": "Self-balancing robot with MPU6050",
-      "hook": "Ye robot khada kaise rehta hai? Andar sirf ek chhoti chip!"
-    },
-    {
-      "topic": "Light-following robot using LDR",
-      "hook": "Ye robot roshni ke peeche kyun bhaagta hai?"
-    },
-    {
-      "topic": "Bluetooth controlled car with HC-05",
-      "hook": "Wire nahi, remote nahi, phir bhi ye gaadi chalti hai"
-    },
-    {
-      "topic": "Servo motor: how it knows its angle",
-      "hook": "Servo ko pata hai wo kitna ghoom chuka hai, kaise?"
-    },
-    {
-      "topic": "Self-balancing robot with MPU6050 gyro",
-      "hook": "Is robot ko dhakka do, yeh phir bhi khada rahega!"
-    },
-    {
-      "topic": "Sound sensor module: why a whistle triggers it too",
-      "hook": "Yeh sensor taali nahi, sirf awaaz ka volume sunta hai"
-    },
-    {
-      "topic": "Obstacle-avoiding robot with ultrasonic sensor",
-      "hook": "Yeh robot aankhein band karke bhi deewar dekh leta hai"
-    },
-    {
-      "topic": "Speaker works as a microphone",
-      "hook": "Aapka speaker chhupke se mic ban sakta hai 🎤"
-    },
-    {
-      "topic": "LDR light sensor night lamp on Arduino",
-      "hook": "Is chhote tukde ko andhera dikhta hai, aapko nahi"
-    },
-    {
-      "topic": "Servo motor without a brain",
-      "hook": "Yeh Motor Jaanti Hai Ki Wo Kitna Ghoomi. Kaise?"
-    },
-    {
-      "topic": "Ultrasonic obstacle-avoiding robot",
-      "hook": "Is Robot Ki Aankhen Nahi, Phir Bhi Deewar Se Nahi Takrata"
-    },
-    {
-      "topic": "LDR light-following robot",
-      "hook": "Yeh Robot Roshni Ke Peeche Pagal Hai 💡"
-    },
-    {
-      "topic": "Bluetooth module HC-05 controlling a car",
-      "hook": "Phone Se Robot Chalta Hai, Bina Taar Ke!"
-    },
-    {
-      "topic": "Buzzer and touch sensor Arduino build",
-      "hook": "Sirf 3 Taar Aur Ye Sensor Ungli Pehchaan Leta Hai"
-    },
-    {
-      "topic": "Temperature sensor LM35 / DHT11",
-      "hook": "Thermometer Garmi Ko Kaise Naapta Hai? Bijli Se!",
-      "module": "dht"
+      "topic": "Temperature sensor LM35",
+      "hook": "Ye Chhota Part Garmi Ko Number Mein Badal Deta Hai",
+      "module": ""
     },
     {
       "topic": "Buzzer and relay clicking",
       "hook": "Relay Ki 'Click' Awaaz Ka Asli Matlab Kya Hai?",
       "module": ""
-    },
-    {
-      "topic": "Car reverse parking sensor beeps",
-      "hook": "Car Ka Sensor Deewar Dekhta Nahi, Sirf Awaaz Sunta Hai!",
-      "module": "ultrasonic"
     },
     {
       "topic": "Gas leak sensor in kitchens",
@@ -186,6 +125,7 @@
     "Infrared thermometer",
     "Bluetooth car robot control",
     "Car reverse parking sensor: HC-SR04 ultrasonic se gaadi deewar ki doori kaise napti hai",
-    "Automatic stair light: PIR motion sensor aapki body heat se kaise light jalata hai"
+    "Automatic stair light: PIR motion sensor aapki body heat se kaise light jalata hai",
+    "Sound sensor module: why a whistle triggers it too"
   ]
 }

@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-03T01:10",
-  "videos": 21,
-  "summary": "Instagram is where nearly all your audience is: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly get under 30 views. The best videos are about robots or sensors that 'do something surprising' (gyro robot, clap switch, line follower) and they earn the most likes and saves. Generic 'how does X work?' videos about everyday items (smoke detector, lift, tap, mall door) get low views and almost no engagement.",
-  "winningPattern": "Short, punchy Hindi titles about a robot or maker-project sensor with a surprising or contradictory claim ('Gyro ke bina robot gir jaata', 'Clap switch taali nahi, shor sunta hai', 'Line follower ke paas dimaag nahi hota'). Visual demo of a robot or Arduino-style build, shown on Instagram Reels first. Newest posts (Oct 29 to Nov 2) do best, suggesting the robot/maker angle is gaining momentum.",
+  "updated": "2026-11-03T15:50",
+  "videos": 22,
+  "summary": "Instagram is doing most of the work: nearly every Hindi video gets 1,000+ views there, while YouTube Shorts mostly gets under 50 views. The best videos show a robot or a simple gadget behaving in a surprising way, with a short hook about what it can't do (no gyro, no clapping, no brain). Plain 'How does X work?' videos on public gadgets (taps, doors, smoke alarms, street lights) get far less reach and almost no saves or shares.",
+  "winningPattern": "Hindi videos about robots or hobby-style modules (gyro, clap switch, PIR, line follower, mic) with a 'surprise negation' title: 'X doesn't do the obvious thing, it only does Y' or 'Without X, this fails instantly'. Short, punchy Hinglish title with one emoji. Posted on Instagram Reels first, where saves and shares come from the maker-style demo. Published Oct 29 to Nov 2 and the newest ones are climbing.",
   "doMore": [
-    "Make robot and maker-project videos (balancing, line follower, obstacle avoidance, sound or light triggered switches)",
-    "Open with a bold 'X ke bina Y nahi hota' or 'X nahi, Y karta hai' claim that flips what viewers expect",
-    "Show a physical build failing or working on screen in the first 2 seconds to boost saves and shares",
-    "Post to Instagram first and treat it as the main platform; reuse the same clip on YouTube with a sharper title",
-    "End with a clear save-worthy takeaway (a pin diagram or one-line rule) since saves are your strongest signal"
+    "Lead with a robot or Arduino module doing something surprising, and show the failure or odd behaviour in the first second",
+    "Use the 'Nahi... sirf...' title format (e.g. Clap Switch Taali Nahi, Sirf Shor Sunta Hai)",
+    "Make the video worth saving: show one pin, wiring or part name on screen so makers bookmark it",
+    "Post to Instagram first and treat YouTube as a secondary test, repurposing only the top performers",
+    "Keep the cadence of the last week, since recent videos beat the October batch"
   ],
   "stopDoing": [
-    "Generic 'Kaise kaam karta hai? 🤔' titles on everyday items like taps, lifts, smoke alarms and mall doors",
-    "Making several near-duplicate videos on the same topic (two smoke detector, two automatic tap, two IR sensor videos)",
-    "Posting English-titled videos when the audience is responding to Hindi"
+    "Generic 'Kaise kaam karta hai? 🤔' videos on everyday public gadgets (tap, mall door, lift, street light)",
+    "Near-duplicate topics (two smoke detector videos, two IR sensor videos, two automatic tap videos) that split the audience",
+    "Posting English-only or YouTube-only videos, since the English Arduino video got no Instagram reach"
   ],
   "nextTopics": [
-    "Self-balancing robot with MPU6050",
-    "Ultrasonic obstacle-avoiding robot",
-    "Light-following robot using LDR",
-    "Bluetooth controlled car with HC-05",
-    "Servo motor: how it knows its angle"
+    "Servo motor without feedback",
+    "Obstacle avoiding robot without eyes",
+    "Light sensor LDR night lamp",
+    "Bluetooth car without wires",
+    "Temperature sensor LM35"
   ],
   "bestTimes": {
     "times": [
-      "15:00",
+      "14:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (20 posts)"
+    "reason": "from our own posts: these hours averaged the most views (21 posts)"
   }
 }

@@ -1,21 +1,21 @@
 {
-  "updated": "03 Nov 2026, 01:10",
+  "updated": "03 Nov 2026, 16:20",
   "youtube": {
     "subs": 4,
-    "views": 2958,
+    "views": 3210,
     "videos": [
       {
-        "title": "Sensor Aapko Dekhta Nahi, Bas Garmi Mehsoos Karta Hai #shorts",
-        "id": "nHR2_Dsl4I0",
-        "status": "private",
-        "published": "2026-11-02",
+        "title": "Gaadi Ko Deewar Dikhti Nahi, Sirf Sunti Hai 🚗 #shorts",
+        "id": "ujU6WQJ6c_8",
+        "status": "public",
+        "published": "2026-11-03",
         "views": 0,
         "likes": 0,
         "comments": 0
       },
       {
-        "title": "Gaadi Ko Deewar Dikhti Nahi, Sirf Sunti Hai 🚗 #shorts",
-        "id": "ujU6WQJ6c_8",
+        "title": "Sensor Aapko Dekhta Nahi, Bas Garmi Mehsoos Karta Hai #shorts",
+        "id": "nHR2_Dsl4I0",
         "status": "private",
         "published": "2026-11-02",
         "views": 0,
@@ -36,7 +36,7 @@
         "id": "mKcPrgXveU4",
         "status": "public",
         "published": "2026-11-02",
-        "views": 25,
+        "views": 36,
         "likes": 2,
         "comments": 2
       },
@@ -54,7 +54,7 @@
         "id": "ZzilLf1hScY",
         "status": "public",
         "published": "2026-11-01",
-        "views": 144,
+        "views": 181,
         "likes": 1,
         "comments": 0
       },
@@ -72,7 +72,7 @@
         "id": "iahxwpQgd8A",
         "status": "public",
         "published": "2026-10-30",
-        "views": 385,
+        "views": 386,
         "likes": 2,
         "comments": 0
       },
@@ -162,7 +162,7 @@
         "id": "jD5lPQq_aQo",
         "status": "public",
         "published": "2026-10-23",
-        "views": 14,
+        "views": 15,
         "likes": 0,
         "comments": 0
       },
@@ -243,7 +243,7 @@
         "id": "JNXA3yDus8A",
         "status": "public",
         "published": "2026-10-19",
-        "views": 28,
+        "views": 29,
         "likes": 0,
         "comments": 0
       },
@@ -270,7 +270,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 547,
+        "views": 548,
         "likes": 9,
         "comments": 2
       },
@@ -515,7 +515,7 @@
       },
       {
         "day": "2026-10-29",
-        "views": 278,
+        "views": 277,
         "minutes": 27,
         "subs": 0
       },
@@ -524,6 +524,12 @@
         "views": 549,
         "minutes": 53,
         "subs": 1
+      },
+      {
+        "day": "2026-10-31",
+        "views": 358,
+        "minutes": 38,
+        "subs": 0
       }
     ]
   },
@@ -532,13 +538,24 @@
     "followers": 14,
     "posts": [
       {
+        "title": "Gaadi deewar se pehle khud kaise rukti hai? 🚗",
+        "url": "https://www.instagram.com/reel/DfRkG9tlfHi/",
+        "published": "2026-11-03",
+        "likes": 1,
+        "comments": 0,
+        "reach": 120,
+        "views": 132,
+        "saved": 0,
+        "shares": 0
+      },
+      {
         "title": "Ek taali aur light on? 👏",
         "url": "https://www.instagram.com/reel/DfPBQpaDRNM/",
         "published": "2026-11-02",
         "likes": 23,
         "comments": 2,
-        "reach": 1170,
-        "views": 1376,
+        "reach": 1176,
+        "views": 1382,
         "saved": 3,
         "shares": 3
       },
@@ -548,7 +565,7 @@
         "published": "2026-11-01",
         "likes": 10,
         "comments": 2,
-        "reach": 1129,
+        "reach": 1130,
         "views": 1254,
         "saved": 2,
         "shares": 0
