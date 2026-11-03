@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Sound sensor module: why a whistle triggers it too (open with this hook: \"Yeh sensor taali nahi, sirf awaaz ka volume sunta hai\")\" (Claude Code)",
       "at": "2026-11-03T15:51:25"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-11-03T15:51:58"
     }
   ],
   "format": "studio",
