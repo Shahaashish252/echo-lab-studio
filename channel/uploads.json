@@ -470,10 +470,17 @@
     "id": "ujU6WQJ6c_8",
     "meta": "channel/videos/auto-parking-sensor-hc-sr04.json",
     "date": "2026-11-02",
-    "status": "approved",
+    "status": "published",
     "topic": "Car reverse parking sensor: HC-SR04 ultrasonic se gaadi deewar ki doori kaise napti hai",
     "job": "20261102-201310",
-    "postAt": "2026-11-03T15:00"
+    "postAt": "2026-11-03T15:00",
+    "published": {
+      "youtube": "2026-11-03",
+      "instagram": "https://www.instagram.com/reel/DfRkG9tlfHi/",
+      "instagram_story": "17955313824291086",
+      "facebook": "https://www.facebook.com/reel/1312182410990965/"
+    },
+    "postedAt": "2026-11-03T15:02"
   },
   {
     "id": "nHR2_Dsl4I0",

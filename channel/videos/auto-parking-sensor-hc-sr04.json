@@ -29,5 +29,6 @@
   "social": {
     "instagram": "Gaadi deewar se pehle khud kaise rukti hai? 🚗\nYeh jaadu nahi, ek chhota HC-SR04 sensor hai. Dekho andar kya hota hai 👇\n🔊 T transducer 40 kHz ki anasuni awaaz bhejta hai\n⏱️ ECHO pin round-trip time tak HIGH rehta hai\n📏 microseconds ÷ 58 = distance in cm\n🧽 Kapda aur tirchi deewar weak echo deti hain\n💾 Save karo apne next Arduino project ke liye\n📤 Bhejo us dost ko jo parking se darta hai\n💬 Tumhari gaadi ka parking sensor kab sabse zyada beep karta hai?\n#electronics #arduino #hcsr04 #parkingsensor #ultrasonic",
     "tiktok": "Gaadi deewar se pehle kaise rukti hai? 🚗 Seekho HC-SR04 ka echo wala jaadu: sound ka time = distance. Tumhari gaadi ka sensor kab galat beep karta hai? #learnontiktok #arduino #hcsr04 #electronics #parkingsensor"
-  }
+  },
+  "cover": "/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/parking-sensor-hc-sr04.cover.jpg"
 }
