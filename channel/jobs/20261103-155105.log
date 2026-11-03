@@ -1,2 +1,30 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. An electret condenser mic turns air-pressure changes into a tiny AC voltage.
+  | 2. An amplifier stage, usually a transistor or an LM358 op-amp, boosts that signal.
+  | 3. The AO pin outputs the amplified level, which an ADC can read.
+  | 4. An LM393 comparator compares that level with a reference voltage set by the onboard trimpot.
+  | 5. When the level crosses the reference, DO flips state. Polarity varies by board, so check it with a multimeter.
+  | 6. The module checks loudness only. It never looks at pitch, pattern, or waveform, so a whistle, a clap, and a door knock all trigger it if they are loud enough.
+  | 
+  | **REAL PARTS**
+  | - KY-037 (marketed as more sensitive, which is vendor claim, not a measured spec)
+  | - KY-038
+  | - LM393 sound detection module (4-pin: VCC, GND, AO, DO)
+  | - LM393 comparator
+  | - LM358 op-amp
+  | - Electret mic
+  | 
+  | **MYTH**
+  | Most people believe the module recognises claps or voices. In fact it is a threshold detector. It reacts to anything above the trimpot level, and it does not capture audio well enough to tell sounds apart.
+  | 
+  | **SURPRISING FACT**
+  | I found no verified number from the searches. One source says the trimpot is a 20-turn type, so a small twist barely changes sensitivity. Treat that as source-reported and unconfirmed.
+  | 
+  | **TIP**
+  | Turn the trimpot until the LED stays off in background noise but lights on a clap. For real clap detection, add software: a debounce window between triggers, or a two-clap count within a time span.
+  | 
+  | Sources: [Zbotic clap lamp](https://zbotic.in/clap-light-control-using-arduino-and-sound-sensor/), [Components101 LM393](https://components101.com/modules/lm393-sound-detection-sensor-module), [Grobotronics KY-038](https://grobotronics.com/voice-sound-sensor-ky-038.html?sl=en)
+
+== storyboard: "Sound sensor module: why a whistle triggers it too (open with this hook: "Yeh sensor taali nahi, sirf awaaz ka volume sunta hai")" (Claude Code)
