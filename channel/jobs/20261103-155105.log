@@ -28,3 +28,6 @@
   | Sources: [Zbotic clap lamp](https://zbotic.in/clap-light-control-using-arduino-and-sound-sensor/), [Components101 LM393](https://components101.com/modules/lm393-sound-detection-sensor-module), [Grobotronics KY-038](https://grobotronics.com/voice-sound-sensor-ky-038.html?sl=en)
 
 == storyboard: "Sound sensor module: why a whistle triggers it too (open with this hook: "Yeh sensor taali nahi, sirf awaaz ka volume sunta hai")" (Claude Code)
+  s1 sim     Seeti se bhi *ON*?
+
+== simulation (Claude Code writes it, renders it, reviews it)
