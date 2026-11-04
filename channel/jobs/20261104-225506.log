@@ -1,2 +1,29 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS (capacitive v1.2)**
+  | 1. The probe is a PCB whose traces form a capacitor. The soil acts as its dielectric.
+  | 2. Dry soil has a dielectric constant of about 3–5. Water's is about 80. Wetter soil gives higher capacitance.
+  | 3. On-board electronics turn that capacitance into an analog voltage. Vendor pages say the output is 0–3.0 V, and the oscillator circuit itself was not confirmed in my searches.
+  | 4. An ADC pin on an Arduino or ESP32 reads the voltage. Drier soil usually reads higher, wetter lower.
+  | 5. Code compares the reading to dry and wet calibration values and converts it to a moisture percentage.
+  | 
+  | **REAL PARTS**
+  | - Capacitive Soil Moisture Sensor v1.2.
+  | - Resistive FC-28 / YL-69 probe. It is usually paired with an LM393 comparator board, but my searches didn't confirm that.
+  | - Hosts: Arduino, ESP32.
+  | 
+  | **MYTH**
+  | Many people think the cheap two-prong sensor is fine to leave powered. In fact DC current causes electrolysis, so the probes corrode and stop giving useful readings. Capacitive sensors avoid this, according to vendor claims only. Resistive sensors last longer if you power them only during each read.
+  | 
+  | **SURPRISING FACT**
+  | Water's dielectric constant is about 80, versus about 3–5 for dry soil. That is a figure from general knowledge, not from my searches. It is why capacitance reveals moisture.
+  | 
+  | **TIP**
+  | Calibrate each sensor in dry air and in water, because readings vary by unit and soil. Check the voltage spec before wiring it to a 3.3 V board, since sources disagree (v1.2 listings say 3.3–5.5 V).
+  | 
+  | Sources:
+  | - [Makers Electronics: Capacitive Soil Moisture Sensor v1.2](https://makerselectronics.com/product/capacitive-soil-moisture-sensor-v1-2/)
+  | - [SparkFun gator:soil Hookup Guide](https://learn.sparkfun.com/tutorials/sparkfun-gatorsoil-hookup-guide/other-troubleshooting-tips)
+  | - [Meadow FC-28 driver page](https://developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Fc28)
+
+== storyboard: "Soil moisture sensor (open with this hook: "This sensor knows when your plant is thirsty.")" (Claude Code)
