@@ -9,6 +9,7 @@ import time
 
 BL = "/kaggle/temp/blender-4.2.3-linux-x64"  # outside /kaggle/working, so the notebook's output stays small
 t0 = time.time()
+os.makedirs("/kaggle/temp", exist_ok=True)
 subprocess.run("apt-get -qq install -y libxi6 libxkbcommon0 libsm6 libxxf86vm1 libxfixes3 libxrender1 libgl1 > /dev/null 2>&1", shell=True)
 if not os.path.exists(BL):
     subprocess.run("cd /kaggle/temp && wget -q https://download.blender.org/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz && tar xf blender-4.2.3-linux-x64.tar.xz && rm blender-4.2.3-linux-x64.tar.xz", shell=True, check=True)
