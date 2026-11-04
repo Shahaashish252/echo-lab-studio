@@ -499,5 +499,14 @@
     "topic": "Sound sensor module: why a whistle triggers it too",
     "job": "20261103-155105",
     "postAt": "2026-11-05T14:00"
+  },
+  {
+    "id": "_d9YWN5UW3I",
+    "meta": "channel/videos/auto-gas-leak-sensor-mq-2.json",
+    "date": "2026-11-04",
+    "status": "held",
+    "topic": "Gas leak sensor in kitchens",
+    "job": "20261104-110634",
+    "heldPostAt": "2026-11-06T14:00"
   }
 ]

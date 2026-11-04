@@ -1,0 +1,33 @@
+{
+  "file": "out/auto/gas-leak-sensor-mq-2.mp4",
+  "title": "Gas Sensor Smell Nahi Karta, Phir Bhi Pakad Leta Hai #shorts",
+  "description": "Gas leak ki smell aapse pehle machine ko kaise aati hai? Jaaniye MQ-2 sensor ka asli 3D raaz.\n🔥 MQ-2 module ka real 3D model\n🧪 SnO2 layer aur heater coil andar se\n⚡ LM393 aur Arduino se alarm kaise bajta hai\n🍳 Kitchen mein gas leak ka use\nAise aur 3D explainers ke liye subscribe karo.\n#shorts #gassensor #mq2 #arduino #hindi #electronics",
+  "tags": [
+    "mq2 gas sensor",
+    "gas sensor kaise kaam karta hai",
+    "gas leak detector in hindi",
+    "mq2 arduino",
+    "lpg leak sensor",
+    "gas sensor explained",
+    "snO2 sensor",
+    "lm393 comparator",
+    "kitchen gas leak alarm",
+    "arduino projects in hindi",
+    "mq2 sensor in hindi",
+    "gas leak detection kaise hota hai",
+    "electronics explained 3d",
+    "diy gas alarm arduino"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Secrets: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Gas leak ki smell, machine ko pehle kaise aati hai? 🔥\nYeh MQ-2 sensor smell nahi, gas ko khud pakadta hai. Andar ki chemistry dekho 👇\n🧪 Garam tin dioxide ki layer ka resistance gas aate hi girta hai\n🛡️ Double steel mesh can aag lagne se rokta hai\n⚡ LM393 threshold se compare karke alarm deta hai\n⏱️ 20-60 second warm-up zaroori hai\n💾 Save karo, kabhi Arduino project banao to kaam aayega\n📤 Bhejo us dost ko jo electronics seekh raha hai\n💬 Aapke ghar mein gas alarm laga hai?\n#electronics #arduino #mq2 #gassensor #learnelectronics",
+    "tiktok": "Gas leak ki smell machine ko pehle kaise aati hai? 🔥 MQ-2 sensor ka raaz 3D mein seekho. Aapke kitchen mein gas alarm hai? Comment karo! #learnontiktok #arduino #mq2 #electronics #hindi"
+  }
+}

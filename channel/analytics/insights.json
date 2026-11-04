@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-03T22:45",
+  "updated": "2026-11-04T11:06",
   "videos": 22,
-  "summary": "Your Hindi videos do far better on Instagram than YouTube. Instagram gets 1,200-1,400 views on the best ones, while YouTube mostly gets under 50. The winners are robots and 'weird behavior' explanations (a robot falling without a gyro, a clap switch that only hears noise, a tiny mic acting like a speaker). Generic 'how does X work' videos about everyday places (lift, mall door, tap, smoke alarm) get weak results, and the single English video got no Instagram views at all.",
-  "winningPattern": "Short Hindi videos about a robot or a surprising sensor trick, with a curious or contrarian title such as 'X doesn't do Y, it only does Z' or 'without X the robot fails'. The topic is a hands-on maker item (gyro, clap switch, line follower, mic, PIR). Instagram is the main driver, and the best ones also earn saves and likes. The title is short, uses simple Hinglish and often has one emoji.",
+  "summary": "Instagram is carrying the channel: almost every video gets 1,000+ views there, while YouTube Shorts mostly gets under 50 views. The best videos make a robot or a small gadget seem alive with a surprising 'it can't do X, yet it does' idea, and they were posted in the last week. Longer 'how does X work?' questions about public places (lift, mall door, tap, smoke alarm) get far fewer views and almost no saves or shares.",
+  "winningPattern": "Hindi Instagram Reels about a hands-on maker subject (robot, clap switch, mic, PIR, line follower) with a surprising reversal hook such as 'X can't do Y, only Z' or 'without X the robot falls'. Titles are short, name one object, have a twist and end with an emoji and #shorts. Robot and maker-project videos get the saves and shares; generic everyday-tech 'Kaise Kaam Karta Hai?' questions do not.",
   "doMore": [
-    "Make robot and maker-project videos that show a clear failure or surprise (what happens without the part).",
-    "Use the 'it doesn't do X, it only does Y' title format, as in Clap Switch and Mic.",
-    "Post Hindi first on Instagram, then repost to YouTube with a stronger first-second hook.",
-    "Aim for saveable content: simple one-idea explainers that students will want to revisit.",
-    "Keep the topic set to Arduino-style parts (gyro, IR, PIR, mic, line sensors) and test one new variation per week."
+    "Make robot and Arduino-project videos with a 'robot can't do X' twist, since they bring the most views, saves and shares",
+    "Use the reversal title format: 'X Nahi, Sirf Y' or 'X Ke Bina Ye Turant Gir Jaata'",
+    "Post on Instagram first and treat it as the main platform, then reuse the best ones on YouTube",
+    "Show one cause and effect result in the first 2 seconds, such as a robot falling or a light clicking on with a clap",
+    "Keep Hindi narration and posting daily, since the Hindi videos all perform better than the English one on Instagram"
   ],
   "stopDoing": [
-    "Stop making near-duplicate videos on the same topic (two IR, two smoke, two tap videos split the audience).",
-    "Stop generic 'Kaise Kaam Karta Hai? 🤔' titles on public-place gadgets like lifts, mall doors and street lights.",
-    "Stop English uploads for now, since there is no sign of an audience for them yet."
+    "Generic 'Kaise Kaam Karta Hai?' videos about mall doors, lifts, taps and smoke alarms",
+    "Making several near-duplicate videos on the same sensor (two smoke, two tap, two IR)",
+    "Posting the same title and thumbnail style on YouTube and expecting views without changing the hook"
   ],
   "nextTopics": [
-    "Self-balancing robot and the MPU6050",
-    "Obstacle avoiding robot without eyes",
-    "Light sensor (LDR) robot that follows a torch",
-    "Buzzer vs speaker difference",
-    "Servo motor remembering its position"
+    "Self-balancing robot",
+    "Obstacle avoiding robot with ultrasonic sensor",
+    "Light-following robot with LDR",
+    "Touch sensor lamp with Arduino",
+    "Servo motor that remembers its position"
   ],
   "bestTimes": {
     "times": [
