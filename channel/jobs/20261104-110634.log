@@ -26,3 +26,6 @@
   | Sources: [Linksprite MQ-6](https://wiki.linksprite.com/index.php/MQ-6_Semiconductor_Sensor_for_LPG), [Supergas](https://www.supergas.com/lpg-for-Home/lpg-leak-detector)
 
 == storyboard: "Gas leak sensor in kitchens (open with this hook: "Gas leak ki smell aapse pehle machine ko kaise aati hai?")" (Claude Code)
+  s1 sim     Machine ko *SMELL* kaise?
+
+== simulation (Claude Code writes it, renders it, reviews it)
