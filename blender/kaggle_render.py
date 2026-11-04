@@ -7,11 +7,12 @@ import os
 import subprocess
 import time
 
-BL = "blender-4.2.3-linux-x64"
+BL = "/kaggle/temp/blender-4.2.3-linux-x64"  # outside /kaggle/working, so the notebook's output stays small
 t0 = time.time()
 subprocess.run("apt-get -qq install -y libxi6 libxkbcommon0 libsm6 libxxf86vm1 libxfixes3 libxrender1 libgl1 > /dev/null 2>&1", shell=True)
 if not os.path.exists(BL):
-    subprocess.run(f"wget -q https://download.blender.org/release/Blender4.2/{BL}.tar.xz && tar xf {BL}.tar.xz && rm {BL}.tar.xz", shell=True, check=True)
+    subprocess.run("cd /kaggle/temp && wget -q https://download.blender.org/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz && tar xf blender-4.2.3-linux-x64.tar.xz && rm blender-4.2.3-linux-x64.tar.xz", shell=True, check=True)
+print(subprocess.run([f"{BL}/blender", "-b", "--version"], capture_output=True, text=True).stdout[:200], flush=True)
 inp = os.path.dirname(glob.glob("/kaggle/input/**/anim.json", recursive=True)[0])
 A = json.load(open(f"{inp}/anim.json"))
 frames = A["frames"]
@@ -31,6 +32,12 @@ for p in procs:
     p.wait()
 pngs = sorted(glob.glob(f"{out}/*.png"))
 print(f"{len(pngs)}/{frames} frames in {(time.time() - t0) / 60:.1f} min", flush=True)
+# Blender's own messages, in the notebook log (the files are hard to fetch on slow links)
+for gpu in (0, 1):
+    lines = open(f"/kaggle/working/blender_gpu{gpu}.log", errors="replace").read().splitlines()
+    print(f"---- blender gpu{gpu} log (last 40 lines) ----", *lines[-40:], sep="\n", flush=True)
+if not pngs:
+    raise SystemExit("Blender rendered no frames")
 if step > 1:
     for p in pngs:
         subprocess.run(["cp", p, "/kaggle/working/"])
