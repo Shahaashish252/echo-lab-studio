@@ -1,2 +1,32 @@
 
 == research: reading about the topic on the web
+  | **Hook:** "Car Ko Peeche Ki Deewar Ka Kaise Pata Chalta Hai?"
+  | 
+  | **HOW IT WORKS**
+  | 1. Bumper sensors are small piezo discs. They emit a short burst of about 40 kHz ultrasound, which humans can't hear.
+  | 2. The sound hits the wall and bounces back as an echo.
+  | 3. The same disc (or a paired one) then listens for the echo.
+  | 4. The control unit measures the time of flight. Distance = speed of sound × time ÷ 2, because the sound travels out and back.
+  | 5. The ECU maps distance to beep rate. The closer the object, the faster the beeps, ending in a continuous tone.
+  | 
+  | **REAL PARTS**
+  | - MA40A3R / MA40MF14-5B (40 kHz piezo transducers)
+  | - HC-SR04 (the hobby equivalent)
+  | - HCF4093 (used in a DIY analog parking-sensor circuit)
+  | 
+  | **MYTH**
+  | - Myth: the sensors "see" everything behind the car.
+  | - Truth: they miss thin poles, ropes and low curbs. Soft materials like snow absorb the sound. Mud or ice on the sensor also blocks it.
+  | 
+  | **SURPRISING FACT**
+  | - Toyota's manual says a wall is detected out to about 150 cm, but a thin pole only to about 100 cm.
+  | - Tesla's manual says objects under about 20 cm, like curbs, can fall into a blind spot.
+  | 
+  | **TIP**
+  | - Wipe the sensors clean before parking, especially in mud, snow or ice. Don't rely on the beeps alone. Look in the mirror or camera too.
+  | 
+  | **Caveat:** I found no authoritative spec for beep-rate thresholds, so I haven't given any numbers for them.
+  | 
+  | Sources: [Toyota manual](https://www.manualslib.com/manual/2484867/Toyota-Aurion.html?page=183), [Tesla manual](https://www.manualslib.com/manual/1339330/Tesla-Model-3.html?page=50), [320volt MA40A3R circuit](https://320volt.com/en/ma40a3r-hcf4093-ile-ultrasonik-radar-park-sensoru/), [Kia manual](https://ownersmanual.kia.com/full_webhelp/CL4/2026/en_US/topics/t00675.html)
+
+== storyboard: "Parking sensor beeping in cars (open with this hook: "Car Ko Peeche Ki Deewar Ka Kaise Pata Chalta Hai?")" (Claude Code)
