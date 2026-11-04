@@ -486,10 +486,17 @@
     "id": "nHR2_Dsl4I0",
     "meta": "channel/videos/auto-stair-light-pir-sensor.json",
     "date": "2026-11-02",
-    "status": "approved",
+    "status": "published",
     "topic": "Automatic stair light: PIR motion sensor aapki body heat se kaise light jalata hai",
     "job": "20261102-222216",
-    "postAt": "2026-11-04T14:00"
+    "postAt": "2026-11-04T14:00",
+    "published": {
+      "youtube": "2026-11-04",
+      "instagram": "https://www.instagram.com/reel/DfUJ0TCDH5O/",
+      "instagram_story": "18082803578359340",
+      "facebook": "https://www.facebook.com/reel/995652736239359/"
+    },
+    "postedAt": "2026-11-04T15:10"
   },
   {
     "id": "yg0sWNjFBTs",
