@@ -14,7 +14,7 @@ on:
       variants:
         description: "Optional look experiments (JSON list), rendered on one frame"
         type: string
-        default: "
+        default: ""
 permissions:
   contents: read
 jobs:
