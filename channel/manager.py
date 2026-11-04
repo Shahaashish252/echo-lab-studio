@@ -193,6 +193,12 @@ def next_topic() -> dict:
         fits = [q for q in t["queue"] if studio_module(q)]
         recent = recent_modules()
         fresh = [q for q in fits if q["module"] not in recent]
+        # the analysis (2026-11-04): robot / Arduino-project topics win, public-place gadgets (lift, mall, tap) lose
+        def appeal(q):
+            x = q["topic"].lower()
+            return (-1 if re.search(r"robot|arduino|project|build|banao|diy", x) else 0) + (1 if re.search(r"lift|elevator|mall|tap|street|public", x) else 0)
+        fresh.sort(key=appeal)
+        fits.sort(key=appeal)
         return (fresh or fits or [None])[0], len(fresh)
 
     if studio:

@@ -890,6 +890,12 @@ surprising moment of the topic at once (a "scene" shot of the result: the robot 
 starting by itself, the lamp switching itself on) with a 3-5 word curiosity question as its headline - no slow intro,
 no greeting, no "aaj hum". Every line must add something new. The last spoken line before the follow line LOOPS back
 to line 0 (it ends on the same question/moment, so the video replays naturally).
+WHAT WINS ON OUR CHANNEL (analysis 2026-11-04): robot and Arduino-project angles beat everyday public places (lifts,
+mall doors, taps, street lights did poorly). So frame the topic as a maker / robot build where it fits (the robot,
+the project, what YOU can build with it). Line 0's headline is a WRONG-BELIEF hook: "X can't see/hear/smell/think...
+yet it does Y" (e.g. "Yeh dekh nahi sakta, phir bhi rukta hai"). Just before the comment question, give ONE
+save-worthy line: a wiring/pin tip or a common mistake ("VCC 5V pe, OUT D2 pe - 3.3V pe yeh galat padhega"), shown on
+a wiring / uno / code shot, so people save the video.
 Captions are our story style: 2-5 BIG headline words per shot (one *key* word glows orange) plus the subtitle.
 The narration is calm, clear, curious and DETAILED: real part names, what each part physically does, and the real
 numbers that make it concrete - one idea per line, no filler. Connect it to the everyday use in the topic.
@@ -927,7 +933,7 @@ NOT available for this module (don't use): ${SM.no}` : ''}
 - scene    {"use": "<one of: ${SM.uses}>"}  the everyday use in 3D, with the real module in it
 - uno      {"pin": "D2|5V|GND|A0"}  close-up of that pin on the Arduino Uno, where the module's wire goes
 - code     {"code": ["up to 6 short lines of Arduino code"]}  the Arduino code that reads the module, line by line
-- blueprint {"part": "optional: receiver|chip|pot|pins"}  a technical LINE DRAWING of the module on white paper with
+- blueprint {"part": "optional: receiver|chip|pot|pins"}  a technical LINE DRAWING of the module on a blue blueprint sheet with
                                    handwritten part labels (great for "what are the parts" and "how it is built")
 - icon                             a clean flat diagram of the module on navy with glowing energy in its traces (great
                                    for "how the signal flows")
