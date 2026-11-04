@@ -43,7 +43,7 @@ jobs:
         run: |
           cd app
           if [ -n '${{ inputs.variants }}' ]; then V=(--variants '${{ inputs.variants }}' --frame 600); else V=(); fi
-          bun scripts/kaggle-render.ts --in ../out/blender --out ../out/blender/result --samples 48 --step ${{ inputs.step }} "${V[@]}"
+          bun scripts/kaggle-render.ts --in ../out/blender --out ../out/blender/result --samples 32 --step ${{ inputs.step }} "${V[@]}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

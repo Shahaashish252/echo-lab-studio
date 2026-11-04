@@ -195,8 +195,8 @@ if not VAR.get("nolights"):
 r = scene.render
 r.engine = "CYCLES"
 r.resolution_x, r.resolution_y, r.resolution_percentage = A["width"], A["height"], 100
-r.use_motion_blur = True
-r.motion_blur_shutter = 0.5
+r.use_motion_blur = False  # the animation is keyed frame by frame (constant), so blur adds time and nothing else
+r.use_persistent_data = True  # keep the scene on the GPU between frames
 r.image_settings.file_format = "PNG"
 r.filepath = os.path.join(out_dir, "")
 cy = scene.cycles
@@ -204,8 +204,15 @@ cy.device = "GPU"
 cy.samples = samples
 cy.use_adaptive_sampling = True
 cy.use_denoising = True
-cy.max_bounces = 8
-cy.transmission_bounces = 8
+cy.adaptive_threshold = 0.03
+cy.max_bounces = 6
+cy.transmission_bounces = 6
+cy.caustics_reflective = cy.caustics_refractive = False
+cy.blur_glossy = 1.0
+try:
+    cy.denoising_use_gpu = True
+except AttributeError:
+    pass
 prefs = bpy.context.preferences.addons["cycles"].preferences
 for kind in ("OPTIX", "CUDA"):
     try:
@@ -215,8 +222,12 @@ for kind in ("OPTIX", "CUDA"):
             break
     except TypeError:
         continue
+# kaggle_render.py runs one Blender per GPU: CUDA_VISIBLE_DEVICES isn't honoured there, so each process picks its own card
+# (two processes both on both cards fight each other and take ~40 s a frame)
+gpus = [d for d in prefs.devices if d.type == prefs.compute_device_type]
+pick = os.environ.get("GPU")
 for d in prefs.devices:
-    d.use = d.type != "CPU"
+    d.use = d.type != "CPU" and (pick is None or (d in gpus and gpus.index(d) == int(pick) % max(len(gpus), 1)))
 # Kaggle's driver can't create the OptiX denoiser ("Failed to create OptiX denoiser"); Intel OIDN works everywhere
 cy.denoiser = "OPENIMAGEDENOISE"
 scene.view_settings.view_transform = VAR.get("view", "AgX")

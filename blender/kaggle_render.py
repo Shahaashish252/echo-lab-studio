@@ -28,7 +28,7 @@ if job.get("variants"):
     for v in job["variants"]:
         d = f"/kaggle/temp/var_{v['name']}"
         os.makedirs(d, exist_ok=True)
-        env = dict(os.environ, CUDA_VISIBLE_DEVICES="0", VARIANT=json.dumps(v))
+        env = dict(os.environ, CUDA_VISIBLE_DEVICES="0", GPU="0", VARIANT=json.dumps(v))
         r = subprocess.run([f"{BL}/blender", "-b", "-P", f"{inp}/render_studio.py", "--", f"{inp}/scene.glb", f"{inp}/anim.json", d, str(f), str(f), str(samples)],
                            env=env, capture_output=True, text=True)
         for p in glob.glob(f"{d}/*.png"):
@@ -39,7 +39,7 @@ if job.get("variants"):
 half = frames // 2
 procs = []
 for gpu, (a, b) in enumerate([(0, half - 1), (half, frames - 1)]):
-    env = dict(os.environ, CUDA_VISIBLE_DEVICES=str(gpu))
+    env = dict(os.environ, CUDA_VISIBLE_DEVICES=str(gpu), GPU=str(gpu))
     log = open(f"/kaggle/working/blender_gpu{gpu}.log", "w")
     procs.append(subprocess.Popen([f"{BL}/blender", "-b", "-P", f"{inp}/render_studio.py", "--", f"{inp}/scene.glb", f"{inp}/anim.json", out, str(a), str(b), str(samples), str(step)],
                                   env=env, stdout=log, stderr=subprocess.STDOUT))
