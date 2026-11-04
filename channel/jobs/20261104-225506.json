@@ -1,0 +1,16 @@
+{
+  "id": "20261104-225506",
+  "topic": "Soil moisture sensor",
+  "hook": "This sensor knows when your plant is thirsty.",
+  "lang": "hi",
+  "started": "2026-11-04T22:55:06",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-11-04T22:55:07"
+    }
+  ],
+  "format": "studio",
+  "module": "soil"
+}
