@@ -183,7 +183,8 @@ for kind in ("OPTIX", "CUDA"):
         continue
 for d in prefs.devices:
     d.use = d.type != "CPU"
-cy.denoiser = "OPTIX" if prefs.compute_device_type == "OPTIX" else "OPENIMAGEDENOISE"
+# Kaggle's driver can't create the OptiX denoiser ("Failed to create OptiX denoiser"); Intel OIDN works everywhere
+cy.denoiser = "OPENIMAGEDENOISE"
 scene.view_settings.view_transform = "AgX"
 try:
     scene.view_settings.look = "AgX - Medium High Contrast"
