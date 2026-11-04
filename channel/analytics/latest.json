@@ -1,5 +1,5 @@
 {
-  "updated": "04 Nov 2026, 16:43",
+  "updated": "04 Nov 2026, 23:59",
   "youtube": {
     "subs": 4,
     "views": 3302,
@@ -18,9 +18,9 @@
         "id": "nHR2_Dsl4I0",
         "status": "public",
         "published": "2026-11-04",
-        "views": 2,
+        "views": 20,
         "likes": 1,
-        "comments": 1
+        "comments": 2
       },
       {
         "title": "Car Sensor Deewar Dekhta Nahi, Sunta Hai 🔊 #shorts",
@@ -54,7 +54,7 @@
         "id": "ujU6WQJ6c_8",
         "status": "public",
         "published": "2026-11-03",
-        "views": 56,
+        "views": 84,
         "likes": 2,
         "comments": 0
       },
@@ -90,7 +90,7 @@
         "id": "ZzilLf1hScY",
         "status": "public",
         "published": "2026-11-01",
-        "views": 189,
+        "views": 191,
         "likes": 1,
         "comments": 0
       },
@@ -99,7 +99,7 @@
         "id": "A4PXvpSAuqQ",
         "status": "public",
         "published": "2026-10-31",
-        "views": 677,
+        "views": 678,
         "likes": 4,
         "comments": 0
       },
@@ -306,7 +306,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 549,
+        "views": 550,
         "likes": 9,
         "comments": 2
       },
@@ -515,7 +515,7 @@
       },
       {
         "day": "2026-10-24",
-        "views": 50,
+        "views": 51,
         "minutes": 8,
         "subs": 0
       },
@@ -571,18 +571,18 @@
   },
   "instagram": {
     "username": "echo.lab3d",
-    "followers": 14,
+    "followers": 16,
     "posts": [
       {
         "title": "Seedhi ki light khud kaise jalti hai? 💡",
         "url": "https://www.instagram.com/reel/DfUJ0TCDH5O/",
         "published": "2026-11-04",
-        "likes": 0,
+        "likes": 14,
         "comments": 0,
-        "reach": 107,
-        "views": 129,
-        "saved": 1,
-        "shares": 0
+        "reach": 1069,
+        "views": 1283,
+        "saved": 4,
+        "shares": 1
       },
       {
         "title": "Gaadi deewar se pehle khud kaise rukti hai? 🚗",
@@ -624,7 +624,7 @@
         "likes": 19,
         "comments": 0,
         "reach": 1068,
-        "views": 1192,
+        "views": 1193,
         "saved": 12,
         "shares": 1
       },
@@ -678,8 +678,8 @@
         "published": "2026-10-26",
         "likes": 15,
         "comments": 2,
-        "reach": 1232,
-        "views": 1366,
+        "reach": 1234,
+        "views": 1367,
         "saved": 4,
         "shares": 10
       },
@@ -722,8 +722,8 @@
         "published": "2026-10-22",
         "likes": 2,
         "comments": 0,
-        "reach": 232,
-        "views": 271,
+        "reach": 233,
+        "views": 272,
         "saved": 1,
         "shares": 1
       },
@@ -733,8 +733,8 @@
         "published": "2026-10-22",
         "likes": 2,
         "comments": 0,
-        "reach": 110,
-        "views": 139,
+        "reach": 111,
+        "views": 140,
         "saved": 2,
         "shares": 0
       },
@@ -742,10 +742,10 @@
         "title": "Street light ko andhera kaise pata chalta hai? 💡",
         "url": "https://www.instagram.com/reel/DeyZePtCfOH/",
         "published": "2026-10-22",
-        "likes": 10,
+        "likes": 11,
         "comments": 0,
-        "reach": 679,
-        "views": 753,
+        "reach": 682,
+        "views": 757,
         "saved": 3,
         "shares": 2
       },
@@ -753,10 +753,10 @@
         "title": "Ultrasonic Sensor Awaaz Se Kaise Dekhta Hai? 🦇",
         "url": "https://www.instagram.com/reel/Dev0l7zCXEb/",
         "published": "2026-10-21",
-        "likes": 1,
+        "likes": 2,
         "comments": 0,
-        "reach": 134,
-        "views": 156,
+        "reach": 135,
+        "views": 158,
         "saved": 0,
         "shares": 0
       },
@@ -766,8 +766,8 @@
         "published": "2026-10-20",
         "likes": 5,
         "comments": 2,
-        "reach": 81,
-        "views": 88,
+        "reach": 82,
+        "views": 89,
         "saved": 0,
         "shares": 0
       },
@@ -777,8 +777,8 @@
         "published": "2026-10-20",
         "likes": 2,
         "comments": 2,
-        "reach": 103,
-        "views": 133,
+        "reach": 104,
+        "views": 136,
         "saved": 0,
         "shares": 0
       },
@@ -788,8 +788,8 @@
         "published": "2026-10-19",
         "likes": 3,
         "comments": 4,
-        "reach": 39,
-        "views": 58,
+        "reach": 40,
+        "views": 61,
         "saved": 2,
         "shares": 1
       },
@@ -799,8 +799,8 @@
         "published": "2026-10-19",
         "likes": 3,
         "comments": 6,
-        "reach": 104,
-        "views": 121,
+        "reach": 105,
+        "views": 123,
         "saved": 1,
         "shares": 1
       },
@@ -810,8 +810,8 @@
         "published": "2026-10-19",
         "likes": 3,
         "comments": 6,
-        "reach": 113,
-        "views": 133,
+        "reach": 114,
+        "views": 134,
         "saved": 2,
         "shares": 1
       },
@@ -821,8 +821,8 @@
         "published": "2026-10-17",
         "likes": 12,
         "comments": 2,
-        "reach": 1211,
-        "views": 1423,
+        "reach": 1212,
+        "views": 1426,
         "saved": 3,
         "shares": 4
       },
@@ -832,8 +832,8 @@
         "published": "2026-10-08",
         "likes": 3,
         "comments": 6,
-        "reach": 106,
-        "views": 126,
+        "reach": 107,
+        "views": 128,
         "saved": 0,
         "shares": 0
       }

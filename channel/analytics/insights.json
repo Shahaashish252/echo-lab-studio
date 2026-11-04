@@ -1,30 +1,30 @@
 {
-  "updated": "2026-11-04T15:44",
+  "updated": "2026-11-04T22:54",
   "videos": 23,
-  "summary": "Instagram is doing nearly all the work: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly gets under 50 views. The best videos show a simple robot or sensor with a surprising 'it can't see/hear/think, yet it works' idea, and those earn the most likes, saves and shares. Everyday-object explainers (taps, doors, smoke alarms, touchscreens, smartwatches) and the one English video get little attention, and the newest posts are too fresh to judge fully.",
-  "winningPattern": "Hindi, Instagram-first. Subject is a hands-on robot or Arduino-style sensor project (gyro robot, clap switch, PIR, IR obstacle robot, line follower, mic). Hook is a short 'myth-breaking' line: the device lacks an ability (no brain, can't see, only hears noise) yet works. Titles are short Hinglish statements with one emoji and #shorts, with a surprising claim rather than a plain 'how does X work' question.",
+  "summary": "Instagram is carrying the channel: most videos get 1,200-1,400 views there, while YouTube Shorts mostly gets under 100 views. The best videos are the ones with a surprising, funny or 'robot fails' angle (gyro robot falling, clap switch, PIR sensor), and they also get the most likes and saves. Plain 'How does X work?' videos on everyday objects (taps, doors, smoke alarms, touchscreen) get far fewer views, and the one English video earned almost nothing on Instagram.",
+  "winningPattern": "Hindi videos about a robot or maker-project sensor (gyro, clap switch, PIR, IR, line follower, mic) with a bold, surprising claim as the hook, like 'X can't do Y, it only does Z' or 'without X the robot falls'. Titles are short Hinglish with one emoji and #shorts, and the video shows a robot or Arduino module in action. Posted on Instagram first, where it gets ~1,200+ views; YouTube only picks up the ones with a strong curiosity hook (gyro, clap switch, PIR).",
   "doMore": [
-    "Make robot and Arduino module videos that show the build or behaviour, such as balancing, obstacle avoidance and line following",
-    "Open every video with a 'X can't do Y, yet it works' hook in the first line",
-    "Post Instagram-first and reuse the same video on YouTube with a stronger, searchable title",
-    "Lean on save-worthy content like clap switch or gyro explainers with a simple circuit shown on screen",
-    "Keep posting a steady 1-2 videos per day in the strong topics and check results after 48 hours"
+    "Make robot and Arduino-module videos showing something failing or surprising, such as 'without sensor X the robot does Y'.",
+    "Use 'it doesn't do A, it only does B' contrast hooks like the Clap Switch and Mic titles.",
+    "Keep the 3-5 day cadence of maker-project topics that earned 1,200+ IG views, and repeat what works within 2 days.",
+    "Ask viewers to save the video ('save this for your project') since saves are high on the build-focused videos.",
+    "Test each winning topic on YouTube with a punchier first-second visual, because YouTube is far weaker than IG for the same content."
   ],
   "stopDoing": [
-    "Generic 'Kaise Kaam Karta Hai?' questions about public objects like mall doors, washroom taps and lifts",
-    "Posting near-duplicate topics (two smoke detector videos, two IR sensor videos, two tap videos) in the same week",
-    "Switching to English narration without a test plan, since it got no Instagram reach"
+    "Generic everyday-object explainers (mall door, washroom tap, lift, street light) that average under 500 IG views.",
+    "Posting several near-duplicate topics (two smoke detector, two IR sensor, two automatic tap videos) in the same week.",
+    "English-language videos for now, since the audience responds to Hindi."
   ],
   "nextTopics": [
-    "Obstacle-avoiding robot with ultrasonic sensor",
-    "Light-following robot using LDR",
-    "Touch sensor switch on Arduino",
-    "Servo motor knows its angle",
-    "Buzzer alarm that triggers on tilt"
+    "Robot without ultrasonic sensor crashing",
+    "Servo motor without feedback",
+    "Arduino without a resistor burning an LED",
+    "Light sensor LDR robot following a torch",
+    "Bluetooth module controlling a car"
   ],
   "bestTimes": {
     "times": [
-      "14:00",
+      "15:00",
       "21:00"
     ],
     "reason": "from our own posts: these hours averaged the most views (22 posts)"

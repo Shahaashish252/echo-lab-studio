@@ -51,11 +51,6 @@
       "module": ""
     },
     {
-      "topic": "Soil moisture sensor",
-      "hook": "This sensor knows when your plant is thirsty.",
-      "module": "soil"
-    },
-    {
       "topic": "GPS",
       "hook": "Your phone listens to 4 satellites at once.",
       "module": ""
@@ -124,6 +119,7 @@
     "Sound sensor module: why a whistle triggers it too",
     "Gas leak sensor in kitchens",
     "Parking sensor beeping in cars",
-    "Escalator that starts when you step near"
+    "Escalator that starts when you step near",
+    "Soil moisture sensor"
   ]
 }

@@ -1,0 +1,34 @@
+{
+  "file": "out/auto/soil-moisture-sensor.mp4",
+  "title": "2 kaante wala sensor paudhe ki pyaas jaanta hai 🌱 #shorts",
+  "description": "Yeh chhota sa sensor mitti ko dekh nahi sakta, phir bhi bata deta hai ki paudha pyaasa hai. Dekhiye kaise!\n🌱 Fork jaisi probe aur LM393 board 3D mein\n💧 Sookhi aur geeli mitti mein current ka fark\n🔵 Blue pot aur LM393 comparator ka kaam\n🔌 Arduino wiring aur ek save-worthy tip\nAur Arduino projects ke liye subscribe karo!\n#shorts #arduino #soilmoisturesensor #lm393 #electronics #hindi #maker",
+  "tags": [
+    "soil moisture sensor",
+    "soil moisture sensor arduino",
+    "soil moisture sensor in hindi",
+    "soil moisture sensor kaise kaam karta hai",
+    "lm393 comparator",
+    "arduino plant watering",
+    "automatic plant watering system",
+    "fc-28 soil sensor",
+    "yl-69 sensor",
+    "arduino projects for beginners",
+    "arduino sensor explained",
+    "resistive soil sensor corrosion",
+    "paudhe ko paani dene wala sensor",
+    "arduino hindi",
+    "how soil moisture sensor works"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Arduino Sensors: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Yeh sensor jaanta hai paudha pyaasa hai 🌱\nMitti mein sirf 2 dhaatu ke kaante, phir bhi pyaas pakad leta hai. Kaise? 👇\n💧 Geeli mitti mein resistance kam, current zyada\n🔵 Blue pot sookhepan ki seema tay karta hai\n🔌 VCC 5V pe, DO D2 pe\n⚠️ Sirf reading ke time power do, warna prongs gal jaate hain\n💾 Save karo apne next Arduino project ke liye\n📤 Bhejo us dost ko jo paudhe sukhaa deta hai\n💬 Aapka paudha abhi pyaasa hai?\n#arduino #electronics #soilsensor #lm393 #plantautomation",
+    "tiktok": "Yeh sensor jaanta hai paudha pyaasa hai 🌱 Dekho soil moisture sensor aur LM393 ka kaam. Aapka paudha abhi pyaasa hai? #learnontiktok #arduino #electronics #soilsensor #maker"
+  }
+}
