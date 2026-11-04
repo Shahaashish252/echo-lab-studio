@@ -72,3 +72,15 @@ exported to /home/runner/work/echo-lab-studio/echo-lab-studio/out/blender: scene
   970 photo-real frames from Blender
 
 == render
+  dispatched 12 render parts (job 1793781072666)
+  render parts done: 0/12
+  render parts done: 3/12
+  render parts done: 7/12
+  render parts done: 8/12
+  render parts done: 9/12
+  render parts done: 10/12
+  render parts done: 11/12
+  render parts done: 12/12
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/car-sensor-ki-deewar-pehchaan.mp4 (12 parts, 6.3 min)
+
+== youtube
