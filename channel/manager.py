@@ -407,7 +407,7 @@ def make_video(topic: dict | None = None) -> dict | None:
     ups[-1].update({"status": "pending", "topic": topic["topic"], "job": job["id"]})
     sb = read(ROOT / "app" / "src" / "scenes" / "auto" / "storyboard.json", {})
     photo_real = bool(sb.get("blenderFrames"))
-    if photo_real and schedule().get("holdPhotoReal", True):
+    if (photo_real and schedule().get("holdPhotoReal", True)) or os.environ.get("ECHO_HOLD") == "1":
         # the first photo-real (Blender) videos wait for the owner's OK on the dashboard (preview) before posting
         ups[-1].update({"status": "held", "heldPostAt": next_slot([u.get("postAt") for u in ups if u.get("status") == "approved"])})
         print("photo-real video held for the owner's review (dashboard preview)")

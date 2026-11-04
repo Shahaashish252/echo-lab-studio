@@ -16,6 +16,10 @@ on:
         description: "Only analyse the channel (no video)"
         type: boolean
         default: false
+      hold:
+        description: "Hold the video for my OK on the dashboard (don't schedule it)"
+        type: boolean
+        default: false
 
 concurrency:
   group: publish
@@ -44,6 +48,7 @@ jobs:
       ECHO_RENDER_PARTS: "12"
       # photo-real studio videos: Blender on Kaggle's free GPUs ("1" once tested; app/scripts/kaggle-render.ts)
       ECHO_BLENDER: "1"
+      ECHO_HOLD: ${{ inputs.hold && '1' || '' }}
       KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
       KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_KEY }}
     steps:
