@@ -3637,7 +3637,12 @@ export class Studio {
       if (next !== orig) swaps.push({ mesh, orig, next });
       for (const m of Array.isArray(next) ? next : [next]) nameMat(m);
     }
-    const emissive = [...named.keys()].filter((m) => (m as THREE.MeshStandardMaterial).emissive && ((m as THREE.MeshStandardMaterial).emissiveIntensity > 0 || glowOf.has(m)));
+    // only materials that really glow: three gives every standard material emissiveIntensity 1 with a black colour
+    const glows = (m: THREE.Material) => {
+      const e = (m as THREE.MeshStandardMaterial).emissive;
+      return glowOf.has(m) || (!!e && e.r + e.g + e.b > 0.001);
+    };
+    const emissive = [...named.keys()].filter(glows);
     const lamps = nodes.filter((o) => (o as THREE.PointLight).isPointLight || (o as THREE.SpotLight).isSpotLight) as THREE.Light[];
     const eff = (o: THREE.Object3D) => {
       for (let x: THREE.Object3D | null = o; x; x = x.parent) if (!x.visible) return 0;
