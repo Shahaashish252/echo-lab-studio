@@ -59,3 +59,15 @@ mixed (peak -4.0 dBFS)
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wav (-14 LUFS)
 
 == photo-real render (Blender on Kaggle GPU)
+exported to /home/runner/work/echo-lab-studio/echo-lab-studio/out/blender: scene.glb 9.7 MB, anim.json 0.4 MB in 21 s
+  render job uploaded to Kaggle
+  Blender is rendering on Kaggle (2 x Tesla T4)
+  still rendering (10 min)
+  still rendering (20 min)
+  still rendering (30 min)
+  still rendering (40 min)
+  still rendering (50 min)
+  Kaggle: aashishpratapsah252/echo-lab-render has status "KernelWorkerStatus.COMPLETE" after 53 min; got echo-lab-render.log, blender.mp4, blender_gpu0.log, blender_gpu1.log
+  905 photo-real frames from Blender
+
+== render
