@@ -30,3 +30,6 @@
   | Sources: [Toyota manual](https://www.manualslib.com/manual/2484867/Toyota-Aurion.html?page=183), [Tesla manual](https://www.manualslib.com/manual/1339330/Tesla-Model-3.html?page=50), [320volt MA40A3R circuit](https://320volt.com/en/ma40a3r-hcf4093-ile-ultrasonik-radar-park-sensoru/), [Kia manual](https://ownersmanual.kia.com/full_webhelp/CL4/2026/en_US/topics/t00675.html)
 
 == storyboard: "Parking sensor beeping in cars (open with this hook: "Car Ko Peeche Ki Deewar Ka Kaise Pata Chalta Hai?")" (Claude Code)
+  s1 sim     Yeh dekh nahi sakta, phir bhi rukta hai
+
+== simulation (Claude Code writes it, renders it, reviews it)
