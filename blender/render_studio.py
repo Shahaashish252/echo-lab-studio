@@ -67,6 +67,15 @@ for name, tr in A["nodes"].items():
         o.keyframe_insert("hide_viewport", frame=f)
     keys_constant(o)
 
+# ---- no stray glow: the importer leaves every material's emission at white x 1.0 (Blender 4's default colour),
+# which turned the whole picture into a white haze. Only the parts that really glow (keyed in anim.json) keep it.
+glowing = set(A["mats"])
+for m in bpy.data.materials:
+    if m.use_nodes and m.name not in glowing and not m.name.startswith("glow"):
+        for n in m.node_tree.nodes:
+            if n.type == "BSDF_PRINCIPLED" and not n.inputs["Emission Color"].is_linked:
+                n.inputs["Emission Strength"].default_value = 0.0
+
 # ---- glows: beams, rings and energy are pure light (additive, see-through where dark) ----
 def make_additive(m):
     nt = m.node_tree
