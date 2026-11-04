@@ -177,9 +177,10 @@ def sun(name, direction_three, strength, color, angle):
     scene.collection.objects.link(o)
 
 
-sun("key", (4, 9, 6), 1.1, (1.0, 0.95, 0.9), 6)
-sun("rim", (-6, 4, -7), 0.8, (0.75, 0.85, 1.0), 4)
-sun("fill", (-4, 2, 6), 0.18, (1, 1, 1), 15)
+if not VAR.get("nolights"):
+    sun("key", (4, 9, 6), 1.1, (1.0, 0.95, 0.9), 6)
+    sun("rim", (-6, 4, -7), 0.8, (0.75, 0.85, 1.0), 4)
+    sun("fill", (-4, 2, 6), 0.18, (1, 1, 1), 15)
 
 # ---- Cycles on the GPU ----
 r = scene.render
@@ -231,10 +232,17 @@ if VAR.get("debug"):
             if not m or not m.use_nodes:
                 continue
             for n in m.node_tree.nodes:
-                st = n.inputs.get("Emission Strength") if n.type == "BSDF_PRINCIPLED" else n.inputs.get("Strength") if n.type == "EMISSION" else None
-                tw = n.inputs.get("Transmission Weight") if n.type == "BSDF_PRINCIPLED" else None
-                if (st and st.default_value > 0.2) or (tw and tw.default_value > 0.2) or m.blend_method != "OPAQUE":
-                    print("DBG", o.name, "size", [round(v, 1) for v in o.dimensions], "mat", m.name, "emit", round(st.default_value, 2) if st else None,
-                          "trans", round(tw.default_value, 2) if tw else None, "blend", m.blend_method, flush=True)
+                if n.type != "BSDF_PRINCIPLED":
+                    continue
+                st = n.inputs.get("Emission Strength")
+                tw = n.inputs.get("Transmission Weight")
+                ec = n.inputs.get("Emission Color")
+                lit = ec.is_linked or sum(ec.default_value[:3]) * st.default_value > 0.05
+                if lit or tw.default_value > 0.2:
+                    print("DBG", o.name, "size", [round(v, 1) for v in o.dimensions], "mat", m.name, "emit", round(st.default_value, 2), "color",
+                          [round(c, 2) for c in ec.default_value[:3]], "linked" if ec.is_linked else "", "trans", round(tw.default_value, 2), flush=True)
+    for o in scene.objects:
+        if o.type == "LIGHT":
+            print("DBG light", o.name, o.data.type, "energy", round(o.data.energy, 2), "hidden", o.hide_render, flush=True)
 print(f"rendering frames {first}-{last} on {prefs.compute_device_type}: {[d.name for d in prefs.devices if d.use]}", flush=True)
 bpy.ops.render.render(animation=True)
