@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Parking sensor beeping in cars (open with this hook: \"Car Ko Peeche Ki Deewar Ka Kaise Pata Chalta Hai?\")\" (Claude Code)",
       "at": "2026-11-04T13:22:57"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-11-04T13:23:38"
     }
   ],
   "format": "studio",
