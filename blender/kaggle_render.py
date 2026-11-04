@@ -34,6 +34,7 @@ if job.get("variants"):
         for p in glob.glob(f"{d}/*.png"):
             subprocess.run(["cp", p, f"/kaggle/working/{v['name']}.png"])
         print(v["name"], "ok" if glob.glob(f"{d}/*.png") else r.stdout[-1500:], flush=True)
+        print("\n".join(l for l in r.stdout.splitlines() if l.startswith("DBG"))[:6000], flush=True)
     raise SystemExit(0)
 half = frames // 2
 procs = []

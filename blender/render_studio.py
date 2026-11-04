@@ -219,5 +219,22 @@ try:
     scene.view_settings.look = "AgX - Punchy"
 except TypeError:
     pass
+if VAR.get("debug"):
+    # what the camera sees at the first frame that glows or is see-through
+    scene.frame_set(first)
+    dg = bpy.context.evaluated_depsgraph_get()
+    for o in scene.objects:
+        if o.type != "MESH" or o.hide_render:
+            continue
+        for slot in o.material_slots:
+            m = slot.material
+            if not m or not m.use_nodes:
+                continue
+            for n in m.node_tree.nodes:
+                st = n.inputs.get("Emission Strength") if n.type == "BSDF_PRINCIPLED" else n.inputs.get("Strength") if n.type == "EMISSION" else None
+                tw = n.inputs.get("Transmission Weight") if n.type == "BSDF_PRINCIPLED" else None
+                if (st and st.default_value > 0.2) or (tw and tw.default_value > 0.2) or m.blend_method != "OPAQUE":
+                    print("DBG", o.name, "size", [round(v, 1) for v in o.dimensions], "mat", m.name, "emit", round(st.default_value, 2) if st else None,
+                          "trans", round(tw.default_value, 2) if tw else None, "blend", m.blend_method, flush=True)
 print(f"rendering frames {first}-{last} on {prefs.compute_device_type}: {[d.name for d in prefs.devices if d.use]}", flush=True)
 bpy.ops.render.render(animation=True)
