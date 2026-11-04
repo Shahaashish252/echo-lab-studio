@@ -1,2 +1,28 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. A tiny heater coil warms a ceramic tube to roughly 200–300 °C (the exact temperature isn't in the sources I found).
+  | 2. The tube is coated with tin dioxide (SnO₂). In clean air it conducts poorly.
+  | 3. LPG molecules react on the hot surface. Conductivity rises with gas concentration.
+  | 4. A load resistor in series turns that resistance drop into a voltage.
+  | 5. A comparator (LM393) or microcontroller checks the voltage against a threshold.
+  | 6. Over the threshold, the buzzer, LED or exhaust fan switches on.
+  | 
+  | **REAL PARTS**
+  | - MQ-6 (LPG) and MQ-2 (general combustible gas), both SnO₂.
+  | - LM393 comparator on the usual breakout board.
+  | - Load resistor RL of about 20 kΩ (10–47 kΩ is the vendor range).
+  | - Gas-detector brand names (e.g. Honeywell) also exist.
+  | 
+  | **MYTH**
+  | Many people think the sensor smells the gas, or that the gas's own smell is what it detects. In fact, the smell comes from an added odorant, ethyl mercaptan. The sensor detects the gas itself, by the change in the tin dioxide's resistance. LPG is also heavier than air, so it pools low. Mount the detector about 30 cm off the floor. (Natural gas/CNG is lighter, so it goes high.)
+  | 
+  | **SURPRISING FACT**
+  | The MQ-6 senses about 300–10,000 ppm of LPG. Alarms usually trigger at 10–20% of the lower explosive limit, which is well before the gas can explode. One listing gives LPG's LEL as about 20,000 ppm. Setpoints differ by product, so this isn't a standard.
+  | 
+  | **TIP**
+  | Install the detector low and away from the stove flame and steam. Humidity and temperature shift the readings. If it's a DIY MQ module, let it preheat before trusting it. The preheat time varies by source (one listing claims over 48 hours, which I couldn't verify).
+  | 
+  | Sources: [Linksprite MQ-6](https://wiki.linksprite.com/index.php/MQ-6_Semiconductor_Sensor_for_LPG), [Supergas](https://www.supergas.com/lpg-for-Home/lpg-leak-detector)
+
+== storyboard: "Gas leak sensor in kitchens (open with this hook: "Gas leak ki smell aapse pehle machine ko kaise aati hai?")" (Claude Code)
