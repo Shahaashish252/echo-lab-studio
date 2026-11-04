@@ -84,3 +84,12 @@ exported to /home/runner/work/echo-lab-studio/echo-lab-studio/out/blender: scene
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/car-sensor-ki-deewar-pehchaan.mp4 (12 parts, 6.3 min)
 
 == youtube
+  Car Sensor Deewar Dekhta Nahi, Sunta Hai 🔊 #shorts
+  metadata: channel/videos/auto-car-sensor-ki-deewar-pehchaan.json
+
+  uploading  66.6%
+uploaded https://youtu.be/-XOCO-xDL_4  (private)
+created playlist Arduino Sensors: Shorts
+! not added to the playlist (<HttpError 409 when requesting https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned "T)
+
+DONE in 45.6 min -> /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/car-sensor-ki-deewar-pehchaan.mp4

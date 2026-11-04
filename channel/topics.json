@@ -1,24 +1,14 @@
 {
   "queue": [
     {
-      "topic": "Self-balancing robot and why it needs a gyro plus PID",
-      "hook": "Ye robot girna chahta hai, par phir bhi khada rehta hai"
+      "topic": "Touch sensor lamp using a single transistor",
+      "hook": "Ye lamp chhoone se jalta hai, par button hai hi nahi",
+      "module": ""
     },
     {
-      "topic": "Obstacle avoiding robot using ultrasonic sensor on servo",
-      "hook": "Is robot ki aankhen nahi hain, phir bhi ye takrata nahi"
-    },
-    {
-      "topic": "Light-following robot using two LDR sensors",
-      "hook": "Ye robot roshni ke peeche kyun bhaagta hai?"
-    },
-    {
-      "topic": "Sound-activated LED using a simple mic module",
-      "hook": "Is LED ko aapki awaaz sunai deti hai, camera nahi"
-    },
-    {
-      "topic": "Why a motor driver is needed: Arduino can't power motors directly",
-      "hook": "Arduino se motor jodoge toh Arduino jal sakta hai!"
+      "topic": "Buzzer and potentiometer volume control",
+      "hook": "Sirf ek ghumne wala knob aur awaaz badal jaati hai",
+      "module": ""
     },
     {
       "topic": "Temperature sensor LM35",
@@ -29,11 +19,6 @@
       "topic": "Buzzer and relay clicking",
       "hook": "Relay Ki 'Click' Awaaz Ka Asli Matlab Kya Hai?",
       "module": ""
-    },
-    {
-      "topic": "Parking sensor beeping in cars",
-      "hook": "Car Ko Peeche Ki Deewar Ka Kaise Pata Chalta Hai?",
-      "module": "ultrasonic"
     },
     {
       "topic": "ATM card reader / magnetic stripe",
@@ -69,11 +54,6 @@
       "topic": "Soil moisture sensor",
       "hook": "This sensor knows when your plant is thirsty.",
       "module": "soil"
-    },
-    {
-      "topic": "Potentiometer",
-      "hook": "The knob that turns position into voltage.",
-      "module": ""
     },
     {
       "topic": "GPS",
@@ -142,6 +122,7 @@
     "Car reverse parking sensor: HC-SR04 ultrasonic se gaadi deewar ki doori kaise napti hai",
     "Automatic stair light: PIR motion sensor aapki body heat se kaise light jalata hai",
     "Sound sensor module: why a whistle triggers it too",
-    "Gas leak sensor in kitchens"
+    "Gas leak sensor in kitchens",
+    "Parking sensor beeping in cars"
   ]
 }

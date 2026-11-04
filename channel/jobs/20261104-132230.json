@@ -4,7 +4,7 @@
   "hook": "Car Ko Peeche Ki Deewar Ka Kaise Pata Chalta Hai?",
   "lang": "hi",
   "started": "2026-11-04T13:22:30",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -44,5 +44,7 @@
     }
   ],
   "format": "studio",
-  "module": "ultrasonic"
+  "module": "ultrasonic",
+  "finished": "2026-11-04T14:08:08",
+  "uploadId": "-XOCO-xDL_4"
 }

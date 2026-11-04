@@ -1,0 +1,34 @@
+{
+  "file": "out/auto/car-sensor-ki-deewar-pehchaan.mp4",
+  "title": "Car Sensor Deewar Dekhta Nahi, Sunta Hai 🔊 #shorts",
+  "description": "Car ka parking sensor deewar ko dekhta nahi, phir bhi bilkul sahi waqt par beep karta hai. Kaise? Awaaz ke echo se!\n🔊 HC-SR04 ke andar piezo disc 40 kHz par kaampta hai\n📡 8 pulse jaate hain aur deewar se echo wapas aata hai\n🧮 Distance = time x 343 / 2, yaani cm = microseconds / 58\n🔌 Arduino wiring ki ek galti jo aapka reading bigaad degi\nAur 3D explainers ke liye subscribe karo.\n#shorts #ultrasonic #hc-sr04 #arduino #parkingsensor #hindi #electronics",
+  "tags": [
+    "parking sensor kaise kaam karta hai",
+    "car parking sensor explained",
+    "hc-sr04 explained",
+    "ultrasonic sensor in hindi",
+    "arduino distance sensor",
+    "how parking sensors work",
+    "ultrasonic sensor arduino project",
+    "car sensor deewar kaise pehchanta hai",
+    "40 khz ultrasound",
+    "piezo transducer",
+    "arduino robot obstacle avoid",
+    "hc-sr04 wiring",
+    "echo trig pin kya hai",
+    "reverse parking sensor beep",
+    "arduino projects in hindi"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Arduino Sensors: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Yeh dekh nahi sakta, phir bhi rukta hai 🔊\nCar ka parking sensor deewar ko kaise pehchanta hai? Jawab hai awaaz ka echo, aur aap isse apna robot bhi bana sakte ho 👇\n🔊 HC-SR04 40 kHz ki awaaz bhejta hai, jo hamen sunai nahi deti\n⏱️ Echo ka time naap kar distance nikalta hai: cm = microseconds / 58\n🧽 Soft kapda aur tirchi surface echo ko kamzor kar dete hain\n🔌 VCC 5V par lagao, 3.3V par reading galat aayegi\n💾 Save karo, jab Arduino par sensor lagao\n📤 Us dost ko bhejo jo robot banana chahta hai\n💬 Aapne sabse pehle kaunsa Arduino sensor use kiya? Comment karo\n#arduino #electronics #ultrasonic #hcsr04 #parkingsensor",
+    "tiktok": "Yeh dekh nahi sakta, phir bhi rukta hai 🔊 Jaano HC-SR04 awaaz ke echo se distance kaise naapta hai. Aap apne robot mein kya banaoge? Comment karo! #learnontiktok #arduino #ultrasonic #hcsr04 #electronics"
+  }
+}

@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-04T13:19",
+  "updated": "2026-11-04T13:22",
   "videos": 22,
-  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly get under 50 views, so YouTube is barely working yet. The best videos are about robots and surprising 'it does the opposite of what you expect' sensors (gyro robot, clap switch, mic vs speaker), and they get the most likes and saves. Videos about everyday public places (lift door, mall door, taps, street light) and repeated topics (IR, smoke, taps twice) do poorly.",
-  "winningPattern": "Hindi videos on a robot or a hands-on maker sensor, with a surprising, counter-intuitive hook ('X has no brain / can't hear / does the opposite'), a short punchy title with one emoji and #shorts, posted on Instagram Reels first. Newest posts (Oct 29 to Nov 2) are winning, so the maker/robot angle is trending up. 'Robot Deewar Se Kaise Bachta Hai' also led in shares (10), so robot problem-solving gets sent to friends.",
+  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly gets under 100 views. The best videos are about robots and 'surprising' sensor facts (gyro robot, clap switch, PIR sensor) with a bold hook that says the device lacks something obvious. Everyday-object videos (lifts, taps, smoke alarms, doors, touchscreens) and 'Kaise...?' explainers are weak, and the one English video got no Instagram reach.",
+  "winningPattern": "Maker/robot or hobby-sensor subject (gyro, clap switch, PIR, line follower, mic) + a contrarian 'it can't X, it only Y' or 'without Z it falls' hook in casual Hinglish + short punchy title with one emoji, posted mainly for Instagram Reels where saves and shares come from relatable maker projects. Titles that say 'Nahi' or give a surprising claim beat plain 'Kaise Kaam Karta Hai?' questions.",
   "doMore": [
-    "Make robot and Arduino-project videos (gyro, line follower, obstacle avoidance) your main series",
-    "Open with a 'wrong belief' hook: 'X can't see/hear/think, yet it...'",
-    "Show a real build or demo in the first 2 seconds, then explain the part inside",
-    "Add a save-worthy ending, like a pin list or wiring tip, since saves drive the best videos",
-    "Test one YouTube-specific change: a bigger on-screen hook and a title without the question-mark style, and compare with Instagram"
+    "Make robot and Arduino-module videos with a visible, demo-able result (falls, follows, reacts)",
+    "Open with a contrarian claim: 'X ko Y nahi pata, sirf Z pata hai'",
+    "Prioritise Instagram: post there first and add a save-worthy line like 'Save kar lo project ke liye'",
+    "Post more of the proven winners: clap switch, gyro, mic, line follower variations",
+    "Test one YouTube-specific change (stronger first-second visual, shorter title) since YT is stuck under 100 views"
   ],
   "stopDoing": [
-    "Stop making near-duplicate videos (two IR sensor, two smoke, three tap/door videos in a row)",
-    "Stop 'How does [public place thing] work?' titles for lifts, malls and street lights",
-    "Stop mixing in English videos without a plan: the one English upload has no Instagram reach"
+    "Generic 'Kaise Kaam Karta Hai? 🤔' titles on everyday objects like taps, doors, lifts",
+    "Publishing near-duplicate topics (two smoke detector, two IR sensor, two tap videos) in the same week",
+    "Mixing in English narration videos until Hindi is fully tested"
   ],
   "nextTopics": [
-    "Self-balancing robot and why it needs a gyro plus PID",
-    "Obstacle avoiding robot using ultrasonic sensor on servo",
-    "Light-following robot using two LDR sensors",
-    "Sound-activated LED using a simple mic module",
-    "Why a motor driver is needed: Arduino can't power motors directly"
+    "Self-balancing robot and the MPU6050",
+    "Touch sensor lamp using a single transistor",
+    "LDR night lamp that thinks for itself",
+    "Obstacle avoiding robot using ultrasonic sensor",
+    "Buzzer and potentiometer volume control"
   ],
   "bestTimes": {
     "times": [
