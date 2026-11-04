@@ -20,6 +20,8 @@ first = int(argv[3]) if len(argv) > 3 else 0
 last = int(argv[4]) if len(argv) > 4 else A["frames"] - 1
 samples = int(argv[5]) if len(argv) > 5 else 64
 step = int(argv[6]) if len(argv) > 6 else 1  # >1: a quick preview of every n-th frame
+# look experiments (kaggle_render.py "variants"): environment strength, view transform, clear-coat on/off
+VAR = json.loads(os.environ.get("VARIANT") or "{}")
 
 bpy.ops.wm.read_factory_settings(use_empty=True)
 bpy.ops.import_scene.gltf(filepath=glb)
@@ -149,9 +151,9 @@ nt = world.node_tree
 nt.nodes.clear()
 hdri_dir = bpy.utils.system_resource("DATAFILES", path="studiolights/world")
 env = nt.nodes.new("ShaderNodeTexEnvironment")
-env.image = bpy.data.images.load(os.path.join(hdri_dir, "interior.exr"))
+env.image = bpy.data.images.load(os.path.join(hdri_dir, VAR.get("hdri_file", "interior.exr")))
 bg_light = nt.nodes.new("ShaderNodeBackground")
-bg_light.inputs["Strength"].default_value = 0.22
+bg_light.inputs["Strength"].default_value = VAR.get("hdri", 0.22)
 nt.links.new(env.outputs["Color"], bg_light.inputs["Color"])
 bg_cam = nt.nodes.new("ShaderNodeBackground")
 bg_cam.inputs["Color"].default_value = (0.012, 0.013, 0.018, 1)
@@ -207,7 +209,12 @@ for d in prefs.devices:
     d.use = d.type != "CPU"
 # Kaggle's driver can't create the OptiX denoiser ("Failed to create OptiX denoiser"); Intel OIDN works everywhere
 cy.denoiser = "OPENIMAGEDENOISE"
-scene.view_settings.view_transform = "AgX"
+scene.view_settings.view_transform = VAR.get("view", "AgX")
+if VAR.get("nocoat"):
+    for m in bpy.data.materials:
+        b = m.node_tree and next((n for n in m.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None)
+        if b and b.inputs.get("Coat Weight"):
+            b.inputs["Coat Weight"].default_value = 0.0
 try:
     scene.view_settings.look = "AgX - Punchy"
 except TypeError:

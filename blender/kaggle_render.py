@@ -22,6 +22,19 @@ samples = int(job.get("samples", 64))
 step = int(job.get("step", 1))  # >1: a preview of every n-th frame (stills, no video)
 out = "/kaggle/temp/frames"
 os.makedirs(out, exist_ok=True)
+if job.get("variants"):
+    # look experiments: one frame, several settings, one after another on GPU 0
+    f = int(job.get("frame", frames // 2))
+    for v in job["variants"]:
+        d = f"/kaggle/temp/var_{v['name']}"
+        os.makedirs(d, exist_ok=True)
+        env = dict(os.environ, CUDA_VISIBLE_DEVICES="0", VARIANT=json.dumps(v))
+        r = subprocess.run([f"{BL}/blender", "-b", "-P", f"{inp}/render_studio.py", "--", f"{inp}/scene.glb", f"{inp}/anim.json", d, str(f), str(f), str(samples)],
+                           env=env, capture_output=True, text=True)
+        for p in glob.glob(f"{d}/*.png"):
+            subprocess.run(["cp", p, f"/kaggle/working/{v['name']}.png"])
+        print(v["name"], "ok" if glob.glob(f"{d}/*.png") else r.stdout[-1500:], flush=True)
+    raise SystemExit(0)
 half = frames // 2
 procs = []
 for gpu, (a, b) in enumerate([(0, half - 1), (half, frames - 1)]):
