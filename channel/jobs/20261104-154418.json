@@ -1,0 +1,16 @@
+{
+  "id": "20261104-154418",
+  "topic": "Escalator that starts when you step near",
+  "hook": "Escalator Ko Pata Hai Aap Aa Rahe Ho!",
+  "lang": "hi",
+  "started": "2026-11-04T15:44:18",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-11-04T15:44:18"
+    }
+  ],
+  "format": "studio",
+  "module": "ir"
+}
