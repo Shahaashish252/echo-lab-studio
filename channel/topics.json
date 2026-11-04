@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Self-balancing robot and why it needs a gyro plus PID",
+      "hook": "Ye robot girna chahta hai, par phir bhi khada rehta hai"
+    },
+    {
+      "topic": "Obstacle avoiding robot using ultrasonic sensor on servo",
+      "hook": "Is robot ki aankhen nahi hain, phir bhi ye takrata nahi"
+    },
+    {
+      "topic": "Light-following robot using two LDR sensors",
+      "hook": "Ye robot roshni ke peeche kyun bhaagta hai?"
+    },
+    {
+      "topic": "Sound-activated LED using a simple mic module",
+      "hook": "Is LED ko aapki awaaz sunai deti hai, camera nahi"
+    },
+    {
+      "topic": "Why a motor driver is needed: Arduino can't power motors directly",
+      "hook": "Arduino se motor jodoge toh Arduino jal sakta hai!"
+    },
+    {
       "topic": "Temperature sensor LM35",
       "hook": "Ye Chhota Part Garmi Ko Number Mein Badal Deta Hai",
       "module": ""

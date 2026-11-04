@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-04T11:06",
+  "updated": "2026-11-04T13:19",
   "videos": 22,
-  "summary": "Instagram is carrying the channel: almost every video gets 1,000+ views there, while YouTube Shorts mostly gets under 50 views. The best videos make a robot or a small gadget seem alive with a surprising 'it can't do X, yet it does' idea, and they were posted in the last week. Longer 'how does X work?' questions about public places (lift, mall door, tap, smoke alarm) get far fewer views and almost no saves or shares.",
-  "winningPattern": "Hindi Instagram Reels about a hands-on maker subject (robot, clap switch, mic, PIR, line follower) with a surprising reversal hook such as 'X can't do Y, only Z' or 'without X the robot falls'. Titles are short, name one object, have a twist and end with an emoji and #shorts. Robot and maker-project videos get the saves and shares; generic everyday-tech 'Kaise Kaam Karta Hai?' questions do not.",
+  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly get under 50 views, so YouTube is barely working yet. The best videos are about robots and surprising 'it does the opposite of what you expect' sensors (gyro robot, clap switch, mic vs speaker), and they get the most likes and saves. Videos about everyday public places (lift door, mall door, taps, street light) and repeated topics (IR, smoke, taps twice) do poorly.",
+  "winningPattern": "Hindi videos on a robot or a hands-on maker sensor, with a surprising, counter-intuitive hook ('X has no brain / can't hear / does the opposite'), a short punchy title with one emoji and #shorts, posted on Instagram Reels first. Newest posts (Oct 29 to Nov 2) are winning, so the maker/robot angle is trending up. 'Robot Deewar Se Kaise Bachta Hai' also led in shares (10), so robot problem-solving gets sent to friends.",
   "doMore": [
-    "Make robot and Arduino-project videos with a 'robot can't do X' twist, since they bring the most views, saves and shares",
-    "Use the reversal title format: 'X Nahi, Sirf Y' or 'X Ke Bina Ye Turant Gir Jaata'",
-    "Post on Instagram first and treat it as the main platform, then reuse the best ones on YouTube",
-    "Show one cause and effect result in the first 2 seconds, such as a robot falling or a light clicking on with a clap",
-    "Keep Hindi narration and posting daily, since the Hindi videos all perform better than the English one on Instagram"
+    "Make robot and Arduino-project videos (gyro, line follower, obstacle avoidance) your main series",
+    "Open with a 'wrong belief' hook: 'X can't see/hear/think, yet it...'",
+    "Show a real build or demo in the first 2 seconds, then explain the part inside",
+    "Add a save-worthy ending, like a pin list or wiring tip, since saves drive the best videos",
+    "Test one YouTube-specific change: a bigger on-screen hook and a title without the question-mark style, and compare with Instagram"
   ],
   "stopDoing": [
-    "Generic 'Kaise Kaam Karta Hai?' videos about mall doors, lifts, taps and smoke alarms",
-    "Making several near-duplicate videos on the same sensor (two smoke, two tap, two IR)",
-    "Posting the same title and thumbnail style on YouTube and expecting views without changing the hook"
+    "Stop making near-duplicate videos (two IR sensor, two smoke, three tap/door videos in a row)",
+    "Stop 'How does [public place thing] work?' titles for lifts, malls and street lights",
+    "Stop mixing in English videos without a plan: the one English upload has no Instagram reach"
   ],
   "nextTopics": [
-    "Self-balancing robot",
-    "Obstacle avoiding robot with ultrasonic sensor",
-    "Light-following robot with LDR",
-    "Touch sensor lamp with Arduino",
-    "Servo motor that remembers its position"
+    "Self-balancing robot and why it needs a gyro plus PID",
+    "Obstacle avoiding robot using ultrasonic sensor on servo",
+    "Light-following robot using two LDR sensors",
+    "Sound-activated LED using a simple mic module",
+    "Why a motor driver is needed: Arduino can't power motors directly"
   ],
   "bestTimes": {
     "times": [
