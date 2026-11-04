@@ -27,3 +27,6 @@
   | - [Meadow FC-28 driver page](https://developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Fc28)
 
 == storyboard: "Soil moisture sensor (open with this hook: "This sensor knows when your plant is thirsty.")" (Claude Code)
+  s1 sim     Andha sensor, phir bhi *PYAAS* jaane
+
+== simulation (Claude Code writes it, renders it, reviews it)
