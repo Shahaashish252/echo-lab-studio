@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Gas leak sensor in kitchens (open with this hook: \"Gas leak ki smell aapse pehle machine ko kaise aati hai?\")\" (Claude Code)",
       "at": "2026-11-04T11:06:53"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-11-04T11:07:36"
     }
   ],
   "format": "studio",
