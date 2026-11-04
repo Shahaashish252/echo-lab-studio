@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Escalator that starts when you step near (open with this hook: \"Escalator Ko Pata Hai Aap Aa Rahe Ho!\")\" (Claude Code)",
       "at": "2026-11-04T15:44:36"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-11-04T15:45:14"
     }
   ],
   "format": "studio",
