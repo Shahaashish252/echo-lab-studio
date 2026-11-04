@@ -36,3 +36,20 @@
   studio plan: 10 shots of the ultrasonic module
 
 == voice (Microsoft Edge: Madhur)
+Downloading onnxruntime (22.7MiB)
+ Downloaded onnxruntime
+Installed 27 packages in 44ms
+[0;93m2026-11-04 13:24:07.840907024 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        2.72s  कार को पीछे की दीवार का कैसे पता चलता है?
+s1-2        3.40s  सेंसर में दो गोल हिस्से: एक भेजता, एक सुनता।
+s1-3        3.01s  अंदर पीज़ो डिस्क चालीस किलोहर्ट्ज़ पर काँपती है।
+s1-4        3.00s  आठ पल्स जाते हैं, दीवार से गूँज लौटती है।
+s1-5        3.26s  दूरी बराबर समय गुणा तीन सौ तैंतालीस, भाग दो।
+s1-6        3.57s  मुलायम कपड़ा और तिरछी सतह, गूँज कमज़ोर कर देते हैं।
+s1-7        3.46s  ट्रिग पर दस माइक्रोसेकंड पल्स, इको पिन ऊँचा रहता है।
+s1-8        3.60s  टिप: वीसीसी पाँच वोल्ट पर, तीन वोल्ट पर गलत पढ़ेगा।
+s1-9        2.79s  बताओ, कार को पीछे की दीवार कैसे दिखती है?
+s1-10       0.73s  फॉलो करो!
+wrote 10 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit
