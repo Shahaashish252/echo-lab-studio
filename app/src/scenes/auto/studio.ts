@@ -3058,8 +3058,9 @@ class Looks {
   private edges = new Map<THREE.Mesh, THREE.LineSegments>();
   private orig = new Map<THREE.Mesh, THREE.Material | THREE.Material[]>();
   private flat = new Map<THREE.Material, THREE.Material>();
-  private paper = new THREE.MeshBasicMaterial({ color: lin(0xfbf9f3) });
-  private ink = new THREE.LineBasicMaterial({ color: 0x000000 });
+  // blueprint: a classic blue drawing sheet with pale cyan lines (white paper looked empty on the phone)
+  private paper = new THREE.MeshBasicMaterial({ color: lin(0x1b4f93) });
+  private ink = new THREE.LineBasicMaterial({ color: lin(0xe6f6ff) });
   private neon = new THREE.LineBasicMaterial({ color: lin(0x7fdcff), transparent: true, opacity: 0.85 });
   current: 'real' | 'blueprint' | 'icon' = 'real';
   constructor(private readonly root: THREE.Object3D) {}
@@ -3079,6 +3080,13 @@ class Looks {
       const c = ((mat as THREE.MeshStandardMaterial).color ?? new THREE.Color(0.5, 0.5, 0.5)).clone();
       const hsl = { h: 0, s: 0, l: 0 };
       c.getHSL(hsl);
+      if (hsl.s < 0.18) {
+        // white, grey and black parts would come out as plain white clay: give each one a bright colour instead
+        const hues = [0.53, 0.08, 0.6, 0.13, 0.95, 0.42];
+        hsl.h = hues[this.flat.size % hues.length];
+        hsl.s = 0.75;
+        hsl.l = 0.3 + hsl.l * 0.25;
+      }
       f = new THREE.MeshLambertMaterial({ color: new THREE.Color().setHSL(hsl.h, Math.min(1, hsl.s * 0.8 + 0.1), 0.25 + hsl.l * 0.5), emissive: new THREE.Color().setHSL(0.6, 0.6, 0.04) });
       this.flat.set(mat, f);
     }
@@ -3121,7 +3129,7 @@ export class Studio {
   private look: 'real' | 'blueprint' | 'icon' = 'real';
   private lastRig = { target: V(), az: 0, el: 0, dist: 10, fov: 26 };
   private center = V(-0.4, 0.3, 0);
-  private theme = { a: [0, 0, 0], b: [0, 0, 0] };
+  private theme: { a: number[]; b: number[]; rim?: number; hot?: string } = { a: [0, 0, 0], b: [0, 0, 0] };
   private more!: MoreProps;
   private cell?: Cell;
   private lattice!: Lattice;
@@ -3656,6 +3664,8 @@ export class Studio {
       camera: [] as number[][],
       looks: [] as number[],
       lines: lines.map((l) => [l.start, l.end]),
+      rim: new THREE.Color(this.theme.rim ?? 0x9cc4ff).toArray(),
+      hot: new THREE.Color(this.theme.hot ?? '#ff6a2b').toArray(),
     };
     const lastTrs = new Map<THREE.Object3D, number[]>();
     const lastVis = new Map<THREE.Object3D, number>();
@@ -3727,7 +3737,7 @@ export class Studio {
     r.clear(true, true, true);
     r.render(this.three, this.camera);
     const u = this.dof.uniforms;
-    const bgs = { real: [this.theme.a, this.theme.b], blueprint: [[0.86, 0.84, 0.79], [0.74, 0.72, 0.67]], icon: [[0.025, 0.035, 0.07], [0.008, 0.012, 0.03]] }[this.look];
+    const bgs = { real: [this.theme.a, this.theme.b], blueprint: [[0.018, 0.07, 0.2], [0.004, 0.022, 0.075]], icon: [[0.025, 0.035, 0.07], [0.008, 0.012, 0.03]] }[this.look];
     (u.bgA.value as THREE.Vector3).set(bgs[0][0], bgs[0][1], bgs[0][2]);
     (u.bgB.value as THREE.Vector3).set(bgs[1][0], bgs[1][1], bgs[1][2]);
     u.focus.value = this.focusDist;
@@ -3746,7 +3756,7 @@ export class Studio {
     const next = lines[idx + 1];
     const p = clamp((t - L.start) / Math.max(0.6, (next ? next.start : L.end + 0.6) - L.start));
     const sh = this.shotAt(idx);
-    oneWord(ctx, t, L, this.look === 'blueprint');
+    oneWord(ctx, t, L);
     if (sh.shot === 'code') codePanel(ctx, sh.code?.length ? sh.code : DEFAULT_CODE[this.kind] ?? DEFAULT_CODE.ir, p);
     // lay the labels out per side, top to bottom, at least 84 px apart so they never overlap
     const placed = this.callouts.map((c) => {
@@ -3758,7 +3768,7 @@ export class Studio {
       let prev = 420 - 84;
       for (const c of col) prev = c.ly = Math.max(clamp(c.y - 170, 420, H - 420), prev + 84);
     }
-    for (const c of placed.slice(0, 2)) this.callout(ctx, c.x, c.y, c.ly, c.text, c.side, p, this.look === 'blueprint');
+    for (const c of placed.slice(0, 2)) this.callout(ctx, c.x, c.y, c.ly, c.text, c.side, p);
   }
 
   private callout(ctx: Ctx, x: number, y: number, ly: number, text: string, side: number, p: number, ink = false) {

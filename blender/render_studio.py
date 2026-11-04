@@ -6,6 +6,7 @@
 # anim.json comes from the three.js stage (Y up, units = cm treated as metres); the glTF importer turns Y-up into
 # Blender's Z-up, and this script applies the same conversion to every keyed transform.
 import json
+import colorsys
 import math
 import os
 import sys
@@ -188,7 +189,12 @@ def sun(name, direction_three, strength, color, angle):
 
 if not VAR.get("nolights"):
     sun("key", (4, 9, 6), 1.1, (1.0, 0.95, 0.9), 6)
-    sun("rim", (-6, 4, -7), 0.8, (0.75, 0.85, 1.0), 4)
+    # coloured rims in the video's theme colours, so white parts (domes, caps, mesh) pick up colour at their edges
+    def vivid(c, sat=0.85):
+        h, _, v = colorsys.rgb_to_hsv(*c)
+        return colorsys.hsv_to_rgb(h, sat, 1.0)
+    sun("rim", (-6, 4, -7), 1.3, vivid(A.get("rim", (0.6, 0.77, 1.0))), 4)
+    sun("kick", (7, 2, -5), 0.6, vivid(A.get("hot", (1.0, 0.42, 0.17))), 6)
     sun("fill", (-4, 2, 6), 0.18, (1, 1, 1), 15)
 
 # ---- Cycles on the GPU ----
