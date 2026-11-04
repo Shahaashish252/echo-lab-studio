@@ -1,0 +1,16 @@
+{
+  "id": "20261104-132230",
+  "topic": "Parking sensor beeping in cars",
+  "hook": "Car Ko Peeche Ki Deewar Ka Kaise Pata Chalta Hai?",
+  "lang": "hi",
+  "started": "2026-11-04T13:22:30",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-11-04T13:22:30"
+    }
+  ],
+  "format": "studio",
+  "module": "ultrasonic"
+}
