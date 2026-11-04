@@ -3610,7 +3610,7 @@ export class Studio {
     const glowOf = new Map<THREE.Material, () => number>();
     const named = new Map<THREE.Material, string>();
     const nameMat = (m: THREE.Material) => {
-      if (!named.has(m)) named.set(m, (m.name = `m${named.size}`));
+      if (!named.has(m)) named.set(m, (m.name = `${glowOf.has(m) ? 'glow' : 'm'}${named.size}`));
       return named.get(m)!;
     };
     for (const o of nodes) {

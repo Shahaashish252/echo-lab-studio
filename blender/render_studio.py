@@ -65,15 +65,37 @@ for name, tr in A["nodes"].items():
         o.keyframe_insert("hide_viewport", frame=f)
     keys_constant(o)
 
+# ---- glows: beams, rings and energy are pure light (additive, see-through where dark) ----
+def make_additive(m):
+    nt = m.node_tree
+    bsdf = next((n for n in nt.nodes if n.type == "BSDF_PRINCIPLED"), None)
+    color = tuple(bsdf.inputs["Emission Color"].default_value) if bsdf else (1, 1, 1, 1)
+    out = next(n for n in nt.nodes if n.type == "OUTPUT_MATERIAL")
+    em = nt.nodes.new("ShaderNodeEmission")
+    em.inputs["Color"].default_value = color
+    tr = nt.nodes.new("ShaderNodeBsdfTransparent")
+    add = nt.nodes.new("ShaderNodeAddShader")
+    nt.links.new(em.outputs[0], add.inputs[0])
+    nt.links.new(tr.outputs[0], add.inputs[1])
+    nt.links.new(add.outputs[0], out.inputs["Surface"])
+    m.blend_method = "BLEND"
+    return em.inputs["Strength"]
+
+
+glow_strength = {}
+for m in bpy.data.materials:
+    if m.name.startswith("glow") and m.use_nodes:
+        glow_strength[m.name] = make_additive(m)
+
 # ---- glow strengths ----
 for name, ks in A["mats"].items():
     m = bpy.data.materials.get(name)
     if not m or not m.use_nodes:
         continue
     bsdf = next((n for n in m.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None)
-    if not bsdf:
+    sock = glow_strength.get(name) or (bsdf.inputs.get("Emission Strength") if bsdf else None)
+    if sock is None:
         continue
-    sock = bsdf.inputs.get("Emission Strength")
     for f, v in ks:
         sock.default_value = v
         sock.keyframe_insert("default_value", frame=f)
@@ -129,7 +151,7 @@ hdri_dir = bpy.utils.system_resource("DATAFILES", path="studiolights/world")
 env = nt.nodes.new("ShaderNodeTexEnvironment")
 env.image = bpy.data.images.load(os.path.join(hdri_dir, "interior.exr"))
 bg_light = nt.nodes.new("ShaderNodeBackground")
-bg_light.inputs["Strength"].default_value = 0.45
+bg_light.inputs["Strength"].default_value = 0.22
 nt.links.new(env.outputs["Color"], bg_light.inputs["Color"])
 bg_cam = nt.nodes.new("ShaderNodeBackground")
 bg_cam.inputs["Color"].default_value = (0.012, 0.013, 0.018, 1)
@@ -153,9 +175,9 @@ def sun(name, direction_three, strength, color, angle):
     scene.collection.objects.link(o)
 
 
-sun("key", (4, 9, 6), 3.2, (1.0, 0.95, 0.9), 6)
-sun("rim", (-6, 4, -7), 1.8, (0.75, 0.85, 1.0), 4)
-sun("fill", (-4, 2, 6), 0.5, (1, 1, 1), 15)
+sun("key", (4, 9, 6), 1.1, (1.0, 0.95, 0.9), 6)
+sun("rim", (-6, 4, -7), 0.8, (0.75, 0.85, 1.0), 4)
+sun("fill", (-4, 2, 6), 0.18, (1, 1, 1), 15)
 
 # ---- Cycles on the GPU ----
 r = scene.render
@@ -187,7 +209,7 @@ for d in prefs.devices:
 cy.denoiser = "OPENIMAGEDENOISE"
 scene.view_settings.view_transform = "AgX"
 try:
-    scene.view_settings.look = "AgX - Medium High Contrast"
+    scene.view_settings.look = "AgX - Punchy"
 except TypeError:
     pass
 print(f"rendering frames {first}-{last} on {prefs.compute_device_type}: {[d.name for d in prefs.devices if d.use]}", flush=True)
