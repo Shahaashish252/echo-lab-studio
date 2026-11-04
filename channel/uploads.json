@@ -524,5 +524,14 @@
     "topic": "Parking sensor beeping in cars",
     "job": "20261104-132230",
     "heldPostAt": "2026-11-06T14:00"
+  },
+  {
+    "id": "W-y8kYyD_H0",
+    "meta": "channel/videos/auto-escalator-ko-pata-hai.json",
+    "date": "2026-11-04",
+    "status": "held",
+    "topic": "Escalator that starts when you step near",
+    "job": "20261104-154418",
+    "heldPostAt": "2026-11-06T14:00"
   }
 ]

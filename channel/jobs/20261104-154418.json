@@ -4,7 +4,7 @@
   "hook": "Escalator Ko Pata Hai Aap Aa Rahe Ho!",
   "lang": "hi",
   "started": "2026-11-04T15:44:18",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -44,5 +44,7 @@
     }
   ],
   "format": "studio",
-  "module": "ir"
+  "module": "ir",
+  "finished": "2026-11-04T16:43:40",
+  "uploadId": "W-y8kYyD_H0"
 }

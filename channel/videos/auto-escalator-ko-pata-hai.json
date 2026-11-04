@@ -1,0 +1,33 @@
+{
+  "file": "out/auto/escalator-ko-pata-hai.mp4",
+  "title": "Escalator Ko Pehle Se Pata Hai Aap Aa Rahe Ho #shorts",
+  "description": "Escalator ko pata hai aap aa rahe ho, par kaise? Ek 20 rupaye ka IR sensor yahi kaam karta hai.\n🤖 FC-51 IR sensor ka 3D explode view\n💡 940 nm IR LED aur photodiode ka kaam\n🧠 LM393 comparator aur blue pot ki range\n🔌 Arduino wiring: VCC 5V, OUT D2\nAise aur videos ke liye subscribe karo.\n#shorts #arduino #irsensor #fc51 #hindi #robotics",
+  "tags": [
+    "fc-51 ir sensor",
+    "ir obstacle sensor arduino",
+    "escalator sensor kaise kaam karta hai",
+    "ir sensor in hindi",
+    "arduino project in hindi",
+    "obstacle avoiding robot",
+    "lm393 comparator",
+    "ir sensor kaise kaam karta hai",
+    "automatic escalator",
+    "arduino sensor wiring",
+    "infrared sensor explained",
+    "robot car sensor",
+    "electronics in hindi",
+    "photodiode kaise kaam karta hai"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Arduino Sensors: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Escalator ko pata hai aap aa rahe ho! 🪜\nYeh sab ek chhote IR sensor ka kamaal hai, aur aap isse apna robot bana sakte ho 👇\n🔦 940 nm ki invisible IR light\n📡 Photodiode wapas aayi light pakadta hai\n🔧 Blue pot se range 2-30 cm\n⚡ VCC 5V, OUT D2\n💾 Save karo, wiring kaam aayegi\n📤 Us dost ko bhejo jo robot banata hai\n💬 Aap isse kya banaoge?\n#arduino #electronics #irsensor #robotics #fc51",
+    "tiktok": "Escalator ko pata hai aap aa rahe ho! 🪜 IR sensor ka poora raaz 3D mein. Aap isse kya banaoge? #learnontiktok #arduino #irsensor #robotics #electronics"
+  }
+}

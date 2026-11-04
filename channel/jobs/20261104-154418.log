@@ -79,3 +79,21 @@ exported to /home/runner/work/echo-lab-studio/echo-lab-studio/out/blender: scene
   1006 photo-real frames from Blender
 
 == render
+  dispatched 12 render parts (job 1793790386929)
+  render parts done: 0/12
+  render parts done: 4/12
+  render parts done: 7/12
+  render parts done: 9/12
+  render parts done: 10/12
+  render parts done: 12/12
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/escalator-ko-pata-hai.mp4 (12 parts, 5.8 min)
+
+== youtube
+  Escalator Ko Pehle Se Pata Hai Aap Aa Rahe Ho #shorts
+  metadata: channel/videos/auto-escalator-ko-pata-hai.json
+
+  uploading  54.7%
+uploaded https://youtu.be/W-y8kYyD_H0  (private)
+added to playlist Arduino Sensors: Shorts
+
+DONE in 59.2 min -> /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/escalator-ko-pata-hai.mp4

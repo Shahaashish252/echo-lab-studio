@@ -1,6 +1,11 @@
 {
   "queue": [
     {
+      "topic": "Buzzer alarm that triggers on tilt",
+      "hook": "Ise hilao toh bajta hai, bina kisi button ke",
+      "module": ""
+    },
+    {
       "topic": "Touch sensor lamp using a single transistor",
       "hook": "Ye lamp chhoone se jalta hai, par button hai hi nahi",
       "module": ""
@@ -24,11 +29,6 @@
       "topic": "ATM card reader / magnetic stripe",
       "hook": "ATM aapka card chhoota bhi nahi, phir bhi padh leta hai!",
       "module": ""
-    },
-    {
-      "topic": "Escalator that starts when you step near",
-      "hook": "Escalator Ko Pata Hai Aap Aa Rahe Ho!",
-      "module": "ir"
     },
     {
       "topic": "Fan regulator / dimmer working",
@@ -123,6 +123,7 @@
     "Automatic stair light: PIR motion sensor aapki body heat se kaise light jalata hai",
     "Sound sensor module: why a whistle triggers it too",
     "Gas leak sensor in kitchens",
-    "Parking sensor beeping in cars"
+    "Parking sensor beeping in cars",
+    "Escalator that starts when you step near"
   ]
 }
