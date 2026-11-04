@@ -1,2 +1,37 @@
 
 == research: reading about the topic on the web
+  | **HOOK:** "Escalator Ko Pata Hai Aap Aa Rahe Ho!"
+  | 
+  | **HOW IT WORKS**
+  | 1. With nobody around, the escalator idles. It either slows to about 20% of rated speed or stops after a set delay (KEB example: 5–10 min).
+  | 2. A sensor watches the entry zone. It can be a photoelectric beam, a light curtain, a pressure mat or a Doppler radar.
+  | 3. A person breaks the beam or is detected by radar.
+  | 4. The controller signals the VFD (variable frequency drive).
+  | 5. The VFD ramps the motor up to full speed. One source says this takes 0.5–0.8 s from a walking-speed start.
+  | 6. The sensor sits about 1.3 m from the comb plate. That gives the escalator time to reach speed before you step on.
+  | 
+  | **REAL PARTS**
+  | - Doppler radar sensor (Sensor Partners)
+  | - Photoelectric cell or light curtain
+  | - Pressure mat
+  | - VFD (KEB)
+  | - Kone EcoMod
+  | - Otis standby
+  | 
+  | **MYTH**
+  | - Myth: it's off until you arrive.
+  | - Truth: most units keep creeping at low speed. Fully stopping saves more energy but adds start/stop wear.
+  | 
+  | **SURPRISING FACT**
+  | - Kone claims up to 40% saving, or 2,880 kWh/year. That is a vendor best-case figure, and it depends on traffic.
+  | 
+  | **TIP**
+  | - Walk straight toward the entry. Don't step on until the steps are at full speed, and hold the handrail.
+  | 
+  | Sources:
+  | - [Control apparatus for passenger conveyor (US6334522)](https://patents.google.com/patent/US6334522)
+  | - [Sensor Partners, escalator radar](https://sensorpartners.com/en/applications/escalators-radar/)
+  | - [KEB America](https://www.kebamerica.com/?p=1348)
+  | - [Kone EcoMod](https://www.buildings.com/products/elevators-escalators/product/10196664/kone-inc-ecomod-escalator-modernization)
+
+== storyboard: "Escalator that starts when you step near (open with this hook: "Escalator Ko Pata Hai Aap Aa Rahe Ho!")" (Claude Code)
