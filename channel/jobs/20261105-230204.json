@@ -1,0 +1,16 @@
+{
+  "id": "20261105-230204",
+  "topic": "Car auto-dimming rear mirror",
+  "hook": "Why does your car mirror dim by itself at night?",
+  "lang": "hi",
+  "started": "2026-11-05T23:02:04",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-11-05T23:02:04"
+    }
+  ],
+  "format": "studio",
+  "module": "ldr"
+}
