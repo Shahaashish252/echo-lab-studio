@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-04T22:54",
+  "updated": "2026-11-05T15:37",
   "videos": 23,
-  "summary": "Instagram is carrying the channel: most videos get 1,200-1,400 views there, while YouTube Shorts mostly gets under 100 views. The best videos are the ones with a surprising, funny or 'robot fails' angle (gyro robot falling, clap switch, PIR sensor), and they also get the most likes and saves. Plain 'How does X work?' videos on everyday objects (taps, doors, smoke alarms, touchscreen) get far fewer views, and the one English video earned almost nothing on Instagram.",
-  "winningPattern": "Hindi videos about a robot or maker-project sensor (gyro, clap switch, PIR, IR, line follower, mic) with a bold, surprising claim as the hook, like 'X can't do Y, it only does Z' or 'without X the robot falls'. Titles are short Hinglish with one emoji and #shorts, and the video shows a robot or Arduino module in action. Posted on Instagram first, where it gets ~1,200+ views; YouTube only picks up the ones with a strong curiosity hook (gyro, clap switch, PIR).",
+  "summary": "Instagram is doing the real work: almost every Hindi video gets 1,200+ views there, while YouTube Shorts mostly stay under 50 views. The best videos are short, surprising 'X doesn't do what you think' statements about hands-on robots and sensors (gyro robot, clap switch, line follower, mic). Everyday-tech explainers about taps, doors, smoke alarms and lifts, and the English Arduino video, get little attention.",
+  "winningPattern": "Hindi videos about a robot or a hobby-circuit that makers can build (gyro, clap switch, line follower, IR obstacle robot, mic). The hook is a surprising 'it doesn't do what you think' claim, such as 'Without X this robot falls' or 'Clap switch listens to noise, not clapping'. Titles are short Hinglish with a bold claim and a robot or clap emoji, posted on Instagram first. The best ones also drive saves and shares, a sign that people want to keep or send them.",
   "doMore": [
-    "Make robot and Arduino-module videos showing something failing or surprising, such as 'without sensor X the robot does Y'.",
-    "Use 'it doesn't do A, it only does B' contrast hooks like the Clap Switch and Mic titles.",
-    "Keep the 3-5 day cadence of maker-project topics that earned 1,200+ IG views, and repeat what works within 2 days.",
-    "Ask viewers to save the video ('save this for your project') since saves are high on the build-focused videos.",
-    "Test each winning topic on YouTube with a punchier first-second visual, because YouTube is far weaker than IG for the same content."
+    "Make robot and maker-project videos (gyro, line follower, clap switch, obstacle avoidance) with a visible 'before vs after' demo in the first 2 seconds",
+    "Open with a bold, counter-intuitive claim like 'X can't see/hear, yet it...' instead of a question",
+    "Add a save or share prompt like 'Save this for your next project' since saves and shares signal strong interest",
+    "Post to Instagram first and test 2-3 YouTube-specific titles and thumbnails to see why YT lags",
+    "Turn the top hits into series (Part 2: what happens if you remove the sensor?)"
   ],
   "stopDoing": [
-    "Generic everyday-object explainers (mall door, washroom tap, lift, street light) that average under 500 IG views.",
-    "Posting several near-duplicate topics (two smoke detector, two IR sensor, two automatic tap videos) in the same week.",
-    "English-language videos for now, since the audience responds to Hindi."
+    "Question-style titles about public devices (mall door, washroom tap, lift, street light) that got the weakest views",
+    "Publishing near-duplicate topics (two smoke detector videos, two automatic tap videos, two IR sensor videos) within days of each other",
+    "Mixing in English narration until Hindi on YouTube is working"
   ],
   "nextTopics": [
-    "Robot without ultrasonic sensor crashing",
-    "Servo motor without feedback",
-    "Arduino without a resistor burning an LED",
-    "Light sensor LDR robot following a torch",
-    "Bluetooth module controlling a car"
+    "Self-balancing robot with a gyro and motors",
+    "Obstacle-avoiding robot without any camera",
+    "Sound-activated light with a mic module",
+    "Servo motor that knows its own angle",
+    "Light-following robot using LDR sensors"
   ],
   "bestTimes": {
     "times": [

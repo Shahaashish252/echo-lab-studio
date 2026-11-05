@@ -1,0 +1,34 @@
+{
+  "file": "out/auto/flame-robot-without-camera.mp4",
+  "title": "Camera Ke Bina Aag Dhoondhne Wala Robot 🔥 #shorts",
+  "description": "Ek robot bina camera ke candle ki aag dhoondh leta hai. Kaise? Ek chhote flame sensor module se!\n🔥 Flame ke invisible infrared ki physics\n🔬 Sensor ke andar silicon aur electrons ka khel\n⚙️ LM393 comparator aur blue pot ka kaam\n🔌 Arduino Uno se wiring aur code\nAise aur robot aur Arduino videos ke liye subscribe karo.\n#shorts #arduino #flamesensor #robotics #firefightingrobot #hindi #electronics",
+  "tags": [
+    "flame sensor kaise kaam karta hai",
+    "flame sensor arduino",
+    "fire fighting robot",
+    "fire fighting robot arduino",
+    "flame sensor in hindi",
+    "lm393 comparator",
+    "infrared flame sensor",
+    "arduino project in hindi",
+    "robot bina camera aag kaise dhoondhta hai",
+    "flame sensor module wiring",
+    "flame sensor D0 pin",
+    "ir phototransistor",
+    "arduino robot ideas",
+    "how flame sensor works",
+    "fire alarm arduino project"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Arduino Robots: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Robot ke paas camera nahi, phir bhi aag dhoondh leta hai 🔥\nYeh ek chhote flame sensor ka kamaal hai, jo aag ki invisible infrared pakadta hai 👇\n🔥 Aag infrared chhodti hai, jo aankh ko nahi dikhti\n🔬 Sensor ke andar silicon electrons chhodta hai\n⚙️ LM393 comparator output LOW kar deta hai\n🔌 VCC 5V pe, DO D2 pe, aur dhoop se bachao\n💾 Save karo apne next robot build ke liye\n📤 Send karo us dost ko jo Arduino robot banata hai\n💬 Tum is sensor se kya banaoge?\n#arduino #robotics #electronics #flamesensor #firefightingrobot",
+    "tiktok": "Robot bina camera ke aag kaise dhoondhta hai? 🔥 Flame sensor ka poora raaz 3D mein. Aap is se kya banaoge? #learnontiktok #arduino #robotics #flamesensor #electronics"
+  }
+}

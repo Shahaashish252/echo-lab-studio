@@ -1,9 +1,18 @@
 {
-  "updated": "04 Nov 2026, 23:59",
+  "updated": "05 Nov 2026, 16:25",
   "youtube": {
     "subs": 4,
-    "views": 3302,
+    "views": 3400,
     "videos": [
+      {
+        "title": "2 kaante wala sensor paudhe ki pyaas jaanta hai 🌱 #shorts",
+        "id": "QaKoT26kQGU",
+        "status": "private",
+        "published": "2026-11-04",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Escalator Ko Pehle Se Pata Hai Aap Aa Rahe Ho #shorts",
         "id": "W-y8kYyD_H0",
@@ -18,7 +27,7 @@
         "id": "nHR2_Dsl4I0",
         "status": "public",
         "published": "2026-11-04",
-        "views": 20,
+        "views": 28,
         "likes": 1,
         "comments": 2
       },
@@ -54,8 +63,8 @@
         "id": "ujU6WQJ6c_8",
         "status": "public",
         "published": "2026-11-03",
-        "views": 84,
-        "likes": 2,
+        "views": 112,
+        "likes": 3,
         "comments": 0
       },
       {
@@ -72,7 +81,7 @@
         "id": "mKcPrgXveU4",
         "status": "public",
         "published": "2026-11-02",
-        "views": 46,
+        "views": 48,
         "likes": 2,
         "comments": 2
       },
@@ -90,7 +99,7 @@
         "id": "ZzilLf1hScY",
         "status": "public",
         "published": "2026-11-01",
-        "views": 191,
+        "views": 194,
         "likes": 1,
         "comments": 0
       },
@@ -306,7 +315,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 550,
+        "views": 551,
         "likes": 9,
         "comments": 2
       },
@@ -411,12 +420,6 @@
       }
     ],
     "daily": [
-      {
-        "day": "2026-10-07",
-        "views": 56,
-        "minutes": 11,
-        "subs": 2
-      },
       {
         "day": "2026-10-08",
         "views": 82,
@@ -566,6 +569,12 @@
         "views": 522,
         "minutes": 58,
         "subs": 0
+      },
+      {
+        "day": "2026-11-02",
+        "views": 190,
+        "minutes": 22,
+        "subs": 2
       }
     ]
   },
@@ -577,10 +586,10 @@
         "title": "Seedhi ki light khud kaise jalti hai? 💡",
         "url": "https://www.instagram.com/reel/DfUJ0TCDH5O/",
         "published": "2026-11-04",
-        "likes": 14,
+        "likes": 15,
         "comments": 0,
-        "reach": 1069,
-        "views": 1283,
+        "reach": 1076,
+        "views": 1297,
         "saved": 4,
         "shares": 1
       },
@@ -601,8 +610,8 @@
         "published": "2026-11-02",
         "likes": 23,
         "comments": 2,
-        "reach": 1176,
-        "views": 1384,
+        "reach": 1177,
+        "views": 1385,
         "saved": 3,
         "shares": 3
       },

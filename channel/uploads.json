@@ -542,5 +542,14 @@
     "topic": "Soil moisture sensor",
     "job": "20261104-225506",
     "heldPostAt": "2026-11-06T15:00"
+  },
+  {
+    "id": "BpM6SlfHUfo",
+    "meta": "channel/videos/auto-flame-robot-without-camera.json",
+    "date": "2026-11-05",
+    "status": "held",
+    "topic": "Fire-fighting robot that finds a candle flame",
+    "job": "20261105-153747",
+    "heldPostAt": "2026-11-06T15:00"
   }
 ]
