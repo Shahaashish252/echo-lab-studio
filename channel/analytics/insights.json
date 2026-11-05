@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-05T15:37",
-  "videos": 23,
-  "summary": "Instagram is doing the real work: almost every Hindi video gets 1,200+ views there, while YouTube Shorts mostly stay under 50 views. The best videos are short, surprising 'X doesn't do what you think' statements about hands-on robots and sensors (gyro robot, clap switch, line follower, mic). Everyday-tech explainers about taps, doors, smoke alarms and lifts, and the English Arduino video, get little attention.",
-  "winningPattern": "Hindi videos about a robot or a hobby-circuit that makers can build (gyro, clap switch, line follower, IR obstacle robot, mic). The hook is a surprising 'it doesn't do what you think' claim, such as 'Without X this robot falls' or 'Clap switch listens to noise, not clapping'. Titles are short Hinglish with a bold claim and a robot or clap emoji, posted on Instagram first. The best ones also drive saves and shares, a sign that people want to keep or send them.",
+  "updated": "2026-11-05T23:01",
+  "videos": 24,
+  "summary": "Instagram is doing nearly all the work: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly get under 50 views. The best videos make a surprising claim about a sensor or robot ('can't see, only hears/feels', 'robot would fall without it') and are about hands-on maker topics like gyro, clap switch and PIR. Generic 'How does X work?' videos on everyday places (lift, mall door, tap, smoke detector) get far less, and the one English video got no Instagram reach at all.",
+  "winningPattern": "Hindi, Instagram-first. Subject is a small maker-relevant sensor or robot behaviour (gyro, clap switch, PIR, IR, mic, line follower). Hook is a surprising claim or 'it doesn't do what you think' ('Nahi... sirf...', 'Ke bina turant gir jaata'), with a short punchy Hinglish title and one emoji. Clap switch, gyro and PIR also earn the best likes, saves and YouTube views, and the IR robot-wall video earned the most shares.",
   "doMore": [
-    "Make robot and maker-project videos (gyro, line follower, clap switch, obstacle avoidance) with a visible 'before vs after' demo in the first 2 seconds",
-    "Open with a bold, counter-intuitive claim like 'X can't see/hear, yet it...' instead of a question",
-    "Add a save or share prompt like 'Save this for your next project' since saves and shares signal strong interest",
-    "Post to Instagram first and test 2-3 YouTube-specific titles and thumbnails to see why YT lags",
-    "Turn the top hits into series (Part 2: what happens if you remove the sensor?)"
+    "Lead with a myth-busting or 'without this it fails' hook in the first line on screen",
+    "Cover Arduino-module and robot topics (gyro, IR, PIR, mic, line follower) rather than public-place gadgets",
+    "Make follow-ups to the winners, such as a clap switch part 3, PIR vs IR, and gyro in drones",
+    "Post Instagram-first and ask viewers to save the video, since saves and shares show real interest",
+    "Test YouTube separately with a stronger title and a hook in the first 2 seconds, since it barely moves now"
   ],
   "stopDoing": [
-    "Question-style titles about public devices (mall door, washroom tap, lift, street light) that got the weakest views",
-    "Publishing near-duplicate topics (two smoke detector videos, two automatic tap videos, two IR sensor videos) within days of each other",
-    "Mixing in English narration until Hindi on YouTube is working"
+    "Generic 'Kaise pata chalta hai? 🤔' titles on lifts, mall doors and taps",
+    "Near-duplicate topics (smoke detector x2, IR dark x2, tap x2) posted within days of each other",
+    "English narration until Hindi YouTube is fixed, since the single English test got no Instagram reach"
   ],
   "nextTopics": [
-    "Self-balancing robot with a gyro and motors",
-    "Obstacle-avoiding robot without any camera",
-    "Sound-activated light with a mic module",
-    "Servo motor that knows its own angle",
-    "Light-following robot using LDR sensors"
+    "Accelerometer vs gyro in a drone",
+    "Ultrasonic sensor on a robot as bat-like hearing",
+    "Why a PIR sensor ignores a still person",
+    "LDR light sensor in a night lamp",
+    "Servo motor holding its position"
   ],
   "bestTimes": {
     "times": [
-      "15:00",
+      "16:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (22 posts)"
+    "reason": "from our own posts: these hours averaged the most views (23 posts)"
   }
 }

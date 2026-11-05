@@ -1,0 +1,34 @@
+{
+  "file": "out/auto/auto-dimming-car-mirror.mp4",
+  "title": "Car Mirror Khud Dim Hota Hai, Magic Nahi Hai 🌙 #shorts",
+  "description": "Raat mein car ka mirror khud dim kyun hota hai? Jawab chhupa hai ek light sensor mein, jise aap Arduino se bana sakte ho.\n🌙 Auto-dimming mirror ka asli kaam 3D mein\n🔬 LDR ke andar CdS track aur electrons ka khel\n⚡ LM393 comparator aur pot se threshold\n🔌 Arduino wiring ki ek save-worthy tip\nAur aise 3D explainers ke liye subscribe karo!\n#shorts #ldr #arduino #electronics #hindi #diy #sensor",
+  "tags": [
+    "auto dimming mirror",
+    "car mirror dims at night",
+    "how auto dimming mirror works",
+    "ldr sensor module",
+    "ldr sensor arduino",
+    "ldr module in hindi",
+    "electrochromic mirror",
+    "photoresistor explained",
+    "lm393 comparator",
+    "ldr sensor kaise kaam karta hai",
+    "car mirror khud dim kyun hota hai",
+    "arduino light sensor project",
+    "arduino projects hindi",
+    "cds photocell",
+    "night lamp arduino"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Ldr Explained: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Car ka mirror khud dim kaise hota hai? 🌙\nAndar do light sensors hain jo roshni padhte hain. Aap wahi trick ek LDR module se bana sakte ho 👇\n🔬 LDR: andhere mein lagbhag 1 megaohm se zyada\n💡 Roshni mein resistance kilohm tak gir jaata hai\n⚖️ LM393 light ko pot ke threshold se compare karta hai\n🔌 VCC 5V, DO D2 par, sensor dhakna mat\n💾 Save karo, project banate waqt kaam aayega\n📤 Us dost ko bhejo jo Arduino seekh raha hai\n💬 Aap LDR se kya banaoge?\n#arduino #electronics #ldr #automirror #makers",
+    "tiktok": "Car ka mirror raat mein khud dim kyun hota hai? 🌙 Dekho LDR sensor ka asli kaam 3D mein. Aap LDR se kya banaoge? #learnontiktok #arduino #ldr #electronics #hindi"
+  }
+}

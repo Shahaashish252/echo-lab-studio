@@ -85,3 +85,12 @@ exported to /home/runner/work/echo-lab-studio/echo-lab-studio/out/blender: scene
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/auto-dimming-car-mirror.mp4 (12 parts, 38.1 min)
 
 == youtube
+  Car Mirror Khud Dim Hota Hai, Magic Nahi Hai 🌙 #shorts
+  metadata: channel/videos/auto-auto-dimming-car-mirror.json
+
+  uploading  50.8%
+uploaded https://youtu.be/H9zxYoJwtIw  (private)
+created playlist Ldr Explained: Shorts
+! not added to the playlist (<HttpError 409 when requesting https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned "T)
+
+DONE in 88.2 min -> /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/auto-dimming-car-mirror.mp4

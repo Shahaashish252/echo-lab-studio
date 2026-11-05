@@ -1,9 +1,27 @@
 {
-  "updated": "05 Nov 2026, 16:25",
+  "updated": "06 Nov 2026, 00:30",
   "youtube": {
     "subs": 4,
     "views": 3400,
     "videos": [
+      {
+        "title": "Clap Switch Ko Seeti Bhi Chala Deti Hai, Kyun? #shorts",
+        "id": "yg0sWNjFBTs",
+        "status": "public",
+        "published": "2026-11-05",
+        "views": 120,
+        "likes": 4,
+        "comments": 0
+      },
+      {
+        "title": "Camera Ke Bina Aag Dhoondhne Wala Robot 🔥 #shorts",
+        "id": "BpM6SlfHUfo",
+        "status": "private",
+        "published": "2026-11-05",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "2 kaante wala sensor paudhe ki pyaas jaanta hai 🌱 #shorts",
         "id": "QaKoT26kQGU",
@@ -27,7 +45,7 @@
         "id": "nHR2_Dsl4I0",
         "status": "public",
         "published": "2026-11-04",
-        "views": 28,
+        "views": 45,
         "likes": 1,
         "comments": 2
       },
@@ -50,20 +68,11 @@
         "comments": 0
       },
       {
-        "title": "Clap Switch Ko Seeti Bhi Chala Deti Hai, Kyun? #shorts",
-        "id": "yg0sWNjFBTs",
-        "status": "private",
-        "published": "2026-11-03",
-        "views": 0,
-        "likes": 0,
-        "comments": 0
-      },
-      {
         "title": "Gaadi Ko Deewar Dikhti Nahi, Sirf Sunti Hai 🚗 #shorts",
         "id": "ujU6WQJ6c_8",
         "status": "public",
         "published": "2026-11-03",
-        "views": 112,
+        "views": 121,
         "likes": 3,
         "comments": 0
       },
@@ -99,7 +108,7 @@
         "id": "ZzilLf1hScY",
         "status": "public",
         "published": "2026-11-01",
-        "views": 194,
+        "views": 195,
         "likes": 1,
         "comments": 0
       },
@@ -207,7 +216,7 @@
         "id": "jD5lPQq_aQo",
         "status": "public",
         "published": "2026-10-23",
-        "views": 17,
+        "views": 18,
         "likes": 0,
         "comments": 0
       },
@@ -421,12 +430,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-08",
-        "views": 82,
-        "minutes": 8,
-        "subs": 0
-      },
-      {
         "day": "2026-10-09",
         "views": 15,
         "minutes": 0,
@@ -580,16 +583,27 @@
   },
   "instagram": {
     "username": "echo.lab3d",
-    "followers": 16,
+    "followers": 17,
     "posts": [
+      {
+        "title": "Clap switch seeti se bhi ON kyun hota hai? 🎤",
+        "url": "https://www.instagram.com/reel/DfW3pLcCGyZ/",
+        "published": "2026-11-05",
+        "likes": 11,
+        "comments": 2,
+        "reach": 1151,
+        "views": 1355,
+        "saved": 2,
+        "shares": 3
+      },
       {
         "title": "Seedhi ki light khud kaise jalti hai? 💡",
         "url": "https://www.instagram.com/reel/DfUJ0TCDH5O/",
         "published": "2026-11-04",
         "likes": 15,
         "comments": 0,
-        "reach": 1076,
-        "views": 1297,
+        "reach": 1081,
+        "views": 1299,
         "saved": 4,
         "shares": 1
       },
@@ -599,8 +613,8 @@
         "published": "2026-11-03",
         "likes": 2,
         "comments": 2,
-        "reach": 126,
-        "views": 143,
+        "reach": 127,
+        "views": 144,
         "saved": 0,
         "shares": 0
       },
@@ -610,8 +624,8 @@
         "published": "2026-11-02",
         "likes": 23,
         "comments": 2,
-        "reach": 1177,
-        "views": 1385,
+        "reach": 1179,
+        "views": 1387,
         "saved": 3,
         "shares": 3
       },
@@ -621,8 +635,8 @@
         "published": "2026-11-01",
         "likes": 10,
         "comments": 2,
-        "reach": 1130,
-        "views": 1255,
+        "reach": 1131,
+        "views": 1256,
         "saved": 2,
         "shares": 0
       },
@@ -632,8 +646,8 @@
         "published": "2026-10-31",
         "likes": 19,
         "comments": 0,
-        "reach": 1068,
-        "views": 1193,
+        "reach": 1069,
+        "views": 1194,
         "saved": 12,
         "shares": 1
       },
@@ -643,8 +657,8 @@
         "published": "2026-10-30",
         "likes": 20,
         "comments": 0,
-        "reach": 1090,
-        "views": 1260,
+        "reach": 1091,
+        "views": 1261,
         "saved": 3,
         "shares": 1
       },
@@ -654,8 +668,8 @@
         "published": "2026-10-29",
         "likes": 14,
         "comments": 2,
-        "reach": 1110,
-        "views": 1268,
+        "reach": 1111,
+        "views": 1269,
         "saved": 10,
         "shares": 2
       },
@@ -665,8 +679,8 @@
         "published": "2026-10-28",
         "likes": 8,
         "comments": 4,
-        "reach": 415,
-        "views": 448,
+        "reach": 416,
+        "views": 449,
         "saved": 0,
         "shares": 0
       },
@@ -677,7 +691,7 @@
         "likes": 4,
         "comments": 2,
         "reach": 503,
-        "views": 566,
+        "views": 567,
         "saved": 0,
         "shares": 0
       },
@@ -688,7 +702,7 @@
         "likes": 15,
         "comments": 2,
         "reach": 1234,
-        "views": 1367,
+        "views": 1368,
         "saved": 4,
         "shares": 10
       },

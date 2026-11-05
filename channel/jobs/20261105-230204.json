@@ -4,7 +4,7 @@
   "hook": "Why does your car mirror dim by itself at night?",
   "lang": "hi",
   "started": "2026-11-05T23:02:04",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -44,5 +44,7 @@
     }
   ],
   "format": "studio",
-  "module": "ldr"
+  "module": "ldr",
+  "finished": "2026-11-06T00:30:15",
+  "uploadId": "H9zxYoJwtIw"
 }
