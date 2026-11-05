@@ -21,3 +21,6 @@
   | Sources: [robu.in](https://aws.robu.in/?p=31320), [pcbsync](https://pcbsync.com/flame-sensor-arduino/), [Robogames](https://robogames.net/rules/fire-fighting.php), [ASEE](https://peer.asee.org/6571.pdf)
 
 == storyboard: "Fire-fighting robot that finds a candle flame (open with this hook: "This robot finds a candle flame without a camera!")" (Claude Code)
+  s1 sim     Yeh dekh nahi sakta, phir bhi aag dhoondhta hai
+
+== simulation (Claude Code writes it, renders it, reviews it)
