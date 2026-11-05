@@ -1,2 +1,23 @@
 
 == research: reading about the topic on the web
+  | **HOOK:** "This robot finds a candle flame without a camera!"
+  | 
+  | **HOW IT WORKS**
+  | 1. IR flame sensors (silicon phototransistors) respond to light at about 760–1100 nm, which is where flames emit strongly.
+  | 2. The sensors are mounted facing different directions, and each has roughly a 60° field of view.
+  | 3. An on-board LM393 comparator turns the analog level into a digital output. A trimpot sets the threshold, and D0 goes LOW on detection.
+  | 4. The microcontroller compares the sensors and turns toward the strongest reading.
+  | 5. It drives forward until it is within about 30 cm (Robogames rule). It must show it has recognized the flame before extinguishing.
+  | 6. A fan or water pump then puts the flame out.
+  | 
+  | **REAL PARTS:** YG1006 phototransistor flame module (LM393), Arduino, a fan or pump, and an HC-SR04 or IR distance sensor for walls.
+  | 
+  | **MYTH:** "It sees the fire like a camera." It doesn't. It only measures IR intensity, so sunlight or an incandescent bulb can fool it. Sources disagree on whether the YG1006 is a phototransistor or a photodiode.
+  | 
+  | **SURPRISING FACT:** Detection range is only about 100 cm on cheap modules. Vendor listings give "up to 100 cm" and "0–1 m". Treat this as unverified, because I found no manufacturer datasheet.
+  | 
+  | **TIP:** Shield each sensor with a short tube and tune the pot indoors, away from sunlight. Contest flame height varies by rule set, so test at several heights.
+  | 
+  | Sources: [robu.in](https://aws.robu.in/?p=31320), [pcbsync](https://pcbsync.com/flame-sensor-arduino/), [Robogames](https://robogames.net/rules/fire-fighting.php), [ASEE](https://peer.asee.org/6571.pdf)
+
+== storyboard: "Fire-fighting robot that finds a candle flame (open with this hook: "This robot finds a candle flame without a camera!")" (Claude Code)
