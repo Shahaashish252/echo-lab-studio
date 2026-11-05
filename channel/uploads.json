@@ -502,10 +502,17 @@
     "id": "yg0sWNjFBTs",
     "meta": "channel/videos/auto-sound-sensor-explained.json",
     "date": "2026-11-03",
-    "status": "approved",
+    "status": "published",
     "topic": "Sound sensor module: why a whistle triggers it too",
     "job": "20261103-155105",
-    "postAt": "2026-11-05T15:00"
+    "postAt": "2026-11-05T15:00",
+    "published": {
+      "youtube": "2026-11-05",
+      "instagram": "https://www.instagram.com/reel/DfW3pLcCGyZ/",
+      "instagram_story": "18136150048670202",
+      "facebook": "https://www.facebook.com/reel/1900559641303438/"
+    },
+    "postedAt": "2026-11-05T16:29"
   },
   {
     "id": "_d9YWN5UW3I",
