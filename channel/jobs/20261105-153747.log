@@ -63,3 +63,14 @@ exported to /home/runner/work/echo-lab-studio/echo-lab-studio/out/blender: scene
   888 photo-real frames from Blender
 
 == render
+  dispatched 12 render parts (job 1793875676315)
+  render parts done: 0/12
+  render parts done: 4/12
+  render parts done: 8/12
+  render parts done: 9/12
+  render parts done: 10/12
+  render parts done: 11/12
+  render parts done: 12/12
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/flame-robot-without-camera.mp4 (12 parts, 7.3 min)
+
+== youtube
