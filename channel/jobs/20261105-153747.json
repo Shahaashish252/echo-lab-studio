@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Fire-fighting robot that finds a candle flame (open with this hook: \"This robot finds a candle flame without a camera!\")\" (Claude Code)",
       "at": "2026-11-05T15:38:07"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-11-05T15:38:53"
     }
   ],
   "format": "studio",
