@@ -1,2 +1,29 @@
 
 == research: reading about the topic on the web
+  | **Hook:** "Why does your car mirror dim by itself at night?"
+  | 
+  | **HOW IT WORKS**
+  | 1. A forward-facing photosensor reads ambient light. If it's dark, the mirror arms itself.
+  | 2. A rear-facing photosensor measures headlight glare from cars behind you.
+  | 3. A microcontroller compares the two readings and sets a voltage.
+  | 4. That voltage goes across transparent conductive coatings on two glass plates. Between them is an electrochromic gel, and one plate carries the reflector.
+  | 5. The gel darkens in proportion to the voltage, so the glare is cut.
+  | 6. When the glare fades, the voltage drops and the gel clears.
+  | 
+  | **REAL PARTS**
+  | - Gentex electrochromic mirror modules, with photodiode or photocell sensors (some designs use small cameras).
+  | - Mirror wiring includes a reverse-light input.
+  | 
+  | **MYTH**
+  | - Myth: a tinted film or a flipped prism does the dimming. A flip-tab "day/night" mirror works that way.
+  | - Truth: the auto version is electronic. It changes the gel's chemistry with voltage and needs power, so it can't just be glued to the windshield.
+  | 
+  | **SURPRISING FACT**
+  | - Many manuals say the mirror stops dimming when you shift into reverse. It senses the 12V backup-lamp signal so you can see clearly. I found no reliable reflectance percentage, so don't quote one.
+  | 
+  | **TIP**
+  | - Don't hang anything over or tape the sensors. Blocked sensors stop the dimming.
+  | 
+  | Sources: [Jalopnik](https://jalopnik.com/the-way-auto-dimming-rearview-mirrors-work-is-actually-1796939685), [Clemson CVEL](https://cecas.clemson.edu/cvel/auto/systems/auto-dimming-mirror.html), [Kia manual](https://ownersmanual.kia.com/docview/webhelp/Kia/9f1f29ff-d831-418a-9964-8c1c4ad70708/topics/t00191.html), [Tacomaworld](https://www.tacomaworld.com/posts/21869957)
+
+== storyboard: "Car auto-dimming rear mirror (open with this hook: "Why does your car mirror dim by itself at night?")" (Claude Code)
