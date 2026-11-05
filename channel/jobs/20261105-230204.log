@@ -27,3 +27,6 @@
   | Sources: [Jalopnik](https://jalopnik.com/the-way-auto-dimming-rearview-mirrors-work-is-actually-1796939685), [Clemson CVEL](https://cecas.clemson.edu/cvel/auto/systems/auto-dimming-mirror.html), [Kia manual](https://ownersmanual.kia.com/docview/webhelp/Kia/9f1f29ff-d831-418a-9964-8c1c4ad70708/topics/t00191.html), [Tacomaworld](https://www.tacomaworld.com/posts/21869957)
 
 == storyboard: "Car auto-dimming rear mirror (open with this hook: "Why does your car mirror dim by itself at night?")" (Claude Code)
+  s1 sim     Yeh dekh nahi sakta, phir bhi dim karta!
+
+== simulation (Claude Code writes it, renders it, reviews it)
