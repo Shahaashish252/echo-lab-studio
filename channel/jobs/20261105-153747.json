@@ -1,0 +1,16 @@
+{
+  "id": "20261105-153747",
+  "topic": "Fire-fighting robot that finds a candle flame",
+  "hook": "This robot finds a candle flame without a camera!",
+  "lang": "hi",
+  "started": "2026-11-05T15:37:47",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-11-05T15:37:47"
+    }
+  ],
+  "format": "studio",
+  "module": "flame"
+}
