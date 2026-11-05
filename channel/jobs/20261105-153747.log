@@ -27,3 +27,20 @@
   studio plan: 10 shots of the flame module
 
 == voice (Microsoft Edge: Madhur)
+Downloading onnxruntime (22.7MiB)
+ Downloaded onnxruntime
+Installed 27 packages in 16ms
+[0;93m2026-11-05 15:39:39.034986477 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        2.65s  बिना कैमरे के रोबोट आग कैसे ढूंढता है?
+s1-2        3.15s  आग इन्फ्रारेड छोड़ती है, जो आँख से दिखती नहीं।
+s1-3        3.04s  काला रिसीवर, साठ डिग्री का कोण, एक मीटर तक
+s1-4        3.12s  इन्फ्रारेड इलेक्ट्रॉन छुड़ाता है, तो करंट बहता है।
+s1-5        2.88s  कंपेरेटर लेवल को पॉट के थ्रेशोल्ड से मिलाता है
+s1-6        3.28s  कई सेंसर, रोबोट सबसे तेज़ रीडिंग की तरफ मुड़ता
+s1-7        2.12s  आग दिखते ही डीओ पिन लो हो जाता
+s1-8        2.62s  वीसीसी पाँच वोल्ट पर, डीओ डी दो पर।
+s1-9        3.22s  अब बताओ, बिना कैमरे रोबोट आग कैसे ढूंढता है?
+s1-10       0.73s  फॉलो करो!
+wrote 10 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit
