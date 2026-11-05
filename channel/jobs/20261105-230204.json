@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Car auto-dimming rear mirror (open with this hook: \"Why does your car mirror dim by itself at night?\")\" (Claude Code)",
       "at": "2026-11-05T23:02:37"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-11-05T23:03:09"
     }
   ],
   "format": "studio",
