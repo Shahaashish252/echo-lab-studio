@@ -76,3 +76,16 @@ exported to /home/runner/work/echo-lab-studio/echo-lab-studio/out/blender: scene
   937 photo-real frames from Blender
 
 == render
+  dispatched 12 render parts (job 1793986664707)
+  render parts done: 0/12
+  render parts done: 3/12
+  render parts done: 5/12
+  render parts done: 7/12
+  render parts done: 8/12
+  render parts done: 9/12
+  render parts done: 10/12
+  render parts done: 11/12
+  render parts done: 12/12
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/baby-cry-alarm-explained.mp4 (12 parts, 39.3 min)
+
+== youtube
