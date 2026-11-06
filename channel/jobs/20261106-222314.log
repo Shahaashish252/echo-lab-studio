@@ -89,3 +89,12 @@ exported to /home/runner/work/echo-lab-studio/echo-lab-studio/out/blender: scene
 wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/baby-cry-alarm-explained.mp4 (12 parts, 39.3 min)
 
 == youtube
+  Baby Monitor Rona Samajhta Nahi, Bas Volume Dekhta Hai #shorts
+  metadata: channel/videos/auto-baby-cry-alarm-explained.json
+
+  uploading  59.8%
+uploaded https://youtu.be/MCpqSmO5AsE  (private)
+created playlist Maker Lab: Shorts
+! not added to the playlist (<HttpError 409 when requesting https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned "T)
+
+DONE in 84.4 min -> /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/baby-cry-alarm-explained.mp4

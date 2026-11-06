@@ -81,11 +81,6 @@
       "module": ""
     },
     {
-      "topic": "Baby cry alarm / baby monitor",
-      "hook": "This tiny mic wakes parents when the baby cries. How?",
-      "module": "sound"
-    },
-    {
       "topic": "Hand sanitizer dispenser",
       "hook": "Why does sanitizer come out when you hold your hand under it?",
       "module": "ir"
@@ -138,6 +133,7 @@
     "Soil moisture sensor",
     "Fire-fighting robot that finds a candle flame",
     "Car auto-dimming rear mirror",
-    "Auto fan that speeds up when the room gets hot"
+    "Auto fan that speeds up when the room gets hot",
+    "Baby cry alarm / baby monitor"
   ]
 }

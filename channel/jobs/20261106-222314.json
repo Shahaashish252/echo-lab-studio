@@ -4,7 +4,7 @@
   "hook": "This tiny mic wakes parents when the baby cries. How?",
   "lang": "hi",
   "started": "2026-11-06T22:23:14",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -44,5 +44,7 @@
     }
   ],
   "format": "studio",
-  "module": "sound"
+  "module": "sound",
+  "finished": "2026-11-06T23:47:41",
+  "uploadId": "MCpqSmO5AsE"
 }

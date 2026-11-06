@@ -1,0 +1,34 @@
+{
+  "file": "out/auto/baby-cry-alarm-explained.mp4",
+  "title": "Baby Monitor Rona Samajhta Nahi, Bas Volume Dekhta Hai #shorts",
+  "description": "Ek chhota sa mic baby ke rone par parents ko kaise jagata hai? Yeh Short sound sensor module ko 3D mein andar se dikhata hai.\n🎤 Electret mic capsule ki jhilli kaise hilti hai\n⚡ LM393 comparator aur blue pot ka threshold\n🔌 Arduino Uno wiring: VCC 5V, DO D2\n💡 Cheap monitor sirf volume dekhte hain, cry nahi samajhte\nAise aur maker videos ke liye subscribe karo.\n#shorts #arduino #soundsensor #babymonitor #electronics #hindi #maker",
+  "tags": [
+    "baby monitor kaise kaam karta hai",
+    "baby cry alarm arduino",
+    "sound sensor module in hindi",
+    "ky-038 sound sensor",
+    "electret microphone explained",
+    "lm393 comparator kya hai",
+    "arduino sound sensor project",
+    "clap switch arduino",
+    "sound sensor kaise kaam karta hai",
+    "baby monitor project arduino",
+    "microphone working in hindi",
+    "arduino projects for beginners",
+    "electret condenser mic",
+    "sound sensor wiring arduino uno",
+    "how baby monitor works"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Maker Lab: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Yeh mic sunta nahi, phir bhi jagata hai 👶\nBaby monitor ke andar ek chhota electret mic hota hai. Dekho woh rone par kaise alarm deta hai 👇\n🎤 Jhilli hilti hai, tiny voltage banta hai\n⚡ LM393 threshold se compare karta hai\n🔌 VCC 5V pe, DO D2 pe\n💡 Cheap monitors sirf volume dekhte hain\n💾 Save karo apne next Arduino project ke liye\n📤 Un dost ko bhejo jo electronics seekh raha hai\n💬 Tum is sensor se kya banaoge?\n#arduino #electronics #soundsensor #babymonitor #makerlife",
+    "tiktok": "Yeh mic sunta nahi, phir bhi jagata hai 👶 Dekho sound sensor andar se kaise kaam karta hai. Tum isse kya banaoge? Comment karo! #learnontiktok #arduino #electronics #soundsensor #babymonitor"
+  }
+}

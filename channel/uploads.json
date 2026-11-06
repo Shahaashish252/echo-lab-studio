@@ -576,5 +576,14 @@
     "topic": "Auto fan that speeds up when the room gets hot",
     "job": "20261106-154209",
     "heldPostAt": "2026-11-07T16:00"
+  },
+  {
+    "id": "MCpqSmO5AsE",
+    "meta": "channel/videos/auto-baby-cry-alarm-explained.json",
+    "date": "2026-11-06",
+    "status": "held",
+    "topic": "Baby cry alarm / baby monitor",
+    "job": "20261106-222314",
+    "heldPostAt": "2026-11-07T16:00"
   }
 ]

@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-06T15:41",
+  "updated": "2026-11-06T22:23",
   "videos": 24,
-  "summary": "Instagram is carrying the channel: almost every Hindi video gets 1,000+ views there, while YouTube Shorts mostly gets under 50. The best videos use a surprising 'it doesn't see/hear/think the way you expect' angle on simple, relatable devices like gyro robots, clap switches and motion sensors. Longer 'How does X work?' titles on public-place gadgets (lift, mall door, tap, smoke alarm) get far fewer views, likes and saves.",
-  "winningPattern": "Hindi videos on hobby-robot or maker-style sensors (gyro, clap switch, PIR, line follower, mic) with a counterintuitive, short statement hook such as 'X doesn't do the obvious thing, it does the opposite' or 'Without X, this falls instantly'. Titles are punchy statements, not 'how does it work' questions, with one emoji and #shorts. Instagram Reels is the main driver, and the best videos from Oct 29 to Nov 5 reached 1,200 to 1,400 views with strong likes and saves. YouTube only works when the video also has a strong hook (Gyro, Clap Switch, PIR reached 550 to 680 views).",
+  "summary": "Instagram is doing the real work: almost every Hindi video gets 1,200–1,400 views there, while YouTube Shorts mostly gets under 100 views per video. The best performers are short, punchy 'X doesn't do what you think' videos about hands-on maker items like robots, clap switches, mics and PIR sensors. Generic 'how does this everyday thing know?' videos (lifts, taps, doors, smoke alarms, phones) get far fewer views, likes and saves, especially on Instagram.",
+  "winningPattern": "Maker-style gadget or robot subjects (gyro robot, clap switch, line follower, mic, PIR sensor) with a surprising negative or reversal hook such as 'X doesn't do Y, it only does Z' or 'Robot would fall without this'. Hinglish titles are short, with an emoji and #shorts, and Instagram is the main driver. Videos with a visible build or demo get the most likes, saves and shares.",
   "doMore": [
-    "Make robot and maker-project topics (balance, line following, obstacle avoidance) with a 'robot has no brain/eyes' twist hook",
-    "Use bold counterintuitive statements as titles and first lines instead of 'Kaise kaam karta hai?' questions",
-    "Do follow-up videos on the Clap Switch and Gyro themes, since those got the most saves and views on both platforms",
-    "End with a save-worthy takeaway (a pin diagram, a one-line rule, a part name) to boost saves and shares",
-    "Keep posting daily on Instagram first, and re-test on YouTube using the winning hook styles to grow it"
+    "Make 'X doesn't do what you think' reversal hooks about Arduino-style modules and robots",
+    "Build series around the winners: clap switch, gyro robot, line follower, IR obstacle robot and mic",
+    "Show a physical demo or robot reacting in the first 2 seconds, then explain the sensor",
+    "End with a save-worthy line like 'Save this for your project' to lift saves and shares",
+    "Post to Instagram first and test YouTube-specific titles with searchable keywords like 'Arduino' and 'sensor'"
   ],
   "stopDoing": [
-    "Generic public-place gadget explainers like lift, mall door, washroom tap, which stay under 600 views",
-    "Near-duplicate topics (smoke alarm x2, IR sensor in dark, tap x2) that split the audience and underperform",
-    "Question-style titles starting with 'Kaise...? 🤔' as the default format"
+    "Generic 'Kaise Pata Chalta Hai?' videos about public-place gadgets (lift, mall door, tap, street light)",
+    "Near-duplicate topics such as repeated smoke detector, IR sensor and tap videos with the same question-style title",
+    "Reusing the same unchanged Hindi upload on YouTube expecting it to perform like Instagram"
   ],
   "nextTopics": [
-    "Self-balancing robot and the accelerometer",
-    "Obstacle avoiding robot with ultrasonic sensor",
-    "Light-following robot with LDR",
-    "Touch sensor lamp that turns on with a finger",
-    "Bluetooth car controlled by phone"
+    "Self-balancing robot and the MPU6050",
+    "Ultrasonic sensor robot that stops before a wall",
+    "Sound sensor module versus clap switch",
+    "Servo motor that knows its angle",
+    "Light sensor (LDR) robot that follows a torch"
   ],
   "bestTimes": {
     "times": [
