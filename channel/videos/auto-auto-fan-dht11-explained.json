@@ -1,0 +1,33 @@
+{
+  "file": "out/auto/auto-fan-dht11-explained.mp4",
+  "title": "Pankha Garmi Jaanta Nahi, Phir Bhi Tez Hota Hai #shorts",
+  "description": "Kamra garam hote hi pankha khud tez kyun ghoomta hai? Jawab ek chhote DHT11 sensor mein hai.\n🌡️ DHT11 ke andar humidity layer aur thermistor\n💧 Bhaap lagte hi resistance kaise badalta hai\n🔌 Ek data wire se Arduino tak numbers\n⚡ Pankha MOSFET se kyun chalta hai\nAise aur 3D explainers ke liye subscribe karo!\n#shorts #arduino #dht11 #electronics #diyprojects #hindi",
+  "tags": [
+    "dht11 sensor",
+    "dht11 kaise kaam karta hai",
+    "auto fan arduino",
+    "temperature controlled fan",
+    "arduino fan project",
+    "dht11 arduino tutorial",
+    "dht11 in hindi",
+    "arduino projects for beginners",
+    "how dht11 works",
+    "humidity sensor explained",
+    "thermistor explained",
+    "mosfet fan control arduino",
+    "arduino project hindi",
+    "automatic fan using arduino"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Arduino Sensors: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Pankha garmi jaanta nahi, phir bhi tez ghoomta hai 🌀\nIsme dimaag ek chhote DHT11 sensor aur Arduino ka hai.\nDekho andar kya hota hai 👇\n🌡️ DHT11 mein humidity layer + thermistor hota hai\n📡 Ek hi data wire pe numbers jaate hain\n⚡ Pankha Arduino pin se nahi, MOSFET se chalao\n⏱️ Sensor ko 1 second mein sirf ek baar padho\n💾 Save karo apne next Arduino project ke liye\n📤 Bhejo us dost ko jo robot ya Arduino banata hai\n💬 Tum auto fan mein aur kya jodoge?\n#arduino #electronics #dht11 #makers #diyprojects",
+    "tiktok": "Pankha garmi jaanta nahi, phir bhi tez ghoomta hai! 🌀 Jaano DHT11 + Arduino ka auto fan trick. Tumhara agla Arduino project kya hoga? #learnontiktok #arduino #dht11 #electronics #diy"
+  }
+}

@@ -1,16 +1,25 @@
 {
-  "updated": "06 Nov 2026, 00:30",
+  "updated": "06 Nov 2026, 17:00",
   "youtube": {
-    "subs": 4,
-    "views": 3400,
+    "subs": 5,
+    "views": 3624,
     "videos": [
+      {
+        "title": "Car Mirror Khud Dim Hota Hai, Magic Nahi Hai 🌙 #shorts",
+        "id": "H9zxYoJwtIw",
+        "status": "private",
+        "published": "2026-11-05",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Clap Switch Ko Seeti Bhi Chala Deti Hai, Kyun? #shorts",
         "id": "yg0sWNjFBTs",
         "status": "public",
         "published": "2026-11-05",
-        "views": 120,
-        "likes": 4,
+        "views": 263,
+        "likes": 5,
         "comments": 0
       },
       {
@@ -45,7 +54,7 @@
         "id": "nHR2_Dsl4I0",
         "status": "public",
         "published": "2026-11-04",
-        "views": 45,
+        "views": 51,
         "likes": 1,
         "comments": 2
       },
@@ -521,7 +530,7 @@
       },
       {
         "day": "2026-10-24",
-        "views": 51,
+        "views": 50,
         "minutes": 8,
         "subs": 0
       },
@@ -557,13 +566,13 @@
       },
       {
         "day": "2026-10-30",
-        "views": 549,
+        "views": 547,
         "minutes": 53,
         "subs": 1
       },
       {
         "day": "2026-10-31",
-        "views": 358,
+        "views": 357,
         "minutes": 38,
         "subs": 0
       },
@@ -578,6 +587,12 @@
         "views": 190,
         "minutes": 22,
         "subs": 2
+      },
+      {
+        "day": "2026-11-03",
+        "views": 82,
+        "minutes": 12,
+        "subs": 0
       }
     ]
   },
@@ -591,8 +606,8 @@
         "published": "2026-11-05",
         "likes": 11,
         "comments": 2,
-        "reach": 1151,
-        "views": 1355,
+        "reach": 1175,
+        "views": 1385,
         "saved": 2,
         "shares": 3
       },
@@ -602,8 +617,8 @@
         "published": "2026-11-04",
         "likes": 15,
         "comments": 0,
-        "reach": 1081,
-        "views": 1299,
+        "reach": 1085,
+        "views": 1301,
         "saved": 4,
         "shares": 1
       },

@@ -1,6 +1,11 @@
 {
   "queue": [
     {
+      "topic": "Touch sensor lamp that turns on with a finger",
+      "hook": "Is lamp ko aapki ungli nahi, aapka sharir chala raha hai",
+      "module": ""
+    },
+    {
       "topic": "Buzzer alarm that triggers on tilt",
       "hook": "Ise hilao toh bajta hai, bina kisi button ke",
       "module": ""
@@ -76,11 +81,6 @@
       "module": ""
     },
     {
-      "topic": "Auto fan that speeds up when the room gets hot",
-      "hook": "Who tells the fan to spin faster when the room gets hot?",
-      "module": "dht"
-    },
-    {
       "topic": "Baby cry alarm / baby monitor",
       "hook": "This tiny mic wakes parents when the baby cries. How?",
       "module": "sound"
@@ -137,6 +137,7 @@
     "Escalator that starts when you step near",
     "Soil moisture sensor",
     "Fire-fighting robot that finds a candle flame",
-    "Car auto-dimming rear mirror"
+    "Car auto-dimming rear mirror",
+    "Auto fan that speeds up when the room gets hot"
   ]
 }

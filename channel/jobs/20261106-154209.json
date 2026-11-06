@@ -4,7 +4,7 @@
   "hook": "Who tells the fan to spin faster when the room gets hot?",
   "lang": "hi",
   "started": "2026-11-06T15:42:09",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -44,5 +44,7 @@
     }
   ],
   "format": "studio",
-  "module": "dht"
+  "module": "dht",
+  "finished": "2026-11-06T17:00:38",
+  "uploadId": "mi38vABi_LU"
 }
