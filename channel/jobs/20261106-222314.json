@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Baby cry alarm / baby monitor (open with this hook: \"This tiny mic wakes parents when the baby cries. How?\")\" (Claude Code)",
       "at": "2026-11-06T22:23:40"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-11-06T22:24:17"
     }
   ],
   "format": "studio",
