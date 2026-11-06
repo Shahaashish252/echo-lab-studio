@@ -39,3 +39,20 @@
   studio plan: 10 shots of the sound module
 
 == voice (Microsoft Edge: Madhur)
+Downloading onnxruntime (22.7MiB)
+ Downloaded onnxruntime
+Installed 27 packages in 40ms
+[0;93m2026-11-06 22:25:19.369189023 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        3.60s  छोटा माइक रोने पर जगाता है। कैसे?
+s1-2        3.20s  इलेक्ट्रेट माइक, एलएम तीन नौ तीन चिप, नीला पोट।
+s1-3        2.83s  बेहद पतली झिल्ली बैकप्लेट के सामने लगी है।
+s1-4        2.79s  आवाज़ से झिल्ली हिलती है, वोल्टेज बनता है।
+s1-5        3.07s  कम्पेरेटर आवाज़ को पोट के थ्रेशोल्ड से मिलाता है।
+s1-6        3.58s  सस्ते मॉनिटर सिर्फ़ तेज़ी देखते हैं, रोना नहीं समझते।
+s1-7        2.47s  डीओ पिन आर्डुइनो के डी दो पर जाती है।
+s1-8        3.29s  वीसीसी पाँच वोल्ट पर लगाओ, वरना गलत पढ़ेगा।
+s1-9        2.86s  कमेंट करो: छोटा माइक रोने पर कैसे जगाता है?
+s1-10       0.73s  फॉलो करो!
+wrote 10 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit
