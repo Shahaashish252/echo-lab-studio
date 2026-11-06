@@ -1,2 +1,30 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. A temperature sensor turns room heat into an electrical signal. The LM35 outputs 10 mV per °C.
+  | 2. A microcontroller such as an Arduino reads that signal. It uses an ADC for analog sensors, or a digital protocol for the DHT11.
+  | 3. Code maps temperature to a PWM duty cycle. One example build has the fan off below 26 °C and at full speed above 29 °C.
+  | 4. The PWM pin is too weak to run a fan directly. It switches a transistor or MOSFET, which feeds the fan.
+  | 5. A flyback diode across the fan absorbs voltage spikes when the fan switches off.
+  | 6. A higher duty cycle gives the fan more average voltage, so it spins faster.
+  | 
+  | **REAL PARTS**
+  | - Sensors: LM35, DHT11, DS18B20
+  | - Switches: IRLZ44N logic-level MOSFET, TIP120, 2N2222
+  | - Diode: 1N4007
+  | - Board: Arduino Uno
+  | 
+  | **MYTH**
+  | The fan does not "feel" the heat itself. The truth is that a sensor and code decide the speed, and a MOSFET switches the power.
+  | 
+  | **SURPRISING FACT**
+  | The LM35 gives only 10 mV per °C, so a 1 °C change moves its output by just 0.01 V. It is rated about ±0.5 °C at 25 °C.
+  | 
+  | **TIP**
+  | Use a logic-level MOSFET, and don't drive the fan from the Arduino pin. Keep the sensor away from the fan's warm exhaust.
+  | 
+  | **Not verified:** the DHT11 accuracy and the 25 kHz PC-fan PWM spec.
+  | 
+  | Sources: [Circuit Digest](https://circuitdigest.com/microcontroller-projects/automatic-temperature-controlled-fan-project), [Zbotic](https://zbotic.in/?p=614199), [TI LM35](https://www.ti.com/product/LM35)
+
+== storyboard: "Auto fan that speeds up when the room gets hot (open with this hook: "Who tells the fan to spin faster when the room gets hot?")" (Claude Code)
