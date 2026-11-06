@@ -28,3 +28,6 @@
   | Sources: [Circuit Digest](https://circuitdigest.com/microcontroller-projects/automatic-temperature-controlled-fan-project), [Zbotic](https://zbotic.in/?p=614199), [TI LM35](https://www.ti.com/product/LM35)
 
 == storyboard: "Auto fan that speeds up when the room gets hot (open with this hook: "Who tells the fan to spin faster when the room gets hot?")" (Claude Code)
+  s1 sim     Pankha garmi jaanta nahi, phir bhi!
+
+== simulation (Claude Code writes it, renders it, reviews it)
