@@ -1,2 +1,35 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. A MEMS or electret mic in the baby unit turns sound pressure into a tiny voltage.
+  | 2. A preamp and an ADC (or an analog filter) boost and digitize the signal.
+  | 3. Basic monitors use a loudness threshold, called VOX or sound activation, that you can set.
+  | 4. Smarter ones look for a cry's pitch. A cry's fundamental is about 200–600 Hz, with harmonics up to about 3 kHz. Methods include cepstrum or harmonic product spectrum, plus harmonic-energy checks.
+  | 5. Some units run a small neural network on MFCC features. One example runs on a Kinetis KL25 microcontroller.
+  | 6. The audio or an alert goes by radio to the parent unit: DECT near 1.9 GHz, FHSS, or Wi-Fi.
+  | 
+  | **REAL PARTS**
+  | - INMP441 (I2S MEMS mic)
+  | - MAX4466 (electret mic preamp)
+  | - Electret capsule
+  | - Kinetis KL25
+  | - Arduino
+  | - ESP32
+  | 
+  | **MYTH**
+  | Many people believe the monitor "understands" crying, so every unit recognizes cries. Most cheap ones only react to volume. The pitch and harmonic checks, which are the real cry detection, are found in smarter units and research prototypes.
+  | 
+  | **SURPRISING FACT**
+  | DECT runs near 1.9 GHz, away from the 2.4 GHz band used by Wi-Fi and microwaves.
+  | 
+  | **TIP**
+  | Set the sensitivity so it ignores quiet sounds. Test it with a recorded cry. Don't rely on analog units, because other receivers on the same frequency can overhear them.
+  | 
+  | I didn't find a precise cry-frequency figure that I'd treat as definitive. The 200–600 Hz range comes from a review, and a patent uses 300–800 Hz.
+  | 
+  | Sources:
+  | - [Smart Sound Sensor to Classify Infant Cries](https://dea.lib.unideb.hu/items/d8a0d898-573f-4860-b62f-536fb0baf0e9)
+  | - [Audio monitoring system and method of use](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/9020622)
+  | - [How do baby monitors work (Mr Gadget)](https://mrgadget.com.au/how-do-baby-monitors-work)
+
+== storyboard: "Baby cry alarm / baby monitor (open with this hook: "This tiny mic wakes parents when the baby cries. How?")" (Claude Code)
