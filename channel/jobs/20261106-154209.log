@@ -34,3 +34,20 @@
   studio plan: 10 shots of the dht module
 
 == voice (Microsoft Edge: Madhur)
+Downloading onnxruntime (22.7MiB)
+ Downloaded onnxruntime
+Installed 27 packages in 16ms
+[0;93m2026-11-06 15:43:57.332796603 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        2.35s  पंखे को तेज़ घूमना, कौन बताता है?
+s1-2        3.43s  पंखा गर्मी नहीं जानता, सेंसर और कोड बताते हैं।
+s1-3        2.55s  नीली जाली के अंदर दो सेंसर छुपे हैं।
+s1-4        3.41s  एक परत भाप सोखती है, थर्मिस्टर गरमी नापता है।
+s1-5        2.86s  भाप लगते ही परत का रेज़िस्टेंस बदल जाता है।
+s1-6        2.70s  चिप नापकर, एक तार पर नंबर भेजती है।
+s1-7        3.53s  आर्डुइनो स्पीड तय करता है, मॉसफ़ेट पंखा चलाता है।
+s1-8        2.87s  पंखा सीधे पिन से मत जोड़ो, मॉसफ़ेट लगाओ।
+s1-9        2.88s  तो बताओ, पंखे को तेज़ घूमना कौन बताता है?
+s1-10       0.73s  फॉलो करो!
+wrote 10 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit
