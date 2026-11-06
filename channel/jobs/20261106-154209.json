@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Auto fan that speeds up when the room gets hot (open with this hook: \"Who tells the fan to spin faster when the room gets hot?\")\" (Claude Code)",
       "at": "2026-11-06T15:42:29"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-11-06T15:43:08"
     }
   ],
   "format": "studio",
