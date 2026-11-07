@@ -28,3 +28,6 @@
   | - [Fairphone: What is Adaptive Brightness?](https://support.fairphone.com/hc/en-us/articles/24996992746514-What-is-Adaptive-Brightness)
 
 == storyboard: "Phone auto-brightness: why the screen gets brighter in sunlight (open with this hook: "Why does your phone get brighter outside, but you never touch it?")" (Claude Code)
+  s1 sim     Yeh dekh nahi sakta, phir bhi badalta hai
+
+== simulation (Claude Code writes it, renders it, reviews it)
