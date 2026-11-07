@@ -1,0 +1,16 @@
+{
+  "id": "20261107-211932",
+  "topic": "Phone auto-brightness: why the screen gets brighter in sunlight",
+  "hook": "Why does your phone get brighter outside, but you never touch it?",
+  "lang": "hi",
+  "started": "2026-11-07T21:19:32",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-11-07T21:19:32"
+    }
+  ],
+  "format": "studio",
+  "module": "ldr"
+}
