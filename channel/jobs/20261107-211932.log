@@ -71,3 +71,13 @@ exported to /home/runner/work/echo-lab-studio/echo-lab-studio/out/blender: scene
   908 photo-real frames from Blender
 
 == render
+  dispatched 12 render parts (job 1794069387784)
+  render parts done: 0/12
+  render parts done: 4/12
+  render parts done: 8/12
+  render parts done: 9/12
+  render parts done: 10/12
+  render parts done: 12/12
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/phone-auto-brightness.mp4 (12 parts, 6.2 min)
+
+== youtube
