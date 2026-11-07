@@ -1,2 +1,35 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. An IR LED in the dispenser's front panel pulses invisible light, about 940 nm, downward.
+  | 2. With nothing there, the light disperses and little returns.
+  | 3. Your hand reflects some of it back to a photodiode or phototransistor beside the LED.
+  | 4. A comparator (LM393 in many designs) compares that signal with a threshold. A potentiometer sets the sensitivity.
+  | 5. When the signal crosses the threshold, the output goes high. A transistor or MOSFET then switches the pump, or a gear-motor and cam that presses a pump head.
+  | 6. The pump runs for a timed burst, or stops when you pull your hand away.
+  | 
+  | **REAL PARTS**
+  | - LM393 comparator
+  | - IR LED and photodiode pair
+  | - Small DC pump or gear motor
+  | - Transistor or relay driver
+  | - TSOP-type receivers, if the IR is modulated
+  | 
+  | **MYTH**
+  | Wrong belief: it senses your body heat or motion.
+  | Truth: most designs in the DIY sources are active reflective-IR. They sense reflected light, not heat. Some vendor pages claim body-heat sensing, but the sources don't reconcile this with the DIY designs.
+  | 
+  | **SURPRISING FACT**
+  | Product sensing ranges are short. Listings give 5–15 cm for some units and about 6–7 cm for others. One Carlo Gavazzi application note fixed a sanitizer dispenser's range at 15 cm.
+  | 
+  | **TIP**
+  | Bright sun can confuse cheap IR sensors, so keep the dispenser out of direct sunlight. Sources report these sensors work only when there is no sun. If it dispenses by itself, lower the sensitivity.
+  | 
+  | Sources:
+  | - [Touchless sanitizing apparatus](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11129502)
+  | - [Electronics For U: touch-free sanitiser dispenser](https://www.electronicsforu.com/electronics-projects/simple-touch-free-automatic-handwash-sanitiser-dispensing-machine)
+  | - [Homemade Circuits](https://homemade-circuits.com/automatic-hand-sanitizer-circuit)
+  | - [Carlo Gavazzi application note](https://www.gavazziautomation.com/fileadmin/docs/application_notes/AN_PA18_CD50_2010.pdf)
+  | - [element14 DIY build](https://commun
+
+== storyboard: "Hand sanitizer dispenser (open with this hook: "Why does sanitizer come out when you hold your hand under it?")" (Claude Code)
