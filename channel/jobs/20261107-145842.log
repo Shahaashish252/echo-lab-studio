@@ -59,3 +59,9 @@ wrote 10 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/v
   1 scenes, 33.0s
 
 == sound
+auto: 20 cues over 32.96666666666667s
+voice: kokoro
+mixed (peak -4.1 dBFS)
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/audio/auto.wav (-14 LUFS)
+
+== photo-real render (Blender on Kaggle GPU)
