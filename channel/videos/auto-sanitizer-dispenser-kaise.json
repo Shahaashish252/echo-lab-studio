@@ -1,0 +1,33 @@
+{
+  "file": "out/auto/sanitizer-dispenser-kaise.mp4",
+  "title": "Yeh Sensor Haath Dekh Nahi Sakta, Phir Bhi Pakadta Hai #shorts",
+  "description": "Haath ke neeche sanitizer kyun nikalta hai? Jawab hai ek FC-51 IR sensor jo roshni ki wapsi pakadta hai, garmi nahi.\n💡 IR LED aur photodiode ka kaam 3D mein\n🔬 Receiver ke andar electrons kaise aazad hote hain\n⚙️ LM393 comparator aur blue pot ki threshold\n🔌 Arduino se wiring ka sahi tareeka\nAur aise 3D explainers ke liye subscribe karo.\n#shorts #arduino #irsensor #fc51 #electronics #hindi #maker",
+  "tags": [
+    "fc-51 ir sensor",
+    "ir obstacle sensor arduino",
+    "hand sanitizer dispenser kaise kaam karta hai",
+    "automatic sanitizer dispenser",
+    "ir sensor in hindi",
+    "lm393 comparator",
+    "arduino sensor wiring",
+    "ir sensor kaise kaam karta hai",
+    "obstacle avoidance robot",
+    "touchless dispenser sensor",
+    "photodiode explained",
+    "arduino projects hindi",
+    "940 nm infrared led",
+    "ir sensor 3d explained"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Maker Sensor Lab: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Sanitizer haath ko dekhta nahi, phir bhi nikalta hai 🤯\nYeh jaadu garmi ka nahi, wapas aati invisible roshni ka hai 👇\n💡 IR LED lagbhag 940 nm ki roshni bhejti hai\n🔬 Haath use photodiode par wapas uchhalta hai\n⚙️ LM393 use pot ki threshold se milata hai\n🔌 VCC 5V par, OUT D2 par\n💾 Save karo apne next Arduino project ke liye\n📤 Us dost ko bhejo jo robot banana chahta hai\n💬 Tum is sensor se kya banaoge?\n#arduino #electronics #sensor #fc51 #maker",
+    "tiktok": "Sanitizer haath ko dekhta nahi, phir bhi nikalta hai! 🤯 Janiye FC-51 IR sensor ka asli raaz. Tum isse kya banaoge? #learnontiktok #arduino #electronics #irsensor #maker"
+  }
+}

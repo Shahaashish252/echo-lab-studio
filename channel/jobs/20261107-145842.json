@@ -4,7 +4,7 @@
   "hook": "Why does sanitizer come out when you hold your hand under it?",
   "lang": "hi",
   "started": "2026-11-07T14:58:42",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -44,5 +44,7 @@
     }
   ],
   "format": "studio",
-  "module": "ir"
+  "module": "ir",
+  "finished": "2026-11-07T16:10:26",
+  "uploadId": "HFyZ18g5M00"
 }

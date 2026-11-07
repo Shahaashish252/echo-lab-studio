@@ -1,9 +1,18 @@
 {
-  "updated": "06 Nov 2026, 23:47",
+  "updated": "07 Nov 2026, 16:10",
   "youtube": {
     "subs": 5,
-    "views": 3741,
+    "views": 3849,
     "videos": [
+      {
+        "title": "Baby Monitor Rona Samajhta Nahi, Bas Volume Dekhta Hai #shorts",
+        "id": "MCpqSmO5AsE",
+        "status": "private",
+        "published": "2026-11-06",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Pankha Garmi Jaanta Nahi, Phir Bhi Tez Hota Hai #shorts",
         "id": "mi38vABi_LU",
@@ -27,8 +36,8 @@
         "id": "yg0sWNjFBTs",
         "status": "public",
         "published": "2026-11-05",
-        "views": 301,
-        "likes": 6,
+        "views": 442,
+        "likes": 7,
         "comments": 0
       },
       {
@@ -108,7 +117,7 @@
         "id": "mKcPrgXveU4",
         "status": "public",
         "published": "2026-11-02",
-        "views": 49,
+        "views": 50,
         "likes": 2,
         "comments": 2
       },
@@ -126,7 +135,7 @@
         "id": "ZzilLf1hScY",
         "status": "public",
         "published": "2026-11-01",
-        "views": 195,
+        "views": 198,
         "likes": 1,
         "comments": 0
       },
@@ -342,7 +351,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 551,
+        "views": 553,
         "likes": 9,
         "comments": 2
       },
@@ -448,12 +457,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-09",
-        "views": 15,
-        "minutes": 0,
-        "subs": 0
-      },
-      {
         "day": "2026-10-10",
         "views": 0,
         "minutes": 0,
@@ -539,7 +542,7 @@
       },
       {
         "day": "2026-10-24",
-        "views": 50,
+        "views": 51,
         "minutes": 8,
         "subs": 0
       },
@@ -601,6 +604,12 @@
         "day": "2026-11-03",
         "views": 82,
         "minutes": 12,
+        "subs": 0
+      },
+      {
+        "day": "2026-11-04",
+        "views": 96,
+        "minutes": 7,
         "subs": 0
       }
     ]

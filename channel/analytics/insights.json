@@ -1,26 +1,25 @@
 {
-  "updated": "2026-11-06T22:23",
+  "updated": "2026-11-07T14:58",
   "videos": 24,
-  "summary": "Instagram is doing the real work: almost every Hindi video gets 1,200–1,400 views there, while YouTube Shorts mostly gets under 100 views per video. The best performers are short, punchy 'X doesn't do what you think' videos about hands-on maker items like robots, clap switches, mics and PIR sensors. Generic 'how does this everyday thing know?' videos (lifts, taps, doors, smoke alarms, phones) get far fewer views, likes and saves, especially on Instagram.",
-  "winningPattern": "Maker-style gadget or robot subjects (gyro robot, clap switch, line follower, mic, PIR sensor) with a surprising negative or reversal hook such as 'X doesn't do Y, it only does Z' or 'Robot would fall without this'. Hinglish titles are short, with an emoji and #shorts, and Instagram is the main driver. Videos with a visible build or demo get the most likes, saves and shares.",
+  "summary": "Instagram is carrying the channel: most Hindi videos get 1,200-1,400 views there, while YouTube Shorts mostly gets under 100 views (only a few reach 400-700). The best videos are short, surprising 'sensor/robot does X without Y' ideas about familiar things like robots, clap switches and motion sensors. Weaker videos are generic 'how does X work?' questions about public places or devices (lift, mall door, tap, smoke alarm, touchscreen), which get few views, likes or saves on both platforms.",
+  "winningPattern": "Hindi videos about a relatable maker project or robot (gyro robot, clap switch, line follower, PIR, mic) with a surprising 'it doesn't do what you think' hook, e.g. 'X doesn't see/hear/think, it only does Y'. Titles are short, use Hinglish, one emoji and #shorts. Posted mainly for Instagram, where shares and saves are highest; YouTube only reacts when the hook is a strong myth-bust (gyro, clap, PIR).",
   "doMore": [
-    "Make 'X doesn't do what you think' reversal hooks about Arduino-style modules and robots",
-    "Build series around the winners: clap switch, gyro robot, line follower, IR obstacle robot and mic",
-    "Show a physical demo or robot reacting in the first 2 seconds, then explain the sensor",
-    "End with a save-worthy line like 'Save this for your project' to lift saves and shares",
-    "Post to Instagram first and test YouTube-specific titles with searchable keywords like 'Arduino' and 'sensor'"
+    "Use the 'X doesn't do [obvious thing], it only does [surprising thing]' hook in every title and first line",
+    "Focus on maker projects and robots (Arduino modules, motors, sensors on a robot) rather than public-place gadgets",
+    "Make follow-up parts of winners: gyro robot, clap switch, line follower and PIR each deserve a part 2",
+    "Add a save or share trigger in the final line, like 'Save this for your next project' or 'Send to a maker friend'",
+    "Keep one clear question or myth per video and test the same top ideas with a stronger YouTube-specific first frame"
   ],
   "stopDoing": [
-    "Generic 'Kaise Pata Chalta Hai?' videos about public-place gadgets (lift, mall door, tap, street light)",
-    "Near-duplicate topics such as repeated smoke detector, IR sensor and tap videos with the same question-style title",
-    "Reusing the same unchanged Hindi upload on YouTube expecting it to perform like Instagram"
+    "Generic 'Kaise kaam karta hai?' titles on public gadgets (lift, mall door, tap, street light) that have no surprise",
+    "Posting near-duplicate topics (two smoke detector, two IR sensor, two tap videos) within days of each other"
   ],
   "nextTopics": [
-    "Self-balancing robot and the MPU6050",
-    "Ultrasonic sensor robot that stops before a wall",
-    "Sound sensor module versus clap switch",
-    "Servo motor that knows its angle",
-    "Light sensor (LDR) robot that follows a torch"
+    "Ultrasonic sensor robot that stops before hitting a wall",
+    "Gyro/accelerometer self-balancing robot part 2",
+    "Arduino LDR night lamp",
+    "Buzzer and touch sensor door alarm",
+    "Servo motor: how it knows its angle"
   ],
   "bestTimes": {
     "times": [

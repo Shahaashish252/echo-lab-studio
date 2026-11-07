@@ -585,5 +585,14 @@
     "topic": "Baby cry alarm / baby monitor",
     "job": "20261106-222314",
     "heldPostAt": "2026-11-07T16:00"
+  },
+  {
+    "id": "HFyZ18g5M00",
+    "meta": "channel/videos/auto-sanitizer-dispenser-kaise.json",
+    "date": "2026-11-07",
+    "status": "held",
+    "topic": "Hand sanitizer dispenser",
+    "job": "20261107-145842",
+    "heldPostAt": "2026-11-08T16:00"
   }
 ]

@@ -79,11 +79,6 @@
       "topic": "CMOS camera sensor",
       "hook": "Every photo is millions of tiny light buckets.",
       "module": ""
-    },
-    {
-      "topic": "Hand sanitizer dispenser",
-      "hook": "Why does sanitizer come out when you hold your hand under it?",
-      "module": "ir"
     }
   ],
   "done": [
@@ -134,6 +129,7 @@
     "Fire-fighting robot that finds a candle flame",
     "Car auto-dimming rear mirror",
     "Auto fan that speeds up when the room gets hot",
-    "Baby cry alarm / baby monitor"
+    "Baby cry alarm / baby monitor",
+    "Hand sanitizer dispenser"
   ]
 }
