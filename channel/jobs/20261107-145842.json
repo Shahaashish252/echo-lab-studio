@@ -1,0 +1,16 @@
+{
+  "id": "20261107-145842",
+  "topic": "Hand sanitizer dispenser",
+  "hook": "Why does sanitizer come out when you hold your hand under it?",
+  "lang": "hi",
+  "started": "2026-11-07T14:58:42",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-11-07T14:58:43"
+    }
+  ],
+  "format": "studio",
+  "module": "ir"
+}
