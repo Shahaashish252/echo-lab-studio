@@ -1,2 +1,30 @@
 
 == research: reading about the topic on the web
+  | **HOW IT WORKS**
+  | 1. A tiny ambient light sensor near the front camera or under the display has a photodiode. Light on it produces a current.
+  | 2. An ADC turns that current into a lux value.
+  | 3. The OS maps lux to a target brightness on a roughly logarithmic curve. Your eye needs about 10× the light to see "twice as bright."
+  | 4. Lux ranges are bucketed and smoothed (Windows does this) so the screen doesn't flicker with small changes.
+  | 5. The display driver ramps the backlight or OLED current up or down.
+  | 6. Android Adaptive Brightness remembers every time you move the slider and bends the curve to match.
+  | 
+  | **REAL PARTS**
+  | - Ambient light sensor (ALS) photodiode. It is often combined with an IR LED proximity sensor in one module, so one chip does both jobs. I did not verify specific part numbers. Common examples are the Vishay VEML7700 and AMS TSL2591.
+  | - Display driver IC.
+  | 
+  | **MYTH**
+  | - Myth: the front camera measures the light.
+  | - Truth: a separate small photodiode sensor does. Sunlight's IR can make it read brighter than your eye perceives.
+  | 
+  | **SURPRISING FACT**
+  | - Phones must handle roughly 0.1 lux to 220,000 lux, a span of over 6 orders of magnitude (Electronic Design).
+  | 
+  | **TIP**
+  | - Don't cover the sensor with a thick screen protector or case, since it can misread. Nudge the slider a few times in bright and dim places so Adaptive Brightness learns your preference.
+  | 
+  | Sources:
+  | - [Electronic Design: Hardware Design Guide to Smartphone Ambient-Light Sensing](https://www.electronicdesign.com/technologies/software/operating-systems/article/21801487/hardware-design-guide-to-smartphone-ambient-light-sensing)
+  | - [Microsoft: Adaptive brightness](https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/sensors-adaptive-brightness)
+  | - [Fairphone: What is Adaptive Brightness?](https://support.fairphone.com/hc/en-us/articles/24996992746514-What-is-Adaptive-Brightness)
+
+== storyboard: "Phone auto-brightness: why the screen gets brighter in sunlight (open with this hook: "Why does your phone get brighter outside, but you never touch it?")" (Claude Code)
