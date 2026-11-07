@@ -79,6 +79,36 @@
       "topic": "CMOS camera sensor",
       "hook": "Every photo is millions of tiny light buckets.",
       "module": ""
+    },
+    {
+      "topic": "Smart dustbin lid that opens when you wave your hand",
+      "hook": "Why does this dustbin open for your hand but not your bag?",
+      "module": "ir"
+    },
+    {
+      "topic": "Sound-activated disco lights that dance to the music",
+      "hook": "These lights blink to the beat, but they have no music player!",
+      "module": "sound"
+    },
+    {
+      "topic": "Kitchen chimney that turns on when smoke rises",
+      "hook": "Your chimney starts on its own when the tadka smoke rises. How?",
+      "module": "gas"
+    },
+    {
+      "topic": "Smart plant pot that knows when to drink water",
+      "hook": "Your plant asks for water, but it can't talk. So how does it?",
+      "module": "soil"
+    },
+    {
+      "topic": "Room humidity: why 30°C feels sticky but 30°C feels fine",
+      "hook": "Same 30 degrees, but one day feels sticky. Here's why.",
+      "module": "dht"
+    },
+    {
+      "topic": "Gas geyser that cuts off gas when the flame goes out",
+      "hook": "What if the flame goes out? The geyser knows and shuts the gas.",
+      "module": "flame"
     }
   ],
   "done": [
@@ -130,6 +160,7 @@
     "Car auto-dimming rear mirror",
     "Auto fan that speeds up when the room gets hot",
     "Baby cry alarm / baby monitor",
-    "Hand sanitizer dispenser"
+    "Hand sanitizer dispenser",
+    "Phone auto-brightness: why the screen gets brighter in sunlight"
   ]
 }

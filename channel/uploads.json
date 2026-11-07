@@ -594,5 +594,14 @@
     "topic": "Hand sanitizer dispenser",
     "job": "20261107-145842",
     "heldPostAt": "2026-11-08T16:00"
+  },
+  {
+    "id": "YTaEtyiHKsI",
+    "meta": "channel/videos/auto-phone-auto-brightness.json",
+    "date": "2026-11-07",
+    "status": "held",
+    "topic": "Phone auto-brightness: why the screen gets brighter in sunlight",
+    "job": "20261107-211932",
+    "heldPostAt": "2026-11-08T16:00"
   }
 ]

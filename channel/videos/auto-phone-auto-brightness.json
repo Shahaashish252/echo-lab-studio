@@ -1,0 +1,33 @@
+{
+  "file": "out/auto/phone-auto-brightness.mp4",
+  "title": "Phone Ko Dhoop Ka Pata Kaise Chalta Hai? Sach Yeh Hai #shorts",
+  "description": "Bahar jaate hi phone ki screen khud tez ho jaati hai, aur camera iska kaaran nahi hai. Chhota light sensor yeh kaam karta hai.\n💡 Phone ka ambient light sensor (photodiode) kaise roshni naapta hai\n🔬 LDR ke andar CdS track aur electrons ka khel\n⚡ LM393 comparator aur blue pot se threshold\n🔌 Arduino wiring tip: VCC 5V, AO A0\nMore maker videos ke liye subscribe karo.\n#shorts #arduino #ldr #sensor #electronics #hindi #maker",
+  "tags": [
+    "phone auto brightness kaise kaam karta hai",
+    "auto brightness in hindi",
+    "ambient light sensor",
+    "ldr sensor arduino",
+    "ldr module explained",
+    "ldr sensor in hindi",
+    "lm393 comparator",
+    "photoresistor kaise kaam karta hai",
+    "arduino light sensor project",
+    "adaptive brightness explained",
+    "phone screen brightness sensor",
+    "arduino projects in hindi",
+    "cds photoresistor",
+    "light sensor module wiring"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Maker Sensor Lab: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Phone bahar khud tez kyun hota hai? 📱\nCamera nahi, ek chhota light sensor yeh karta hai. Hum wahi kaam LDR module se banate hain 👇\n💡 Phone mein photodiode light sensor hota hai\n🔬 LDR andhere mein 1 megaohm se zyada, dhoop mein kilohm tak\n⚡ LM393 aur pot threshold set karte hain\n🔌 VCC 5V, AO A0 pe jodo\n💾 Save karo apne next Arduino project ke liye\n📤 Us dost ko bhejo jo sochta hai camera brightness naapta hai\n💬 Aap LDR se kya banaoge?\n#sensors #electronics #arduino #ldrsensor #makerhindi",
+    "tiktok": "Phone bahar khud tez kyun hota hai? 📱 Camera nahi, light sensor! Seekho LDR module kaise kaam karta hai. Aap isse kya banaoge? #learnontiktok #arduino #ldr #electronics #hindi"
+  }
+}

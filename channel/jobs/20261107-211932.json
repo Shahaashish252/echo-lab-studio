@@ -4,7 +4,7 @@
   "hook": "Why does your phone get brighter outside, but you never touch it?",
   "lang": "hi",
   "started": "2026-11-07T21:19:32",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research: reading about the topic on the web",
@@ -44,5 +44,7 @@
     }
   ],
   "format": "studio",
-  "module": "ldr"
+  "module": "ldr",
+  "finished": "2026-11-07T22:13:10",
+  "uploadId": "YTaEtyiHKsI"
 }
