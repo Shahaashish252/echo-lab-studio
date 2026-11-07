@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Hand sanitizer dispenser (open with this hook: \"Why does sanitizer come out when you hold your hand under it?\")\" (Claude Code)",
       "at": "2026-11-07T14:59:01"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-11-07T14:59:33"
     }
   ],
   "format": "studio",
