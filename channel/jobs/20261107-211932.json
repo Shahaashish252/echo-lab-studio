@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Phone auto-brightness: why the screen gets brighter in sunlight (open with this hook: \"Why does your phone get brighter outside, but you never touch it?\")\" (Claude Code)",
       "at": "2026-11-07T21:19:54"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-11-07T21:20:29"
     }
   ],
   "format": "studio",
