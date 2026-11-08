@@ -13,6 +13,10 @@
     {
       "name": "storyboard: \"Sound-activated disco lights that dance to the music (open with this hook: \"These lights blink to the beat, but they have no music player!\")\" (Claude Code)",
       "at": "2026-11-08T21:39:30"
+    },
+    {
+      "name": "simulation (Claude Code writes it, renders it, reviews it)",
+      "at": "2026-11-08T21:40:01"
     }
   ],
   "format": "studio",
