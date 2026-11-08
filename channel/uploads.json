@@ -603,5 +603,14 @@
     "topic": "Phone auto-brightness: why the screen gets brighter in sunlight",
     "job": "20261107-211932",
     "heldPostAt": "2026-11-08T16:00"
+  },
+  {
+    "id": "MxLpL2zEiVM",
+    "meta": "channel/videos/auto-clap-disco-lights.json",
+    "date": "2026-11-08",
+    "status": "held",
+    "topic": "Sound-activated disco lights that dance to the music",
+    "job": "20261108-213911",
+    "heldPostAt": "2026-11-09T16:00"
   }
 ]

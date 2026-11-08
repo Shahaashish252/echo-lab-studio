@@ -1,0 +1,33 @@
+{
+  "file": "out/auto/clap-disco-lights.mp4",
+  "title": "Disco Lights Gaana Nahi Samajhti, Bas Shor Sunti Hain 🎶 #shorts",
+  "description": "Yeh lights beat pe blink karti hain, par inme koi music player nahi! Jaano KY-038 sound sensor ka asli raaz.\n🎤 Electret microphone ke andar ka diaphragm aur backplate\n⚡ LM393 comparator aur blue pot ka threshold\n🎛️ Color organ mein bass aur treble ka split\n🔌 Arduino Uno wiring ka important tip\nAur Arduino projects ke liye subscribe karo!\n#shorts #arduino #soundsensor #ky038 #electronics #hindi #maker",
+  "tags": [
+    "sound sensor kaise kaam karta hai",
+    "ky-038 sound sensor",
+    "ky-038 arduino",
+    "clap switch arduino",
+    "sound sensor in hindi",
+    "disco lights kaise chalti hain",
+    "sound activated lights",
+    "electret microphone explained",
+    "lm393 comparator",
+    "arduino sound sensor tutorial",
+    "color organ circuit",
+    "clap switch kaise banate hain",
+    "arduino projects hindi",
+    "sound sensor module wiring"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Arduino Sensors: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 1500,
+  "social": {
+    "instagram": "Yeh lights beat pe nachti hain, par player nahi! 🎶\nInme music player hai hi nahi, bas ek chhota microphone hai.\nJaano andar kya chalta hai 👇\n🎤 Electret mic hawa ka dabav sunta hai\n⚡ LM393 loudness ko threshold se milata hai\n🎛️ Color organ bass aur treble alag karta hai\n🔌 DO pin ko D2 par lagao, VCC 5V par\n💾 Save karo apne next Arduino project ke liye\n📤 Bhejo us dost ko jo clap switch banana chahta hai\n💬 Tum in lights se kya chalaoge?\n#arduino #electronics #soundsensor #ky038 #makerlife",
+    "tiktok": "Lights beat pe nachti hain, par music player nahi! 🎶 Dekho KY-038 sound sensor andar se kaise kaam karta hai. Tum isse kya chalaoge? #arduino #learnontiktok #electronics #soundsensor #ky038"
+  }
+}

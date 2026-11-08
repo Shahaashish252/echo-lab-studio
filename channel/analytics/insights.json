@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-07T21:19",
+  "updated": "2026-11-08T21:38",
   "videos": 24,
-  "summary": "Instagram is doing the heavy lifting: almost every Hindi video gets 1,000+ views there, while YouTube Shorts mostly gets under 60 views, with a few exceptions. The best videos use a surprising 'it doesn't actually see/hear/think' hook about a simple robot or sensor (gyro robot, clap switch, PIR, line follower). Generic 'How does X work? 🤔' everyday-object titles (lift, tap, mall door, smoke detector, TV remote) get far less reach and almost no saves or shares.",
-  "winningPattern": "Hindi, short 'X doesn't do Y, it only does Z' myth-busting hook about a hobby-robotics or Arduino-style sensor (gyro, clap switch, PIR, line follower, IR obstacle). Title states a counterintuitive claim in Hinglish with an emoji and #shorts, and is built around a robot or maker project rather than a household appliance. Posted on Instagram first, since it reliably gives 1,000+ views; YouTube only picked up the same style a few times (gyro, clap switch, PIR got 500-680 views). Clap switch topic worked twice, and a fresh angle on a proven topic is a safe bet.",
+  "summary": "Instagram is doing the work: almost every Hindi video gets 1,000+ views there, while YouTube Shorts mostly gets under 60 views, with a few exceptions. The best videos use a surprising 'it doesn't see/hear the way you think' hook about a simple, familiar gadget or robot (gyro robot, clap switch, PIR sensor), and they earn the most likes, saves and shares. Weak videos are generic 'How does X work?' questions about public-place devices (lift, mall door, taps, smoke detector), which stay under 500 views and get almost no saves or shares. The one English video got no Instagram reach, so it is not yet a proven path.",
+  "winningPattern": "A hands-on maker/robot or Arduino-style sensor subject (gyro robot, clap switch, PIR, line follower, mic, IR robot) with a Hindi 'myth-flip' hook: 'X doesn't do what you think, it only does Y' or a 'without this part, it fails' dramatic consequence. Short Hinglish titles with one emoji and #shorts, posted first and mainly to Instagram Reels, ideally as a series (clap switch got two strong videos). Posting daily in late Oct to early Nov also helped.",
   "doMore": [
-    "Lead with a counterintuitive claim: 'X nahi karta, sirf Y karta hai' or 'Bina X ke ye Y ho jaata'.",
-    "Focus on robots and maker modules (gyro, IR, line follower, clap switch, PIR) that students can build themselves.",
-    "Make follow-up angles on proven hits, like the clap switch whistle video and other sensors tested in the same robot.",
-    "Add a save/share trigger at the end, such as 'Save karo project ke liye' or 'Dost ko bhejo jo robot banata hai'.",
-    "Keep posting daily in Hindi on Instagram, and copy the exact hook wording that worked on YouTube for the gyro, clap and PIR titles."
+    "Open with a surprising reversal ('doesn't see, only feels/hears') or a failure demo ('without X, robot falls')",
+    "Choose robots and hobby modules students can build: gyro, clap switch, line follower, mic, IR obstacle sensor",
+    "Make follow-up series from winners, such as a clap switch part 3 or a gyro robot part 2",
+    "End with a save-worthy takeaway like a wiring tip or pin diagram to boost saves and shares",
+    "Test YouTube separately with the strongest hooks, and check why the IR robot video got 10 shares on Instagram but only 14 YouTube views"
   ],
   "stopDoing": [
-    "Generic 'Kaise Kaam Karta Hai? 🤔' titles on everyday objects (lift, mall door, taps, smoke detector, TV remote), which average under 300 IG views.",
-    "Making several near-duplicate videos on one topic, like the 2 smoke detector, 2 tap and 2 IR sensor videos, which split the audience and lower each result.",
-    "Posting English videos with no Instagram version, since the one English video got only 161 YouTube views and nothing elsewhere."
+    "Generic 'Kaise kaam karta hai?' titles about public devices (lift, mall door, tap, smoke detector)",
+    "Posting several near-duplicate topics (IR sensor, smoke detector, tap) within days of each other",
+    "Publishing English versions until Hindi YouTube and Instagram are working consistently"
   ],
   "nextTopics": [
-    "Ultrasonic sensor robot stopping before a wall",
-    "Bluetooth car controlled by phone",
-    "Servo motor knowing its exact angle",
-    "Light-following robot using LDR",
-    "Arduino without code does nothing"
+    "Servo motor holding its position",
+    "Ultrasonic robot avoiding obstacles",
+    "Clap switch part 3: why it fails in noise",
+    "Gyro robot part 2: balancing robot",
+    "LDR light sensor in a night lamp"
   ],
   "bestTimes": {
     "times": [

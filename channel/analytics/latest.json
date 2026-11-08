@@ -1,9 +1,18 @@
 {
-  "updated": "07 Nov 2026, 22:13",
+  "updated": "08 Nov 2026, 23:06",
   "youtube": {
     "subs": 5,
-    "views": 3849,
+    "views": 3977,
     "videos": [
+      {
+        "title": "Phone Ko Dhoop Ka Pata Kaise Chalta Hai? Sach Yeh Hai #shorts",
+        "id": "YTaEtyiHKsI",
+        "status": "private",
+        "published": "2026-11-07",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Yeh Sensor Haath Dekh Nahi Sakta, Phir Bhi Pakadta Hai #shorts",
         "id": "HFyZ18g5M00",
@@ -45,7 +54,7 @@
         "id": "yg0sWNjFBTs",
         "status": "public",
         "published": "2026-11-05",
-        "views": 509,
+        "views": 510,
         "likes": 7,
         "comments": 0
       },
@@ -126,7 +135,7 @@
         "id": "mKcPrgXveU4",
         "status": "public",
         "published": "2026-11-02",
-        "views": 50,
+        "views": 51,
         "likes": 2,
         "comments": 2
       },
@@ -189,7 +198,7 @@
         "id": "CCTv-pNY0Is",
         "status": "public",
         "published": "2026-10-27",
-        "views": 25,
+        "views": 26,
         "likes": 1,
         "comments": 2
       },
@@ -360,7 +369,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 553,
+        "views": 555,
         "likes": 9,
         "comments": 2
       },
@@ -465,12 +474,6 @@
       }
     ],
     "daily": [
-      {
-        "day": "2026-10-10",
-        "views": 0,
-        "minutes": 0,
-        "subs": 0
-      },
       {
         "day": "2026-10-11",
         "views": 1,
@@ -620,6 +623,12 @@
         "views": 96,
         "minutes": 7,
         "subs": 0
+      },
+      {
+        "day": "2026-11-05",
+        "views": 319,
+        "minutes": 85,
+        "subs": 1
       }
     ]
   },

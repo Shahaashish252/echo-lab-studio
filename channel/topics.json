@@ -86,11 +86,6 @@
       "module": "ir"
     },
     {
-      "topic": "Sound-activated disco lights that dance to the music",
-      "hook": "These lights blink to the beat, but they have no music player!",
-      "module": "sound"
-    },
-    {
       "topic": "Kitchen chimney that turns on when smoke rises",
       "hook": "Your chimney starts on its own when the tadka smoke rises. How?",
       "module": "gas"
@@ -161,6 +156,7 @@
     "Auto fan that speeds up when the room gets hot",
     "Baby cry alarm / baby monitor",
     "Hand sanitizer dispenser",
-    "Phone auto-brightness: why the screen gets brighter in sunlight"
+    "Phone auto-brightness: why the screen gets brighter in sunlight",
+    "Sound-activated disco lights that dance to the music"
   ]
 }
