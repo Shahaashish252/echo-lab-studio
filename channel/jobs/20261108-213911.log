@@ -27,3 +27,20 @@
   studio plan: 10 shots of the sound module
 
 == voice (Microsoft Edge: Madhur)
+Downloading onnxruntime (22.7MiB)
+ Downloaded onnxruntime
+Installed 27 packages in 21ms
+[0;93m2026-11-08 21:40:50.361727685 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+s1-1        2.67s  ये लाइट्स बीट पर नाचती हैं, प्लेयर नहीं!
+s1-2        3.12s  यह साउंड सेंसर मॉड्यूल है, गाना नहीं समझता।
+s1-3        2.72s  इलेक्ट्रेट माइक हवा का दबाव महसूस करता है।
+s1-4        3.26s  पतला चार्ज्ड डायाफ्राम बैकप्लेट के सामने कांपता है।
+s1-5        3.18s  कैपेसिटेंस बदलती है, तो छोटा वोल्टेज बनता है।
+s1-6        3.73s  LM393 उसे पॉट वाले थ्रेशोल्ड से मिलाता है।
+s1-7        3.19s  कलर ऑर्गन फिल्टर से बास और ट्रेबल अलग करता है।
+s1-8        2.98s  वीसीसी पाँच वोल्ट पर, डीओ डी-दो पर लगाओ।
+s1-9        2.00s  बिना प्लेयर के लाइट्स कैसे नाचीं?
+s1-10       0.73s  फॉलो करो!
+wrote 10 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/auto/kokoro
+
+== backgrounds (motion graphics): circuit
