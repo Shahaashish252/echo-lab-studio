@@ -1,2 +1,23 @@
 
 == research: reading about the topic on the web
+  | **HOOK:** "These lights blink to the beat, but they have no music player!"
+  | 
+  | **HOW IT WORKS**
+  | 1. An electret microphone turns air pressure waves into a tiny varying voltage (its capacitance changes with sound).
+  | 2. A bias resistor sets the mic's DC level. A coupling capacitor passes only the audio swing.
+  | 3. An op-amp preamp (e.g. LM324) boosts the signal. One LM3915 design uses a gain of 101.
+  | 4. Option A: the LM393 comparator compares the signal to a pot-set threshold. The output flips, and a transistor or relay switches the lights.
+  | 5. Option B (color organ): low-pass, bandpass and high-pass filters split bass, mid and treble. Each band drives its own LED channel through a transistor.
+  | 6. Option C: the LM3915 drives 10 LEDs as a level bar.
+  | 
+  | **REAL PARTS:** electret mic, LM393, KY-037 module, LM324, LM3915, NPN transistors.
+  | 
+  | **MYTH:** "The lights are connected to the music or decode the song." Truth: they only hear the room's air vibrations and react to loudness and frequency. They know nothing about the song.
+  | 
+  | **SURPRISING FACT:** One Digi-Key color organ splits sound at about 72 Hz and 1.54 kHz. A Silicon Chip design runs from a 200 Hz low-pass up to a 2 kHz high-pass that passes 2–20 kHz.
+  | 
+  | **TIP:** Put the mic near the speaker and tune the threshold pot. The KY-037's mic isn't very sensitive, so adjust until the LED blinks only on beats.
+  | 
+  | **Sources:** homemade-circuits.com, makezine.com, siliconchip.com.au, digikey.nl, radiolocman.com, learn.dfrobot.com
+
+== storyboard: "Sound-activated disco lights that dance to the music (open with this hook: "These lights blink to the beat, but they have no music player!")" (Claude Code)
