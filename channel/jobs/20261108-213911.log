@@ -21,3 +21,6 @@
   | **Sources:** homemade-circuits.com, makezine.com, siliconchip.com.au, digikey.nl, radiolocman.com, learn.dfrobot.com
 
 == storyboard: "Sound-activated disco lights that dance to the music (open with this hook: "These lights blink to the beat, but they have no music player!")" (Claude Code)
+  s1 sim     Player nahi, phir bhi beat pe!
+
+== simulation (Claude Code writes it, renders it, reviews it)
