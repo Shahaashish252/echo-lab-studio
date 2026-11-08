@@ -67,3 +67,15 @@ exported to /home/runner/work/echo-lab-studio/echo-lab-studio/out/blender: scene
   911 photo-real frames from Blender
 
 == render
+  dispatched 12 render parts (job 1794158907826)
+  render parts done: 0/12
+  render parts done: 5/12
+  render parts done: 7/12
+  render parts done: 8/12
+  render parts done: 9/12
+  render parts done: 10/12
+  render parts done: 11/12
+  render parts done: 12/12
+wrote /home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/clap-disco-lights.mp4 (12 parts, 7.2 min)
+
+== youtube
