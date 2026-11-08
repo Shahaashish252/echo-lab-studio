@@ -1,0 +1,16 @@
+{
+  "id": "20261108-213911",
+  "topic": "Sound-activated disco lights that dance to the music",
+  "hook": "These lights blink to the beat, but they have no music player!",
+  "lang": "hi",
+  "started": "2026-11-08T21:39:11",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research: reading about the topic on the web",
+      "at": "2026-11-08T21:39:12"
+    }
+  ],
+  "format": "studio",
+  "module": "sound"
+}
