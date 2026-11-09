@@ -629,9 +629,13 @@
     "id": "MR1GGw3DNNM",
     "meta": "channel/videos/td3-ultrasonic-robot-sunta-hai.json",
     "date": "2026-11-09",
-    "status": "approved",
+    "status": "published",
     "topic": "Ultrasonic obstacle avoiding robot",
     "job": "20261109-102038",
-    "postAt": "2026-11-09T16:00"
+    "postAt": "2026-11-09T16:00",
+    "published": {
+      "youtube": "2026-11-09"
+    },
+    "postedAt": "2026-11-09T16:00"
   }
 ]
