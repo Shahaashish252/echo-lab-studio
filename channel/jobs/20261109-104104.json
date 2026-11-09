@@ -9,6 +9,10 @@
     {
       "name": "script: \"Clap switch part 3: why it fails in noise\" (sound, Claude)",
       "at": "2026-11-09T10:41:07"
+    },
+    {
+      "name": "voice (Microsoft Edge neural)",
+      "at": "2026-11-09T10:41:41"
     }
   ],
   "format": "teardown3",
