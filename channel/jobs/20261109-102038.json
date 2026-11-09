@@ -9,6 +9,10 @@
     {
       "name": "script: \"Ultrasonic obstacle avoiding robot (open with this hook: \"Yeh robot dekhta nahi, sirf sunta hai\")\" (ultrasonic, Claude)",
       "at": "2026-11-09T10:20:38"
+    },
+    {
+      "name": "voice (Microsoft Edge neural)",
+      "at": "2026-11-09T10:20:43"
     }
   ],
   "format": "teardown3",
