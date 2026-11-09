@@ -1,79 +1,18 @@
 {
   "queue": [
     {
-      "topic": "Ultrasonic obstacle robot",
-      "hook": "Yeh Robot Dekhta Nahi, Sirf Awaaz Sunta Hai!"
+      "topic": "Touch sensor lamp",
+      "hook": "Is Lamp Mein Button Nahi Hai, Phir Bhi Jalta Hai",
+      "module": ""
     },
     {
-      "topic": "Sound sensor module (Arduino)",
-      "hook": "Is Chhote Module Ko Taali Aur Seeti Mein Farak Nahi Pata"
-    },
-    {
-      "topic": "Accelerometer / tilt sensor",
-      "hook": "Is Chip Ke Bina Aapka Phone Ghoom Nahi Sakta"
-    },
-    {
-      "topic": "Light sensor LDR robot",
-      "hook": "Ye Robot Roshni Ke Peeche Bhaagta Hai, Dimaag Nahi Hai"
-    },
-    {
-      "topic": "Self-balancing robot with a gyro",
-      "hook": "Yeh robot gir kyun nahi raha? Gyro ka jaadu"
-    },
-    {
-      "topic": "Bluetooth car remote that can't hear you",
-      "hook": "Yeh car aapki baat nahi sunti, sirf signal pakadti hai"
-    },
-    {
-      "topic": "Servo motor knows its angle",
-      "hook": "Servo ko pata hai wo kitna ghoom chuka hai"
-    },
-    {
-      "topic": "Light-following robot using LDR",
-      "hook": "Is robot ki aankhen nahi hain, phir bhi roshni dhoondta hai"
-    },
-    {
-      "topic": "Buzzer vs speaker difference",
-      "hook": "Buzzer gaana kyun nahi gaa sakta? Speaker kar leta hai"
-    },
-    {
-      "topic": "Ultrasonic obstacle robot: why it sees with sound",
-      "hook": "Ye robot andha hai, phir bhi deewar se nahi takraata"
-    },
-    {
-      "topic": "Servo motor without a brain: how it holds its angle",
-      "hook": "Servo Motor Ko Pata Hi Nahi Wo Kahan Ghoom Raha Hai"
-    },
-    {
-      "topic": "Light-sensing LDR night lamp",
-      "hook": "Is Chhote Resistor Ko Andhere Ka Pata Kaise Chalta Hai?"
-    },
-    {
-      "topic": "Arduino without code: what happens if you power it empty",
-      "hook": "Bina Code Ke Arduino Sirf Ek Dibba Hai"
-    },
-    {
-      "topic": "Touch sensor module that feels you without pressing",
-      "hook": "Ye Button Dabaaye Bina Aapka Touch Pehchan Leta Hai"
-    },
-    {
-      "topic": "Touch sensor lamp that turns on with a finger",
-      "hook": "Is lamp ko aapki ungli nahi, aapka sharir chala raha hai",
+      "topic": "Buzzer and potentiometer sound control",
+      "hook": "Ek Ghumta Knob Awaaz Ka Pitch Kaise Badalta Hai?",
       "module": ""
     },
     {
       "topic": "Buzzer alarm that triggers on tilt",
       "hook": "Ise hilao toh bajta hai, bina kisi button ke",
-      "module": ""
-    },
-    {
-      "topic": "Touch sensor lamp using a single transistor",
-      "hook": "Ye lamp chhoone se jalta hai, par button hai hi nahi",
-      "module": ""
-    },
-    {
-      "topic": "Buzzer and potentiometer volume control",
-      "hook": "Sirf ek ghumne wala knob aur awaaz badal jaati hai",
       "module": ""
     },
     {

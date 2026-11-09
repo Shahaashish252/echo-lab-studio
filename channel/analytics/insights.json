@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-09T10:40",
-  "videos": 24,
-  "summary": "Instagram is carrying the channel: most Hindi videos get 1,200-1,400 views there, while YouTube Shorts mostly gets under 60 views. The best videos are short, surprising 'sensor can't see/hear but still works' explainers about relatable gadgets and hobby robots (gyro robot, clap switch, PIR). Weak ones are generic 'how does X work?' questions on everyday items, such as lift doors, taps, smoke detectors and touchscreens, and these get little reach on either platform.",
-  "winningPattern": "Hindi Shorts on hands-on maker subjects (robots, clap switch, PIR, mic, IR) with a bold, counterintuitive claim as the hook, such as 'X can't see/hear/think, yet it works' or 'without X the robot falls'. Titles are short and punchy, in Hinglish, with one emoji, and often use a 'Nahi... Sirf...' contrast. Instagram is the main growth platform, and YouTube only picks up the clap switch and PIR videos, which are searchable and curiosity-driven.",
+  "updated": "2026-11-09T16:11",
+  "videos": 25,
+  "summary": "Instagram is doing most of the work: nearly every video gets 1,000+ views there, while YouTube Shorts mostly gets under 100 per video. The best videos use a surprising 'it doesn't X, it only Y' claim or a robot/clap-switch demo that people can picture instantly, and they get likes, saves and shares. Dry, generic 'How does X work?' titles about everyday places (lift, mall door, tap, smoke detector) get few views and almost no engagement, and the one English video did poorly on YouTube and wasn't posted on Instagram.",
+  "winningPattern": "Hindi, Instagram-first. Hands-on maker subjects (robots, clap switch, mic, PIR/IR sensors) with a counter-intuitive hook like 'X doesn't do A, it only does B' or a funny personified line ('Line follower has no brain'). Short Hinglish titles with one emoji and a clear, concrete object. Videos with a visible behaviour (robot falling, clap/whistle triggering) earn the most likes, saves and shares.",
   "doMore": [
-    "Open with a contradiction or a bold claim ('Nahi... Sirf...') instead of a plain 'Kaise kaam karta hai?' question",
-    "Make more robot and Arduino-module videos (gyro, line follower, IR obstacle, clap switch), which get the best likes, saves and shares",
-    "Do follow-ups to winners: a clap switch part 3 and PIR or gyro variations, since a sequel to a hit tends to hold its audience",
-    "Show a quick physical demo in the first 2 seconds and end with a clear takeaway worth saving or sharing",
-    "Test the YouTube titles and thumbnails of the Instagram hits separately, since the same topic gets far fewer views there"
+    "Open with a 'doesn't see/hear/think, only does Y' contradiction in the first line",
+    "Pick robot and maker-project subjects where the audience can see something happen (falls, turns, triggers)",
+    "Make follow-ups to winners: gyro, clap switch and PIR each have more angles (balancing, filters, tuning)",
+    "End with a save-worthy takeaway such as a wiring tip or a 'try this at home' test to boost saves and shares",
+    "Cross-check why YouTube lags: test a stronger first-second visual and a shorter title on YT for the same winning topics"
   ],
   "stopDoing": [
-    "Generic everyday-appliance explainers (lift door, washroom tap, smoke detector, mall door) that repeat the same sensor idea",
-    "Posting near-duplicate topics (two smoke detector videos, two automatic tap videos, two IR-in-dark videos) within days of each other",
-    "Switching to English, since the one English video got only 161 views on YouTube and nothing on Instagram"
+    "Generic 'Kaise kaam karta hai?' titles about public-place gadgets (lift, mall door, washroom tap)",
+    "Posting near-duplicate topics (two smoke alarm, two IR, two tap videos) within days of each other",
+    "Switching to English without a plan; keep Hindi until the audience proves otherwise"
   ],
   "nextTopics": [
-    "Ultrasonic obstacle robot",
-    "Sound sensor module (Arduino)",
-    "Accelerometer / tilt sensor",
-    "Light sensor LDR robot",
-    "Servo motor"
+    "Ultrasonic robot that avoids obstacles",
+    "Self-balancing robot with accelerometer",
+    "Light-following robot with LDR",
+    "Touch sensor lamp",
+    "Buzzer and potentiometer sound control"
   ],
   "bestTimes": {
     "times": [
-      "16:00",
+      "15:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (23 posts)"
+    "reason": "from our own posts: these hours averaged the most views (24 posts)"
   }
 }
