@@ -1,0 +1,34 @@
+{
+  "file": "out/auto/ultrasonic-robot-sunta-hai.mp4",
+  "title": "Yeh Robot Dekhta Nahi, Sirf Sunta Hai 🤖 #shorts",
+  "description": "Obstacle avoiding robot deewar se pehle kaise mud jaata hai? Uski 'aankhein' asal mein kaan hain!\n🔊 HC-SR04: 40 kHz ki anasuni awaaz\n🧩 3D teardown: piezo disc andar se\n📐 Blueprint: TRIG 10 µs, 8 pulse, ECHO HIGH\n📏 µs ÷ 58 = cm (580 µs = 10 cm)\nAise aur 3D explainers ke liye subscribe karo!\n#shorts #hcsr04 #arduino #robot #ultrasonicsensor #obstacleavoidingrobot #electronics #hindi",
+  "tags": [
+    "obstacle avoiding robot",
+    "ultrasonic sensor kaise kaam karta hai",
+    "hc-sr04 explained",
+    "hc-sr04 arduino",
+    "arduino robot in hindi",
+    "ultrasonic distance formula",
+    "pulseIn 58",
+    "robot project hindi",
+    "arduino project",
+    "hc-sr04 hindi",
+    "how ultrasonic sensor works",
+    "electronics in hindi"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "Yeh robot dekhta nahi, sirf sunta hai!",
+  "format": "teardown3",
+  "captions": "out/auto/ultrasonic-robot-sunta-hai.srt",
+  "social": {
+    "instagram": "Yeh robot dekhta nahi, sirf SUNTA hai 🤖\nUski 'aankhein' asal mein 40 kHz ke kaan hain.\nTRIG 10 µs → 8 pulse → ECHO HIGH\nµs ÷ 58 = cm (580 µs = 10 cm)\n💾 Save karo apne robot project ke liye\n💬 Agla robot kaunsa kholein?\n#arduino #robot #hcsr04 #electronics #hindi",
+    "tiktok": "Robot dekhta nahi, sunta hai! 🤖 HC-SR04 ka 40 kHz secret. #arduino #robot #hcsr04 #electronics #learnontiktok"
+  }
+}

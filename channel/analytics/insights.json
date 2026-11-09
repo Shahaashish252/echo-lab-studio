@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-09T10:13",
+  "updated": "2026-11-09T10:20",
   "videos": 24,
-  "summary": "Instagram is carrying the channel: most Hindi videos get 1,200-1,400 views there, while YouTube Shorts mostly get under 60 views. The best videos use a surprising 'it doesn't see/hear/think the way you expect' hook about a robot, clap switch or sensor, and they lead in likes and saves. Questions about everyday places (lift, mall door, tap, street light) and generic 'how does X work' titles get far fewer views, and the one English video got no Instagram reach.",
-  "winningPattern": "Hindi videos on hands-on maker subjects (robots, clap switch, PIR/IR/heat sensors, mic) with a myth-busting hook that says the device lacks a human ability ('doesn't see', 'has no brain', 'only hears noise'). Short titles, one emoji, #shorts, posted on Instagram first. Titles that start from the surprising statement outperform 'How does X know...?' questions about everyday public gadgets. YouTube performs best on the same robot/clap/PIR topics, so those themes work on both platforms.",
+  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly get under 60 views. The best performers are short, surprising 'X doesn't do what you think' videos about hands-on gadgets like robots, clap switches and mics, which earn the most likes, saves and shares. Everyday-object explainers (taps, lifts, smoke alarms, doors, touchscreens) and 'How does X know...?' question titles get far fewer views and almost no saves.",
+  "winningPattern": "Hindi videos about a maker-style gadget or robot (clap switch, gyro robot, line follower, mic, PIR/IR sensor) with a surprising negation hook like 'X ke paas Y nahi hota' or 'X sunta/dekhta nahi, bas Z karta hai'. Titles are short, punchy statements with one emoji, not generic 'Kaise kaam karta hai?' questions. Posted on Instagram first, where reach is 1,000-1,200 per video; YouTube only occasionally breaks 500 (gyro, clap switch, PIR).",
   "doMore": [
-    "Open with a bold negative claim: 'X can't see/hear/think, yet...'",
-    "Make follow-ups to the winners: clap switch, gyro robot, line follower, PIR sensor, mic",
-    "Pick Arduino and robot-building subjects that makers can copy or try",
-    "Post to Instagram first, then YouTube, and track them separately",
-    "Add a save-worthy ending, like a part name or wiring tip, since saves and shares signal quality"
+    "Use the negation hook: 'Yeh X nahi karta, bas Y karta hai' on maker gadgets and robots",
+    "Make series of the proven topics: clap switch, gyro/balancing robot, line follower, mic vs speaker, PIR sensor",
+    "End with a build-it or save-this payoff (pin names, tiny circuit) to drive saves and shares",
+    "Make the robot or gadget visibly do something in the first second, then explain why",
+    "Post on Instagram first and repost to YouTube with a more searchable title, since YouTube views are weak and uneven"
   ],
   "stopDoing": [
-    "Generic 'Kaise Kaam Karta Hai?' question titles on everyday public gadgets (lift, mall door, taps, smoke alarms)",
-    "Publishing near-duplicate topics in the same week (three smoke/tap/IR videos split the audience)",
-    "English narration until you test it with a proper Instagram version"
+    "Generic 'Kaise kaam karta hai? 🤔' titles on everyday objects like taps, lifts, mall doors and smoke detectors",
+    "Posting near-duplicate topics (two smoke detector, two IR sensor, two tap videos) within days of each other",
+    "Publishing English or untested-language videos with no Instagram version"
   ],
   "nextTopics": [
-    "Ultrasonic obstacle robot: why it sees with sound",
-    "Servo motor without a brain: how it holds its angle",
-    "Light-sensing LDR night lamp",
-    "Arduino without code: what happens if you power it empty",
-    "Touch sensor module that feels you without pressing"
+    "Self-balancing robot with a gyro",
+    "Bluetooth car remote that can't hear you",
+    "Servo motor knows its angle",
+    "Light-following robot using LDR",
+    "Buzzer vs speaker difference"
   ],
   "bestTimes": {
     "times": [

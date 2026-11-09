@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Self-balancing robot with a gyro",
+      "hook": "Yeh robot gir kyun nahi raha? Gyro ka jaadu"
+    },
+    {
+      "topic": "Bluetooth car remote that can't hear you",
+      "hook": "Yeh car aapki baat nahi sunti, sirf signal pakadti hai"
+    },
+    {
+      "topic": "Servo motor knows its angle",
+      "hook": "Servo ko pata hai wo kitna ghoom chuka hai"
+    },
+    {
+      "topic": "Light-following robot using LDR",
+      "hook": "Is robot ki aankhen nahi hain, phir bhi roshni dhoondta hai"
+    },
+    {
+      "topic": "Buzzer vs speaker difference",
+      "hook": "Buzzer gaana kyun nahi gaa sakta? Speaker kar leta hai"
+    },
+    {
       "topic": "Ultrasonic obstacle robot: why it sees with sound",
       "hook": "Ye robot andha hai, phir bhi deewar se nahi takraata"
     },
@@ -19,12 +39,6 @@
     {
       "topic": "Touch sensor module that feels you without pressing",
       "hook": "Ye Button Dabaaye Bina Aapka Touch Pehchan Leta Hai"
-    },
-    {
-      "topic": "Ultrasonic obstacle avoiding robot",
-      "hook": "Yeh robot dekhta nahi, sirf sunta hai",
-      "module": "ultrasonic",
-      "spec": "teardown/examples/ultrasonic-robot.json"
     },
     {
       "topic": "Touch sensor lamp that turns on with a finger",
@@ -183,6 +197,7 @@
     "Baby cry alarm / baby monitor",
     "Hand sanitizer dispenser",
     "Phone auto-brightness: why the screen gets brighter in sunlight",
-    "Sound-activated disco lights that dance to the music"
+    "Sound-activated disco lights that dance to the music",
+    "Ultrasonic obstacle avoiding robot"
   ]
 }
