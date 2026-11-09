@@ -43,7 +43,7 @@ jobs:
           gh release download renders -p "td3-${{ inputs.job }}.tgz" -O job.tgz
           tar -xzf job.tgz -C teardown/page
       - name: Render
-        run: node teardown/render.mjs --part ${{ inputs.part }}/${{ inputs.parts }} --workers 2 --q 'lite=1' --out part.mp4
+        run: node teardown/render.mjs --part ${{ inputs.part }}/${{ inputs.parts }} --workers 2 --q 'lite=1&ss=1' --out part.mp4
       - name: Hand back
         run: |
           f="td3-${{ inputs.job }}-part-${{ inputs.part }}.mp4"

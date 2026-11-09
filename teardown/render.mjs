@@ -15,9 +15,10 @@ async function worker(w, a0, a1) {
   const seg = path.join(tmp, `s${w}.mp4`);
   const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'mjpeg', '-i', '-', '-c:v', 'libx264', '-preset', 'medium', '-crf', '16', '-pix_fmt', 'yuv420p', seg], { stdio: ['pipe', 'inherit', 'inherit'] });
   const { page, browser } = await openDemo(PAGE, { w: 1080, h: 1920, q: Q });
+  page.setDefaultTimeout(0);   // a software-GL frame can take longer than 30 s
   for (let f = a0; f < a1; f++) {
     await page.evaluate((t) => window.render(t), f / FPS);
-    const buf = await page.screenshot({ type: 'jpeg', quality: 94 });
+    const buf = await page.screenshot({ type: 'jpeg', quality: 94, timeout: 0 });
     if (!ff.stdin.write(buf)) await new Promise((r) => ff.stdin.once('drain', r));
     if ((f - a0) % 48 === 0) console.log(`w${w} ${f - a0}/${a1 - a0}  ${((Date.now() - t0) / 1000).toFixed(0)}s`);
   }
