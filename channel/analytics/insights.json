@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-09T10:20",
+  "updated": "2026-11-09T10:40",
   "videos": 24,
-  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly get under 60 views. The best performers are short, surprising 'X doesn't do what you think' videos about hands-on gadgets like robots, clap switches and mics, which earn the most likes, saves and shares. Everyday-object explainers (taps, lifts, smoke alarms, doors, touchscreens) and 'How does X know...?' question titles get far fewer views and almost no saves.",
-  "winningPattern": "Hindi videos about a maker-style gadget or robot (clap switch, gyro robot, line follower, mic, PIR/IR sensor) with a surprising negation hook like 'X ke paas Y nahi hota' or 'X sunta/dekhta nahi, bas Z karta hai'. Titles are short, punchy statements with one emoji, not generic 'Kaise kaam karta hai?' questions. Posted on Instagram first, where reach is 1,000-1,200 per video; YouTube only occasionally breaks 500 (gyro, clap switch, PIR).",
+  "summary": "Instagram is carrying the channel: most Hindi videos get 1,200-1,400 views there, while YouTube Shorts mostly gets under 60 views. The best videos are short, surprising 'sensor can't see/hear but still works' explainers about relatable gadgets and hobby robots (gyro robot, clap switch, PIR). Weak ones are generic 'how does X work?' questions on everyday items, such as lift doors, taps, smoke detectors and touchscreens, and these get little reach on either platform.",
+  "winningPattern": "Hindi Shorts on hands-on maker subjects (robots, clap switch, PIR, mic, IR) with a bold, counterintuitive claim as the hook, such as 'X can't see/hear/think, yet it works' or 'without X the robot falls'. Titles are short and punchy, in Hinglish, with one emoji, and often use a 'Nahi... Sirf...' contrast. Instagram is the main growth platform, and YouTube only picks up the clap switch and PIR videos, which are searchable and curiosity-driven.",
   "doMore": [
-    "Use the negation hook: 'Yeh X nahi karta, bas Y karta hai' on maker gadgets and robots",
-    "Make series of the proven topics: clap switch, gyro/balancing robot, line follower, mic vs speaker, PIR sensor",
-    "End with a build-it or save-this payoff (pin names, tiny circuit) to drive saves and shares",
-    "Make the robot or gadget visibly do something in the first second, then explain why",
-    "Post on Instagram first and repost to YouTube with a more searchable title, since YouTube views are weak and uneven"
+    "Open with a contradiction or a bold claim ('Nahi... Sirf...') instead of a plain 'Kaise kaam karta hai?' question",
+    "Make more robot and Arduino-module videos (gyro, line follower, IR obstacle, clap switch), which get the best likes, saves and shares",
+    "Do follow-ups to winners: a clap switch part 3 and PIR or gyro variations, since a sequel to a hit tends to hold its audience",
+    "Show a quick physical demo in the first 2 seconds and end with a clear takeaway worth saving or sharing",
+    "Test the YouTube titles and thumbnails of the Instagram hits separately, since the same topic gets far fewer views there"
   ],
   "stopDoing": [
-    "Generic 'Kaise kaam karta hai? 🤔' titles on everyday objects like taps, lifts, mall doors and smoke detectors",
-    "Posting near-duplicate topics (two smoke detector, two IR sensor, two tap videos) within days of each other",
-    "Publishing English or untested-language videos with no Instagram version"
+    "Generic everyday-appliance explainers (lift door, washroom tap, smoke detector, mall door) that repeat the same sensor idea",
+    "Posting near-duplicate topics (two smoke detector videos, two automatic tap videos, two IR-in-dark videos) within days of each other",
+    "Switching to English, since the one English video got only 161 views on YouTube and nothing on Instagram"
   ],
   "nextTopics": [
-    "Self-balancing robot with a gyro",
-    "Bluetooth car remote that can't hear you",
-    "Servo motor knows its angle",
-    "Light-following robot using LDR",
-    "Buzzer vs speaker difference"
+    "Ultrasonic obstacle robot",
+    "Sound sensor module (Arduino)",
+    "Accelerometer / tilt sensor",
+    "Light sensor LDR robot",
+    "Servo motor"
   ],
   "bestTimes": {
     "times": [

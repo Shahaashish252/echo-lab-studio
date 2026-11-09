@@ -1,6 +1,22 @@
 {
   "queue": [
     {
+      "topic": "Ultrasonic obstacle robot",
+      "hook": "Yeh Robot Dekhta Nahi, Sirf Awaaz Sunta Hai!"
+    },
+    {
+      "topic": "Sound sensor module (Arduino)",
+      "hook": "Is Chhote Module Ko Taali Aur Seeti Mein Farak Nahi Pata"
+    },
+    {
+      "topic": "Accelerometer / tilt sensor",
+      "hook": "Is Chip Ke Bina Aapka Phone Ghoom Nahi Sakta"
+    },
+    {
+      "topic": "Light sensor LDR robot",
+      "hook": "Ye Robot Roshni Ke Peeche Bhaagta Hai, Dimaag Nahi Hai"
+    },
+    {
       "topic": "Self-balancing robot with a gyro",
       "hook": "Yeh robot gir kyun nahi raha? Gyro ka jaadu"
     },

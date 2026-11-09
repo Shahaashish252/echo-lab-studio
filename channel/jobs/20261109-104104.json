@@ -4,7 +4,7 @@
   "hook": "",
   "lang": "hi",
   "started": "2026-11-09T10:41:04",
-  "status": "running",
+  "status": "failed",
   "stages": [
     {
       "name": "script: \"Clap switch part 3: why it fails in noise\" (sound, Claude)",
@@ -24,5 +24,6 @@
     }
   ],
   "format": "teardown3",
-  "module": "sound"
+  "module": "sound",
+  "finished": "2026-11-09T14:04:35"
 }
