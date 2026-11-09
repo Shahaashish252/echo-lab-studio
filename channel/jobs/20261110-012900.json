@@ -9,6 +9,10 @@
     {
       "name": "script: \"Smart dustbin lid that opens when you wave your hand (open with this hook: \"Why does this dustbin open for your hand but not your bag?\")\" (ir, Claude)",
       "at": "2026-11-10T01:29:01"
+    },
+    {
+      "name": "voice (Microsoft Edge neural)",
+      "at": "2026-11-10T01:29:34"
     }
   ],
   "format": "teardown3",
