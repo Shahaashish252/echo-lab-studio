@@ -1,26 +1,25 @@
 {
-  "updated": "2026-11-09T16:11",
+  "updated": "2026-11-10T01:28",
   "videos": 25,
-  "summary": "Instagram is doing most of the work: nearly every video gets 1,000+ views there, while YouTube Shorts mostly gets under 100 per video. The best videos use a surprising 'it doesn't X, it only Y' claim or a robot/clap-switch demo that people can picture instantly, and they get likes, saves and shares. Dry, generic 'How does X work?' titles about everyday places (lift, mall door, tap, smoke detector) get few views and almost no engagement, and the one English video did poorly on YouTube and wasn't posted on Instagram.",
-  "winningPattern": "Hindi, Instagram-first. Hands-on maker subjects (robots, clap switch, mic, PIR/IR sensors) with a counter-intuitive hook like 'X doesn't do A, it only does B' or a funny personified line ('Line follower has no brain'). Short Hinglish titles with one emoji and a clear, concrete object. Videos with a visible behaviour (robot falling, clap/whistle triggering) earn the most likes, saves and shares.",
+  "summary": "Instagram is carrying the channel: most videos get 1,200-1,400 views there, while YouTube Shorts mostly gets under 60 views. The best performers are short Hindi videos with a surprising claim about a robot or sensor ('doesn't see, only hears/feels'), especially clap switch, gyro, PIR and IR robot topics. Generic 'How does X work?' videos on everyday devices (taps, doors, smoke alarms, touchscreens) get far less reach, and the one English video and the newest untested upload have almost no results.",
+  "winningPattern": "Hindi Instagram Reels about a robot or Arduino-style sensor, with a bold counterintuitive hook ('X ke bina robot gir jaata', 'Clap switch taali nahi, shor sunta hai', 'Sensor dekhta nahi, mehsoos karta hai'). Titles state a surprising fact or negation in plain Hinglish, use one emoji, and end with #shorts. Maker-style topics (robots, clap switch, mic, line follower) beat public-place devices (mall door, washroom tap, street light). YouTube only gets a few hundred views on the strongest of these, so Instagram is the main platform.",
   "doMore": [
-    "Open with a 'doesn't see/hear/think, only does Y' contradiction in the first line",
-    "Pick robot and maker-project subjects where the audience can see something happen (falls, turns, triggers)",
-    "Make follow-ups to winners: gyro, clap switch and PIR each have more angles (balancing, filters, tuning)",
-    "End with a save-worthy takeaway such as a wiring tip or a 'try this at home' test to boost saves and shares",
-    "Cross-check why YouTube lags: test a stronger first-second visual and a shorter title on YT for the same winning topics"
+    "Make surprising 'it doesn't X, it actually Y' hooks about robots and sensors, the format behind your top 8 videos",
+    "Do follow-ups on clap switch, gyro, IR and PIR topics, since each of these topics has already had 500+ views on at least one platform",
+    "Pick maker-relevant topics (robot, Arduino module, mic, line follower) over everyday public devices",
+    "Post Instagram first and treat YouTube as secondary; test what lifts YouTube, e.g. gyro, clap and PIR titles that already got 500+ views there",
+    "End with a question or a 'save this for your project' prompt to lift saves and shares, which are low on most videos"
   ],
   "stopDoing": [
-    "Generic 'Kaise kaam karta hai?' titles about public-place gadgets (lift, mall door, washroom tap)",
-    "Posting near-duplicate topics (two smoke alarm, two IR, two tap videos) within days of each other",
-    "Switching to English without a plan; keep Hindi until the audience proves otherwise"
+    "Generic 'Kaise kaam karta hai? 🤔' titles on everyday devices (tap, door, smoke alarm, street light)",
+    "Publishing English videos while the channel audience is Hindi, and uploads that skip Instagram"
   ],
   "nextTopics": [
-    "Ultrasonic robot that avoids obstacles",
-    "Self-balancing robot with accelerometer",
-    "Light-following robot with LDR",
-    "Touch sensor lamp",
-    "Buzzer and potentiometer sound control"
+    "Servo motor: how it knows its angle",
+    "Bluetooth HC-05 robot control",
+    "LDR light sensor",
+    "Ultrasonic sensor robot stopping before a wall",
+    "Why line follower robot goes off track"
   ],
   "bestTimes": {
     "times": [
