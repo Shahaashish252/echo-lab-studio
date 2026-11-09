@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Ultrasonic obstacle robot: why it sees with sound",
+      "hook": "Ye robot andha hai, phir bhi deewar se nahi takraata"
+    },
+    {
+      "topic": "Servo motor without a brain: how it holds its angle",
+      "hook": "Servo Motor Ko Pata Hi Nahi Wo Kahan Ghoom Raha Hai"
+    },
+    {
+      "topic": "Light-sensing LDR night lamp",
+      "hook": "Is Chhote Resistor Ko Andhere Ka Pata Kaise Chalta Hai?"
+    },
+    {
+      "topic": "Arduino without code: what happens if you power it empty",
+      "hook": "Bina Code Ke Arduino Sirf Ek Dibba Hai"
+    },
+    {
+      "topic": "Touch sensor module that feels you without pressing",
+      "hook": "Ye Button Dabaaye Bina Aapka Touch Pehchan Leta Hai"
+    },
+    {
       "topic": "Ultrasonic obstacle avoiding robot",
       "hook": "Yeh robot dekhta nahi, sirf sunta hai",
       "module": "ultrasonic",

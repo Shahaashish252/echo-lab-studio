@@ -57,3 +57,7 @@ wrote 17 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/v
 events 68 dur 58.42 → page/events.json
 
 == render (cloud, 10 parts)
+  dispatched 10 parts (job 1794199519)
+  0/10 parts (0 min)
+  0/10 parts (1 min)
+  1/10 parts (2 min)

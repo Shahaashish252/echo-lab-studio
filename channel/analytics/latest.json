@@ -1,9 +1,18 @@
 {
-  "updated": "08 Nov 2026, 23:06",
+  "updated": "09 Nov 2026, 10:13",
   "youtube": {
     "subs": 5,
     "views": 3977,
     "videos": [
+      {
+        "title": "Disco Lights Gaana Nahi Samajhti, Bas Shor Sunti Hain 🎶 #shorts",
+        "id": "MxLpL2zEiVM",
+        "status": "private",
+        "published": "2026-11-08",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Phone Ko Dhoop Ka Pata Kaise Chalta Hai? Sach Yeh Hai #shorts",
         "id": "YTaEtyiHKsI",
@@ -54,7 +63,7 @@
         "id": "yg0sWNjFBTs",
         "status": "public",
         "published": "2026-11-05",
-        "views": 510,
+        "views": 508,
         "likes": 7,
         "comments": 0
       },
@@ -90,7 +99,7 @@
         "id": "nHR2_Dsl4I0",
         "status": "public",
         "published": "2026-11-04",
-        "views": 54,
+        "views": 55,
         "likes": 1,
         "comments": 2
       },
@@ -135,7 +144,7 @@
         "id": "mKcPrgXveU4",
         "status": "public",
         "published": "2026-11-02",
-        "views": 51,
+        "views": 52,
         "likes": 2,
         "comments": 2
       },
@@ -475,12 +484,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-11",
-        "views": 1,
-        "minutes": 0,
-        "subs": 0
-      },
-      {
         "day": "2026-10-12",
         "views": 0,
         "minutes": 0,
@@ -629,6 +632,12 @@
         "views": 319,
         "minutes": 85,
         "subs": 1
+      },
+      {
+        "day": "2026-11-06",
+        "views": 182,
+        "minutes": 23,
+        "subs": 0
       }
     ]
   },
