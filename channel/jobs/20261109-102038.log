@@ -3,3 +3,50 @@
   Yeh Robot Dekhta Nahi, Sirf Sunta Hai 🤖 #shorts
 
 == voice (Microsoft Edge neural)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with kokoro-onnx --with soundfile --with edge-tts python analysis/tts.py teardown3
+Downloading onnxruntime (22.7MiB)
+ Downloaded onnxruntime
+Installed 27 packages in 16ms
+[0;93m2026-11-09 10:20:39.760121606 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+a1          2.44s  यह रोबोट देखता नहीं, सिर्फ़ सुनता है!
+a2          3.98s  इसकी आँखें असल में एचसी एसआर ज़ीरो फ़ोर हैं, पाँच वोल्ट पर।
+a3          3.73s  टी के अंदर पीज़ो डिस्क, चालीस किलोहर्ट्ज़ की आवाज़ बनाती है।
+a4          2.47s  यह आवाज़ हमारे कान सुन ही नहीं सकते।
+a5          2.08s  आर की डिस्क लौटी गूँज पकड़ती है।
+a6          3.96s  पीछे ड्राइवर, ऑप-एम्प और कंट्रोलर, यही टाइमर का काम करते हैं।
+b1          2.99s  आर्डुइनो ट्रिग पिन को दस माइक्रोसेकंड हाई करता है।
+b2          2.92s  सेंसर चालीस किलोहर्ट्ज़ की आठ पल्स भेजता है।
+b3          2.37s  गूँज लौटने तक इको पिन हाई रहता है।
+b4          3.91s  आवाज़ जाती भी है और लौटती भी, इसलिए समय को दो से भाग।
+b5          2.79s  शॉर्टकट: माइक्रोसेकंड को अट्ठावन से भाग दो।
+b6          4.64s  पाँच सौ अस्सी माइक्रोसेकंड, यानी दस सेंटीमीटर, और रोबोट मुड़ जाता है।
+c1          3.35s  रेंज दो सेंटीमीटर से चार मीटर, पंद्रह डिग्री का कोन।
+c2          3.54s  यही तरीका पार्किंग सेंसर, टंकी के लेवल और रोबोट में।
+c3          2.97s  पर छोटी या खुरदरी चीज़ पर गूँज कमज़ोर पड़ती है।
+c4          2.58s  टिप: हर रीडिंग के बीच साठ मिलीसेकंड रुको।
+c5          2.94s  सेव करो, और बताओ अगला कौन सा रोबोट खोलें!
+wrote 17 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/teardown3/kokoro
+  voice 53.6s at +18%
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with kokoro-onnx --with soundfile --with edge-tts python analysis/tts.py teardown3
+[0;93m2026-11-09 10:20:49.894556957 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+a1          2.30s  यह रोबोट देखता नहीं, सिर्फ़ सुनता है!
+a2          3.73s  इसकी आँखें असल में एचसी एसआर ज़ीरो फ़ोर हैं, पाँच वोल्ट पर।
+a3          3.49s  टी के अंदर पीज़ो डिस्क, चालीस किलोहर्ट्ज़ की आवाज़ बनाती है।
+a4          2.32s  यह आवाज़ हमारे कान सुन ही नहीं सकते।
+a5          1.97s  आर की डिस्क लौटी गूँज पकड़ती है।
+a6          3.72s  पीछे ड्राइवर, ऑप-एम्प और कंट्रोलर, यही टाइमर का काम करते हैं।
+b1          2.81s  आर्डुइनो ट्रिग पिन को दस माइक्रोसेकंड हाई करता है।
+b2          2.75s  सेंसर चालीस किलोहर्ट्ज़ की आठ पल्स भेजता है।
+b3          2.21s  गूँज लौटने तक इको पिन हाई रहता है।
+b4          3.68s  आवाज़ जाती भी है और लौटती भी, इसलिए समय को दो से भाग।
+b5          2.61s  शॉर्टकट: माइक्रोसेकंड को अट्ठावन से भाग दो।
+b6          4.35s  पाँच सौ अस्सी माइक्रोसेकंड, यानी दस सेंटीमीटर, और रोबोट मुड़ जाता है।
+c1          3.14s  रेंज दो सेंटीमीटर से चार मीटर, पंद्रह डिग्री का कोन।
+c2          3.33s  यही तरीका पार्किंग सेंसर, टंकी के लेवल और रोबोट में।
+c3          2.78s  पर छोटी या खुरदरी चीज़ पर गूँज कमज़ोर पड़ती है।
+c4          2.41s  टिप: हर रीडिंग के बीच साठ मिलीसेकंड रुको।
+c5          2.76s  सेव करो, और बताओ अगला कौन सा रोबोट खोलें!
+wrote 17 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/teardown3/kokoro
+  voice 50.3s at +26%
+
+== render tools
