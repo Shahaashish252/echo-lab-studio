@@ -1,0 +1,16 @@
+{
+  "id": "20261109-102038",
+  "topic": "Ultrasonic obstacle avoiding robot",
+  "hook": "Yeh robot dekhta nahi, sirf sunta hai",
+  "lang": "hi",
+  "started": "2026-11-09T10:20:38",
+  "status": "running",
+  "stages": [
+    {
+      "name": "script: \"Ultrasonic obstacle avoiding robot (open with this hook: \"Yeh robot dekhta nahi, sirf sunta hai\")\" (ultrasonic, Claude)",
+      "at": "2026-11-09T10:20:38"
+    }
+  ],
+  "format": "teardown3",
+  "module": "ultrasonic"
+}
