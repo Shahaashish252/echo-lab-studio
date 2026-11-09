@@ -1,6 +1,12 @@
 {
   "queue": [
     {
+      "topic": "Ultrasonic obstacle avoiding robot",
+      "hook": "Yeh robot dekhta nahi, sirf sunta hai",
+      "module": "ultrasonic",
+      "spec": "teardown/examples/ultrasonic-robot.json"
+    },
+    {
       "topic": "Touch sensor lamp that turns on with a finger",
       "hook": "Is lamp ko aapki ungli nahi, aapka sharir chala raha hai",
       "module": ""

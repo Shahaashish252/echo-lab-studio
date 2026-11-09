@@ -35,3 +35,13 @@ channel/*.prev.json
 Thumbs.db
 !channel/jobs/*.log
 app/src/scenes/auto/studio.gen.json
+
+# teardown3 format
+teardown/node_modules/
+teardown/page/job/
+teardown/page/hdri/
+teardown/page/out/
+teardown/page/stills/
+teardown/page/events.json
+app/src/scenes/teardown3/
+app/public/voice/teardown3/

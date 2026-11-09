@@ -49,6 +49,9 @@ jobs:
       # photo-real studio videos: Blender on Kaggle's free GPUs ("1" once tested; app/scripts/kaggle-render.ts)
       ECHO_BLENDER: "1"
       ECHO_HOLD: ${{ inputs.hold && '1' || '' }}
+      # teardown3 format: software WebGL in the main job (events only), frames render in parallel "Teardown part" runs
+      LEMO_ANGLE: swiftshader
+      TD3_PARTS: "10"
       KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
       KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_KEY }}
     steps:
@@ -82,6 +85,12 @@ jobs:
           path: ~/.cache/uv
           key: uv-${{ runner.os }}-kokoro
       - run: cd app && bun install
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - name: teardown3 render tools
+        run: |
+          cd teardown && npm install --no-audit --no-fund --loglevel=error
+          node node_modules/playwright-core/cli.js install --with-deps chromium-headless-shell
       - run: bash .github/scripts/secrets.sh
       - name: Make
         run: |

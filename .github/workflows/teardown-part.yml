@@ -1,0 +1,51 @@
+name: Teardown part
+run-name: "Teardown part ${{ inputs.part }}/${{ inputs.parts }} (${{ inputs.job }})"
+# One slice of a teardown3 video's frames, dispatched by teardown/make.py (the "Make videos" job waits for all of them and
+# joins them). The job folder (spec + voice) comes from, and the finished slice goes back to, the "renders" release.
+on:
+  workflow_dispatch:
+    inputs:
+      job: { required: true, type: string }
+      part: { required: true, type: string }
+      parts: { required: true, type: string }
+
+concurrency:
+  group: td3-${{ inputs.job }}-${{ inputs.part }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    env:
+      GH_TOKEN: ${{ github.token }}
+      LEMO_ANGLE: swiftshader
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+      - name: Render tools
+        run: |
+          cd teardown && npm install --no-audit --no-fund --loglevel=error
+          node node_modules/playwright-core/cli.js install --with-deps chromium-headless-shell
+      - name: Studio light (HDRI) cache
+        uses: actions/cache@v4
+        with: { path: teardown/page/hdri, key: hdri-studio-v1 }
+      - run: |
+          mkdir -p teardown/page/hdri
+          [ -f teardown/page/hdri/studio.hdr ] || curl -sSL -o teardown/page/hdri/studio.hdr https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/photo_studio_loft_hall_2k.hdr
+      - name: Job
+        run: |
+          gh release download renders -p "td3-${{ inputs.job }}.tgz" -O job.tgz
+          tar -xzf job.tgz -C teardown/page
+      - name: Render
+        run: node teardown/render.mjs --part ${{ inputs.part }}/${{ inputs.parts }} --workers 2 --q 'lite=1' --out part.mp4
+      - name: Hand back
+        run: |
+          f="td3-${{ inputs.job }}-part-${{ inputs.part }}.mp4"
+          cp part.mp4 "$f"
+          gh release upload renders "$f" --clobber

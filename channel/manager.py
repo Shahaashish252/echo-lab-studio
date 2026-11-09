@@ -184,7 +184,7 @@ def next_topic() -> dict:
     if len(kept) != len(t["queue"]):
         t["queue"] = kept
         write(TOPICS, t)
-    studio = schedule().get("format") == "studio"
+    studio = schedule().get("format") in ("studio", "teardown3")
 
     def pick():
         """studio: a topic with a module, a different sensor from the last two videos when possible"""
@@ -377,9 +377,18 @@ def make_video(topic: dict | None = None) -> dict | None:
            "started": datetime.now().isoformat(timespec="seconds"), "status": "running", "stages": []}
     save_job(job)
     fmt = schedule().get("format", "story")
-    if fmt == "studio" and "module" not in topic:
+    if fmt in ("studio", "teardown3") and "module" not in topic:
         classify_topics([topic])  # a topic typed in by hand: check which module (if any) really explains it
-    if fmt == "story":
+    if fmt == "teardown3":
+        # three styles in one Short (owner's choice 2026-11-09): 3D exploded teardown -> blueprint -> isometric infographic
+        # (teardown/make.py; Claude writes one JSON spec, a curated spec can be given per topic; renders in parallel cloud parts)
+        job["format"] = "teardown3"
+        job["module"] = studio_module(topic) or "generic"
+        cmd = [sys.executable, "-u", str(ROOT / "teardown" / "make.py"), prompt, "--kind", job["module"], "--upload", "--lang", lang]
+        if topic.get("spec"):
+            cmd += ["--spec", str(ROOT / topic["spec"])]
+        code = run_tracked(cmd, job)
+    elif fmt == "story":
         # animated story like the PIR short (owner's choice 2026-10-21): hand-made animation library, Claude writes
         # only a JSON plan (app/src/scenes/auto/story-lib.js + auto.ts --story)
         job["format"] = "story"
@@ -412,7 +421,7 @@ def make_video(topic: dict | None = None) -> dict | None:
     store_video(ups[-1])
     ups[-1].update({"status": "pending", "topic": topic["topic"], "job": job["id"]})
     sb = read(ROOT / "app" / "src" / "scenes" / "auto" / "storyboard.json", {})
-    photo_real = bool(sb.get("blenderFrames"))
+    photo_real = fmt == "studio" and bool(sb.get("blenderFrames"))
     if (photo_real and schedule().get("holdPhotoReal", True)) or os.environ.get("ECHO_HOLD") == "1":
         # the first photo-real (Blender) videos wait for the owner's OK on the dashboard (preview) before posting
         ups[-1].update({"status": "held", "heldPostAt": next_slot([u.get("postAt") for u in ups if u.get("status") == "approved"])})
@@ -1062,7 +1071,8 @@ def cmd_make(*words):
     """Dashboard 'make a video': analyse first, then make one in the winning pattern (or on the given topic)."""
     cmd_analyze()
     topic = " ".join(words).strip()
-    made = make_video({"topic": topic, "hook": ""} if topic else None)
+    queued = next((q for q in read(TOPICS, {"queue": []})["queue"] if q["topic"].lower() == topic.lower()), None) if topic else None
+    made = make_video(dict(queued) if queued else {"topic": topic, "hook": ""} if topic else None)
     print("made" if made else "failed")
 
 

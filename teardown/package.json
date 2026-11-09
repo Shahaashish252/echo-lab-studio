@@ -1,0 +1,7 @@
+{
+  "name": "echo-lab-teardown3",
+  "private": true,
+  "type": "module",
+  "description": "Teardown3 video format: 3D exploded teardown + blueprint + isometric infographic. Render tools adapted from lemo-opuscar (MIT).",
+  "dependencies": { "playwright-core": "1.63.0", "three": "0.170.0" }
+}
