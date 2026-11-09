@@ -1,0 +1,16 @@
+{
+  "id": "20261109-161157",
+  "topic": "Smart dustbin lid that opens when you wave your hand",
+  "hook": "Why does this dustbin open for your hand but not your bag?",
+  "lang": "hi",
+  "started": "2026-11-09T16:11:57",
+  "status": "running",
+  "stages": [
+    {
+      "name": "script: \"Smart dustbin lid that opens when you wave your hand (open with this hook: \"Why does this dustbin open for your hand but not your bag?\")\" (ir, Claude)",
+      "at": "2026-11-09T16:11:57"
+    }
+  ],
+  "format": "teardown3",
+  "module": "ir"
+}
