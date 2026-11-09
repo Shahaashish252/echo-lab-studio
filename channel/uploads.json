@@ -208,10 +208,11 @@
     "id": "0ll4rIi2V7U",
     "meta": "channel\\videos\\auto-raat-bhar-charging-myth.json",
     "date": "2026-10-21",
-    "status": "held",
+    "status": "rejected",
     "heldPostAt": "2026-10-21T19:30",
     "topic": "Does charging your phone overnight damage the lithium battery? (myth vs truth, with a practical charging tip)",
-    "job": "20261021-105015"
+    "job": "20261021-105015",
+    "rejectedReason": "dropped by owner 2026-11-09: never posted (stays private on YouTube)"
   },
   {
     "id": "uLRF6LMY4GE",
@@ -518,99 +519,110 @@
     "id": "_d9YWN5UW3I",
     "meta": "channel/videos/auto-gas-leak-sensor-mq-2.json",
     "date": "2026-11-04",
-    "status": "held",
+    "status": "rejected",
     "topic": "Gas leak sensor in kitchens",
     "job": "20261104-110634",
-    "heldPostAt": "2026-11-06T14:00"
+    "heldPostAt": "2026-11-06T14:00",
+    "rejectedReason": "dropped by owner 2026-11-09: never posted (stays private on YouTube)"
   },
   {
     "id": "-XOCO-xDL_4",
     "meta": "channel/videos/auto-car-sensor-ki-deewar-pehchaan.json",
     "date": "2026-11-04",
-    "status": "held",
+    "status": "rejected",
     "topic": "Parking sensor beeping in cars",
     "job": "20261104-132230",
-    "heldPostAt": "2026-11-06T14:00"
+    "heldPostAt": "2026-11-06T14:00",
+    "rejectedReason": "dropped by owner 2026-11-09: never posted (stays private on YouTube)"
   },
   {
     "id": "W-y8kYyD_H0",
     "meta": "channel/videos/auto-escalator-ko-pata-hai.json",
     "date": "2026-11-04",
-    "status": "held",
+    "status": "rejected",
     "topic": "Escalator that starts when you step near",
     "job": "20261104-154418",
-    "heldPostAt": "2026-11-06T14:00"
+    "heldPostAt": "2026-11-06T14:00",
+    "rejectedReason": "dropped by owner 2026-11-09: never posted (stays private on YouTube)"
   },
   {
     "id": "QaKoT26kQGU",
     "meta": "channel/videos/auto-soil-moisture-sensor.json",
     "date": "2026-11-04",
-    "status": "held",
+    "status": "rejected",
     "topic": "Soil moisture sensor",
     "job": "20261104-225506",
-    "heldPostAt": "2026-11-06T15:00"
+    "heldPostAt": "2026-11-06T15:00",
+    "rejectedReason": "dropped by owner 2026-11-09: never posted (stays private on YouTube)"
   },
   {
     "id": "BpM6SlfHUfo",
     "meta": "channel/videos/auto-flame-robot-without-camera.json",
     "date": "2026-11-05",
-    "status": "held",
+    "status": "rejected",
     "topic": "Fire-fighting robot that finds a candle flame",
     "job": "20261105-153747",
-    "heldPostAt": "2026-11-06T15:00"
+    "heldPostAt": "2026-11-06T15:00",
+    "rejectedReason": "dropped by owner 2026-11-09: never posted (stays private on YouTube)"
   },
   {
     "id": "H9zxYoJwtIw",
     "meta": "channel/videos/auto-auto-dimming-car-mirror.json",
     "date": "2026-11-06",
-    "status": "held",
+    "status": "rejected",
     "topic": "Car auto-dimming rear mirror",
     "job": "20261105-230204",
-    "heldPostAt": "2026-11-06T16:00"
+    "heldPostAt": "2026-11-06T16:00",
+    "rejectedReason": "dropped by owner 2026-11-09: never posted (stays private on YouTube)"
   },
   {
     "id": "mi38vABi_LU",
     "meta": "channel/videos/auto-auto-fan-dht11-explained.json",
     "date": "2026-11-06",
-    "status": "held",
+    "status": "rejected",
     "topic": "Auto fan that speeds up when the room gets hot",
     "job": "20261106-154209",
-    "heldPostAt": "2026-11-07T16:00"
+    "heldPostAt": "2026-11-07T16:00",
+    "rejectedReason": "dropped by owner 2026-11-09: never posted (stays private on YouTube)"
   },
   {
     "id": "MCpqSmO5AsE",
     "meta": "channel/videos/auto-baby-cry-alarm-explained.json",
     "date": "2026-11-06",
-    "status": "held",
+    "status": "rejected",
     "topic": "Baby cry alarm / baby monitor",
     "job": "20261106-222314",
-    "heldPostAt": "2026-11-07T16:00"
+    "heldPostAt": "2026-11-07T16:00",
+    "rejectedReason": "dropped by owner 2026-11-09: never posted (stays private on YouTube)"
   },
   {
     "id": "HFyZ18g5M00",
     "meta": "channel/videos/auto-sanitizer-dispenser-kaise.json",
     "date": "2026-11-07",
-    "status": "held",
+    "status": "rejected",
     "topic": "Hand sanitizer dispenser",
     "job": "20261107-145842",
-    "heldPostAt": "2026-11-08T16:00"
+    "heldPostAt": "2026-11-08T16:00",
+    "rejectedReason": "dropped by owner 2026-11-09: never posted (stays private on YouTube)"
   },
   {
     "id": "YTaEtyiHKsI",
     "meta": "channel/videos/auto-phone-auto-brightness.json",
     "date": "2026-11-07",
-    "status": "held",
+    "status": "rejected",
     "topic": "Phone auto-brightness: why the screen gets brighter in sunlight",
     "job": "20261107-211932",
-    "heldPostAt": "2026-11-08T16:00"
+    "heldPostAt": "2026-11-08T16:00",
+    "rejectedReason": "dropped by owner 2026-11-09: never posted (stays private on YouTube)"
   },
   {
     "id": "MxLpL2zEiVM",
     "meta": "channel/videos/auto-clap-disco-lights.json",
     "date": "2026-11-08",
-    "status": "held",
+    "status": "rejected",
     "topic": "Sound-activated disco lights that dance to the music",
     "job": "20261108-213911",
-    "heldPostAt": "2026-11-09T16:00"
+    "heldPostAt": "2026-11-09T16:00",
+    "rejectedReason": "dropped by owner 2026-11-09: never posted (stays private on YouTube)"
   }
 ]
