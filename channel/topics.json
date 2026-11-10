@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Self-balancing robot and the gyro/accelerometer",
+      "hook": "Is robot ko gir kar bhi uthna aata hai, kaise?"
+    },
+    {
+      "topic": "Clap switch counting claps with a sound sensor module",
+      "hook": "Ye switch taali nahi, sirf awaaz ki taakat sunta hai"
+    },
+    {
+      "topic": "Ultrasonic sensor robot that stops before a wall",
+      "hook": "Ye robot deewar dekhta nahi, bas echo sunta hai"
+    },
+    {
+      "topic": "LDR light sensor night lamp with Arduino",
+      "hook": "Is lamp ki aankhen nahi hain, phir andhera kaise pehchanta hai?"
+    },
+    {
+      "topic": "Bluetooth car: how a phone controls a robot",
+      "hook": "Phone ne bina taar ke is gaadi ko kaise chalaya?"
+    },
+    {
       "topic": "Touch sensor lamp that reacts to your finger",
       "hook": "Ye Lamp Button Nahi, Aapki Ungli Se Jalta Hai",
       "module": ""

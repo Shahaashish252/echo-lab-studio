@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-10T16:09",
+  "updated": "2026-11-10T22:42",
   "videos": 25,
-  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly get under 60 views, with only a few older ones reaching 500+. The best videos are about a surprising 'robot or sensor can't see, only senses X' idea, or a familiar gadget with a twist, and they get more likes, saves and shares. Weaker videos are plain 'How does X work?' questions about everyday objects (taps, doors, smoke alarms), which get few views and almost no saves or shares.",
-  "winningPattern": "Short Hindi videos about a robot or sensor with a surprising 'it doesn't do X, it only does Y' hook (e.g. 'Gyro ke bina robot gir jaata', 'Clap switch taali nahi, shor sunta hai'). Titles are punchy, 6-10 words, in Hinglish with one emoji and #shorts, and name a relatable maker project (robot, clap switch, PIR, mic) rather than a generic building appliance. Instagram is the main engine at 1,200-1,400 views; YouTube works only on a few of these hooks (gyro, clap switch, PIR).",
+  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000-1,400 views there, while YouTube Shorts mostly get under 60 views. The best videos are about a robot or a simple sensor trick (gyro, clap switch, PIR motion sensor, IR obstacle avoidance) with a surprising 'it doesn't see/think, it only senses X' angle. Everyday-place videos (lift door, mall door, tap, street light, smoke alarm) and generic 'how does X work?' questions get far fewer views, and the one English video did not reach Instagram at all.",
+  "winningPattern": "Robot or maker-project subject (robots, clap switch, mic, PIR) + a counterintuitive 'it can't see/hear/think, it only senses X' hook + short Hinglish title with one emoji and #shorts, posted on Instagram first. Titles that state a surprising claim (e.g. 'Taali Nahi, Sirf Shor Sunta Hai', 'Gyro Ke Bina Robot Gir Jaata') beat plain questions ('X Kaise Kaam Karta Hai?'). Robot/Arduino-adjacent topics also earn the most saves and shares, which signal real interest.",
   "doMore": [
-    "Use the 'X doesn't do A, it only does B' contrarian hook on robot and maker-project topics",
-    "Make follow-ups to the clap switch, gyro, PIR and line follower hits (e.g. a part 2 or a 'what if it fails' version)",
-    "Pick Arduino-style builds students can copy over appliance explainers, and end with a question to drive saves and shares",
-    "Post the same Hindi video on both platforms and test a stronger YouTube-first title and first-second visual, since YouTube is far behind",
-    "Repeat the robot/IR obstacle angle, which got the most shares (10), and ask viewers to share with a friend who builds robots"
+    "Make robot and maker-project videos: balancing, line follower, obstacle avoidance, clap switch variants",
+    "Open with a surprising claim ('X can't see, it only feels Y') instead of a plain question",
+    "Post on Instagram first and treat it as the main platform; test YouTube separately with 2-3 titles to find why it lags",
+    "End with a save/share prompt like 'Save this for your next Arduino project' since robot IR videos earn the most shares",
+    "Keep Hindi narration and Hinglish titles; make follow-ups to the winners (gyro, clap switch, PIR, IR robot)"
   ],
   "stopDoing": [
-    "Generic 'Kaise kaam karta hai? 🤔' titles about taps, lift doors, mall doors, smoke detectors and street lights",
-    "Posting several near-duplicate videos on the same sensor (two smoke detector, two IR, two tap videos) in a week",
-    "Mixing in English-language videos or leaving a video unposted on Instagram, as the English Arduino Short got no IG reach"
+    "Generic 'Kaise Kaam Karta Hai? 🤔' titles on everyday objects like taps, lift doors and mall doors",
+    "Near-duplicate topics (smoke detector x2, IR sensor x2, tap x2) posted within days of each other",
+    "Posting videos in English or without cross-posting to Instagram"
   ],
   "nextTopics": [
-    "Ultrasonic sensor robot that avoids obstacles",
-    "Bluetooth car without any wire",
-    "Touch sensor lamp that reacts to your finger",
-    "Servo motor that remembers its angle",
-    "Light sensor (LDR) night lamp"
+    "Self-balancing robot and the gyro/accelerometer",
+    "Clap switch counting claps with a sound sensor module",
+    "Ultrasonic sensor robot that stops before a wall",
+    "LDR light sensor night lamp with Arduino",
+    "Bluetooth car: how a phone controls a robot"
   ],
   "bestTimes": {
     "times": [
