@@ -3,3 +3,72 @@
   Clap switch shor mein kyun fail hota hai? 👏 #shorts
 
 == voice (Microsoft Edge neural)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with kokoro-onnx --with soundfile --with edge-tts python analysis/tts.py teardown3
+Downloading onnxruntime (22.7MiB)
+ Downloaded onnxruntime
+Installed 27 packages in 20ms
+[0;93m2026-11-10 15:23:13.948853912 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+a1          3.67s  ये मॉड्यूल आवाज़ सुनता नहीं, सिर्फ़ हवा का दबाव नापता है!
+a2          5.00s  KY-038 साउंड सेंसर, तीन पॉइंट तीन से पाँच वोल्ट पर चलता है।
+a3          3.86s  ये इलेक्ट्रेट माइक्रोफ़ोन है, यहीं हवा की तरंग बिजली बनती है।
+a4          3.53s  इसकी झिल्ली में स्थायी चार्ज बंद है, इसलिए नाम इलेक्ट्रेट।
+a5          6.03s  दूसरा हिस्सा LM393 कम्पेरेटर और पोटेंशियोमीटर है, जो थ्रेशोल्ड तय करता है।
+a6          3.30s  पीछे चार पिन हैं: एनालॉग, डिजिटल, ग्राउंड और प्लस।
+b1          2.33s  पहले माइक एक छोटी सी वेव बनाता है।
+b2          2.75s  एनालॉग पिन पर यही वेव बड़ी होकर दिखती है।
+b3          2.86s  थ्रेशोल्ड पार होते ही डिजिटल पिन हाई हो जाता है।
+b4          3.06s  आवाज़ से झिल्ली हिलती है, और वोल्टेज बन जाता है।
+b5          2.79s  वोल्टेज पोट के लेवल से ऊपर, तो डिजिटल हाई।
+b6          4.09s  थ्रेशोल्ड दो वोल्ट, पंखे का शोर ढाई वोल्ट: डिजिटल हाई, ताली बेकार!
+c1          3.91s  ये सिर्फ़ तेज़ आवाज़ का लेवल समझता है, ताली की पहचान नहीं।
+c2          3.70s  ताली वाली लाइट, दरवाज़े की घंटी, और बच्चे के रोने का अलार्म।
+c3          4.03s  पंखे या ट्रैफ़िक का शोर और तेज़ म्यूज़िक इसे बार-बार ट्रिगर करते हैं।
+c4          3.39s  शांति में पोट घुमाओ, और दो ताली एक सेकंड में गिनो।
+c5          3.66s  सेव करो, और कमेंट में बताओ, तुम्हारे घर का शोर कौन सा है?
+wrote 17 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/teardown3/kokoro
+  voice 61.9s at +18%
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with kokoro-onnx --with soundfile --with edge-tts python analysis/tts.py teardown3
+[0;93m2026-11-10 15:23:52.777861227 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+a1          3.45s  ये मॉड्यूल आवाज़ सुनता नहीं, सिर्फ़ हवा का दबाव नापता है!
+a2          4.69s  KY-038 साउंड सेंसर, तीन पॉइंट तीन से पाँच वोल्ट पर चलता है।
+a3          3.61s  ये इलेक्ट्रेट माइक्रोफ़ोन है, यहीं हवा की तरंग बिजली बनती है।
+a4          3.31s  इसकी झिल्ली में स्थायी चार्ज बंद है, इसलिए नाम इलेक्ट्रेट।
+a5          5.65s  दूसरा हिस्सा LM393 कम्पेरेटर और पोटेंशियोमीटर है, जो थ्रेशोल्ड तय करता है।
+a6          3.10s  पीछे चार पिन हैं: एनालॉग, डिजिटल, ग्राउंड और प्लस।
+b1          2.19s  पहले माइक एक छोटी सी वेव बनाता है।
+b2          2.59s  एनालॉग पिन पर यही वेव बड़ी होकर दिखती है।
+b3          2.66s  थ्रेशोल्ड पार होते ही डिजिटल पिन हाई हो जाता है।
+b4          2.88s  आवाज़ से झिल्ली हिलती है, और वोल्टेज बन जाता है।
+b5          2.62s  वोल्टेज पोट के लेवल से ऊपर, तो डिजिटल हाई।
+b6          3.84s  थ्रेशोल्ड दो वोल्ट, पंखे का शोर ढाई वोल्ट: डिजिटल हाई, ताली बेकार!
+c1          3.67s  ये सिर्फ़ तेज़ आवाज़ का लेवल समझता है, ताली की पहचान नहीं।
+c2          3.47s  ताली वाली लाइट, दरवाज़े की घंटी, और बच्चे के रोने का अलार्म।
+c3          3.78s  पंखे या ट्रैफ़िक का शोर और तेज़ म्यूज़िक इसे बार-बार ट्रिगर करते हैं।
+c4          3.18s  शांति में पोट घुमाओ, और दो ताली एक सेकंड में गिनो।
+c5          3.43s  सेव करो, और कमेंट में बताओ, तुम्हारे घर का शोर कौन सा है?
+wrote 17 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/teardown3/kokoro
+  voice 58.1s at +26%
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with kokoro-onnx --with soundfile --with edge-tts python analysis/tts.py teardown3
+[0;93m2026-11-10 15:24:39.430547192 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+a1          3.24s  ये मॉड्यूल आवाज़ सुनता नहीं, सिर्फ़ हवा का दबाव नापता है!
+a2          4.42s  KY-038 साउंड सेंसर, तीन पॉइंट तीन से पाँच वोल्ट पर चलता है।
+a3          3.41s  ये इलेक्ट्रेट माइक्रोफ़ोन है, यहीं हवा की तरंग बिजली बनती है।
+a4          3.12s  इसकी झिल्ली में स्थायी चार्ज बंद है, इसलिए नाम इलेक्ट्रेट।
+a5          5.33s  दूसरा हिस्सा LM393 कम्पेरेटर और पोटेंशियोमीटर है, जो थ्रेशोल्ड तय करता है।
+a6          2.92s  पीछे चार पिन हैं: एनालॉग, डिजिटल, ग्राउंड और प्लस।
+b1          2.07s  पहले माइक एक छोटी सी वेव बनाता है।
+b2          2.44s  एनालॉग पिन पर यही वेव बड़ी होकर दिखती है।
+  edge voice failed (No audio was received. Please verify that your parameters are correct.); falling back to Kokoro
+b3          3.56s  थ्रेशोल्ड पार होते ही डिजिटल पिन हाई हो जाता है।
+b4          2.71s  आवाज़ से झिल्ली हिलती है, और वोल्टेज बन जाता है।
+b5          2.46s  वोल्टेज पोट के लेवल से ऊपर, तो डिजिटल हाई।
+b6          3.61s  थ्रेशोल्ड दो वोल्ट, पंखे का शोर ढाई वोल्ट: डिजिटल हाई, ताली बेकार!
+c1          3.46s  ये सिर्फ़ तेज़ आवाज़ का लेवल समझता है, ताली की पहचान नहीं।
+c2          3.27s  ताली वाली लाइट, दरवाज़े की घंटी, और बच्चे के रोने का अलार्म।
+c3          3.56s  पंखे या ट्रैफ़िक का शोर और तेज़ म्यूज़िक इसे बार-बार ट्रिगर करते हैं।
+c4          3.00s  शांति में पोट घुमाओ, और दो ताली एक सेकंड में गिनो।
+c5          3.24s  सेव करो, और कमेंट में बताओ, तुम्हारे घर का शोर कौन सा है?
+wrote 17 clips to /home/runner/work/echo-lab-studio/echo-lab-studio/app/public/voice/teardown3/kokoro
+  voice 55.8s at +34%
+
+== render tools
