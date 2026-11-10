@@ -1,0 +1,16 @@
+{
+  "id": "20261110-152226",
+  "topic": "Clap switch part 3: why it fails in noise",
+  "hook": "",
+  "lang": "hi",
+  "started": "2026-11-10T15:22:26",
+  "status": "running",
+  "stages": [
+    {
+      "name": "script: \"Clap switch part 3: why it fails in noise\" (sound, Claude)",
+      "at": "2026-11-10T15:22:29"
+    }
+  ],
+  "format": "teardown3",
+  "module": "sound"
+}
