@@ -111,3 +111,17 @@ events 62 dur 60.45 → page/events.json
   $ ffmpeg -y -loglevel error -f concat -safe 0 -i /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-1794307407/list.txt -c copy /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-hc-sr501-
 
 == sound + master
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with numpy --with scipy --with soundfile python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/mix.py
+Downloading scipy (33.7MiB)
+ Downloaded scipy
+Installed 6 packages in 18ms
+mix 61.0 s
+  $ sh core/render/mux.sh /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-hc-sr501-pir-explained.video.mp4 /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/page/out/mix.wav /home/runne
+/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/hc-sr501-pir-explained.mp4
+    I:         -14.0 LUFS
+    LRA:         1.7 LU
+    Peak:       -1.5 dBFS
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python core/render/srt.py /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/page/out/cues.json /home/runner/work/echo-lab-studio/echo-lab-studio/ou
+/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/hc-sr501-pir-explained.srt 17 cues
+
+== youtube
