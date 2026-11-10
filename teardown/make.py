@@ -174,12 +174,25 @@ def render_cloud(parts, out):
     print(f"  dispatched {parts} parts (job {job})", flush=True)
     names = [f"td3-{job}-part-{k}.mp4" for k in range(parts)]
     t0, retried = time.time(), False
+    retried_parts, crash_count = set(), {}
     while True:
         have = set(a["name"] for a in json.loads(gh(["release", "view", "renders", "--json", "assets"], ok=True) or '{"assets":[]}')["assets"])
         got = [n for n in names if n in have]
         print(f"  {len(got)}/{parts} parts ({(time.time() - t0) / 60:.0f} min)", flush=True)
         if len(got) == parts:
             break
+        # a part that crashed is retried once at once; a second crash stops the video (no 3-hour wait)
+        runs = json.loads(gh(["run", "list", "--workflow", "teardown-part.yml", "-L", "60", "--json", "displayTitle,conclusion"], ok=True) or "[]")
+        failed = {int(m.group(1)) for r in runs if r.get("conclusion") == "failure" and f"({job})" in r["displayTitle"]
+                  for m in [re.search(r"part (\d+)/", r["displayTitle"])] if m}
+        failed -= {k for k, n in enumerate(names) if n in have}
+        for k in failed - retried_parts:
+            print(f"  part {k} crashed; retrying it once", flush=True)
+            gh(["workflow", "run", "teardown-part.yml", "-f", f"job={job}", "-f", f"part={k}", "-f", f"parts={parts}"])
+            retried_parts.add(k)
+            crash_count[k] = crash_count.get(k, 0) + 1
+        if any(sum(1 for r in runs if r.get("conclusion") == "failure" and f"({job})" in r["displayTitle"] and f"part {k}/" in r["displayTitle"]) >= 2 for k in failed):
+            raise RuntimeError("a render part crashed twice (see the Teardown part runs)")
         if time.time() - t0 > 110 * 60 and not retried:
             for k, n in enumerate(names):
                 if n not in have:

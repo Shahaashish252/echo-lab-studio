@@ -11,7 +11,8 @@ const SANS = '"Jost", "Inter", sans-serif', MONO = '"JBMono", monospace';
 const ST = [[0, 0], [10, 10], [20, 20], [30, 30]];
 let SPEC, TL, CAMK, g, now, texts, cx, cy, k, TT;
 const tl = (id, dt = 0) => TL.t(id) + dt;
-const mix = (a, b, f) => { const p = (s) => [1, 3, 5].map((i) => parseInt(s.slice(i, i + 2), 16)); const A = p(a), B = p(b); return `rgb(${A.map((v, i) => Math.round(v + (B[i] - v) * f)).join(',')})`; };
+const hex6 = (s) => (/^#[0-9a-f]{3}$/i.test(s) ? '#' + [...s.slice(1)].map((c) => c + c).join('') : s);
+const mix = (a, b, f) => { const p = (s) => [1, 3, 5].map((i) => parseInt(hex6(s).slice(i, i + 2), 16)); const A = p(a), B = p(b); return `rgb(${A.map((v, i) => Math.round(v + (B[i] - v) * f)).join(',')})`; };
 const tones = (c) => [mix(c, '#FFF8EC', .22), c, mix(c, '#231A2C', .24)];
 const P = (x, y, z) => [W / 2 + ((x - cx) - (y - cy)) * C30 * k, H * .46 + (((x - cx) + (y - cy)) * .5 - z) * k];
 function poly(pts, fill) { g.beginPath(); pts.forEach((p, i) => { const [sx, sy] = P(...p); i ? g.lineTo(sx, sy) : g.moveTo(sx, sy); }); g.closePath(); g.fillStyle = fill; g.fill(); g.strokeStyle = fill; g.lineWidth = 1; g.stroke(); }
