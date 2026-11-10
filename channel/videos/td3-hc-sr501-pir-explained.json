@@ -1,0 +1,37 @@
+{
+  "file": "out/auto/hc-sr501-pir-explained.mp4",
+  "title": "Ye sensor chhoone se nahi, garmi se chalta hai! 🔥 #shorts",
+  "description": "Button dabana nahi padta, bas chhoona hai... ya sach mein? HC-SR501 PIR sensor chhoone se nahi, garmi ke badlav se chalta hai!\nIs Short mein 3D teardown aur signal diagram ke saath samjho.\n🔍 Fresnel lens garmi ko focus karta hai\n🌡️ Do hisse garmi ka badlav pakadte hain\n📏 Range 3 se 7 meter\n⏱️ Chalu karke lagbhag 1 minute ruko\n👉 Subscribe karo Echo Lab 3D ko, har hafte ek naya module khulega!\n#shorts #PIR #HCSR501 #Arduino #electronics #makers #sensor #hindi",
+  "tags": [
+    "HC-SR501",
+    "PIR sensor",
+    "PIR sensor kaise kaam karta hai",
+    "motion sensor Arduino",
+    "PIR sensor Hindi",
+    "Arduino projects Hindi",
+    "Fresnel lens",
+    "pyroelectric sensor",
+    "BISS0001",
+    "electronics for students",
+    "Echo Lab 3D",
+    "motion detector explained",
+    "sensor teardown",
+    "Arduino sensors",
+    "maker India"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "Button dabana nahi padta, bas chhoona hai",
+  "format": "teardown3",
+  "captions": "out/auto/hc-sr501-pir-explained.srt",
+  "social": {
+    "instagram": "Button dabana nahi padta, bas chhoona hai... ya sach mein? 🔥\nHC-SR501 PIR sensor garmi ka badlav pakadta hai, roshni nahi.\nRange 3 se 7 meter, aur chalu karke ~1 minute ruko.\n📌 Save karo apne next Arduino project ke liye!\nComment mein batao: agla kaun sa sensor kholein?\n#PIR #Arduino #electronics #makers #EchoLab3D",
+    "tiktok": "Ye sensor garmi se chalta hai, button se nahi! 🔥 #PIR #Arduino #electronics #makers #EchoLab3D"
+  }
+}

@@ -4,7 +4,7 @@
   "hook": "Is button ko dabana nahi padta, bas chhoona hai",
   "lang": "hi",
   "started": "2026-11-10T16:09:38",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "script: \"Touch sensor that feels you, not presses (open with this hook: \"Is button ko dabana nahi padta, bas chhoona hai\")\" (pir, Claude)",
@@ -32,5 +32,7 @@
     }
   ],
   "format": "teardown3",
-  "module": "pir"
+  "module": "pir",
+  "finished": "2026-11-10T16:35:47",
+  "uploadId": "m2busj2Fu4c"
 }

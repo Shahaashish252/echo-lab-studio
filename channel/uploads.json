@@ -647,5 +647,14 @@
     "topic": "Clap switch part 3: why it fails in noise",
     "job": "20261110-152226",
     "postAt": "2026-11-11T15:00"
+  },
+  {
+    "id": "m2busj2Fu4c",
+    "meta": "channel/videos/td3-hc-sr501-pir-explained.json",
+    "date": "2026-11-10",
+    "status": "approved",
+    "topic": "Touch sensor that feels you, not presses",
+    "job": "20261110-160938",
+    "postAt": "2026-11-12T15:00"
   }
 ]
