@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Ultrasonic robot that hears obstacles",
+      "hook": "Yeh robot dekhta nahi, sirf echo sunta hai"
+    },
+    {
+      "topic": "Why a robot car falls off a table without IR",
+      "hook": "Is robot ko table ka kinara kaise pata chalta hai?"
+    },
+    {
+      "topic": "Light sensor (LDR) night lamp",
+      "hook": "Yeh lamp andhera dekhte hi khud jal jaata hai, bina dimaag ke"
+    },
+    {
+      "topic": "Touch sensor that feels you, not presses",
+      "hook": "Is button ko dabana nahi padta, bas chhoona hai"
+    },
+    {
+      "topic": "Servo motor remembers its angle",
+      "hook": "Yeh motor ghoomta nahi, sirf ek angle yaad rakhta hai"
+    },
+    {
       "topic": "Touch sensor lamp",
       "hook": "Is Lamp Mein Button Nahi Hai, Phir Bhi Jalta Hai",
       "module": ""
@@ -153,6 +173,7 @@
     "Hand sanitizer dispenser",
     "Phone auto-brightness: why the screen gets brighter in sunlight",
     "Sound-activated disco lights that dance to the music",
-    "Ultrasonic obstacle avoiding robot"
+    "Ultrasonic obstacle avoiding robot",
+    "Clap switch part 3: why it fails in noise"
   ]
 }

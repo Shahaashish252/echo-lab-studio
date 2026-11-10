@@ -638,5 +638,14 @@
     },
     "postedAt": "2026-11-09T16:00",
     "retryAfter": "2026-11-10T11:19"
+  },
+  {
+    "id": "eRlpe0uqFyU",
+    "meta": "channel/videos/td3-clap-switch-noise-fail.json",
+    "date": "2026-11-10",
+    "status": "approved",
+    "topic": "Clap switch part 3: why it fails in noise",
+    "job": "20261110-152226",
+    "postAt": "2026-11-11T15:00"
   }
 ]

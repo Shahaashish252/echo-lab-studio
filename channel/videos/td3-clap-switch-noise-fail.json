@@ -1,0 +1,36 @@
+{
+  "file": "out/auto/clap-switch-noise-fail.mp4",
+  "title": "Clap switch shor mein kyun fail hota hai? 👏 #shorts",
+  "description": "Clap switch fan ke shor mein bhi on-off kyun hota hai? KY-038 sirf loudness dekhta hai, taali nahi.\nIs short mein dekho andar ka electret mic, LM393 aur pot.\n🎤 Electret mic awaaz ko voltage banata hai\n⚙️ LM393 comparator threshold se compare karta hai\n🎚️ Pot se sensitivity set hoti hai\n💡 Tip: do taali ek second ke andar gino\n🔔 Subscribe karo Echo Lab 3D ke liye\n#shorts #KY038 #Arduino #ClapSwitch #ElectronicsHindi #DIY #Makers #SoundSensor",
+  "tags": [
+    "clap switch kaise kaam karta hai",
+    "KY-038 sound sensor",
+    "KY-038 Arduino hindi",
+    "clap switch noise problem",
+    "sound sensor false trigger",
+    "LM393 comparator",
+    "electret microphone",
+    "Arduino projects for students",
+    "clap switch Arduino",
+    "sound sensor threshold pot",
+    "electronics hindi",
+    "maker projects india",
+    "Echo Lab 3D",
+    "Arduino hindi tutorial"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "Sunta nahi, hawa ka dabaav naapta hai",
+  "format": "teardown3",
+  "captions": "out/auto/clap-switch-noise-fail.srt",
+  "social": {
+    "instagram": "Clap switch shor mein pagal kyun ho jata hai? 👏\nKY-038 taali nahi, sirf loudness sunta hai.\nPot se threshold set karo aur do taali ek second mein gino.\nSave karo, project mein kaam aayega!\nComment mein batao: tumhare ghar ka sabse bada shor kaun sa hai?\n#Arduino #KY038 #ClapSwitch #ElectronicsHindi #Makers",
+    "tiktok": "Clap switch shor mein fail kyun hota hai? 👏 KY-038 ka raaz #Arduino #KY038 #ClapSwitch #Electronics #Makers"
+  }
+}
