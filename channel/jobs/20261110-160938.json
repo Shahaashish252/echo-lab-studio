@@ -1,0 +1,16 @@
+{
+  "id": "20261110-160938",
+  "topic": "Touch sensor that feels you, not presses",
+  "hook": "Is button ko dabana nahi padta, bas chhoona hai",
+  "lang": "hi",
+  "started": "2026-11-10T16:09:38",
+  "status": "running",
+  "stages": [
+    {
+      "name": "script: \"Touch sensor that feels you, not presses (open with this hook: \"Is button ko dabana nahi padta, bas chhoona hai\")\" (pir, Claude)",
+      "at": "2026-11-10T16:09:38"
+    }
+  ],
+  "format": "teardown3",
+  "module": "pir"
+}
