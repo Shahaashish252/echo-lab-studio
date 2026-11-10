@@ -100,3 +100,17 @@ events 62 dur 63.9 → page/events.json
   $ ffmpeg -y -loglevel error -f concat -safe 0 -i /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-1794304568/list.txt -c copy /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-clap-swit
 
 == sound + master
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with numpy --with scipy --with soundfile python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/mix.py
+Downloading scipy (33.7MiB)
+ Downloaded scipy
+Installed 6 packages in 23ms
+mix 64.4 s
+  $ sh core/render/mux.sh /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-clap-switch-noise-fail.video.mp4 /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/page/out/mix.wav /home/runne
+/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/clap-switch-noise-fail.mp4
+    I:         -13.8 LUFS
+    LRA:         1.5 LU
+    Peak:       -1.5 dBFS
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python core/render/srt.py /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/page/out/cues.json /home/runner/work/echo-lab-studio/echo-lab-studio/ou
+/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/clap-switch-noise-fail.srt 17 cues
+
+== youtube
