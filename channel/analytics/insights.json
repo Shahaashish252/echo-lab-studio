@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-10T22:42",
-  "videos": 25,
-  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000-1,400 views there, while YouTube Shorts mostly get under 60 views. The best videos are about a robot or a simple sensor trick (gyro, clap switch, PIR motion sensor, IR obstacle avoidance) with a surprising 'it doesn't see/think, it only senses X' angle. Everyday-place videos (lift door, mall door, tap, street light, smoke alarm) and generic 'how does X work?' questions get far fewer views, and the one English video did not reach Instagram at all.",
-  "winningPattern": "Robot or maker-project subject (robots, clap switch, mic, PIR) + a counterintuitive 'it can't see/hear/think, it only senses X' hook + short Hinglish title with one emoji and #shorts, posted on Instagram first. Titles that state a surprising claim (e.g. 'Taali Nahi, Sirf Shor Sunta Hai', 'Gyro Ke Bina Robot Gir Jaata') beat plain questions ('X Kaise Kaam Karta Hai?'). Robot/Arduino-adjacent topics also earn the most saves and shares, which signal real interest.",
+  "updated": "2026-11-11T15:36",
+  "videos": 26,
+  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly get under 100 views. The best videos are short, surprising 'this thing can't see/think, it only hears/feels' explainers about robots and clap switches, which also earn the most likes, saves and shares. Everyday-object 'how does it know' videos (taps, doors, lifts, smoke alarms) and the English video are getting little attention on either platform.",
+  "winningPattern": "Robot or hobby-circuit subjects (gyro robot, clap switch, PIR, line follower, IR robot, mic) with a 'X doesn't do Y, it only does Z' contrarian hook in Hinglish, plus an emoji and #shorts. Posted on Instagram Reels first, where they reach 1,000-1,400 people; the ones with a surprising claim or a clear 'why' question get the shares and saves. Early YouTube winners were also in this robot/clap/PIR family and posted around Oct 17-31.",
   "doMore": [
-    "Make robot and maker-project videos: balancing, line follower, obstacle avoidance, clap switch variants",
-    "Open with a surprising claim ('X can't see, it only feels Y') instead of a plain question",
-    "Post on Instagram first and treat it as the main platform; test YouTube separately with 2-3 titles to find why it lags",
-    "End with a save/share prompt like 'Save this for your next Arduino project' since robot IR videos earn the most shares",
-    "Keep Hindi narration and Hinglish titles; make follow-ups to the winners (gyro, clap switch, PIR, IR robot)"
+    "Make 'it doesn't see/think, it only hears/feels' hooks about robots and maker modules, the top format on both platforms",
+    "Do follow-ups to the clap switch and gyro robot videos (a series, e.g. Part 2 with a real build or a failure case) since they are the only ones with real YouTube traction",
+    "Open with the surprising claim in the first line on screen and answer the 'why' in the last 3 seconds to boost saves and shares",
+    "Stay with Hindi and Hinglish titles for now, and treat Instagram as the main platform while testing what makes YouTube pick videos up",
+    "Use hobby/maker subjects (Arduino modules, sensors you can build) over public-place devices, and show a quick build or demo"
   ],
   "stopDoing": [
-    "Generic 'Kaise Kaam Karta Hai? 🤔' titles on everyday objects like taps, lift doors and mall doors",
-    "Near-duplicate topics (smoke detector x2, IR sensor x2, tap x2) posted within days of each other",
-    "Posting videos in English or without cross-posting to Instagram"
+    "Stop making generic 'X kaise kaam karta hai?' videos about public devices (mall door, washroom tap, lift, smoke detector); they get under 600 IG views and almost no saves",
+    "Stop posting near-duplicate topics (two smoke alarm videos, two IR sensor videos, three tap/door videos) in the same week, as they split attention and none grows",
+    "Stop mixing in English videos for now since the one English upload got no Instagram reach"
   ],
   "nextTopics": [
-    "Self-balancing robot and the gyro/accelerometer",
-    "Clap switch counting claps with a sound sensor module",
-    "Ultrasonic sensor robot that stops before a wall",
-    "LDR light sensor night lamp with Arduino",
-    "Bluetooth car: how a phone controls a robot"
+    "Ultrasonic sensor robot that hears walls (bat-style)",
+    "Arduino without a clock, why it stops thinking",
+    "Light sensor LDR robot that follows a torch",
+    "Clap switch part 2: why a loud TV or fan breaks it",
+    "Gyro/accelerometer: a self-balancing robot falling without feedback"
   ],
   "bestTimes": {
     "times": [
-      "15:00",
+      "14:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (24 posts)"
+    "reason": "from our own posts: these hours averaged the most views (25 posts)"
   }
 }

@@ -1,0 +1,36 @@
+{
+  "file": "out/auto/smart-dustbin-ir-sensor.mp4",
+  "title": "Dustbin haath pe kyu khulta hai, bag pe nahi? 🗑️ #shorts",
+  "description": "Dustbin haath dikhane pe khulta hai, par kabhi kabhi bag pe nahi. Kyu?\nFC-51 IR sensor ka poora raaz 55 second mein!\n🔦 IR LED invisible light bhejti hai\n📡 Photodiode wapas aayi light pakadta hai\n🧠 LM393 comparator decide karta hai\n📏 Range 2-30 cm, angle 35°\nSubscribe karo Echo Lab 3D ke saath, har hafte ek module kholke dekhenge!\n#shorts #FC51 #IRsensor #Arduino #electronics #diy #makers #hindi",
+  "tags": [
+    "FC-51 IR sensor",
+    "smart dustbin Arduino",
+    "IR obstacle sensor kaise kaam karta hai",
+    "LM393 comparator",
+    "touchless dustbin",
+    "IR sensor hindi",
+    "Arduino project for students",
+    "how IR sensor works",
+    "photodiode IR LED",
+    "line follower robot sensor",
+    "electronics explained hindi",
+    "DIY smart dustbin",
+    "Echo Lab 3D",
+    "maker projects India"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "Dustbin haath pe khulta, bag pe kyu nahi?",
+  "format": "teardown3",
+  "captions": "out/auto/smart-dustbin-ir-sensor.srt",
+  "social": {
+    "instagram": "Dustbin haath pe khulta hai, bag pe nahi? 🗑️\nFC-51 sensor dekhta nahi, IR light ka reflection naapta hai.\nChamkili cheez zyada light lautati hai, kali kam.\nRange: 2-30 cm, angle 35°.\nSave karo apne next project ke liye!\nComment mein batao: agla kaunsa sensor kholein?\n#FC51 #IRsensor #Arduino #electronics #EchoLab3D",
+    "tiktok": "Dustbin haath pe kyu khulta hai, bag pe nahi? 🗑️ FC-51 IR sensor explained! #FC51 #IRsensor #Arduino #electronics #shorts"
+  }
+}

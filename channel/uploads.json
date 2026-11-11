@@ -659,6 +659,15 @@
     "status": "approved",
     "topic": "Touch sensor that feels you, not presses",
     "job": "20261110-160938",
-    "postAt": "2026-11-12T15:00"
+    "postAt": "2026-11-12T14:00"
+  },
+  {
+    "id": "uLPHCcegH-E",
+    "meta": "channel/videos/td3-smart-dustbin-ir-sensor.json",
+    "date": "2026-11-11",
+    "status": "approved",
+    "topic": "Smart dustbin lid that opens when you wave your hand",
+    "job": "20261111-153700",
+    "postAt": "2026-11-13T14:00"
   }
 ]
