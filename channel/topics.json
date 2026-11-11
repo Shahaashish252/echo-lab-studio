@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Line follower robot sensor: why it follows black",
+      "hook": "Yeh Robot Sirf Kaala Rang Dekhta Hai, Baaki Sab Andhera"
+    },
+    {
+      "topic": "Ultrasonic robot that stops before a wall",
+      "hook": "Is Robot Ki Aankhen Nahi, Phir Bhi Deewar Se Nahi Takraata"
+    },
+    {
+      "topic": "Arduino brain: why a robot freezes without code",
+      "hook": "Arduino Ke Bina Ye Robot Bas Ek Dibba Hai"
+    },
+    {
+      "topic": "Sound sensor module: loud vs quiet, why it fools clap switch",
+      "hook": "Is Chhote Module Ko Taali Aur Thappad Mein Fark Nahi Pata"
+    },
+    {
+      "topic": "Servo motor: how it stops at an exact angle",
+      "hook": "Yeh Motor Ghoomta Nahi, Sirf Ek Angle Pakadta Hai"
+    },
+    {
       "topic": "Touch sensor lamp that reacts to your finger",
       "hook": "Ye Lamp Button Nahi, Aapki Ungli Se Jalta Hai",
       "module": ""
