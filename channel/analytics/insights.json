@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-12T16:01",
-  "videos": 26,
-  "summary": "Instagram is doing nearly all the work: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly stay under 100 views. The best videos are about a single surprising idea ('the robot/sensor doesn't see, it only hears or feels') or a robot gimmick, and they get the most likes, saves and shares. Longer, generic 'how does X work?' questions about public places (taps, doors, lifts, smoke alarms) and the one English video are weak.",
-  "winningPattern": "Hindi Instagram Reels about a hands-on maker subject (robot, clap switch, PIR/IR sensor, mic) with a contrarian 'it doesn't do X, it only does Y' or 'without this, the robot falls' hook. Titles are short, punchy, 1-2 emojis, and the idea is a single surprising fact. Published recently, in tight bursts. Robot and clap-switch topics also earn the most shares and saves.",
+  "updated": "2026-11-12T20:34",
+  "videos": 27,
+  "summary": "Instagram is doing most of the work: almost every Hindi video gets 1,000+ views there, while YouTube Shorts mostly get under 60 views. The best videos are the ones with a surprising claim about a robot or sensor (like 'it can't see, it only hears') and a strong visual demo; they get more likes, saves and shares. Dry 'how does X work?' videos about everyday places (lifts, taps, malls, smoke alarms) and the newest posts are getting much less attention.",
+  "winningPattern": "Short Hindi videos about robots or sensors that do something surprising or 'dumb but clever' (gyro-less robot falling, clap switch hearing noise, line follower with no brain, mic as reverse speaker). Titles open with a bold, counter-intuitive claim in Hinglish ('X ko Y nahi pata, sirf Z karta hai') plus one emoji and #shorts, and the Instagram Reel is the main engine. Robot and sound-based Arduino-module topics beat everyday-building topics, and series-style follow-ups on a proven topic (clap switch) hold up on both platforms.",
   "doMore": [
-    "Lead with a contrarian 'doesn't see/hear, only does Y' hook on a robot or sensor topic",
-    "Make follow-ups to winners: gyro/balancing robot, clap switch, PIR, IR obstacle robot, mic",
-    "Post Instagram-first and test a Reel-native cut, since YouTube barely distributes these",
-    "Add a save/share trigger at the end, like 'save this for your next Arduino project'",
-    "Keep the Hindi title short with one emoji and a single clear surprise"
+    "Lead with a bold myth-busting claim about robots and Arduino modules, e.g. 'X doesn't do what you think'.",
+    "Make follow-ups to the top hits: gyro, clap switch, PIR, line follower, mic/speaker.",
+    "Show a visible failure or demo in the first second (robot falling, switch triggering) before explaining.",
+    "End with a share or save prompt like 'Save this for your next project' since saves and shares signal quality.",
+    "Check why the IR robot video got 10 IG shares but few YouTube views, and test a different YouTube title and thumbnail for the same topic."
   ],
   "stopDoing": [
-    "Generic 'X Kaise Pehchanta Hai?' titles about public-place devices (taps, doors, lifts, malls)",
-    "Posting near-duplicate topics (two smoke detector, two IR-in-dark, two clap switch angles on the same week) that split views",
-    "English-only uploads while the audience is responding to Hindi"
+    "Stop making 'Kaise kaam karta hai?' videos about everyday places (lift, mall door, washroom tap, street light); they get the lowest views.",
+    "Stop posting near-duplicate topics (three smoke, two tap, two IR videos) within days of each other.",
+    "Stop posting English-only or mixed-language titles that break the Hindi pattern, and don't expect YouTube to carry the channel until its titles and hooks are tested."
   ],
   "nextTopics": [
-    "Self-balancing robot and why it needs a gyro",
-    "Ultrasonic robot avoiding walls by sound",
-    "Line follower with IR sensors",
-    "Sound sensor module in a clap switch",
-    "Servo motor knowing its angle"
+    "Line follower robot with no brain, only IR sensors",
+    "Clap switch counting claps with a simple timer",
+    "Gyro sensor balancing a two-wheel robot",
+    "Speaker used as a microphone experiment",
+    "PIR sensor fooled by a glass sheet or blanket"
   ],
   "bestTimes": {
     "times": [
       "14:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (25 posts)"
+    "reason": "from our own posts: these hours averaged the most views (26 posts)"
   }
 }

@@ -1,9 +1,18 @@
 {
-  "updated": "12 Nov 2026, 16:01",
+  "updated": "12 Nov 2026, 20:34",
   "youtube": {
     "subs": 6,
     "views": 4023,
     "videos": [
+      {
+        "title": "Ye sensor chhoone se nahi, garmi se chalta hai! 🔥 #shorts",
+        "id": "m2busj2Fu4c",
+        "status": "public",
+        "published": "2026-11-12",
+        "views": 3,
+        "likes": 1,
+        "comments": 2
+      },
       {
         "title": "Dustbin haath pe kyu khulta hai, bag pe nahi? 🗑️ #shorts",
         "id": "uLPHCcegH-E",
@@ -18,26 +27,17 @@
         "id": "eRlpe0uqFyU",
         "status": "public",
         "published": "2026-11-11",
-        "views": 10,
-        "likes": 1,
+        "views": 15,
+        "likes": 2,
         "comments": 2
-      },
-      {
-        "title": "Ye sensor chhoone se nahi, garmi se chalta hai! 🔥 #shorts",
-        "id": "m2busj2Fu4c",
-        "status": "private",
-        "published": "2026-11-10",
-        "views": 0,
-        "likes": 0,
-        "comments": 0
       },
       {
         "title": "Yeh Robot Dekhta Nahi, Sirf Sunta Hai 🤖 #shorts",
         "id": "MR1GGw3DNNM",
         "status": "public",
         "published": "2026-11-09",
-        "views": 18,
-        "likes": 1,
+        "views": 20,
+        "likes": 2,
         "comments": 2
       },
       {
@@ -99,7 +99,7 @@
         "id": "yg0sWNjFBTs",
         "status": "public",
         "published": "2026-11-05",
-        "views": 517,
+        "views": 519,
         "likes": 7,
         "comments": 0
       },
@@ -135,7 +135,7 @@
         "id": "nHR2_Dsl4I0",
         "status": "public",
         "published": "2026-11-04",
-        "views": 56,
+        "views": 58,
         "likes": 1,
         "comments": 2
       },
@@ -306,7 +306,7 @@
         "id": "jD5lPQq_aQo",
         "status": "public",
         "published": "2026-10-23",
-        "views": 24,
+        "views": 26,
         "likes": 0,
         "comments": 0
       },
@@ -682,13 +682,24 @@
     "followers": 17,
     "posts": [
       {
+        "title": "Clap switch shor mein pagal kyun ho jata hai? 👏",
+        "url": "https://www.instagram.com/reel/DfpMYVMjFOb/",
+        "published": "2026-11-12",
+        "likes": 3,
+        "comments": 1,
+        "reach": 103,
+        "views": 130,
+        "saved": 0,
+        "shares": 0
+      },
+      {
         "title": "Clap switch seeti se bhi ON kyun hota hai? 🎤",
         "url": "https://www.instagram.com/reel/DfW3pLcCGyZ/",
         "published": "2026-11-05",
         "likes": 11,
         "comments": 2,
         "reach": 1177,
-        "views": 1386,
+        "views": 1391,
         "saved": 2,
         "shares": 3
       },
@@ -699,7 +710,7 @@
         "likes": 15,
         "comments": 0,
         "reach": 1085,
-        "views": 1301,
+        "views": 1303,
         "saved": 4,
         "shares": 1
       },
@@ -710,7 +721,7 @@
         "likes": 2,
         "comments": 2,
         "reach": 127,
-        "views": 144,
+        "views": 145,
         "saved": 0,
         "shares": 0
       },
@@ -743,7 +754,7 @@
         "likes": 19,
         "comments": 0,
         "reach": 1069,
-        "views": 1195,
+        "views": 1197,
         "saved": 12,
         "shares": 1
       },
@@ -940,21 +951,10 @@
         "published": "2026-10-17",
         "likes": 12,
         "comments": 2,
-        "reach": 1212,
-        "views": 1426,
+        "reach": 1214,
+        "views": 1428,
         "saved": 3,
         "shares": 4
-      },
-      {
-        "title": "This tiny board can control almost anything 🤯",
-        "url": "https://www.instagram.com/reel/DeNu-rugIfQ/",
-        "published": "2026-10-08",
-        "likes": 3,
-        "comments": 6,
-        "reach": 107,
-        "views": 128,
-        "saved": 0,
-        "shares": 0
       }
     ]
   }

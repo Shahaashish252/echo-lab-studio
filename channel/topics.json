@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Line follower robot with no brain, only IR sensors",
+      "hook": "Is robot ke andar dimaag nahi, sirf do aankhein hain"
+    },
+    {
+      "topic": "Clap switch counting claps with a simple timer",
+      "hook": "Ek taali pe light jalti hai, do pe kyun nahi?"
+    },
+    {
+      "topic": "Gyro sensor balancing a two-wheel robot",
+      "hook": "Ye robot gir ke bhi dobara khada kaise ho jaata hai?"
+    },
+    {
+      "topic": "Speaker used as a microphone experiment",
+      "hook": "Ye speaker sunta bhi hai, tumhe pata hi nahi tha"
+    },
+    {
+      "topic": "PIR sensor fooled by a glass sheet or blanket",
+      "hook": "Ek kambal se PIR sensor ko bewakoof banao"
+    },
+    {
       "topic": "Self-balancing robot and why it needs a gyro",
       "hook": "Is robot ko gyro hata do, yeh 1 second mein gir jaayega"
     },
