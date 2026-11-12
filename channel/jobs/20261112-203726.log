@@ -12,3 +12,32 @@
   Ek kambal se PIR sensor ko bewakoof banao 🤯 #shorts
 
 == voice (local Hindi: Piper pratham)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+Downloading onnxruntime (22.7MiB)
+Downloading piper-tts (32.6MiB)
+ Downloaded onnxruntime
+ Downloaded piper-tts
+Installed 12 packages in 22ms
+[0;93m2026-11-12 20:39:59.301632252 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  downloading hi_IN-pratham-medium.onnx
+  downloading hi_IN-pratham-medium.onnx.json
+  a1    2.86s  एक कंबल से पी आई आर को बेवकूफ बनाओ!
+  a2    3.19s  पी आई आर: सात मीटर, एक सौ बीस डिग्री।
+  a3    3.21s  अंदर पायरोइलेक्ट्रिक एलिमेंट इन्फ्रारेड गर्मी पकड़ता है।
+  a4    3.20s  दो हिस्से, शांत कमरे में आपस में कैंसल।
+  a5    2.67s  फ्रेनल लेंस कमरे को कई ज़ोन में बाँटता है।
+  a6    2.69s  पीछे कंट्रोल सर्किट पल्स को हाई बनाता है।
+  b1    2.14s  शांत कमरे में आउट पिन लो रहता है।
+  b2    3.33s  गर्म शरीर आता है, पहले पॉज़िटिव फिर नेगेटिव पल्स।
+  b3    2.29s  आउट पिन तीन पॉइंट तीन वोल्ट हाई।
+  b4    3.58s  शीशा आठ से चौदह माइक्रोमीटर इन्फ्रारेड रोकता है।
+  b5    3.27s  कंबल शायद गर्मी छुपाकर बैकग्राउंड जैसा बना देता है।
+  b6    2.55s  शील्ड पकड़ो: सौ में से सौ बार सेंसर चुप।
+  c1    3.37s  दो सेकंड लॉकआउट, और तीस से साठ सेकंड वार्म-अप।
+  c2    3.34s  अलार्म, ऑटो लाइट और कैमरा ट्रैप में यही है।
+  c3    3.46s  धूप से झूठा अलार्म, बहुत धीमी चाल अनदेखी।
+  c4    2.74s  पावर-अप के बाद साठ सेकंड आउटपुट इग्नोर करो।
+  c5    2.99s  सेव करो, कमेंट में बताओ: कौन सा सेंसर अगला?
+  voice (Piper pratham, local) 50.9s at length 1.05
+
+== 3D model + drawings (render tools)
