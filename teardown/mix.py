@@ -1,13 +1,15 @@
-"""teardown3 sound: synthesised score per act (marimba groove · sparse blueprint mallets · bouncy iso groove · resolve on the card),
-procedural foley from page/events.json, the voice on top, ducked. -> page/out/mix.wav. No samples needed."""
+"""teardown3 sound: score per act (marimba groove · sparse blueprint mallets · bouncy iso groove · resolve on the card) played on
+real sampled mallets (VCSL, CC0; synthesised fallback), procedural foley from page/events.json, and the voice on top with a
+clarity chain (rumble/boom cut, presence + air, exciter for the 24 kHz TTS), ducking the music. -> page/out/mix.wav"""
 import json
+import os
 import sys
 from pathlib import Path
 
 import numpy as np
 import soundfile as sf
 from scipy.ndimage import maximum_filter1d, uniform_filter1d
-from scipy.signal import resample_poly
+from scipy.signal import resample_poly, sosfilt
 
 HERE = Path(__file__).resolve().parent
 PAGE = HERE / "page"
@@ -26,16 +28,32 @@ BEAT = .625
 mid = lambda m: 440 * 2 ** ((m - 69) / 12)
 
 
-def marimba(m, v=.6, d=1.2):
+try:   # real mallet samples (teardown/core/audio/instruments, fetched by make.py); synthesis if they are missing
+    import sampler as S
+    S.load("marimba"); S.load("vibraphone"); S.load("glockenspiel")
+    SAMPLED = True
+except Exception as e:  # noqa: BLE001
+    print("  mallet samples unavailable, synthesising:", str(e)[:120])
+    SAMPLED = False
+
+
+def _syn_marimba(m, v=.6, d=1.2):
     f = mid(m); tt = t_(d)
     x = np.sin(2 * np.pi * f * tt) * env_exp(d, .35 if f < 300 else .22) + .35 * np.sin(2 * np.pi * f * 3.93 * tt) * env_exp(d, .03) + .12 * np.sin(2 * np.pi * f * 9.2 * tt) * env_exp(d, .008)
     x[:96] *= np.linspace(0, 1, 96); return x * v
-def vibes(m, v=.4, d=3.0):
+def _syn_vibes(m, v=.4, d=3.0):
     f = mid(m); tt = t_(d)
     x = (np.sin(2 * np.pi * f * tt) + .25 * np.sin(2 * np.pi * f * 4 * tt) * env_exp(d, .25)) * env_exp(d, 1.1) * (1 + .25 * np.sin(2 * np.pi * 5.2 * tt))
     x[:240] *= np.linspace(0, 1, 240); return x * v
-def glock(m, v=.25, d=1.4):
+def _syn_glock(m, v=.25, d=1.4):
     f = mid(m); tt = t_(d); return (np.sin(2 * np.pi * f * tt) + .4 * np.sin(2 * np.pi * f * 2.76 * tt) * env_exp(d, .1)) * env_exp(d, .45) * v
+def _smp(inst, m, v, d, gain):
+    return S.note(inst, m, d, vel=min(1.0, .35 + v)) * gain * v
+def marimba(m, v=.6, d=1.2): return _smp("marimba", m, v, d, .9) if SAMPLED else _syn_marimba(m, v, d)
+def vibes(m, v=.4, d=3.0): return _smp("vibraphone", m, v, d, 1.0) if SAMPLED else _syn_vibes(m, v, d)
+def glock(m, v=.25, d=1.4): return _smp("glockenspiel", m, v, d, .7) if SAMPLED else _syn_glock(m, v, d)
+
+
 def bass(m, v=.5, d=1.0):
     f = mid(m); tt = t_(d); x = np.sin(2 * np.pi * f * tt) + .3 * np.sin(2 * np.pi * 2 * f * tt) + .15 * np.sin(2 * np.pi * 3 * f * tt)
     e = np.minimum(1, tt / .01) * np.exp(-tt / .5); e[-480:] *= np.linspace(1, 0, 480); return x * e * v
@@ -127,13 +145,47 @@ for l in spec["lines"]:
     if x.ndim > 1: x = x.mean(1)
     if sr != SR: x = resample_poly(x, SR, sr).astype(np.float32)
     s = int(l["t"] * SR); vo[s:s + len(x)] += x[:N - s]
-vo = compress(hp(vo, 80), thr=.18, ratio=3.5)
+def biquad(kind, f0, gain_db=0.0, q=.8):
+    """RBJ cookbook peaking / high-shelf / low-shelf as a second-order section."""
+    A, w = 10 ** (gain_db / 40), 2 * np.pi * f0 / SR
+    al, c = np.sin(w) / (2 * q), np.cos(w)
+    if kind == "peak":
+        b = [1 + al * A, -2 * c, 1 - al * A]; a = [1 + al / A, -2 * c, 1 - al / A]
+    else:
+        sq = 2 * np.sqrt(A) * al; sg = 1 if kind == "high" else -1
+        b = [A * ((A + 1) + sg * (A - 1) * c + sq), -2 * sg * A * ((A - 1) + sg * (A + 1) * c), A * ((A + 1) + sg * (A - 1) * c - sq)]
+        a = [(A + 1) - sg * (A - 1) * c + sq, 2 * sg * ((A - 1) - sg * (A + 1) * c), (A + 1) - sg * (A - 1) * c - sq]
+    b, a = np.array(b) / a[0], np.array(a) / a[0]
+    return np.array([[*b, *a]])
+
+
+def eq(x, *bands):
+    for bd in bands:
+        x = sosfilt(biquad(*bd), x)
+    return x
+
+
+# voice clarity chain: rumble out, boom down, presence + brightness up, then an exciter that rebuilds the >12 kHz air
+vo = hp(vo, 90)
+vo = eq(vo, ("peak", 250, -4.0, .9), ("peak", 3300, 6.0, 1.0), ("high", 5500, 4.0, .7))
+air = hp(np.tanh(bp(vo, 3500, 11500) * 14) / 14, 11000)
+vo = vo + air * 1.6
+vo = compress(vo, thr=.18, ratio=3.0)
 vo = vo / (np.sqrt(np.mean(vo[np.abs(vo) > .01] ** 2)) + 1e-9) * .2
+# music bus: a fixed level well under the voice, and a gentle dip where the voice's consonants live
+for c in range(2):   # music: lean low end (bass/kick were masking the mallets), a dip where the voice consonants live
+    mus[:, c] = eq(hp(mus[:, c], 60), ("low", 140, -7.0, .7), ("peak", 3000, -4.0, .8), ("high", 6000, 2.0, .7))
+    fol[:, c] = eq(hp(fol[:, c], 70), ("low", 160, -6.0, .7))
+mrms = np.sqrt(np.mean(mus[np.abs(mus).max(1) > 1e-4] ** 2)) + 1e-9
+mus *= .05 / mrms
 k = int(.25 * SR); envv = uniform_filter1d(maximum_filter1d(np.abs(vo), k), k)
-mus *= (1 - .55 * np.clip(envv / .05, 0, 1))[:, None]
-mix = mus * .55 + fol * .9 + np.stack([vo, vo], 1)
+mus *= (1 - .6 * np.clip(envv / .05, 0, 1))[:, None]
+mix = mus + fol * .8 + np.stack([vo, vo], 1)
 for c in range(2): mix[:, c] = limit(mix[:, c], .95)
 mix = mix[:int(DUR * SR) + int(.5 * SR)]
 (PAGE / "out").mkdir(exist_ok=True)
 sf.write(PAGE / "out" / "mix.wav", mix.astype(np.float32), SR)
+if os.environ.get("STEMS"):   # separate tracks for checking the balance
+    for nm, x in (("voice", vo), ("music", mus.mean(1)), ("foley", fol.mean(1))):
+        sf.write(PAGE / "out" / f"stem_{nm}.wav", x[:len(mix)].astype(np.float32), SR)
 print("mix", round(mix.shape[0] / SR, 1), "s")

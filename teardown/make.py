@@ -15,6 +15,7 @@ import shutil
 import subprocess
 import sys
 import tarfile
+import tempfile
 import time
 from pathlib import Path
 
@@ -29,6 +30,9 @@ CLOUD = bool(os.environ.get("GITHUB_ACTIONS"))
 KINDS = ["ir", "ldr", "flame", "sound", "gas", "soil", "ultrasonic", "pir", "dht"]
 PROPS = "car tank robot lamp light fan plant door person house phone bell stove dustbin tap candle speaker sun dust rough small wall water sensor"
 TARGETS = "wall light flame hand gas water sound heat soil object"
+MODULES = {"ultrasonic": "HC-SR04 ultrasonic sensor", "ir": "FC-51 IR obstacle sensor", "flame": "flame sensor module", "ldr": "LDR light sensor module",
+           "sound": "KY-038 sound sensor", "gas": "MQ-2 gas sensor module", "soil": "soil moisture sensor", "pir": "HC-SR501 PIR motion sensor",
+           "dht": "DHT11 temperature + humidity sensor"}
 HDRI = "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/photo_studio_loft_hall_2k.hdr"
 
 
@@ -48,8 +52,76 @@ def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")[:50] or "video"
 
 
+# ---------- 0. research (Claude with web search: datasheets, physics, uses, failure cases) ----------
+RESEARCH_PROMPT = """You are the researcher for a 60-second Hindi explainer Short about: "{topic}" (sensor module: {module}).
+Use WebSearch and WebFetch. Read the module's DATASHEET (manufacturer or a datasheet mirror) and 2-4 reliable explainers
+(SparkFun, Adafruit, Random Nerd Tutorials, Last Minute Engineers, electronics-tutorials, Wikipedia for the physics).
+Collect only facts you actually read, with the source URL and the exact words.
+
+Reply with ONLY a JSON object:
+{{
+ "facts": [10-18 objects {{"id": "f1", "claim": "one checkable fact in plain English", "value": "the number with unit, or empty", "source": "URL", "quote": "exact words from that page, max 30 words"}}],
+ "how_it_works": "4-6 sentences: the physical principle and the signal path, step by step, as the sources describe it",
+ "signal": "how the output pins behave over time (what goes HIGH/LOW, pulses, analog levels), from the sources",
+ "formula": "the key formula or threshold rule if any, with source id",
+ "misconceptions": ["2-4 common wrong beliefs people have about this device, each with why it is wrong"],
+ "uses": [4-6 objects {{"use": "a real product or project that works on this principle", "source": "URL"}}],
+ "limits": [3-5 objects {{"limit": "a real failure case or limitation", "why": "short reason", "source": "URL"}}],
+ "tips": [2-4 objects {{"tip": "a practical wiring/usage tip with its number", "source": "URL"}}],
+ "beginner_questions": ["3-5 questions beginners ask about it (forums, Q&A)"],
+ "hook": "the single most surprising TRUE fact that flips what people assume (myth-flip), in one sentence"
+}}"""
+
+
+def research(topic, kind):
+    cli = shutil.which("claude")
+    if not cli:
+        raise RuntimeError("claude CLI not found")
+    prompt = RESEARCH_PROMPT.format(topic=topic, module=MODULES.get(kind, "the sensor module in the topic"))
+    env = {k: v for k, v in os.environ.items() if not k.startswith("ANTHROPIC_") and not k.startswith("CLAUDE_CODE_USE_")}
+    for attempt in range(2):
+        r = subprocess.run([cli, "-p", "--model", "sonnet", "--output-format", "text", "--tools", "WebSearch,WebFetch",
+                            "--allowedTools", "WebSearch,WebFetch", "--safe-mode"], input=prompt, text=True, encoding="utf-8",
+                           capture_output=True, cwd=tempfile.gettempdir(), env=env, timeout=900)
+        out = r.stdout or ""
+        try:
+            a, b = out.find("{"), out.rfind("}")
+            d = json.loads(out[a:b + 1])
+            if len(d.get("facts", [])) >= 5:
+                srcs = sorted({f.get("source", "") for f in d["facts"] if str(f.get("source", "")).startswith("http")})
+                print(f"  {len(d['facts'])} facts from {len(srcs)} sources")
+                for u in srcs[:6]:
+                    print(f"    {u}")
+                return d
+        except Exception as e:  # noqa: BLE001
+            print(f"  research attempt {attempt + 1}: {e} {(r.stderr or '')[:200]}")
+    raise RuntimeError("research failed")
+
+
+NUM = re.compile(r"\d+(?:[.,]\d+)?")
+
+
+def unsourced_numbers(spec, res, topic):
+    """Numbers on screen or in subtitles that no researched fact contains (the worked example and its stamp may compute new ones)."""
+    known = set(NUM.findall(json.dumps(res.get("facts", []), ensure_ascii=False) + " " + (res.get("formula") or "") + " " + topic))
+    known |= {"0", "1", "2", "3"}
+    texts = [l["sub"] for l in spec["lines"] if l["id"] != "b6"]
+    A, B, C = spec.get("A", {}), spec.get("B", {}), spec.get("C", {})
+    texts += [str((A.get(k) or {}).get(f) or "") for k in ("stop1", "stop1b", "stop2") for f in ("name", "spec")]
+    texts += [r.get("label", "") for r in B.get("rows", [])] + (B.get("eqs") or [])[:2]
+    rng = C.get("range", {}) or {}
+    texts += [str(rng.get(k, "")) for k in ("min", "max")] + [p.get("text", "") for p in rng.get("pins", [])]
+    texts += [str((C.get("iso") or {}).get("label", ""))] + ((C.get("card") or {}).get("lines") or [])
+    return sorted({n for t in texts for n in NUM.findall(str(t))} - known)
+
+
 # ---------- 1. the script spec (one Claude call) ----------
-PROMPT = """Write a ~55 second vertical explainer (YouTube Short / Instagram Reel) about: "{topic}"
+PROMPT = """RESEARCH (verified facts with sources, your ONLY source of numbers and claims):
+{research}
+
+WHAT WORKS ON THIS CHANNEL (from our own analytics): {insights}
+
+Write a ~55 second vertical explainer (YouTube Short / Instagram Reel) about: "{topic}"
 The sensor module shown in 3D is: {module} (kind "{kind}"). Channel: Echo Lab 3D, Hindi narration for Indian students and makers.
 
 The film has three acts in fixed visual styles; you write the words and pick from fixed options.
@@ -84,19 +156,28 @@ Reply with ONLY a JSON object:
 }}
 
 Rules:
-- Each say line max 11 words, short and spoken; the whole voice is about 50 seconds. Hook in the first line, no slow intro.
-- Every number must be true for this module (datasheet values); no invented numbers. If unsure, leave a number out.
+- Each say line max 9 words, short and spoken, total under 140 words: the voice is read at a natural pace, never sped up.
+  Hook in the first line (use the research "hook" or a misconception), no slow intro.
+- EVERY number and claim must come from the RESEARCH facts above (same value and unit). No other numbers anywhere.
+  If a beat needs a number the research doesn't have, say it without a number.
+- Explain the real mechanism from "how_it_works" and "signal": a viewer should understand WHY, not just WHAT.
+- Answer one of the beginner_questions somewhere in the video.
 - Labels, rows, equations and the card repeat the numbers the voice says, never new unsourced ones.
 - The uses must be places the same principle is used, the limits real failure cases."""
 
 
-def write_spec(topic, kind, lang):
+def write_spec(topic, kind, lang, res):
     import manager
     hindi = lang == "hi"
-    module = {"ultrasonic": "HC-SR04 ultrasonic sensor", "ir": "FC-51 IR obstacle sensor", "flame": "flame sensor module", "ldr": "LDR light sensor module",
-              "sound": "KY-038 sound sensor", "gas": "MQ-2 gas sensor module", "soil": "soil moisture sensor", "pir": "HC-SR501 PIR motion sensor",
-              "dht": "DHT11 temperature + humidity sensor"}.get(kind, "the sensor module in the topic")
-    prompt = PROMPT.format(topic=topic, module=module, kind=kind, targets=TARGETS, props=PROPS,
+    module = MODULES.get(kind, "the sensor module in the topic")
+    ins = {}
+    try:
+        ins = json.loads((ROOT / "channel" / "analytics" / "insights.json").read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        pass
+    insights = json.dumps({k: ins.get(k) for k in ("winningPattern", "doMore", "stopDoing")}, ensure_ascii=False)
+    prompt = PROMPT.format(topic=topic, module=module, kind=kind, targets=TARGETS, props=PROPS, insights=insights,
+                           research=json.dumps(res, ensure_ascii=False, indent=1),
                            say_rule=("natural spoken Hindi in Devanagari; English tech words as pronounced in Devanagari; numbers as words" if hindi else "spoken English, numbers as words"),
                            sub_rule=("the same line in Roman Hinglish, numbers as digits, max 44 chars" if hindi else "the same line, numbers as digits, max 44 chars"))
     for attempt in range(3):
@@ -105,7 +186,14 @@ def write_spec(topic, kind, lang):
             ids = [l.get("id") for l in d.get("lines", [])]
             want = [f"a{i}" for i in range(1, 7)] + [f"b{i}" for i in range(1, 7)] + [f"c{i}" for i in range(1, 6)]
             if ids == want and all(l.get("say") and l.get("sub") for l in d["lines"]):
-                return d
+                bad = unsourced_numbers(d, res, topic)
+                if not bad or attempt == 2:
+                    if bad:
+                        print(f"  warning: numbers not in the research: {bad}")
+                    return d
+                print(f"  spec attempt {attempt + 1}: numbers not in the research {bad}; asking again")
+                prompt += f"\n\nYour last draft used numbers that are NOT in the research: {bad}. Remove them or use researched values."
+                continue
             print(f"  spec attempt {attempt + 1}: wrong lines {ids}")
         except Exception as e:  # noqa: BLE001
             print(f"  spec attempt {attempt + 1} failed: {e}")
@@ -117,7 +205,7 @@ def voice(spec, lang):
     scene = ROOT / "app" / "src" / "scenes" / "teardown3"
     scene.mkdir(parents=True, exist_ok=True)
     gen = None
-    for rate in ["+18%", "+26%", "+34%"]:
+    for rate in ["+6%", "+12%"]:
         cfg = {"engine": "kokoro", "kokoro": ({"voice": "hm_omega", "speed": 1.15, "lang": "hi", "edge": "hi-IN-MadhurNeural", "rate": rate} if lang == "hi"
                                               else {"voice": "am_michael", "speed": 1.1, "lang": "en-us", "edge": "en-US-AndrewNeural", "rate": rate}),
                "lines": {l["id"]: {"text": l["sub"], "say": l["say"]} for l in spec["lines"]}}
@@ -126,7 +214,7 @@ def voice(spec, lang):
         gen = json.loads((scene / "voice.gen.json").read_text(encoding="utf-8"))["kokoro"]
         total = sum(gen.values())
         print(f"  voice {total:.1f}s at {rate}")
-        if total <= 52.5:
+        if total <= 56:
             break
     t, out = 0.35, []
     for l in spec["lines"]:
@@ -223,7 +311,14 @@ def main():
     JOB.mkdir(parents=True)
 
     step(f"research & storyboard: \"{topic}\" ({kind}, Claude)")
-    spec = json.loads(Path(get("--spec")).read_text(encoding="utf-8")) if get("--spec") else write_spec(topic, kind, lang)
+    res = {}
+    if get("--spec"):
+        spec = json.loads(Path(get("--spec")).read_text(encoding="utf-8"))
+    else:
+        res = research(topic, kind)
+        (JOB / "research.json").write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
+        step("storyboard (script from the research)")
+        spec = write_spec(topic, kind, lang, res)
     spec["kind"] = kind if kind in KINDS else "generic"
     print(f"  {spec.get('youtube', {}).get('title') or spec.get('title')}")
 
@@ -252,7 +347,7 @@ def main():
         run(["node", "render.mjs", "--workers", get("--workers", "3"), "--out", video], cwd=HERE)
 
     step("sound + master")
-    run([sys.executable, "-m", "uv", "run", "--python", "3.12", "--with", "numpy", "--with", "scipy", "--with", "soundfile", "python", HERE / "mix.py"], cwd=HERE)
+    run([sys.executable, "-m", "uv", "run", "--python", "3.12", "--with", "numpy", "--with", "scipy", "--with", "soundfile", "--with", "soxr", "python", HERE / "mix.py"], cwd=HERE)
     final = out_dir / f"{name}.mp4"
     run(["sh", "core/render/mux.sh", video, PAGE / "out" / "mix.wav", final, "24", "1"], cwd=HERE)
     cues = [{"t0": round(l["t"] - .05, 3), "t1": round(min(spec["lines"][i + 1]["t"] - .06 if i + 1 < len(spec["lines"]) else 99, max(l["t"] + l["d"] + .6, l["t"] + 1.8)), 3), "text": l["sub"]} for i, l in enumerate(spec["lines"])]
@@ -261,8 +356,14 @@ def main():
 
     step("youtube upload")
     yt = spec.get("youtube") or {}
+    srcs = []
+    for f in res.get("facts", []):
+        u = str(f.get("source", ""))
+        if u.startswith("http") and u not in srcs:
+            srcs.append(u)
+    desc = (yt.get("description") or "") + ("\n\nSources:\n" + "\n".join(srcs[:4]) if srcs else "")
     meta = {"file": f"out/auto/{name}.mp4", "title": (yt.get("title") or spec.get("title") or topic)[:100],
-            "description": yt.get("description") or "", "tags": yt.get("tags") or [topic], "categoryId": "28", "language": lang, "privacy": "private",
+            "description": desc[:4900], "sources": srcs, "tags": yt.get("tags") or [topic], "categoryId": "28", "language": lang, "privacy": "private",
             "playlist": {"title": "Sensor Ki Kahani: Shorts", "description": "Quick animated explainers."},
             "coverMs": 9000, "thumbText": spec["lines"][0]["sub"], "format": "teardown3", "captions": f"out/auto/{name}.srt",
             **({"social": spec["social"]} if spec.get("social") else {})}
