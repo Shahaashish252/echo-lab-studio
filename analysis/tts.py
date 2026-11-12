@@ -1,6 +1,6 @@
 """Speak a video's narration with Kokoro (local neural TTS).
 
-Kokoro is the free local draft voice; scripts/voice.ts does the same with ElevenLabs.
+Kokoro is the free local voice (no paid voice service is used).
 Reads app/src/scenes/<video>/voice.json, writes one 48 kHz mono clip per line to
 app/public/voice/<video>/kokoro/<id>.wav, and each clip's length to the "kokoro" entry of
 app/src/scenes/<video>/voice.gen.json. Set "engine": "kokoro" in voice.json to use these clips.
@@ -61,7 +61,7 @@ out = ROOT / "app" / "public" / "voice" / video / "kokoro"
 out.mkdir(parents=True, exist_ok=True)
 durations = {}
 for line_id, line in cfg["lines"].items():
-    # [audio tags] are for ElevenLabs; Kokoro would read them aloud
+    # strip [audio tags] (old scripts had them); Kokoro would read them aloud
     text = re.sub(r"\[[^\]]*\]\s*", "", line.get("say") or line["text"]).replace("*", "")
     got = edge(text, kcfg["edge"]) if kcfg.get("edge") else None
     if got is not None:

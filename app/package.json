@@ -4,7 +4,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "voice": "bun scripts/voice.ts",
     "sound": "bun scripts/sound.ts",
     "draft": "bun scripts/render.ts video --samples 1",
     "render": "bun scripts/render.ts video --samples 6",
@@ -21,7 +20,6 @@
     "three": "^0.186.1"
   },
   "devDependencies": {
-    "@elevenlabs/elevenlabs-js": "^2.70.0",
     "@types/bun": "^1.4.2",
     "@types/three": "^0.186.0",
     "playwright-core": "^1.63.0",

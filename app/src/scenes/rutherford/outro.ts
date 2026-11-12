@@ -16,10 +16,7 @@ const POINTS: [boolean, string][] = [
   [false, 'But: orbiting electrons should spiral in, and no line spectra'],
 ];
 
-const CREDIT =
-  VOICE.engine === 'elevenlabs'
-    ? `Narration: ElevenLabs (${VOICE.elevenlabs.voiceName})`
-    : 'Narration: Kokoro TTS';
+const CREDIT = 'Narration: Kokoro TTS';
 
 export default class Outro extends Scene {
   cues(dur: number): Cue[] {

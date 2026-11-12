@@ -1,6 +1,6 @@
 // Narration for this video. voice.json holds each line (caption text with *highlights*, plus an
-// optional `say` for the voice). A voice script (analysis/tts.py for Kokoro, scripts/voice.ts for
-// ElevenLabs) speaks them and writes voice.gen.json with each clip's length.
+// optional `say` for the voice). The local voice script (analysis/tts.py) speaks them and writes
+// voice.gen.json with each clip's length.
 //
 // Plates lay their lines out with beats(): lines play back to back, every animation is keyed to
 // the line it illustrates (b.at('setup-3')), and the plate's length comes from the clips. Change
@@ -12,7 +12,7 @@ import SCRIPT from './voice.json';
 type Line = { text: string; say?: string };
 const LINES = SCRIPT.lines as Record<string, Line>;
 
-/** Which voice the video uses: "kokoro" (free, local draft) or "elevenlabs". */
+/** Which voice the video uses: "kokoro" (free, local). */
 export const ENGINE = SCRIPT.engine;
 const gen = import.meta.glob<Record<string, Record<string, number>>>('./voice.gen.json', { eager: true, import: 'default' });
 const DUR: Record<string, number> = Object.values(gen)[0]?.[ENGINE] ?? {};
