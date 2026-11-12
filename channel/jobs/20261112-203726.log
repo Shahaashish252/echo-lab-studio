@@ -65,3 +65,17 @@ events 64 dur 58.94 → page/events.json
   $ ffmpeg -y -loglevel error -f concat -safe 0 -i /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-1794496252/list.txt -c copy /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-pir-foole
 
 == sound + master
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with numpy --with scipy --with soundfile --with soxr python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/mix.
+Downloading scipy (33.7MiB)
+ Downloaded scipy
+Installed 7 packages in 23ms
+mix 59.4 s
+  $ sh core/render/mux.sh /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-pir-fooled-by-glass.video.mp4 /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/page/out/mix.wav /home/runner/w
+/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/pir-fooled-by-glass.mp4
+    I:         -14.0 LUFS
+    LRA:         1.7 LU
+    Peak:       -1.3 dBFS
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python core/render/srt.py /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/page/out/cues.json /home/runner/work/echo-lab-studio/echo-lab-studio/ou
+/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/pir-fooled-by-glass.srt 17 cues
+
+== youtube upload
