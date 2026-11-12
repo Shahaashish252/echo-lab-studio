@@ -1,0 +1,16 @@
+{
+  "id": "20261112-203726",
+  "topic": "PIR sensor fooled by a glass sheet or blanket",
+  "hook": "Ek kambal se PIR sensor ko bewakoof banao",
+  "lang": "hi",
+  "started": "2026-11-12T20:37:26",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research & storyboard: \"PIR sensor fooled by a glass sheet or blanket (open with this hook: \"Ek kambal se PIR sensor ko bewakoof banao\")\" (pir, Claude)",
+      "at": "2026-11-12T20:37:28"
+    }
+  ],
+  "format": "teardown3",
+  "module": "pir"
+}
