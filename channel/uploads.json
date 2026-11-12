@@ -657,10 +657,14 @@
     "id": "m2busj2Fu4c",
     "meta": "channel/videos/td3-hc-sr501-pir-explained.json",
     "date": "2026-11-10",
-    "status": "approved",
+    "status": "published",
     "topic": "Touch sensor that feels you, not presses",
     "job": "20261110-160938",
-    "postAt": "2026-11-12T14:00"
+    "postAt": "2026-11-12T14:00",
+    "published": {
+      "youtube": "2026-11-12"
+    },
+    "postedAt": "2026-11-12T16:09"
   },
   {
     "id": "uLPHCcegH-E",

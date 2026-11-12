@@ -33,5 +33,6 @@
   "social": {
     "instagram": "Button dabana nahi padta, bas chhoona hai... ya sach mein? 🔥\nHC-SR501 PIR sensor garmi ka badlav pakadta hai, roshni nahi.\nRange 3 se 7 meter, aur chalu karke ~1 minute ruko.\n📌 Save karo apne next Arduino project ke liye!\nComment mein batao: agla kaun sa sensor kholein?\n#PIR #Arduino #electronics #makers #EchoLab3D",
     "tiktok": "Ye sensor garmi se chalta hai, button se nahi! 🔥 #PIR #Arduino #electronics #makers #EchoLab3D"
-  }
+  },
+  "cover": "/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/hc-sr501-pir-explained.cover.jpg"
 }
