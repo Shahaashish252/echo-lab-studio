@@ -178,7 +178,7 @@ def write_spec(topic, kind, lang, res):
     insights = json.dumps({k: ins.get(k) for k in ("winningPattern", "doMore", "stopDoing")}, ensure_ascii=False)
     prompt = PROMPT.format(topic=topic, module=module, kind=kind, targets=TARGETS, props=PROPS, insights=insights,
                            research=json.dumps(res, ensure_ascii=False, indent=1),
-                           say_rule=("natural spoken Hindi in Devanagari; English tech words as pronounced in Devanagari; numbers as words" if hindi else "spoken English, numbers as words"),
+                           say_rule=("natural spoken Hindi in Devanagari; English tech words as pronounced in Devanagari; letter abbreviations spelled letter by letter with spaces (LDR = एल डी आर, LED = एल ई डी, VCC = वी सी सी); numbers as words" if hindi else "spoken English, numbers as words"),
                            sub_rule=("the same line in Roman Hinglish, numbers as digits, max 44 chars" if hindi else "the same line, numbers as digits, max 44 chars"))
     for attempt in range(3):
         try:
@@ -202,6 +202,37 @@ def write_spec(topic, kind, lang, res):
 
 # ---------- 2. voice + timings ----------
 def voice(spec, lang):
+    """Hindi: local Piper "pratham" (offline). Backup / English: Microsoft neural voice through analysis/tts.py."""
+    gen = None
+    vdir = JOB / "voice"
+    vdir.mkdir(parents=True, exist_ok=True)
+    if lang == "hi" and not os.environ.get("TD3_VOICE_EDGE"):
+        try:
+            lj = JOB / "lines.json"
+            lj.write_text(json.dumps([{"id": l["id"], "say": l["say"]} for l in spec["lines"]], ensure_ascii=False), encoding="utf-8")
+            for length in ("1.05", "1.0", "0.95"):
+                run([sys.executable, "-m", "uv", "run", "--python", "3.12", "--with", "piper-tts", "--with", "soundfile", "--with", "soxr", "--with", "numpy",
+                     "python", HERE / "tts_piper.py", lj, vdir, "--length", length], cwd=ROOT)
+                gen = json.loads((vdir / "durations.json").read_text(encoding="utf-8"))
+                total = sum(gen.values())
+                print(f"  voice (Piper pratham, local) {total:.1f}s at length {length}")
+                if total <= 56:
+                    break
+        except Exception as e:  # noqa: BLE001
+            print(f"  local voice failed ({e}); using the Microsoft voice")
+            gen = None
+    if gen is None:
+        gen = edge_voice(spec, lang)
+    t, out = 0.35, []
+    for l in spec["lines"]:
+        if l["id"] in ("b1", "c1"):
+            t += 0.55
+        out.append({"id": l["id"], "t": round(t, 3), "d": round(gen[l["id"]], 3), "sub": l["sub"]})
+        t += gen[l["id"]] + 0.27
+    return out
+
+
+def edge_voice(spec, lang):
     scene = ROOT / "app" / "src" / "scenes" / "teardown3"
     scene.mkdir(parents=True, exist_ok=True)
     gen = None
@@ -213,20 +244,13 @@ def voice(spec, lang):
         run([sys.executable, "-m", "uv", "run", "--python", "3.12", "--with", "kokoro-onnx", "--with", "soundfile", "--with", "edge-tts", "python", "analysis/tts.py", "teardown3"], cwd=ROOT)
         gen = json.loads((scene / "voice.gen.json").read_text(encoding="utf-8"))["kokoro"]
         total = sum(gen.values())
-        print(f"  voice {total:.1f}s at {rate}")
+        print(f"  voice (Microsoft) {total:.1f}s at {rate}")
         if total <= 56:
             break
-    t, out = 0.35, []
-    for l in spec["lines"]:
-        if l["id"] in ("b1", "c1"):
-            t += 0.55
-        out.append({"id": l["id"], "t": round(t, 3), "d": round(gen[l["id"]], 3), "sub": l["sub"]})
-        t += gen[l["id"]] + 0.27
     vdir = JOB / "voice"
-    vdir.mkdir(parents=True, exist_ok=True)
-    for l in out:
+    for l in spec["lines"]:
         shutil.copy(ROOT / "app" / "public" / "voice" / "teardown3" / "kokoro" / f"{l['id']}.wav", vdir / f"{l['id']}.wav")
-    return out
+    return gen
 
 
 # ---------- 3. render ----------
@@ -322,7 +346,7 @@ def main():
     spec["kind"] = kind if kind in KINDS else "generic"
     print(f"  {spec.get('youtube', {}).get('title') or spec.get('title')}")
 
-    step("voice (Microsoft Edge neural)")
+    step("voice (local Hindi: Piper pratham)")
     spec["lines"] = voice(spec, lang)
     (JOB / "spec.json").write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding="utf-8")
 
