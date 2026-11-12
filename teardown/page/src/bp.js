@@ -97,7 +97,7 @@ function row(r, y, t0, i) {
 }
 function fig2() {
   const B = SPEC.B, tA = TL.T.bpIn + .95;
-  letter(`FIG. 2 — ${(B.fig2 || 'SIGNAL').toUpperCase()}`, W / 2, 1450, tA, .4, 44, { align: 'center', id: 'f2', max: 940 });
+  letter(`FIG. 2 — ${(B.fig2 || 'SIGNAL').toUpperCase()}`, W / 2, 1385, tA, .4, 44, { align: 'center', id: 'f2', max: 940 });
   (B.rows || []).slice(0, 3).forEach((r, i) => row(r, ROWY[i], Math.max(tl('b' + (i + 1), .6), tA + .3), i));
   path([[X0, 2140], [X1, 2140]], tl('b3', 1.4), tl('b3', 1.8), 1.4); path([[X1 - 18, 2130], [X1, 2140], [X1 - 18, 2150]], tl('b3', 1.75), tl('b3', 1.9), 1.4);
   letter('time →  (not to scale)', X1, 2185, tl('b3', 1.6), .4, 26, { align: 'right', font: MONO, id: 'axis' });

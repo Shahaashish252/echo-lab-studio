@@ -166,8 +166,8 @@ def eq(x, *bands):
 
 
 # voice clarity chain: rumble out, boom down, presence + brightness up, then an exciter that rebuilds the >12 kHz air
-vo = hp(vo, 90)
-vo = eq(vo, ("peak", 250, -4.0, .9), ("peak", 3300, 6.0, 1.0), ("high", 5500, 4.0, .7))
+vo = hp(hp(vo, 110), 110)   # 4th order: the local voice carries rumble under 110 Hz
+vo = eq(vo, ("low", 200, -3.0, .7), ("peak", 250, -3.0, .9), ("peak", 3300, 6.0, 1.0), ("high", 5500, 4.0, .7))
 air = hp(np.tanh(bp(vo, 3500, 11500) * 14) / 14, 11000)
 vo = vo + air * 1.6
 vo = compress(vo, thr=.18, ratio=3.0)
