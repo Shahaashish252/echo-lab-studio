@@ -48,3 +48,20 @@ Installed 12 packages in 22ms
 events 64 dur 58.94 → page/events.json
 
 == render (cloud, 10 parts)
+  dispatched 10 parts (job 1794496252)
+  0/10 parts (0 min)
+  0/10 parts (1 min)
+  5/10 parts (2 min)
+  6/10 parts (3 min)
+  6/10 parts (4 min)
+  6/10 parts (5 min)
+  6/10 parts (6 min)
+  6/10 parts (7 min)
+  6/10 parts (8 min)
+  8/10 parts (9 min)
+  8/10 parts (10 min)
+  8/10 parts (12 min)
+  10/10 parts (13 min)
+  $ ffmpeg -y -loglevel error -f concat -safe 0 -i /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-1794496252/list.txt -c copy /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-pir-foole
+
+== sound + master
