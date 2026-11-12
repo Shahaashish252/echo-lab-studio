@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Obstacle-avoiding robot with ultrasonic sensor",
+      "hook": "Yeh robot deewar se takrata nahi, kyunki wo awaaz ginta hai"
+    },
+    {
+      "topic": "Why a robot without a gyro/accelerometer tilts and crashes",
+      "hook": "Is chhoti chip ke bina self-balancing robot 1 second mein gir jaata hai"
+    },
+    {
+      "topic": "Sound sensor module fooled by whistle or claps",
+      "hook": "Is switch ko aapki aawaz nahi, sirf shor se matlab hai"
+    },
+    {
+      "topic": "Line follower robot failing on a different track colour",
+      "hook": "Line follower robot ko kaali line dikhti hi nahi, phir bhi chalta hai"
+    },
+    {
+      "topic": "PIR sensor fooled by standing still",
+      "hook": "Is sensor ke saamne bilkul hilo mat, ye aapko dekh hi nahi paayega"
+    },
+    {
       "topic": "Ultrasonic sensor robot that avoids obstacles",
       "hook": "Ye robot dekhta nahi, phir bhi deewar se nahi takraata"
     },
