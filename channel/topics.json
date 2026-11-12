@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Self-balancing robot and why it needs a gyro",
+      "hook": "Is robot ko gyro hata do, yeh 1 second mein gir jaayega"
+    },
+    {
+      "topic": "Ultrasonic robot avoiding walls by sound",
+      "hook": "Yeh robot aankhon se nahi, awaaz ke echo se dekhta hai"
+    },
+    {
+      "topic": "Line follower with IR sensors",
+      "hook": "Is robot ko kaala rang dikhta hai, rasta nahi"
+    },
+    {
+      "topic": "Sound sensor module in a clap switch",
+      "hook": "Clap switch ko taali nahi, sirf ek tez awaaz chahiye"
+    },
+    {
+      "topic": "Servo motor knowing its angle",
+      "hook": "Servo ko pata hai woh kahan ghoom raha hai, bina dekhe"
+    },
+    {
       "topic": "Line follower robot sensor: why it follows black",
       "hook": "Yeh Robot Sirf Kaala Rang Dekhta Hai, Baaki Sab Andhera"
     },

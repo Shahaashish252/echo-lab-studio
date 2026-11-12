@@ -1,8 +1,8 @@
 {
-  "updated": "11 Nov 2026, 22:50",
+  "updated": "12 Nov 2026, 16:01",
   "youtube": {
-    "subs": 5,
-    "views": 4009,
+    "subs": 6,
+    "views": 4023,
     "videos": [
       {
         "title": "Dustbin haath pe kyu khulta hai, bag pe nahi? 🗑️ #shorts",
@@ -18,9 +18,9 @@
         "id": "eRlpe0uqFyU",
         "status": "public",
         "published": "2026-11-11",
-        "views": 4,
-        "likes": 0,
-        "comments": 0
+        "views": 10,
+        "likes": 1,
+        "comments": 2
       },
       {
         "title": "Ye sensor chhoone se nahi, garmi se chalta hai! 🔥 #shorts",
@@ -36,9 +36,9 @@
         "id": "MR1GGw3DNNM",
         "status": "public",
         "published": "2026-11-09",
-        "views": 17,
-        "likes": 0,
-        "comments": 0
+        "views": 18,
+        "likes": 1,
+        "comments": 2
       },
       {
         "title": "Disco Lights Gaana Nahi Samajhti, Bas Shor Sunti Hain 🎶 #shorts",
@@ -99,7 +99,7 @@
         "id": "yg0sWNjFBTs",
         "status": "public",
         "published": "2026-11-05",
-        "views": 516,
+        "views": 517,
         "likes": 7,
         "comments": 0
       },
@@ -135,7 +135,7 @@
         "id": "nHR2_Dsl4I0",
         "status": "public",
         "published": "2026-11-04",
-        "views": 55,
+        "views": 56,
         "likes": 1,
         "comments": 2
       },
@@ -198,7 +198,7 @@
         "id": "ZzilLf1hScY",
         "status": "public",
         "published": "2026-11-01",
-        "views": 200,
+        "views": 201,
         "likes": 1,
         "comments": 0
       },
@@ -306,7 +306,7 @@
         "id": "jD5lPQq_aQo",
         "status": "public",
         "published": "2026-10-23",
-        "views": 22,
+        "views": 24,
         "likes": 0,
         "comments": 0
       },
@@ -520,12 +520,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-14",
-        "views": 2,
-        "minutes": 0,
-        "subs": 0
-      },
-      {
         "day": "2026-10-15",
         "views": 0,
         "minutes": 0,
@@ -581,7 +575,7 @@
       },
       {
         "day": "2026-10-24",
-        "views": 51,
+        "views": 50,
         "minutes": 8,
         "subs": 0
       },
@@ -672,6 +666,12 @@
       {
         "day": "2026-11-08",
         "views": 8,
+        "minutes": 1,
+        "subs": 0
+      },
+      {
+        "day": "2026-11-09",
+        "views": 17,
         "minutes": 1,
         "subs": 0
       }

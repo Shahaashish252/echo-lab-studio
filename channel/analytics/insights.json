@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-11T22:50",
+  "updated": "2026-11-12T16:01",
   "videos": 26,
-  "summary": "Instagram is doing nearly all the work: most Hindi videos get 1,000-1,400 views there, while YouTube Shorts mostly gets under 60 views. The best videos are about a surprising 'it doesn't see/hear the way you think' idea in sensors and robots (gyro robot, clap switch, PIR motion sensor, IR wall-avoiding robot). Weaker ones are generic 'How does X work?' questions about public places and appliances (lift door, mall door, taps, smoke detectors), which get few views, likes or saves.",
-  "winningPattern": "A robot or sensor shown as a simple, surprising 'it can't do X, it only does Y' fact, with a bold, short Hindi title in Hinglish (e.g. 'Clap Switch Taali Nahi, Sirf Shor Sunta Hai', 'Gyro Ke Bina Ye Robot Turant Gir Jaata'). Topics are hobby-friendly (robots, clap switch, PIR, IR, mic) rather than everyday building tech. Posted on Instagram Reels first, with Hindi narration; YouTube works only for a few (clap switch, gyro, PIR at 500-700 views).",
+  "summary": "Instagram is doing nearly all the work: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly stay under 100 views. The best videos are about a single surprising idea ('the robot/sensor doesn't see, it only hears or feels') or a robot gimmick, and they get the most likes, saves and shares. Longer, generic 'how does X work?' questions about public places (taps, doors, lifts, smoke alarms) and the one English video are weak.",
+  "winningPattern": "Hindi Instagram Reels about a hands-on maker subject (robot, clap switch, PIR/IR sensor, mic) with a contrarian 'it doesn't do X, it only does Y' or 'without this, the robot falls' hook. Titles are short, punchy, 1-2 emojis, and the idea is a single surprising fact. Published recently, in tight bursts. Robot and clap-switch topics also earn the most shares and saves.",
   "doMore": [
-    "Make robot and Arduino-module videos with a 'no brain / can't see / only hears' contradiction hook",
-    "Series on the clap switch and robot sensors: the top videos cluster here, and a follow-up can reuse the audience",
-    "Lead with a visible robot demo or failure (falling, hitting a wall) in the first second",
-    "End with a save or share prompt like 'save this for your next project': robot and IR videos earn the shares and saves",
-    "Keep posting Hindi; test one video per week on YouTube with the strongest Instagram topic to learn why YouTube lags"
+    "Lead with a contrarian 'doesn't see/hear, only does Y' hook on a robot or sensor topic",
+    "Make follow-ups to winners: gyro/balancing robot, clap switch, PIR, IR obstacle robot, mic",
+    "Post Instagram-first and test a Reel-native cut, since YouTube barely distributes these",
+    "Add a save/share trigger at the end, like 'save this for your next Arduino project'",
+    "Keep the Hindi title short with one emoji and a single clear surprise"
   ],
   "stopDoing": [
-    "Generic 'X Kaise Kaam Karta Hai?' titles about public-place gadgets (lift, mall door, tap, smoke alarm)",
-    "Posting near-duplicate topics within days (two smoke detector, two IR-in-dark, two tap videos) that split the audience",
-    "Mixing in English videos or uploads with no Instagram version: the English Arduino video got 161 YouTube views and zero Instagram"
+    "Generic 'X Kaise Pehchanta Hai?' titles about public-place devices (taps, doors, lifts, malls)",
+    "Posting near-duplicate topics (two smoke detector, two IR-in-dark, two clap switch angles on the same week) that split views",
+    "English-only uploads while the audience is responding to Hindi"
   ],
   "nextTopics": [
-    "Line follower robot sensor: why it follows black",
-    "Ultrasonic robot that stops before a wall",
-    "Arduino brain: why a robot freezes without code",
-    "Sound sensor module: loud vs quiet, why it fools clap switch",
-    "Servo motor: how it stops at an exact angle"
+    "Self-balancing robot and why it needs a gyro",
+    "Ultrasonic robot avoiding walls by sound",
+    "Line follower with IR sensors",
+    "Sound sensor module in a clap switch",
+    "Servo motor knowing its angle"
   ],
   "bestTimes": {
     "times": [
