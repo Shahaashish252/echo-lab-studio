@@ -1,0 +1,43 @@
+{
+  "file": "out/auto/pir-fooled-by-glass.mp4",
+  "title": "Ek kambal se PIR sensor ko bewakoof banao 🤯 #shorts",
+  "description": "PIR sensor dekhta nahi, sirf garmi ka change pakadta hai.\nShisha uski infrared rok deta hai, isliye sensor chup ho jaata hai.\n🔥 HC-SR501 ke andar do hisse hote hain\n🪟 Glass 8–14 µm IR rokta hai\n⏱️ Power-up ke baad 60 s output ignore karo\n💾 Apne Arduino project ke liye save karo\nEcho Lab 3D ko subscribe karo, har hafte ek module kholke dekhenge!\n#shorts #PIRsensor #HCSR501 #Arduino #electronics #hindi #robotics #maker\n\nSources:\nhttps://lastminuteengineers.com/pir-sensor-arduino-tutorial/\nhttps://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/how-pirs-work\nhttps://en.wikipedia.org/wiki/Passive_infrared_sensor\nhttps://www.alarmgrid.com/faq/do-motion-detectors-work-through-windows",
+  "sources": [
+    "https://lastminuteengineers.com/pir-sensor-arduino-tutorial/",
+    "https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/how-pirs-work",
+    "https://en.wikipedia.org/wiki/Passive_infrared_sensor",
+    "https://www.alarmgrid.com/faq/do-motion-detectors-work-through-windows",
+    "https://dsiac.dtic.mil/technical-inquiries/notable/defeating-passive-infrared-motion-sensors",
+    "https://www.utmel.com/components/hc-sr501-pir-motion-sensor-datasheet-pinout-and-specifications?id=696"
+  ],
+  "tags": [
+    "PIR sensor kaise kaam karta hai",
+    "HC-SR501 hindi",
+    "PIR sensor glass",
+    "PIR sensor Arduino",
+    "PIR sensor fooled",
+    "motion sensor kaise kaam karta hai",
+    "Fresnel lens PIR",
+    "PIR H L mode",
+    "Arduino project hindi",
+    "PIR sensor warm-up",
+    "Echo Lab 3D",
+    "electronics for students",
+    "PIR through window"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "Ek kambal se PIR sensor ko bewakoof banao",
+  "format": "teardown3",
+  "captions": "out/auto/pir-fooled-by-glass.srt",
+  "social": {
+    "instagram": "PIR sensor dekhta nahi, sirf garmi ka change pakadta hai 🔥\nShisha ya shield ho to sensor chup!\nKambal ka trick bhi isi physics se judta hai.\nProject ke liye Save karo 💾\nComment mein batao: agla kaunsa sensor kholein?\n#PIRsensor #Arduino #HCSR501 #electronics #robotics",
+    "tiktok": "Ek kambal se PIR sensor ko bewakoof banao 🤯 #PIRsensor #Arduino #HCSR501 #electronics #shorts"
+  }
+}

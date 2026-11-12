@@ -676,5 +676,14 @@
     "topic": "Smart dustbin lid that opens when you wave your hand",
     "job": "20261111-153700",
     "postAt": "2026-11-13T14:00"
+  },
+  {
+    "id": "mwkkbwpqwEw",
+    "meta": "channel/videos/td3-pir-fooled-by-glass.json",
+    "date": "2026-11-12",
+    "status": "approved",
+    "topic": "PIR sensor fooled by a glass sheet or blanket",
+    "job": "20261112-203726",
+    "postAt": "2026-11-14T14:00"
   }
 ]

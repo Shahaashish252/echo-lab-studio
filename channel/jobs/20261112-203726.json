@@ -4,7 +4,7 @@
   "hook": "Ek kambal se PIR sensor ko bewakoof banao",
   "lang": "hi",
   "started": "2026-11-12T20:37:26",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research & storyboard: \"PIR sensor fooled by a glass sheet or blanket (open with this hook: \"Ek kambal se PIR sensor ko bewakoof banao\")\" (pir, Claude)",
@@ -36,5 +36,7 @@
     }
   ],
   "format": "teardown3",
-  "module": "pir"
+  "module": "pir",
+  "finished": "2026-11-12T20:55:24",
+  "uploadId": "mwkkbwpqwEw"
 }

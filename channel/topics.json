@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Ultrasonic sensor robot that avoids obstacles",
+      "hook": "Ye robot dekhta nahi, phir bhi deewar se nahi takraata"
+    },
+    {
+      "topic": "Why a servo motor jitters without a capacitor",
+      "hook": "Servo kaanpta kyun hai? Ek chhoti si galti"
+    },
+    {
+      "topic": "Potentiometer controlling LED brightness with Arduino",
+      "hook": "Ye ghumane wala knob light ko kaise dim karta hai?"
+    },
+    {
+      "topic": "Bluetooth car without a driver chip (motor driver explained)",
+      "hook": "Motor driver ke bina Arduino motor jala deta hai"
+    },
+    {
+      "topic": "LDR light sensor night lamp",
+      "hook": "Ye chhota sensor andhera sunta hai, dekhta nahi"
+    },
+    {
       "topic": "Line follower robot with no brain, only IR sensors",
       "hook": "Is robot ke andar dimaag nahi, sirf do aankhein hain"
     },
@@ -15,10 +35,6 @@
     {
       "topic": "Speaker used as a microphone experiment",
       "hook": "Ye speaker sunta bhi hai, tumhe pata hi nahi tha"
-    },
-    {
-      "topic": "PIR sensor fooled by a glass sheet or blanket",
-      "hook": "Ek kambal se PIR sensor ko bewakoof banao"
     },
     {
       "topic": "Self-balancing robot and why it needs a gyro",
@@ -211,6 +227,7 @@
     "Ultrasonic obstacle avoiding robot",
     "Clap switch part 3: why it fails in noise",
     "Touch sensor that feels you, not presses",
-    "Smart dustbin lid that opens when you wave your hand"
+    "Smart dustbin lid that opens when you wave your hand",
+    "PIR sensor fooled by a glass sheet or blanket"
   ]
 }

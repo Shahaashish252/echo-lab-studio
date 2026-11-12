@@ -1,26 +1,27 @@
 {
-  "updated": "2026-11-12T20:34",
+  "updated": "2026-11-12T20:37",
   "videos": 27,
-  "summary": "Instagram is doing most of the work: almost every Hindi video gets 1,000+ views there, while YouTube Shorts mostly get under 60 views. The best videos are the ones with a surprising claim about a robot or sensor (like 'it can't see, it only hears') and a strong visual demo; they get more likes, saves and shares. Dry 'how does X work?' videos about everyday places (lifts, taps, malls, smoke alarms) and the newest posts are getting much less attention.",
-  "winningPattern": "Short Hindi videos about robots or sensors that do something surprising or 'dumb but clever' (gyro-less robot falling, clap switch hearing noise, line follower with no brain, mic as reverse speaker). Titles open with a bold, counter-intuitive claim in Hinglish ('X ko Y nahi pata, sirf Z karta hai') plus one emoji and #shorts, and the Instagram Reel is the main engine. Robot and sound-based Arduino-module topics beat everyday-building topics, and series-style follow-ups on a proven topic (clap switch) hold up on both platforms.",
+  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly get under 60 views. The best videos are about robots and sound-triggered gadgets (clap switch, gyro, PIR, line follower) and get the most likes, saves and shares. Everyday-device videos (taps, doors, smoke alarms, touchscreens) and the one English video are weak, and the newest videos have not had time to grow yet.",
+  "winningPattern": "A hobby-robot or Arduino-module subject (gyro robot, clap switch, PIR, line follower, IR obstacle robot) with a surprising 'it doesn't X, it only Y' or 'without this, it fails' hook. Titles are short Hinglish with one emoji and #shorts, posted mainly for Instagram Reels. Videos from Oct 26 to Nov 5 with this style reached 1,200-1,400 IG views, while question-style 'How does the tap/door/alarm know?' titles stayed under 600.",
   "doMore": [
-    "Lead with a bold myth-busting claim about robots and Arduino modules, e.g. 'X doesn't do what you think'.",
-    "Make follow-ups to the top hits: gyro, clap switch, PIR, line follower, mic/speaker.",
-    "Show a visible failure or demo in the first second (robot falling, switch triggering) before explaining.",
-    "End with a share or save prompt like 'Save this for your next project' since saves and shares signal quality.",
-    "Check why the IR robot video got 10 IG shares but few YouTube views, and test a different YouTube title and thumbnail for the same topic."
+    "Make robot and maker-module videos (gyro, line follower, IR, clap switch, mic), the topics students want to build",
+    "Open with a bold twist like 'X nahi karta, sirf Y karta hai' or 'Iske bina robot gir jaata'",
+    "Show a quick visible demo of the failure or surprise in the first 2 seconds",
+    "End with a save-worthy tip or part name so viewers save it for their project",
+    "Make follow-ups to winners such as clap switch, PIR and IR robot, with new angles",
+    "Cross-check YouTube separately: test one different title or thumbnail style there, since it lags far behind IG"
   ],
   "stopDoing": [
-    "Stop making 'Kaise kaam karta hai?' videos about everyday places (lift, mall door, washroom tap, street light); they get the lowest views.",
-    "Stop posting near-duplicate topics (three smoke, two tap, two IR videos) within days of each other.",
-    "Stop posting English-only or mixed-language titles that break the Hindi pattern, and don't expect YouTube to carry the channel until its titles and hooks are tested."
+    "Generic 'Kaise Pata Chalta Hai? 🤔' videos on everyday gadgets like taps, lift doors and street lights",
+    "Posting near-duplicate topics (several smoke detector, IR and tap videos) in the same week",
+    "Mixing in English narration, since it has no IG reach and little traction"
   ],
   "nextTopics": [
-    "Line follower robot with no brain, only IR sensors",
-    "Clap switch counting claps with a simple timer",
-    "Gyro sensor balancing a two-wheel robot",
-    "Speaker used as a microphone experiment",
-    "PIR sensor fooled by a glass sheet or blanket"
+    "Ultrasonic sensor robot that avoids obstacles",
+    "Why a servo motor jitters without a capacitor",
+    "Potentiometer controlling LED brightness with Arduino",
+    "Bluetooth car without a driver chip (motor driver explained)",
+    "LDR light sensor night lamp"
   ],
   "bestTimes": {
     "times": [
