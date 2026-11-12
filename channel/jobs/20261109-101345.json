@@ -4,7 +4,7 @@
   "hook": "Yeh robot dekhta nahi, sirf sunta hai",
   "lang": "hi",
   "started": "2026-11-09T10:13:45",
-  "status": "running",
+  "status": "failed",
   "stages": [
     {
       "name": "script: \"Ultrasonic obstacle avoiding robot (open with this hook: \"Yeh robot dekhta nahi, sirf sunta hai\")\" (ultrasonic, Claude)",
@@ -24,5 +24,7 @@
     }
   ],
   "format": "teardown3",
-  "module": "ultrasonic"
+  "module": "ultrasonic",
+  "finished": "2026-11-09T10:19:00",
+  "note": "cancelled: first cloud try, render parts timed out (fixed and remade the same day)"
 }

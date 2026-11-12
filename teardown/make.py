@@ -222,7 +222,7 @@ def main():
     shutil.rmtree(JOB, ignore_errors=True)
     JOB.mkdir(parents=True)
 
-    step(f"script: \"{topic}\" ({kind}, Claude)")
+    step(f"research & storyboard: \"{topic}\" ({kind}, Claude)")
     spec = json.loads(Path(get("--spec")).read_text(encoding="utf-8")) if get("--spec") else write_spec(topic, kind, lang)
     spec["kind"] = kind if kind in KINDS else "generic"
     print(f"  {spec.get('youtube', {}).get('title') or spec.get('title')}")
@@ -231,7 +231,7 @@ def main():
     spec["lines"] = voice(spec, lang)
     (JOB / "spec.json").write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    step("render tools")
+    step("3D model + drawings (render tools)")
     ensure_tools()
     run(["node", "core/render/events.mjs", "page", "--size", "1080x1920"], cwd=HERE)
     if "--stills" in argv:   # review frames only: page/stills/s_<t>.jpg
@@ -259,7 +259,7 @@ def main():
     (PAGE / "out" / "cues.json").write_text(json.dumps(cues, ensure_ascii=False), encoding="utf-8")
     run([sys.executable, "core/render/srt.py", PAGE / "out" / "cues.json", out_dir / f"{name}.srt"], cwd=HERE)
 
-    step("youtube")
+    step("youtube upload")
     yt = spec.get("youtube") or {}
     meta = {"file": f"out/auto/{name}.mp4", "title": (yt.get("title") or spec.get("title") or topic)[:100],
             "description": yt.get("description") or "", "tags": yt.get("tags") or [topic], "categoryId": "28", "language": lang, "privacy": "private",
