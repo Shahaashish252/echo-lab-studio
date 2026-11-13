@@ -675,10 +675,16 @@
     "id": "uLPHCcegH-E",
     "meta": "channel/videos/td3-smart-dustbin-ir-sensor.json",
     "date": "2026-11-11",
-    "status": "approved",
+    "status": "published",
     "topic": "Smart dustbin lid that opens when you wave your hand",
     "job": "20261111-153700",
-    "postAt": "2026-11-13T14:00"
+    "postAt": "2026-11-13T14:00",
+    "published": {
+      "youtube": "2026-11-13",
+      "instagram": "https://www.instagram.com/reel/DfrrjI8FHUj/",
+      "facebook": "https://www.facebook.com/reel/1427818482884517/"
+    },
+    "postedAt": "2026-11-13T18:29"
   },
   {
     "id": "mwkkbwpqwEw",
