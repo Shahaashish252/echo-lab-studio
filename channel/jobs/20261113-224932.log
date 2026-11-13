@@ -108,3 +108,20 @@ events 64 dur 64.71 → page/events.json
   $ ffmpeg -y -loglevel error -f concat -safe 0 -i /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-1794590745/list.txt -c copy /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-ky-038-aw
 
 == sound + master
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with numpy --with scipy --with soundfile --with soxr python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/mix.
+Downloading scipy (33.7MiB)
+ Downloaded scipy
+Installed 7 packages in 23ms
+Traceback (most recent call last):
+  File "/home/runner/work/echo-lab-studio/echo-lab-studio/teardown/mix.py", line 114, in <module>
+    fol[:len(room), 0] += room; fol[:len(room), 1] += room
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: operands could not be broadcast together with shapes (3178079,) (3178080,) (3178079,) 
+Traceback (most recent call last):
+  File "/home/runner/work/echo-lab-studio/echo-lab-studio/teardown/make.py", line 404, in <module>
+    main()
+  File "/home/runner/work/echo-lab-studio/echo-lab-studio/teardown/make.py", line 374, in main
+    run([sys.executable, "-m", "uv", "run", "--python", "3.12", "--with", "numpy", "--with", "scipy", "--with", "soundfile", "--with", "soxr", "python", HERE / "mix.py"], cwd=HERE)
+  File "/home/runner/work/echo-lab-studio/echo-lab-studio/teardown/make.py", line 47, in run
+    raise RuntimeError(f"failed ({r.returncode}): {cmd[0]} {cmd[1] if len(cmd) > 1 else ''}")
+RuntimeError: failed (1): /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m

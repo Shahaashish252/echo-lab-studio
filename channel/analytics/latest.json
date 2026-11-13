@@ -1,9 +1,18 @@
 {
-  "updated": "13 Nov 2026, 15:54",
+  "updated": "13 Nov 2026, 23:10",
   "youtube": {
     "subs": 6,
-    "views": 4077,
+    "views": 4087,
     "videos": [
+      {
+        "title": "Dustbin haath pe kyu khulta hai, bag pe nahi? 🗑️ #shorts",
+        "id": "uLPHCcegH-E",
+        "status": "public",
+        "published": "2026-11-13",
+        "views": 5,
+        "likes": 1,
+        "comments": 2
+      },
       {
         "title": "Ek kambal se PIR sensor ko bewakoof banao 🤯 #shorts",
         "id": "mwkkbwpqwEw",
@@ -18,25 +27,16 @@
         "id": "m2busj2Fu4c",
         "status": "public",
         "published": "2026-11-12",
-        "views": 24,
+        "views": 40,
         "likes": 1,
         "comments": 2
-      },
-      {
-        "title": "Dustbin haath pe kyu khulta hai, bag pe nahi? 🗑️ #shorts",
-        "id": "uLPHCcegH-E",
-        "status": "private",
-        "published": "2026-11-11",
-        "views": 0,
-        "likes": 0,
-        "comments": 0
       },
       {
         "title": "Clap switch shor mein kyun fail hota hai? 👏 #shorts",
         "id": "eRlpe0uqFyU",
         "status": "public",
         "published": "2026-11-11",
-        "views": 22,
+        "views": 24,
         "likes": 3,
         "comments": 2
       },
@@ -234,7 +234,7 @@
         "id": "24-dufDGzxc",
         "status": "public",
         "published": "2026-10-29",
-        "views": 597,
+        "views": 598,
         "likes": 4,
         "comments": 2
       },
@@ -578,7 +578,7 @@
       },
       {
         "day": "2026-10-24",
-        "views": 51,
+        "views": 50,
         "minutes": 8,
         "subs": 0
       },
@@ -688,17 +688,28 @@
   },
   "instagram": {
     "username": "echo.lab3d",
-    "followers": 19,
+    "followers": 20,
     "posts": [
+      {
+        "title": "Dustbin haath pe khulta hai, bag pe nahi? 🗑️",
+        "url": "https://www.instagram.com/reel/DfrrjI8FHUj/",
+        "published": "2026-11-13",
+        "likes": 5,
+        "comments": 0,
+        "reach": 125,
+        "views": 145,
+        "saved": 0,
+        "shares": 0
+      },
       {
         "title": "Button dabana nahi padta, bas chhoona hai... ya sach mein? 🔥",
         "url": "https://www.instagram.com/reel/DfptwvjFC1z/",
         "published": "2026-11-12",
-        "likes": 5,
+        "likes": 7,
         "comments": 2,
-        "reach": 192,
-        "views": 212,
-        "saved": 1,
+        "reach": 262,
+        "views": 288,
+        "saved": 2,
         "shares": 0
       },
       {
@@ -707,8 +718,8 @@
         "published": "2026-11-12",
         "likes": 4,
         "comments": 4,
-        "reach": 121,
-        "views": 137,
+        "reach": 122,
+        "views": 138,
         "saved": 0,
         "shares": 0
       },
@@ -719,7 +730,7 @@
         "likes": 11,
         "comments": 2,
         "reach": 1177,
-        "views": 1391,
+        "views": 1396,
         "saved": 2,
         "shares": 3
       },
@@ -730,7 +741,7 @@
         "likes": 15,
         "comments": 0,
         "reach": 1085,
-        "views": 1303,
+        "views": 1308,
         "saved": 4,
         "shares": 1
       },
@@ -740,8 +751,8 @@
         "published": "2026-11-03",
         "likes": 2,
         "comments": 2,
-        "reach": 127,
-        "views": 145,
+        "reach": 128,
+        "views": 150,
         "saved": 0,
         "shares": 0
       },
@@ -751,8 +762,8 @@
         "published": "2026-11-02",
         "likes": 23,
         "comments": 2,
-        "reach": 1179,
-        "views": 1387,
+        "reach": 1180,
+        "views": 1389,
         "saved": 3,
         "shares": 3
       },
@@ -762,8 +773,8 @@
         "published": "2026-11-01",
         "likes": 10,
         "comments": 2,
-        "reach": 1131,
-        "views": 1256,
+        "reach": 1132,
+        "views": 1260,
         "saved": 2,
         "shares": 0
       },
@@ -774,7 +785,7 @@
         "likes": 19,
         "comments": 0,
         "reach": 1069,
-        "views": 1197,
+        "views": 1199,
         "saved": 12,
         "shares": 1
       },
@@ -952,17 +963,6 @@
         "reach": 105,
         "views": 123,
         "saved": 1,
-        "shares": 1
-      },
-      {
-        "title": "Aapka phone ghoomna kaise feel karta hai? 🤯",
-        "url": "https://www.instagram.com/reel/Deq_YaZDN7K/",
-        "published": "2026-10-19",
-        "likes": 3,
-        "comments": 6,
-        "reach": 114,
-        "views": 134,
-        "saved": 2,
         "shares": 1
       }
     ]

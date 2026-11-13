@@ -4,7 +4,7 @@
   "hook": "Is LED ko haath nahi, sirf aapki awaaz chalati hai",
   "lang": "hi",
   "started": "2026-11-13T22:49:32",
-  "status": "running",
+  "status": "failed",
   "stages": [
     {
       "name": "research & storyboard: \"Sound-controlled LED with a mic module (open with this hook: \"Is LED ko haath nahi, sirf aapki awaaz chalati hai\")\" (sound, Claude)",
@@ -32,5 +32,6 @@
     }
   ],
   "format": "teardown3",
-  "module": "sound"
+  "module": "sound",
+  "finished": "2026-11-13T23:10:02"
 }

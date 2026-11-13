@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-13T15:54",
-  "videos": 27,
-  "summary": "Instagram is carrying the channel: most videos get 1,000+ views there, while YouTube Shorts mostly get under 60 views. The best performers are short 'this device doesn't do what you think' videos about relatable gadgets and robots (gyro robot, clap switch, line follower, mic vs speaker), which earn the most likes, saves and shares. Generic 'How does X work?' questions about everyday places (lift door, mall door, tap, smoke detector) get little attention, and the English video and the posts with zero Instagram data are not helping.",
-  "winningPattern": "Hindi Instagram Reels about a hands-on maker gadget or robot (clap switch, gyro robot, line follower, mic) with a surprising, contrarian hook that flips an assumption ('Nahi, sirf...', 'Ke bina gir jaata', 'Ulta kaam karta hai'). Titles are short, claim-style statements rather than 'Kaise kaam karta hai?' questions, and the topic is something a student could build with an Arduino. Clap switch is the strongest repeatable series, and IR sensor 'robot avoids wall' also earned the most shares.",
+  "updated": "2026-11-13T22:49",
+  "videos": 28,
+  "summary": "Instagram is carrying the channel: most Hindi videos get 1,200-1,400 views there, while YouTube Shorts mostly gets under 60 views. The best videos pair a surprising claim about a simple gadget (clap switch, gyro robot, mic, heat sensor) with a short, punchy Hindi title. Longer, generic 'how does X work?' titles on everyday items (taps, doors, smoke alarms) get far fewer views and almost no saves or shares, and the English video and the older videos did poorly.",
+  "winningPattern": "Hindi Shorts about a robot or a sound/heat/light sensor, with a 'X doesn't do the obvious thing, it does the surprising thing' hook (e.g. 'Sensor sees nothing, only feels heat'; 'Clap switch listens to noise, not claps'). Titles are short (under 10 words) with one emoji, and the videos are posted to Instagram Reels first. Robots and clap-switch topics also did best on YouTube. A direct reversal ('X is the opposite of Y') drove the most saves and shares.",
   "doMore": [
-    "Make 'X ke bina Y fail ho jaata' demo hooks showing the failure first, like the gyro robot",
-    "Build a series around clap switch, line follower, IR and mic, the proven maker topics",
-    "Use contrarian statement titles ('Sensor Dekhta Nahi, Sirf...') instead of 'Kaise?' questions",
-    "Post to Instagram first and cross-post to YouTube only with a stronger first 2 seconds",
-    "End with a save/share prompt such as 'Project ke liye save karo' since saves and shares signal quality"
+    "Open with a surprising reversal: 'X doesn't do Y, it does Z' in under 10 words",
+    "Make more robot and clap-switch / sound-sensor videos, since they won on both platforms",
+    "Post to Instagram Reels first and treat YouTube as a secondary test",
+    "Make follow-ups to winners (e.g. a part 2 of the gyro robot or the clap switch with whistling)",
+    "End with a question or a 'save this for your project' line to raise saves and shares"
   ],
   "stopDoing": [
-    "Generic 'Kaise kaam karta hai?' videos on public-place gadgets (lift, mall door, tap, street light)",
-    "Near-duplicate topics in the same week (several smoke detector, IR and tap videos) that split the audience",
-    "Publishing videos that never reach Instagram (zero IG data) or switching to English without testing it properly"
+    "Generic titles like 'How does [everyday item] work?' for taps, doors and alarms",
+    "Posting several near-duplicate videos on the same topic (smoke alarm, IR sensor, clap switch variants) within days",
+    "Publishing English videos while the audience is responding to Hindi"
   ],
   "nextTopics": [
-    "Obstacle avoiding robot without any camera",
-    "Clap switch with a whistle or music",
-    "Line follower robot with the sensor removed",
-    "Speaker used as a microphone",
-    "Robot balancing with and without an accelerometer"
+    "Self-balancing robot without a gyro",
+    "Buzzer that works as a microphone",
+    "Obstacle-avoiding robot with ultrasonic sensor",
+    "LDR sensor and light",
+    "Sound-controlled LED with a mic module"
   ],
   "bestTimes": {
     "times": [
       "14:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (26 posts)"
+    "reason": "from our own posts: these hours averaged the most views (27 posts)"
   }
 }

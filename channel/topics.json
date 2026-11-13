@@ -1,120 +1,14 @@
 {
   "queue": [
     {
-      "topic": "Obstacle avoiding robot without any camera",
-      "hook": "Is Robot Ki Aankhein Nahi Hain, Phir Bhi Nahi Takraata"
+      "topic": "Buzzer that works as a microphone",
+      "hook": "Yeh buzzer bajta nahi, sunta bhi hai",
+      "module": ""
     },
     {
-      "topic": "Clap switch with a whistle or music",
-      "hook": "Taali Nahi, Gaana Bajao Aur Light Chalu!"
-    },
-    {
-      "topic": "Line follower robot with the sensor removed",
-      "hook": "Ek Sensor Hatao Aur Robot Raasta Bhool Gaya"
-    },
-    {
-      "topic": "Speaker used as a microphone",
-      "hook": "Aapka Speaker Chupke Se Mic Bhi Hai"
-    },
-    {
-      "topic": "Robot balancing with and without an accelerometer",
-      "hook": "Is Chip Ke Bina Robot Seedha Khada Nahi Reh Sakta"
-    },
-    {
-      "topic": "Obstacle-avoiding robot with ultrasonic sensor",
-      "hook": "Yeh robot deewar se takrata nahi, kyunki wo awaaz ginta hai"
-    },
-    {
-      "topic": "Why a robot without a gyro/accelerometer tilts and crashes",
-      "hook": "Is chhoti chip ke bina self-balancing robot 1 second mein gir jaata hai"
-    },
-    {
-      "topic": "Sound sensor module fooled by whistle or claps",
-      "hook": "Is switch ko aapki aawaz nahi, sirf shor se matlab hai"
-    },
-    {
-      "topic": "Line follower robot failing on a different track colour",
-      "hook": "Line follower robot ko kaali line dikhti hi nahi, phir bhi chalta hai"
-    },
-    {
-      "topic": "PIR sensor fooled by standing still",
-      "hook": "Is sensor ke saamne bilkul hilo mat, ye aapko dekh hi nahi paayega"
-    },
-    {
-      "topic": "Ultrasonic sensor robot that avoids obstacles",
-      "hook": "Ye robot dekhta nahi, phir bhi deewar se nahi takraata"
-    },
-    {
-      "topic": "Why a servo motor jitters without a capacitor",
-      "hook": "Servo kaanpta kyun hai? Ek chhoti si galti"
-    },
-    {
-      "topic": "Potentiometer controlling LED brightness with Arduino",
-      "hook": "Ye ghumane wala knob light ko kaise dim karta hai?"
-    },
-    {
-      "topic": "Bluetooth car without a driver chip (motor driver explained)",
-      "hook": "Motor driver ke bina Arduino motor jala deta hai"
-    },
-    {
-      "topic": "LDR light sensor night lamp",
-      "hook": "Ye chhota sensor andhera sunta hai, dekhta nahi"
-    },
-    {
-      "topic": "Line follower robot with no brain, only IR sensors",
-      "hook": "Is robot ke andar dimaag nahi, sirf do aankhein hain"
-    },
-    {
-      "topic": "Clap switch counting claps with a simple timer",
-      "hook": "Ek taali pe light jalti hai, do pe kyun nahi?"
-    },
-    {
-      "topic": "Gyro sensor balancing a two-wheel robot",
-      "hook": "Ye robot gir ke bhi dobara khada kaise ho jaata hai?"
-    },
-    {
-      "topic": "Speaker used as a microphone experiment",
-      "hook": "Ye speaker sunta bhi hai, tumhe pata hi nahi tha"
-    },
-    {
-      "topic": "Self-balancing robot and why it needs a gyro",
-      "hook": "Is robot ko gyro hata do, yeh 1 second mein gir jaayega"
-    },
-    {
-      "topic": "Ultrasonic robot avoiding walls by sound",
-      "hook": "Yeh robot aankhon se nahi, awaaz ke echo se dekhta hai"
-    },
-    {
-      "topic": "Line follower with IR sensors",
-      "hook": "Is robot ko kaala rang dikhta hai, rasta nahi"
-    },
-    {
-      "topic": "Sound sensor module in a clap switch",
-      "hook": "Clap switch ko taali nahi, sirf ek tez awaaz chahiye"
-    },
-    {
-      "topic": "Servo motor knowing its angle",
-      "hook": "Servo ko pata hai woh kahan ghoom raha hai, bina dekhe"
-    },
-    {
-      "topic": "Line follower robot sensor: why it follows black",
-      "hook": "Yeh Robot Sirf Kaala Rang Dekhta Hai, Baaki Sab Andhera"
-    },
-    {
-      "topic": "Ultrasonic robot that stops before a wall",
-      "hook": "Is Robot Ki Aankhen Nahi, Phir Bhi Deewar Se Nahi Takraata"
-    },
-    {
-      "topic": "Arduino brain: why a robot freezes without code",
-      "hook": "Arduino Ke Bina Ye Robot Bas Ek Dibba Hai"
-    },
-    {
-      "topic": "Sound sensor module: loud vs quiet, why it fools clap switch",
-      "hook": "Is Chhote Module Ko Taali Aur Thappad Mein Fark Nahi Pata"
-    },
-    {
-      "topic": "Servo motor: how it stops at an exact angle",
-      "hook": "Yeh Motor Ghoomta Nahi, Sirf Ek Angle Pakadta Hai"
+      "topic": "Sound-controlled LED with a mic module",
+      "hook": "Is LED ko haath nahi, sirf aapki awaaz chalati hai",
+      "module": "sound"
     },
     {
       "topic": "Touch sensor lamp that reacts to your finger",
@@ -124,11 +18,6 @@
     {
       "topic": "Buzzer and potentiometer sound control",
       "hook": "Ek Ghumta Knob Awaaz Ka Pitch Kaise Badalta Hai?",
-      "module": ""
-    },
-    {
-      "topic": "Buzzer alarm that triggers on tilt",
-      "hook": "Ise hilao toh bajta hai, bina kisi button ke",
       "module": ""
     },
     {
