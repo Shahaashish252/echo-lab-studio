@@ -1,8 +1,8 @@
 {
-  "updated": "12 Nov 2026, 23:11",
+  "updated": "13 Nov 2026, 15:54",
   "youtube": {
     "subs": 6,
-    "views": 4023,
+    "views": 4077,
     "videos": [
       {
         "title": "Ek kambal se PIR sensor ko bewakoof banao 🤯 #shorts",
@@ -18,7 +18,7 @@
         "id": "m2busj2Fu4c",
         "status": "public",
         "published": "2026-11-12",
-        "views": 15,
+        "views": 24,
         "likes": 1,
         "comments": 2
       },
@@ -36,8 +36,8 @@
         "id": "eRlpe0uqFyU",
         "status": "public",
         "published": "2026-11-11",
-        "views": 19,
-        "likes": 2,
+        "views": 22,
+        "likes": 3,
         "comments": 2
       },
       {
@@ -108,7 +108,7 @@
         "id": "yg0sWNjFBTs",
         "status": "public",
         "published": "2026-11-05",
-        "views": 519,
+        "views": 518,
         "likes": 7,
         "comments": 0
       },
@@ -423,7 +423,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 557,
+        "views": 558,
         "likes": 9,
         "comments": 2
       },
@@ -529,12 +529,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-15",
-        "views": 0,
-        "minutes": 0,
-        "subs": 0
-      },
-      {
         "day": "2026-10-16",
         "views": 2,
         "minutes": 1,
@@ -584,7 +578,7 @@
       },
       {
         "day": "2026-10-24",
-        "views": 50,
+        "views": 51,
         "minutes": 8,
         "subs": 0
       },
@@ -683,21 +677,38 @@
         "views": 17,
         "minutes": 1,
         "subs": 0
+      },
+      {
+        "day": "2026-11-10",
+        "views": 10,
+        "minutes": 1,
+        "subs": 0
       }
     ]
   },
   "instagram": {
     "username": "echo.lab3d",
-    "followers": 17,
+    "followers": 19,
     "posts": [
+      {
+        "title": "Button dabana nahi padta, bas chhoona hai... ya sach mein? 🔥",
+        "url": "https://www.instagram.com/reel/DfptwvjFC1z/",
+        "published": "2026-11-12",
+        "likes": 5,
+        "comments": 2,
+        "reach": 192,
+        "views": 212,
+        "saved": 1,
+        "shares": 0
+      },
       {
         "title": "Clap switch shor mein pagal kyun ho jata hai? 👏",
         "url": "https://www.instagram.com/reel/DfpMYVMjFOb/",
         "published": "2026-11-12",
-        "likes": 3,
-        "comments": 1,
-        "reach": 118,
-        "views": 134,
+        "likes": 4,
+        "comments": 4,
+        "reach": 121,
+        "views": 137,
         "saved": 0,
         "shares": 0
       },
@@ -953,17 +964,6 @@
         "views": 134,
         "saved": 2,
         "shares": 1
-      },
-      {
-        "title": "Motion sensor aapko DEKHTA nahi 👀❌",
-        "url": "https://www.instagram.com/reel/DelhN5_k5L0/",
-        "published": "2026-10-17",
-        "likes": 12,
-        "comments": 2,
-        "reach": 1214,
-        "views": 1428,
-        "saved": 3,
-        "shares": 4
       }
     ]
   }

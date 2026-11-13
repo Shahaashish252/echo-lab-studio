@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Obstacle avoiding robot without any camera",
+      "hook": "Is Robot Ki Aankhein Nahi Hain, Phir Bhi Nahi Takraata"
+    },
+    {
+      "topic": "Clap switch with a whistle or music",
+      "hook": "Taali Nahi, Gaana Bajao Aur Light Chalu!"
+    },
+    {
+      "topic": "Line follower robot with the sensor removed",
+      "hook": "Ek Sensor Hatao Aur Robot Raasta Bhool Gaya"
+    },
+    {
+      "topic": "Speaker used as a microphone",
+      "hook": "Aapka Speaker Chupke Se Mic Bhi Hai"
+    },
+    {
+      "topic": "Robot balancing with and without an accelerometer",
+      "hook": "Is Chip Ke Bina Robot Seedha Khada Nahi Reh Sakta"
+    },
+    {
       "topic": "Obstacle-avoiding robot with ultrasonic sensor",
       "hook": "Yeh robot deewar se takrata nahi, kyunki wo awaaz ginta hai"
     },

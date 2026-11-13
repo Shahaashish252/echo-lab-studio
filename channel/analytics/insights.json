@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-12T23:11",
+  "updated": "2026-11-13T15:54",
   "videos": 27,
-  "summary": "Instagram is doing most of the work: nearly every Hindi video gets 1,000+ views there, while YouTube Shorts mostly stalls under 100 views. The best performers are the 'X doesn't see/hear, it only senses Y' videos about relatable robots and sensors (gyro robot, clap switch, PIR motion sensor), which also earn the most likes and saves. Videos with generic 'How does X work?' titles about everyday places (lift, tap, mall door, smoke alarm) and the one English video get very little attention.",
-  "winningPattern": "Hindi Instagram Reels about hands-on maker subjects (robots, clap switch, PIR, mic, line follower) with a surprising 'it doesn't do what you think' hook, such as 'Without X this robot falls instantly' or 'It doesn't hear claps, only noise'. Titles are short Hinglish with one emoji and a strong curiosity or contradiction in the first words. Robot and clap-switch topics lead; these videos were posted in the Oct 26 to Nov 5 window and also got the best YouTube numbers (400-680 views).",
+  "summary": "Instagram is carrying the channel: most videos get 1,000+ views there, while YouTube Shorts mostly get under 60 views. The best performers are short 'this device doesn't do what you think' videos about relatable gadgets and robots (gyro robot, clap switch, line follower, mic vs speaker), which earn the most likes, saves and shares. Generic 'How does X work?' questions about everyday places (lift door, mall door, tap, smoke detector) get little attention, and the English video and the posts with zero Instagram data are not helping.",
+  "winningPattern": "Hindi Instagram Reels about a hands-on maker gadget or robot (clap switch, gyro robot, line follower, mic) with a surprising, contrarian hook that flips an assumption ('Nahi, sirf...', 'Ke bina gir jaata', 'Ulta kaam karta hai'). Titles are short, claim-style statements rather than 'Kaise kaam karta hai?' questions, and the topic is something a student could build with an Arduino. Clap switch is the strongest repeatable series, and IR sensor 'robot avoids wall' also earned the most shares.",
   "doMore": [
-    "Make more robot and Arduino-module videos built on a surprising contradiction hook ('X can't see, only Y').",
-    "Do follow-ups to the clap switch and gyro robot hits, e.g. whistle, noise, and failure demos (part 2 / 'what if' versions).",
-    "Lead with Instagram, then post to YouTube Shorts using the same Hinglish title style that worked for the top videos.",
-    "Show a visible build or a failure on screen (robot falling, switch triggering wrongly) rather than a plain explanation.",
-    "Ask viewers to save/share in the closing line, since shares and saves are strong on the robot IR video (10 shares) and gyro video (12 saves)."
+    "Make 'X ke bina Y fail ho jaata' demo hooks showing the failure first, like the gyro robot",
+    "Build a series around clap switch, line follower, IR and mic, the proven maker topics",
+    "Use contrarian statement titles ('Sensor Dekhta Nahi, Sirf...') instead of 'Kaise?' questions",
+    "Post to Instagram first and cross-post to YouTube only with a stronger first 2 seconds",
+    "End with a save/share prompt such as 'Project ke liye save karo' since saves and shares signal quality"
   ],
   "stopDoing": [
-    "Stop making generic 'Kaise Pata Chalta Hai?' videos on everyday installations (lift, mall door, street light, taps), which get under 600 views.",
-    "Stop posting English-narrated videos and near-duplicate topics (three smoke/IR/tap variants) in the same week; they split attention and underperform.",
-    "Stop publishing to YouTube only: the last two uploads have zero Instagram views."
+    "Generic 'Kaise kaam karta hai?' videos on public-place gadgets (lift, mall door, tap, street light)",
+    "Near-duplicate topics in the same week (several smoke detector, IR and tap videos) that split the audience",
+    "Publishing videos that never reach Instagram (zero IG data) or switching to English without testing it properly"
   ],
   "nextTopics": [
-    "Obstacle-avoiding robot with ultrasonic sensor",
-    "Why a robot without a gyro/accelerometer tilts and crashes",
-    "Sound sensor module fooled by whistle or claps",
-    "Line follower robot failing on a different track colour",
-    "PIR sensor fooled by standing still"
+    "Obstacle avoiding robot without any camera",
+    "Clap switch with a whistle or music",
+    "Line follower robot with the sensor removed",
+    "Speaker used as a microphone",
+    "Robot balancing with and without an accelerometer"
   ],
   "bestTimes": {
     "times": [
