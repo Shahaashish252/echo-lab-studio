@@ -1,0 +1,16 @@
+{
+  "id": "20261113-224932",
+  "topic": "Sound-controlled LED with a mic module",
+  "hook": "Is LED ko haath nahi, sirf aapki awaaz chalati hai",
+  "lang": "hi",
+  "started": "2026-11-13T22:49:32",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research & storyboard: \"Sound-controlled LED with a mic module (open with this hook: \"Is LED ko haath nahi, sirf aapki awaaz chalati hai\")\" (sound, Claude)",
+      "at": "2026-11-13T22:49:32"
+    }
+  ],
+  "format": "teardown3",
+  "module": "sound"
+}
