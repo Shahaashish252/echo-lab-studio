@@ -14,3 +14,72 @@
   Ye LED aapki awaaz nahi, sirf shor sunti hai 🎤 #shorts
 
 == voice (local Hindi: Piper pratham)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+Downloading onnxruntime (26.5MiB)
+Downloading piper-tts (32.6MiB)
+ Downloaded onnxruntime
+ Downloaded piper-tts
+Installed 12 packages in 21ms
+[0;93m2026-11-13 22:54:54.073408931 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  downloading hi_IN-pratham-medium.onnx
+  downloading hi_IN-pratham-medium.onnx.json
+  a1    4.09s  इस एल ई डी को हाथ नहीं, सिर्फ आपकी आवाज़ चलाती है
+  a2    4.04s  ये के वाई शून्य तीन आठ है, आवाज़ का ज़ोर नापता है
+  a3    3.56s  ये इलेक्ट्रेट माइक है, आवाज़ से इसका डायफ्राम हिलता है
+  a4    3.54s  चार्ज स्थायी है, कैपेसिटेंस बदली तो वोल्टेज बदलता है
+  a5    3.04s  एल एम तीन नौ तीन थ्रेशोल्ड से तुलना करता है
+  a6    2.35s  पीछे चार पिन और दो एल ई डी हैं
+  b1    3.16s  माइक का कमज़ोर सिग्नल पहले एम्प्लीफाई होता है
+  b2    2.62s  ए ओ पिन पर यही रॉ आवाज़ वोल्टेज बनती है
+  b3    2.60s  डी ओ पर बस एक या शून्य आता है
+  b4    4.87s  आवाज़ डायफ्राम हिलाती है, कैपेसिटेंस बदलती है, वोल्टेज बनता है
+  b5    3.86s  वोल्टेज पॉट के रेफरेंस से ऊपर गया, तो डी ओ पलटता है
+  b6    3.63s  तेज़ ताली पर एक, शांति में शून्य। बोर्ड टेस्ट करो
+  c1    2.85s  पचास से दस हज़ार हर्ट्ज़ की आवाज़ पकड़ता है
+  c2    4.34s  ताली वाला स्विच, शोर डिटेक्टर, और एल ई डी इंडिकेटर
+  c3    3.74s  आवाज़ पहचानता नहीं, और एक ताली कई बार गिनता है
+  c4    3.34s  वी सी सी तीन पॉइंट तीन से पाँच पॉइंट पाँच रखो
+  c5    3.41s  सेव करो, और कमेंट में बताओ, ताली से क्या चलाओगे?
+  voice (Piper pratham, local) 59.0s at length 1.05
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+[0;93m2026-11-13 22:54:58.766837530 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  a1    3.97s  इस एल ई डी को हाथ नहीं, सिर्फ आपकी आवाज़ चलाती है
+  a2    3.67s  ये के वाई शून्य तीन आठ है, आवाज़ का ज़ोर नापता है
+  a3    3.68s  ये इलेक्ट्रेट माइक है, आवाज़ से इसका डायफ्राम हिलता है
+  a4    3.56s  चार्ज स्थायी है, कैपेसिटेंस बदली तो वोल्टेज बदलता है
+  a5    2.93s  एल एम तीन नौ तीन थ्रेशोल्ड से तुलना करता है
+  a6    2.25s  पीछे चार पिन और दो एल ई डी हैं
+  b1    3.13s  माइक का कमज़ोर सिग्नल पहले एम्प्लीफाई होता है
+  b2    2.62s  ए ओ पिन पर यही रॉ आवाज़ वोल्टेज बनती है
+  b3    2.55s  डी ओ पर बस एक या शून्य आता है
+  b4    4.79s  आवाज़ डायफ्राम हिलाती है, कैपेसिटेंस बदलती है, वोल्टेज बनता है
+  b5    3.74s  वोल्टेज पॉट के रेफरेंस से ऊपर गया, तो डी ओ पलटता है
+  b6    3.70s  तेज़ ताली पर एक, शांति में शून्य। बोर्ड टेस्ट करो
+  c1    2.73s  पचास से दस हज़ार हर्ट्ज़ की आवाज़ पकड़ता है
+  c2    4.25s  ताली वाला स्विच, शोर डिटेक्टर, और एल ई डी इंडिकेटर
+  c3    3.51s  आवाज़ पहचानता नहीं, और एक ताली कई बार गिनता है
+  c4    3.30s  वी सी सी तीन पॉइंट तीन से पाँच पॉइंट पाँच रखो
+  c5    3.26s  सेव करो, और कमेंट में बताओ, ताली से क्या चलाओगे?
+  voice (Piper pratham, local) 57.7s at length 1.0
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+[0;93m2026-11-13 22:55:02.373871696 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  a1    3.92s  इस एल ई डी को हाथ नहीं, सिर्फ आपकी आवाज़ चलाती है
+  a2    3.63s  ये के वाई शून्य तीन आठ है, आवाज़ का ज़ोर नापता है
+  a3    3.62s  ये इलेक्ट्रेट माइक है, आवाज़ से इसका डायफ्राम हिलता है
+  a4    3.57s  चार्ज स्थायी है, कैपेसिटेंस बदली तो वोल्टेज बदलता है
+  a5    3.02s  एल एम तीन नौ तीन थ्रेशोल्ड से तुलना करता है
+  a6    2.34s  पीछे चार पिन और दो एल ई डी हैं
+  b1    3.01s  माइक का कमज़ोर सिग्नल पहले एम्प्लीफाई होता है
+  b2    2.44s  ए ओ पिन पर यही रॉ आवाज़ वोल्टेज बनती है
+  b3    2.40s  डी ओ पर बस एक या शून्य आता है
+  b4    4.58s  आवाज़ डायफ्राम हिलाती है, कैपेसिटेंस बदलती है, वोल्टेज बनता है
+  b5    3.52s  वोल्टेज पॉट के रेफरेंस से ऊपर गया, तो डी ओ पलटता है
+  b6    3.54s  तेज़ ताली पर एक, शांति में शून्य। बोर्ड टेस्ट करो
+  c1    2.75s  पचास से दस हज़ार हर्ट्ज़ की आवाज़ पकड़ता है
+  c2    4.18s  ताली वाला स्विच, शोर डिटेक्टर, और एल ई डी इंडिकेटर
+  c3    3.63s  आवाज़ पहचानता नहीं, और एक ताली कई बार गिनता है
+  c4    3.24s  वी सी सी तीन पॉइंट तीन से पाँच पॉइंट पाँच रखो
+  c5    3.24s  सेव करो, और कमेंट में बताओ, ताली से क्या चलाओगे?
+  voice (Piper pratham, local) 56.6s at length 0.95
+
+== 3D model + drawings (render tools)
