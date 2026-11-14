@@ -21,11 +21,6 @@
       "module": ""
     },
     {
-      "topic": "Temperature sensor LM35",
-      "hook": "Ye Chhota Part Garmi Ko Number Mein Badal Deta Hai",
-      "module": ""
-    },
-    {
       "topic": "Buzzer and relay clicking",
       "hook": "Relay Ki 'Click' Awaaz Ka Asli Matlab Kya Hai?",
       "module": ""
@@ -157,6 +152,7 @@
     "Clap switch part 3: why it fails in noise",
     "Touch sensor that feels you, not presses",
     "Smart dustbin lid that opens when you wave your hand",
-    "PIR sensor fooled by a glass sheet or blanket"
+    "PIR sensor fooled by a glass sheet or blanket",
+    "Temperature or flame sensor that reacts to heat"
   ]
 }

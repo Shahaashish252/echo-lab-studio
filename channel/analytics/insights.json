@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-13T22:49",
-  "videos": 28,
-  "summary": "Instagram is carrying the channel: most Hindi videos get 1,200-1,400 views there, while YouTube Shorts mostly gets under 60 views. The best videos pair a surprising claim about a simple gadget (clap switch, gyro robot, mic, heat sensor) with a short, punchy Hindi title. Longer, generic 'how does X work?' titles on everyday items (taps, doors, smoke alarms) get far fewer views and almost no saves or shares, and the English video and the older videos did poorly.",
-  "winningPattern": "Hindi Shorts about a robot or a sound/heat/light sensor, with a 'X doesn't do the obvious thing, it does the surprising thing' hook (e.g. 'Sensor sees nothing, only feels heat'; 'Clap switch listens to noise, not claps'). Titles are short (under 10 words) with one emoji, and the videos are posted to Instagram Reels first. Robots and clap-switch topics also did best on YouTube. A direct reversal ('X is the opposite of Y') drove the most saves and shares.",
+  "updated": "2026-11-14T15:10",
+  "videos": 29,
+  "summary": "Your Instagram Reels are doing far better than YouTube Shorts: most Reels get 1,000+ views, while most Shorts get under 100. The best videos are short, surprising claims about a sensor or robot (like 'Clap Switch only listens to noise' or 'Robot falls without a gyro'), which get views, likes, saves and shares. Generic 'How does X work?' questions on everyday devices (smoke alarm, tap, lift, mall door) get few views and little engagement.",
+  "winningPattern": "Hindi Reels on Instagram about a robot or a simple Arduino-style sensor (clap switch, gyro, line follower, IR, mic, heat sensor). The title makes a surprising or 'it can't do what you think' claim, like 'X doesn't see/hear, it only does Y' or 'Without X the robot falls', with a robot or clap/sound demo and a short punchy Hindi line. Published in late October to early November, with emoji and #shorts.",
   "doMore": [
-    "Open with a surprising reversal: 'X doesn't do Y, it does Z' in under 10 words",
-    "Make more robot and clap-switch / sound-sensor videos, since they won on both platforms",
-    "Post to Instagram Reels first and treat YouTube as a secondary test",
-    "Make follow-ups to winners (e.g. a part 2 of the gyro robot or the clap switch with whistling)",
-    "End with a question or a 'save this for your project' line to raise saves and shares"
+    "Make robot and maker-module videos (gyro, line follower, IR, mic, clap switch) with a surprising claim in the title",
+    "Use the 'X doesn't do what you think, it only does Y' hook, which shows up in most top videos",
+    "Post to Instagram first and treat it as the main platform; it brings roughly 10x the views",
+    "Make follow-ups to winners, such as a clap switch part 3 or a gyro balance demo, with a new angle each time",
+    "Add a clear question or challenge near the end to push saves and shares, since shares were highest on the IR robot video"
   ],
   "stopDoing": [
-    "Generic titles like 'How does [everyday item] work?' for taps, doors and alarms",
-    "Posting several near-duplicate videos on the same topic (smoke alarm, IR sensor, clap switch variants) within days",
-    "Publishing English videos while the audience is responding to Hindi"
+    "Generic 'X kaise kaam karta hai?' titles on everyday devices like taps, lifts, mall doors and smoke alarms",
+    "Posting several near-duplicate videos on one topic (smoke detector, IR in the dark, washroom tap) that split the audience and get low views",
+    "Posting English or Hindi videos on YouTube only, with no Instagram version, since those got almost no reach"
   ],
   "nextTopics": [
-    "Self-balancing robot without a gyro",
-    "Buzzer that works as a microphone",
-    "Obstacle-avoiding robot with ultrasonic sensor",
-    "LDR sensor and light",
-    "Sound-controlled LED with a mic module"
+    "Self-balancing robot and the MPU6050 gyro",
+    "Ultrasonic sensor robot that avoids obstacles",
+    "Sound sensor module fooled by a whistle or a tap",
+    "Line follower robot and its IR sensors",
+    "Temperature or flame sensor that reacts to heat"
   ],
   "bestTimes": {
     "times": [
-      "14:00",
+      "15:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (27 posts)"
+    "reason": "from our own posts: these hours averaged the most views (28 posts)"
   }
 }

@@ -701,5 +701,14 @@
       "facebook": "https://www.facebook.com/reel/1676652684109798/"
     },
     "postedAt": "2026-11-14T14:04"
+  },
+  {
+    "id": "EoJfsTY2Pmc",
+    "meta": "channel/videos/td3-dht11-heat-not-flame.json",
+    "date": "2026-11-14",
+    "status": "approved",
+    "topic": "Temperature or flame sensor that reacts to heat",
+    "job": "20261114-151050",
+    "postAt": "2026-11-15T15:00"
   }
 ]

@@ -1,0 +1,44 @@
+{
+  "file": "out/auto/dht11-heat-not-flame.mp4",
+  "title": "DHT11 Aag Nahi Dekhta, Sirf Garmi Pakadta Hai 🔥 #shorts",
+  "description": "Kya DHT11 aag dekh sakta hai? Nahi! Ye sirf hawa ki garmi aur nami naapta hai.\nThermistor aur capacitor ka asli raaz, 55 second mein.\n🔥 Andar NTC thermistor: garmi badhi, resistance gira\n💧 Nami ke liye capacitive element\n📡 Ek wire par 40 bit ka digital signal\n📏 0–50 °C, ±2 °C, bas 1 reading per second\nSubscribe karo Echo Lab 3D ko, har hafte naya module khol ke dekhenge!\n#shorts #DHT11 #Arduino #Sensor #ElectronicsHindi #Makers #EchoLab3D #Thermistor\n\nSources:\nhttps://learn.adafruit.com/dht\nhttps://lastminuteengineers.com/dht11-module-arduino-tutorial/\nhttps://en.wikipedia.org/wiki/Thermistor\nhttps://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/",
+  "sources": [
+    "https://learn.adafruit.com/dht",
+    "https://lastminuteengineers.com/dht11-module-arduino-tutorial/",
+    "https://en.wikipedia.org/wiki/Thermistor",
+    "https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/",
+    "https://www.mfgrobots.com/Article/mfg/it/29649.html",
+    "https://playembedded.org/wp-content/uploads/2016/04/Datasheet_DHT11.pdf"
+  ],
+  "tags": [
+    "DHT11 kaise kaam karta hai",
+    "DHT11 sensor hindi",
+    "DHT11 flame sensor",
+    "DHT11 Arduino",
+    "temperature sensor hindi",
+    "thermistor kya hai",
+    "NTC thermistor",
+    "humidity sensor hindi",
+    "Arduino sensors for beginners",
+    "DHT11 vs DHT22",
+    "DHT11 checksum",
+    "DHT11 pull up resistor",
+    "Echo Lab 3D",
+    "electronics project hindi"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "Ye aag nahi dekhta, bas garmi pakadta hai",
+  "format": "teardown3",
+  "captions": "out/auto/dht11-heat-not-flame.srt",
+  "social": {
+    "instagram": "Ye sensor aag nahi dekhta, bas garmi pakadta hai 🔥\nAndar ek thermistor hai: garmi badhi, resistance gira.\nChip use digital bana ke 40 bit bhejti hai.\nBas 1 reading per second, to tez aag miss ho jayegi!\nSave karo agle Arduino project ke liye.\nComment mein batao: tum DHT11 kahan lagaoge?\n#DHT11 #Arduino #Electronics #EchoLab3D #Makers",
+    "tiktok": "DHT11 aag nahi dekhta, bas garmi pakadta hai 🔥 #DHT11 #Arduino #Electronics #EchoLab3D #Makers"
+  }
+}
