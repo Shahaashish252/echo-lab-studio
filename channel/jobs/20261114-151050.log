@@ -12,3 +12,32 @@
   DHT11 Aag Nahi Dekhta, Sirf Garmi Pakadta Hai 🔥 #shorts
 
 == voice (local Hindi: Piper pratham)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+Downloading onnxruntime (26.5MiB)
+Downloading piper-tts (32.6MiB)
+ Downloaded onnxruntime
+ Downloaded piper-tts
+Installed 12 packages in 16ms
+[0;93m2026-11-14 15:13:34.659447242 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  downloading hi_IN-pratham-medium.onnx
+  downloading hi_IN-pratham-medium.onnx.json
+  a1    3.04s  ये सेंसर आग नहीं देखता, बस गर्मी पकड़ता है!
+  a2    3.29s  डी एच टी इलेवन, ज़ीरो से पचास डिग्री।
+  a3    2.91s  अंदर थर्मिस्टर है, एक खास रेज़िस्टर।
+  a4    2.53s  गर्मी बढ़ी, तो रेसिस्टेंस गिरता है।
+  a5    2.69s  दो इलेक्ट्रोड के बीच नमी सोखने वाली परत।
+  a6    3.19s  अंदर की चिप कैलिब्रेट करके डिजिटल सिग्नल देती है।
+  b1    2.63s  पहले माइक्रोकंट्रोलर डेटा लाइन लो करता है।
+  b2    2.71s  फिर सेंसर जवाब में छोटा लो पल्स भेजता है।
+  b3    2.67s  फिर चालीस बिट, हाई पल्स की लंबाई से।
+  b4    2.56s  गर्मी से थर्मिस्टर का रेसिस्टेंस घटता है।
+  b5    2.49s  पांचवां बाइट पहले चार का जोड़ होता है।
+  b6    3.13s  चालीस बिट को आठ से भाग दो, पांच बाइट।
+  c1    3.01s  ज़ीरो से पचास डिग्री, गलती दो डिग्री।
+  c2    3.74s  वेदर स्टेशन, रूम मॉनिटर, और डिस्प्ले प्रोजेक्ट।
+  c3    3.11s  धीमा है, और लंबी तार में रीडिंग बिगड़ती है।
+  c4    2.92s  तीन पॉइंट तीन वोल्ट पर तार एक मीटर रखो।
+  c5    3.31s  सेव करो, और कमेंट में बताओ: तुम इसे कहां लगाओगे?
+  voice (Piper pratham, local) 49.9s at length 1.05
+
+== 3D model + drawings (render tools)
