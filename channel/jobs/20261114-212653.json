@@ -4,7 +4,7 @@
   "hook": "Ye module aapki awaaz nahi, sirf shor pehchanta hai",
   "lang": "hi",
   "started": "2026-11-14T21:26:53",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research & storyboard: \"Sound sensor module that reacts to voice (open with this hook: \"Ye module aapki awaaz nahi, sirf shor pehchanta hai\")\" (sound, Claude)",
@@ -36,5 +36,7 @@
     }
   ],
   "format": "teardown3",
-  "module": "sound"
+  "module": "sound",
+  "finished": "2026-11-14T21:48:31",
+  "uploadId": "R2vtN8SNb0s"
 }

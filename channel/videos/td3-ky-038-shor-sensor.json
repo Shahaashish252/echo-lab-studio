@@ -1,0 +1,43 @@
+{
+  "file": "out/auto/ky-038-shor-sensor.mp4",
+  "title": "KY-038 awaaz nahi, sirf shor pehchanta hai 🎤 #shorts",
+  "description": "Sound sensor ko log 'voice sensor' bolte hain, par ye awaaz nahi pehchanta.\nSirf itna dekhta hai ki shor aapke set kiye level se zyada hai ya nahi.\n🎤 Electret mic aur LM393 comparator ka kaam\n📈 AO pin: level trend, DO pin: threshold\n🔧 Pot se sensitivity set karna\n⚡ 3.3–5 V supply, 4 pins\n\nSubscribe karo Echo Lab 3D ko, aur roz ek module kholke dekho!\n#shorts #KY038 #Arduino #SoundSensor #ClapSwitch #Electronics #Hinglish #EchoLab3D\n\nSources:\nhttps://www.espboards.dev/sensors/ky-038\nhttps://microcontrollerslab.com/ky-038-microphone-sound-sensor-module-arduino-tutorial\nhttps://randomnerdtutorials.com/guide-for-microphone-sound-sensor-with-arduino/\nhttps://en.wikipedia.org/wiki/Electret_microphone",
+  "sources": [
+    "https://www.espboards.dev/sensors/ky-038",
+    "https://microcontrollerslab.com/ky-038-microphone-sound-sensor-module-arduino-tutorial",
+    "https://randomnerdtutorials.com/guide-for-microphone-sound-sensor-with-arduino/",
+    "https://en.wikipedia.org/wiki/Electret_microphone",
+    "https://en.wikipedia.org/wiki/Comparator",
+    "https://docs.cirkitdesigner.com/component/aad64fd5-8368-46ba-a0c2-5ef9ea495d43/ky-038"
+  ],
+  "tags": [
+    "KY-038",
+    "KY-038 sound sensor",
+    "sound sensor Arduino",
+    "clap switch Arduino",
+    "LM393 comparator",
+    "electret microphone",
+    "sound sensor kaise kaam karta hai",
+    "Arduino sensor Hindi",
+    "KY-038 hindi",
+    "microphone module",
+    "Arduino projects for students",
+    "electronics Hinglish",
+    "noise alarm Arduino"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "Ye module awaaz nahi, sirf shor pehchanta hai",
+  "format": "teardown3",
+  "captions": "out/auto/ky-038-shor-sensor.srt",
+  "social": {
+    "instagram": "Ye module awaaz nahi, sirf shor pehchanta hai 🎤\nKY-038 ko 'voice sensor' kehte hain, par ye words nahi samajhta.\nBas dekhta hai ki sound aapke set level se zyada hai ya nahi.\nSave karo, clap switch banate waqt kaam aayega.\nAapko agla kaunsa sensor kholke dekhna hai? Comment mein batao!\n#Arduino #KY038 #ClapSwitch #Electronics #EchoLab3D",
+    "tiktok": "Ye module awaaz nahi, sirf shor pehchanta hai 🎤 #Arduino #KY038 #SoundSensor #Electronics #EchoLab3D"
+  }
+}

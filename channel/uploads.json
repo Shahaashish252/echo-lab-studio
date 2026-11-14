@@ -710,5 +710,14 @@
     "topic": "Temperature or flame sensor that reacts to heat",
     "job": "20261114-151050",
     "postAt": "2026-11-15T15:00"
+  },
+  {
+    "id": "R2vtN8SNb0s",
+    "meta": "channel/videos/td3-ky-038-shor-sensor.json",
+    "date": "2026-11-14",
+    "status": "approved",
+    "topic": "Sound sensor module that reacts to voice",
+    "job": "20261114-212653",
+    "postAt": "2026-11-16T15:00"
   }
 ]

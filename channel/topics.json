@@ -153,6 +153,7 @@
     "Touch sensor that feels you, not presses",
     "Smart dustbin lid that opens when you wave your hand",
     "PIR sensor fooled by a glass sheet or blanket",
-    "Temperature or flame sensor that reacts to heat"
+    "Temperature or flame sensor that reacts to heat",
+    "Sound sensor module that reacts to voice"
   ]
 }
