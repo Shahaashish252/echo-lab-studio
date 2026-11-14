@@ -1,0 +1,16 @@
+{
+  "id": "20261114-151050",
+  "topic": "Temperature or flame sensor that reacts to heat",
+  "hook": "Ye Sensor Aag Nahi Dekhta, Bas Garmi Pakadta Hai 🔥",
+  "lang": "hi",
+  "started": "2026-11-14T15:10:50",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research & storyboard: \"Temperature or flame sensor that reacts to heat (open with this hook: \"Ye Sensor Aag Nahi Dekhta, Bas Garmi Pakadta Hai 🔥\")\" (dht, Claude)",
+      "at": "2026-11-14T15:10:50"
+    }
+  ],
+  "format": "teardown3",
+  "module": "dht"
+}
