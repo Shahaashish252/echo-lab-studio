@@ -690,9 +690,16 @@
     "id": "mwkkbwpqwEw",
     "meta": "channel/videos/td3-pir-fooled-by-glass.json",
     "date": "2026-11-12",
-    "status": "approved",
+    "status": "published",
     "topic": "PIR sensor fooled by a glass sheet or blanket",
     "job": "20261112-203726",
-    "postAt": "2026-11-14T14:00"
+    "postAt": "2026-11-14T14:00",
+    "published": {
+      "youtube": "2026-11-14",
+      "instagram": "https://www.instagram.com/reel/DftyCAAjBRx/",
+      "instagram_story": "18180924790446833",
+      "facebook": "https://www.facebook.com/reel/1676652684109798/"
+    },
+    "postedAt": "2026-11-14T14:04"
   }
 ]
