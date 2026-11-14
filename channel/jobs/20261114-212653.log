@@ -12,3 +12,72 @@
   KY-038 awaaz nahi, sirf shor pehchanta hai 🎤 #shorts
 
 == voice (local Hindi: Piper pratham)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+Downloading onnxruntime (26.5MiB)
+Downloading piper-tts (32.6MiB)
+ Downloaded onnxruntime
+ Downloaded piper-tts
+Installed 12 packages in 50ms
+[0;93m2026-11-14 21:30:44.770673204 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  downloading hi_IN-pratham-medium.onnx
+  downloading hi_IN-pratham-medium.onnx.json
+  a1    3.27s  ये मॉड्यूल आपकी आवाज़ नहीं, सिर्फ़ शोर पहचानता है!
+  a2    3.32s  ये के वाई ज़ीरो थ्री एट है, चार पिन का मॉड्यूल।
+  a3    3.94s  सामने इलेक्ट्रेट कंडेंसर माइक्रोफ़ोन है, जो आवाज़ सुनता है।
+  a4    3.72s  इसमें स्थायी चार्ज रहता है, और छोटा जे फेट प्रीएम्प भी।
+  a5    4.59s  दूसरा हिस्सा एल एम थ्री नाइन थ्री कंपैरेटर और पोटेंशियोमीटर है।
+  a6    3.48s  कंपैरेटर दो वोल्टेज की तुलना करके डिजिटल सिग्नल देता है।
+  b1    3.58s  आवाज़ डायाफ्राम हिलाती है, कैपेसिटेंस बदलती है।
+  b2    4.30s  प्रीएम्प और एम्पलीफ़ायर बढ़ाते हैं, सिग्नल ए ओ पर आता है।
+  b3    3.43s  कंपैरेटर पोट के रेफ़रेंस से मिलाता है, डी ओ बदलता है।
+  b4    3.84s  आवाज़ से कैपेसिटेंस बदलती है, इसलिए वोल्टेज बदलता है।
+  b5    4.71s  सिग्नल रेफ़रेंस से ऊपर हो, तो डी ओ बदलता है; पोलैरिटी जाँचो।
+  b6    3.27s  पावर तीन पॉइंट तीन से पाँच वोल्ट, पिन चार।
+  c1    2.88s  माइक की रेंज पचास हर्ट्ज़ से दस किलोहर्ट्ज़ है।
+  c2    4.13s  क्लैप स्विच, शोर अलार्म, और म्यूज़िक पर नाचती एल ई डी।
+  c3    3.84s  मोटर का शोर और ज़्यादा सेंसिटिविटी, ग़लत ट्रिगर देते हैं।
+  c4    3.89s  पावर तीन पॉइंट तीन से पाँच वोल्ट दो, पोट धीरे घुमाओ।
+  c5    3.60s  सेव करो, और कमेंट में बताओ, अगला कौन सा सेंसर?
+  voice (Piper pratham, local) 63.8s at length 1.05
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+[0;93m2026-11-14 21:30:49.302621663 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  a1    3.20s  ये मॉड्यूल आपकी आवाज़ नहीं, सिर्फ़ शोर पहचानता है!
+  a2    3.34s  ये के वाई ज़ीरो थ्री एट है, चार पिन का मॉड्यूल।
+  a3    3.76s  सामने इलेक्ट्रेट कंडेंसर माइक्रोफ़ोन है, जो आवाज़ सुनता है।
+  a4    3.77s  इसमें स्थायी चार्ज रहता है, और छोटा जे फेट प्रीएम्प भी।
+  a5    4.48s  दूसरा हिस्सा एल एम थ्री नाइन थ्री कंपैरेटर और पोटेंशियोमीटर है।
+  a6    3.51s  कंपैरेटर दो वोल्टेज की तुलना करके डिजिटल सिग्नल देता है।
+  b1    3.61s  आवाज़ डायाफ्राम हिलाती है, कैपेसिटेंस बदलती है।
+  b2    3.70s  प्रीएम्प और एम्पलीफ़ायर बढ़ाते हैं, सिग्नल ए ओ पर आता है।
+  b3    3.61s  कंपैरेटर पोट के रेफ़रेंस से मिलाता है, डी ओ बदलता है।
+  b4    3.92s  आवाज़ से कैपेसिटेंस बदलती है, इसलिए वोल्टेज बदलता है।
+  b5    4.35s  सिग्नल रेफ़रेंस से ऊपर हो, तो डी ओ बदलता है; पोलैरिटी जाँचो।
+  b6    3.19s  पावर तीन पॉइंट तीन से पाँच वोल्ट, पिन चार।
+  c1    2.81s  माइक की रेंज पचास हर्ट्ज़ से दस किलोहर्ट्ज़ है।
+  c2    3.91s  क्लैप स्विच, शोर अलार्म, और म्यूज़िक पर नाचती एल ई डी।
+  c3    3.72s  मोटर का शोर और ज़्यादा सेंसिटिविटी, ग़लत ट्रिगर देते हैं।
+  c4    3.67s  पावर तीन पॉइंट तीन से पाँच वोल्ट दो, पोट धीरे घुमाओ।
+  c5    3.55s  सेव करो, और कमेंट में बताओ, अगला कौन सा सेंसर?
+  voice (Piper pratham, local) 62.1s at length 1.0
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+[0;93m2026-11-14 21:30:52.760295492 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  a1    3.06s  ये मॉड्यूल आपकी आवाज़ नहीं, सिर्फ़ शोर पहचानता है!
+  a2    3.26s  ये के वाई ज़ीरो थ्री एट है, चार पिन का मॉड्यूल।
+  a3    3.71s  सामने इलेक्ट्रेट कंडेंसर माइक्रोफ़ोन है, जो आवाज़ सुनता है।
+  a4    3.70s  इसमें स्थायी चार्ज रहता है, और छोटा जे फेट प्रीएम्प भी।
+  a5    4.21s  दूसरा हिस्सा एल एम थ्री नाइन थ्री कंपैरेटर और पोटेंशियोमीटर है।
+  a6    3.53s  कंपैरेटर दो वोल्टेज की तुलना करके डिजिटल सिग्नल देता है।
+  b1    3.45s  आवाज़ डायाफ्राम हिलाती है, कैपेसिटेंस बदलती है।
+  b2    3.85s  प्रीएम्प और एम्पलीफ़ायर बढ़ाते हैं, सिग्नल ए ओ पर आता है।
+  b3    3.42s  कंपैरेटर पोट के रेफ़रेंस से मिलाता है, डी ओ बदलता है।
+  b4    3.73s  आवाज़ से कैपेसिटेंस बदलती है, इसलिए वोल्टेज बदलता है।
+  b5    4.40s  सिग्नल रेफ़रेंस से ऊपर हो, तो डी ओ बदलता है; पोलैरिटी जाँचो।
+  b6    3.07s  पावर तीन पॉइंट तीन से पाँच वोल्ट, पिन चार।
+  c1    2.75s  माइक की रेंज पचास हर्ट्ज़ से दस किलोहर्ट्ज़ है।
+  c2    3.93s  क्लैप स्विच, शोर अलार्म, और म्यूज़िक पर नाचती एल ई डी।
+  c3    3.77s  मोटर का शोर और ज़्यादा सेंसिटिविटी, ग़लत ट्रिगर देते हैं।
+  c4    3.73s  पावर तीन पॉइंट तीन से पाँच वोल्ट दो, पोट धीरे घुमाओ।
+  c5    3.41s  सेव करो, और कमेंट में बताओ, अगला कौन सा सेंसर?
+  voice (Piper pratham, local) 61.0s at length 0.95
+
+== 3D model + drawings (render tools)
