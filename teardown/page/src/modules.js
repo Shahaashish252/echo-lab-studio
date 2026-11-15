@@ -3,10 +3,12 @@
 // Shapes are models built from typical datasheet sizes; the film says "3D model" on screen.
 import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+import { MORE_TOWERS, MORE_KINDS, moreExtra } from './modules_more.js';
 
 const BLUE = '#1d58ad', GREEN = '#1f6b3c';
 // kind → board + towers. Tower: [type, x, z, label, opts]. Extras: pot / chip / smd. Header: names + edge.
 export const KINDS = {
+  ...MORE_KINDS,
   ultrasonic: { name: 'HC-SR04', bw: 45, bd: 20, color: BLUE, towers: [['can', -13.2, -1.5, 'T'], ['can', 13.2, -1.5, 'R']], extras: [['xtal', 0, -3]],
     pins: ['VCC', 'TRIG', 'ECHO', 'GND'], edge: 'z', back: [['IC', -12, 5, 9.9, 3.9, 16], ['IC', 12, 5, 8.65, 3.9, 14], ['IC', 0, -1, 4.9, 3.9, 8]], backNames: ['Driver', 'Op-amp', 'Controller'] },
   ir: { name: 'FC-51', bw: 31, bd: 14, color: BLUE, towers: [['led', -11, -3, 'IR LED', { col: 'clear' }], ['led', -11, 3, 'Photodiode', { col: 'black' }]],
@@ -78,6 +80,7 @@ const mesh = (g, m, x = 0, y = 0, z = 0) => { const o = sh(new THREE.Mesh(g, m))
 
 // ---------- towers: each returns { layers: [{ name, obj, y0 }], key (layer index for the macro stop), h (height), r } ----------
 function tower(type, M, opts = {}) {
+  if (MORE_TOWERS[type]) return MORE_TOWERS[type](M, opts);
   const L = [], add = (name, ...objs) => { const g = new THREE.Group(); objs.forEach((o) => g.add(o)); L.push({ name, obj: g }); return g; };
   if (type === 'can') {
     add('Base', mesh(lathe([[0, 0], [7.9, 0], [7.9, 1.4], [6.6, 1.4], [6.2, 1], [0, 1]]), M.baseP));
@@ -212,6 +215,7 @@ export function buildModule(kind, M) {
     if (type === 'chip') { const g = soic(a || 8, M); g.position.set(x, 0, z); g.rotation.x = Math.PI; g.position.y = 0; pcb.add(g); tops.push({ name: 'Comparator', obj: g, h: 1.6 }); }
     if (type === 'smd') { const m = mesh(new THREE.BoxGeometry(1.6, .6, .9), M.glow(a), x, .3, z); pcb.add(m); }
     if (type === 'xtal') { pcb.add(mesh(new RoundedBoxGeometry(4.6, 3.6, 10.6, 3, 1.6), M.xtal, x, 1.85, z)); }
+    if (!['pot', 'trim', 'chip', 'smd', 'xtal'].includes(type)) { const t = moreExtra(type, x, z, a, M, pcb); if (t) tops.push(t); }
   }
   // back packages
   const backs = [];

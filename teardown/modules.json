@@ -1,0 +1,406 @@
+{
+ "ultrasonic": [
+  "HC-SR04 ultrasonic sensor",
+  "40 kHz sound pings and echoes measure distance (parking sensors, tank level, robot distance)"
+ ],
+ "ir": [
+  "FC-51 IR obstacle sensor",
+  "an IR LED and photodiode notice a nearby object by reflected infrared (obstacle robots, automatic taps, smart dustbins)"
+ ],
+ "pir": [
+  "HC-SR501 PIR motion sensor",
+  "pyroelectric elements feel the moving body heat of a person (motion lights, intruder alarms)"
+ ],
+ "rcwl0516": [
+  "RCWL-0516 microwave radar sensor",
+  "a Doppler radar that senses motion through thin walls and plastic (motion lights, hidden alarms)"
+ ],
+ "vl53l0x": [
+  "VL53L0X laser ToF distance sensor",
+  "times invisible laser light pulses to measure millimetre distances (gesture, robot, drone altitude)"
+ ],
+ "sharp_ir": [
+  "Sharp GP2Y0A21 IR distance sensor",
+  "an IR beam and a position-sensitive detector measure distance by triangulation (robots, hand detection)"
+ ],
+ "jsn_sr04t": [
+  "JSN-SR04T waterproof ultrasonic sensor",
+  "a sealed ultrasonic transducer measures distance in wet places (water tanks, car bumpers)"
+ ],
+ "tcrt5000": [
+  "TCRT5000 IR reflective sensor",
+  "IR LED and phototransistor see black vs white surfaces (line followers, counters, tachometers)"
+ ],
+ "line_array": [
+  "5-channel IR line sensor array",
+  "five IR reflective pairs read where a black line is under a robot (line follower robots)"
+ ],
+ "mmwave": [
+  "LD2410 mmWave presence radar",
+  "24 GHz radar that senses even a still, breathing person (smart room presence, energy saving lights)"
+ ],
+ "pir_mini": [
+  "HC-SR505 mini PIR sensor",
+  "a small pyroelectric motion sensor (cabinet lights, small alarms)"
+ ],
+ "laser_trip": [
+  "laser tripwire with LDR",
+  "a laser beam on an LDR; breaking the beam trips an alarm (security tripwire, counters)"
+ ],
+ "ldr": [
+  "LDR light sensor module",
+  "a photoresistor whose resistance falls in light (street lights, night lamps)"
+ ],
+ "bh1750": [
+  "BH1750 digital light sensor",
+  "a photodiode with an ADC that reports light in lux (auto-brightness, plant lighting)"
+ ],
+ "temt6000": [
+  "TEMT6000 ambient light sensor",
+  "a phototransistor tuned to human-eye light (screen brightness, light meters)"
+ ],
+ "tcs3200": [
+  "TCS3200 colour sensor",
+  "photodiodes behind red, green and blue filters measure colour (colour sorting machines)"
+ ],
+ "tcs34725": [
+  "TCS34725 RGB colour sensor",
+  "RGB + clear photodiodes with an IR filter read colour (colour pickers, sorting)"
+ ],
+ "uv_guva": [
+  "GUVA-S12SD UV sensor",
+  "a UV photodiode that measures ultraviolet strength (UV index meters)"
+ ],
+ "uv_ml8511": [
+  "ML8511 UV sensor",
+  "a UV light sensor that outputs a voltage for UV intensity (sunburn warning)"
+ ],
+ "apds9960": [
+  "APDS-9960 gesture sensor",
+  "IR LED and four photodiodes read hand swipes, colour and proximity (phone gestures)"
+ ],
+ "photodiode": [
+  "photodiode light sensor module",
+  "a photodiode turns light into current, fast (light barriers, IR receivers)"
+ ],
+ "solar": [
+  "mini solar panel",
+  "photovoltaic cells turn light into voltage, also usable as a light sensor (solar lamps, chargers)"
+ ],
+ "sound": [
+  "KY-038 sound sensor",
+  "an electret microphone hears loud sounds (clap switches, noise alarms)"
+ ],
+ "max9814": [
+  "MAX9814 microphone with auto gain",
+  "a mic amplifier that adjusts its own gain (voice recorders, sound-reactive lights)"
+ ],
+ "max4466": [
+  "MAX4466 microphone amplifier",
+  "an electret mic with an adjustable amplifier (audio level, sound visualisers)"
+ ],
+ "inmp441": [
+  "INMP441 I2S MEMS microphone",
+  "a tiny MEMS diaphragm that outputs digital audio (voice assistants, ESP32 audio)"
+ ],
+ "sw420": [
+  "SW-420 vibration sensor",
+  "a spring contact that opens and closes when shaken (theft alarms, machine vibration)"
+ ],
+ "piezo": [
+  "piezo disc sensor",
+  "a piezoelectric disc makes voltage when pressed or knocked (knock detectors, drum pads)"
+ ],
+ "knock_ky031": [
+  "KY-031 knock sensor",
+  "a spring switch that closes on a tap (secret knock locks)"
+ ],
+ "geophone": [
+  "geophone",
+  "a coil on a spring around a magnet senses ground vibration (earthquake and footstep detection)"
+ ],
+ "dht": [
+  "DHT11 temperature and humidity sensor",
+  "a humidity pad and a thermistor with a tiny chip (weather stations, room monitors)"
+ ],
+ "dht22": [
+  "DHT22 temperature and humidity sensor",
+  "a more accurate DHT humidity + temperature sensor (greenhouses, incubators)"
+ ],
+ "ds18b20": [
+  "DS18B20 waterproof temperature probe",
+  "a digital temperature chip sealed in a steel probe (water, aquarium, soil temperature)"
+ ],
+ "lm35": [
+  "LM35 temperature sensor",
+  "a chip whose output rises 10 mV per degree Celsius (thermometers, fan control)"
+ ],
+ "ntc": [
+  "NTC thermistor module",
+  "a bead whose resistance falls as it heats (overheat alarms, 3D printer beds)"
+ ],
+ "mlx90614": [
+  "MLX90614 non-contact IR thermometer",
+  "a thermopile reads body or object temperature from infrared without touching (forehead thermometers)"
+ ],
+ "max6675": [
+  "MAX6675 thermocouple sensor",
+  "a K-type thermocouple reads very high temperatures (ovens, kilns, soldering)"
+ ],
+ "bme280": [
+  "BME280 environment sensor",
+  "MEMS sensor for temperature, humidity and air pressure (weather stations, altitude)"
+ ],
+ "sht31": [
+  "SHT31 humidity sensor",
+  "a precise polymer humidity + temperature sensor (incubators, server rooms)"
+ ],
+ "amg8833": [
+  "AMG8833 thermal camera",
+  "an 8x8 grid of thermopiles sees heat images (people counting, fever screening)"
+ ],
+ "gas": [
+  "MQ-2 gas and smoke sensor",
+  "a heated tin-oxide element that smells LPG, methane and smoke (gas-leak alarms)"
+ ],
+ "mq3": [
+  "MQ-3 alcohol sensor",
+  "a heated SnO2 element sensitive to alcohol vapour (breathalysers)"
+ ],
+ "mq4": [
+  "MQ-4 methane sensor",
+  "a heated SnO2 element tuned to methane / CNG (natural gas leak alarms)"
+ ],
+ "mq5": [
+  "MQ-5 LPG sensor",
+  "a heated SnO2 element tuned to LPG and natural gas (kitchen gas alarms)"
+ ],
+ "mq7": [
+  "MQ-7 carbon monoxide sensor",
+  "a heated element cycled hot and cool to sense CO (CO alarms near heaters)"
+ ],
+ "mq135": [
+  "MQ-135 air quality sensor",
+  "a heated element sensitive to ammonia, benzene, smoke and CO2-like gases (air quality monitors)"
+ ],
+ "mq9": [
+  "MQ-9 CO and flammable gas sensor",
+  "a cycled heated element for CO and flammable gases (multi-gas alarms)"
+ ],
+ "ccs811": [
+  "CCS811 air quality sensor",
+  "a metal-oxide hotplate that estimates eCO2 and VOCs (indoor air monitors)"
+ ],
+ "mhz19": [
+  "MH-Z19 NDIR CO2 sensor",
+  "an infrared lamp and detector measure real CO2 by light absorption (classroom CO2 monitors)"
+ ],
+ "sds011": [
+  "SDS011 dust sensor",
+  "a fan pulls air past a laser; scattered light counts PM2.5 particles (air purifiers, pollution monitors)"
+ ],
+ "gp2y1010": [
+  "GP2Y1010 dust sensor",
+  "an IR LED and photodiode see light scattered by dust (air purifiers)"
+ ],
+ "bmp280": [
+  "BMP280 pressure sensor",
+  "a MEMS membrane measures air pressure and altitude (drones, weather stations)"
+ ],
+ "soil": [
+  "resistive soil moisture sensor",
+  "a fork probe whose resistance falls in wet soil (automatic plant watering)"
+ ],
+ "soil_cap": [
+  "capacitive soil moisture sensor v1.2",
+  "measures soil water by capacitance without bare metal that corrodes (smart irrigation)"
+ ],
+ "rain": [
+  "rain drop sensor",
+  "water drops bridge traces on a plate and lower its resistance (automatic car wipers, rain alarms)"
+ ],
+ "water_level": [
+  "water level sensor strip",
+  "exposed traces conduct more the deeper they sit in water (tank and flood level)"
+ ],
+ "float": [
+  "float switch",
+  "a floating magnet ring closes a reed switch at a water level (water pump control)"
+ ],
+ "flow": [
+  "YF-S201 water flow sensor",
+  "water spins a rotor with a magnet; a Hall sensor counts pulses (water meters, dispensers)"
+ ],
+ "tds": [
+  "TDS water quality sensor",
+  "two electrodes measure water conductivity = dissolved solids (RO filters, drinking water)"
+ ],
+ "ph": [
+  "pH sensor",
+  "a glass electrode makes a small voltage that depends on acidity (aquariums, hydroponics)"
+ ],
+ "turbidity": [
+  "turbidity sensor",
+  "light through water: cloudy water blocks more of it (washing machines, water filters)"
+ ],
+ "xkc_y25": [
+  "XKC-Y25 non-contact liquid sensor",
+  "senses liquid through a plastic wall by capacitance (water dispensers, coffee machines)"
+ ],
+ "mpu6050": [
+  "MPU6050 gyro + accelerometer",
+  "MEMS proof masses sense tilt, shake and rotation (self-balancing robots, drones, phones)"
+ ],
+ "adxl345": [
+  "ADXL345 accelerometer",
+  "a MEMS proof mass senses acceleration, taps and free fall (step counters, crash detection)"
+ ],
+ "mpu9250": [
+  "MPU9250 9-axis IMU",
+  "gyro, accelerometer and compass in one chip (drones, VR trackers)"
+ ],
+ "hmc5883l": [
+  "HMC5883L compass",
+  "magnetoresistors sense Earth's magnetic field direction (digital compass, robot heading)"
+ ],
+ "sw520d": [
+  "SW-520D tilt switch",
+  "metal balls roll to open or close a contact when tilted (tilt alarms, toys)"
+ ],
+ "ball_tilt": [
+  "ball tilt switch module",
+  "a rolling ball connects two pins when upright (anti-theft, orientation toys)"
+ ],
+ "encoder": [
+  "KY-040 rotary encoder",
+  "two offset contacts make pulses that tell direction and steps (volume knobs, menus)"
+ ],
+ "optical_encoder": [
+  "optical slot encoder",
+  "a slotted disc breaks an IR beam to count speed (robot wheel speed, RPM)"
+ ],
+ "hall": [
+  "A3144 Hall effect switch",
+  "switches when a magnet comes near (bike speedometers, BLDC motors, door sensors)"
+ ],
+ "reed": [
+  "reed switch module",
+  "two metal blades in glass touch near a magnet (door sensors, float switches)"
+ ],
+ "touch": [
+  "TTP223 capacitive touch sensor",
+  "senses the capacitance of a finger without pressure (touch lamps, touch buttons)"
+ ],
+ "mpr121": [
+  "MPR121 12-key touch sensor",
+  "reads 12 capacitive touch pads (touch pianos, fruit keyboards)"
+ ],
+ "fsr": [
+  "FSR force sensor",
+  "carbon ink whose resistance falls when pressed (pressure pads, smart insoles)"
+ ],
+ "flex": [
+  "flex sensor",
+  "a strip whose resistance rises when bent (robotic gloves, posture)"
+ ],
+ "hx711": [
+  "HX711 load cell weight sensor",
+  "strain gauges on a metal bar stretch under weight; HX711 amplifies it (digital scales)"
+ ],
+ "joystick": [
+  "joystick module",
+  "two potentiometers read X and Y position plus a push switch (RC controllers, games)"
+ ],
+ "keypad": [
+  "4x4 membrane keypad",
+  "pressing a key connects a row and a column trace (door locks, calculators)"
+ ],
+ "thinfilm": [
+  "thin-film pressure sensor",
+  "a thin pressure-sensitive film for weight or press detection (seat occupancy, smart beds)"
+ ],
+ "acs712": [
+  "ACS712 current sensor",
+  "a Hall sensor measures current flowing through a copper path (power monitoring, battery chargers)"
+ ],
+ "ina219": [
+  "INA219 current and voltage sensor",
+  "measures voltage across a tiny shunt resistor to get current and power (battery monitors)"
+ ],
+ "zmpt101b": [
+  "ZMPT101B AC voltage sensor",
+  "a small transformer safely samples mains AC voltage (energy meters, inverters)"
+ ],
+ "voltage_div": [
+  "voltage sensor module",
+  "a resistor divider scales up to 25 V down for an Arduino (battery voltage)"
+ ],
+ "hall_linear": [
+  "SS49E linear Hall sensor",
+  "outputs a voltage proportional to magnetic field strength (joysticks, current, position)"
+ ],
+ "door_mc38": [
+  "MC-38 magnetic door sensor",
+  "a reed switch and a magnet tell if a door is open (home security)"
+ ],
+ "pzem004t": [
+  "PZEM-004T energy meter",
+  "a current transformer and voltage sampling measure power and units (smart electricity meters)"
+ ],
+ "metal_detector": [
+  "metal detector coil module",
+  "metal near a coil changes its magnetic field and oscillation (metal detectors, security wands)"
+ ],
+ "max30102": [
+  "MAX30102 heart rate and SpO2 sensor",
+  "red and IR LEDs shine into a finger; a photodiode reads blood pulses (smartwatches, oximeters)"
+ ],
+ "pulse": [
+  "pulse sensor",
+  "a green LED and light sensor see blood flow with each heartbeat (fitness bands)"
+ ],
+ "ad8232": [
+  "AD8232 ECG sensor",
+  "amplifies the tiny electrical signal of the heart from skin electrodes (ECG monitors)"
+ ],
+ "gsr": [
+  "GSR skin response sensor",
+  "measures how well skin conducts, which changes with sweat and stress (stress, lie-detector demos)"
+ ],
+ "emg": [
+  "EMG muscle sensor",
+  "electrodes read the electrical activity of muscles (prosthetic hands, gesture control)"
+ ],
+ "fingerprint": [
+  "R307 optical fingerprint sensor",
+  "a camera images ridges on a glass prism and matches them (attendance, door locks)"
+ ],
+ "rc522": [
+  "RC522 RFID reader",
+  "a 13.56 MHz coil powers and reads RFID cards wirelessly (metro cards, attendance)"
+ ],
+ "gps": [
+  "NEO-6M GPS module",
+  "a ceramic patch antenna receives satellite timing signals to find position (trackers, drones)"
+ ],
+ "pn532": [
+  "PN532 NFC module",
+  "near-field coil reads NFC tags and phones (contactless payment demos, smart locks)"
+ ],
+ "barcode": [
+  "barcode / QR scanner module",
+  "a camera and LED read printed barcodes and QR codes (shops, inventory)"
+ ],
+ "esp32cam": [
+  "ESP32-CAM camera module",
+  "a tiny camera and WiFi chip capture images (video doorbells, face detection)"
+ ],
+ "hc05": [
+  "HC-05 Bluetooth module",
+  "a Bluetooth radio that links a phone's sensors and app to Arduino (phone-controlled robots)"
+ ],
+ "flame": [
+  "flame sensor module",
+  "a black IR receiver that sees the infrared of a flame (fire alarms, candle detectors, gas-stove flame checks)"
+ ]
+}

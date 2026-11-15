@@ -120,7 +120,11 @@ STUDIO_MODULES = {
 
 
 def studio_modules() -> dict:
-    """The modules the 3D stage can film right now (new ones are added to STUDIO_MODULES as they are built)."""
+    """The modules the 3D stage can film right now. teardown3 has 100 (teardown/modules.json); studio has STUDIO_MODULES."""
+    if schedule().get("format") == "teardown3":
+        mods = read(ROOT / "teardown" / "modules.json", {})
+        if mods:
+            return {k: f"{v[0]}: {v[1]}" for k, v in mods.items()}
     return STUDIO_MODULES
 
 
@@ -191,7 +195,7 @@ def next_topic() -> dict:
         classify_topics(t["queue"])
         write(TOPICS, t)
         fits = [q for q in t["queue"] if studio_module(q)]
-        recent = recent_modules()
+        recent = recent_modules(14 if schedule().get("format") == "teardown3" else 2)   # teardown3: no sensor twice in 2 weeks
         fresh = [q for q in fits if q["module"] not in recent]
         # the analysis (2026-11-04): robot / Arduino-project topics win, public-place gadgets (lift, mall, tap) lose
         def appeal(q):
@@ -217,16 +221,19 @@ def next_topic() -> dict:
                         + "\nThink like a top Shorts creator: lean into the subjects and hook styles of the winners, drop what flopped, "
                           "and mix in a few broader everyday-tech topics with big search demand to reach new viewers.\n")
         mods = studio_modules()
-        recent = recent_modules()
+        many = len(mods) > 20
+        recent = recent_modules(14 if many else 2)
         ideas = ai_json(
             f"Suggest 10 new topics for 25-35 second vertical explainer videos on a channel where {schedule()['niche']}. "
             + ("The videos are narrated in Hindi for viewers in India: favour gadgets, appliances and electronics Indian students "
                "and makers use and search for. Write the topic and hook in simple English.\n" if video_language() == "hi"
                else "The videos are in English for a global audience.\n") +
             f"{perf_txt}"
-            + ("Each topic must be an everyday device or project that REALLY works with one of these hobby modules, and the "
-               "topics must be SPREAD EVENLY over all of them (at least 2 per module"
-               + (f", and favour modules other than {recent}" if recent else "") + "):\n"
+            + ("Each topic must be an everyday device or project that REALLY works with one of these hobby modules"
+               + (", and EVERY topic must use a DIFFERENT module, spread across categories (distance, light, sound, temperature, gas, "
+                  "water, motion, touch/force, electrical, health, identity/position)" if many else
+                  ", and the topics must be SPREAD EVENLY over all of them (at least 2 per module")
+               + (f"; do NOT use these recently used modules: {recent}" if recent else "") + ("" if many else ")") + ":\n"
                + "\n".join(f"- {k}: {v}" for k, v in mods.items()) + "\n" if studio else "") +
             f"Already done or queued (don't repeat): {json.dumps(t['done'] + [q['topic'] for q in t['queue']])}\n"
             'Every topic must be clearly DIFFERENT from all of those (not the same device in other words). Prefer everyday '

@@ -27,12 +27,10 @@ sys.path.insert(0, str(ROOT / "channel"))
 if sys.stdout:
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 CLOUD = bool(os.environ.get("GITHUB_ACTIONS"))
-KINDS = ["ir", "ldr", "flame", "sound", "gas", "soil", "ultrasonic", "pir", "dht"]
 PROPS = "car tank robot lamp light fan plant door person house phone bell stove dustbin tap candle speaker sun dust rough small wall water sensor"
 TARGETS = "wall light flame hand gas water sound heat soil object"
-MODULES = {"ultrasonic": "HC-SR04 ultrasonic sensor", "ir": "FC-51 IR obstacle sensor", "flame": "flame sensor module", "ldr": "LDR light sensor module",
-           "sound": "KY-038 sound sensor", "gas": "MQ-2 gas sensor module", "soil": "soil moisture sensor", "pir": "HC-SR501 PIR motion sensor",
-           "dht": "DHT11 temperature + humidity sensor"}
+MODULES = {k: v[0] for k, v in json.loads((Path(__file__).resolve().parent / "modules.json").read_text(encoding="utf-8")).items()}
+KINDS = list(MODULES)
 HDRI = "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/photo_studio_loft_hall_2k.hdr"
 
 
