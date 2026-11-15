@@ -12,3 +12,32 @@
   Chimney dhuan dekhti nahi, bas garam resistor hai 🔥 #shorts
 
 == voice (local Hindi: Piper pratham)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+Downloading onnxruntime (26.5MiB)
+Downloading piper-tts (32.6MiB)
+ Downloaded onnxruntime
+ Downloaded piper-tts
+Installed 12 packages in 16ms
+[0;93m2026-11-15 15:46:57.807222183 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  downloading hi_IN-pratham-medium.onnx
+  downloading hi_IN-pratham-medium.onnx.json
+  a1    3.01s  तड़के का धुआं उठा, चिमनी खुद चालू! कैसे?
+  a2    2.99s  ये गैस सेंसर मॉड्यूल है, पाँच वोल्ट वाला।
+  a3    2.30s  अंदर टिन डाइऑक्साइड की गर्म परत है।
+  a4    2.58s  हीटर दो सौ से पाँच सौ डिग्री रखता है।
+  a5    3.00s  साथ में कंपैरेटर चिप और पोटेंशियोमीटर है।
+  a6    2.62s  पीछे चिप तुलना करके डी ओ पिन चलाती है।
+  b1    2.73s  साफ हवा में टिन डाइऑक्साइड करंट रोकता है।
+  b2    3.50s  धुआं आते ही रेजिस्टेंस गिरता है, वोल्टेज बढ़ता है।
+  b3    2.45s  ए ओ ज़ीरो से पाँच वोल्ट तक बढ़ता है।
+  b4    3.35s  धुआं ऑक्सीजन से भिड़ता है, इलेक्ट्रॉन छूटते हैं।
+  b5    2.63s  रीडिंग सीमा से ऊपर हो, तो पंखा चालू।
+  b6    3.13s  पाँच वोल्ट पर आर्डुइनो एक हज़ार तेईस पढ़ता है।
+  c1    2.62s  रेंज तीन सौ से दस हज़ार पी पी एम।
+  c2    3.90s  रसोई चिमनी, गैस लीक अलार्म, पोर्टेबल डिटेक्टर में भी।
+  c3    3.63s  शराब की भाप धोखा देती है, नमी रीडिंग बदलती है।
+  c4    3.20s  इस्तेमाल से पहले पाँच से दस मिनट वार्म अप करें।
+  c5    3.37s  सेव करो, और कमेंट में बताओ, अगला कौन सा सेंसर?
+  voice (Piper pratham, local) 51.0s at length 1.05
+
+== 3D model + drawings (render tools)
