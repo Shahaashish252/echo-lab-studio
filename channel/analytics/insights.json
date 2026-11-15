@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-15T15:44",
+  "updated": "2026-11-15T22:00",
   "videos": 30,
-  "summary": "Instagram is where nearly all the audience is: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly get under 60 views. The best performers are short 'X doesn't do what you think' videos about relatable robots and sound-activated gadgets (gyro robot, clap switch, mic, line follower). Generic 'How does X work?' titles on everyday devices (smoke detector, tap, ultrasonic, smartwatch) get very little reach, and recent uploads like DHT11 and the PIR blanket video are underperforming.",
-  "winningPattern": "Hindi videos about a fun robot or a sound/clap-activated gadget, posted on Instagram. The hook is a surprising claim that flips what people assume ('Clap switch doesn't hear claps, only noise', 'Robot falls instantly without gyro', 'Mic does the opposite of a speaker'). Titles are short, in Hinglish, with one emoji and a clear 'X doesn't do Y, it does Z' contrast. Saves and shares are highest when the video shows a robot or a clap/whistle demo.",
+  "summary": "Instagram is carrying the channel: most videos get 1,000+ views there, while YouTube Shorts mostly get under 60 views. The best performers are surprising 'this thing doesn't do what you think' videos about robots and clap switches, and the ones that get shared or saved are the most useful. Many near-identical topics (smoke detectors, automatic taps, IR sensors) are repeating and getting weak results, and a few videos were never posted to Instagram at all.",
+  "winningPattern": "Instagram Reels in Hindi about a single relatable gadget (robot, clap switch, mic, line follower, DHT11), with a 'It doesn't do X, it only does Y' or 'Without Z it falls' hook. Short Hinglish titles with one emoji and a curiosity gap work best. Robot and clap-switch videos lead on YouTube too. Videos with a visible demo or surprising behavior get the shares and saves.",
   "doMore": [
-    "Make robot and clap/sound-trigger videos first, as they consistently get 1,200+ Instagram views, and make follow-ups to the clap switch and gyro robot hits",
-    "Use the 'it doesn't do X, it actually does Y' title formula in short Hinglish with one emoji",
-    "Post Instagram-first and cross-post to YouTube only with a stronger first-second visual hook",
-    "Show a visible demo or a failing/funny moment in the first second (robot tipping over, light switching on from a whistle)",
-    "Add a clear call to save or share on the end frame, as IR sensor and clap videos earned the most shares"
+    "Post every video on Instagram too: 5 of the last 30 have zero Instagram numbers",
+    "Use the 'doesn't do X, only does Y' contrast hook, which drove the top videos",
+    "Make robot and clap-switch follow-ups, since both topics worked on both platforms",
+    "Open with a visible demo or failure moment in the first second",
+    "End with a save-worthy takeaway such as a wiring tip or one-line rule to boost saves and shares"
   ],
   "stopDoing": [
-    "Generic 'Kaise Kaam Karta Hai?' titles on everyday devices like smoke alarms, taps and smartwatches",
-    "Uploading to YouTube only, or leaving videos off Instagram (PIR, Phone, Touchscreen, Mall Door, Robot Sunta Hai got zero IG)",
-    "Posting English-only videos, since the one English upload got no Instagram reach and little YouTube traction"
+    "Repeating the same sensor topic in near-identical videos (3 smoke, 3 tap, 3 IR) with different titles",
+    "Plain 'How does X work?' titles with no surprise, which scored lowest",
+    "Posting English narration on a Hindi channel"
   ],
   "nextTopics": [
-    "Robot that follows sound",
-    "Self-balancing robot without gyro vs with gyro",
-    "Sound sensor module trick",
-    "Line follower robot failing on a black table",
-    "Speaker used as a microphone"
+    "Obstacle avoiding robot without ultrasonic sensor",
+    "Why a line follower loses the line on curves",
+    "Sound sensor module responding to claps vs voice",
+    "Gyro/MPU6050 balancing robot demo",
+    "Microphone as a speaker trick with a tiny speaker"
   ],
   "bestTimes": {
     "times": [

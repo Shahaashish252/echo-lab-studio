@@ -1,15 +1,24 @@
 {
-  "updated": "15 Nov 2026, 15:59",
+  "updated": "15 Nov 2026, 22:00",
   "youtube": {
     "subs": 6,
-    "views": 4145,
+    "views": 4162,
     "videos": [
+      {
+        "title": "Chimney dhuan dekhti nahi, bas garam resistor hai 🔥 #shorts",
+        "id": "RvZwCQeoq5s",
+        "status": "private",
+        "published": "2026-11-15",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "DHT11 Aag Nahi Dekhta, Sirf Garmi Pakadta Hai 🔥 #shorts",
         "id": "EoJfsTY2Pmc",
         "status": "public",
         "published": "2026-11-15",
-        "views": 1,
+        "views": 17,
         "likes": 0,
         "comments": 0
       },
@@ -27,7 +36,7 @@
         "id": "mwkkbwpqwEw",
         "status": "public",
         "published": "2026-11-14",
-        "views": 21,
+        "views": 23,
         "likes": 0,
         "comments": 0
       },
@@ -36,7 +45,7 @@
         "id": "uLPHCcegH-E",
         "status": "public",
         "published": "2026-11-13",
-        "views": 27,
+        "views": 30,
         "likes": 1,
         "comments": 2
       },
@@ -706,18 +715,18 @@
   },
   "instagram": {
     "username": "echo.lab3d",
-    "followers": 20,
+    "followers": 23,
     "posts": [
       {
         "title": "Ye sensor aag nahi dekhta, bas garmi pakadta hai 🔥",
         "url": "https://www.instagram.com/reel/Dfwg517jrC5/",
         "published": "2026-11-15",
-        "likes": 1,
-        "comments": 0,
-        "reach": 1,
-        "views": 24,
-        "saved": 1,
-        "shares": 0
+        "likes": 26,
+        "comments": 4,
+        "reach": 935,
+        "views": 1088,
+        "saved": 8,
+        "shares": 1
       },
       {
         "title": "PIR sensor dekhta nahi, sirf garmi ka change pakadta hai 🔥",
@@ -725,8 +734,8 @@
         "published": "2026-11-14",
         "likes": 13,
         "comments": 0,
-        "reach": 841,
-        "views": 964,
+        "reach": 849,
+        "views": 968,
         "saved": 2,
         "shares": 0
       },
@@ -736,8 +745,8 @@
         "published": "2026-11-13",
         "likes": 18,
         "comments": 0,
-        "reach": 534,
-        "views": 601,
+        "reach": 535,
+        "views": 603,
         "saved": 2,
         "shares": 0
       },
@@ -747,8 +756,8 @@
         "published": "2026-11-12",
         "likes": 7,
         "comments": 2,
-        "reach": 277,
-        "views": 299,
+        "reach": 278,
+        "views": 300,
         "saved": 2,
         "shares": 0
       },
@@ -758,8 +767,8 @@
         "published": "2026-11-12",
         "likes": 4,
         "comments": 4,
-        "reach": 122,
-        "views": 138,
+        "reach": 124,
+        "views": 140,
         "saved": 0,
         "shares": 0
       },
@@ -770,7 +779,7 @@
         "likes": 11,
         "comments": 2,
         "reach": 1177,
-        "views": 1396,
+        "views": 1397,
         "saved": 2,
         "shares": 3
       },
@@ -781,7 +790,7 @@
         "likes": 15,
         "comments": 0,
         "reach": 1085,
-        "views": 1308,
+        "views": 1309,
         "saved": 4,
         "shares": 1
       },
@@ -791,8 +800,8 @@
         "published": "2026-11-03",
         "likes": 2,
         "comments": 2,
-        "reach": 128,
-        "views": 150,
+        "reach": 129,
+        "views": 151,
         "saved": 0,
         "shares": 0
       },
@@ -879,8 +888,8 @@
         "published": "2026-10-26",
         "likes": 15,
         "comments": 2,
-        "reach": 1234,
-        "views": 1368,
+        "reach": 1236,
+        "views": 1369,
         "saved": 4,
         "shares": 10
       },

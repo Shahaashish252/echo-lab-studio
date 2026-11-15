@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Obstacle avoiding robot without ultrasonic sensor",
+      "hook": "Is Robot Ko Aankhein Nahi Hain, Phir Bhi Deewar Se Nahi Takraata"
+    },
+    {
+      "topic": "Why a line follower loses the line on curves",
+      "hook": "Line Follower Sharp Mod Pe Kyun Bhatak Jaata Hai?"
+    },
+    {
+      "topic": "Sound sensor module responding to claps vs voice",
+      "hook": "Ye Module Aapki Awaaz Nahi, Sirf Shor Pehchanta Hai"
+    },
+    {
+      "topic": "Gyro/MPU6050 balancing robot demo",
+      "hook": "Is Robot Ka Gyro Hata Do, Aur Dekho Kya Hota Hai"
+    },
+    {
+      "topic": "Microphone as a speaker trick with a tiny speaker",
+      "hook": "Speaker Ko Mic Bana Diya, Aur Ye Chal Gaya!"
+    },
+    {
       "topic": "Buzzer that works as a microphone",
       "hook": "Yeh buzzer bajta nahi, sunta bhi hai",
       "module": ""
