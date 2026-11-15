@@ -40,5 +40,6 @@
   "social": {
     "instagram": "Ye sensor aag nahi dekhta, bas garmi pakadta hai 🔥\nAndar ek thermistor hai: garmi badhi, resistance gira.\nChip use digital bana ke 40 bit bhejti hai.\nBas 1 reading per second, to tez aag miss ho jayegi!\nSave karo agle Arduino project ke liye.\nComment mein batao: tum DHT11 kahan lagaoge?\n#DHT11 #Arduino #Electronics #EchoLab3D #Makers",
     "tiktok": "DHT11 aag nahi dekhta, bas garmi pakadta hai 🔥 #DHT11 #Arduino #Electronics #EchoLab3D #Makers"
-  }
+  },
+  "cover": "/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/dht11-heat-not-flame.cover.jpg"
 }

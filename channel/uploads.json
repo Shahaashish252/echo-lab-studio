@@ -706,10 +706,17 @@
     "id": "EoJfsTY2Pmc",
     "meta": "channel/videos/td3-dht11-heat-not-flame.json",
     "date": "2026-11-14",
-    "status": "approved",
+    "status": "published",
     "topic": "Temperature or flame sensor that reacts to heat",
     "job": "20261114-151050",
-    "postAt": "2026-11-15T15:00"
+    "postAt": "2026-11-15T15:00",
+    "published": {
+      "youtube": "2026-11-15",
+      "instagram": "https://www.instagram.com/reel/Dfwg517jrC5/",
+      "instagram_story": "18131810062846540",
+      "facebook": "https://www.facebook.com/reel/1707088717454840/"
+    },
+    "postedAt": "2026-11-15T15:31"
   },
   {
     "id": "R2vtN8SNb0s",
