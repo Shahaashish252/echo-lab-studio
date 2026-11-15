@@ -4,7 +4,7 @@
   "hook": "Your chimney starts on its own when the tadka smoke rises. How?",
   "lang": "hi",
   "started": "2026-11-15T15:44:14",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research & storyboard: \"Kitchen chimney that turns on when smoke rises (open with this hook: \"Your chimney starts on its own when the tadka smoke rises. How?\")\" (gas, Claude)",
@@ -36,5 +36,7 @@
     }
   ],
   "format": "teardown3",
-  "module": "gas"
+  "module": "gas",
+  "finished": "2026-11-15T15:59:36",
+  "uploadId": "RvZwCQeoq5s"
 }

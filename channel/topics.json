@@ -76,11 +76,6 @@
       "module": ""
     },
     {
-      "topic": "Kitchen chimney that turns on when smoke rises",
-      "hook": "Your chimney starts on its own when the tadka smoke rises. How?",
-      "module": "gas"
-    },
-    {
       "topic": "Smart plant pot that knows when to drink water",
       "hook": "Your plant asks for water, but it can't talk. So how does it?",
       "module": "soil"
@@ -154,6 +149,7 @@
     "Smart dustbin lid that opens when you wave your hand",
     "PIR sensor fooled by a glass sheet or blanket",
     "Temperature or flame sensor that reacts to heat",
-    "Sound sensor module that reacts to voice"
+    "Sound sensor module that reacts to voice",
+    "Kitchen chimney that turns on when smoke rises"
   ]
 }

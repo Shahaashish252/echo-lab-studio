@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-14T21:26",
-  "videos": 29,
-  "summary": "Instagram is carrying the channel: most videos get 1,000+ views there, while YouTube Shorts mostly gets under 60 views. The best performers are short, curious 'this thing doesn't see or hear the way you think' ideas about robots, clap switches and mics, and they also earn the most likes, saves and shares. Generic 'how does X work?' questions about everyday objects (taps, doors, smoke alarms, lifts) get weak results on both platforms, and a few videos were never posted to Instagram.",
-  "winningPattern": "Robots and sound-based gadgets (gyro robot, clap switch, mic, line follower) with a bold, surprising claim as the hook, like 'X doesn't do what you think, it only does Y'. Titles are short Hinglish statements with one emoji, not a plain question. The winner is the Instagram Reel, with YouTube a smaller bonus. The gyro robot, clap switch and IR robot videos led on engagement (saves and shares), and the clap switch video got 1,269 IG views plus 598 on YouTube.",
+  "updated": "2026-11-15T15:44",
+  "videos": 30,
+  "summary": "Instagram is where nearly all the audience is: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly get under 60 views. The best performers are short 'X doesn't do what you think' videos about relatable robots and sound-activated gadgets (gyro robot, clap switch, mic, line follower). Generic 'How does X work?' titles on everyday devices (smoke detector, tap, ultrasonic, smartwatch) get very little reach, and recent uploads like DHT11 and the PIR blanket video are underperforming.",
+  "winningPattern": "Hindi videos about a fun robot or a sound/clap-activated gadget, posted on Instagram. The hook is a surprising claim that flips what people assume ('Clap switch doesn't hear claps, only noise', 'Robot falls instantly without gyro', 'Mic does the opposite of a speaker'). Titles are short, in Hinglish, with one emoji and a clear 'X doesn't do Y, it does Z' contrast. Saves and shares are highest when the video shows a robot or a clap/whistle demo.",
   "doMore": [
-    "Make robot and Arduino-style demos (balance, line following, obstacle avoidance) because they get the most views and saves",
-    "Open with a bold 'it doesn't X, it only Y' claim in the first line, in Hinglish",
-    "Make follow-ups to the clap switch and gyro robot, since viewers clearly want more of them",
-    "Post every video on both Instagram and YouTube; the PIR, Phone Up and Touchscreen videos got zero IG views because they were only posted on YouTube",
-    "Show the real hardware doing something visibly surprising in the first 2 seconds instead of just explaining"
+    "Make robot and clap/sound-trigger videos first, as they consistently get 1,200+ Instagram views, and make follow-ups to the clap switch and gyro robot hits",
+    "Use the 'it doesn't do X, it actually does Y' title formula in short Hinglish with one emoji",
+    "Post Instagram-first and cross-post to YouTube only with a stronger first-second visual hook",
+    "Show a visible demo or a failing/funny moment in the first second (robot tipping over, light switching on from a whistle)",
+    "Add a clear call to save or share on the end frame, as IR sensor and clap videos earned the most shares"
   ],
   "stopDoing": [
-    "Generic 'Kaise kaam karta hai?' question titles on everyday objects like taps, lifts, mall doors and smoke detectors",
-    "Making several near-duplicate videos on the same topic (taps, smoke detectors, IR sensor) in a short time",
-    "Posting in English, since the one English video had very few views and no IG presence"
+    "Generic 'Kaise Kaam Karta Hai?' titles on everyday devices like smoke alarms, taps and smartwatches",
+    "Uploading to YouTube only, or leaving videos off Instagram (PIR, Phone, Touchscreen, Mall Door, Robot Sunta Hai got zero IG)",
+    "Posting English-only videos, since the one English upload got no Instagram reach and little YouTube traction"
   ],
   "nextTopics": [
-    "Obstacle avoiding robot with ultrasonic sensor",
-    "Self-balancing robot and the gyro",
-    "Sound sensor module that reacts to voice",
-    "Light-following robot with LDR",
-    "Speaker works as a microphone"
+    "Robot that follows sound",
+    "Self-balancing robot without gyro vs with gyro",
+    "Sound sensor module trick",
+    "Line follower robot failing on a black table",
+    "Speaker used as a microphone"
   ],
   "bestTimes": {
     "times": [
-      "15:00",
-      "21:00"
+      "14:00",
+      "19:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (28 posts)"
+    "reason": "from our own posts: these hours averaged the most views (29 posts)"
   }
 }

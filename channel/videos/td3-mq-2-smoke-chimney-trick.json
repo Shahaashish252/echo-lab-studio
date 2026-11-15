@@ -1,0 +1,43 @@
+{
+  "file": "out/auto/mq-2-smoke-chimney-trick.mp4",
+  "title": "Chimney dhuan dekhti nahi, bas garam resistor hai 🔥 #shorts",
+  "description": "Tadka ka dhuan uthte hi chimney khud on kaise hoti hai?\nChimney dhuan dekhti nahi, ek garam tin dioxide resistor use mehsoos karta hai.\n🔥 MQ-2 ke andar heater SnO2 ko 200–500 °C pe rakhta hai\n⚡ Dhuan aate hi resistance girta hai aur AO voltage badhta hai\n🧠 Comparator chip limit se compare karke DO pin chalati hai\n⏱️ Use se pehle 5–10 min warm-up zaroori hai\nSubscribe karo Echo Lab 3D ke liye, roz ek gadget kholke dekhenge!\n#shorts #MQ2 #Arduino #GasSensor #Electronics #KitchenChimney #DIY #Hindi\n\nSources:\nhttps://winsen-sensor.com/sensors/combustible-sensor/mq2.html\nhttps://lastminuteengineers.com/mq2-gas-senser-arduino-tutorial/\nhttps://en.wikipedia.org/wiki/Gas_detector\nhttps://randomnerdtutorials.com/guide-for-mq-2-gas-smoke-sensor-with-arduino/",
+  "sources": [
+    "https://winsen-sensor.com/sensors/combustible-sensor/mq2.html",
+    "https://lastminuteengineers.com/mq2-gas-senser-arduino-tutorial/",
+    "https://en.wikipedia.org/wiki/Gas_detector",
+    "https://randomnerdtutorials.com/guide-for-mq-2-gas-smoke-sensor-with-arduino/",
+    "https://pololu.com/product/1480"
+  ],
+  "tags": [
+    "MQ-2 gas sensor",
+    "MQ2 kaise kaam karta hai",
+    "kitchen chimney auto on",
+    "smoke sensor Arduino",
+    "gas sensor Hindi",
+    "tin dioxide sensor",
+    "Arduino project Hindi",
+    "smoke detector circuit",
+    "MQ-2 Arduino tutorial",
+    "automatic exhaust fan",
+    "electronics for students",
+    "Echo Lab 3D",
+    "gas leak alarm project",
+    "sensor explained Hindi"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "Tadka ka dhuan utha, chimney khud on! Kaise?",
+  "format": "teardown3",
+  "captions": "out/auto/mq-2-smoke-chimney-trick.srt",
+  "social": {
+    "instagram": "Chimney dhuan dekhti nahi, bas garam resistor hai 🔥\nAndar SnO2 ki garam parat hai, dhuan aate hi resistance girta hai.\nVoltage badhta hai aur pankha chalu ho jata hai.\nUse se pehle 5–10 min warm-up zaroor karna.\nSave karo, baad mein project banane ke kaam aayega!\nComment mein batao: tumhari kitchen mein chimney auto hai ya nahi?\n#MQ2 #Arduino #Electronics #EchoLab3D #Hindi",
+    "tiktok": "Chimney dhuan dekhti nahi, bas garam resistor hai 🔥 #MQ2 #Arduino #Electronics #Hindi #EchoLab3D"
+  }
+}

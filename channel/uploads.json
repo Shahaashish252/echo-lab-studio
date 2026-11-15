@@ -725,6 +725,15 @@
     "status": "approved",
     "topic": "Sound sensor module that reacts to voice",
     "job": "20261114-212653",
-    "postAt": "2026-11-16T15:00"
+    "postAt": "2026-11-16T14:00"
+  },
+  {
+    "id": "RvZwCQeoq5s",
+    "meta": "channel/videos/td3-mq-2-smoke-chimney-trick.json",
+    "date": "2026-11-15",
+    "status": "approved",
+    "topic": "Kitchen chimney that turns on when smoke rises",
+    "job": "20261115-154414",
+    "postAt": "2026-11-17T14:00"
   }
 ]

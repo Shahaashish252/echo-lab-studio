@@ -1,12 +1,21 @@
 {
-  "updated": "14 Nov 2026, 21:48",
+  "updated": "15 Nov 2026, 15:59",
   "youtube": {
     "subs": 6,
-    "views": 4121,
+    "views": 4145,
     "videos": [
       {
         "title": "DHT11 Aag Nahi Dekhta, Sirf Garmi Pakadta Hai 🔥 #shorts",
         "id": "EoJfsTY2Pmc",
+        "status": "public",
+        "published": "2026-11-15",
+        "views": 1,
+        "likes": 0,
+        "comments": 0
+      },
+      {
+        "title": "KY-038 awaaz nahi, sirf shor pehchanta hai 🎤 #shorts",
+        "id": "R2vtN8SNb0s",
         "status": "private",
         "published": "2026-11-14",
         "views": 0,
@@ -18,7 +27,7 @@
         "id": "mwkkbwpqwEw",
         "status": "public",
         "published": "2026-11-14",
-        "views": 12,
+        "views": 21,
         "likes": 0,
         "comments": 0
       },
@@ -27,7 +36,7 @@
         "id": "uLPHCcegH-E",
         "status": "public",
         "published": "2026-11-13",
-        "views": 14,
+        "views": 27,
         "likes": 1,
         "comments": 2
       },
@@ -36,7 +45,7 @@
         "id": "m2busj2Fu4c",
         "status": "public",
         "published": "2026-11-12",
-        "views": 48,
+        "views": 49,
         "likes": 2,
         "comments": 2
       },
@@ -153,7 +162,7 @@
         "id": "nHR2_Dsl4I0",
         "status": "public",
         "published": "2026-11-04",
-        "views": 58,
+        "views": 57,
         "likes": 1,
         "comments": 2
       },
@@ -432,7 +441,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 560,
+        "views": 562,
         "likes": 9,
         "comments": 2
       },
@@ -538,12 +547,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-17",
-        "views": 474,
-        "minutes": 60,
-        "subs": 1
-      },
-      {
         "day": "2026-10-18",
         "views": 117,
         "minutes": 23,
@@ -581,7 +584,7 @@
       },
       {
         "day": "2026-10-24",
-        "views": 50,
+        "views": 51,
         "minutes": 8,
         "subs": 0
       },
@@ -692,6 +695,12 @@
         "views": 20,
         "minutes": 3,
         "subs": 1
+      },
+      {
+        "day": "2026-11-12",
+        "views": 51,
+        "minutes": 12,
+        "subs": 0
       }
     ]
   },
@@ -700,14 +709,25 @@
     "followers": 20,
     "posts": [
       {
+        "title": "Ye sensor aag nahi dekhta, bas garmi pakadta hai 🔥",
+        "url": "https://www.instagram.com/reel/Dfwg517jrC5/",
+        "published": "2026-11-15",
+        "likes": 1,
+        "comments": 0,
+        "reach": 1,
+        "views": 24,
+        "saved": 1,
+        "shares": 0
+      },
+      {
         "title": "PIR sensor dekhta nahi, sirf garmi ka change pakadta hai 🔥",
         "url": "https://www.instagram.com/reel/DftyCAAjBRx/",
         "published": "2026-11-14",
-        "likes": 7,
+        "likes": 13,
         "comments": 0,
-        "reach": 347,
-        "views": 380,
-        "saved": 0,
+        "reach": 841,
+        "views": 964,
+        "saved": 2,
         "shares": 0
       },
       {
@@ -716,8 +736,8 @@
         "published": "2026-11-13",
         "likes": 18,
         "comments": 0,
-        "reach": 533,
-        "views": 600,
+        "reach": 534,
+        "views": 601,
         "saved": 2,
         "shares": 0
       },
@@ -962,17 +982,6 @@
         "views": 136,
         "saved": 0,
         "shares": 0
-      },
-      {
-        "title": "Mall ka darwaza aapko dekhta hi nahi 😳",
-        "url": "https://www.instagram.com/reel/Deq_wqIEadH/",
-        "published": "2026-10-19",
-        "likes": 3,
-        "comments": 4,
-        "reach": 40,
-        "views": 61,
-        "saved": 2,
-        "shares": 1
       }
     ]
   }
