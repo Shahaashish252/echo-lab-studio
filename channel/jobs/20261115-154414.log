@@ -63,3 +63,18 @@ events 64 dur 59.06 → page/events.json
   $ ffmpeg -y -loglevel error -f concat -safe 0 -i /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-1794737854/list.txt -c copy /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-mq-2-smok
 
 == sound + master
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with numpy --with scipy --with soundfile --with soxr python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/mix.
+Downloading scipy (33.7MiB)
+ Downloaded scipy
+Installed 7 packages in 21ms
+mix 59.6 s
+  $ sh core/render/mux.sh /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-mq-2-smoke-chimney-trick.video.mp4 /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/page/out/mix.wav /home/run
+/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/mq-2-smoke-chimney-trick.mp4
+mux.sh: note: true peak -0.8 dB after encoding; encoding the audio again with the limiter at -2.10 dBFS (picture copied)
+    I:         -14.6 LUFS
+    LRA:         2.2 LU
+    Peak:       -1.0 dBFS
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python core/render/srt.py /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/page/out/cues.json /home/runner/work/echo-lab-studio/echo-lab-studio/ou
+/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/mq-2-smoke-chimney-trick.srt 17 cues
+
+== youtube upload
