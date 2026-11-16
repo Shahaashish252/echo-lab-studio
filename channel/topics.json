@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Self-balancing robot without a motor driver",
+      "hook": "Is Robot Ko Gyro Nahi, Sirf Ek Chhota Sensor Chahiye"
+    },
+    {
+      "topic": "Line follower robot with only 2 IR sensors",
+      "hook": "Sirf 2 Sensor Se Robot Rasta Kaise Dhundta Hai?"
+    },
+    {
+      "topic": "Ultrasonic robot that stops before hitting a wall",
+      "hook": "Ye Robot Deewar Dekhta Nahi, Awaaz Se Rukta Hai"
+    },
+    {
+      "topic": "Clap switch controlling a light with a relay",
+      "hook": "Taali Bajao, Bulb Jalega: Par Relay Kya Karta Hai?"
+    },
+    {
+      "topic": "Robot that follows your hand using IR sensors",
+      "hook": "Haath Hilao, Robot Peeche Peeche Chalega 🤖"
+    },
+    {
       "topic": "Buzzer that works as a microphone",
       "hook": "Yeh buzzer bajta nahi, sunta bhi hai",
       "module": ""

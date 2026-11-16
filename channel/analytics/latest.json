@@ -1,15 +1,24 @@
 {
-  "updated": "16 Nov 2026, 16:12",
+  "updated": "17 Nov 2026, 01:16",
   "youtube": {
     "subs": 6,
     "views": 4195,
     "videos": [
       {
+        "title": "Soil sensor paani nahi napta, sirf ye napta hai 🌱 #shorts",
+        "id": "LHrAN458UdQ",
+        "status": "private",
+        "published": "2026-11-16",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
+      {
         "title": "KY-038 awaaz nahi, sirf shor pehchanta hai 🎤 #shorts",
         "id": "R2vtN8SNb0s",
         "status": "public",
         "published": "2026-11-16",
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0
       },
@@ -36,7 +45,7 @@
         "id": "mwkkbwpqwEw",
         "status": "public",
         "published": "2026-11-14",
-        "views": 32,
+        "views": 36,
         "likes": 0,
         "comments": 0
       },
@@ -556,12 +565,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-19",
-        "views": 52,
-        "minutes": 7,
-        "subs": 0
-      },
-      {
         "day": "2026-10-20",
         "views": 187,
         "minutes": 22,
@@ -721,10 +724,10 @@
         "title": "Ye module awaaz nahi, sirf shor pehchanta hai 🎤",
         "url": "https://www.instagram.com/reel/Dfy7i_YlK93/",
         "published": "2026-11-16",
-        "likes": 1,
+        "likes": 2,
         "comments": 0,
-        "reach": 114,
-        "views": 134,
+        "reach": 133,
+        "views": 157,
         "saved": 1,
         "shares": 0
       },
@@ -734,8 +737,8 @@
         "published": "2026-11-15",
         "likes": 30,
         "comments": 4,
-        "reach": 1089,
-        "views": 1200,
+        "reach": 1093,
+        "views": 1204,
         "saved": 10,
         "shares": 1
       },

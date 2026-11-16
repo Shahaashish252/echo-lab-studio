@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-16T15:56",
+  "updated": "2026-11-17T01:16",
   "videos": 31,
-  "summary": "Instagram is carrying the channel: almost every video gets 1,000+ views there, while YouTube Shorts mostly gets under 60 views. The best performers are short 'X doesn't do what you think, it only does Y' videos about a single sensor or robot (clap switch, gyro robot, line follower), and the clap switch ones also did well on YouTube. Generic 'How does X work?' questions (lifts, taps, smoke alarms, street lights) get few views and almost no likes, shares or saves, and the one English video and videos with no Instagram numbers did poorly.",
-  "winningPattern": "A single-sensor or robot subject with a surprising 'it doesn't do X, it only does Y' or 'without it, this robot fails' hook, written in Hinglish with one emoji and #shorts. Titles are short, a bold claim rather than a question. They are posted on Instagram Reels first, and the clap-switch and gyro-robot topics also work on YouTube. Maker-style hands-on demos (robot, clap switch, DHT11, mic) get the most likes, saves and shares.",
+  "summary": "Instagram is carrying the channel: almost every video gets 150 to 1,400 views there, while YouTube Shorts mostly gets under 60 views. The best videos are about a simple, familiar 'sensor can't see or hear what you think' idea (clap switch, gyro robot, line follower) and the top ones came out in late October. Generic 'How does X work?' titles about taps, doors, smoke alarms and street lights get few views, and videos that are YouTube-only or in English get almost nothing.",
+  "winningPattern": "A hands-on maker project or robot (clap switch, gyro-balancing robot, line follower, IR obstacle robot) with a surprising 'it doesn't do what you think' hook in Hinglish, like 'X Nahi, Sirf Y Karta Hai' or 'X ke bina Y turant gir jaata'. Titles are short, with one emoji, and the video is posted on Instagram Reels first. Videos that drive shares and saves (IR robot, gyro robot, clap switch) show a visible demo of the robot or module reacting.",
   "doMore": [
-    "Lead with a counterintuitive claim: 'X doesn't do A, it only does B'",
-    "Pick one hands-on maker demo per video (robot, clap switch, DHT11, mic) rather than everyday gadgets",
-    "Post to Instagram first, since it reliably gets 1,000+ views, then cross-post to YouTube",
-    "Make follow-ups to the winners: a gyro/balancing robot series and clap-switch variations",
-    "Add a save-worthy ending, like a wiring tip or pin-out, to boost saves and shares"
+    "Make robot and Arduino-module demos with a visible reaction, such as a robot falling, turning or reacting to a clap",
+    "Use the 'X nahi, sirf Y' contrast hook in the first line on screen",
+    "Post every video on both Instagram and YouTube, since several videos only got YouTube and had very low reach",
+    "Make follow-ups to the winners: gyro, clap switch, line follower and IR robot each deserve a part 2",
+    "End with a save-worthy line, like a wiring tip or the module name, to get more saves and shares"
   ],
   "stopDoing": [
-    "Generic 'How does X work?' questions about public gadgets (lift, tap, smoke alarm, street light)",
-    "Posting several near-duplicate videos on the same sensor within days (IR, PIR, smoke, tap)",
-    "Publishing to YouTube only or in English, since those got almost no reach"
+    "Generic 'X Kaise Kaam Karta Hai?' titles about public gadgets (taps, lift, mall door, smoke alarm)",
+    "Posting English-language or single-platform videos",
+    "Repeating near-identical topics (smoke detector, tap, IR sensor) without a new angle"
   ],
   "nextTopics": [
-    "Self-balancing robot and the MPU6050",
-    "Ultrasonic sensor on a robot car",
-    "LDR light sensor with Arduino",
-    "Servo motor and why it holds its position",
-    "Bluetooth HC-05 robot control"
+    "Self-balancing robot without a motor driver",
+    "Line follower robot with only 2 IR sensors",
+    "Ultrasonic robot that stops before hitting a wall",
+    "Clap switch controlling a light with a relay",
+    "Robot that follows your hand using IR sensors"
   ],
   "bestTimes": {
     "times": [
