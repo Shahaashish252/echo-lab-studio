@@ -4,7 +4,7 @@
   "hook": "Your plant asks for water, but it can't talk. So how does it?",
   "lang": "hi",
   "started": "2026-11-16T15:56:27",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research & storyboard: \"Smart plant pot that knows when to drink water (open with this hook: \"Your plant asks for water, but it can't talk. So how does it?\")\" (soil, Claude)",
@@ -36,5 +36,7 @@
     }
   ],
   "format": "teardown3",
-  "module": "soil"
+  "module": "soil",
+  "finished": "2026-11-16T16:12:12",
+  "uploadId": "LHrAN458UdQ"
 }

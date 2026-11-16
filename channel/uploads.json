@@ -740,6 +740,15 @@
     "status": "approved",
     "topic": "Kitchen chimney that turns on when smoke rises",
     "job": "20261115-154414",
-    "postAt": "2026-11-17T14:00"
+    "postAt": "2026-11-17T15:00"
+  },
+  {
+    "id": "LHrAN458UdQ",
+    "meta": "channel/videos/td3-smart-plant-pot-soil-sensor.json",
+    "date": "2026-11-16",
+    "status": "approved",
+    "topic": "Smart plant pot that knows when to drink water",
+    "job": "20261116-155627",
+    "postAt": "2026-11-18T15:00"
   }
 ]

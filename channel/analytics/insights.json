@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-15T22:00",
-  "videos": 30,
-  "summary": "Instagram is carrying the channel: most videos get 1,000+ views there, while YouTube Shorts mostly get under 60 views. The best performers are surprising 'this thing doesn't do what you think' videos about robots and clap switches, and the ones that get shared or saved are the most useful. Many near-identical topics (smoke detectors, automatic taps, IR sensors) are repeating and getting weak results, and a few videos were never posted to Instagram at all.",
-  "winningPattern": "Instagram Reels in Hindi about a single relatable gadget (robot, clap switch, mic, line follower, DHT11), with a 'It doesn't do X, it only does Y' or 'Without Z it falls' hook. Short Hinglish titles with one emoji and a curiosity gap work best. Robot and clap-switch videos lead on YouTube too. Videos with a visible demo or surprising behavior get the shares and saves.",
+  "updated": "2026-11-16T15:56",
+  "videos": 31,
+  "summary": "Instagram is carrying the channel: almost every video gets 1,000+ views there, while YouTube Shorts mostly gets under 60 views. The best performers are short 'X doesn't do what you think, it only does Y' videos about a single sensor or robot (clap switch, gyro robot, line follower), and the clap switch ones also did well on YouTube. Generic 'How does X work?' questions (lifts, taps, smoke alarms, street lights) get few views and almost no likes, shares or saves, and the one English video and videos with no Instagram numbers did poorly.",
+  "winningPattern": "A single-sensor or robot subject with a surprising 'it doesn't do X, it only does Y' or 'without it, this robot fails' hook, written in Hinglish with one emoji and #shorts. Titles are short, a bold claim rather than a question. They are posted on Instagram Reels first, and the clap-switch and gyro-robot topics also work on YouTube. Maker-style hands-on demos (robot, clap switch, DHT11, mic) get the most likes, saves and shares.",
   "doMore": [
-    "Post every video on Instagram too: 5 of the last 30 have zero Instagram numbers",
-    "Use the 'doesn't do X, only does Y' contrast hook, which drove the top videos",
-    "Make robot and clap-switch follow-ups, since both topics worked on both platforms",
-    "Open with a visible demo or failure moment in the first second",
-    "End with a save-worthy takeaway such as a wiring tip or one-line rule to boost saves and shares"
+    "Lead with a counterintuitive claim: 'X doesn't do A, it only does B'",
+    "Pick one hands-on maker demo per video (robot, clap switch, DHT11, mic) rather than everyday gadgets",
+    "Post to Instagram first, since it reliably gets 1,000+ views, then cross-post to YouTube",
+    "Make follow-ups to the winners: a gyro/balancing robot series and clap-switch variations",
+    "Add a save-worthy ending, like a wiring tip or pin-out, to boost saves and shares"
   ],
   "stopDoing": [
-    "Repeating the same sensor topic in near-identical videos (3 smoke, 3 tap, 3 IR) with different titles",
-    "Plain 'How does X work?' titles with no surprise, which scored lowest",
-    "Posting English narration on a Hindi channel"
+    "Generic 'How does X work?' questions about public gadgets (lift, tap, smoke alarm, street light)",
+    "Posting several near-duplicate videos on the same sensor within days (IR, PIR, smoke, tap)",
+    "Publishing to YouTube only or in English, since those got almost no reach"
   ],
   "nextTopics": [
-    "Obstacle avoiding robot without ultrasonic sensor",
-    "Why a line follower loses the line on curves",
-    "Sound sensor module responding to claps vs voice",
-    "Gyro/MPU6050 balancing robot demo",
-    "Microphone as a speaker trick with a tiny speaker"
+    "Self-balancing robot and the MPU6050",
+    "Ultrasonic sensor on a robot car",
+    "LDR light sensor with Arduino",
+    "Servo motor and why it holds its position",
+    "Bluetooth HC-05 robot control"
   ],
   "bestTimes": {
     "times": [
-      "14:00",
-      "19:00"
+      "15:00",
+      "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (29 posts)"
+    "reason": "from our own posts: these hours averaged the most views (30 posts)"
   }
 }

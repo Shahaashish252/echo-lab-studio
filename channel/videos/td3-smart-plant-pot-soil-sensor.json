@@ -1,0 +1,42 @@
+{
+  "file": "out/auto/smart-plant-pot-soil-sensor.mp4",
+  "title": "Soil sensor paani nahi napta, sirf ye napta hai 🌱 #shorts",
+  "description": "Tumhara plant bol nahi sakta, phir smart pot ko kaise pata chalta hai?\nSensor paani nahi, sirf resistance naapta hai!\n🌱 Resistive soil sensor ka 3D teardown\n⚡ LM393 comparator, AO aur DO pins\n📈 850 dry, 400 wet, 750 se upar = paani do\n🔧 Pin 7 se power do, probe corrosion kam karo\nSubscribe karo Echo Lab 3D ke liye, roz ek naya sensor kholke dekhenge!\n#shorts #soilmoisture #arduino #plantwatering #electronics #maker #hinglish #echolab3d\n\nSources:\nhttps://lastminuteengineers.com/soil-moisture-sensor-arduino-tutorial/\nhttps://components101.com/node/797\nhttps://www.freecodecamp.org/news/how-to-use-a-resistive-soil-moisture-sensor/\nhttps://arduinogetstarted.com/tutorials/arduino-soil-moisture-sensor",
+  "sources": [
+    "https://lastminuteengineers.com/soil-moisture-sensor-arduino-tutorial/",
+    "https://components101.com/node/797",
+    "https://www.freecodecamp.org/news/how-to-use-a-resistive-soil-moisture-sensor/",
+    "https://arduinogetstarted.com/tutorials/arduino-soil-moisture-sensor"
+  ],
+  "tags": [
+    "soil moisture sensor",
+    "resistive soil moisture sensor",
+    "smart plant pot",
+    "arduino plant watering",
+    "LM393 comparator",
+    "soil sensor kaise kaam karta hai",
+    "soil moisture sensor hindi",
+    "arduino project hindi",
+    "AO DO pin difference",
+    "sensor calibration",
+    "probe corrosion",
+    "automatic irrigation arduino",
+    "electronics for students",
+    "maker projects India"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "Paudha paani maange, par bol nahi sakta",
+  "format": "teardown3",
+  "captions": "out/auto/smart-plant-pot-soil-sensor.srt",
+  "social": {
+    "instagram": "Tumhara plant bol nahi sakta, phir paani kaise maangta hai? 🌱\nSoil sensor paani nahi napta, sirf resistance naapta hai.\nGeeli mitti mein resistance kam, sookhi mein zyada.\n850 reading = sookha, 750 se upar = paani do.\nSave karo apne next Arduino project ke liye!\nComment mein batao: tumhara plant kab pyaasa hota hai?\n#soilsensor #arduino #electronics #maker #echolab3d",
+    "tiktok": "Plant bol nahi sakta, par sensor ko pata hai 🌱 #soilsensor #arduino #electronics #maker #shorts"
+  }
+}

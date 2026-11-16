@@ -1,9 +1,18 @@
 {
-  "updated": "15 Nov 2026, 22:00",
+  "updated": "16 Nov 2026, 16:12",
   "youtube": {
     "subs": 6,
-    "views": 4162,
+    "views": 4195,
     "videos": [
+      {
+        "title": "KY-038 awaaz nahi, sirf shor pehchanta hai 🎤 #shorts",
+        "id": "R2vtN8SNb0s",
+        "status": "public",
+        "published": "2026-11-16",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Chimney dhuan dekhti nahi, bas garam resistor hai 🔥 #shorts",
         "id": "RvZwCQeoq5s",
@@ -18,16 +27,7 @@
         "id": "EoJfsTY2Pmc",
         "status": "public",
         "published": "2026-11-15",
-        "views": 17,
-        "likes": 0,
-        "comments": 0
-      },
-      {
-        "title": "KY-038 awaaz nahi, sirf shor pehchanta hai 🎤 #shorts",
-        "id": "R2vtN8SNb0s",
-        "status": "private",
-        "published": "2026-11-14",
-        "views": 0,
+        "views": 31,
         "likes": 0,
         "comments": 0
       },
@@ -36,7 +36,7 @@
         "id": "mwkkbwpqwEw",
         "status": "public",
         "published": "2026-11-14",
-        "views": 23,
+        "views": 32,
         "likes": 0,
         "comments": 0
       },
@@ -54,7 +54,7 @@
         "id": "m2busj2Fu4c",
         "status": "public",
         "published": "2026-11-12",
-        "views": 49,
+        "views": 50,
         "likes": 2,
         "comments": 2
       },
@@ -342,7 +342,7 @@
         "id": "jD5lPQq_aQo",
         "status": "public",
         "published": "2026-10-23",
-        "views": 27,
+        "views": 28,
         "likes": 0,
         "comments": 0
       },
@@ -556,12 +556,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-18",
-        "views": 117,
-        "minutes": 23,
-        "subs": 0
-      },
-      {
         "day": "2026-10-19",
         "views": 52,
         "minutes": 7,
@@ -710,22 +704,39 @@
         "views": 51,
         "minutes": 12,
         "subs": 0
+      },
+      {
+        "day": "2026-11-13",
+        "views": 38,
+        "minutes": 6,
+        "subs": 0
       }
     ]
   },
   "instagram": {
     "username": "echo.lab3d",
-    "followers": 23,
+    "followers": 24,
     "posts": [
+      {
+        "title": "Ye module awaaz nahi, sirf shor pehchanta hai 🎤",
+        "url": "https://www.instagram.com/reel/Dfy7i_YlK93/",
+        "published": "2026-11-16",
+        "likes": 1,
+        "comments": 0,
+        "reach": 114,
+        "views": 134,
+        "saved": 1,
+        "shares": 0
+      },
       {
         "title": "Ye sensor aag nahi dekhta, bas garmi pakadta hai 🔥",
         "url": "https://www.instagram.com/reel/Dfwg517jrC5/",
         "published": "2026-11-15",
-        "likes": 26,
+        "likes": 30,
         "comments": 4,
-        "reach": 935,
-        "views": 1088,
-        "saved": 8,
+        "reach": 1089,
+        "views": 1200,
+        "saved": 10,
         "shares": 1
       },
       {
@@ -734,8 +745,8 @@
         "published": "2026-11-14",
         "likes": 13,
         "comments": 0,
-        "reach": 849,
-        "views": 968,
+        "reach": 852,
+        "views": 971,
         "saved": 2,
         "shares": 0
       },
@@ -745,8 +756,8 @@
         "published": "2026-11-13",
         "likes": 18,
         "comments": 0,
-        "reach": 535,
-        "views": 603,
+        "reach": 537,
+        "views": 604,
         "saved": 2,
         "shares": 0
       },
@@ -756,8 +767,8 @@
         "published": "2026-11-12",
         "likes": 7,
         "comments": 2,
-        "reach": 278,
-        "views": 300,
+        "reach": 281,
+        "views": 302,
         "saved": 2,
         "shares": 0
       },
@@ -767,8 +778,8 @@
         "published": "2026-11-12",
         "likes": 4,
         "comments": 4,
-        "reach": 124,
-        "views": 140,
+        "reach": 126,
+        "views": 142,
         "saved": 0,
         "shares": 0
       },
@@ -778,8 +789,8 @@
         "published": "2026-11-05",
         "likes": 11,
         "comments": 2,
-        "reach": 1177,
-        "views": 1397,
+        "reach": 1180,
+        "views": 1402,
         "saved": 2,
         "shares": 3
       },
@@ -789,8 +800,8 @@
         "published": "2026-11-04",
         "likes": 15,
         "comments": 0,
-        "reach": 1085,
-        "views": 1309,
+        "reach": 1086,
+        "views": 1311,
         "saved": 4,
         "shares": 1
       },
@@ -800,8 +811,8 @@
         "published": "2026-11-03",
         "likes": 2,
         "comments": 2,
-        "reach": 129,
-        "views": 151,
+        "reach": 131,
+        "views": 153,
         "saved": 0,
         "shares": 0
       },
@@ -811,8 +822,8 @@
         "published": "2026-11-02",
         "likes": 23,
         "comments": 2,
-        "reach": 1180,
-        "views": 1389,
+        "reach": 1182,
+        "views": 1392,
         "saved": 3,
         "shares": 3
       },
@@ -842,7 +853,7 @@
         "title": "Robot ko dimaag nahi, phir bhi line pakadta hai 🤖",
         "url": "https://www.instagram.com/reel/DfHNfgYITS4/",
         "published": "2026-10-30",
-        "likes": 20,
+        "likes": 19,
         "comments": 0,
         "reach": 1091,
         "views": 1261,
@@ -978,17 +989,6 @@
         "comments": 2,
         "reach": 82,
         "views": 89,
-        "saved": 0,
-        "shares": 0
-      },
-      {
-        "title": "Aapka TV remote har baar roshni phenkta hai 👀",
-        "url": "https://www.instagram.com/reel/DetPyyLDzhe/",
-        "published": "2026-10-20",
-        "likes": 2,
-        "comments": 2,
-        "reach": 104,
-        "views": 136,
         "saved": 0,
         "shares": 0
       }
