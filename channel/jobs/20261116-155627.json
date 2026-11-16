@@ -1,0 +1,16 @@
+{
+  "id": "20261116-155627",
+  "topic": "Smart plant pot that knows when to drink water",
+  "hook": "Your plant asks for water, but it can't talk. So how does it?",
+  "lang": "hi",
+  "started": "2026-11-16T15:56:27",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research & storyboard: \"Smart plant pot that knows when to drink water (open with this hook: \"Your plant asks for water, but it can't talk. So how does it?\")\" (soil, Claude)",
+      "at": "2026-11-16T15:56:27"
+    }
+  ],
+  "format": "teardown3",
+  "module": "soil"
+}
