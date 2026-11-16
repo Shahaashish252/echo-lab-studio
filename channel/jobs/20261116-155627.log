@@ -10,3 +10,54 @@
   Soil sensor paani nahi napta, sirf ye napta hai 🌱 #shorts
 
 == voice (local Hindi: Piper pratham)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+Downloading numpy (15.0MiB)
+Downloading onnxruntime (26.5MiB)
+Downloading piper-tts (32.6MiB)
+ Downloaded numpy
+ Downloaded onnxruntime
+ Downloaded piper-tts
+Installed 12 packages in 20ms
+[0;93m2026-11-16 15:58:15.384445188 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  downloading hi_IN-pratham-medium.onnx
+  downloading hi_IN-pratham-medium.onnx.json
+  a1    3.48s  पौधा पानी माँगता है, पर बोल नहीं सकता। कैसे?
+  a2    4.04s  रेसिस्टिव सेंसर मॉड्यूल, तीन पॉइंट तीन से पाँच वोल्ट।
+  a3    2.33s  दो धातु के प्रोब मिट्टी में घुसते हैं।
+  a4    3.80s  प्रोब वेरिएबल रेसिस्टर हैं, पानी से रेसिस्टेंस बदलता है।
+  a5    3.92s  एल एम तीन सौ तिरानवे कंपैरेटर चिप, साथ में प्रीसेट पॉट।
+  a6    3.75s  पीछे एनालॉग और डिजिटल आउटपुट, पंद्रह मिली एम्प।
+  b1    2.37s  प्रोब के बीच से छोटा करंट गुज़रता है।
+  b2    3.21s  गीली मिट्टी में रेसिस्टेंस कम, एनालॉग वोल्टेज कम।
+  b3    3.81s  कंपैरेटर थ्रेशोल्ड से तुलना करता है, सूखे में डी ओ हाई।
+  b4    3.98s  पानी करंट ढोता है, इसलिए गीली मिट्टी में रेसिस्टेंस घटता है।
+  b5    3.11s  सात सौ पचास से ऊपर रीडिंग, मतलब पानी दो।
+  b6    3.31s  आठ सौ पचास रीडिंग मतलब सूखा, पंप चालू।
+  c1    3.09s  सूखा आठ सौ पचास, पूरा गीला चार सौ।
+  c2    2.97s  स्मार्ट गमला, सिंचाई, और होम गार्डन।
+  c3    3.28s  प्रोब में जंग लगती है, फर्टिलाइज़र रीडिंग बदलता है।
+  c4    3.02s  पिन सात से पावर दो, सिर्फ़ रीडिंग के वक़्त।
+  c5    3.51s  सेव करो, कमेंट में बताओ, तुम्हारा पौधा कब प्यासा?
+  voice (Piper pratham, local) 57.0s at length 1.05
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+[0;93m2026-11-16 15:58:19.345963843 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  a1    3.57s  पौधा पानी माँगता है, पर बोल नहीं सकता। कैसे?
+  a2    3.74s  रेसिस्टिव सेंसर मॉड्यूल, तीन पॉइंट तीन से पाँच वोल्ट।
+  a3    2.40s  दो धातु के प्रोब मिट्टी में घुसते हैं।
+  a4    3.73s  प्रोब वेरिएबल रेसिस्टर हैं, पानी से रेसिस्टेंस बदलता है।
+  a5    3.76s  एल एम तीन सौ तिरानवे कंपैरेटर चिप, साथ में प्रीसेट पॉट।
+  a6    3.52s  पीछे एनालॉग और डिजिटल आउटपुट, पंद्रह मिली एम्प।
+  b1    2.32s  प्रोब के बीच से छोटा करंट गुज़रता है।
+  b2    3.35s  गीली मिट्टी में रेसिस्टेंस कम, एनालॉग वोल्टेज कम।
+  b3    3.71s  कंपैरेटर थ्रेशोल्ड से तुलना करता है, सूखे में डी ओ हाई।
+  b4    3.96s  पानी करंट ढोता है, इसलिए गीली मिट्टी में रेसिस्टेंस घटता है।
+  b5    2.99s  सात सौ पचास से ऊपर रीडिंग, मतलब पानी दो।
+  b6    3.23s  आठ सौ पचास रीडिंग मतलब सूखा, पंप चालू।
+  c1    3.09s  सूखा आठ सौ पचास, पूरा गीला चार सौ।
+  c2    3.08s  स्मार्ट गमला, सिंचाई, और होम गार्डन।
+  c3    3.02s  प्रोब में जंग लगती है, फर्टिलाइज़र रीडिंग बदलता है।
+  c4    2.95s  पिन सात से पावर दो, सिर्फ़ रीडिंग के वक़्त।
+  c5    3.47s  सेव करो, कमेंट में बताओ, तुम्हारा पौधा कब प्यासा?
+  voice (Piper pratham, local) 55.9s at length 1.0
+
+== 3D model + drawings (render tools)
