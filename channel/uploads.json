@@ -722,10 +722,16 @@
     "id": "R2vtN8SNb0s",
     "meta": "channel/videos/td3-ky-038-shor-sensor.json",
     "date": "2026-11-14",
-    "status": "approved",
+    "status": "published",
     "topic": "Sound sensor module that reacts to voice",
     "job": "20261114-212653",
-    "postAt": "2026-11-16T14:00"
+    "postAt": "2026-11-16T14:00",
+    "published": {
+      "youtube": "2026-11-16",
+      "instagram": "https://www.instagram.com/reel/Dfy7i_YlK93/",
+      "facebook": "https://www.facebook.com/reel/2212054366333785/"
+    },
+    "postedAt": "2026-11-16T14:02"
   },
   {
     "id": "RvZwCQeoq5s",
