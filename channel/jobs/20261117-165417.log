@@ -12,3 +12,56 @@
   Geyser mein flame sensor nahi, thermocouple hota hai! 🔥 #shorts
 
 == voice (local Hindi: Piper pratham)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+Downloading onnxruntime (26.5MiB)
+Downloading numpy (15.0MiB)
+Downloading soundfile (1.3MiB)
+Downloading piper-tts (32.6MiB)
+ Downloaded soundfile
+ Downloaded numpy
+ Downloaded onnxruntime
+ Downloaded piper-tts
+Installed 12 packages in 21ms
+[0;93m2026-11-17 16:56:06.391200598 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  downloading hi_IN-pratham-medium.onnx
+  downloading hi_IN-pratham-medium.onnx.json
+  a1    3.46s  अगर फ्लेम बुझ जाए? गीजर जानता है, गैस बंद!
+  a2    3.06s  सात सौ साठ से ग्यारह सौ नैनोमीटर पकड़ता है
+  a3    3.44s  आगे आई आर फोटोडायोड, इन्फ्रारेड पकड़ता है
+  a4    3.67s  यह सिर्फ आग नहीं, साधारण रोशनी भी पकड़ता है
+  a5    2.64s  एल एम तीन नौ तीन कंपैरेटर और पॉट
+  a6    2.85s  पीछे चिप सिग्नल को थ्रेशोल्ड से कंपेयर करती है
+  b1    3.61s  आग इन्फ्रारेड छोड़ती है, फोटोडायोड उसे पकड़ता है
+  b2    3.81s  सिग्नल एनालॉग आउटपुट और कंपैरेटर, दोनों में जाता है
+  b3    2.24s  थ्रेशोल्ड पार, तो डी ओ बदलता है
+  b4    4.43s  गर्म चीज़ इन्फ्रारेड छोड़ती है, इसलिए सेंसर आग पहचानता है
+  b5    3.06s  पॉट थ्रेशोल्ड सेट करता है, पोलैरिटी चेक करो
+  b6    3.36s  लाइटर शून्य दशमलव आठ मीटर में ट्रिगर करता है
+  c1    3.56s  कोण साठ डिग्री, दूरी शून्य दशमलव आठ मीटर
+  c2    3.75s  कुकर में थर्मोकपल, फर्नेस में फ्लेम रॉड, यही आइडिया
+  c3    2.51s  तेज धूप और लेंस पर पानी गड़बड़ करते हैं
+  c4    3.79s  पाँच वोल्ट दो, पॉट घुमाओ, लाइटर से टेस्ट करो
+  c5    3.48s  सेव करो, और कमेंट में बताओ: सेंसर कहाँ लगाओगे?
+  voice (Piper pratham, local) 56.7s at length 1.05
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+[0;93m2026-11-17 16:56:10.661498007 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  a1    3.41s  अगर फ्लेम बुझ जाए? गीजर जानता है, गैस बंद!
+  a2    3.01s  सात सौ साठ से ग्यारह सौ नैनोमीटर पकड़ता है
+  a3    3.19s  आगे आई आर फोटोडायोड, इन्फ्रारेड पकड़ता है
+  a4    3.65s  यह सिर्फ आग नहीं, साधारण रोशनी भी पकड़ता है
+  a5    2.60s  एल एम तीन नौ तीन कंपैरेटर और पॉट
+  a6    2.95s  पीछे चिप सिग्नल को थ्रेशोल्ड से कंपेयर करती है
+  b1    3.33s  आग इन्फ्रारेड छोड़ती है, फोटोडायोड उसे पकड़ता है
+  b2    3.85s  सिग्नल एनालॉग आउटपुट और कंपैरेटर, दोनों में जाता है
+  b3    2.26s  थ्रेशोल्ड पार, तो डी ओ बदलता है
+  b4    4.38s  गर्म चीज़ इन्फ्रारेड छोड़ती है, इसलिए सेंसर आग पहचानता है
+  b5    3.19s  पॉट थ्रेशोल्ड सेट करता है, पोलैरिटी चेक करो
+  b6    3.15s  लाइटर शून्य दशमलव आठ मीटर में ट्रिगर करता है
+  c1    3.53s  कोण साठ डिग्री, दूरी शून्य दशमलव आठ मीटर
+  c2    3.59s  कुकर में थर्मोकपल, फर्नेस में फ्लेम रॉड, यही आइडिया
+  c3    2.56s  तेज धूप और लेंस पर पानी गड़बड़ करते हैं
+  c4    3.63s  पाँच वोल्ट दो, पॉट घुमाओ, लाइटर से टेस्ट करो
+  c5    3.19s  सेव करो, और कमेंट में बताओ: सेंसर कहाँ लगाओगे?
+  voice (Piper pratham, local) 55.5s at length 1.0
+
+== 3D model + drawings (render tools)
