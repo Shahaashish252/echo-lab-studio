@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-17T16:54",
+  "updated": "2026-11-18T00:13",
   "videos": 32,
-  "summary": "Instagram is carrying the channel: almost every video gets 1,000+ views there, while YouTube Shorts mostly gets under 60 views. The best performers are short 'X doesn't do Y, it only does Z' explainers about robots and sound-based gadgets (gyro robot, clap switch, mic). Videos on smoke alarms, taps, lift doors and the ultrasonic sensor, and any that were never posted to Instagram, get far fewer views and almost no shares or saves.",
-  "winningPattern": "Hindi explainers on hands-on maker subjects (robots, clap switch, mic, DHT11) with a surprising 'it doesn't do X, it only does Y' or 'without this it fails' hook. Titles are short, use Hinglish, have one emoji, and are posted to Instagram first and YouTube second. Clap switch and robot topics also get real traction on YouTube (500-680 views), while generic 'how does X know?' questions do not.",
+  "summary": "Instagram is carrying the channel: almost every video gets roughly 700-1,400 views there, while YouTube Shorts mostly gets under 60 views. The best performers use a 'X doesn't see/hear, it only senses Y' hook, robots and clap switches, and the oldest videos on YouTube (Oct 29-Nov 5) got the most views there. Plain question titles like 'How does X work?' about public-place gadgets (taps, lifts, doors, smoke alarms) and the English video do poorly, and several videos never reached Instagram at all.",
+  "winningPattern": "Hindi, surprising 'doesn't X, only Y' statements about a relatable sensor-based thing (robot, clap switch, mic, DHT11 heat sensor), with an emoji and #shorts, posted mainly on Instagram. Robots and sound-triggered gadgets get the most saves and shares; the title gives a myth-busting twist, not a plain question.",
   "doMore": [
-    "Make more robot and clap-switch style videos: relatable builds with a visible 'failure' or surprise",
-    "Open with a bold contradiction such as 'X nahi, sirf Y' in the first line",
-    "Post every video to Instagram as well, since the unposted ones get zero there",
-    "Make follow-ups to winners (clap switch with a whistle, gyro robot falling) as a series",
-    "Add a clear share or save prompt, such as 'save this for your project', to build on the shares from the IR robot video"
+    "Make robot and clap-switch style demos: show the gadget failing or reacting in a surprising way, with a visible result",
+    "Use the 'Ye X nahi, sirf Y' contrast hook in the first line on screen",
+    "Post every video on Instagram too, since YouTube-only videos get no Instagram reach",
+    "Make follow-ups or part 2s of the top videos (gyro robot, clap switch, IR robot) and the shareable ones",
+    "End with a prompt to save or share (e.g. 'Kisi maker dost ko bhejo') to boost saves and shares"
   ],
   "stopDoing": [
-    "Generic 'Kaise Pata Chalta Hai? 🤔' titles on everyday objects like taps, lifts, malls and street lights",
-    "Posting near-duplicate topics (several smoke, IR and tap videos) that split views",
-    "Skipping Instagram or posting English-only videos, which have not worked here"
+    "Plain 'Kaise kaam karta hai?' titles on everyday public gadgets like taps, lifts and malls doors",
+    "Posting near-duplicate topics (three clap switch, four IR/PIR, two smoke videos) in the same month",
+    "Posting English or YouTube-only videos until the Hindi Instagram formula is steady"
   ],
   "nextTopics": [
     "Self-balancing robot without a gyro",
-    "Clap switch fooled by a snap or tap",
-    "Obstacle avoiding robot with only one sensor",
-    "Why a line follower gets lost on a shiny floor",
-    "Mic module hears a speaker's sound in reverse"
+    "Obstacle avoiding robot with a broken sensor",
+    "Light-following robot using LDR",
+    "Sound-controlled LED with a mic module",
+    "Ultrasonic sensor fooled by a soft cloth"
   ],
   "bestTimes": {
     "times": [
