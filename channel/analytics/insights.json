@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-17T01:16",
-  "videos": 31,
-  "summary": "Instagram is carrying the channel: almost every video gets 150 to 1,400 views there, while YouTube Shorts mostly gets under 60 views. The best videos are about a simple, familiar 'sensor can't see or hear what you think' idea (clap switch, gyro robot, line follower) and the top ones came out in late October. Generic 'How does X work?' titles about taps, doors, smoke alarms and street lights get few views, and videos that are YouTube-only or in English get almost nothing.",
-  "winningPattern": "A hands-on maker project or robot (clap switch, gyro-balancing robot, line follower, IR obstacle robot) with a surprising 'it doesn't do what you think' hook in Hinglish, like 'X Nahi, Sirf Y Karta Hai' or 'X ke bina Y turant gir jaata'. Titles are short, with one emoji, and the video is posted on Instagram Reels first. Videos that drive shares and saves (IR robot, gyro robot, clap switch) show a visible demo of the robot or module reacting.",
+  "updated": "2026-11-17T16:54",
+  "videos": 32,
+  "summary": "Instagram is carrying the channel: almost every video gets 1,000+ views there, while YouTube Shorts mostly gets under 60 views. The best performers are short 'X doesn't do Y, it only does Z' explainers about robots and sound-based gadgets (gyro robot, clap switch, mic). Videos on smoke alarms, taps, lift doors and the ultrasonic sensor, and any that were never posted to Instagram, get far fewer views and almost no shares or saves.",
+  "winningPattern": "Hindi explainers on hands-on maker subjects (robots, clap switch, mic, DHT11) with a surprising 'it doesn't do X, it only does Y' or 'without this it fails' hook. Titles are short, use Hinglish, have one emoji, and are posted to Instagram first and YouTube second. Clap switch and robot topics also get real traction on YouTube (500-680 views), while generic 'how does X know?' questions do not.",
   "doMore": [
-    "Make robot and Arduino-module demos with a visible reaction, such as a robot falling, turning or reacting to a clap",
-    "Use the 'X nahi, sirf Y' contrast hook in the first line on screen",
-    "Post every video on both Instagram and YouTube, since several videos only got YouTube and had very low reach",
-    "Make follow-ups to the winners: gyro, clap switch, line follower and IR robot each deserve a part 2",
-    "End with a save-worthy line, like a wiring tip or the module name, to get more saves and shares"
+    "Make more robot and clap-switch style videos: relatable builds with a visible 'failure' or surprise",
+    "Open with a bold contradiction such as 'X nahi, sirf Y' in the first line",
+    "Post every video to Instagram as well, since the unposted ones get zero there",
+    "Make follow-ups to winners (clap switch with a whistle, gyro robot falling) as a series",
+    "Add a clear share or save prompt, such as 'save this for your project', to build on the shares from the IR robot video"
   ],
   "stopDoing": [
-    "Generic 'X Kaise Kaam Karta Hai?' titles about public gadgets (taps, lift, mall door, smoke alarm)",
-    "Posting English-language or single-platform videos",
-    "Repeating near-identical topics (smoke detector, tap, IR sensor) without a new angle"
+    "Generic 'Kaise Pata Chalta Hai? 🤔' titles on everyday objects like taps, lifts, malls and street lights",
+    "Posting near-duplicate topics (several smoke, IR and tap videos) that split views",
+    "Skipping Instagram or posting English-only videos, which have not worked here"
   ],
   "nextTopics": [
-    "Self-balancing robot without a motor driver",
-    "Line follower robot with only 2 IR sensors",
-    "Ultrasonic robot that stops before hitting a wall",
-    "Clap switch controlling a light with a relay",
-    "Robot that follows your hand using IR sensors"
+    "Self-balancing robot without a gyro",
+    "Clap switch fooled by a snap or tap",
+    "Obstacle avoiding robot with only one sensor",
+    "Why a line follower gets lost on a shiny floor",
+    "Mic module hears a speaker's sound in reverse"
   ],
   "bestTimes": {
     "times": [
       "15:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (30 posts)"
+    "reason": "from our own posts: these hours averaged the most views (31 posts)"
   }
 }

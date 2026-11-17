@@ -1,9 +1,18 @@
 {
-  "updated": "17 Nov 2026, 01:16",
+  "updated": "17 Nov 2026, 17:11",
   "youtube": {
-    "subs": 6,
-    "views": 4195,
+    "subs": 7,
+    "views": 4214,
     "videos": [
+      {
+        "title": "Chimney dhuan dekhti nahi, bas garam resistor hai 🔥 #shorts",
+        "id": "RvZwCQeoq5s",
+        "status": "public",
+        "published": "2026-11-17",
+        "views": 4,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Soil sensor paani nahi napta, sirf ye napta hai 🌱 #shorts",
         "id": "LHrAN458UdQ",
@@ -18,25 +27,16 @@
         "id": "R2vtN8SNb0s",
         "status": "public",
         "published": "2026-11-16",
-        "views": 1,
-        "likes": 0,
-        "comments": 0
-      },
-      {
-        "title": "Chimney dhuan dekhti nahi, bas garam resistor hai 🔥 #shorts",
-        "id": "RvZwCQeoq5s",
-        "status": "private",
-        "published": "2026-11-15",
-        "views": 0,
-        "likes": 0,
-        "comments": 0
+        "views": 10,
+        "likes": 1,
+        "comments": 2
       },
       {
         "title": "DHT11 Aag Nahi Dekhta, Sirf Garmi Pakadta Hai 🔥 #shorts",
         "id": "EoJfsTY2Pmc",
         "status": "public",
         "published": "2026-11-15",
-        "views": 31,
+        "views": 32,
         "likes": 0,
         "comments": 0
       },
@@ -45,7 +45,7 @@
         "id": "mwkkbwpqwEw",
         "status": "public",
         "published": "2026-11-14",
-        "views": 36,
+        "views": 41,
         "likes": 0,
         "comments": 0
       },
@@ -63,7 +63,7 @@
         "id": "m2busj2Fu4c",
         "status": "public",
         "published": "2026-11-12",
-        "views": 50,
+        "views": 51,
         "likes": 2,
         "comments": 2
       },
@@ -459,7 +459,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 562,
+        "views": 564,
         "likes": 9,
         "comments": 2
       },
@@ -590,7 +590,7 @@
       },
       {
         "day": "2026-10-24",
-        "views": 51,
+        "views": 50,
         "minutes": 8,
         "subs": 0
       },
@@ -713,6 +713,12 @@
         "views": 38,
         "minutes": 6,
         "subs": 0
+      },
+      {
+        "day": "2026-11-14",
+        "views": 40,
+        "minutes": 5,
+        "subs": 0
       }
     ]
   },
@@ -721,13 +727,24 @@
     "followers": 24,
     "posts": [
       {
+        "title": "Chimney dhuan dekhti nahi, bas garam resistor hai 🔥",
+        "url": "https://www.instagram.com/reel/Df1sl2eFGsO/",
+        "published": "2026-11-17",
+        "likes": 1,
+        "comments": 0,
+        "reach": 150,
+        "views": 188,
+        "saved": 0,
+        "shares": 0
+      },
+      {
         "title": "Ye module awaaz nahi, sirf shor pehchanta hai 🎤",
         "url": "https://www.instagram.com/reel/Dfy7i_YlK93/",
         "published": "2026-11-16",
         "likes": 2,
         "comments": 0,
-        "reach": 133,
-        "views": 157,
+        "reach": 146,
+        "views": 170,
         "saved": 1,
         "shares": 0
       },
@@ -737,8 +754,8 @@
         "published": "2026-11-15",
         "likes": 30,
         "comments": 4,
-        "reach": 1093,
-        "views": 1204,
+        "reach": 1094,
+        "views": 1205,
         "saved": 10,
         "shares": 1
       },
@@ -981,17 +998,6 @@
         "comments": 0,
         "reach": 135,
         "views": 158,
-        "saved": 0,
-        "shares": 0
-      },
-      {
-        "title": "Street light ghadi nahi dekhti, phir bhi jaanti hai 🌙",
-        "url": "https://www.instagram.com/reel/Det_30gEQu5/",
-        "published": "2026-10-20",
-        "likes": 5,
-        "comments": 2,
-        "reach": 82,
-        "views": 89,
         "saved": 0,
         "shares": 0
       }
