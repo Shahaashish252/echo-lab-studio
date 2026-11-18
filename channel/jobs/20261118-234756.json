@@ -21,6 +21,10 @@
     {
       "name": "3D model + drawings (render tools)",
       "at": "2026-11-18T23:50:22"
+    },
+    {
+      "name": "render (cloud, 10 parts)",
+      "at": "2026-11-18T23:50:54"
     }
   ],
   "format": "teardown3",
