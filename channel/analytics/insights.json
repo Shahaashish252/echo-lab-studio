@@ -1,31 +1,31 @@
 {
-  "updated": "2026-11-18T16:26",
+  "updated": "2026-11-18T23:47",
   "videos": 33,
-  "summary": "Instagram is carrying the channel: almost every Hindi video gets 1,000+ views there, while YouTube Shorts mostly stays under 100 views. The best videos are the 'X doesn't see/hear, it only senses Y' myth-busting ones (robot falling without gyro, clap switch hearing noise not claps), which also earn the most likes, saves and shares. Generic 'How does X work?' titles about everyday places (lift, tap, mall door, smoke detector) get weak results on both platforms, and several videos have no Instagram numbers at all.",
-  "winningPattern": "A single relatable gadget or hobby-robot (clap switch, gyro robot, IR robot, DHT11, mic) with a surprising 'it doesn't do what you think' hook in Hinglish, e.g. 'X ko Y nahi dikhta, sirf Z karta hai' or 'X ke bina Y turant gir jata'. Short, curiosity-driven titles with one emoji, posted mainly on Instagram Reels, where reach is ~1,000-1,200 per video. On YouTube only the clap switch and gyro robot did decently (400-680 views), so Maker-project topics with a visible demo beat explainer topics.",
+  "summary": "Instagram is carrying the channel: most videos get 1,000+ views there, while YouTube Shorts mostly gets under 60 views. The best performers are short 'X doesn't do what you think, it does Y' explainers about common robot and sensor projects (gyro robot, clap switch, line follower), which also get the most likes and saves. Weak spots are generic 'How does X work?' question titles, plain everyday-device topics (lift, tap, smoke alarm), and videos posted to only one platform.",
+  "winningPattern": "Hindi, Instagram-first. Subject is a hands-on maker project or module (robot, clap switch, DHT11, mic) that viewers can build. Hook is a surprising contradiction: 'X can't do the obvious thing, it only does Y' or 'without Z the robot falls'. Titles are short, punchy Hinglish with one emoji, no jargon. Clap switch and robot-balance videos also did well on YouTube (500-680 views), so relatable, build-it-yourself topics work on both platforms.",
   "doMore": [
-    "Use the 'doesn't X, only Y' myth-flip hook, naming the surprising real mechanism in the title",
-    "Make follow-ups to the winners: gyro/balancing robot, clap switch variants, line follower, IR robot obstacle avoidance",
-    "Show a physical demo (robot falling, clap triggering light) in the first 2 seconds",
-    "Post every video on both platforms; 8 videos have zero Instagram numbers, so cross-post them",
-    "Prompt saves and shares with a closing line like 'Save this for your next Arduino project'"
+    "Make robot and maker-project videos (balancing, line follower, obstacle avoidance) with a 'without this part it fails' hook",
+    "Use the 'doesn't do X, only does Y' title format, which beat plain 'How does X work?' titles",
+    "Post every video to both YouTube and Instagram; several videos have zero on one platform",
+    "Make follow-ups to winners, such as the clap switch series, with a new angle each time",
+    "End with a save or share prompt like 'save this for your next project', since saves and shares signal strong interest"
   ],
   "stopDoing": [
-    "Generic 'X Kaise Kaam Karta Hai? 🤔' titles for public-place gadgets (lift, tap, mall door, street light)",
-    "Repeating the same topic within days (3 smoke/IR/PIR/heat-sensor near-duplicates split the audience and dilute results)",
-    "Posting English-language videos on a Hindi channel without a plan, as the single English video got no Instagram traction"
+    "Generic 'Kaise kaam karta hai?' titles on everyday devices like lift, tap, mall door, smoke alarm",
+    "Repeating the same topic with near-identical titles (several IR, tap, smoke, and clap videos overlap and compete)",
+    "Publishing English or single-platform videos that break the Hindi, both-platform routine"
   ],
   "nextTopics": [
-    "Self-balancing robot without gyro",
-    "Arduino buzzer that only hears whistles",
-    "Ultrasonic sensor on a robot",
-    "Line follower with one sensor removed",
-    "Soil moisture sensor truth"
+    "Self-balancing robot without PID",
+    "Obstacle avoiding robot with ultrasonic sensor",
+    "Light-following robot using LDR",
+    "Servo motor without a brain",
+    "Bluetooth car HC-05"
   ],
   "bestTimes": {
     "times": [
-      "14:00",
-      "19:00"
+      "15:00",
+      "21:00"
     ],
     "reason": "from our own posts: these hours averaged the most views (32 posts)"
   }

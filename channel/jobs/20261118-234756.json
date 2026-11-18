@@ -4,7 +4,7 @@
   "hook": "What if the flame goes out? The geyser knows and shuts the gas.",
   "lang": "hi",
   "started": "2026-11-18T23:47:56",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research & storyboard: \"Gas geyser that cuts off gas when the flame goes out (open with this hook: \"What if the flame goes out? The geyser knows and shuts the gas.\")\" (flame, Claude)",
@@ -36,5 +36,7 @@
     }
   ],
   "format": "teardown3",
-  "module": "flame"
+  "module": "flame",
+  "finished": "2026-11-19T00:17:10",
+  "uploadId": "6H2l1IC15PA"
 }

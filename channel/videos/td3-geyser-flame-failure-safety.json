@@ -1,0 +1,44 @@
+{
+  "file": "out/auto/geyser-flame-failure-safety.mp4",
+  "title": "Geyser ki gas band karta hai chip nahi, thermocouple! 🔥 #shorts",
+  "description": "Lau bujhi to geyser gas kaise band karta hai? Smart sensor nahi, ek thermocouple!\nFlame sensor KY-026 aur asli geyser ka safety trick, dono samjho.\n🔥 Thermocouple lau ki garmi se 25 mV banata hai\n🧲 Wahi voltage magnet valve ko khula rakhta hai\n📡 KY-026 760–1100 nm IR dekhta hai\n⚠️ KY-026 hobby-grade hai, safety device nahi\nSubscribe karo Echo Lab 3D, roz ek naya Kholke Dekho!\n#shorts #flamesensor #KY026 #arduino #geyser #thermocouple #electronics #hindi\n\nSources:\nhttps://en.wikipedia.org/wiki/Flame_failure_device\nhttps://en.wikipedia.org/wiki/Thermocouple\nhttps://microcontrollerslab.com/flame-sensor-arduino-fire-detection/\nhttps://shillehtek.com/blogs/shillehtek-product-manuals/flame-sensor-ky-026-arduino-esp32-raspberry-pi-manual",
+  "sources": [
+    "https://en.wikipedia.org/wiki/Flame_failure_device",
+    "https://en.wikipedia.org/wiki/Thermocouple",
+    "https://microcontrollerslab.com/flame-sensor-arduino-fire-detection/",
+    "https://shillehtek.com/blogs/shillehtek-product-manuals/flame-sensor-ky-026-arduino-esp32-raspberry-pi-manual",
+    "https://sensorkit.joy-it.net/en/sensors/ky-026",
+    "https://docs.cirkitdesigner.com/component/bddfcfbc-461f-4659-bac2-2e4a0b0f9f6d/ky-026-flame-sensor"
+  ],
+  "tags": [
+    "flame sensor kaise kaam karta hai",
+    "KY-026 flame sensor",
+    "geyser safety kaise kaam karta hai",
+    "thermocouple kya hota hai",
+    "flame failure device",
+    "gas geyser flame sensor",
+    "arduino flame sensor project",
+    "flame sensor hindi",
+    "LM393 comparator",
+    "pilot light thermocouple",
+    "Seebeck effect hindi",
+    "electronics projects hindi",
+    "echo lab 3d",
+    "maker projects for students"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "Lau bujhi to? Geyser gas band kar deta hai",
+  "format": "teardown3",
+  "captions": "out/auto/geyser-flame-failure-safety.srt",
+  "social": {
+    "instagram": "Geyser ki gas lau bujhte hi band kyun ho jati hai? 🔥\nSmart chip nahi, ek thermocouple ye kaam karta hai.\nWo lau ki garmi se 25 mV banata hai aur valve khula rakhta hai.\nKY-026 flame sensor hobby-grade hai, safety ke liye nahi.\nSave karo apne next project ke liye.\nComment mein batao, agla module kaun sa kholein?\n#flamesensor #arduino #electronics #geyser #hindi",
+    "tiktok": "Lau bujhi to geyser gas kaise band karta hai? 🔥 Thermocouple ka kamaal! #flamesensor #arduino #electronics #geyser #hindi"
+  }
+}

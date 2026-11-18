@@ -84,11 +84,6 @@
       "topic": "Room humidity: why 30°C feels sticky but 30°C feels fine",
       "hook": "Same 30 degrees, but one day feels sticky. Here's why.",
       "module": "dht"
-    },
-    {
-      "topic": "Gas geyser that cuts off gas when the flame goes out",
-      "hook": "What if the flame goes out? The geyser knows and shuts the gas.",
-      "module": "flame"
     }
   ],
   "done": [
@@ -151,6 +146,7 @@
     "Temperature or flame sensor that reacts to heat",
     "Sound sensor module that reacts to voice",
     "Kitchen chimney that turns on when smoke rises",
-    "Smart plant pot that knows when to drink water"
+    "Smart plant pot that knows when to drink water",
+    "Gas geyser that cuts off gas when the flame goes out"
   ]
 }

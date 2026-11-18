@@ -1,5 +1,5 @@
 {
-  "updated": "18 Nov 2026, 16:46",
+  "updated": "19 Nov 2026, 00:17",
   "youtube": {
     "subs": 7,
     "views": 4248,
@@ -9,7 +9,7 @@
         "id": "LHrAN458UdQ",
         "status": "public",
         "published": "2026-11-18",
-        "views": 0,
+        "views": 3,
         "likes": 0,
         "comments": 0
       },
@@ -27,7 +27,7 @@
         "id": "R2vtN8SNb0s",
         "status": "public",
         "published": "2026-11-16",
-        "views": 11,
+        "views": 15,
         "likes": 1,
         "comments": 2
       },
@@ -45,7 +45,7 @@
         "id": "mwkkbwpqwEw",
         "status": "public",
         "published": "2026-11-14",
-        "views": 42,
+        "views": 43,
         "likes": 0,
         "comments": 0
       },
@@ -565,12 +565,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-21",
-        "views": 163,
-        "minutes": 21,
-        "subs": 0
-      },
-      {
         "day": "2026-10-22",
         "views": 70,
         "minutes": 12,
@@ -732,10 +726,10 @@
         "published": "2026-11-18",
         "likes": 1,
         "comments": 0,
-        "reach": 113,
-        "views": 134,
+        "reach": 118,
+        "views": 139,
         "saved": 0,
-        "shares": 0
+        "shares": 24
       },
       {
         "title": "Chimney dhuan dekhti nahi, bas garam resistor hai 🔥",
@@ -743,8 +737,8 @@
         "published": "2026-11-17",
         "likes": 9,
         "comments": 0,
-        "reach": 319,
-        "views": 359,
+        "reach": 321,
+        "views": 360,
         "saved": 0,
         "shares": 0
       },
