@@ -753,9 +753,15 @@
     "id": "LHrAN458UdQ",
     "meta": "channel/videos/td3-smart-plant-pot-soil-sensor.json",
     "date": "2026-11-16",
-    "status": "approved",
+    "status": "published",
     "topic": "Smart plant pot that knows when to drink water",
     "job": "20261116-155627",
-    "postAt": "2026-11-18T15:00"
+    "postAt": "2026-11-18T15:00",
+    "published": {
+      "youtube": "2026-11-18",
+      "instagram": "https://www.instagram.com/reel/Df4MCJmjehQ/",
+      "facebook": "https://www.facebook.com/reel/1524073259561859/"
+    },
+    "postedAt": "2026-11-18T15:02"
   }
 ]
