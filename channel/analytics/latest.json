@@ -1,9 +1,18 @@
 {
-  "updated": "18 Nov 2026, 00:29",
+  "updated": "18 Nov 2026, 16:46",
   "youtube": {
     "subs": 7,
-    "views": 4230,
+    "views": 4248,
     "videos": [
+      {
+        "title": "Soil sensor paani nahi napta, sirf ye napta hai 🌱 #shorts",
+        "id": "LHrAN458UdQ",
+        "status": "public",
+        "published": "2026-11-18",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Chimney dhuan dekhti nahi, bas garam resistor hai 🔥 #shorts",
         "id": "RvZwCQeoq5s",
@@ -14,20 +23,11 @@
         "comments": 0
       },
       {
-        "title": "Soil sensor paani nahi napta, sirf ye napta hai 🌱 #shorts",
-        "id": "LHrAN458UdQ",
-        "status": "private",
-        "published": "2026-11-16",
-        "views": 0,
-        "likes": 0,
-        "comments": 0
-      },
-      {
         "title": "KY-038 awaaz nahi, sirf shor pehchanta hai 🎤 #shorts",
         "id": "R2vtN8SNb0s",
         "status": "public",
         "published": "2026-11-16",
-        "views": 10,
+        "views": 11,
         "likes": 1,
         "comments": 2
       },
@@ -36,7 +36,7 @@
         "id": "EoJfsTY2Pmc",
         "status": "public",
         "published": "2026-11-15",
-        "views": 32,
+        "views": 33,
         "likes": 0,
         "comments": 0
       },
@@ -63,7 +63,7 @@
         "id": "m2busj2Fu4c",
         "status": "public",
         "published": "2026-11-12",
-        "views": 52,
+        "views": 54,
         "likes": 2,
         "comments": 2
       },
@@ -81,7 +81,7 @@
         "id": "MR1GGw3DNNM",
         "status": "public",
         "published": "2026-11-09",
-        "views": 24,
+        "views": 25,
         "likes": 2,
         "comments": 2
       },
@@ -351,7 +351,7 @@
         "id": "jD5lPQq_aQo",
         "status": "public",
         "published": "2026-10-23",
-        "views": 28,
+        "views": 33,
         "likes": 0,
         "comments": 0
       },
@@ -459,7 +459,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 565,
+        "views": 568,
         "likes": 9,
         "comments": 2
       },
@@ -584,7 +584,7 @@
       },
       {
         "day": "2026-10-24",
-        "views": 50,
+        "views": 51,
         "minutes": 8,
         "subs": 0
       },
@@ -713,21 +713,38 @@
         "views": 40,
         "minutes": 5,
         "subs": 0
+      },
+      {
+        "day": "2026-11-15",
+        "views": 49,
+        "minutes": 5,
+        "subs": 0
       }
     ]
   },
   "instagram": {
     "username": "echo.lab3d",
-    "followers": 24,
+    "followers": 25,
     "posts": [
+      {
+        "title": "Tumhara plant bol nahi sakta, phir paani kaise maangta hai? 🌱",
+        "url": "https://www.instagram.com/reel/Df4MCJmjehQ/",
+        "published": "2026-11-18",
+        "likes": 1,
+        "comments": 0,
+        "reach": 113,
+        "views": 134,
+        "saved": 0,
+        "shares": 0
+      },
       {
         "title": "Chimney dhuan dekhti nahi, bas garam resistor hai 🔥",
         "url": "https://www.instagram.com/reel/Df1sl2eFGsO/",
         "published": "2026-11-17",
-        "likes": 3,
+        "likes": 9,
         "comments": 0,
-        "reach": 227,
-        "views": 258,
+        "reach": 319,
+        "views": 359,
         "saved": 0,
         "shares": 0
       },
@@ -735,10 +752,10 @@
         "title": "Ye module awaaz nahi, sirf shor pehchanta hai 🎤",
         "url": "https://www.instagram.com/reel/Dfy7i_YlK93/",
         "published": "2026-11-16",
-        "likes": 2,
+        "likes": 3,
         "comments": 0,
-        "reach": 146,
-        "views": 170,
+        "reach": 147,
+        "views": 171,
         "saved": 1,
         "shares": 0
       },
@@ -746,10 +763,10 @@
         "title": "Ye sensor aag nahi dekhta, bas garmi pakadta hai 🔥",
         "url": "https://www.instagram.com/reel/Dfwg517jrC5/",
         "published": "2026-11-15",
-        "likes": 30,
+        "likes": 31,
         "comments": 4,
-        "reach": 1094,
-        "views": 1205,
+        "reach": 1095,
+        "views": 1206,
         "saved": 10,
         "shares": 1
       },
@@ -757,10 +774,10 @@
         "title": "PIR sensor dekhta nahi, sirf garmi ka change pakadta hai 🔥",
         "url": "https://www.instagram.com/reel/DftyCAAjBRx/",
         "published": "2026-11-14",
-        "likes": 13,
+        "likes": 14,
         "comments": 0,
         "reach": 852,
-        "views": 971,
+        "views": 972,
         "saved": 2,
         "shares": 0
       },
@@ -768,10 +785,10 @@
         "title": "Dustbin haath pe khulta hai, bag pe nahi? 🗑️",
         "url": "https://www.instagram.com/reel/DfrrjI8FHUj/",
         "published": "2026-11-13",
-        "likes": 18,
+        "likes": 19,
         "comments": 0,
-        "reach": 537,
-        "views": 604,
+        "reach": 538,
+        "views": 605,
         "saved": 2,
         "shares": 0
       },
@@ -779,10 +796,10 @@
         "title": "Button dabana nahi padta, bas chhoona hai... ya sach mein? 🔥",
         "url": "https://www.instagram.com/reel/DfptwvjFC1z/",
         "published": "2026-11-12",
-        "likes": 7,
+        "likes": 8,
         "comments": 2,
-        "reach": 281,
-        "views": 302,
+        "reach": 282,
+        "views": 303,
         "saved": 2,
         "shares": 0
       },
@@ -792,8 +809,8 @@
         "published": "2026-11-12",
         "likes": 4,
         "comments": 4,
-        "reach": 126,
-        "views": 142,
+        "reach": 127,
+        "views": 143,
         "saved": 0,
         "shares": 0
       },
@@ -803,8 +820,8 @@
         "published": "2026-11-05",
         "likes": 11,
         "comments": 2,
-        "reach": 1180,
-        "views": 1402,
+        "reach": 1182,
+        "views": 1403,
         "saved": 2,
         "shares": 3
       },
@@ -812,10 +829,10 @@
         "title": "Seedhi ki light khud kaise jalti hai? 💡",
         "url": "https://www.instagram.com/reel/DfUJ0TCDH5O/",
         "published": "2026-11-04",
-        "likes": 15,
+        "likes": 16,
         "comments": 0,
         "reach": 1088,
-        "views": 1311,
+        "views": 1314,
         "saved": 4,
         "shares": 1
       },
@@ -983,17 +1000,6 @@
         "views": 757,
         "saved": 3,
         "shares": 2
-      },
-      {
-        "title": "Ultrasonic Sensor Awaaz Se Kaise Dekhta Hai? 🦇",
-        "url": "https://www.instagram.com/reel/Dev0l7zCXEb/",
-        "published": "2026-10-21",
-        "likes": 2,
-        "comments": 0,
-        "reach": 135,
-        "views": 158,
-        "saved": 0,
-        "shares": 0
       }
     ]
   }

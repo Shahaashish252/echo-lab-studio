@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-18T00:13",
-  "videos": 32,
-  "summary": "Instagram is carrying the channel: almost every video gets roughly 700-1,400 views there, while YouTube Shorts mostly gets under 60 views. The best performers use a 'X doesn't see/hear, it only senses Y' hook, robots and clap switches, and the oldest videos on YouTube (Oct 29-Nov 5) got the most views there. Plain question titles like 'How does X work?' about public-place gadgets (taps, lifts, doors, smoke alarms) and the English video do poorly, and several videos never reached Instagram at all.",
-  "winningPattern": "Hindi, surprising 'doesn't X, only Y' statements about a relatable sensor-based thing (robot, clap switch, mic, DHT11 heat sensor), with an emoji and #shorts, posted mainly on Instagram. Robots and sound-triggered gadgets get the most saves and shares; the title gives a myth-busting twist, not a plain question.",
+  "updated": "2026-11-18T16:26",
+  "videos": 33,
+  "summary": "Instagram is carrying the channel: almost every Hindi video gets 1,000+ views there, while YouTube Shorts mostly stays under 100 views. The best videos are the 'X doesn't see/hear, it only senses Y' myth-busting ones (robot falling without gyro, clap switch hearing noise not claps), which also earn the most likes, saves and shares. Generic 'How does X work?' titles about everyday places (lift, tap, mall door, smoke detector) get weak results on both platforms, and several videos have no Instagram numbers at all.",
+  "winningPattern": "A single relatable gadget or hobby-robot (clap switch, gyro robot, IR robot, DHT11, mic) with a surprising 'it doesn't do what you think' hook in Hinglish, e.g. 'X ko Y nahi dikhta, sirf Z karta hai' or 'X ke bina Y turant gir jata'. Short, curiosity-driven titles with one emoji, posted mainly on Instagram Reels, where reach is ~1,000-1,200 per video. On YouTube only the clap switch and gyro robot did decently (400-680 views), so Maker-project topics with a visible demo beat explainer topics.",
   "doMore": [
-    "Make robot and clap-switch style demos: show the gadget failing or reacting in a surprising way, with a visible result",
-    "Use the 'Ye X nahi, sirf Y' contrast hook in the first line on screen",
-    "Post every video on Instagram too, since YouTube-only videos get no Instagram reach",
-    "Make follow-ups or part 2s of the top videos (gyro robot, clap switch, IR robot) and the shareable ones",
-    "End with a prompt to save or share (e.g. 'Kisi maker dost ko bhejo') to boost saves and shares"
+    "Use the 'doesn't X, only Y' myth-flip hook, naming the surprising real mechanism in the title",
+    "Make follow-ups to the winners: gyro/balancing robot, clap switch variants, line follower, IR robot obstacle avoidance",
+    "Show a physical demo (robot falling, clap triggering light) in the first 2 seconds",
+    "Post every video on both platforms; 8 videos have zero Instagram numbers, so cross-post them",
+    "Prompt saves and shares with a closing line like 'Save this for your next Arduino project'"
   ],
   "stopDoing": [
-    "Plain 'Kaise kaam karta hai?' titles on everyday public gadgets like taps, lifts and malls doors",
-    "Posting near-duplicate topics (three clap switch, four IR/PIR, two smoke videos) in the same month",
-    "Posting English or YouTube-only videos until the Hindi Instagram formula is steady"
+    "Generic 'X Kaise Kaam Karta Hai? 🤔' titles for public-place gadgets (lift, tap, mall door, street light)",
+    "Repeating the same topic within days (3 smoke/IR/PIR/heat-sensor near-duplicates split the audience and dilute results)",
+    "Posting English-language videos on a Hindi channel without a plan, as the single English video got no Instagram traction"
   ],
   "nextTopics": [
-    "Self-balancing robot without a gyro",
-    "Obstacle avoiding robot with a broken sensor",
-    "Light-following robot using LDR",
-    "Sound-controlled LED with a mic module",
-    "Ultrasonic sensor fooled by a soft cloth"
+    "Self-balancing robot without gyro",
+    "Arduino buzzer that only hears whistles",
+    "Ultrasonic sensor on a robot",
+    "Line follower with one sensor removed",
+    "Soil moisture sensor truth"
   ],
   "bestTimes": {
     "times": [
-      "15:00",
-      "21:00"
+      "14:00",
+      "19:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (31 posts)"
+    "reason": "from our own posts: these hours averaged the most views (32 posts)"
   }
 }
