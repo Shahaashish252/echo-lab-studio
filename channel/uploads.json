@@ -788,5 +788,14 @@
     "topic": "RO water purifier TDS meter: how it measures water purity",
     "job": "20261119-163227",
     "postAt": "2026-11-20T15:00"
+  },
+  {
+    "id": "p_7arWjyrFI",
+    "meta": "channel/videos/td3-ml8511-uv-sensor-explained.json",
+    "date": "2026-11-20",
+    "status": "approved",
+    "topic": "UV index sensor: how it measures sun's UV strength",
+    "job": "20261119-235750",
+    "postAt": "2026-11-21T15:00"
   }
 ]

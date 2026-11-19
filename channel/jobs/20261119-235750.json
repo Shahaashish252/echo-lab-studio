@@ -4,7 +4,7 @@
   "hook": "Badal ho to bhi sunburn kyun lagta hai? ☀️",
   "lang": "hi",
   "started": "2026-11-19T23:57:50",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research & storyboard: \"UV index sensor: how it measures sun's UV strength (open with this hook: \"Badal ho to bhi sunburn kyun lagta hai? ☀️\")\" (uv_ml8511, Claude)",
@@ -36,5 +36,7 @@
     }
   ],
   "format": "teardown3",
-  "module": "uv_ml8511"
+  "module": "uv_ml8511",
+  "finished": "2026-11-20T00:17:32",
+  "uploadId": "p_7arWjyrFI"
 }

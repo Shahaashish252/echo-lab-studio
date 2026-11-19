@@ -1,0 +1,46 @@
+{
+  "file": "out/auto/ml8511-uv-sensor-explained.mp4",
+  "title": "Badal mein bhi sunburn kyun? UV sensor ka sach ☀️ #shorts",
+  "description": "Badal ho to bhi sunburn kyun lagta hai? UV-A ozone se ruke bina zameen tak pahunchti hai.\nML8511 sensor wahi UV pakadta hai, aur voltage mein badal deta hai.\n☀️ Sensor 280-390 nm light pakadta hai\n⚡ Output 1 V (no UV) se 2.8 V (15 mW/cm2) tak\n🔌 3.3 V reference aur 8 readings ka average lo\n🧪 Ye raw UV intensity hai, official UV index nahi\nEcho Lab 3D ko subscribe karo, aur sensors kholke dekhte hain!\n#shorts #ML8511 #UVsensor #Arduino #Electronics #Maker #Hindi #EchoLab3D\n\nSources:\nhttps://en.wikipedia.org/wiki/Ultraviolet_index\nhttps://en.wikipedia.org/wiki/Ultraviolet\nhttps://github.com/whitecatboard/whitecat-ide/wiki/Sensor:-ML8511-SENSOR\nhttps://elecrow.com/wiki/uv-sensor-ml8511.html",
+  "sources": [
+    "https://en.wikipedia.org/wiki/Ultraviolet_index",
+    "https://en.wikipedia.org/wiki/Ultraviolet",
+    "https://github.com/whitecatboard/whitecat-ide/wiki/Sensor:-ML8511-SENSOR",
+    "https://elecrow.com/wiki/uv-sensor-ml8511.html",
+    "https://wiki.dfrobot.com/sen0175/docs/18143",
+    "https://www.circuits-diy.com/interfacing-ml8511-uv-sensor-module-with-arduino/",
+    "https://www.who.int/news-room/questions-and-answers/item/radiation-the-ultraviolet-(uv)-index"
+  ],
+  "tags": [
+    "ML8511",
+    "UV sensor Arduino",
+    "UV index sensor",
+    "ML8511 Arduino Hindi",
+    "UV sensor kaise kaam karta hai",
+    "badal mein sunburn",
+    "UV-A UV-B",
+    "Arduino sensor project",
+    "analog sensor Arduino",
+    "photodiode UV",
+    "weather station sensor",
+    "Echo Lab 3D",
+    "electronics hindi",
+    "maker projects india",
+    "Arduino module teardown"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "Badal ho to bhi sunburn kyun lagta hai?",
+  "format": "teardown3",
+  "captions": "out/auto/ml8511-uv-sensor-explained.srt",
+  "social": {
+    "instagram": "Badal mein bhi sunburn kyun lagta hai? ☀️\nML8511 andar se UV-A aur UV-B pakadta hai.\nOutput 1 V se 2.8 V tak jaata hai, yaani 0 se 15 mW/cm2.\nYe raw UV intensity hai, official UV index nahi.\nSave karo ye apne next project ke liye.\nComment mein batao, agla sensor kaun sa kholein?\n#ML8511 #Arduino #UVsensor #EchoLab3D #MakerIndia",
+    "tiktok": "Badal mein bhi sunburn kyun? ☀️ ML8511 UV sensor ka sach #ML8511 #Arduino #UVsensor #Electronics #EchoLab3D"
+  }
+}

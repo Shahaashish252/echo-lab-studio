@@ -1,15 +1,24 @@
 {
-  "updated": "19 Nov 2026, 17:16",
+  "updated": "20 Nov 2026, 00:17",
   "youtube": {
     "subs": 7,
     "views": 4273,
     "videos": [
       {
+        "title": "TDS meter solids nahi ginta, sirf current naapta hai! 💧 #shorts",
+        "id": "bdsbTntxpVg",
+        "status": "private",
+        "published": "2026-11-19",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
+      {
         "title": "Geyser ki gas band karta hai chip nahi, thermocouple! 🔥 #shorts",
         "id": "6H2l1IC15PA",
         "status": "public",
         "published": "2026-11-19",
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0
       },
@@ -18,7 +27,7 @@
         "id": "LHrAN458UdQ",
         "status": "public",
         "published": "2026-11-18",
-        "views": 11,
+        "views": 12,
         "likes": 0,
         "comments": 0
       },
@@ -36,7 +45,7 @@
         "id": "R2vtN8SNb0s",
         "status": "public",
         "published": "2026-11-16",
-        "views": 16,
+        "views": 17,
         "likes": 1,
         "comments": 2
       },
@@ -72,7 +81,7 @@
         "id": "m2busj2Fu4c",
         "status": "public",
         "published": "2026-11-12",
-        "views": 55,
+        "views": 57,
         "likes": 2,
         "comments": 2
       },
@@ -574,12 +583,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-22",
-        "views": 70,
-        "minutes": 12,
-        "subs": 0
-      },
-      {
         "day": "2026-10-23",
         "views": 30,
         "minutes": 6,
@@ -741,8 +744,8 @@
         "published": "2026-11-19",
         "likes": 1,
         "comments": 0,
-        "reach": 120,
-        "views": 137,
+        "reach": 123,
+        "views": 142,
         "saved": 0,
         "shares": 0
       },

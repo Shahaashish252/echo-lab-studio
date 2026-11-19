@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-19T16:31",
+  "updated": "2026-11-19T23:57",
   "videos": 34,
-  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000-1,400 views there, while YouTube Shorts mostly get under 60 views. The best videos pair a common gadget or robot with a surprising 'it doesn't see/hear/feel what you think' hook, like the gyro robot, clap switch and IR robot. Generic 'How does X work?' titles and very new posts do poorly, and the soil sensor video got almost no views but 24 shares, so it has potential.",
-  "winningPattern": "Instagram-first Hindi Reels about a relatable robot or sensor (gyro, clap switch, IR, DHT11, mic) with a myth-busting hook: 'X doesn't do Y, it only does Z'. Short Hinglish titles with one emoji, a visible robot or demo, and a clear surprise in the first second. Saves and shares come from 'aha' explanations and robot demos, not from plain 'how does it work' questions.",
+  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000-1,400 views there, while YouTube Shorts mostly get under 60 views. The best performers are short 'X doesn't do what you think, it only does Y' explainers on relatable robots and sensors (gyro robot, clap switch, IR robot, DHT11). Generic 'How does X work?' titles on everyday items (taps, lift, mall door, smoke alarm) and the one English video do poorly, and some videos have no Instagram numbers at all.",
+  "winningPattern": "Hindi, Instagram-first Reels about a hands-on maker subject (robots, clap switch, DHT11, mic) with a myth-busting contrast hook like 'X doesn't see/hear Y, it only senses Z' or 'Without X this robot falls instantly'. Titles are short and punchy with one emoji, and a surprising concrete claim rather than a plain question. Robot and Arduino-module topics get the most saves and shares; the contrast hook gets the most likes.",
   "doMore": [
-    "Use the 'doesn't see/hear/feel, only does Z' hook on every video",
-    "Feature robots and the clap switch: they get the most saves and shares",
-    "Post Instagram first and keep Hindi titles in Hinglish",
-    "Make follow-ups to winners, such as a clap switch part 3 and gyro robot variants",
-    "Test the soil sensor topic again with a stronger visual, since its shares were high (24) but views low"
+    "Use the 'doesn't do A, only does B' contrast hook in the first line of every video",
+    "Make more robot and Arduino-module videos (gyro, IR, line follower, clap switch), since they get the most saves and shares",
+    "Post every video on Instagram Reels first, then repost to YouTube with a stronger first 2 seconds",
+    "End with a clear save/share prompt, like 'Save this for your next project', since saves and shares signal value",
+    "Make follow-ups of winners, like a clap switch part 3 or a gyro robot demo, as the clap switch series did well"
   ],
   "stopDoing": [
-    "Generic 'Kaise kaam karta hai? 🤔' titles with no surprise",
-    "Posting on YouTube only, which gets near-zero reach",
-    "Near-duplicate topics (smoke detector, IR darkness, automatic tap) that split the audience"
+    "Plain 'X Kaise Kaam Karta Hai?' question titles on everyday items like taps, lifts and doors",
+    "Posting videos on only one platform, since several have zero Instagram data",
+    "Publishing near-duplicate topics (smoke alarm, IR sensor, tap) with little new angle"
   ],
   "nextTopics": [
-    "Self-balancing robot without a gyro",
-    "Obstacle-avoiding robot using ultrasonic",
-    "Line follower robot failure on a black table",
-    "Soil moisture sensor measures resistance",
-    "Clap switch fooled by a whistle or tap"
+    "Ultrasonic sensor robot stopping before a wall",
+    "Servo motor holding its position",
+    "LDR light sensor in an Arduino night lamp",
+    "Accelerometer and tilt in a self-balancing robot",
+    "Bluetooth HC-05 module controlling a robot car"
   ],
   "bestTimes": {
     "times": [
