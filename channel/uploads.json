@@ -768,9 +768,16 @@
     "id": "6H2l1IC15PA",
     "meta": "channel/videos/td3-geyser-flame-failure-safety.json",
     "date": "2026-11-19",
-    "status": "approved",
+    "status": "published",
     "topic": "Gas geyser that cuts off gas when the flame goes out",
     "job": "20261118-234756",
-    "postAt": "2026-11-19T15:00"
+    "postAt": "2026-11-19T15:00",
+    "published": {
+      "youtube": "2026-11-19",
+      "instagram": "https://www.instagram.com/reel/Df6wzcEko4d/",
+      "instagram_story": "18222232192350282",
+      "facebook": "https://www.facebook.com/reel/1669519458202970/"
+    },
+    "postedAt": "2026-11-19T15:03"
   }
 ]
