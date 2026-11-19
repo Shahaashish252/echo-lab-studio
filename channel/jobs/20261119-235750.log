@@ -12,3 +12,36 @@
   Badal mein bhi sunburn kyun? UV sensor ka sach ☀️ #shorts
 
 == voice (local Hindi: Piper pratham)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+Downloading numpy (15.0MiB)
+Downloading soundfile (1.3MiB)
+Downloading onnxruntime (26.5MiB)
+Downloading piper-tts (32.6MiB)
+ Downloaded soundfile
+ Downloaded onnxruntime
+ Downloaded numpy
+ Downloaded piper-tts
+Installed 12 packages in 15ms
+[0;93m2026-11-20 00:02:08.009745985 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  downloading hi_IN-pratham-medium.onnx
+  downloading hi_IN-pratham-medium.onnx.json
+  a1    2.19s  बादल हो तो भी सनबर्न क्यों लगता है?
+  a2    3.60s  सिर्फ़ दो सौ अस्सी से तीन सौ नब्बे नैनोमीटर पकड़ता है।
+  a3    2.89s  अंदर फोटोडायोड है, जो यू वी पकड़ता है।
+  a4    2.46s  यू वी ए ज़्यादातर ज़मीन तक पहुँचती है।
+  a5    3.17s  चिप का एम्पलीफायर छोटे करंट को वोल्टेज बनाता है।
+  a6    2.44s  ई एन पिन हाई, तो सेंसर चालू।
+  b1    3.29s  यू वी फोटॉन फोटोडायोड में छोटा करंट बनाते हैं।
+  b2    2.87s  एम्पलीफायर उसे एनालॉग वोल्टेज बना देता है।
+  b3    3.48s  अँधेरे में एक वोल्ट, धूप में दो दशमलव आठ।
+  b4    3.11s  यू वी जितनी तेज़, फोटो करंट उतना ज़्यादा।
+  b5    3.50s  एक से दो दशमलव आठ वोल्ट बराबर शून्य से पंद्रह।
+  b6    2.94s  दो दशमलव आठ वोल्ट यानी पंद्रह मिलीवाट।
+  c1    3.19s  पंद्रह मिलीवाट के ऊपर आउटपुट सैचुरेट हो जाता है।
+  c2    3.66s  फोन, वॉच और वेदर स्टेशन में यही इस्तेमाल होता है।
+  c3    3.77s  सप्लाई अस्थिर या कैलिब्रेशन अलग, तो रीडिंग बिगड़ती है।
+  c4    3.69s  तीन दशमलव तीन वोल्ट रेफरेंस लो, आठ रीडिंग औसत।
+  c5    3.30s  सेव करो, और कमेंट में बताओ, कौन सा सेंसर अगला?
+  voice (Piper pratham, local) 53.5s at length 1.05
+
+== 3D model + drawings (render tools)
