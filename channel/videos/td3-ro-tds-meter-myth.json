@@ -1,0 +1,42 @@
+{
+  "file": "out/auto/ro-tds-meter-myth.mp4",
+  "title": "TDS meter solids nahi ginta, sirf current naapta hai! 💧 #shorts",
+  "description": "RO ka paani saaf dikhta hai, par kitna saaf hai?\nTDS meter solids nahi ginta, sirf conductivity naapta hai.\n🔬 Do metal needles paani ka conductivity naapti hain\n📈 Zyada namak, zyada conductivity, zyada voltage\n🌡️ Temperature se reading badalti hai, 25 °C default\n⚠️ Low TDS ka matlab safe paani nahi hota\nSubscribe karo Echo Lab 3D ke liye!\n#shorts #TDS #RO #Arduino #WaterQuality #Electronics #EchoLab3D #Sensors\n\nSources:\nhttps://en.wikipedia.org/wiki/Total_dissolved_solids\nhttps://randomnerdtutorials.com/arduino-tds-water-quality-sensor/\nhttps://wiki.dfrobot.com/sen0244/\nhttps://jcarr.codeberg.page/blog/posts/2024/tds_sensor_arduino.html",
+  "sources": [
+    "https://en.wikipedia.org/wiki/Total_dissolved_solids",
+    "https://randomnerdtutorials.com/arduino-tds-water-quality-sensor/",
+    "https://wiki.dfrobot.com/sen0244/",
+    "https://jcarr.codeberg.page/blog/posts/2024/tds_sensor_arduino.html",
+    "https://wiki.dfrobot.com/sen0244/docs/20305"
+  ],
+  "tags": [
+    "TDS meter kaise kaam karta hai",
+    "RO TDS meter",
+    "TDS sensor Arduino",
+    "TDS sensor SEN0244",
+    "water quality sensor",
+    "TDS meter Hindi",
+    "RO water purifier TDS",
+    "conductivity TDS",
+    "Arduino water sensor",
+    "TDS kya hota hai",
+    "DFRobot TDS sensor",
+    "electronics for students",
+    "Echo Lab 3D"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "RO ka paani saaf, par kitna saaf? 🤔",
+  "format": "teardown3",
+  "captions": "out/auto/ro-tds-meter-myth.srt",
+  "social": {
+    "instagram": "RO ka paani saaf dikhta hai, par kitna saaf hai? 💧\nTDS meter solids nahi ginta, sirf conductivity naapta hai.\nLow reading ka matlab safe paani nahi, bacteria nahi dikhte.\nAccuracy sirf ±10%, aur temperature bhi matter karta hai.\nSave karo apne next Arduino project ke liye!\nComment mein batao: tumhare RO ka TDS kitna hai?\n#TDS #ROwater #Arduino #Electronics #EchoLab3D",
+    "tiktok": "TDS meter solids nahi ginta, sirf conductivity naapta hai! 💧 #TDS #RO #Arduino #Electronics #EchoLab3D"
+  }
+}

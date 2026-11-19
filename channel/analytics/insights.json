@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-18T23:47",
-  "videos": 33,
-  "summary": "Instagram is carrying the channel: most videos get 1,000+ views there, while YouTube Shorts mostly gets under 60 views. The best performers are short 'X doesn't do what you think, it does Y' explainers about common robot and sensor projects (gyro robot, clap switch, line follower), which also get the most likes and saves. Weak spots are generic 'How does X work?' question titles, plain everyday-device topics (lift, tap, smoke alarm), and videos posted to only one platform.",
-  "winningPattern": "Hindi, Instagram-first. Subject is a hands-on maker project or module (robot, clap switch, DHT11, mic) that viewers can build. Hook is a surprising contradiction: 'X can't do the obvious thing, it only does Y' or 'without Z the robot falls'. Titles are short, punchy Hinglish with one emoji, no jargon. Clap switch and robot-balance videos also did well on YouTube (500-680 views), so relatable, build-it-yourself topics work on both platforms.",
+  "updated": "2026-11-19T16:31",
+  "videos": 34,
+  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000-1,400 views there, while YouTube Shorts mostly get under 60 views. The best videos pair a common gadget or robot with a surprising 'it doesn't see/hear/feel what you think' hook, like the gyro robot, clap switch and IR robot. Generic 'How does X work?' titles and very new posts do poorly, and the soil sensor video got almost no views but 24 shares, so it has potential.",
+  "winningPattern": "Instagram-first Hindi Reels about a relatable robot or sensor (gyro, clap switch, IR, DHT11, mic) with a myth-busting hook: 'X doesn't do Y, it only does Z'. Short Hinglish titles with one emoji, a visible robot or demo, and a clear surprise in the first second. Saves and shares come from 'aha' explanations and robot demos, not from plain 'how does it work' questions.",
   "doMore": [
-    "Make robot and maker-project videos (balancing, line follower, obstacle avoidance) with a 'without this part it fails' hook",
-    "Use the 'doesn't do X, only does Y' title format, which beat plain 'How does X work?' titles",
-    "Post every video to both YouTube and Instagram; several videos have zero on one platform",
-    "Make follow-ups to winners, such as the clap switch series, with a new angle each time",
-    "End with a save or share prompt like 'save this for your next project', since saves and shares signal strong interest"
+    "Use the 'doesn't see/hear/feel, only does Z' hook on every video",
+    "Feature robots and the clap switch: they get the most saves and shares",
+    "Post Instagram first and keep Hindi titles in Hinglish",
+    "Make follow-ups to winners, such as a clap switch part 3 and gyro robot variants",
+    "Test the soil sensor topic again with a stronger visual, since its shares were high (24) but views low"
   ],
   "stopDoing": [
-    "Generic 'Kaise kaam karta hai?' titles on everyday devices like lift, tap, mall door, smoke alarm",
-    "Repeating the same topic with near-identical titles (several IR, tap, smoke, and clap videos overlap and compete)",
-    "Publishing English or single-platform videos that break the Hindi, both-platform routine"
+    "Generic 'Kaise kaam karta hai? 🤔' titles with no surprise",
+    "Posting on YouTube only, which gets near-zero reach",
+    "Near-duplicate topics (smoke detector, IR darkness, automatic tap) that split the audience"
   ],
   "nextTopics": [
-    "Self-balancing robot without PID",
-    "Obstacle avoiding robot with ultrasonic sensor",
-    "Light-following robot using LDR",
-    "Servo motor without a brain",
-    "Bluetooth car HC-05"
+    "Self-balancing robot without a gyro",
+    "Obstacle-avoiding robot using ultrasonic",
+    "Line follower robot failure on a black table",
+    "Soil moisture sensor measures resistance",
+    "Clap switch fooled by a whistle or tap"
   ],
   "bestTimes": {
     "times": [
       "15:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (32 posts)"
+    "reason": "from our own posts: these hours averaged the most views (33 posts)"
   }
 }

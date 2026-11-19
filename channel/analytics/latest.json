@@ -1,15 +1,24 @@
 {
-  "updated": "19 Nov 2026, 00:17",
+  "updated": "19 Nov 2026, 17:16",
   "youtube": {
     "subs": 7,
-    "views": 4248,
+    "views": 4273,
     "videos": [
+      {
+        "title": "Geyser ki gas band karta hai chip nahi, thermocouple! 🔥 #shorts",
+        "id": "6H2l1IC15PA",
+        "status": "public",
+        "published": "2026-11-19",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Soil sensor paani nahi napta, sirf ye napta hai 🌱 #shorts",
         "id": "LHrAN458UdQ",
         "status": "public",
         "published": "2026-11-18",
-        "views": 3,
+        "views": 11,
         "likes": 0,
         "comments": 0
       },
@@ -27,7 +36,7 @@
         "id": "R2vtN8SNb0s",
         "status": "public",
         "published": "2026-11-16",
-        "views": 15,
+        "views": 16,
         "likes": 1,
         "comments": 2
       },
@@ -36,7 +45,7 @@
         "id": "EoJfsTY2Pmc",
         "status": "public",
         "published": "2026-11-15",
-        "views": 33,
+        "views": 32,
         "likes": 0,
         "comments": 0
       },
@@ -63,7 +72,7 @@
         "id": "m2busj2Fu4c",
         "status": "public",
         "published": "2026-11-12",
-        "views": 54,
+        "views": 55,
         "likes": 2,
         "comments": 2
       },
@@ -252,7 +261,7 @@
         "id": "A4PXvpSAuqQ",
         "status": "public",
         "published": "2026-10-31",
-        "views": 678,
+        "views": 679,
         "likes": 4,
         "comments": 0
       },
@@ -459,7 +468,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 568,
+        "views": 571,
         "likes": 9,
         "comments": 2
       },
@@ -686,7 +695,7 @@
       },
       {
         "day": "2026-11-11",
-        "views": 20,
+        "views": 18,
         "minutes": 3,
         "subs": 1
       },
@@ -713,21 +722,38 @@
         "views": 49,
         "minutes": 5,
         "subs": 0
+      },
+      {
+        "day": "2026-11-16",
+        "views": 20,
+        "minutes": 3,
+        "subs": 1
       }
     ]
   },
   "instagram": {
     "username": "echo.lab3d",
-    "followers": 25,
+    "followers": 26,
     "posts": [
+      {
+        "title": "Geyser ki gas lau bujhte hi band kyun ho jati hai? 🔥",
+        "url": "https://www.instagram.com/reel/Df6wzcEko4d/",
+        "published": "2026-11-19",
+        "likes": 1,
+        "comments": 0,
+        "reach": 120,
+        "views": 137,
+        "saved": 0,
+        "shares": 0
+      },
       {
         "title": "Tumhara plant bol nahi sakta, phir paani kaise maangta hai? 🌱",
         "url": "https://www.instagram.com/reel/Df4MCJmjehQ/",
         "published": "2026-11-18",
-        "likes": 1,
+        "likes": 2,
         "comments": 0,
-        "reach": 118,
-        "views": 139,
+        "reach": 120,
+        "views": 141,
         "saved": 0,
         "shares": 24
       },
@@ -737,8 +763,8 @@
         "published": "2026-11-17",
         "likes": 9,
         "comments": 0,
-        "reach": 321,
-        "views": 360,
+        "reach": 322,
+        "views": 361,
         "saved": 0,
         "shares": 0
       },
@@ -759,8 +785,8 @@
         "published": "2026-11-15",
         "likes": 31,
         "comments": 4,
-        "reach": 1095,
-        "views": 1206,
+        "reach": 1097,
+        "views": 1207,
         "saved": 10,
         "shares": 1
       },
@@ -983,17 +1009,6 @@
         "views": 140,
         "saved": 2,
         "shares": 0
-      },
-      {
-        "title": "Street light ko andhera kaise pata chalta hai? 💡",
-        "url": "https://www.instagram.com/reel/DeyZePtCfOH/",
-        "published": "2026-10-22",
-        "likes": 11,
-        "comments": 0,
-        "reach": 682,
-        "views": 757,
-        "saved": 3,
-        "shares": 2
       }
     ]
   }

@@ -84,6 +84,41 @@
       "topic": "Room humidity: why 30°C feels sticky but 30°C feels fine",
       "hook": "Same 30 degrees, but one day feels sticky. Here's why.",
       "module": "dht"
+    },
+    {
+      "topic": "UV index sensor: how it measures sun's UV strength",
+      "hook": "Badal ho to bhi sunburn kyun lagta hai? ☀️",
+      "module": "uv_ml8511"
+    },
+    {
+      "topic": "Breathalyser sensor: how it smells alcohol in breath",
+      "hook": "Sharab ki bu ko sensor kaise sunghta hai? 🍺",
+      "module": "mq3"
+    },
+    {
+      "topic": "Classroom CO2 monitor: why a crowded room makes you sleepy",
+      "hook": "Class mein neend kyun aati hai? CO2 ka raaz 🤔",
+      "module": "mhz19"
+    },
+    {
+      "topic": "Earthquake sensor: how a coil feels ground shaking",
+      "hook": "Zameen ki halchal ek coil kaise pakadti hai? 🌍",
+      "module": "geophone"
+    },
+    {
+      "topic": "Phone battery percentage: how the phone measures battery charge",
+      "hook": "Phone ka 47% kaise likha aata hai? Sensor ka hisaab 🔋",
+      "module": "ina219"
+    },
+    {
+      "topic": "Gas lighter click: how a crystal makes a spark without a battery",
+      "hook": "Lighter ka click chingari kaise banata hai? 🔥",
+      "module": "piezo"
+    },
+    {
+      "topic": "Lie detector sweat sensor: how skin changes under stress",
+      "hook": "Jhooth bolne par haath kyun paseej jaate hain? 🤔",
+      "module": "gsr"
     }
   ],
   "done": [
@@ -147,6 +182,7 @@
     "Sound sensor module that reacts to voice",
     "Kitchen chimney that turns on when smoke rises",
     "Smart plant pot that knows when to drink water",
-    "Gas geyser that cuts off gas when the flame goes out"
+    "Gas geyser that cuts off gas when the flame goes out",
+    "RO water purifier TDS meter: how it measures water purity"
   ]
 }
