@@ -1,0 +1,16 @@
+{
+  "id": "20261119-163227",
+  "topic": "RO water purifier TDS meter: how it measures water purity",
+  "hook": "RO ka paani saaf dikhta hai, par kitna saaf hai? 🤔",
+  "lang": "hi",
+  "started": "2026-11-19T16:32:27",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research & storyboard: \"RO water purifier TDS meter: how it measures water purity (open with this hook: \"RO ka paani saaf dikhta hai, par kitna saaf hai? 🤔\")\" (tds, Claude)",
+      "at": "2026-11-19T16:32:27"
+    }
+  ],
+  "format": "teardown3",
+  "module": "tds"
+}
