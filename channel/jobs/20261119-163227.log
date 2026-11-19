@@ -11,3 +11,36 @@
   TDS meter solids nahi ginta, sirf current naapta hai! 💧 #shorts
 
 == voice (local Hindi: Piper pratham)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+Downloading onnxruntime (26.5MiB)
+Downloading numpy (15.0MiB)
+Downloading soundfile (1.3MiB)
+Downloading piper-tts (32.6MiB)
+ Downloaded soundfile
+ Downloaded numpy
+ Downloaded onnxruntime
+ Downloaded piper-tts
+Installed 12 packages in 16ms
+[0;93m2026-11-19 16:34:51.194695939 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  downloading hi_IN-pratham-medium.onnx
+  downloading hi_IN-pratham-medium.onnx.json
+  a1    2.96s  आर ओ का पानी साफ दिखता, पर कितना साफ?
+  a2    2.37s  रेंज: शून्य से हज़ार पी पी एम।
+  a3    2.56s  प्रोब की दो धातु सुइयां पानी में डूबती हैं।
+  a4    3.17s  यह सॉलिड नहीं गिनता, सिर्फ कंडक्टिविटी नापता है!
+  a5    3.12s  बोर्ड सुइयों पर छोटा सिग्नल लगाकर करंट नापता है।
+  a6    2.93s  तीन पिन: जी एन डी, वी सी सी, ए।
+  b1    2.96s  नमक आयन बनकर पानी में करंट चलने देता है।
+  b2    2.94s  बोर्ड एनालॉग वोल्टेज देता है, पल्स नहीं।
+  b3    3.62s  अरडुइनो हर चालीस मिलीसेकंड सैंपल लेता, तीस रखता।
+  b4    3.97s  ज़्यादा घुला नमक, ज़्यादा कंडक्टिविटी, ज़्यादा वोल्टेज।
+  b5    2.39s  टी डी एस बराबर के ई गुणा ई सी।
+  b6    3.19s  पच्चीस डिग्री पर सुधार एक है, वोल्टेज वही।
+  c1    3.53s  प्लस माइनस दस प्रतिशत सटीक, हज़ार पी पी एम तक।
+  c2    3.81s  आर ओ फ़िल्टर, पानी मॉनिटर, अरडुइनो प्रोजेक्ट।
+  c3    3.08s  बैक्टीरिया नहीं दिखते; कम रीडिंग सुरक्षित नहीं।
+  c4    3.63s  तापमान सेंसर जोड़ो, वरना पच्चीस डिग्री मानेगा।
+  c5    3.45s  सेव करो, और कमेंट में अपना टी डी एस बताओ।
+  voice (Piper pratham, local) 53.7s at length 1.05
+
+== 3D model + drawings (render tools)
