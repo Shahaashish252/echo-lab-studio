@@ -12,3 +12,35 @@
   Breathalyzer sharab ko sunghta nahi, bas ye karta hai 🍺 #shorts
 
 == voice (local Hindi: Piper pratham)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+Downloading soundfile (1.3MiB)
+Downloading numpy (15.0MiB)
+Downloading onnxruntime (26.5MiB)
+Downloading piper-tts (32.6MiB)
+ Downloaded soundfile
+ Downloaded numpy
+ Downloaded onnxruntime
+ Downloaded piper-tts
+Installed 12 packages in 46ms
+  downloading hi_IN-pratham-medium.onnx
+  downloading hi_IN-pratham-medium.onnx.json
+  a1    2.67s  शराब की बू को सेंसर कैसे सूंघता है?
+  a2    3.14s  एम क्यू थ्री मॉड्यूल, पाँच वोल्ट पर चलता है।
+  a3    3.20s  ये सूंघता नहीं, टिन डाइऑक्साइड की परत है।
+  a4    2.84s  गरम रहता है, दो सौ से पाँच सौ डिग्री!
+  a5    3.05s  एल एम तीन नौ तीन कंपेरेटर चुनता है ट्रिगर।
+  a6    2.86s  पीछे चिप, ए ज़ीरो को डी ज़ीरो बनाती है।
+  b1    2.35s  पहले वार्म-अप: पाँच से दस मिनट रुको।
+  b2    2.80s  अल्कोहल बढ़ा तो ए ज़ीरो का वोल्टेज बढ़ता है।
+  b3    2.61s  पोट के थ्रेशोल्ड से ऊपर, डी ज़ीरो लो!
+  b4    4.42s  अल्कोहल ऑक्सीजन हटाए, इलेक्ट्रॉन छूटें, रेज़िस्टेंस गिरे।
+  b5    3.05s  आर एस बटा आर ज़ीरो से कंसंट्रेशन निकलता है।
+  b6    3.60s  शून्य दशमलव शून्य आठ यानी आठ सौ पीपीएम।
+  c1    2.53s  रेंज सिर्फ़ पच्चीस से पाँच सौ पीपीएम।
+  c2    3.91s  ब्रेथएनालाइज़र, डी आई वाई प्रोजेक्ट, अल्कोहल अलार्म।
+  c3    3.73s  नमी और दूसरी गैसें धोखा देती हैं, स्टोरेज में ड्रिफ्ट।
+  c4    2.86s  पहली बार चौबीस से अड़तालीस घंटे बर्न इन करो।
+  c5    3.09s  सेव करो, और कमेंट में बताओ अगला कौन सा सेंसर?
+  voice (Piper pratham, local) 52.7s at length 1.05
+
+== 3D model + drawings (render tools)
