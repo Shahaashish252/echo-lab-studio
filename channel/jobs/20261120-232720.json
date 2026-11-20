@@ -1,0 +1,16 @@
+{
+  "id": "20261120-232720",
+  "topic": "Breathalyser sensor: how it smells alcohol in breath",
+  "hook": "Sharab ki bu ko sensor kaise sunghta hai? 🍺",
+  "lang": "hi",
+  "started": "2026-11-20T23:27:20",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research & storyboard: \"Breathalyser sensor: how it smells alcohol in breath (open with this hook: \"Sharab ki bu ko sensor kaise sunghta hai? 🍺\")\" (mq3, Claude)",
+      "at": "2026-11-20T23:27:20"
+    }
+  ],
+  "format": "teardown3",
+  "module": "mq3"
+}
