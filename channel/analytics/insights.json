@@ -1,32 +1,33 @@
 {
-  "updated": "2026-11-20T16:16",
-  "videos": 34,
-  "summary": "Instagram is carrying the channel: most Hindi videos get roughly 1,000-1,400 views there, while YouTube Shorts mostly get under 60 views. The best videos use a surprising 'it doesn't X, it actually Y' framing about a familiar sensor or robot (gyro robot, clap switch, IR robot) and earn likes, saves and shares. Generic 'How does X work?' titles, newer videos with no Instagram push, and videos not posted to Instagram at all (many early ones) get very little.",
-  "winningPattern": "Hindi, a relatable sensor or robot (robot balance, clap switch, IR obstacle sensor, DHT11, mic) with a myth-busting hook such as 'X doesn't do A, it only does B' or a 'why does this happen?' curiosity gap. Short Hinglish titles with one emoji and #shorts, published on Instagram Reels first, where reach is 1,000+. Robot and clap-switch topics also pull YouTube views (400-680). Shares spike on 'surprising fact' or 'did you know' type topics (soil sensor: 24 shares, IR robot: 10).",
+  "updated": "2026-11-20T23:27",
+  "videos": 35,
+  "summary": "Instagram is doing most of the work: nearly every Hindi video there gets 1,000+ views, while YouTube Shorts mostly get under 60 views. The best videos are early ones (late Oct to early Nov) about a sensor that 'doesn't do the obvious thing' (clap switch, gyro robot, IR robot), and the very newest videos (Nov 16-20) are falling to 140-360 views, so something has slipped. Saves and shares are rare, but a few videos (soil sensor, IR robot) got strong shares even with low views, which shows the idea works when people see it.",
+  "winningPattern": "A relatable robot or clap-switch/sensor-based gadget, shown with a 'it doesn't do X, it only does Y' or 'without this, the robot fails' hook in Hinglish, with a short curiosity title and an emoji (🤖 👏 🎤 🔥), posted on Instagram first. Videos that show a visible, funny behaviour (robot falling, clap/whistle triggering) beat pure explainers like 'How does X work?'. Titles that name the myth plus the surprise ('Taali nahi, sirf shor sunta hai') perform best, and YouTube only works when the video also has a clear, searchable topic like clap switch, PIR or gyro.",
   "doMore": [
-    "Post every video to Instagram Reels as well as YouTube; 8 of the 9 videos with no Instagram numbers got under 30 views overall.",
-    "Make more robot-behaviour videos (falling, avoiding walls, following lines) with a visible demo in the first 2 seconds.",
-    "Use the myth-busting title: 'Sensor X doesn't do A, only B' about everyday devices.",
-    "Make follow-ups on winners, such as a clap switch part 3, a gyro robot part 2 and an IR robot part 2, since series topics repeat well.",
-    "End with a save/share prompt like 'Save this for your next project', since saves and shares signal strong interest."
+    "Lead with a robot or a clap-switch style demo where something visibly goes wrong or surprises, then explain why",
+    "Use the 'X doesn't do the obvious thing, it only does Y' title, but keep it to one short sentence",
+    "Make follow-ups to the winners: gyro robot part 2, clap switch with whistle or noise, line follower, mic vs speaker",
+    "Reuse the topic of each Instagram hit on YouTube with a searchable title, since YouTube views are tiny for most uploads",
+    "Add a closing question or 'save this for your project' line to lift saves and shares",
+    "Check why the last 10 videos dropped (Nov 11-20) and compare their first 2 seconds with the Oct 29-Nov 5 hits"
   ],
   "stopDoing": [
-    "Stop plain textbook titles like 'X Kaise Kaam Karta Hai?' and 'X Fire Kaise Sense Karta Hai?', which consistently underperform.",
-    "Stop publishing near-duplicate topics (4 smoke, tap and clap variants) within days of each other; they split the audience.",
-    "Stop mixing in English videos for now; the one English upload got 161 views with no Instagram push, so test it separately later."
+    "Plain 'How does X work?' titles for everyday items (mall door, street light, smartwatch, TV remote)",
+    "Posting niche component videos (TDS meter, geyser thermocouple, KY-038) back to back, as they get the lowest reach",
+    "Posting videos to YouTube only, with no Instagram version, as those get almost no views"
   ],
   "nextTopics": [
-    "Self-balancing robot without a gyro",
-    "Ultrasonic sensor on a robot car",
-    "Line follower robot part 2: why it loses the line",
-    "Clap switch part 3: why it fails with a TV",
-    "Servo motor robot arm"
+    "Robot that falls without a gyro, part 2",
+    "Clap switch fooled by a phone sound",
+    "Line follower robot confused by a black table edge",
+    "Mic and speaker are the same part",
+    "Robot that stops at a wall using IR, then fails in sunlight"
   ],
   "bestTimes": {
     "times": [
       "15:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (33 posts)"
+    "reason": "from our own posts: these hours averaged the most views (34 posts)"
   }
 }

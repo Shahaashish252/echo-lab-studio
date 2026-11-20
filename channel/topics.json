@@ -1,28 +1,13 @@
 {
   "queue": [
     {
-      "topic": "Self-balancing robot without a gyro",
-      "hook": "Gyro hatao, aur ye robot 1 second mein gir jayega"
+      "topic": "Robot that falls without a gyro, part 2",
+      "hook": "Is robot ko gyro nahi diya, dekho kya hua 🤖",
+      "module": ""
     },
     {
-      "topic": "Ultrasonic sensor on a robot car",
-      "hook": "Ye robot deewar dekhta nahi, sirf echo sunta hai"
-    },
-    {
-      "topic": "Line follower robot part 2: why it loses the line",
-      "hook": "Line follower ko line dikhti hi nahi, phir bhi chalta hai"
-    },
-    {
-      "topic": "Clap switch part 3: why it fails with a TV",
-      "hook": "Clap switch TV ki awaaz se kyun chal jaata hai?"
-    },
-    {
-      "topic": "Servo motor robot arm",
-      "hook": "Servo ko angle pata hota hai, bina dekhe. Kaise?"
-    },
-    {
-      "topic": "Robot that follows your hand using IR sensors",
-      "hook": "Haath Hilao, Robot Peeche Peeche Chalega 🤖",
+      "topic": "Robot that stops at a wall using IR, then fails in sunlight",
+      "hook": "Dhoop mein ye robot deewar se kyun takra gaya?",
       "module": "ir"
     },
     {
@@ -104,11 +89,6 @@
       "topic": "Room humidity: why 30°C feels sticky but 30°C feels fine",
       "hook": "Same 30 degrees, but one day feels sticky. Here's why.",
       "module": "dht"
-    },
-    {
-      "topic": "Breathalyser sensor: how it smells alcohol in breath",
-      "hook": "Sharab ki bu ko sensor kaise sunghta hai? 🍺",
-      "module": "mq3"
     },
     {
       "topic": "Classroom CO2 monitor: why a crowded room makes you sleepy",
@@ -199,6 +179,7 @@
     "Smart plant pot that knows when to drink water",
     "Gas geyser that cuts off gas when the flame goes out",
     "RO water purifier TDS meter: how it measures water purity",
-    "UV index sensor: how it measures sun's UV strength"
+    "UV index sensor: how it measures sun's UV strength",
+    "Breathalyser sensor: how it smells alcohol in breath"
   ]
 }

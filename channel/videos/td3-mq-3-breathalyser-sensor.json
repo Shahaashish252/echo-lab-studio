@@ -1,0 +1,45 @@
+{
+  "file": "out/auto/mq-3-breathalyser-sensor.mp4",
+  "title": "Breathalyzer sharab ko sunghta nahi, bas ye karta hai 🍺 #shorts",
+  "description": "Sensor sharab ki bu ko sunghta nahi! MQ-3 ke andar garam SnO2 hota hai jiski resistance alcohol se gir jaati hai.\nAaj Echo Lab 3D mein MQ-3 ko kholke dekhte hain.\n🔥 Heater SnO2 ko 200–500 °C tak garam rakhta hai\n⚡ Alcohol aate hi resistance girti hai, A0 voltage badhta hai\n🎛️ LM393 aur pot milke D0 ko HIGH se LOW karte hain\n⏱️ Warm-up: 5–10 min, pehli baar 24–48 ghante\n⚠️ Ye legal ya driving decision ke liye bharosemand nahi hai.\nSubscribe karo Echo Lab 3D, roz ek sensor kholke samjhenge!\n#shorts #mq3 #alcoholsensor #breathalyzer #arduino #electronics #sensors #hindi\n\nSources:\nhttps://lastminuteengineers.com/mq3-alcohol-sensor-arduino-tutorial\nhttps://arduinogetstarted.com/tutorials/arduino-mq3-alcohol-sensor\nhttps://en.wikipedia.org/wiki/Gas_detector\nhttps://www.dfrobot.com/blog-903.html",
+  "sources": [
+    "https://lastminuteengineers.com/mq3-alcohol-sensor-arduino-tutorial",
+    "https://arduinogetstarted.com/tutorials/arduino-mq3-alcohol-sensor",
+    "https://en.wikipedia.org/wiki/Gas_detector",
+    "https://www.dfrobot.com/blog-903.html",
+    "https://en.wikipedia.org/wiki/Breathalyzer",
+    "https://www.mouser.com/datasheet/2/813/MQ_3_ver1_3___Manual-2490194.pdf"
+  ],
+  "tags": [
+    "MQ-3 sensor",
+    "MQ3 alcohol sensor",
+    "breathalyzer kaise kaam karta hai",
+    "alcohol sensor Arduino",
+    "MQ-3 Arduino tutorial",
+    "breathalyzer sensor hindi",
+    "how breathalyzer works",
+    "SnO2 gas sensor",
+    "MQ-3 warm up time",
+    "LM393 comparator",
+    "gas sensor kaise kaam karta hai",
+    "Arduino projects hindi",
+    "alcohol detector Arduino",
+    "Echo Lab 3D",
+    "electronics for students"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "Sharab ki bu ko sensor kaise sunghta hai?",
+  "format": "teardown3",
+  "captions": "out/auto/mq-3-breathalyser-sensor.srt",
+  "social": {
+    "instagram": "Sharab ki bu ko sensor sunghta nahi! 🍺\nMQ-3 ke andar garam SnO2 hota hai.\nAlcohol aate hi uski resistance gir jaati hai.\nPhir A0 voltage badhta hai aur D0 LOW ho jaata hai.\nSave karo apne next Arduino project ke liye 📌\nComment mein batao: agla kaun sa sensor kholein?\n#mq3 #arduino #breathalyzer #electronics #echolab3d",
+    "tiktok": "Sensor sharab ko sunghta nahi, resistance badalta hai 🍺 #mq3 #arduino #breathalyzer #electronics #hindi"
+  }
+}

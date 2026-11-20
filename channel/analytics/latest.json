@@ -1,21 +1,21 @@
 {
-  "updated": "20 Nov 2026, 16:16",
+  "updated": "20 Nov 2026, 23:48",
   "youtube": {
     "subs": 7,
     "views": 4286,
     "videos": [
       {
-        "title": "Badal mein bhi sunburn kyun? UV sensor ka sach ☀️ #shorts",
-        "id": "p_7arWjyrFI",
-        "status": "private",
-        "published": "2026-11-19",
-        "views": 0,
+        "title": "TDS meter solids nahi ginta, sirf current naapta hai! 💧 #shorts",
+        "id": "bdsbTntxpVg",
+        "status": "public",
+        "published": "2026-11-20",
+        "views": 8,
         "likes": 0,
         "comments": 0
       },
       {
-        "title": "TDS meter solids nahi ginta, sirf current naapta hai! 💧 #shorts",
-        "id": "bdsbTntxpVg",
+        "title": "Badal mein bhi sunburn kyun? UV sensor ka sach ☀️ #shorts",
+        "id": "p_7arWjyrFI",
         "status": "private",
         "published": "2026-11-19",
         "views": 0,
@@ -27,7 +27,7 @@
         "id": "6H2l1IC15PA",
         "status": "public",
         "published": "2026-11-19",
-        "views": 6,
+        "views": 8,
         "likes": 0,
         "comments": 0
       },
@@ -36,7 +36,7 @@
         "id": "LHrAN458UdQ",
         "status": "public",
         "published": "2026-11-18",
-        "views": 16,
+        "views": 20,
         "likes": 1,
         "comments": 0
       },
@@ -45,7 +45,7 @@
         "id": "RvZwCQeoq5s",
         "status": "public",
         "published": "2026-11-17",
-        "views": 12,
+        "views": 13,
         "likes": 0,
         "comments": 0
       },
@@ -54,7 +54,7 @@
         "id": "R2vtN8SNb0s",
         "status": "public",
         "published": "2026-11-16",
-        "views": 18,
+        "views": 19,
         "likes": 1,
         "comments": 2
       },
@@ -751,16 +751,27 @@
   },
   "instagram": {
     "username": "echo.lab3d",
-    "followers": 26,
+    "followers": 27,
     "posts": [
+      {
+        "title": "RO ka paani saaf dikhta hai, par kitna saaf hai? 💧",
+        "url": "https://www.instagram.com/reel/Df9sDbvjFuE/",
+        "published": "2026-11-20",
+        "likes": 3,
+        "comments": 0,
+        "reach": 131,
+        "views": 162,
+        "saved": 0,
+        "shares": 0
+      },
       {
         "title": "Geyser ki gas lau bujhte hi band kyun ho jati hai? 🔥",
         "url": "https://www.instagram.com/reel/Df6wzcEko4d/",
         "published": "2026-11-19",
         "likes": 1,
         "comments": 0,
-        "reach": 123,
-        "views": 142,
+        "reach": 124,
+        "views": 143,
         "saved": 0,
         "shares": 0
       },
@@ -781,8 +792,8 @@
         "published": "2026-11-17",
         "likes": 9,
         "comments": 0,
-        "reach": 322,
-        "views": 361,
+        "reach": 323,
+        "views": 363,
         "saved": 0,
         "shares": 0
       },
@@ -803,8 +814,8 @@
         "published": "2026-11-15",
         "likes": 31,
         "comments": 4,
-        "reach": 1097,
-        "views": 1207,
+        "reach": 1098,
+        "views": 1208,
         "saved": 10,
         "shares": 1
       },
@@ -1016,17 +1027,6 @@
         "views": 272,
         "saved": 1,
         "shares": 1
-      },
-      {
-        "title": "Watch ki hari light ka raaz 💚",
-        "url": "https://www.instagram.com/reel/DezJc75EYuw/",
-        "published": "2026-10-22",
-        "likes": 2,
-        "comments": 0,
-        "reach": 111,
-        "views": 140,
-        "saved": 2,
-        "shares": 0
       }
     ]
   }
