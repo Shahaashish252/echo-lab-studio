@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Self-balancing robot without a gyro",
+      "hook": "Gyro hatao, aur ye robot 1 second mein gir jayega"
+    },
+    {
+      "topic": "Ultrasonic sensor on a robot car",
+      "hook": "Ye robot deewar dekhta nahi, sirf echo sunta hai"
+    },
+    {
+      "topic": "Line follower robot part 2: why it loses the line",
+      "hook": "Line follower ko line dikhti hi nahi, phir bhi chalta hai"
+    },
+    {
+      "topic": "Clap switch part 3: why it fails with a TV",
+      "hook": "Clap switch TV ki awaaz se kyun chal jaata hai?"
+    },
+    {
+      "topic": "Servo motor robot arm",
+      "hook": "Servo ko angle pata hota hai, bina dekhe. Kaise?"
+    },
+    {
       "topic": "Robot that follows your hand using IR sensors",
       "hook": "Haath Hilao, Robot Peeche Peeche Chalega 🤖",
       "module": "ir"

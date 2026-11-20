@@ -1,9 +1,18 @@
 {
-  "updated": "20 Nov 2026, 00:17",
+  "updated": "20 Nov 2026, 16:16",
   "youtube": {
     "subs": 7,
-    "views": 4273,
+    "views": 4286,
     "videos": [
+      {
+        "title": "Badal mein bhi sunburn kyun? UV sensor ka sach ☀️ #shorts",
+        "id": "p_7arWjyrFI",
+        "status": "private",
+        "published": "2026-11-19",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "TDS meter solids nahi ginta, sirf current naapta hai! 💧 #shorts",
         "id": "bdsbTntxpVg",
@@ -18,7 +27,7 @@
         "id": "6H2l1IC15PA",
         "status": "public",
         "published": "2026-11-19",
-        "views": 1,
+        "views": 6,
         "likes": 0,
         "comments": 0
       },
@@ -27,8 +36,8 @@
         "id": "LHrAN458UdQ",
         "status": "public",
         "published": "2026-11-18",
-        "views": 12,
-        "likes": 0,
+        "views": 16,
+        "likes": 1,
         "comments": 0
       },
       {
@@ -45,7 +54,7 @@
         "id": "R2vtN8SNb0s",
         "status": "public",
         "published": "2026-11-16",
-        "views": 17,
+        "views": 18,
         "likes": 1,
         "comments": 2
       },
@@ -369,7 +378,7 @@
         "id": "jD5lPQq_aQo",
         "status": "public",
         "published": "2026-10-23",
-        "views": 33,
+        "views": 34,
         "likes": 0,
         "comments": 0
       },
@@ -722,7 +731,7 @@
       },
       {
         "day": "2026-11-15",
-        "views": 49,
+        "views": 48,
         "minutes": 5,
         "subs": 0
       },
@@ -731,6 +740,12 @@
         "views": 20,
         "minutes": 3,
         "subs": 1
+      },
+      {
+        "day": "2026-11-17",
+        "views": 29,
+        "minutes": 2,
+        "subs": 0
       }
     ]
   },
