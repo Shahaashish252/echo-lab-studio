@@ -784,10 +784,16 @@
     "id": "bdsbTntxpVg",
     "meta": "channel/videos/td3-ro-tds-meter-myth.json",
     "date": "2026-11-19",
-    "status": "approved",
+    "status": "published",
     "topic": "RO water purifier TDS meter: how it measures water purity",
     "job": "20261119-163227",
-    "postAt": "2026-11-20T15:00"
+    "postAt": "2026-11-20T15:00",
+    "published": {
+      "youtube": "2026-11-20",
+      "instagram": "https://www.instagram.com/reel/Df9sDbvjFuE/",
+      "facebook": "https://www.facebook.com/reel/994088906590814/"
+    },
+    "postedAt": "2026-11-20T18:19"
   },
   {
     "id": "p_7arWjyrFI",

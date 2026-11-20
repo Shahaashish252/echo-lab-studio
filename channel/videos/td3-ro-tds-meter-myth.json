@@ -38,5 +38,6 @@
   "social": {
     "instagram": "RO ka paani saaf dikhta hai, par kitna saaf hai? 💧\nTDS meter solids nahi ginta, sirf conductivity naapta hai.\nLow reading ka matlab safe paani nahi, bacteria nahi dikhte.\nAccuracy sirf ±10%, aur temperature bhi matter karta hai.\nSave karo apne next Arduino project ke liye!\nComment mein batao: tumhare RO ka TDS kitna hai?\n#TDS #ROwater #Arduino #Electronics #EchoLab3D",
     "tiktok": "TDS meter solids nahi ginta, sirf conductivity naapta hai! 💧 #TDS #RO #Arduino #Electronics #EchoLab3D"
-  }
+  },
+  "cover": "/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/ro-tds-meter-myth.cover.jpg"
 }
