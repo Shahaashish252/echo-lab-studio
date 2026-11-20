@@ -69,3 +69,17 @@ events 66 dur 60.78 → page/events.json
   $ ffmpeg -y -loglevel error -f concat -safe 0 -i /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-1795197814/list.txt -c copy /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-mq-3-brea
 
 == sound + master
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with numpy --with scipy --with soundfile --with soxr python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/mix.
+Downloading scipy (33.7MiB)
+ Downloaded scipy
+Installed 7 packages in 57ms
+mix 61.3 s
+  $ sh core/render/mux.sh /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-mq-3-breathalyser-sensor.video.mp4 /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/page/out/mix.wav /home/run
+/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/mq-3-breathalyser-sensor.mp4
+    I:         -14.2 LUFS
+    LRA:         2.1 LU
+    Peak:       -1.1 dBFS
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python core/render/srt.py /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/page/out/cues.json /home/runner/work/echo-lab-studio/echo-lab-studio/ou
+/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/mq-3-breathalyser-sensor.srt 17 cues
+
+== youtube upload
