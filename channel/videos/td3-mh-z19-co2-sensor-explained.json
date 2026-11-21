@@ -1,0 +1,46 @@
+{
+  "file": "out/auto/mh-z19-co2-sensor-explained.mp4",
+  "title": "CO2 se neend nahi aati, bas stale hawa ka ishaara hai! 😴 #shorts",
+  "description": "Class mein neend kyun aati hai? CO2 ka raaz kholte hain!\nMH-Z19 sensor asal mein light gin kar CO2 napta hai.\n🔬 NDIR sensor andar se\n💡 4.26 µm filter ka kamaal\n📈 PWM se ppm kaise nikalte hain\n⏱️ 3 minute warm-up kyun zaroori\nSubscribe karo Echo Lab 3D for more Kholke Dekho builds!\n#shorts #MHZ19 #CO2sensor #Arduino #NDIR #electronics #maker #hindi\n\nSources:\nhttps://www.arduino.cc/reference/en/libraries/mh-z19\nhttps://en.wikipedia.org/wiki/Nondispersive_infrared_sensor\nhttps://www.electroniclinic.com/mh-z19b-ndir-co2-sensor-with-arduino-mhz19b/\nhttps://github.com/tobiasschuerg/MH-Z-CO2-Sensors",
+  "sources": [
+    "https://www.arduino.cc/reference/en/libraries/mh-z19",
+    "https://en.wikipedia.org/wiki/Nondispersive_infrared_sensor",
+    "https://www.electroniclinic.com/mh-z19b-ndir-co2-sensor-with-arduino-mhz19b/",
+    "https://github.com/tobiasschuerg/MH-Z-CO2-Sensors",
+    "https://github.com/Erriez/ErriezMHZ19B",
+    "https://esphome.io/components/sensor/mhz19/",
+    "https://www.smithsonianmag.com/science-nature/the-carbon-dioxide-in-a-crowded-room-can-make-you-dumber-180948052/",
+    "https://www.rehva.eu/rehva-journal/chapter/direct-impact-of-short-term-exposure-to-pure-carbon-dioxide-levels-on-cognitive-performance"
+  ],
+  "tags": [
+    "MH-Z19",
+    "MH-Z19 CO2 sensor",
+    "CO2 sensor Arduino",
+    "NDIR sensor kaise kaam karta hai",
+    "classroom CO2 monitor",
+    "class mein neend kyun aati hai",
+    "CO2 monitor DIY",
+    "MH-Z19 PWM formula",
+    "MH-Z19 warm up",
+    "ABC calibration MH-Z19",
+    "ESP32 CO2 sensor",
+    "Arduino project Hindi",
+    "Echo Lab 3D",
+    "electronics Hindi shorts"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "Class mein neend kyun? CO2 ka raaz",
+  "format": "teardown3",
+  "captions": "out/auto/mh-z19-co2-sensor-explained.srt",
+  "social": {
+    "instagram": "Class mein neend CO2 se nahi aati? 😴\nSensor light gin kar CO2 napta hai.\n4.26 µm ka filter, PWM pulse, 3 minute warm-up.\nSave karo apne project ke liye.\nComment mein batao: kaun sa sensor next banayein?\n#MHZ19 #Arduino #CO2sensor #Electronics #shorts",
+    "tiktok": "Class mein neend kyun aati hai? CO2 ka raaz 🤔 #MHZ19 #Arduino #CO2 #Electronics #shorts"
+  }
+}

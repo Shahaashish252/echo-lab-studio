@@ -818,5 +818,14 @@
     "topic": "Breathalyser sensor: how it smells alcohol in breath",
     "job": "20261120-232720",
     "postAt": "2026-11-22T15:00"
+  },
+  {
+    "id": "ycy4OrfFDTU",
+    "meta": "channel/videos/td3-mh-z19-co2-sensor-explained.json",
+    "date": "2026-11-21",
+    "status": "approved",
+    "topic": "Classroom CO2 monitor: why a crowded room makes you sleepy",
+    "job": "20261121-160045",
+    "postAt": "2026-11-23T15:00"
   }
 ]

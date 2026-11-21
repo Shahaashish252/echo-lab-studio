@@ -91,11 +91,6 @@
       "module": "dht"
     },
     {
-      "topic": "Classroom CO2 monitor: why a crowded room makes you sleepy",
-      "hook": "Class mein neend kyun aati hai? CO2 ka raaz 🤔",
-      "module": "mhz19"
-    },
-    {
       "topic": "Earthquake sensor: how a coil feels ground shaking",
       "hook": "Zameen ki halchal ek coil kaise pakadti hai? 🌍",
       "module": "geophone"
@@ -180,6 +175,7 @@
     "Gas geyser that cuts off gas when the flame goes out",
     "RO water purifier TDS meter: how it measures water purity",
     "UV index sensor: how it measures sun's UV strength",
-    "Breathalyser sensor: how it smells alcohol in breath"
+    "Breathalyser sensor: how it smells alcohol in breath",
+    "Classroom CO2 monitor: why a crowded room makes you sleepy"
   ]
 }

@@ -4,7 +4,7 @@
   "hook": "Class mein neend kyun aati hai? CO2 ka raaz 🤔",
   "lang": "hi",
   "started": "2026-11-21T16:00:45",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research & storyboard: \"Classroom CO2 monitor: why a crowded room makes you sleepy (open with this hook: \"Class mein neend kyun aati hai? CO2 ka raaz 🤔\")\" (mhz19, Claude)",
@@ -36,5 +36,7 @@
     }
   ],
   "format": "teardown3",
-  "module": "mhz19"
+  "module": "mhz19",
+  "finished": "2026-11-21T16:21:20",
+  "uploadId": "ycy4OrfFDTU"
 }
