@@ -1,2 +1,11 @@
 
 == research & storyboard: "Classroom CO2 monitor: why a crowded room makes you sleepy (open with this hook: "Class mein neend kyun aati hai? CO2 ka raaz 🤔")" (mhz19, Claude)
+  18 facts from 8 sources
+    https://en.wikipedia.org/wiki/Nondispersive_infrared_sensor
+    https://esphome.io/components/sensor/mhz19/
+    https://github.com/Erriez/ErriezMHZ19B
+    https://github.com/tobiasschuerg/MH-Z-CO2-Sensors
+    https://www.arduino.cc/reference/en/libraries/mh-z19
+    https://www.electroniclinic.com/mh-z19b-ndir-co2-sensor-with-arduino-mhz19b/
+
+== storyboard (script from the research)
