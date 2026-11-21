@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Ultrasonic sensor robot stops before wall",
+      "hook": "Ye robot deewar ko dekhta nahi, sirf gunjti awaaz sunta hai"
+    },
+    {
+      "topic": "Servo motor without a brain",
+      "hook": "Servo ghumta nahi, sirf ek pulse ka intezaar karta hai"
+    },
+    {
+      "topic": "Buzzer vs speaker difference",
+      "hook": "Ye buzzer gaana nahi gaa sakta, bas ek hi awaaz jaanta hai"
+    },
+    {
+      "topic": "LDR light sensor night lamp",
+      "hook": "LDR roshni nahi dekhta, sirf apna resistance badalta hai"
+    },
+    {
+      "topic": "Gyro balancing robot demo",
+      "hook": "Is robot ko gir jaane se kaun bachata hai? Sirf ek chip"
+    },
+    {
       "topic": "Robot that falls without a gyro, part 2",
       "hook": "Is robot ko gyro nahi diya, dekho kya hua 🤖",
       "module": ""

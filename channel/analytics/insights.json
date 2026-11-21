@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-21T16:00",
+  "updated": "2026-11-21T22:23",
   "videos": 36,
-  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly get under 60 views. The best performers are short 'X doesn't see/hear, it only senses Y' myth-busting videos about robots and clap switches (Gyro robot, Clap Switch, Line Follower). Newer videos from mid-November dropped to 100-300 views, and generic 'How does X work? 🤔' titles get almost nothing.",
-  "winningPattern": "Robot or Arduino-module subject (gyro, clap switch, IR, mic, DHT11) + a myth-flip hook in Hinglish ('Doesn't see/hear, only senses...' or 'Without X the robot falls') + a curiosity emoji + #shorts, posted mainly on Instagram Reels. Visible, demo-able hardware that people can build beats household explainers like malls, lifts and taps. Very short 'why' questions also drive saves and shares.",
+  "summary": "Instagram is carrying the channel: most Reels get 1,000+ views while the same videos on YouTube Shorts get under 60. The best performers use a 'X doesn't do the obvious thing, it only does Y' hook about a simple, familiar gadget (robot, clap switch, DHT11, mic). Later videos with plain 'How does X work?' titles and the YouTube-only uploads get almost no views, and the newest videos (Nov 14+) are dropping in reach.",
+  "winningPattern": "Instagram Reels about a hands-on maker gadget (robot, clap switch, DHT11, mic, IR sensor) with a Hinglish 'myth-flip' hook: 'X doesn't do [obvious thing], it only does [surprising thing]'. Short punchy title with one emoji and #shorts. Robot and clap-switch topics lead on views/likes; shareable 'sunburn in clouds' and 'soil sensor' style myth-busters get the most shares (24-32) despite low views, so they have strong potential if the first seconds are improved. YouTube only worked for the earliest videos (Oct 29-Nov 5, ~400-680 views) and mostly for robot/clap topics.",
   "doMore": [
-    "Lead with a myth-flip hook: 'Robot X doesn't do Y, it only does Z' on robots and Arduino modules",
-    "Make follow-ups of the top hits: gyro/balancing robot, clap switch variants, line follower, mic vs speaker",
-    "Make each video about one maker-friendly module with a visible demo or a before/after failure moment",
-    "End with a build-it or save-it line, since saves and shares signal strong interest ('Save this for your project')",
-    "Post at the early-to-mid pace that earned 1,000+ views and reuse the same hook style in titles and on-screen text"
+    "Use the 'Doesn't do X, only does Y' contrarian hook in the title and first line on screen",
+    "Make more robot and clap-switch style videos with a visible, demo-able result (robot falls, switch reacts to whistle)",
+    "Post every video to Instagram Reels first and YouTube together, since YouTube-only videos get under 30 views",
+    "Turn high-share topics (UV, soil sensor) into a series with a stronger visual first 2 seconds and a 'send this to a friend' end line",
+    "End with a save-worthy tip (wiring or pin label) to lift saves, which were strong on the gyro and clap switch videos"
   ],
   "stopDoing": [
-    "Generic 'X Kaise Kaam Karta Hai? 🤔' titles on household devices like malls, taps and lifts",
-    "Spending effort on YouTube-only uploads or English videos until the Hindi hook style is working there too",
-    "Niche appliance topics (geyser, chimney, TDS meter, soil sensor) that earned under 400 views"
+    "Plain 'X Kaise Kaam Karta Hai?' question titles with no surprising claim",
+    "Publishing to only one platform (YouTube-only or English-only uploads)",
+    "Repeating near-identical topics like three tap/IR/clap variants within a week"
   ],
   "nextTopics": [
-    "Self-balancing robot and MPU6050",
-    "Ultrasonic sensor robot avoiding walls",
-    "Line follower with IR sensors",
-    "Mic module vs speaker",
-    "Clap switch failing with a whistle"
+    "Ultrasonic sensor robot stops before wall",
+    "Servo motor without a brain",
+    "Buzzer vs speaker difference",
+    "LDR light sensor night lamp",
+    "Gyro balancing robot demo"
   ],
   "bestTimes": {
     "times": [
