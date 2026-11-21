@@ -1,0 +1,16 @@
+{
+  "id": "20261121-160045",
+  "topic": "Classroom CO2 monitor: why a crowded room makes you sleepy",
+  "hook": "Class mein neend kyun aati hai? CO2 ka raaz 🤔",
+  "lang": "hi",
+  "started": "2026-11-21T16:00:45",
+  "status": "running",
+  "stages": [
+    {
+      "name": "research & storyboard: \"Classroom CO2 monitor: why a crowded room makes you sleepy (open with this hook: \"Class mein neend kyun aati hai? CO2 ka raaz 🤔\")\" (mhz19, Claude)",
+      "at": "2026-11-21T16:00:45"
+    }
+  ],
+  "format": "teardown3",
+  "module": "mhz19"
+}
