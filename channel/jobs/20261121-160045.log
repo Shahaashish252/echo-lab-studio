@@ -13,3 +13,36 @@
   CO2 se neend nahi aati, bas stale hawa ka ishaara hai! 😴 #shorts
 
 == voice (local Hindi: Piper pratham)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+Downloading onnxruntime (26.5MiB)
+Downloading piper-tts (32.6MiB)
+Downloading soundfile (1.3MiB)
+Downloading numpy (15.0MiB)
+ Downloaded soundfile
+ Downloaded numpy
+ Downloaded onnxruntime
+ Downloaded piper-tts
+Installed 12 packages in 16ms
+[0;93m2026-11-21 16:04:55.716529734 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  downloading hi_IN-pratham-medium.onnx
+  downloading hi_IN-pratham-medium.onnx.json
+  a1    2.67s  क्लास में नींद क्यों? सी ओ टू का राज़
+  a2    3.01s  चार सौ से पाँच हज़ार पी पी एम नापता है
+  a3    2.74s  अंदर इन्फ्रारेड लैंप और हवा का चैंबर
+  a4    3.15s  फ़िल्टर सिर्फ़ चार पॉइंट दो छह माइक्रोन गुज़रने देता
+  a5    2.79s  पीछे डिटेक्टर गिनता है कितनी रोशनी पहुँची
+  a6    2.68s  चिप तापमान ठीक करके पी पी एम बनाती है
+  b1    2.19s  लैंप की रोशनी हवा से गुज़रती है
+  b2    3.07s  सी ओ टू सोखे, तो डिटेक्टर को कम रोशनी
+  b3    2.24s  चिप पी डब्ल्यू एम पल्स भेजती है
+  b4    2.77s  ज़्यादा सी ओ टू, कम रोशनी पहुँचती है
+  b5    3.23s  हाई टाइम जितना लंबा, पी पी एम उतना ज़्यादा
+  b6    3.20s  क्लास हज़ार पी पी एम, बाहर तीन सौ अस्सी
+  c1    2.80s  सीमा चार सौ से पाँच हज़ार पी पी एम
+  c2    3.13s  क्लासरूम, डी आई वाई मॉनिटर, होम असिस्टेंट
+  c3    3.15s  हवा न बदले या बिजली कटे, बेसलाइन बिगड़ती
+  c4    2.63s  तीन मिनट वार्म अप, फिर रीडिंग मानो
+  c5    3.79s  सेव करो, कमेंट में बताओ, कौन सा सेंसर बनाएँ
+  voice (Piper pratham, local) 49.2s at length 1.05
+
+== 3D model + drawings (render tools)
