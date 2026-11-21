@@ -42,5 +42,6 @@
   "social": {
     "instagram": "Badal mein bhi sunburn kyun lagta hai? ☀️\nML8511 andar se UV-A aur UV-B pakadta hai.\nOutput 1 V se 2.8 V tak jaata hai, yaani 0 se 15 mW/cm2.\nYe raw UV intensity hai, official UV index nahi.\nSave karo ye apne next project ke liye.\nComment mein batao, agla sensor kaun sa kholein?\n#ML8511 #Arduino #UVsensor #EchoLab3D #MakerIndia",
     "tiktok": "Badal mein bhi sunburn kyun? ☀️ ML8511 UV sensor ka sach #ML8511 #Arduino #UVsensor #Electronics #EchoLab3D"
-  }
+  },
+  "cover": "/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/ml8511-uv-sensor-explained.cover.jpg"
 }

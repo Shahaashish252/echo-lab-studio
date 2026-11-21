@@ -799,10 +799,16 @@
     "id": "p_7arWjyrFI",
     "meta": "channel/videos/td3-ml8511-uv-sensor-explained.json",
     "date": "2026-11-20",
-    "status": "approved",
+    "status": "published",
     "topic": "UV index sensor: how it measures sun's UV strength",
     "job": "20261119-235750",
-    "postAt": "2026-11-21T15:00"
+    "postAt": "2026-11-21T15:00",
+    "published": {
+      "youtube": "2026-11-21",
+      "instagram": "https://www.instagram.com/reel/Df_6ZJtDH94/",
+      "facebook": "https://www.facebook.com/reel/1163439583298752/"
+    },
+    "postedAt": "2026-11-21T15:02"
   },
   {
     "id": "nGG5O_RzQVY",
