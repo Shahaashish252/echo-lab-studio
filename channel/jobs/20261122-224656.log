@@ -11,3 +11,54 @@
   Geophone position nahi, sirf velocity pakadta hai 🌍 #shorts
 
 == voice (local Hindi: Piper pratham)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+Downloading numpy (15.0MiB)
+Downloading soundfile (1.3MiB)
+Downloading onnxruntime (26.5MiB)
+Downloading piper-tts (32.6MiB)
+ Downloaded soundfile
+ Downloaded numpy
+ Downloaded piper-tts
+ Downloaded onnxruntime
+Installed 12 packages in 39ms
+  downloading hi_IN-pratham-medium.onnx
+  downloading hi_IN-pratham-medium.onnx.json
+  a1    2.62s  ज़मीन की हलचल एक कॉइल कैसे पकड़ती है?
+  a2    4.04s  सेंसिटिविटी: अट्ठाईस पॉइंट आठ वोल्ट प्रति मीटर प्रति सेकंड।
+  a3    3.18s  तांबे की कॉइल स्प्रिंग पर लटकी, मैग्नेट को घेरे।
+  a4    3.34s  जब ज़मीन हिलती है, कॉइल अपनी जगह टिकी रहती है।
+  a5    3.25s  मैग्नेट केसिंग से जुड़ा है, ज़मीन के साथ हिलता है।
+  a6    3.77s  पीछे सिर्फ दो टर्मिनल, कॉइल का छोटा वोल्टेज बाहर।
+  b1    2.99s  ज़मीन शांत, तो वोल्टेज लगभग ज़ीरो पर।
+  b2    2.58s  हिलते ही वोल्टेज प्लस माइनस में झूलता है।
+  b3    3.48s  यह एनालॉग है; एम्प्लीफायर और ए डी सी चाहिए।
+  b4    2.90s  कॉइल फील्ड काटे, तो छोटा करंट बनता है।
+  b5    2.70s  वोल्टेज बराबर सेंसिटिविटी गुणा वेलॉसिटी।
+  b6    4.19s  एक मिलीमीटर प्रति सेकंड पर, अट्ठाईस पॉइंट आठ मिलीवोल्ट।
+  c1    2.74s  उपयोगी बैंड: दस से दो सौ चालीस हर्ट्ज़।
+  c2    4.20s  तेल खोज, रास्पबेरी शेक सीस्मोग्राफ, और अपोलो मून।
+  c3    4.58s  बिना कैलिब्रेशन रीडिंग अधूरी, बिना एम्प्लीफायर सिग्नल बेकार।
+  c4    3.08s  अर्डुइनो ड्यू पर जम्पर तीन पॉइंट तीन वोल्ट रखो।
+  c5    3.35s  सेव करो, और कमेंट में बताओ, कौन सा सेंसर अगला?
+  voice (Piper pratham, local) 57.0s at length 1.05
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+  a1    2.54s  ज़मीन की हलचल एक कॉइल कैसे पकड़ती है?
+  a2    3.88s  सेंसिटिविटी: अट्ठाईस पॉइंट आठ वोल्ट प्रति मीटर प्रति सेकंड।
+  a3    2.95s  तांबे की कॉइल स्प्रिंग पर लटकी, मैग्नेट को घेरे।
+  a4    3.19s  जब ज़मीन हिलती है, कॉइल अपनी जगह टिकी रहती है।
+  a5    3.25s  मैग्नेट केसिंग से जुड़ा है, ज़मीन के साथ हिलता है।
+  a6    3.60s  पीछे सिर्फ दो टर्मिनल, कॉइल का छोटा वोल्टेज बाहर।
+  b1    2.81s  ज़मीन शांत, तो वोल्टेज लगभग ज़ीरो पर।
+  b2    2.53s  हिलते ही वोल्टेज प्लस माइनस में झूलता है।
+  b3    3.56s  यह एनालॉग है; एम्प्लीफायर और ए डी सी चाहिए।
+  b4    2.72s  कॉइल फील्ड काटे, तो छोटा करंट बनता है।
+  b5    2.76s  वोल्टेज बराबर सेंसिटिविटी गुणा वेलॉसिटी।
+  b6    4.13s  एक मिलीमीटर प्रति सेकंड पर, अट्ठाईस पॉइंट आठ मिलीवोल्ट।
+  c1    2.61s  उपयोगी बैंड: दस से दो सौ चालीस हर्ट्ज़।
+  c2    4.16s  तेल खोज, रास्पबेरी शेक सीस्मोग्राफ, और अपोलो मून।
+  c3    4.26s  बिना कैलिब्रेशन रीडिंग अधूरी, बिना एम्प्लीफायर सिग्नल बेकार।
+  c4    2.93s  अर्डुइनो ड्यू पर जम्पर तीन पॉइंट तीन वोल्ट रखो।
+  c5    3.38s  सेव करो, और कमेंट में बताओ, कौन सा सेंसर अगला?
+  voice (Piper pratham, local) 55.3s at length 1.0
+
+== 3D model + drawings (render tools)
