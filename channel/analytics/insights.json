@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-21T22:23",
-  "videos": 36,
-  "summary": "Instagram is carrying the channel: most Reels get 1,000+ views while the same videos on YouTube Shorts get under 60. The best performers use a 'X doesn't do the obvious thing, it only does Y' hook about a simple, familiar gadget (robot, clap switch, DHT11, mic). Later videos with plain 'How does X work?' titles and the YouTube-only uploads get almost no views, and the newest videos (Nov 14+) are dropping in reach.",
-  "winningPattern": "Instagram Reels about a hands-on maker gadget (robot, clap switch, DHT11, mic, IR sensor) with a Hinglish 'myth-flip' hook: 'X doesn't do [obvious thing], it only does [surprising thing]'. Short punchy title with one emoji and #shorts. Robot and clap-switch topics lead on views/likes; shareable 'sunburn in clouds' and 'soil sensor' style myth-busters get the most shares (24-32) despite low views, so they have strong potential if the first seconds are improved. YouTube only worked for the earliest videos (Oct 29-Nov 5, ~400-680 views) and mostly for robot/clap topics.",
+  "updated": "2026-11-22T16:04",
+  "videos": 37,
+  "summary": "Instagram is where almost all the audience is: most Hindi videos get 500-1,400 views there, while YouTube Shorts mostly gets under 60 views. The best performers are short, surprising 'robot/sensor does not see or hear what you think' videos, especially clap switch, line follower, gyro and IR robot topics. Newer videos (mid-to-late November) on niche topics like soil, TDS, thermocouple and breathalyzer are getting much less reach, and the English video and the early YouTube-only posts did poorly.",
+  "winningPattern": "Robot or maker-project subjects (clap switch, line follower, gyro balancing robot, IR obstacle avoidance) with a myth-busting hook in Hinglish such as 'X doesn't do what you think, it only does Y', plus an emoji and #shorts. Posted on Instagram first, where it gets 1,000+ views; YouTube only gets a meaningful audience (400-680 views) when the topic is a classic robot/sensor that people search for, such as clap switch or PIR. Saves come from 'how a robot works' topics and shares come from surprising everyday-life facts (sunburn in clouds, soil sensor), so both formats have a role.",
   "doMore": [
-    "Use the 'Doesn't do X, only does Y' contrarian hook in the title and first line on screen",
-    "Make more robot and clap-switch style videos with a visible, demo-able result (robot falls, switch reacts to whistle)",
-    "Post every video to Instagram Reels first and YouTube together, since YouTube-only videos get under 30 views",
-    "Turn high-share topics (UV, soil sensor) into a series with a stronger visual first 2 seconds and a 'send this to a friend' end line",
-    "End with a save-worthy tip (wiring or pin label) to lift saves, which were strong on the gyro and clap switch videos"
+    "Make more robot and Arduino project explainers (balancing robot, line follower, obstacle avoider, clap switch) since they get the most views and saves",
+    "Keep the 'it doesn't see/hear X, it only senses Y' hook, which fits the top videos",
+    "Post every video to Instagram as well as YouTube; 11 videos had zero Instagram views",
+    "Make surprising everyday-life explainers with a clear 'wait, really?' fact for shares, like the UV sensor and soil sensor videos",
+    "Add a closing line asking viewers to save the video for their next project, to lift saves"
   ],
   "stopDoing": [
-    "Plain 'X Kaise Kaam Karta Hai?' question titles with no surprising claim",
-    "Publishing to only one platform (YouTube-only or English-only uploads)",
-    "Repeating near-identical topics like three tap/IR/clap variants within a week"
+    "Niche single-component topics with no robot or visible action (TDS meter, thermocouple, breathalyzer, KY-038)",
+    "Generic 'How does X work? 🤔' titles and English-only uploads, which got the weakest results",
+    "Posting several near-duplicate videos on the same sensor within days (clap switch, IR heat sensor)"
   ],
   "nextTopics": [
-    "Ultrasonic sensor robot stops before wall",
-    "Servo motor without a brain",
-    "Buzzer vs speaker difference",
-    "LDR light sensor night lamp",
-    "Gyro balancing robot demo"
+    "Self-balancing robot and why it falls without a gyro",
+    "Obstacle avoiding robot with ultrasonic sensor",
+    "Line follower robot: how IR sensors read black vs white",
+    "Bluetooth car: how a phone steers a robot",
+    "Why a servo motor holds its position"
   ],
   "bestTimes": {
     "times": [
       "15:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (35 posts)"
+    "reason": "from our own posts: these hours averaged the most views (36 posts)"
   }
 }

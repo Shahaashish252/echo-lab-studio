@@ -4,7 +4,7 @@
   "hook": "Zameen ki halchal ek coil kaise pakadti hai? 🌍",
   "lang": "hi",
   "started": "2026-11-22T16:04:24",
-  "status": "running",
+  "status": "failed",
   "stages": [
     {
       "name": "research & storyboard: \"Earthquake sensor: how a coil feels ground shaking (open with this hook: \"Zameen ki halchal ek coil kaise pakadti hai? 🌍\")\" (geophone, Claude)",
@@ -32,5 +32,6 @@
     }
   ],
   "format": "teardown3",
-  "module": "geophone"
+  "module": "geophone",
+  "finished": "2026-11-22T16:23:03"
 }
