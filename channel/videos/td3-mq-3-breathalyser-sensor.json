@@ -41,5 +41,6 @@
   "social": {
     "instagram": "Sharab ki bu ko sensor sunghta nahi! 🍺\nMQ-3 ke andar garam SnO2 hota hai.\nAlcohol aate hi uski resistance gir jaati hai.\nPhir A0 voltage badhta hai aur D0 LOW ho jaata hai.\nSave karo apne next Arduino project ke liye 📌\nComment mein batao: agla kaun sa sensor kholein?\n#mq3 #arduino #breathalyzer #electronics #echolab3d",
     "tiktok": "Sensor sharab ko sunghta nahi, resistance badalta hai 🍺 #mq3 #arduino #breathalyzer #electronics #hindi"
-  }
+  },
+  "cover": "/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/mq-3-breathalyser-sensor.cover.jpg"
 }

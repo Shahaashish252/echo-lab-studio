@@ -814,10 +814,17 @@
     "id": "nGG5O_RzQVY",
     "meta": "channel/videos/td3-mq-3-breathalyser-sensor.json",
     "date": "2026-11-20",
-    "status": "approved",
+    "status": "published",
     "topic": "Breathalyser sensor: how it smells alcohol in breath",
     "job": "20261120-232720",
-    "postAt": "2026-11-22T15:00"
+    "postAt": "2026-11-22T15:00",
+    "published": {
+      "youtube": "2026-11-22",
+      "instagram": "https://www.instagram.com/reel/DgCfMTfirgp/",
+      "instagram_story": "17988673290091591",
+      "facebook": "https://www.facebook.com/reel/1082527678135384/"
+    },
+    "postedAt": "2026-11-22T15:03"
   },
   {
     "id": "ycy4OrfFDTU",
