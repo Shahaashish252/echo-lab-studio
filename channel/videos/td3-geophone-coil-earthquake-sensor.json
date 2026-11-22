@@ -1,0 +1,43 @@
+{
+  "file": "out/auto/geophone-coil-earthquake-sensor.mp4",
+  "title": "Geophone position nahi, sirf velocity pakadta hai 🌍 #shorts",
+  "description": "Geophone mein koi chip nahi hai, sirf ek coil aur magnet! Phir bhi ye zameen ki halchal pakad leta hai.\nDekho coil kaise voltage banata hai aur kyun ye velocity follow karta hai.\n🌍 Coil spring pe latki, magnet ke charon taraf\n⚡ Output analog hai: 28.8 V/m/s\n📈 1 mm/s par lagbhag 28.8 mV\n🔧 Arduino Due pe JP3 jumper 3.3 V mode mein\nSubscribe karo Echo Lab 3D aur roz ek sensor kholke dekho!\n#shorts #geophone #earthquake #sensor #arduino #electronics #maker #hindi\n\nSources:\nhttps://manual.raspberryshake.org/whatsinside.html\nhttps://en.wikipedia.org/wiki/Geophone\nhttps://www.sparkfun.com/geophone-sm-24-with-insulating-disc.html\nhttps://hackaday.com/2024/03/02/diy-geophone-build-performs-well",
+  "sources": [
+    "https://manual.raspberryshake.org/whatsinside.html",
+    "https://en.wikipedia.org/wiki/Geophone",
+    "https://www.sparkfun.com/geophone-sm-24-with-insulating-disc.html",
+    "https://hackaday.com/2024/03/02/diy-geophone-build-performs-well",
+    "https://github.com/olewolf/geophone"
+  ],
+  "tags": [
+    "geophone kaise kaam karta hai",
+    "geophone explained hindi",
+    "SM-24 geophone",
+    "earthquake sensor arduino",
+    "geophone arduino",
+    "seismic sensor hindi",
+    "coil and magnet sensor",
+    "geophone voltage velocity",
+    "DIY seismograph",
+    "Raspberry Shake",
+    "sensor explained hindi",
+    "electronics for students",
+    "maker projects hindi",
+    "Echo Lab 3D"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "Zameen ki halchal ek coil kaise pakadti hai?",
+  "format": "teardown3",
+  "captions": "out/auto/geophone-coil-earthquake-sensor.srt",
+  "social": {
+    "instagram": "Zameen ki halchal ek coil kaise pakadti hai? 🌍\nGeophone mein koi chip nahi, bas coil, spring aur magnet.\nCoil tiki rehti hai, magnet hilta hai, aur voltage ban jaata hai.\nYe position nahi, velocity napta hai.\nSave karo agle Arduino project ke liye!\nComment mein batao: agla sensor kaun sa kholein?\n#geophone #earthquake #arduino #sensors #shorts",
+    "tiktok": "Geophone: ek coil jo zameen ki halchal pakadti hai 🌍 #geophone #earthquake #arduino #sensors #shorts"
+  }
+}

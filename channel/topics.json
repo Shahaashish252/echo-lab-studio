@@ -91,11 +91,6 @@
       "module": "dht"
     },
     {
-      "topic": "Earthquake sensor: how a coil feels ground shaking",
-      "hook": "Zameen ki halchal ek coil kaise pakadti hai? 🌍",
-      "module": "geophone"
-    },
-    {
       "topic": "Phone battery percentage: how the phone measures battery charge",
       "hook": "Phone ka 47% kaise likha aata hai? Sensor ka hisaab 🔋",
       "module": "ina219"
@@ -176,6 +171,7 @@
     "RO water purifier TDS meter: how it measures water purity",
     "UV index sensor: how it measures sun's UV strength",
     "Breathalyser sensor: how it smells alcohol in breath",
-    "Classroom CO2 monitor: why a crowded room makes you sleepy"
+    "Classroom CO2 monitor: why a crowded room makes you sleepy",
+    "Earthquake sensor: how a coil feels ground shaking"
   ]
 }

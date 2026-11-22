@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-22T16:04",
+  "updated": "2026-11-22T22:46",
   "videos": 37,
-  "summary": "Instagram is where almost all the audience is: most Hindi videos get 500-1,400 views there, while YouTube Shorts mostly gets under 60 views. The best performers are short, surprising 'robot/sensor does not see or hear what you think' videos, especially clap switch, line follower, gyro and IR robot topics. Newer videos (mid-to-late November) on niche topics like soil, TDS, thermocouple and breathalyzer are getting much less reach, and the English video and the early YouTube-only posts did poorly.",
-  "winningPattern": "Robot or maker-project subjects (clap switch, line follower, gyro balancing robot, IR obstacle avoidance) with a myth-busting hook in Hinglish such as 'X doesn't do what you think, it only does Y', plus an emoji and #shorts. Posted on Instagram first, where it gets 1,000+ views; YouTube only gets a meaningful audience (400-680 views) when the topic is a classic robot/sensor that people search for, such as clap switch or PIR. Saves come from 'how a robot works' topics and shares come from surprising everyday-life facts (sunburn in clouds, soil sensor), so both formats have a role.",
+  "summary": "Instagram is where almost all your audience is: most Hindi videos get 400-1,400 views there, while YouTube Shorts mostly stay under 100 views. The best videos are short 'X doesn't do what you think, it actually does Y' explainers about a single sensor or gadget (clap switch, gyro robot, mic, IR robot). Videos that were only posted on YouTube, plus the English Arduino video, got almost nothing, and the newest videos (soil sensor, UV, geyser) are getting the fewest views so far.",
+  "winningPattern": "A single familiar sensor or gadget, usually robot or clap-switch themed, with a myth-busting Hindi hook of the form 'X doesn't do [obvious thing], it only does [surprising thing]' or a bold 'without this, the robot falls' claim. Titles are short, mix Hinglish with one emoji, and end with #shorts. Instagram Reels is the main platform: shares come from relatable curiosity ('Why sunburn on cloudy days?'), saves from robot and maker explainers, and likes from quick visual demos.",
   "doMore": [
-    "Make more robot and Arduino project explainers (balancing robot, line follower, obstacle avoider, clap switch) since they get the most views and saves",
-    "Keep the 'it doesn't see/hear X, it only senses Y' hook, which fits the top videos",
-    "Post every video to Instagram as well as YouTube; 11 videos had zero Instagram views",
-    "Make surprising everyday-life explainers with a clear 'wait, really?' fact for shares, like the UV sensor and soil sensor videos",
-    "Add a closing line asking viewers to save the video for their next project, to lift saves"
+    "Post every video on Instagram Reels as well as YouTube; videos left off Instagram got zero reach there.",
+    "Make more robot and clap-switch style explainers with a dramatic demo in the first second, since these get the most views and saves.",
+    "Use the 'doesn't do X, only does Y' hook, but pair it with an everyday situation (sunburn, dustbin, tap) that people want to share.",
+    "Add a save-worthy ending like a one-line wiring tip or pin list, since saves signal maker value.",
+    "Make a short series (e.g. 'Robot Senses Part 1, 2, 3') so viewers come back for the next one."
   ],
   "stopDoing": [
-    "Niche single-component topics with no robot or visible action (TDS meter, thermocouple, breathalyzer, KY-038)",
-    "Generic 'How does X work? 🤔' titles and English-only uploads, which got the weakest results",
-    "Posting several near-duplicate videos on the same sensor within days (clap switch, IR heat sensor)"
+    "Stop posting only to YouTube or only in English; the Hindi Instagram audience is the one responding.",
+    "Stop dry question titles like 'X Kaise Kaam Karta Hai?' with no surprise; they get almost no views.",
+    "Stop repeating near-duplicate topics (many clap switch, IR and tap videos) so closely together."
   ],
   "nextTopics": [
-    "Self-balancing robot and why it falls without a gyro",
+    "Robot arm servo without feedback",
     "Obstacle avoiding robot with ultrasonic sensor",
-    "Line follower robot: how IR sensors read black vs white",
-    "Bluetooth car: how a phone steers a robot",
-    "Why a servo motor holds its position"
+    "Self-balancing robot and accelerometer",
+    "Bluetooth speaker or buzzer vs. microphone",
+    "Light sensor LDR night lamp"
   ],
   "bestTimes": {
     "times": [
