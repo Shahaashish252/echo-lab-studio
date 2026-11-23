@@ -69,3 +69,17 @@ events 62 dur 61.9 → page/events.json
   $ ffmpeg -y -loglevel error -f concat -safe 0 -i /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-1795469943/list.txt -c copy /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-phone-bat
 
 == sound + master
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with numpy --with scipy --with soundfile --with soxr python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/mix.
+Downloading scipy (33.7MiB)
+ Downloaded scipy
+Installed 7 packages in 19ms
+mix 62.4 s
+  $ sh core/render/mux.sh /home/runner/work/echo-lab-studio/echo-lab-studio/out/td3-phone-battery-ina219.video.mp4 /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/page/out/mix.wav /home/runner/
+/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/phone-battery-ina219.mp4
+    I:         -14.2 LUFS
+    LRA:         2.2 LU
+    Peak:       -1.1 dBFS
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python core/render/srt.py /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/page/out/cues.json /home/runner/work/echo-lab-studio/echo-lab-studio/ou
+/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/phone-battery-ina219.srt 17 cues
+
+== youtube upload
