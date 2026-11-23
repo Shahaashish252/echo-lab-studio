@@ -10,3 +10,36 @@
   Phone ka Battery % Sensor Nahi Padhta, Calculate Hota Hai 🔋 #shorts
 
 == voice (local Hindi: Piper pratham)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+Downloading soundfile (1.3MiB)
+Downloading numpy (15.0MiB)
+Downloading onnxruntime (26.5MiB)
+Downloading piper-tts (32.6MiB)
+ Downloaded soundfile
+ Downloaded onnxruntime
+ Downloaded numpy
+ Downloaded piper-tts
+Installed 12 packages in 14ms
+[0;93m2026-11-24 03:08:32.908257460 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  downloading hi_IN-pratham-medium.onnx
+  downloading hi_IN-pratham-medium.onnx.json
+  a1    3.88s  फोन का सैंतालीस परसेंट कैसे आता है? सेंसर का हिसाब!
+  a2    2.39s  ये मॉड्यूल छब्बीस वोल्ट तक नापता है।
+  a3    3.78s  बीच में छोटा शंट रेजिस्टर, ज़ीरो पॉइंट वन ओम।
+  a4    3.30s  करंट सीधा नहीं, उसका वोल्टेज ड्रॉप नापता है।
+  a5    3.64s  प्रिसीजन एम्प्लीफायर उसे पढ़ता है, बारह बिट ए डी सी।
+  a6    2.46s  तीन से साढ़े पाँच वोल्ट पर चिप चलती है।
+  b1    3.05s  करंट शंट से गुज़रता है, वोल्टेज गिरता है।
+  b2    3.53s  चिप बस वोल्टेज भी पढ़ती है, शून्य से छब्बीस वोल्ट।
+  b3    2.14s  दोनों नंबर आई टू सी से जाते हैं।
+  b4    2.98s  शंट का वोल्टेज, करंट के हिसाब से बढ़ता है।
+  b5    2.42s  करंट बराबर शंट वोल्टेज भाग रेजिस्टेंस।
+  b6    3.04s  तीन सौ बीस मिली वोल्ट, तीन पॉइंट दो ऐम्प।
+  c1    2.99s  डिफ़ॉल्ट रेंज प्लस माइनस तीन पॉइंट दो ऐम्प।
+  c2    3.75s  फोन फ्यूल गेज, डी आई वाई मॉनिटर, ऐमीटर शंट में।
+  c3    4.32s  कूलॉम्ब काउंटिंग भटकती है, सिर्फ़ वोल्टेज भी भरोसे लायक नहीं।
+  c4    3.04s  ज़ीरो पॉइंट ज़ीरो वन ओम शंट से बत्तीस ऐम्प।
+  c5    3.12s  सेव करो, कमेंट में बताओ कौन सा सेंसर खोलें?
+  voice (Piper pratham, local) 53.8s at length 1.05
+
+== 3D model + drawings (render tools)
