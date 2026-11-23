@@ -830,10 +830,17 @@
     "id": "ycy4OrfFDTU",
     "meta": "channel/videos/td3-mh-z19-co2-sensor-explained.json",
     "date": "2026-11-21",
-    "status": "approved",
+    "status": "published",
     "topic": "Classroom CO2 monitor: why a crowded room makes you sleepy",
     "job": "20261121-160045",
-    "postAt": "2026-11-23T15:00"
+    "postAt": "2026-11-23T15:00",
+    "published": {
+      "youtube": "2026-11-23",
+      "instagram": "https://www.instagram.com/reel/DgFXZnpjKl5/",
+      "instagram_story": "18084077537724687",
+      "facebook": "https://www.facebook.com/reel/2211675546047879/"
+    },
+    "postedAt": "2026-11-23T17:52"
   },
   {
     "id": "fMS-L8_dcRI",
