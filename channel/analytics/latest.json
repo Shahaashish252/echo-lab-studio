@@ -1,15 +1,24 @@
 {
-  "updated": "22 Nov 2026, 23:05",
+  "updated": "23 Nov 2026, 17:05",
   "youtube": {
     "subs": 7,
-    "views": 4360,
+    "views": 4362,
     "videos": [
+      {
+        "title": "Geophone position nahi, sirf velocity pakadta hai 🌍 #shorts",
+        "id": "fMS-L8_dcRI",
+        "status": "private",
+        "published": "2026-11-22",
+        "views": 0,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Breathalyzer sharab ko sunghta nahi, bas ye karta hai 🍺 #shorts",
         "id": "nGG5O_RzQVY",
         "status": "public",
         "published": "2026-11-22",
-        "views": 12,
+        "views": 15,
         "likes": 0,
         "comments": 0
       },
@@ -36,7 +45,7 @@
         "id": "bdsbTntxpVg",
         "status": "public",
         "published": "2026-11-20",
-        "views": 34,
+        "views": 36,
         "likes": 1,
         "comments": 0
       },
@@ -45,7 +54,7 @@
         "id": "6H2l1IC15PA",
         "status": "public",
         "published": "2026-11-19",
-        "views": 11,
+        "views": 13,
         "likes": 0,
         "comments": 0
       },
@@ -72,7 +81,7 @@
         "id": "R2vtN8SNb0s",
         "status": "public",
         "published": "2026-11-16",
-        "views": 23,
+        "views": 26,
         "likes": 1,
         "comments": 2
       },
@@ -610,12 +619,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-25",
-        "views": 13,
-        "minutes": 1,
-        "subs": 0
-      },
-      {
         "day": "2026-10-26",
         "views": 9,
         "minutes": 3,
@@ -764,6 +767,12 @@
         "views": 11,
         "minutes": 0,
         "subs": 0
+      },
+      {
+        "day": "2026-11-20",
+        "views": 46,
+        "minutes": 10,
+        "subs": 0
       }
     ]
   },
@@ -777,8 +786,8 @@
         "published": "2026-11-22",
         "likes": 26,
         "comments": 1,
-        "reach": 1055,
-        "views": 1156,
+        "reach": 1067,
+        "views": 1167,
         "saved": 6,
         "shares": 1
       },
@@ -788,8 +797,8 @@
         "published": "2026-11-21",
         "likes": 7,
         "comments": 0,
-        "reach": 599,
-        "views": 694,
+        "reach": 600,
+        "views": 698,
         "saved": 3,
         "shares": 33
       },
@@ -799,8 +808,8 @@
         "published": "2026-11-20",
         "likes": 4,
         "comments": 0,
-        "reach": 306,
-        "views": 343,
+        "reach": 307,
+        "views": 345,
         "saved": 0,
         "shares": 0
       },
@@ -821,8 +830,8 @@
         "published": "2026-11-18",
         "likes": 3,
         "comments": 0,
-        "reach": 125,
-        "views": 149,
+        "reach": 126,
+        "views": 150,
         "saved": 0,
         "shares": 24
       },
@@ -852,10 +861,10 @@
         "title": "Ye sensor aag nahi dekhta, bas garmi pakadta hai 🔥",
         "url": "https://www.instagram.com/reel/Dfwg517jrC5/",
         "published": "2026-11-15",
-        "likes": 32,
+        "likes": 33,
         "comments": 4,
-        "reach": 1102,
-        "views": 1216,
+        "reach": 1103,
+        "views": 1221,
         "saved": 10,
         "shares": 1
       },

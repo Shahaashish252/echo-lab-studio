@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-22T22:46",
+  "updated": "2026-11-23T17:04",
   "videos": 37,
-  "summary": "Instagram is where almost all your audience is: most Hindi videos get 400-1,400 views there, while YouTube Shorts mostly stay under 100 views. The best videos are short 'X doesn't do what you think, it actually does Y' explainers about a single sensor or gadget (clap switch, gyro robot, mic, IR robot). Videos that were only posted on YouTube, plus the English Arduino video, got almost nothing, and the newest videos (soil sensor, UV, geyser) are getting the fewest views so far.",
-  "winningPattern": "A single familiar sensor or gadget, usually robot or clap-switch themed, with a myth-busting Hindi hook of the form 'X doesn't do [obvious thing], it only does [surprising thing]' or a bold 'without this, the robot falls' claim. Titles are short, mix Hinglish with one emoji, and end with #shorts. Instagram Reels is the main platform: shares come from relatable curiosity ('Why sunburn on cloudy days?'), saves from robot and maker explainers, and likes from quick visual demos.",
+  "summary": "Instagram is where almost all of your audience is: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly gets under 60 views. The best performers are short 'X doesn't see/hear, it only does Y' myth-busting hooks about robots and clap switches, with the Gyro robot video leading in likes and saves. Question-style titles ('Kaise kaam karta hai? 🤔') and videos that were never posted to Instagram, plus the single English video, got almost nothing.",
+  "winningPattern": "Myth-busting 'Yeh X nahi karta, sirf Y karta hai' titles (negation then surprising truth) on hands-on maker subjects like robots, clap switches, and Arduino-type sensors (gyro, DHT11, mic, IR), in Hinglish with one emoji, posted on Instagram Reels first. Shares come from relatable everyday-life 'why' puzzles (sunburn in clouds, soil sensor), saves come from robot/build-related explainers.",
   "doMore": [
-    "Post every video on Instagram Reels as well as YouTube; videos left off Instagram got zero reach there.",
-    "Make more robot and clap-switch style explainers with a dramatic demo in the first second, since these get the most views and saves.",
-    "Use the 'doesn't do X, only does Y' hook, but pair it with an everyday situation (sunburn, dustbin, tap) that people want to share.",
-    "Add a save-worthy ending like a one-line wiring tip or pin list, since saves signal maker value.",
-    "Make a short series (e.g. 'Robot Senses Part 1, 2, 3') so viewers come back for the next one."
+    "Post every video to Instagram Reels first, then YouTube; videos skipped on IG got near zero reach",
+    "Use the 'X doesn't do [obvious thing], it only does [real thing]' hook in the first line",
+    "Make robot and maker-project explainers (gyro, line follower, IR obstacle) since they earn likes and saves",
+    "Add a share-bait everyday puzzle (like UV in cloudy weather) and end with 'send this to a friend who...'",
+    "Keep titles in Hinglish and test one clear, specific sensor per video"
   ],
   "stopDoing": [
-    "Stop posting only to YouTube or only in English; the Hindi Instagram audience is the one responding.",
-    "Stop dry question titles like 'X Kaise Kaam Karta Hai?' with no surprise; they get almost no views.",
-    "Stop repeating near-duplicate topics (many clap switch, IR and tap videos) so closely together."
+    "Generic 'Kaise kaam karta hai? 🤔' question titles with no surprising claim",
+    "Posting only to YouTube or switching to English narration without a test plan",
+    "Repeating near-identical topics (clap switch, tap sensor) many times in a few days"
   ],
   "nextTopics": [
-    "Robot arm servo without feedback",
-    "Obstacle avoiding robot with ultrasonic sensor",
-    "Self-balancing robot and accelerometer",
-    "Bluetooth speaker or buzzer vs. microphone",
-    "Light sensor LDR night lamp"
+    "Accelerometer vs gyro in a self-balancing robot",
+    "Ultrasonic sensor on a robot car",
+    "LDR light sensor in street lights",
+    "Servo motor position control",
+    "Why phone proximity sensor turns screen off in calls"
   ],
   "bestTimes": {
     "times": [
