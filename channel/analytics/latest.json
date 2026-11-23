@@ -1,9 +1,18 @@
 {
-  "updated": "23 Nov 2026, 17:05",
+  "updated": "24 Nov 2026, 03:24",
   "youtube": {
     "subs": 7,
-    "views": 4362,
+    "views": 4392,
     "videos": [
+      {
+        "title": "CO2 se neend nahi aati, bas stale hawa ka ishaara hai! 😴 #shorts",
+        "id": "ycy4OrfFDTU",
+        "status": "public",
+        "published": "2026-11-23",
+        "views": 15,
+        "likes": 0,
+        "comments": 0
+      },
       {
         "title": "Geophone position nahi, sirf velocity pakadta hai 🌍 #shorts",
         "id": "fMS-L8_dcRI",
@@ -18,16 +27,7 @@
         "id": "nGG5O_RzQVY",
         "status": "public",
         "published": "2026-11-22",
-        "views": 15,
-        "likes": 0,
-        "comments": 0
-      },
-      {
-        "title": "CO2 se neend nahi aati, bas stale hawa ka ishaara hai! 😴 #shorts",
-        "id": "ycy4OrfFDTU",
-        "status": "private",
-        "published": "2026-11-21",
-        "views": 0,
+        "views": 17,
         "likes": 0,
         "comments": 0
       },
@@ -81,7 +81,7 @@
         "id": "R2vtN8SNb0s",
         "status": "public",
         "published": "2026-11-16",
-        "views": 26,
+        "views": 28,
         "likes": 1,
         "comments": 2
       },
@@ -99,7 +99,7 @@
         "id": "mwkkbwpqwEw",
         "status": "public",
         "published": "2026-11-14",
-        "views": 43,
+        "views": 44,
         "likes": 0,
         "comments": 0
       },
@@ -306,7 +306,7 @@
         "id": "A4PXvpSAuqQ",
         "status": "public",
         "published": "2026-10-31",
-        "views": 679,
+        "views": 680,
         "likes": 4,
         "comments": 0
       },
@@ -619,12 +619,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-26",
-        "views": 9,
-        "minutes": 3,
-        "subs": 0
-      },
-      {
         "day": "2026-10-27",
         "views": 23,
         "minutes": 4,
@@ -773,6 +767,12 @@
         "views": 46,
         "minutes": 10,
         "subs": 0
+      },
+      {
+        "day": "2026-11-21",
+        "views": 45,
+        "minutes": 4,
+        "subs": 0
       }
     ]
   },
@@ -781,13 +781,24 @@
     "followers": 32,
     "posts": [
       {
+        "title": "Class mein neend CO2 se nahi aati? 😴",
+        "url": "https://www.instagram.com/reel/DgFXZnpjKl5/",
+        "published": "2026-11-23",
+        "likes": 4,
+        "comments": 0,
+        "reach": 117,
+        "views": 138,
+        "saved": 0,
+        "shares": 0
+      },
+      {
         "title": "Sharab ki bu ko sensor sunghta nahi! 🍺",
         "url": "https://www.instagram.com/reel/DgCfMTfirgp/",
         "published": "2026-11-22",
         "likes": 26,
         "comments": 1,
-        "reach": 1067,
-        "views": 1167,
+        "reach": 1069,
+        "views": 1168,
         "saved": 6,
         "shares": 1
       },
@@ -864,7 +875,7 @@
         "likes": 33,
         "comments": 4,
         "reach": 1103,
-        "views": 1221,
+        "views": 1222,
         "saved": 10,
         "shares": 1
       },
@@ -1041,17 +1052,6 @@
         "comments": 0,
         "reach": 325,
         "views": 364,
-        "saved": 0,
-        "shares": 0
-      },
-      {
-        "title": "Ye tap haath dekh ke nahi chalta! 🚰",
-        "url": "https://www.instagram.com/reel/De2V0kfDU4B/",
-        "published": "2026-10-23",
-        "likes": 3,
-        "comments": 0,
-        "reach": 208,
-        "views": 229,
         "saved": 0,
         "shares": 0
       }

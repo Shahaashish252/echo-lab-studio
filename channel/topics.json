@@ -1,26 +1,6 @@
 {
   "queue": [
     {
-      "topic": "Accelerometer vs gyro in a self-balancing robot",
-      "hook": "Robot girta kyun hai? Accelerometer jhooth bolta hai!"
-    },
-    {
-      "topic": "Ultrasonic sensor on a robot car",
-      "hook": "Ultrasonic sensor dekhta nahi, sirf gino karta hai"
-    },
-    {
-      "topic": "LDR light sensor in street lights",
-      "hook": "Street light andhera nahi dekhti, sirf resistance padhti hai"
-    },
-    {
-      "topic": "Servo motor position control",
-      "hook": "Servo ghoomta nahi, sirf apni jagah yaad rakhta hai"
-    },
-    {
-      "topic": "Why phone proximity sensor turns screen off in calls",
-      "hook": "Call mein screen band kaise hoti hai? Phone aapko dekhta nahi"
-    },
-    {
       "topic": "Robot that falls without a gyro, part 2",
       "hook": "Is robot ko gyro nahi diya, dekho kya hua 🤖",
       "module": ""
@@ -111,11 +91,6 @@
       "module": "dht"
     },
     {
-      "topic": "Phone battery percentage: how the phone measures battery charge",
-      "hook": "Phone ka 47% kaise likha aata hai? Sensor ka hisaab 🔋",
-      "module": "ina219"
-    },
-    {
       "topic": "Gas lighter click: how a crystal makes a spark without a battery",
       "hook": "Lighter ka click chingari kaise banata hai? 🔥",
       "module": "piezo"
@@ -192,6 +167,7 @@
     "UV index sensor: how it measures sun's UV strength",
     "Breathalyser sensor: how it smells alcohol in breath",
     "Classroom CO2 monitor: why a crowded room makes you sleepy",
-    "Earthquake sensor: how a coil feels ground shaking"
+    "Earthquake sensor: how a coil feels ground shaking",
+    "Phone battery percentage: how the phone measures battery charge"
   ]
 }

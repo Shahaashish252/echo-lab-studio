@@ -850,5 +850,14 @@
     "topic": "Earthquake sensor: how a coil feels ground shaking",
     "job": "20261122-224656",
     "postAt": "2026-11-24T15:00"
+  },
+  {
+    "id": "XIneabrcDp4",
+    "meta": "channel/videos/td3-phone-battery-ina219.json",
+    "date": "2026-11-24",
+    "status": "approved",
+    "topic": "Phone battery percentage: how the phone measures battery charge",
+    "job": "20261124-030646",
+    "postAt": "2026-11-25T15:00"
   }
 ]

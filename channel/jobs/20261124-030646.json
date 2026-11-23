@@ -4,7 +4,7 @@
   "hook": "Phone ka 47% kaise likha aata hai? Sensor ka hisaab 🔋",
   "lang": "hi",
   "started": "2026-11-24T03:06:46",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research & storyboard: \"Phone battery percentage: how the phone measures battery charge (open with this hook: \"Phone ka 47% kaise likha aata hai? Sensor ka hisaab 🔋\")\" (ina219, Claude)",
@@ -36,5 +36,7 @@
     }
   ],
   "format": "teardown3",
-  "module": "ina219"
+  "module": "ina219",
+  "finished": "2026-11-24T03:24:49",
+  "uploadId": "XIneabrcDp4"
 }
