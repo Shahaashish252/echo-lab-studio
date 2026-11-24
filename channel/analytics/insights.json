@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-24T03:06",
-  "videos": 38,
-  "summary": "Instagram is carrying the channel: almost every Hindi video gets 150 to 1,400 views there, while YouTube Shorts mostly stays under 60 views. The best videos explain a familiar gadget with a surprising 'it doesn't do X, it actually does Y' twist, and the strongest ones are robots and clap switches. Videos about everyday gadgets like doors, taps and street lights, plus the YouTube-only uploads, got almost no reach or engagement, and the English video did not catch on either.",
-  "winningPattern": "Maker-favorite subjects (robots, Arduino modules, clap switch, gyro, IR, mic, DHT11) with a 'X doesn't do the obvious thing, it does this instead' hook in Hinglish, written as a statement or bold claim rather than a 'Kaise...? 🤔' question. Best on Instagram Reels, where they get 1,000+ views and the highest saves and likes. Shares spike on 'myth-busting' sensor facts (UV sunburn, soil sensor) even with low views, so surprising claims travel. Early robot and clap-switch videos on YouTube (400 to 680 views) show those topics also work there.",
+  "updated": "2026-11-24T18:38",
+  "videos": 39,
+  "summary": "Instagram is where almost all the audience is: most Hindi videos get 500 to 1,400 views there, while YouTube Shorts mostly get under 60 views. The best performers use a surprising 'X doesn't do what you think, it only does Y' hook about a familiar sensor or gadget. Shares are rare but powerful: the UV sunburn and soil sensor videos got 33 and 24 shares from small view counts, while generic 'How does X work?' titles and the YouTube-only uploads got almost nothing.",
+  "winningPattern": "Instagram-first Hindi Shorts about one familiar sensor or everyday gadget, with a myth-busting title in the form 'X doesn't do [obvious thing], it only does [surprising thing]' (e.g. 'Clap Switch Taali Nahi, Sirf Shor Sunta Hai', 'DHT11 Aag Nahi Dekhta, Sirf Garmi Pakadta Hai'). Robots and clap-switch topics get the most saves and views. Surprising real-life facts such as sunburn on cloudy days get the most shares. Titles are short, use one emoji, and are posted on both platforms. The 'How does X work? 🤔' question format flopped.",
   "doMore": [
-    "Post every video on Instagram as well as YouTube; all the YouTube-only uploads flopped",
-    "Make robot and Arduino module videos (gyro, line follower, IR, clap switch) the core of the channel",
-    "Use the 'sensor doesn't do X, only does Y' statement hook with a visible failure or demo in the first second",
-    "Add a save-worthy or share-worthy payoff such as a wiring tip, a myth correction or a 'try this at home' test",
-    "Re-test the 'Gyro Ke Bina Robot Gir Jaata' and 'Clap Switch' formats with new angles instead of repeating the same video"
+    "Use the 'X doesn't do A, it only does B' myth-bust title and on-screen hook on every video",
+    "Post every video to Instagram Reels first, as it brings 10 to 50 times more views than YouTube",
+    "Make more robot and clap-switch style videos (robot falling without gyro, line follower, seeti on clap switch) since they get the most views and saves",
+    "Pick topics tied to a real-life surprise (cloudy-day sunburn, soil moisture, breathalyzer) and end with a line that invites sharing, like 'send this to a friend who thinks...'",
+    "Test the YouTube side with a stronger first-second visual and a clear keyword title, because it gets very little now"
   ],
   "stopDoing": [
-    "Generic 'Kaise Kaam Karta Hai? 🤔' question titles about everyday gadgets (tap, mall door, street light, smoke detector)",
-    "Publishing to one platform only, or making near-duplicate videos on the same sensor (clap switch and DHT11 repeats lose reach)",
-    "Switching to English narration until Hindi is fully tapped out"
+    "Generic 'Kaise kaam karta hai? 🤔' question titles",
+    "Uploading to YouTube only, with no Instagram post (about 12 videos got zero Instagram reach)",
+    "Making several near-duplicate videos on the same topic (PIR, IR, clap switch, tap) without a new angle"
   ],
   "nextTopics": [
-    "Gyro vs accelerometer on a self-balancing robot",
-    "Line follower robot IR sensor failing on a black table",
-    "Arduino servo jitter and why it shakes",
-    "Ultrasonic sensor fooled by a soft cloth",
-    "Bluetooth HC-05 module controlling a robot car"
+    "Ultrasonic sensor on a robot",
+    "Smartwatch heart rate sensor",
+    "Touchscreen",
+    "Smoke detector",
+    "Phone accelerometer and rotation"
   ],
   "bestTimes": {
     "times": [
       "15:00",
       "21:00"
     ],
-    "reason": "from our own posts: these hours averaged the most views (37 posts)"
+    "reason": "from our own posts: these hours averaged the most views (38 posts)"
   }
 }

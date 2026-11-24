@@ -865,5 +865,14 @@
     "topic": "Phone battery percentage: how the phone measures battery charge",
     "job": "20261124-030646",
     "postAt": "2026-11-25T15:00"
+  },
+  {
+    "id": "Lb-G3FYW_7c",
+    "meta": "channel/videos/td3-lighter-click-piezo-spark.json",
+    "date": "2026-11-24",
+    "status": "approved",
+    "topic": "Gas lighter click: how a crystal makes a spark without a battery",
+    "job": "20261124-183902",
+    "postAt": "2026-11-26T15:00"
   }
 ]

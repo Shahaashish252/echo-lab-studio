@@ -4,7 +4,7 @@
   "hook": "Lighter ka click chingari kaise banata hai? 🔥",
   "lang": "hi",
   "started": "2026-11-24T18:39:02",
-  "status": "running",
+  "status": "done",
   "stages": [
     {
       "name": "research & storyboard: \"Gas lighter click: how a crystal makes a spark without a battery (open with this hook: \"Lighter ka click chingari kaise banata hai? 🔥\")\" (piezo, Claude)",
@@ -36,5 +36,7 @@
     }
   ],
   "format": "teardown3",
-  "module": "piezo"
+  "module": "piezo",
+  "finished": "2026-11-24T19:00:08",
+  "uploadId": "Lb-G3FYW_7c"
 }

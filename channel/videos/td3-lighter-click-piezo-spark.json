@@ -1,0 +1,46 @@
+{
+  "file": "out/auto/lighter-click-piezo-spark.mp4",
+  "title": "Lighter Mein Battery Nahi, Hathoda Hota Hai 🔥 #shorts",
+  "description": "Lighter ke click se chingari kaise banti hai, bina battery ke?\nJawab hai ek crystal aur ek spring wala hathoda.\n🔥 Hathoda crystal par achanak chot marta hai\n⚡ Crystal ka charge khisakta hai aur high voltage banta hai\n🧪 Piezo disc par 1-10 MΩ resistor lagao\n📌 Static weight nahi, sirf jhatka pakadta hai\nSubscribe karo Echo Lab 3D ke liye!\n#shorts #piezo #arduino #electronics #sensor #ECHOLAB3D #diyelectronics #hindi\n\nSources:\nhttps://en.wikipedia.org/wiki/Piezoelectricity\nhttps://en.wikipedia.org/wiki/Piezo_ignition\nhttps://en.wikipedia.org/wiki/Gas_lighter\nhttps://www.engineersgarage.com/piezo-igniter/",
+  "sources": [
+    "https://en.wikipedia.org/wiki/Piezoelectricity",
+    "https://en.wikipedia.org/wiki/Piezo_ignition",
+    "https://en.wikipedia.org/wiki/Gas_lighter",
+    "https://www.engineersgarage.com/piezo-igniter/",
+    "https://en.wikipedia.org/wiki/Piezoelectric_sensor",
+    "https://www.farnell.com/datasheets/3799710.pdf",
+    "https://forum.arduino.cc/t/piezo-sensor-values-super-low/1268334"
+  ],
+  "tags": [
+    "piezo disc sensor",
+    "piezo igniter kaise kaam karta hai",
+    "lighter spark kaise banta hai",
+    "piezoelectric effect hindi",
+    "gas lighter battery nahi",
+    "piezo sensor arduino",
+    "piezo knock sensor",
+    "piezo disc analogRead",
+    "piezo resistor 1 megohm",
+    "piezo buzzer and sensor",
+    "arduino sensors hindi",
+    "electronics for students",
+    "spark without battery",
+    "piezo crystal PZT",
+    "Echo Lab 3D"
+  ],
+  "categoryId": "28",
+  "language": "hi",
+  "privacy": "private",
+  "playlist": {
+    "title": "Sensor Ki Kahani: Shorts",
+    "description": "Quick animated explainers."
+  },
+  "coverMs": 9000,
+  "thumbText": "Lighter ka click chingari kaise banata hai?",
+  "format": "teardown3",
+  "captions": "out/auto/lighter-click-piezo-spark.srt",
+  "social": {
+    "instagram": "Lighter mein battery nahi hoti, phir chingari kahan se? 🔥\nSpring wala hathoda crystal par chot marta hai.\nCrystal hazaaron volt tak bana sakta hai, bina battery ke.\nSame disc buzzer bhi hai aur knock sensor bhi.\nSave karo, kaam aayega!\nComment mein batao: kaunsa gadget ab tak battery wala samajhte the?\n#piezo #arduino #electronics #sensors #echolab3d",
+    "tiktok": "Lighter ka click chingari kaise banata hai? Bina battery ke! 🔥 #piezo #arduino #electronics #sensors #echolab3d"
+  }
+}

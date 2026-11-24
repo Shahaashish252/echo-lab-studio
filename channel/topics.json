@@ -91,11 +91,6 @@
       "module": "dht"
     },
     {
-      "topic": "Gas lighter click: how a crystal makes a spark without a battery",
-      "hook": "Lighter ka click chingari kaise banata hai? 🔥",
-      "module": "piezo"
-    },
-    {
       "topic": "Lie detector sweat sensor: how skin changes under stress",
       "hook": "Jhooth bolne par haath kyun paseej jaate hain? 🤔",
       "module": "gsr"
@@ -168,6 +163,7 @@
     "Breathalyser sensor: how it smells alcohol in breath",
     "Classroom CO2 monitor: why a crowded room makes you sleepy",
     "Earthquake sensor: how a coil feels ground shaking",
-    "Phone battery percentage: how the phone measures battery charge"
+    "Phone battery percentage: how the phone measures battery charge",
+    "Gas lighter click: how a crystal makes a spark without a battery"
   ]
 }
