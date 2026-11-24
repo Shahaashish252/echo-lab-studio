@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Ultrasonic sensor robot obstacle myth",
+      "hook": "Ye robot deewar ko dekhta nahi, sirf echo gintा hai"
+    },
+    {
+      "topic": "Robot without accelerometer/balance sensor",
+      "hook": "Is sensor ke bina self-balancing robot 1 second mein gir jaata"
+    },
+    {
+      "topic": "Soil moisture sensor corrodes and lies",
+      "hook": "Aapka soil sensor 2 hafte mein jhooth bolne lagta hai"
+    },
+    {
+      "topic": "LDR light sensor and cloudy day fooling",
+      "hook": "Street light ko andhera nahi, sirf resistance dikhta hai"
+    },
+    {
+      "topic": "Servo motor hobby robot jitter",
+      "hook": "Servo ko angle nahi pata, wo sirf pulse ginta hai"
+    },
+    {
       "topic": "Robot that falls without a gyro, part 2",
       "hook": "Is robot ko gyro nahi diya, dekho kya hua 🤖",
       "module": ""

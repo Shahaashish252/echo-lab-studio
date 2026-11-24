@@ -1,26 +1,25 @@
 {
-  "updated": "2026-11-24T18:38",
+  "updated": "2026-11-25T01:46",
   "videos": 39,
-  "summary": "Instagram is where almost all the audience is: most Hindi videos get 500 to 1,400 views there, while YouTube Shorts mostly get under 60 views. The best performers use a surprising 'X doesn't do what you think, it only does Y' hook about a familiar sensor or gadget. Shares are rare but powerful: the UV sunburn and soil sensor videos got 33 and 24 shares from small view counts, while generic 'How does X work?' titles and the YouTube-only uploads got almost nothing.",
-  "winningPattern": "Instagram-first Hindi Shorts about one familiar sensor or everyday gadget, with a myth-busting title in the form 'X doesn't do [obvious thing], it only does [surprising thing]' (e.g. 'Clap Switch Taali Nahi, Sirf Shor Sunta Hai', 'DHT11 Aag Nahi Dekhta, Sirf Garmi Pakadta Hai'). Robots and clap-switch topics get the most saves and views. Surprising real-life facts such as sunburn on cloudy days get the most shares. Titles are short, use one emoji, and are posted on both platforms. The 'How does X work? 🤔' question format flopped.",
+  "summary": "Instagram is where almost all the audience is: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly gets under 100. The best videos use a 'this sensor doesn't X, it only does Y' myth-busting hook on a familiar robot or gadget, and clap-switch and robot topics did best on both platforms. Videos with question-style titles ('Kaise kaam karta hai? 🤔') and the English Arduino video did poorly, and many were never posted to Instagram.",
+  "winningPattern": "Short Hindi (Hinglish) videos about a familiar gadget or hobby robot (clap switch, line follower, gyro robot, IR sensor, DHT11) with a surprising myth-busting title: 'X doesn't do [obvious thing], it only does [real thing]' or 'without X the robot falls'. Posted to Instagram Reels first, where reach is 1,000+; YouTube only pulls 500-700 views on robot and clap-switch topics. Shares spike on relatable everyday-danger topics (UV in cloudy weather, soil sensor), and saves spike on maker-useful topics (gyro, clap switch, DHT11).",
   "doMore": [
-    "Use the 'X doesn't do A, it only does B' myth-bust title and on-screen hook on every video",
-    "Post every video to Instagram Reels first, as it brings 10 to 50 times more views than YouTube",
-    "Make more robot and clap-switch style videos (robot falling without gyro, line follower, seeti on clap switch) since they get the most views and saves",
-    "Pick topics tied to a real-life surprise (cloudy-day sunburn, soil moisture, breathalyzer) and end with a line that invites sharing, like 'send this to a friend who thinks...'",
-    "Test the YouTube side with a stronger first-second visual and a clear keyword title, because it gets very little now"
+    "Post every video to Instagram Reels; the 10 videos with no Instagram numbers all stayed under 80 total views",
+    "Use the 'Sensor doesn't X, only does Y' myth-bust title with one emoji",
+    "Make more hobby-robot and clap-switch style videos (gyro, line follower, IR obstacle) since they work on both platforms",
+    "Add a share trigger line like 'send this to a friend who thinks...' on everyday-life topics such as sunburn, soil, health",
+    "Test one cliffhanger hook ('Without this, the robot falls') against the myth-bust style and compare saves"
   ],
   "stopDoing": [
-    "Generic 'Kaise kaam karta hai? 🤔' question titles",
-    "Uploading to YouTube only, with no Instagram post (about 12 videos got zero Instagram reach)",
-    "Making several near-duplicate videos on the same topic (PIR, IR, clap switch, tap) without a new angle"
+    "Generic 'X Kaise Kaam Karta Hai? 🤔' question titles, which averaged under 30 views",
+    "Posting English or YouTube-only videos, and near-duplicate topics like a fourth clap-switch or PIR video in a row"
   ],
   "nextTopics": [
-    "Ultrasonic sensor on a robot",
-    "Smartwatch heart rate sensor",
-    "Touchscreen",
-    "Smoke detector",
-    "Phone accelerometer and rotation"
+    "Ultrasonic sensor robot obstacle myth",
+    "Robot without accelerometer/balance sensor",
+    "Soil moisture sensor corrodes and lies",
+    "LDR light sensor and cloudy day fooling",
+    "Servo motor hobby robot jitter"
   ],
   "bestTimes": {
     "times": [
