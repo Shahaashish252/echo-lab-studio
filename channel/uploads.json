@@ -846,10 +846,16 @@
     "id": "fMS-L8_dcRI",
     "meta": "channel/videos/td3-geophone-coil-earthquake-sensor.json",
     "date": "2026-11-22",
-    "status": "approved",
+    "status": "published",
     "topic": "Earthquake sensor: how a coil feels ground shaking",
     "job": "20261122-224656",
-    "postAt": "2026-11-24T15:00"
+    "postAt": "2026-11-24T15:00",
+    "published": {
+      "youtube": "2026-11-24",
+      "instagram": "https://www.instagram.com/reel/DgHqhiykYwK/",
+      "facebook": "https://www.facebook.com/reel/1407022504561719/"
+    },
+    "postedAt": "2026-11-24T15:18"
   },
   {
     "id": "XIneabrcDp4",
