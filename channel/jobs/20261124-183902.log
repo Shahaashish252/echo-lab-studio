@@ -13,3 +13,36 @@
   Lighter Mein Battery Nahi, Hathoda Hota Hai 🔥 #shorts
 
 == voice (local Hindi: Piper pratham)
+  $ /opt/hostedtoolcache/Python/3.12.16/x64/bin/python -m uv run --python 3.12 --with piper-tts --with soundfile --with soxr --with numpy python /home/runner/work/echo-lab-studio/echo-lab-studio/teardown/
+Downloading onnxruntime (26.5MiB)
+Downloading soundfile (1.3MiB)
+Downloading numpy (15.0MiB)
+Downloading piper-tts (32.6MiB)
+ Downloaded soundfile
+ Downloaded numpy
+ Downloaded onnxruntime
+ Downloaded piper-tts
+Installed 12 packages in 16ms
+[0;93m2026-11-24 18:43:48.196987636 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+  downloading hi_IN-pratham-medium.onnx
+  downloading hi_IN-pratham-medium.onnx.json
+  a1    2.32s  लाइटर का क्लिक चिंगारी कैसे बनाता है?
+  a2    3.46s  यह पीज़ो डिस्क सेंसर है, बीस मिलीमीटर की।
+  a3    3.00s  बीच में चौदह मिलीमीटर का क्रिस्टल एलिमेंट है।
+  a4    2.90s  इसे दबाओ, तो यह खुद वोल्टेज बनाता है।
+  a5    2.73s  नीचे पीतल की प्लेट इसे सहारा देती है।
+  a6    2.58s  पीछे कोई बैटरी नहीं, बस तार हैं।
+  b1    2.51s  हथौड़ा क्रिस्टल पर अचानक चोट मारता है।
+  b2    2.69s  क्रिस्टल दबता है, तो चार्ज खिसकता है।
+  b3    2.72s  आमने-सामने के चेहरों पर हाई वोल्टेज बनता है।
+  b4    3.18s  हवा आयनाइज़ होती है, और चिंगारी कूदती है।
+  b5    2.54s  रीडिंग थ्रेशोल्ड से ऊपर गई, तो हिट।
+  b6    3.77s  दो किलोन्यूटन पर क्वार्ट्ज़ देता है बारह हज़ार पाँच सौ वोल्ट।
+  c1    2.60s  स्थिर दबाव नापना इसके बस की बात नहीं।
+  c2    3.28s  लाइटर, गैस स्टोव और कैम्पिंग स्टोव में चलता है।
+  c3    3.13s  टूटता है घिसने से, और स्थिर वज़न नापने से।
+  c4    3.25s  एक से दस मेगाओह्म लगाओ, वरना सिग्नल कम।
+  c5    3.05s  सेव करो, और बताओ किस दोस्त को बैटरी लगती है?
+  voice (Piper pratham, local) 49.7s at length 1.05
+
+== 3D model + drawings (render tools)
