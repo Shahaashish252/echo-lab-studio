@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Ultrasonic sensor (HC-SR04) and bats",
+      "hook": "Yeh sensor dekhta nahi, sirf echo ginta hai 🦇"
+    },
+    {
+      "topic": "Servo motor without feedback",
+      "hook": "Servo ko pata hai kahan ghoomna hai, bina dekhe?"
+    },
+    {
+      "topic": "Potentiometer vs joystick",
+      "hook": "Joystick mein camera nahi, sirf do ghoomne wale resistor hain"
+    },
+    {
+      "topic": "Robot without motor driver",
+      "hook": "Arduino se seedha motor jodo to board jal jaata hai 🔥"
+    },
+    {
+      "topic": "Light sensor LDR and street light",
+      "hook": "LDR ko roshni nahi dikhti, bas resistance badalta hai"
+    },
+    {
       "topic": "Ultrasonic sensor robot obstacle myth",
       "hook": "Ye robot deewar ko dekhta nahi, sirf echo gintा hai"
     },
