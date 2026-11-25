@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Why a self-balancing robot needs an IMU",
+      "hook": "Is robot ko gyro hata do, 1 second mein gir jayega"
+    },
+    {
+      "topic": "Obstacle avoiding robot with an ultrasonic sensor",
+      "hook": "Ye robot deewar dekhta nahi, sirf awaaz ka echo sunta hai"
+    },
+    {
+      "topic": "Line follower IR sensor reading black vs white",
+      "hook": "Line follower ko kaala rang nahi dikhta, sirf kam roshni"
+    },
+    {
+      "topic": "Why a servo motor holds its angle",
+      "hook": "Servo ko angle pata nahi hota, bas ek knob ko feel karta hai"
+    },
+    {
+      "topic": "Bluetooth car controlled from a phone",
+      "hook": "Phone robot ko chalata nahi, sirf text bhejta hai"
+    },
+    {
       "topic": "Ultrasonic sensor (HC-SR04) and bats",
       "hook": "Yeh sensor dekhta nahi, sirf echo ginta hai 🦇"
     },

@@ -1,5 +1,5 @@
 {
-  "updated": "25 Nov 2026, 17:25",
+  "updated": "26 Nov 2026, 01:00",
   "youtube": {
     "subs": 7,
     "views": 4445,
@@ -18,7 +18,7 @@
         "id": "fMS-L8_dcRI",
         "status": "public",
         "published": "2026-11-24",
-        "views": 14,
+        "views": 22,
         "likes": 0,
         "comments": 0
       },
@@ -36,7 +36,7 @@
         "id": "ycy4OrfFDTU",
         "status": "public",
         "published": "2026-11-23",
-        "views": 15,
+        "views": 16,
         "likes": 0,
         "comments": 0
       },
@@ -135,7 +135,7 @@
         "id": "m2busj2Fu4c",
         "status": "public",
         "published": "2026-11-12",
-        "views": 65,
+        "views": 67,
         "likes": 2,
         "comments": 2
       },
@@ -531,7 +531,7 @@
         "id": "JCHBMaykw24",
         "status": "public",
         "published": "2026-10-17",
-        "views": 573,
+        "views": 574,
         "likes": 9,
         "comments": 2
       },
@@ -636,12 +636,6 @@
       }
     ],
     "daily": [
-      {
-        "day": "2026-10-28",
-        "views": 22,
-        "minutes": 4,
-        "subs": 0
-      },
       {
         "day": "2026-10-29",
         "views": 277,
@@ -804,9 +798,9 @@
         "published": "2026-11-24",
         "likes": 8,
         "comments": 6,
-        "reach": 445,
-        "views": 495,
-        "saved": 2,
+        "reach": 446,
+        "views": 497,
+        "saved": 1,
         "shares": 0
       },
       {
@@ -904,7 +898,7 @@
         "likes": 33,
         "comments": 4,
         "reach": 1103,
-        "views": 1223,
+        "views": 1224,
         "saved": 10,
         "shares": 1
       },
