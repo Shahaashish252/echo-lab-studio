@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Self-balancing robot and the gyro/accelerometer",
+      "hook": "Is robot ko ek second mein girne se kaun bachata hai?"
+    },
+    {
+      "topic": "Obstacle-avoiding robot using ultrasonic sensor",
+      "hook": "Ye robot deewar se takrata nahi, aise pehle hi ruk jaata hai"
+    },
+    {
+      "topic": "Clap switch part 3: why it triggers on a door slam",
+      "hook": "Clap switch ko darwaza band hone par bhi kya chala deta hai?"
+    },
+    {
+      "topic": "Line follower robot: why it fails on black tape glare",
+      "hook": "Line follower ko kaali line bhi nahi dikhti, phir bhi chalta hai"
+    },
+    {
+      "topic": "Phone mic as reverse speaker (MEMS mic)",
+      "hook": "Aapka phone sunta nahi hai, bas hawa ka dabav naapta hai"
+    },
+    {
       "topic": "Drone without gyro/accelerometer",
       "hook": "Gyro hatao, drone 1 second mein palat jayega!"
     },
