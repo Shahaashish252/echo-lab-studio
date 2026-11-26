@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-26T01:00",
+  "updated": "2026-11-26T17:14",
   "videos": 39,
-  "summary": "Instagram is where nearly all the audience is: most videos get 500-1,400 views there, while YouTube Shorts mostly get under 60 views. The best performers are short, punchy 'X doesn't do what you think, it only does Y' explainers on familiar gadgets (clap switch, gyro robot, line follower), and posts with a surprising or relatable angle earn shares and saves. The weakest are plain 'How does X work? 🤔' question titles, which got no Instagram traction (or were never posted there) and almost no YouTube views, and the newest videos have very low reach on both platforms.",
-  "winningPattern": "Instagram-first Hindi Reels about a familiar robot or sensor gadget (clap switch, gyro robot, line follower, IR robot) with a myth-busting hook: 'It doesn't X, it only Y', or a 'without this, the robot falls' consequence hook. Titles are short, in Hinglish, with one emoji. The topic is something makers have built or seen. The clap switch and robot-behavior videos also get some YouTube views, while UV, soil and dustbin topics get shares on Instagram only.",
+  "summary": "Instagram is where the audience is: almost every video there gets 400 to 1,400 views, while YouTube Shorts mostly get under 60 views. The best videos use a 'sensor doesn't do what you think' hook on familiar gadgets or robots (gyro robot, clap switch, line follower), and they earn likes, saves and shares. Weak spots are generic 'Kaise kaam karta hai?' questions, which got almost nothing, and videos not posted to Instagram at all (the early October batch).",
+  "winningPattern": "Short, myth-busting Hindi titles in the form 'X doesn't do [obvious thing], it only does [surprising thing]' or 'Without X this robot falls', about relatable gadgets and robots (gyro, clap switch, line follower, DHT11, mic). Posted on Instagram Reels, with a single emoji and #shorts. Saves come from robot/maker demos, and shares come from surprising everyday-life facts like UV through clouds and soil sensors.",
   "doMore": [
-    "Post every video to Instagram first, then treat YouTube as secondary and test a separate thumbnail/title there",
-    "Use the myth-bust hook 'X doesn't do A, it only does B' or a failure hook like 'Without this, the robot falls'",
-    "Make more beginner-project topics: robots, clap switch, line follower, and other Arduino builds people can copy",
-    "Add a save or share trigger at the end, like 'Save this for your project' or 'Send this to your maker friend'",
-    "Make a part 2 for the best topics (gyro, clap switch) with a new angle instead of repeating the same video"
+    "Post every video to Instagram first, since it delivers 10 to 50 times the views of YouTube for this channel",
+    "Use the 'doesn't X, only Y' myth-bust title with a visible consequence (robot falls, switch triggers wrongly)",
+    "Make robot and maker-project demos (gyro, clap switch, line follower), which earn the most saves",
+    "Add a 'send this to a friend' angle to everyday-life facts, like the UV sunburn video, which got 33 shares from 698 views",
+    "Make short follow-ups to winners, such as clap switch part 3 or gyro on a drone, and test one English version since the only English video had decent YouTube views"
   ],
   "stopDoing": [
-    "Generic 'Kaise Kaam Karta Hai? 🤔' question titles with no surprising claim",
-    "Posting near-duplicate topics (three clap switch, many IR/PIR videos) within weeks of each other",
-    "Posting to YouTube only and skipping Instagram"
+    "Generic 'Kaise kaam karta hai? 🤔' titles with no surprise",
+    "Publishing videos on YouTube only, with no Instagram version",
+    "Niche component-spec topics (TDS, geophone, KY-038, CO2) without a relatable everyday hook"
   ],
   "nextTopics": [
-    "Why a self-balancing robot needs an IMU",
-    "Obstacle avoiding robot with an ultrasonic sensor",
-    "Line follower IR sensor reading black vs white",
-    "Why a servo motor holds its angle",
-    "Bluetooth car controlled from a phone"
+    "Drone without gyro/accelerometer",
+    "Why clap switch turns on from a whistle (part 3: fixing it)",
+    "Line follower on a curve: why it fails",
+    "Why phone auto-rotates only sometimes",
+    "Why a sensor can't tell day from a bright bulb (LDR)"
   ],
   "bestTimes": {
     "times": [

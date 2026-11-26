@@ -1,8 +1,8 @@
 {
-  "updated": "26 Nov 2026, 01:00",
+  "updated": "26 Nov 2026, 17:14",
   "youtube": {
     "subs": 7,
-    "views": 4445,
+    "views": 4452,
     "videos": [
       {
         "title": "Lighter Mein Battery Nahi, Hathoda Hota Hai 🔥 #shorts",
@@ -18,7 +18,7 @@
         "id": "fMS-L8_dcRI",
         "status": "public",
         "published": "2026-11-24",
-        "views": 22,
+        "views": 32,
         "likes": 0,
         "comments": 0
       },
@@ -63,7 +63,7 @@
         "id": "bdsbTntxpVg",
         "status": "public",
         "published": "2026-11-20",
-        "views": 38,
+        "views": 39,
         "likes": 1,
         "comments": 0
       },
@@ -135,7 +135,7 @@
         "id": "m2busj2Fu4c",
         "status": "public",
         "published": "2026-11-12",
-        "views": 67,
+        "views": 68,
         "likes": 2,
         "comments": 2
       },
@@ -784,6 +784,12 @@
         "day": "2026-11-22",
         "views": 24,
         "minutes": 4,
+        "subs": 0
+      },
+      {
+        "day": "2026-11-23",
+        "views": 27,
+        "minutes": 2,
         "subs": 0
       }
     ]

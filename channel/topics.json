@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Drone without gyro/accelerometer",
+      "hook": "Gyro hatao, drone 1 second mein palat jayega!"
+    },
+    {
+      "topic": "Why clap switch turns on from a whistle (part 3: fixing it)",
+      "hook": "Clap switch ko sirf taali par chalana ho toh?"
+    },
+    {
+      "topic": "Line follower on a curve: why it fails",
+      "hook": "Line follower mod par kyun nikal jata hai?"
+    },
+    {
+      "topic": "Why phone auto-rotates only sometimes",
+      "hook": "Phone ghoomta hai, par sensor ghoomna nahi jaanta!"
+    },
+    {
+      "topic": "Why a sensor can't tell day from a bright bulb (LDR)",
+      "hook": "LDR ko bulb aur suraj mein farak nahi pata!"
+    },
+    {
       "topic": "Why a self-balancing robot needs an IMU",
       "hook": "Is robot ko gyro hata do, 1 second mein gir jayega"
     },
