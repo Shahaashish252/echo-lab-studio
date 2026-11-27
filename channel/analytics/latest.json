@@ -1,5 +1,5 @@
 {
-  "updated": "27 Nov 2026, 17:08",
+  "updated": "28 Nov 2026, 00:37",
   "youtube": {
     "subs": 7,
     "views": 4484,
@@ -63,7 +63,7 @@
         "id": "bdsbTntxpVg",
         "status": "public",
         "published": "2026-11-20",
-        "views": 39,
+        "views": 40,
         "likes": 1,
         "comments": 0
       },
@@ -72,7 +72,7 @@
         "id": "6H2l1IC15PA",
         "status": "public",
         "published": "2026-11-19",
-        "views": 15,
+        "views": 16,
         "likes": 0,
         "comments": 0
       },
@@ -81,7 +81,7 @@
         "id": "LHrAN458UdQ",
         "status": "public",
         "published": "2026-11-18",
-        "views": 31,
+        "views": 32,
         "likes": 1,
         "comments": 0
       },
@@ -637,12 +637,6 @@
     ],
     "daily": [
       {
-        "day": "2026-10-30",
-        "views": 547,
-        "minutes": 53,
-        "subs": 1
-      },
-      {
         "day": "2026-10-31",
         "views": 357,
         "minutes": 38,
@@ -804,8 +798,8 @@
         "published": "2026-11-24",
         "likes": 8,
         "comments": 6,
-        "reach": 448,
-        "views": 499,
+        "reach": 449,
+        "views": 500,
         "saved": 1,
         "shares": 0
       },
@@ -815,8 +809,8 @@
         "published": "2026-11-23",
         "likes": 4,
         "comments": 0,
-        "reach": 129,
-        "views": 155,
+        "reach": 130,
+        "views": 157,
         "saved": 0,
         "shares": 0
       },
@@ -826,8 +820,8 @@
         "published": "2026-11-22",
         "likes": 26,
         "comments": 1,
-        "reach": 1073,
-        "views": 1171,
+        "reach": 1074,
+        "views": 1172,
         "saved": 6,
         "shares": 1
       },

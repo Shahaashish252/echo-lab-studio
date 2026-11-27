@@ -1,6 +1,22 @@
 {
   "queue": [
     {
+      "topic": "Obstacle-avoiding robot with ultrasonic vs IR",
+      "hook": "Ye robot deewar ko dekhta nahi, bas ye karta hai"
+    },
+    {
+      "topic": "Clap switch part 3: why a loud fan breaks it",
+      "hook": "Fan chalu hote hi Clap Switch pagal kyun ho jaata hai?"
+    },
+    {
+      "topic": "Line follower: how two sensors steer the robot",
+      "hook": "Line Follower ko line dikhti nahi, bas kaala rang pehchanta hai"
+    },
+    {
+      "topic": "Mic module: how a speaker works in reverse",
+      "hook": "Speaker ko ulta karo, ban jaata hai mic!"
+    },
+    {
       "topic": "Self-balancing robot without a gyro, with a live fall demo",
       "hook": "Is robot ko gyro hata diya, dekho kya hua 🤖"
     },
