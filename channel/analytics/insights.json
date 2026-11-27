@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-27T00:42",
+  "updated": "2026-11-27T17:08",
   "videos": 39,
-  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly gets under 100 (the early Oct-Nov videos reached 400-680 on YouTube, but later ones collapsed). The best performers show a robot or familiar gadget and open with a surprising 'it doesn't do what you think' line, and the strongest ones earn saves (how-it-works reference) or shares (surprising facts). Generic 'how does X work?' question titles, videos with no Instagram posting at all, and the very latest posts (soil, CO2, thermocouple) are getting little reach.",
-  "winningPattern": "Maker-friendly subject (robot, clap switch, mic, DHT11, IR sensor) + a 'X doesn't do Y, it only does Z' or 'Without X, this robot falls' contrarian hook in Hinglish, short title with one emoji and #shorts, posted on Instagram first (YouTube is secondary). Videos that show a concrete robot/behaviour (gyro robot, clap switch, line follower) beat abstract component explainers. Shares spike on myth-busting everyday-life topics (sunburn under clouds, soil sensor) and saves spike on robot/maker explainers.",
+  "summary": "Instagram is where nearly all the audience is: most videos get 500-1,400 views there, while YouTube Shorts mostly get under 60 views. The best videos make a bold 'X doesn't do what you think' claim about a familiar gadget (clap switch, gyro robot, mic) and use a personal, relatable or funny angle. Generic 'How does X work? 🤔' titles, the English video, and the newest sensor-spec videos (soil, TDS, CO2, geyser) get little reach and almost no shares or saves.",
+  "winningPattern": "Hindi, Instagram-first videos about a familiar gadget or robot, with a surprising contradiction hook ('X can't do Y, it only does Z' or 'without X the robot falls'). Titles are short, in Hinglish, with one emoji, and the topic is visual and relatable (clap switch, balancing robot, mic, UV sunburn). The top shares came from everyday-life myths (sunburn on cloudy days), and saves came from robot and clap-switch explainers.",
   "doMore": [
-    "Post every video to Instagram Reels as well as YouTube Shorts; 13 of the weakest videos were never posted on Instagram",
-    "Lead with a robot or a visible demo (falls over, avoids wall, reacts to clap) in the first second, then explain the sensor",
-    "Use the 'X doesn't do Y, it only does Z' myth-bust hook, but pair it with a familiar object people use daily",
-    "Make series on the winners: gyro/balance robot, clap switch, line follower, IR obstacle robot, and mic/speaker",
-    "End with a save-worthy line like 'save this for your next project' or a share prompt like 'send this to your sunburned friend'"
+    "Make Instagram the primary platform and post there first; treat YouTube as a secondary repost",
+    "Open with a myth-busting or 'what happens without it' hook about a gadget people already know",
+    "Build series on the proven themes: clap switch, robots (gyro, line follower, IR), mic/speaker, and everyday-life myths like UV and sunburn",
+    "Add a share trigger, such as 'send this to the friend who believes X', since myth topics get shares and saves",
+    "Remake the strongest ideas with a new angle, for example a clap switch part 3 or a gyro robot demo"
   ],
   "stopDoing": [
-    "Plain 'Kaise Kaam Karta Hai? 🤔' question titles with no surprising claim (smoke alarm, smartwatch, TV remote got near-zero views)",
-    "Publishing niche component facts (geophone, TDS, CO2, thermocouple) without a robot or daily-life hook",
-    "Posting to YouTube only or posting in English without a plan; the one English video got only 161 views"
+    "Generic 'Kaise kaam karta hai? 🤔' titles with no surprising claim",
+    "Posting dry component-spec topics (TDS, CO2, geyser thermocouple, soil sensor) with no relatable hook or demo",
+    "Publishing English or YouTube-only videos, since they got almost no reach"
   ],
   "nextTopics": [
-    "Self-balancing robot and the gyro/accelerometer",
-    "Obstacle-avoiding robot using ultrasonic sensor",
-    "Clap switch part 3: why it triggers on a door slam",
-    "Line follower robot: why it fails on black tape glare",
-    "Phone mic as reverse speaker (MEMS mic)"
+    "Self-balancing robot without a gyro, with a live fall demo",
+    "Why a clap switch turns on from a whistle or a door slam",
+    "Why you get tanned or burnt in AC rooms near windows",
+    "A speaker works backwards as a microphone",
+    "Line follower robot fooled by a black tape trick"
   ],
   "bestTimes": {
     "times": [

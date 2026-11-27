@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Self-balancing robot without a gyro, with a live fall demo",
+      "hook": "Is robot ko gyro hata diya, dekho kya hua 🤖"
+    },
+    {
+      "topic": "Why a clap switch turns on from a whistle or a door slam",
+      "hook": "Aapki taali nahi, ye awaaz bhi light jala deti hai"
+    },
+    {
+      "topic": "Why you get tanned or burnt in AC rooms near windows",
+      "hook": "Khidki ke paas baithe ho? Tab bhi sunburn hoga"
+    },
+    {
+      "topic": "A speaker works backwards as a microphone",
+      "hook": "Aapka speaker chupke se mic ban sakta hai 🎤"
+    },
+    {
+      "topic": "Line follower robot fooled by a black tape trick",
+      "hook": "Ek kala tape aur robot pagal ho gaya 🤖"
+    },
+    {
       "topic": "Self-balancing robot and the gyro/accelerometer",
       "hook": "Is robot ko ek second mein girne se kaun bachata hai?"
     },
