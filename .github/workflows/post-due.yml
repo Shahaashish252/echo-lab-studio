@@ -55,6 +55,7 @@ jobs:
           cache-dependency-path: .github/scripts/setup-python.sh
       - if: steps.due.outputs.due == 'yes'
         run: |
+          sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg > /dev/null
           bash .github/scripts/setup-python.sh
           bash .github/scripts/secrets.sh
