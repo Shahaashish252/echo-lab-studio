@@ -861,10 +861,16 @@
     "id": "XIneabrcDp4",
     "meta": "channel/videos/td3-phone-battery-ina219.json",
     "date": "2026-11-24",
-    "status": "approved",
+    "status": "published",
     "topic": "Phone battery percentage: how the phone measures battery charge",
     "job": "20261124-030646",
-    "postAt": "2026-11-25T15:00"
+    "postAt": "2026-11-25T15:00",
+    "published": {
+      "youtube": "2026-11-28",
+      "instagram": "https://www.instagram.com/reel/DgSTGLrzjWg/",
+      "facebook": "https://www.facebook.com/reel/1788851962230135/"
+    },
+    "postedAt": "2026-11-28T18:25"
   },
   {
     "id": "Lb-G3FYW_7c",

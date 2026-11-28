@@ -38,5 +38,6 @@
   "social": {
     "instagram": "Phone ka battery % koi sensor seedha nahi padhta 🔋\nWo current aur voltage naap kar estimate karta hai.\nINA219 shunt resistor ka voltage drop padhta hai.\nCoulomb counting drift karti hai, isliye % jump karta hai.\nSave karo ye reel!\nComment mein batao: agla kaun sa sensor kholein?\n#INA219 #Arduino #Electronics #EchoLab3D #Hinglish",
     "tiktok": "Phone ka battery % ek estimate hai, sensor reading nahi 🔋 #INA219 #Arduino #Electronics #Hinglish #EchoLab3D"
-  }
+  },
+  "cover": "/home/runner/work/echo-lab-studio/echo-lab-studio/out/auto/phone-battery-ina219.cover.jpg"
 }
