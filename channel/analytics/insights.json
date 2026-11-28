@@ -1,26 +1,26 @@
 {
-  "updated": "2026-11-28T00:37",
+  "updated": "2026-11-28T16:42",
   "videos": 39,
-  "summary": "Instagram is carrying the channel: most Hindi videos get 1,000+ views there, while YouTube Shorts mostly gets under 100 (only the oldest videos reached 400-680). The best videos are short 'X doesn't do what you think, it actually does Y' explainers about robots and sound sensors, with the clap switch and line-follower robots earning the most likes, saves and shares. Question-style titles like 'Kaise Kaam Karta Hai? 🤔' got zero Instagram posts and almost no views anywhere, and the newest videos have lower reach, so quality of topic and hook matters more than posting volume.",
-  "winningPattern": "Relatable robot or sound-sensor subject (clap switch, gyro robot, line follower, IR obstacle robot, mic) + a surprising contrast or 'myth-bust' hook ('X doesn't do Y, it only does Z' or 'Without X this robot falls') + short Hinglish title with one emoji and #shorts + posted on Instagram Reels first. Shares come from curiosity or 'did you know' facts (UV sensor in clouds, soil sensor), saves from clear how-it-works explainers that makers want to revisit.",
+  "summary": "Instagram is where almost all the audience is: most Hindi videos get 500 to 1,400 views there, while YouTube Shorts mostly stay under 100 views. The best videos name a familiar gadget or robot and add a surprising twist, like 'it doesn't see, it only senses heat'. Early October videos with plain 'How does X work?' titles got almost nothing on Instagram, and some were never posted there at all.",
+  "winningPattern": "Surprising 'X doesn't do the obvious thing, it actually does Y' framing about a relatable gadget or maker module (robot, clap switch, DHT11, mic, breathalyzer). Hindi titles in Hinglish with a 'Nahi... sirf...' contrast and an emoji, posted on Instagram. Robot and clap-switch topics get the most views and saves; myth-busting about everyday experiences (UV in clouds, sunburn) gets the most shares. Generic 'Kaise kaam karta hai? 🤔' question titles and YouTube-only posts perform worst.",
   "doMore": [
-    "Post every video on Instagram Reels first, then YouTube Shorts, since IG gives 10-50x more views",
-    "Make robot and clap-switch style series: a demo with a visible 'before/after' result in the first 2 seconds",
-    "Use contrast hooks: 'X doesn't do Y, it does Z' or 'Without X, this fails'",
-    "Add a save-worthy ending, like a one-line circuit tip or 'save this for your next project', to lift saves",
-    "Make a follow-up to winners (clap switch part 3, gyro robot balance, line follower with IR) and test a YouTube-specific title with the same topic in English"
+    "Post every video to Instagram Reels too, since YouTube-only uploads got almost no views",
+    "Use the 'doesn't do X, only does Y' hook with a robot or a familiar gadget",
+    "Make myth-busting videos about daily experiences (sunburn, cloudy days, safety) to earn shares",
+    "End with a practical tip or a diagram worth saving, as the robot and clap switch videos got the most saves",
+    "Make short series on the winning topics, like robot sensors and sound switches, with each video using a new angle"
   ],
   "stopDoing": [
-    "Generic 'Kaise Kaam Karta Hai? 🤔' question titles for everyday objects (taps, doors, street lights, smoke alarms)",
-    "Publishing only on YouTube with no Instagram version",
-    "Narrow spec-sheet topics (geophone, TDS meter, CO2, geyser thermocouple) that got under 500 views and almost no engagement"
+    "Generic 'X Kaise Kaam Karta Hai? 🤔' titles with no surprising claim",
+    "Publishing videos to only one platform",
+    "Repeating near-identical topics (clap switch, IR sensor) without a new angle"
   ],
   "nextTopics": [
-    "Self-balancing robot and the gyro/accelerometer",
-    "Obstacle-avoiding robot with ultrasonic vs IR",
-    "Clap switch part 3: why a loud fan breaks it",
-    "Line follower: how two sensors steer the robot",
-    "Mic module: how a speaker works in reverse"
+    "Obstacle avoiding robot with ultrasonic sensor",
+    "Why a self-balancing robot falls without an accelerometer",
+    "Fingerprint sensor: it doesn't see the print",
+    "Why a cloudy-day UV or LDR sensor still reads high",
+    "Smart door lock RFID card without a battery"
   ],
   "bestTimes": {
     "times": [

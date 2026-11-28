@@ -1,6 +1,26 @@
 {
   "queue": [
     {
+      "topic": "Obstacle avoiding robot with ultrasonic sensor",
+      "hook": "Ye robot deewar se takrata nahi, bas awaaz ginta hai"
+    },
+    {
+      "topic": "Why a self-balancing robot falls without an accelerometer",
+      "hook": "Is robot ko balance nahi aata, sirf angle pata hai"
+    },
+    {
+      "topic": "Fingerprint sensor: it doesn't see the print",
+      "hook": "Fingerprint sensor ungli ki photo nahi leta, ye karta hai"
+    },
+    {
+      "topic": "Why a cloudy-day UV or LDR sensor still reads high",
+      "hook": "Badal mein bhi light sensor kyun bewakoof ban jaata hai?"
+    },
+    {
+      "topic": "Smart door lock RFID card without a battery",
+      "hook": "RFID card mein battery nahi hoti, phir kaise chalta hai?"
+    },
+    {
       "topic": "Obstacle-avoiding robot with ultrasonic vs IR",
       "hook": "Ye robot deewar ko dekhta nahi, bas ye karta hai"
     },
